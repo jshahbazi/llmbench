@@ -1,0 +1,5 @@
+node_modules/
+site/dist/
+# Per-run scratch: fetch times and raw payloads that are not committed
+.cache/
+.DS_Store
