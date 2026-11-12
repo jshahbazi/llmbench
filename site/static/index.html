@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>llmbench</title>
+    <meta name="description" content="LLM benchmark results from every listed leaderboard, side by side." />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>llmbench</h1>
+      <p class="lede">Benchmark results from every listed source, side by side. Every number links to where it came from.</p>
+      <p id="stats" class="stats">Loading…</p>
+    </header>
+
+    <form id="controls" class="controls" onsubmit="return false">
+      <label class="search">
+        <span>Model</span>
+        <input id="q" type="search" placeholder="Filter by name or maker" autocomplete="off" />
+      </label>
+      <label>
+        <span>Released</span>
+        <select id="since">
+          <option value="0" selected>any time</option>
+          <option value="24">in the last 24 months</option>
+          <option value="12">in the last 12 months</option>
+          <option value="6">in the last 6 months</option>
+        </select>
+      </label>
+      <label><input id="open" type="checkbox" /> Open weights only</label>
+      <label><input id="lab" type="checkbox" checked /> Include lab-reported scores</label>
+      <label>
+        <span>Columns</span>
+        <select id="ncols">
+          <option value="10">10 most covered</option>
+          <option value="25" selected>25 most covered</option>
+          <option value="50">50 most covered</option>
+          <option value="100">100 most covered</option>
+          <option value="0">All</option>
+        </select>
+      </label>
+      <label>
+        <span>Hide models with fewer than</span>
+        <select id="minscores">
+          <option value="1">1 score</option>
+          <option value="3" selected>3 scores</option>
+          <option value="5">5 scores</option>
+          <option value="10">10 scores</option>
+        </select>
+        <span>in view</span>
+      </label>
+    </form>
+
+    <p id="viewstats" class="stats"></p>
+
+    <main id="table-wrap" class="table-wrap" tabindex="0" aria-label="Benchmark matrix"></main>
+
+    <footer id="footer"></footer>
+  </body>
+</html>

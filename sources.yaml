@@ -1,0 +1,33 @@
+# What llmbench pulls from. This is the only file you need to edit to add, change or
+# remove a source. See docs/llm-benchmark-aggregator-plan.md, section 3, for every field.
+#
+# terms: allowed  -> fetched
+# terms: blocked  -> listed for the record, never fetched
+
+defaults:
+  every: 6h
+  run_by: independent
+
+sources:
+  # Open compilation of published results, each with its own source URL and licence.
+  # Seeds the model catalogue. Rows are long-form: one result per row.
+  - id: whatmodel
+    name: whatmodel.sh
+    homepage: https://whatmodel.sh
+    fetch: github:jakemanger/whatmodel/data
+    plugin: whatmodel
+    every: 24h
+    categories: [llm]
+    license: CC BY-SA 4.0
+    attribution: >-
+      whatmodel.sh by Merlinsbeard Pty Ltd, CC BY-SA 4.0. The underlying sources keep their own
+      licences; see data/sources/whatmodel/upstream-sources.jsonl.
+    terms: allowed
+
+  - id: artificial-analysis
+    name: Artificial Analysis
+    homepage: https://artificialanalysis.ai
+    terms: blocked
+    terms_note: >-
+      Per whatmodel's licence ledger, the site terms allow personal non-commercial use only
+      and forbid building a similar or competing service.
