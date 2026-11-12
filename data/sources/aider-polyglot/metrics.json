@@ -1,0 +1,23 @@
+[
+ {
+  "id": "pass_rate_1",
+  "label": "Polyglot pass rate (1 try)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "pass_rate_2",
+  "label": "Polyglot pass rate (2 tries)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "percent_cases_well_formed",
+  "label": "Polyglot well-formed edits",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ }
+]

@@ -15,9 +15,11 @@ export interface SourceConfig {
   attribution?: string;
   every: string;
   run_by: RunBy;
-  /** Every other key in the entry: field mappings now, plugin options always. */
+  /** Every other key in the entry: field mappings, guard settings and plugin options. */
   options: Record<string, unknown>;
 }
+
+export type Value = string | number;
 
 /**
  * One upstream row, stored verbatim. Written to data/sources/<id>/rows.jsonl.
@@ -26,9 +28,14 @@ export interface SourceConfig {
 export interface Row {
   key: string;
   model: string;
+  /** The source's display name for the model, when it also has an identifier. */
+  model_label?: string;
+  model_url?: string;
   context?: Record<string, string>;
   date?: string;
-  scores: Record<string, string | number>;
+  scores: Record<string, Value>;
+  /** Confidence interval per metric: [low, high]. */
+  ci?: Record<string, [Value, Value]>;
   run_by?: RunBy;
   upstream_url?: string;
   upstream_source?: string;
@@ -42,6 +49,8 @@ export interface Metric {
   direction: 'higher' | 'lower';
   /** 'fraction' (0-1, shown as a percentage), 'percent', 'elo', or a free-form unit. */
   unit: string;
+  /** Shown in the default "most covered" column choice. Others need "All columns". */
+  headline?: boolean;
   category?: string;
   family?: string;
   url?: string;
@@ -80,12 +89,38 @@ export interface UpstreamSource {
 export interface SourceState {
   upstream_revision?: string;
   upstream_revision_date?: string;
-  etag?: string;
-  last_modified?: string;
   payload_hash: string;
   row_count: number;
+  /** When this source was first imported. Cells present then have no "add" event. */
+  baseline_at?: string;
   changed_at: string;
-  status: 'healthy' | 'held' | 'failing';
+}
+
+/** One line of data/sources/<id>/history.jsonl. */
+export interface HistoryEvent {
+  t: string;
+  key: string;
+  model: string;
+  metric: string;
+  op: 'add' | 'change' | 'remove' | 'return';
+  from?: Value;
+  to?: Value;
+  rev?: string;
+}
+
+export type Outcome = 'ingested' | 'unchanged' | 'held' | 'failed' | 'skipped' | 'not_due';
+
+/** Per-run facts kept in .cache/last-run.json, which the workflow carries between runs. */
+export interface RunEntry {
+  checked_at: string;
+  outcome: Outcome;
+  /** Why a run was held or failed. */
+  reasons?: string[];
+  warnings?: string[];
+  summary?: string;
+  last_success_at?: string;
+  etag?: string;
+  last_modified?: string;
 }
 
 export interface ExtractResult {
@@ -93,15 +128,23 @@ export interface ExtractResult {
   revisionDate?: string;
   rows: Row[];
   metrics: Metric[];
+  /** Problems the guards should hold the run for: missing columns, duplicate rows. */
+  problems?: string[];
+  /** Worth reporting, not a reason to hold: e.g. ambiguous duplicates that were left out. */
+  warnings?: string[];
   catalog?: CatalogModel[];
   upstreamSources?: UpstreamSource[];
+  /** Conditional-request validators for plain URLs, kept in the run cache. */
+  etag?: string;
+  lastModified?: string;
 }
 
 export interface PluginContext {
   source: SourceConfig;
   previous?: SourceState;
+  cache?: RunEntry;
   force: boolean;
 }
 
-/** A plugin returns 'unchanged' when the upstream revision matches the previous run. */
+/** A plugin returns 'unchanged' when the upstream revision or ETag matches the previous run. */
 export type Plugin = (ctx: PluginContext) => Promise<ExtractResult | 'unchanged'>;

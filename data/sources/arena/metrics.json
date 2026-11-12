@@ -1,0 +1,534 @@
+[
+ {
+  "id": "document/overall",
+  "label": "Arena document",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "search/overall",
+  "label": "Arena search",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "text_style_control/chinese",
+  "label": "text_style_control/chinese",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/coding",
+  "label": "text_style_control/coding",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/creative_writing",
+  "label": "text_style_control/creative_writing",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/english",
+  "label": "text_style_control/english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/exclude_ties",
+  "label": "text_style_control/exclude_ties",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/expert",
+  "label": "text_style_control/expert",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/french",
+  "label": "text_style_control/french",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/german",
+  "label": "text_style_control/german",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/hard_prompts",
+  "label": "text_style_control/hard_prompts",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/hard_prompts_english",
+  "label": "text_style_control/hard_prompts_english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_business_and_management_and_financial_operations",
+  "label": "text_style_control/industry_business_and_management_and_financial_operations",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_entertainment_and_sports_and_media",
+  "label": "text_style_control/industry_entertainment_and_sports_and_media",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_legal_and_government",
+  "label": "text_style_control/industry_legal_and_government",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_life_and_physical_and_social_science",
+  "label": "text_style_control/industry_life_and_physical_and_social_science",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_mathematical",
+  "label": "text_style_control/industry_mathematical",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_medicine_and_healthcare",
+  "label": "text_style_control/industry_medicine_and_healthcare",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_software_and_it_services",
+  "label": "text_style_control/industry_software_and_it_services",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/industry_writing_and_literature_and_language",
+  "label": "text_style_control/industry_writing_and_literature_and_language",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/instruction_following",
+  "label": "text_style_control/instruction_following",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/japanese",
+  "label": "text_style_control/japanese",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/korean",
+  "label": "text_style_control/korean",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/longer_query",
+  "label": "text_style_control/longer_query",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/math",
+  "label": "text_style_control/math",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/multi_turn",
+  "label": "text_style_control/multi_turn",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/non_english",
+  "label": "text_style_control/non_english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/overall",
+  "label": "Arena text (style control)",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "text_style_control/polish",
+  "label": "text_style_control/polish",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/russian",
+  "label": "text_style_control/russian",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text_style_control/spanish",
+  "label": "text_style_control/spanish",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/chinese",
+  "label": "text/chinese",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/coding",
+  "label": "text/coding",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/creative_writing",
+  "label": "text/creative_writing",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/english",
+  "label": "text/english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/exclude_ties",
+  "label": "text/exclude_ties",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/expert",
+  "label": "text/expert",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/french",
+  "label": "text/french",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/german",
+  "label": "text/german",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/hard_prompts",
+  "label": "text/hard_prompts",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/hard_prompts_english",
+  "label": "text/hard_prompts_english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_business_and_management_and_financial_operations",
+  "label": "text/industry_business_and_management_and_financial_operations",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_entertainment_and_sports_and_media",
+  "label": "text/industry_entertainment_and_sports_and_media",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_legal_and_government",
+  "label": "text/industry_legal_and_government",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_life_and_physical_and_social_science",
+  "label": "text/industry_life_and_physical_and_social_science",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_mathematical",
+  "label": "text/industry_mathematical",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_medicine_and_healthcare",
+  "label": "text/industry_medicine_and_healthcare",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_software_and_it_services",
+  "label": "text/industry_software_and_it_services",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/industry_writing_and_literature_and_language",
+  "label": "text/industry_writing_and_literature_and_language",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/instruction_following",
+  "label": "text/instruction_following",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/japanese",
+  "label": "text/japanese",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/korean",
+  "label": "text/korean",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/longer_query",
+  "label": "text/longer_query",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/math",
+  "label": "text/math",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/multi_turn",
+  "label": "text/multi_turn",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/non_english",
+  "label": "text/non_english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/overall",
+  "label": "Arena text",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "text/polish",
+  "label": "text/polish",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/russian",
+  "label": "text/russian",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "text/spanish",
+  "label": "text/spanish",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/captioning",
+  "label": "vision/captioning",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/chinese",
+  "label": "vision/chinese",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/creative_writing",
+  "label": "vision/creative_writing",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/creative_writing_vision",
+  "label": "vision/creative_writing_vision",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/diagram",
+  "label": "vision/diagram",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/english",
+  "label": "vision/english",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/entity_recognition",
+  "label": "vision/entity_recognition",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/homework",
+  "label": "vision/homework",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/humor",
+  "label": "vision/humor",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/ocr",
+  "label": "vision/ocr",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "vision/overall",
+  "label": "Arena vision",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "webdev/image_to_webdev",
+  "label": "webdev/image_to_webdev",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "webdev/overall",
+  "label": "Arena WebDev",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "webdev/webdev",
+  "label": "webdev/webdev",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "webdev/webdev-html",
+  "label": "webdev/webdev-html",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "webdev/webdev-react",
+  "label": "webdev/webdev-react",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ }
+]

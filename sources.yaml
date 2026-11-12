@@ -1,8 +1,22 @@
 # What llmbench pulls from. This is the only file you need to edit to add, change or
-# remove a source. See docs/llm-benchmark-aggregator-plan.md, section 3, for every field.
+# remove a source. Every field is described in docs/llm-benchmark-aggregator-plan.md, section 3.
 #
 # terms: allowed  -> fetched
 # terms: blocked  -> listed for the record, never fetched
+#
+# Quick reference for a source without a plugin:
+#   fetch       github:owner/repo/path (globs allowed) | hf:owner/dataset | https://...
+#   model       column with the model name                 (required)
+#   scores      score columns; omit to take every numeric column
+#   metric/value  for long tables: column(s) naming the metric, column holding the number
+#   key         column(s) that make a row unique when the model name does not
+#   context     columns describing how the model was run
+#   date, model_url, model_label, ci, ignore, filter, labels, unit, units, lower_is_better
+#   headline    metrics shown in the default "most covered" column choice (default: all)
+#   min_rows    a run with fewer rows is held       rolling: true for ratings that drift
+#   duplicates  hold (default) | drop: what to do when the source repeats a row ambiguously
+#   round       decimals to keep for numeric scores, only where extra precision is noise
+#   every       how often to check (30m, 6h, 1d)
 
 defaults:
   every: 6h
@@ -16,12 +30,104 @@ sources:
     homepage: https://whatmodel.sh
     fetch: github:jakemanger/whatmodel/data
     plugin: whatmodel
-    every: 24h
+    every: 1d
     categories: [llm]
+    min_rows: 10000
     license: CC BY-SA 4.0
     attribution: >-
       whatmodel.sh by Merlinsbeard Pty Ltd, CC BY-SA 4.0. The underlying sources keep their own
       licences; see data/sources/whatmodel/upstream-sources.jsonl.
+    terms: allowed
+
+  # Epoch's own evaluation runs, one CSV per benchmark, plus the Epoch Capabilities Index.
+  - id: epoch
+    name: Epoch AI Benchmarking Hub
+    homepage: https://epoch.ai/benchmarks
+    fetch: https://epoch.ai/data/benchmark_data.zip
+    plugin: epoch
+    include_external: false     # Epoch's copies of other leaderboards; their terms are not reviewed
+    every: 1d
+    min_rows: 500
+    license: CC BY 4.0
+    attribution: Epoch AI, 'Capabilities & benchmarking', https://epoch.ai/benchmarks, CC BY 4.0
+    terms: allowed
+
+  # Arena's open dataset, one Parquet file per arena. Each category becomes a metric,
+  # e.g. "text/overall" or "webdev/overall".
+  - id: arena
+    name: Arena
+    homepage: https://arena.ai/leaderboard
+    fetch: hf:lmarena-ai/leaderboard-dataset
+    configs: [text, text_style_control, webdev, vision, search, document]
+    split: latest
+    model: model_name
+    key: [model_name, _config]
+    metric: [_config, category]
+    value: rating
+    ci: [rating_lower, rating_upper]
+    date: leaderboard_publish_date
+    unit: elo
+    rolling: true
+    # Ratings are fitted values with ~13 meaningless decimals that move on every update;
+    # one decimal keeps the repository from growing by hundreds of MB a year. Rank and variance
+    # also move on every update and are derivable (rank) or covered by the interval (variance).
+    round: 1
+    ignore: [rank, variance]
+    # Arena sometimes lists two different entries under one name with nothing to tell them
+    # apart; leave those out rather than guess.
+    duplicates: drop
+    every: 7d
+    min_rows: 300
+    headline: [text/overall, text_style_control/overall, webdev/overall, vision/overall, search/overall, document/overall]
+    labels:
+      text/overall: Arena text
+      text_style_control/overall: Arena text (style control)
+      webdev/overall: Arena WebDev
+      vision/overall: Arena vision
+      search/overall: Arena search
+      document/overall: Arena document
+    license: CC BY 4.0
+    attribution: Arena Leaderboard Dataset by LMArena (lmarena-ai), CC BY 4.0
+    terms: allowed
+    terms_note: Fetched from the open dataset only. The arena.ai website's terms forbid scraping.
+
+  - id: bfcl
+    name: Berkeley Function Calling Leaderboard
+    homepage: https://gorilla.cs.berkeley.edu/leaderboard.html
+    fetch: https://gorilla.cs.berkeley.edu/data_overall.csv
+    model: Model
+    model_url: Model Link
+    ignore: [Rank]
+    lower_is_better:
+      - Total Cost ($)
+      - Latency Mean (s)
+      - Latency Standard Deviation (s)
+      - Latency 95th Percentile (s)
+      - Format Sensitivity Max Delta
+      - Format Sensitivity Standard Deviation
+    headline: [Overall Acc, Live Acc, Multi Turn Acc, Web Search Acc, Memory Acc]
+    min_rows: 50
+    license: Apache-2.0 (BFCL repository, ShishirPatil/gorilla)
+    terms: allowed
+
+  - id: aider-polyglot
+    name: Aider polyglot
+    homepage: https://aider.chat/docs/leaderboards/
+    fetch: github:Aider-AI/aider/aider/website/_data/polyglot_leaderboard.yml
+    model: model
+    key: dirname                 # the leaderboard lists several runs per model
+    context: [edit_format]
+    date: date
+    scores: [pass_rate_2, pass_rate_1, percent_cases_well_formed]
+    labels:
+      pass_rate_2: Polyglot pass rate (2 tries)
+      pass_rate_1: Polyglot pass rate (1 try)
+      percent_cases_well_formed: Polyglot well-formed edits
+    unit: percent
+    headline: [pass_rate_2]
+    every: 1d
+    min_rows: 50
+    license: Apache-2.0
     terms: allowed
 
   - id: artificial-analysis

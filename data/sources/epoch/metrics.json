@@ -1,0 +1,107 @@
+[
+ {
+  "id": "chess_puzzles",
+  "label": "Chess Puzzles",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0496; benchmark released 2025-12-10"
+ },
+ {
+  "id": "ebr_bench",
+  "label": "EBR-bench",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2026-07-01"
+ },
+ {
+  "id": "eci",
+  "label": "Epoch Capabilities Index",
+  "direction": "higher",
+  "unit": "score",
+  "description": "Epoch's combined capability score, fitted across many benchmarks"
+ },
+ {
+  "id": "frontiermath",
+  "label": "FrontierMath-2025-02-28-Private",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2025-02-28; superseded by FrontierMath-Tiers-1-3-v2-Private"
+ },
+ {
+  "id": "frontiermath_tier_4",
+  "label": "FrontierMath-Tier-4-2025-07-01-Private",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2025-07-11; superseded by FrontierMath-Tier-4-v2-Private"
+ },
+ {
+  "id": "frontiermath_tier_4_v2",
+  "label": "FrontierMath-Tier-4-v2-Private",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2026-06-12"
+ },
+ {
+  "id": "frontiermath_tiers_1_3_v2",
+  "label": "FrontierMath-Tiers-1-3-v2-Private",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2026-06-12"
+ },
+ {
+  "id": "furniture_assembly",
+  "label": "Furniture Assembly",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.3; benchmark released 2026-09-23"
+ },
+ {
+  "id": "gpqa_diamond",
+  "label": "GPQA diamond",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.25; benchmark released 2023-11-20"
+ },
+ {
+  "id": "math_level_5",
+  "label": "MATH level 5",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2021-03-05"
+ },
+ {
+  "id": "mirrorcode",
+  "label": "MirrorCode",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2026-06-26"
+ },
+ {
+  "id": "mystery_game_puzzles",
+  "label": "Mystery Game Puzzles",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0922; benchmark released 2026-07-30"
+ },
+ {
+  "id": "otis_mock_aime_2024_2025",
+  "label": "OTIS Mock AIME 2024-2025",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.001; benchmark released 2024-12-19"
+ },
+ {
+  "id": "simpleqa_verified",
+  "label": "SimpleQA Verified",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2025-09-09"
+ },
+ {
+  "id": "spireclimb",
+  "label": "SpireClimb",
+  "direction": "higher",
+  "unit": "fraction",
+  "description": "random baseline 0.0; benchmark released 2026-10-14"
+ }
+]

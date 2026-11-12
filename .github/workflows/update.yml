@@ -1,0 +1,106 @@
+# Fetches every due source, commits changed data to main, and deploys the site to GitHub Pages.
+# One workflow does all of it because a push made with the workflow's own token starts no
+# other workflow (and no Pages build).
+name: update
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"        # off the hour: scheduled runs are delayed most at :00
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Only check this source id
+        required: false
+      accept:
+        description: Publish this held source's data despite its checks
+        required: false
+      force:
+        description: Re-read sources even if unchanged upstream
+        type: boolean
+        default: false
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      issues: write
+    env:
+      # Optional repository variable naming this deployment, e.g. "llmbench (+https://llmbench.site)".
+      LLMBENCH_USER_AGENT: ${{ vars.LLMBENCH_USER_AGENT }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "lts/*"
+          cache: npm
+
+      - run: npm ci
+
+      # When each source was last checked, and HTTP validators, carried between runs.
+      - uses: actions/cache/restore@v6
+        with:
+          path: .cache
+          key: run-cache-${{ github.run_id }}
+          restore-keys: run-cache-
+
+      - name: Scrape
+        run: npm run scrape -- ${{ inputs.force && '--force' || '' }}
+        env:
+          ONLY_SOURCE: ${{ inputs.source }}
+          ACCEPT_SOURCE: ${{ inputs.accept }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+      - run: npm run resolve
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: update $(date -u +%Y-%m-%dT%H:%MZ)"
+            for i in 1 2 3; do git push && break; git pull --rebase; done
+          fi
+
+      - uses: actions/cache/save@v6
+        if: always()
+        with:
+          path: .cache
+          key: run-cache-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Open or close source issues
+        if: always()
+        run: npm run report-issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/dist
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,219 @@
+[
+ {
+  "id": "Format Sensitivity Max Delta",
+  "label": "Format Sensitivity Max Delta",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "Format Sensitivity Standard Deviation",
+  "label": "Format Sensitivity Standard Deviation",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "Irrelevance Detection",
+  "label": "Irrelevance Detection",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Latency 95th Percentile (s)",
+  "label": "Latency 95th Percentile (s)",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "Latency Mean (s)",
+  "label": "Latency Mean (s)",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "Latency Standard Deviation (s)",
+  "label": "Latency Standard Deviation (s)",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "Live Acc",
+  "label": "Live Acc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "Live Multiple AST",
+  "label": "Live Multiple AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Live Parallel AST",
+  "label": "Live Parallel AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Live Parallel Multiple AST",
+  "label": "Live Parallel Multiple AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Live Simple AST",
+  "label": "Live Simple AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Memory Acc",
+  "label": "Memory Acc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "Memory KV",
+  "label": "Memory KV",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Memory Recursive Summarization",
+  "label": "Memory Recursive Summarization",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Memory Vector",
+  "label": "Memory Vector",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Multi Turn Acc",
+  "label": "Multi Turn Acc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "Multi Turn Base",
+  "label": "Multi Turn Base",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Multi Turn Long Context",
+  "label": "Multi Turn Long Context",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Multi Turn Miss Func",
+  "label": "Multi Turn Miss Func",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Multi Turn Miss Param",
+  "label": "Multi Turn Miss Param",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Non-Live AST Acc",
+  "label": "Non-Live AST Acc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Non-Live Multiple AST",
+  "label": "Non-Live Multiple AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Non-Live Parallel AST",
+  "label": "Non-Live Parallel AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Non-Live Parallel Multiple AST",
+  "label": "Non-Live Parallel Multiple AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Non-Live Simple AST",
+  "label": "Non-Live Simple AST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Overall Acc",
+  "label": "Overall Acc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "Relevance Detection",
+  "label": "Relevance Detection",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Total Cost ($)",
+  "label": "Total Cost ($)",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "Web Search Acc",
+  "label": "Web Search Acc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "Web Search Base",
+  "label": "Web Search Base",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Web Search No Snippet",
+  "label": "Web Search No Snippet",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ }
+]
