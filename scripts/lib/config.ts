@@ -79,6 +79,13 @@ export function parseSources(text: string): SourceConfig[] {
   return out;
 }
 
+/** "30m", "6h", "1d" in milliseconds. */
+export function intervalMs(every: string): number {
+  const m = /^(\d+)([mhd])$/.exec(every);
+  if (!m) return 0;
+  return Number(m[1]) * { m: 60_000, h: 3_600_000, d: 86_400_000 }[m[2] as 'm' | 'h' | 'd'];
+}
+
 export async function loadSources(path = 'sources.yaml'): Promise<SourceConfig[]> {
   return parseSources(await readFile(path, 'utf8'));
 }

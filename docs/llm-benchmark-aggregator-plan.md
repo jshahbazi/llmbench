@@ -15,8 +15,14 @@ GitHub repository:
 - **The same run builds a static site** from `data/` and deploys it to GitHub Pages.
 
 There is no server, no database and no admin UI. Git history is the audit trail, Issues are the alert
-inbox, and pull requests are how anything gets corrected. Running cost is $0: standard Actions runners
-and Pages are free for public repositories, and `jshahbazi/llmbench` is public.
+inbox, and pull requests are how anything gets corrected. Running cost is $0 beyond the domain:
+standard Actions runners and Pages are free for public repositories, and `jshahbazi/llmbench` is
+public. The site is served at **llmbench.site** (registered at Cloudflare; DNS-only A, AAAA and
+`www` CNAME records point at GitHub Pages, which issues the HTTPS certificate).
+
+**Status (2026-11-12):** Phases 0 and 1 are built — five sources, field-mapping extractor, change
+history, guards, issue reporting, name matching and the update workflow. Section 12 lists what was
+learned in each.
 
 ### 1.1 Goals
 
@@ -66,7 +72,7 @@ and Pages are free for public repositories, and `jshahbazi/llmbench` is public.
         └──────┬─────────────────────────────┬──────────────────────────────┘
                │ on a held or failing source │
                ▼                             ▼
-        GitHub Issue (one per source)   https://<you>.github.io/llmbench/
+        GitHub Issue (one per source)   https://llmbench.site
 ```
 
 One workflow does all five steps because a push made with the workflow's own token does not start
@@ -138,10 +144,9 @@ sources:
   - id: whatmodel
     name: whatmodel.sh
     homepage: https://whatmodel.sh
-    fetch: github:jakemanger/whatmodel/data/results.json
+    fetch: github:jakemanger/whatmodel/data
     plugin: whatmodel
-    every: 24h
-    skip_upstream: [epoch-internal, lmarena-dataset, aider-polyglot-runs, bfcl-result-archive-v4]
+    every: 1d
     license: CC BY-SA 4.0
     attribution: whatmodel.sh by Merlinsbeard Pty Ltd, CC BY-SA 4.0
     terms: allowed
@@ -159,18 +164,25 @@ sources:
 | Field | Required | Meaning |
 | :-- | :-- | :-- |
 | `id`, `name`, `homepage` | yes | Identity and the link shown on the site |
-| `fetch` | yes, unless blocked | `github:owner/repo/path` (globs allowed), `hf:owner/dataset` with `config` and `split`, or any `https://` URL to JSON, CSV, YAML, Parquet, ZIP or HTML |
+| `fetch` | yes, unless blocked | `github:owner/repo/path` (globs allowed; each file's path is available as `_file`), `hf:owner/dataset` with `config`/`configs` and `split` (each config's name is available as `_config`), or any `https://` URL to CSV, TSV, JSON, JSON Lines, YAML or Parquet. ZIP and HTML need a plugin for now. |
+| `format`, `rows` | no | Override format detection; dot path to the row list inside JSON or YAML |
+| `model_label` | no | Column with the source's display name, when `model` is an identifier; used for matching |
 | `model` | yes, unless `plugin` | Column holding the model name |
 | `scores` | no | Columns that are scores. Omitted means every numeric column not named elsewhere. |
 | `metric` + `value` | no | For long-form tables: the column naming the metric and the column holding the number |
 | `key` | no | Column or columns that make a row unique when the model name alone does not |
 | `context` | no | Columns describing how the model was run: quantization, reasoning effort, scaffold, edit format |
 | `date`, `model_url`, `ci` | no | Evaluation date, link to the model, confidence-interval columns |
-| `rows` / `table` | no | JSONPath to the row array in JSON; CSS selector or index of the table in HTML |
-| `render: browser` | no | Load the page in headless Chromium first. Optional `capture:` URL pattern grabs the JSON the page loads. |
+| `table` | no (Phase 4) | CSS selector or index of the table in an HTML page |
+| `render: browser` | no (Phase 4) | Load the page in headless Chromium first. Optional `capture:` URL pattern grabs the JSON the page loads. |
 | `plugin` | no | Name of a script in `scripts/sources/` for sources that need custom logic |
 | `ignore`, `lower_is_better`, `labels`, `family` | no | Columns to drop; direction; display names; grouping across sources (6.1) |
-| `every`, `rolling`, `min_rows` | no | Check interval; rating-style series; minimum rows before a run is trusted |
+| `filter` | no | Keep only records where a column has the given value(s) |
+| `unit`, `units` | no | `percent`, `fraction`, `elo` or a free-form unit, for all metrics or per metric. Default: `percent` when every value ends in `%`, else `score`. |
+| `headline` | no | Metrics shown in the default "most covered" column choice; the rest (sub-scores) need "All". Default: all. |
+| `every`, `rolling`, `min_rows` | no | Check interval; rating-style series (5.4); minimum rows before a run is trusted |
+| `duplicates` | no | `hold` (default) or `drop`. What to do when the source repeats a row with nothing to tell the entries apart. `drop` leaves those scores out and logs it. |
+| `round` | no | Decimals to keep for numeric scores. Only for computed values whose precision is noise (5.4). |
 | `run_by` | no | Who ran the evaluations (6.3) |
 | `license`, `attribution` | yes, unless blocked | Shown on the site and included in exports |
 | `terms` | yes | `allowed` or `blocked`. Only `allowed` sources are fetched. It is your record that you checked. |
@@ -278,7 +290,14 @@ history and would need no replay; confirm when writing that entry.
 ### 5.4 Rating-style series
 
 Elo ratings move on every update by design. For a source marked `rolling`, a changed value is a new
-point in a series and not a correction, and at most one point per cell is recorded per week.
+point in a series and not a correction, and at most one point per cell is recorded per week. The
+mass-change guard does not apply to rolling sources.
+
+Repository growth is the real cost. Arena publishes ratings with about 13 decimal places across 1,287
+model-arena rows, and nearly every value moves on every update: committed daily, that is on the order
+of half a gigabyte of history a year. So Arena is checked weekly, its ratings are kept to one decimal
+(`round: 1`, which is what whatmodel does), and its rank and variance columns are dropped (rank is
+derivable; the interval covers variance). That is about 0.5 MB compressed per update.
 
 ### 5.5 Raw payloads
 
@@ -466,8 +485,10 @@ jobs:
 ```
 
 A commit happens only when data changed, so `main` gets a few bot commits a day, not one per run. The
-site is rebuilt on every run so that "last checked" stays current. One-time setup: in the repository's
-Pages settings, set the source to GitHub Actions.
+site is rebuilt on every run so that "last checked" stays current. One-time setup (done): Pages
+source set to GitHub Actions, and the custom domain `llmbench.site` set on the repository. The
+committed `.github/workflows/update.yml` also carries the run cache (`actions/cache`), a `resolve`
+step after scraping, and an issue step that runs even when scraping fails.
 
 `ci.yml` runs on pull requests: `validate`, type check, unit tests, every source's fixture test, and a
 site build. It has no write permissions and no secrets.
@@ -498,13 +519,26 @@ site build. It has no write permissions and no secrets.
 | Source | Provides | Location | Licence |
 | :-- | :-- | :-- | :-- |
 | **whatmodel** | 37,490 results across 1,311 benchmark ids, each with a source URL and who ran it; the model catalogue | `jakemanger/whatmodel`, `data/` | CC BY-SA 4.0 |
-| **Epoch AI Benchmarking Hub** | About 90 CSVs in one 2.3 MB zip, one per benchmark: Epoch's own runs (GPQA Diamond, FrontierMath, SWE-bench Verified, OTIS Mock AIME and more) and mirrored external leaderboards (WeirdML, SimpleBench, METR time horizons, GDPval and more) | `https://epoch.ai/data/benchmark_data.zip` | CC BY 4.0 per whatmodel's ledger; Epoch asks for credit |
+| **Epoch AI Benchmarking Hub** | About 90 CSVs in one 2.3 MB zip, one per benchmark: Epoch's own runs (GPQA Diamond, FrontierMath, SWE-bench Verified, OTIS Mock AIME and more) and mirrored external leaderboards (WeirdML, SimpleBench, METR time horizons, GDPval and more) | `https://epoch.ai/data/benchmark_data.zip` | CC BY 4.0, stated in the zip's README |
 | **Arena** | Ratings with confidence bounds for 23 arenas (text, vision, webdev, search, document, agent, image and video), each with a `latest` and a `full` split | Hugging Face dataset `lmarena-ai/leaderboard-dataset`, last updated 2026-11-12 | CC BY 4.0 |
 | **BFCL** | Function calling: about 30 accuracy, cost and latency columns | `https://gorilla.cs.berkeley.edu/data_overall.csv` | Apache-2.0 |
 | **Aider polyglot** | Code editing; several runs per model with dates | `Aider-AI/aider`, `aider/website/_data/polyglot_leaderboard.yml` (last changed 2025-10-04) | Apache-2.0 |
 
-whatmodel rows that came from a source we fetch directly are skipped (`skip_upstream`), so nothing is
-counted twice.
+As built in Phase 1:
+
+- **Epoch** is a plugin driven by the zip's own `benchmark_metadata.csv`, which names each file's score
+  column and scale, so nothing is guessed. It imports Epoch's own runs (15 metrics, including the Epoch
+  Capabilities Index). The `_external` files are Epoch's copies of other leaderboards; Epoch asks users
+  to credit those original sources, whose terms we have not reviewed, so they are off
+  (`include_external: false`).
+- **Arena** imports six arenas (text, text with style control, webdev, vision, search, document), all
+  categories, 76 metrics; one "overall" per arena is a headline column. Its data repeats one model name
+  with different ratings, so it uses `duplicates: drop` (section 3.1).
+- **whatmodel rows are not skipped** when we fetch the same upstream directly. Each source is its own
+  column, so nothing is counted twice in a cell, and skipping would lose data until matching is complete.
+
+First-run matching: whatmodel 1,227 of 1,227 model names, Epoch 529 of 676, Arena 470 of 549,
+BFCL 91 of 109, Aider 55 of 68. The rest are in `data/reports/unmatched.csv` and hidden behind a toggle.
 
 ### 10.2 Next — live and openly licensed
 
@@ -546,8 +580,12 @@ terms the same way.
 - **Security.** Fetched content is data and is never executed. The site renders every scraped string as
   text and accepts only `http` and `https` links. The browser step runs without tokens in its
   environment. CI on pull requests has no secrets and read-only permissions.
-- **Politeness.** A descriptive User-Agent with the repo URL, conditional requests, six-hour default
-  interval, `robots.txt` honoured for HTML and browser fetches.
+- **Politeness.** Conditional requests, a six-hour default interval (daily or weekly for slow
+  sources), up to three attempts with backoff on network errors, 429 and 5xx, and `robots.txt`
+  honoured for HTML and browser fetches. The User-Agent is generic unless the repository variable
+  `LLMBENCH_USER_AGENT` names the deployment (for example `llmbench (+https://llmbench.site)`).
+- **Run cache.** When each source was last checked, and HTTP validators, live in `.cache/last-run.json`.
+  The workflow carries it between runs with `actions/cache`; if it is lost, every source is simply due.
 - **Licensing.** Each source's licence and attribution are shown on its page and shipped in the exports.
   The combined dataset is CC BY-SA 4.0 because it builds on whatmodel's compilation.
 
@@ -565,6 +603,11 @@ Hugging Face and plain URLs. The field-mapping extractor and the two plugins. Di
 `update.yml` with commit and Pages deploy. The five launch sources.
 *Exit:* the site is live; an upstream change shows up after the next run with a history entry; a
 deliberately broken source opens an issue and leaves published data alone.
+*Done 2026-11-12.* The history and broken-source checks were run locally; the issue step was checked
+in dry-run mode. The live deploy happens on the first workflow run after merge. Also pulled forward
+from Phase 3: exact-match name matching (with qualifiers such as "(High)" or a snapshot date set
+aside as context), `curation/aliases.csv` overrides, and the matched and unmatched reports. Guards
+caught a real upstream problem on the first run (Arena listing one model twice).
 
 **Phase 2 — the explorer (about a week).** Column picker, sort, filters, URL state, popovers, compare
 mode. Source, model and benchmark pages.

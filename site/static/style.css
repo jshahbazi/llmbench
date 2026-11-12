@@ -104,6 +104,7 @@ thead th.model { z-index: 3; background: var(--head); width: auto; max-width: no
 td.model { padding: 4px 8px; }
 td.model .name { font-weight: 600; overflow-wrap: anywhere; }
 td.model .sub { display: block; color: var(--muted); font-size: 12px; }
+tr.unmatched td.model .name { font-style: italic; font-weight: 500; }
 
 td.score {
   text-align: right;
