@@ -20,7 +20,7 @@ standard Actions runners and Pages are free for public repositories, and `jshahb
 public. The site is served at **llmbench.site** (registered at Cloudflare; DNS-only A, AAAA and
 `www` CNAME records point at GitHub Pages, which issues the HTTPS certificate).
 
-**Status (2026-11-13):** Phases 0 to 3 are built and Phase 4 is under way — 29 benchmark sources,
+**Status (2026-11-13):** Phases 0 to 3 are built and Phase 4 is under way — 30 benchmark sources,
 a model catalogue merged from four feeds, field-mapping extractor, change history, guards, issue
 reporting, the update workflow, the explorer with a chart mode, a page for every model, benchmark
 column and source, name matching with curation files, CSV, Parquet and SQLite downloads, an
@@ -697,6 +697,13 @@ Added in the sixth slice, as catalogue feeds rather than score sources (6.2): **
 **Epoch AI's models database** (CC BY 4.0) and the **Hugging Face Hub** model API. OpenRouter's and
 Respan's model lists were checked and are blocked by their terms (10.3).
 
+Added in the eighth slice: **models.dev's model makers' scores** (run by "lab"), because whatmodel,
+the other source of makers' numbers, had not updated since 2026-11-03. A score is kept only when its
+page is the maker's own (a table of each maker's sites and Hugging Face and GitHub organisations in
+`scripts/sources/models-dev.ts`); scores from Artificial Analysis, Scale's leaderboard, OpenRouter,
+aggregators, leaderboards llmbench reads directly and rival makers' comparisons are left out, as are
+Artificial Analysis's own benchmarks. About 910 scores for 98 models.
+
 whatmodel already carries most of these at pinned revisions, so a direct entry is worth adding only
 where freshness or history matters.
 
@@ -839,6 +846,13 @@ first pass took four of 161.
 *Seventh slice, 2026-11-13:* the same benchmark linked across sources (6.1). Only 6 families had
 spanned two sources, so a maker's number and an independent run of the same benchmark were never
 shown together. 69 hand-checked links in `curation/benchmarks.csv` join 61 benchmarks across sources.
+*Eighth slice, 2026-11-13:* model makers' own scores from models.dev (10.2), in columns split by
+benchmark, version, subset, tools and scale, with the run setting, harness and metric as context. 37
+more links put them next to the same benchmarks elsewhere (87 benchmarks in several sources), where
+they agree with whatmodel's copies of the same reports and sit above independent runs: Vals' SWE-bench
+Verified runs 4.9 points below the makers' reports, CAIS's Humanity's Last Exam 6.0 below. A source's
+first rows are its baseline even when it had a state before (models.dev was a catalogue feed first),
+so they are not logged as added that day.
 Still to do: `render: browser` (no source needs it yet) and history backfill.
 
 ---

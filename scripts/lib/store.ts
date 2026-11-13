@@ -104,7 +104,9 @@ export async function writeSource(id: string, data: WriteInput, now: string): Pr
   if (data.upstreamSources) {
     await writeText(join(dir, 'upstream-sources.jsonl'), toJsonl(data.upstreamSources, (s) => s.id));
   }
-  if (previous && data.events.length) {
+  // A source's first rows are its baseline, even when it had a state before (a catalogue feed that
+  // starts reporting scores): they were not "added" on the day llmbench first read them.
+  if (previous && previous.row_count > 0 && data.events.length) {
     await appendFile(join(dir, 'history.jsonl'), data.events.map((e) => JSON.stringify(e)).join('\n') + '\n');
   }
   const state: SourceState = {

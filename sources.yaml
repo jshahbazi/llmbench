@@ -72,17 +72,52 @@ sources:
       licences; see data/sources/whatmodel/upstream-sources.jsonl.
     terms: allowed
 
-  # Catalogue feeds that follow whatmodel (no scores). models.dev covers the newest API and open
+  # Catalogue feeds that follow whatmodel. models.dev covers the newest API and open
   # models within days of release; Epoch's models database adds developers, dates and parameter
   # counts for notable language models; Hugging Face fills parameter counts and licences for
   # open-weights models that link to a repository there.
+  # models.dev is also a source of scores: model makers' own reported results, each kept only when
+  # its page is the maker's (scripts/sources/models-dev.ts lists each maker's sites).
   - id: models-dev
     name: models.dev
     homepage: https://models.dev
     fetch: https://models.dev/models.json
     plugin: models-dev
+    run_by: lab
+    tags:
+      "swe-bench*": [coding, agents]
+      "terminal-bench*": [coding, agents]
+      "deepswe*": [coding, agents]
+      "frontierswe*": [coding, agents]
+      "nl2repo*": [coding]
+      "livecodebench*": [coding]
+      "scicode*": [coding]
+      "programbench*": [coding]
+      "frontiercode*": [coding]
+      "cybergym*": [coding]
+      "humanitys-last-exam*": [knowledge]
+      "gpqa*": [knowledge]
+      "mmlu*": [knowledge]
+      "arc-agi*": [knowledge]
+      "browsecomp*": [search, agents]
+      "deepsearchqa*": [search]
+      "osworld*": [agents]
+      "mcp-atlas*": [agents]
+      "toolathlon*": [agents]
+      "agents-last-exam*": [agents]
+      "automationbench*": [agents]
+      "gdpval*": [agents]
+      "mmmu*": [vision]
+      "charxiv*": [vision]
+      "babyvision*": [vision]
+      "zerobench*": [vision]
+      "frontiermath*": [math]
+      "aime*": [math]
+      "hmmt*": [math]
+      "imoanswerbench*": [math]
+      "ifbench*": [chat]
     every: 1d
-    min_rows: 0
+    min_rows: 300
     min_models: 300
     license: MIT
     attribution: models.dev (github.com/anomalyco/models.dev), MIT

@@ -5,7 +5,7 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0–3 are built and Phase 4 is under way: 29 benchmark sources, a model catalogue merged from
+Phases 0–3 are built and Phase 4 is under way: 30 benchmark sources, a model catalogue merged from
 whatmodel.sh, models.dev, Epoch AI's models database and Hugging Face, change history, checks on
 every update, a scheduled GitHub workflow that commits new data and deploys the site, the explorer
 with a chart mode, a page for every model, benchmark and source, model-name matching you can correct
