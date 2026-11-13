@@ -242,9 +242,10 @@ export async function checkCuration(sources: readonly SourceConfig[]): Promise<s
     }
     if (!metricIds.has(source)) {
       const metrics = await readJson<Metric[]>(join(sourceDir(source), 'metrics.json'));
-      metricIds.set(source, metrics && new Set(metrics.map((m) => m.id)));
+      metricIds.set(source, metrics?.length ? new Set(metrics.map((m) => m.id)) : undefined);
     }
-    // A source not fetched yet has no metrics to check against.
+    // A source with no metrics yet (not fetched, or a change that adds its first columns) has
+    // nothing to check against.
     const known = metricIds.get(source);
     if (known && !known.has(column.slice(source.length + 1))) problems.push(`${BENCHMARKS_PATH}: ${column}: ${source} has no such metric`);
   }

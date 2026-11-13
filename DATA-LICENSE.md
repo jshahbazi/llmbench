@@ -20,6 +20,9 @@ the files the site builds from it, are a different matter.
 - **Sources with no licence.** Some sources state no licence (`none stated`). Their scores are
   reproduced as factual results, with credit to the source. A source is left out only when its terms
   forbid reuse or automated access.
+- **Model makers' own scores** reach us through [models.dev](https://models.dev) (MIT). Each is kept
+  only when the page it came from is the maker's own, and each row links to that page
+  (`upstream_url`); they are marked as reported by the maker (`run_by` is `lab`).
 - **The model catalogue** (makers, release dates, sizes, licences, context windows) is merged from
   whatmodel.sh (CC BY-SA 4.0), [models.dev](https://models.dev) (MIT), Epoch AI's
   [Data on AI Models](https://epoch.ai/data/ai-models) (CC BY 4.0) and the Hugging Face Hub's model

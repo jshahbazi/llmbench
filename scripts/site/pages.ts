@@ -164,9 +164,10 @@ export function buildPages(d: SiteData, downloads: readonly Download[] = []): Pa
     const r = Math.round(g.median * 10) / 10;
     const unit = index.columns[a]!.unit;
     const size = gapSize(r, unit);
+    const n = `${g.n} model${g.n === 1 ? '' : 's'}`;
     return r === 0
-      ? `${shortName(b, group)} and ${shortName(a, group)} agree, ${g.n} models`
-      : `${shortName(b, group)} ${size} ${r < 0 ? 'below' : 'above'} ${shortName(a, group)}, ${g.n} models`;
+      ? `${shortName(b, group)} and ${shortName(a, group)} agree, ${n}`
+      : `${shortName(b, group)} ${size} ${r < 0 ? 'below' : 'above'} ${shortName(a, group)}, ${n}`;
   };
 
   /**

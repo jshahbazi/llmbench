@@ -83,7 +83,7 @@ async function runSource(source: SourceConfig, cache: RunEntry | undefined): Pro
   const delta = (result.catalog?.length ?? 0) - prevCatalog.length;
   const models = result.catalog ? `; ${result.catalog.length} catalogue models (${delta >= 0 ? '+' : ''}${delta})` : '';
   const summary =
-    (previous
+    (previous && prevRows.length
       ? `${result.rows.length} rows; ${stats.added} added, ${stats.changed} changed, ${stats.removed} removed` +
         (stats.returned ? `, ${stats.returned} returned` : '')
       : `baseline: ${result.rows.length} rows, ${stats.added} scores`) + models;

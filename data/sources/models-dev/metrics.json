@@ -1,1 +1,1689 @@
-[]
+[
+ {
+  "id": "3-banking",
+  "label": "τ3 Banking",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "agentic-if-index/meta-internal",
+  "label": "Agentic IF Index (Meta internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "agents-last-exam",
+  "label": "Agents' Last Exam",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "agents-last-exam/linux",
+  "label": "Agents' Last Exam (Linux)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "agents-last-exam/v1",
+  "label": "Agents' Last Exam 1.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "agents-last-exam/v1.1",
+  "label": "Agents' Last Exam 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "aime-2026",
+  "label": "AIME 2026",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "aime/v2026",
+  "label": "AIME 2026.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "aime26",
+  "label": "AIME26",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "androidbench/95-public-tasks",
+  "label": "AndroidBench (95 public tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "androidworld",
+  "label": "AndroidWorld",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "apex-agents",
+  "label": "APEX-Agents",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "apex-bench/v1.1",
+  "label": "Apex Bench 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "apexbench",
+  "label": "ApexBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "arc-agi-1",
+  "label": "ARC-AGI-1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "arc-agi-2",
+  "label": "ARC-AGI-2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "arc-agi-3",
+  "label": "ARC-AGI-3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "arxivmath",
+  "label": "ArxivMath",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "automationbench",
+  "label": "AutomationBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "automationbench/600-public-tasks",
+  "label": "AutomationBench (600 public tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "automationbench/600-task-public",
+  "label": "AutomationBench (600-task public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "automationbench/private",
+  "label": "AutomationBench (private)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "automationbench/public",
+  "label": "AutomationBench (public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "automationbench/public-v3-task",
+  "label": "AutomationBench (public v3 task)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "automationbench/v1.0.6",
+  "label": "AutomationBench 1.0.6",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "babyvision",
+  "label": "BabyVision",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "babyvision/with-tools",
+  "label": "BabyVision, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "benchcad/with-tools",
+  "label": "BenchCAD, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "biomysterybench/human-difficult/with-tools",
+  "label": "BioMysteryBench (human-difficult), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "biomysterybench/human-solvable/with-tools",
+  "label": "BioMysteryBench (human-solvable), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "browsecomp",
+  "label": "BrowseComp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "chartography",
+  "label": "Chartography",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "chartography/with-tools",
+  "label": "Chartography, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "charxiv-reasoning",
+  "label": "CharXiv Reasoning",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "charxiv-reasoning/corrected-annotations",
+  "label": "CharXiv Reasoning (corrected annotations)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "charxiv-reasoning/corrected-annotations/with-tools",
+  "label": "CharXiv Reasoning (corrected annotations), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "charxiv-reasoning/with-tools",
+  "label": "CharXiv Reasoning, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "chinese-simpleqa",
+  "label": "Chinese SimpleQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "cl-bench",
+  "label": "CL-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "cl-bench-life",
+  "label": "CL-bench-life",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "claw-eval",
+  "label": "Claw-Eval",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "claweval-mm",
+  "label": "ClawEval-MM",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "claweval/v1.1",
+  "label": "ClawEval 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "claweval/v20260325/105-queries",
+  "label": "ClawEval 20260325.0 (105 queries)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "cmt-benchmark",
+  "label": "CMT Benchmark",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "codeforces/rating",
+  "label": "Codeforces rating",
+  "direction": "higher",
+  "unit": "rating",
+  "headline": true
+ },
+ {
+  "id": "corpusqa/1m-context",
+  "label": "CorpusQA (1M context)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "coworkbench/internal",
+  "label": "CoWorkBench (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "critpt",
+  "label": "CritPt",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "cti-realm",
+  "label": "CTI-REALM",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "cursorbench/v3.2.0",
+  "label": "CursorBench 3.2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "cursorbench/v4",
+  "label": "CursorBench 4.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "cybergym",
+  "label": "CyberGym",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "dailyomni",
+  "label": "DailyOmni",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "deepsearch-qa",
+  "label": "DeepSearch QA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "deepsearchqa",
+  "label": "DeepSearchQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "deepswe",
+  "label": "DeepSWE",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "deepswe/v1",
+  "label": "DeepSWE 1.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "deepswe/v1.1",
+  "label": "DeepSWE 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "dsbench-fullstack/internal",
+  "label": "DSBench-FullStack (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "dsbench-hard/internal",
+  "label": "DSBench-Hard (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "eebench",
+  "label": "EEBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "erqa",
+  "label": "ERQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "exploitbench",
+  "label": "ExploitBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "exploitgym",
+  "label": "ExploitGym",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "exploitgym/869-tasks/tasks-solved",
+  "label": "ExploitGym (869 tasks) tasks solved",
+  "direction": "higher",
+  "unit": "tasks",
+  "headline": false
+ },
+ {
+  "id": "fairpoliticsqa",
+  "label": "FairPoliticsQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "finance-agent/v1.1",
+  "label": "Finance Agent 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "finance-agent/v2",
+  "label": "Finance Agent 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "finance-agent/v2/vals-ai-private-test",
+  "label": "Finance Agent 2.0 (Vals AI private test)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "financeagent/v1.1",
+  "label": "FinanceAgent 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "fincraft/internal",
+  "label": "FinCRAFT (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "finfirst",
+  "label": "FinFIRST",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "finsearchcomp-verified/expert-validated-internal",
+  "label": "FinSearchComp Verified (expert-validated internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "forte",
+  "label": "FORTE",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontier-bench/v0.1",
+  "label": "Frontier-Bench 0.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontiercode/diamond",
+  "label": "FrontierCode (Diamond)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontiercode/v1",
+  "label": "FrontierCode 1.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontiercode/v1.1 Main",
+  "label": "FrontierCode 1.1 Main",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontiercode/v1.1/extended",
+  "label": "FrontierCode 1.1 (Extended)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontiercode/v1.1/main",
+  "label": "FrontierCode 1.1 (Main)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "frontiercode/v2",
+  "label": "FrontierCode 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontiermath/tier-1-3",
+  "label": "FrontierMath (Tier 1-3)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "frontiermath/tier-4",
+  "label": "FrontierMath (Tier 4)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "frontiermath/v2/tier-1-3",
+  "label": "FrontierMath 2.0 (Tier 1-3)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "frontiermath/v2/tier-4",
+  "label": "FrontierMath 2.0 (Tier 4)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontierscience",
+  "label": "FrontierScience",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "frontierswe",
+  "label": "FrontierSWE",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "frontierswe/v2",
+  "label": "FrontierSWE 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "gdm-mrcr/v2",
+  "label": "GDM-MRCR 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "gdp-pdf",
+  "label": "GDP.pdf",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "gdpval",
+  "label": "GDPval",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "genebench",
+  "label": "GeneBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "gpqa",
+  "label": "GPQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "gpqa-diamond",
+  "label": "GPQA Diamond",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "graphwalks",
+  "label": "Graphwalks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "harvey-legal-agent-benchmark",
+  "label": "Harvey Legal Agent Benchmark",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "harvey-legal-agent-benchmark/v1.1",
+  "label": "Harvey Legal Agent Benchmark 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "healthbench",
+  "label": "HealthBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "healthbench-professional",
+  "label": "HealthBench Professional",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "hle-diamond",
+  "label": "HLE-Diamond",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hle-verified/1811-verified-and-revised-items",
+  "label": "HLE-Verified (1811 verified and revised items)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hmmt/february-2026",
+  "label": "HMMT (February 2026)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hmmt/vFebruary 2026",
+  "label": "HMMT February 2026",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hmmt/vNovember 2025",
+  "label": "HMMT November 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "horizonmath",
+  "label": "HorizonMath",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hr-bench",
+  "label": "HR-Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "humanitys-last-exam",
+  "label": "Humanity's Last Exam",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "humanitys-last-exam/full",
+  "label": "Humanity's Last Exam (full)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "humanitys-last-exam/full-text-plus-mm",
+  "label": "Humanity's Last Exam (full , text + MM)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "humanitys-last-exam/full/with-tools",
+  "label": "Humanity's Last Exam (full), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "humanitys-last-exam/text-only",
+  "label": "Humanity's Last Exam (text-only)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "humanitys-last-exam/text-only/with-tools",
+  "label": "Humanity's Last Exam (text-only), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "humanitys-last-exam/with-tools",
+  "label": "Humanity's Last Exam, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "ifbench",
+  "label": "IFBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "ifeval",
+  "label": "IFEval",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "imoanswerbench",
+  "label": "IMOAnswerBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "intphys2",
+  "label": "IntPhys2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "jfbench",
+  "label": "JFBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "jobbench",
+  "label": "JobBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "kimi-claw-24-7-bench",
+  "label": "Kimi Claw 24/7 Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "kimi-code-bench/v2",
+  "label": "Kimi Code Bench 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "lab-bench/v2/11-subtasks/with-tools",
+  "label": "LAB-Bench 2.0 (11 subtasks), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "livecodebench",
+  "label": "LiveCodeBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "livecodebench-pro",
+  "label": "LiveCodeBench Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "livecodebench/v6",
+  "label": "LiveCodeBench 6.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "long-context-reasoning",
+  "label": "Long Context Reasoning",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "longbench/v2",
+  "label": "LongBench 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "lvbench",
+  "label": "LVBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "matharena-apex",
+  "label": "MathArena Apex",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "matharena-apex-shortlist",
+  "label": "MathArena Apex Shortlist",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mathvision/corrected-annotations",
+  "label": "MathVision (corrected annotations)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mathvision/corrected-annotations/with-tools",
+  "label": "MathVision (corrected annotations), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mcp-atlas",
+  "label": "MCP Atlas",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mcp-atlas/500-public-tasks",
+  "label": "MCP Atlas (500 public tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mcp-atlas/public",
+  "label": "MCP Atlas (public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mcp-mark-verified",
+  "label": "MCP Mark Verified",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mimo-code-bench",
+  "label": "MiMo Code Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mimo-coding-bench",
+  "label": "MiMo Coding Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mimo-cyber-bench",
+  "label": "MiMo Cyber Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mimo-visualcoding",
+  "label": "MiMo VisualCoding",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mka",
+  "label": "MKA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mle-bench",
+  "label": "MLE-Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mle-bench/partial-30",
+  "label": "MLE-Bench (Partial 30)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mls-bench-lite",
+  "label": "MLS Bench Lite",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mmlu",
+  "label": "MMLU",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mmlu-pro",
+  "label": "MMLU-Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mmmu-pro",
+  "label": "MMMU Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "mmmu-pro/with-tools",
+  "label": "MMMU Pro, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mrcr/1m-context",
+  "label": "MRCR (1M context)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mrcr/v2/256k-8-needle",
+  "label": "MRCR 2.0 (256K; 8-needle)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mrcr/v2/8-needle-256k-512k",
+  "label": "MRCR 2.0 (8-needle, 256K-512K)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mrcr/v2/8-needle-512k-1m",
+  "label": "MRCR 2.0 (8-needle, 512K-1M)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mrcrv2",
+  "label": "MRCRv2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "nl2repo",
+  "label": "NL2Repo",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "olmocr-bench",
+  "label": "olmOCR-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "omnidocbench",
+  "label": "OmniDocBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "omnidocbench/v1.5",
+  "label": "OmniDocBench 1.5",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "omnidocbench/v1.5/overall-edit-distance",
+  "label": "OmniDocBench 1.5 overall edit distance",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "onemillion-bench",
+  "label": "$OneMillion-Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "openai-mrcr/v2",
+  "label": "OpenAI MRCR 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld-verified",
+  "label": "OSWorld-Verified",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "osworld/v2",
+  "label": "OSWorld 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "osworld/v2.1",
+  "label": "OSWorld 2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "osworld/v2.1/offline",
+  "label": "OSWorld 2.1 (offline)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld/v2/06-24",
+  "label": "OSWorld 2.0 (06.24)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld/v2/08-08",
+  "label": "OSWorld 2.0 (08.08)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld/v2/august-2026-task-release",
+  "label": "OSWorld 2.0 (August 2026 task release)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld/v2/before-2026-08-08-patch",
+  "label": "OSWorld 2.0 (before 2026-08-08 patch)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld/v2/offline-v2026-08-08",
+  "label": "OSWorld 2.0 (offline v2026.08.08)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "osworld/v2/v2-offline-v2026-08-08",
+  "label": "OSWorld 2.0 (V2-Offline (v2026.08.08))",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "paperbench",
+  "label": "PaperBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "parsebench",
+  "label": "ParseBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "perceptionbench/with-tools",
+  "label": "PerceptionBench, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "phybench",
+  "label": "PHYBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "pinchbench",
+  "label": "PinchBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "plawbench",
+  "label": "PLawBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "posttrainbench",
+  "label": "PostTrainBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "prbench",
+  "label": "PRBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "program-bench",
+  "label": "Program Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "programbench",
+  "label": "ProgramBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "qwenqoderbench/internal",
+  "label": "QwenQoderBench (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "qwenreactbench/internal/elo",
+  "label": "QwenReactBench (internal) Elo",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "qwensvgbench/internal/elo",
+  "label": "QwenSVGBench (internal) Elo",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": false
+ },
+ {
+  "id": "qwenswebench/internal",
+  "label": "QwenSWEBench (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "realworldqa",
+  "label": "RealWorldQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "recreationbench/internal",
+  "label": "RecreationBench (internal)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "remote-labor-index",
+  "label": "Remote Labor Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "robodojo-sim",
+  "label": "RoboDojo Sim",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "scicode",
+  "label": "SciCode",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "screenspot-pro",
+  "label": "ScreenSpot-Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "sec-bench-pro",
+  "label": "SEC-Bench Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "simpleqa-verified",
+  "label": "SimpleQA-Verified",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "simplevqa/with-tools",
+  "label": "SimpleVQA, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "skillsbench/79-text-only-tasks",
+  "label": "SkillsBench (79 text-only tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "skillsbench/v1.1/87-tasks",
+  "label": "SkillsBench 1.1 (87 tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "spreadsheetbench/v1",
+  "label": "SpreadsheetBench 1.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "spreadsheetbench/v2",
+  "label": "SpreadsheetBench 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "sre-bench",
+  "label": "SRE-Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "superchem",
+  "label": "SuperChem",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-atlas-codebase-qna",
+  "label": "SWE-Atlas Codebase QnA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "swe-bench-multilingual",
+  "label": "SWE-Bench Multilingual",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "swe-bench-multimodal",
+  "label": "SWE-Bench Multimodal",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-bench-pro",
+  "label": "SWE-Bench Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "swe-bench-pro/public",
+  "label": "SWE-Bench Pro (public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-bench-pro/qwen-refined-and-corrected-task",
+  "label": "SWE-Bench Pro (Qwen refined and corrected task)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-bench-pro/v1",
+  "label": "SWE-Bench Pro 1.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-bench-pro/v2/hard",
+  "label": "SWE-Bench Pro 2.0 (hard)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-bench-verified",
+  "label": "SWE-Bench Verified",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "swe-marathon",
+  "label": "SWE-Marathon",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "swe-marathon/v1.1",
+  "label": "SWE Marathon 1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-mm",
+  "label": "SWE-MM",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "swe-sweep",
+  "label": "SWE-sweep",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "tau2-bench-telecom",
+  "label": "τ²-Bench Telecom",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "tau3-bench",
+  "label": "tau3-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "tau3-telecom",
+  "label": "τ³-Telecom",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "terminal-bench-science/v0.1",
+  "label": "Terminal-Bench Science 0.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "terminal-bench/v2",
+  "label": "Terminal-Bench 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "terminal-bench/v2.1",
+  "label": "Terminal-Bench 2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "terminal-bench/v3",
+  "label": "Terminal-Bench 3.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "terminal-bench/v4",
+  "label": "Terminal-Bench 4.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "terminal-bench/v4.1",
+  "label": "Terminal-Bench 4.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "tool-decathlon",
+  "label": "Tool-Decathlon",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "toolathlon",
+  "label": "Toolathlon",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "toolathlon-verified",
+  "label": "Toolathlon-Verified",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "translation",
+  "label": "Translation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "usamo/v2026",
+  "label": "USAMO 2026.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "vending-bench/v2/bank-balance-usd",
+  "label": "Vending-Bench 2.0 bank balance (USD)",
+  "direction": "higher",
+  "unit": "USD",
+  "headline": false
+ },
+ {
+  "id": "video-mme",
+  "label": "Video-MME",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "video-mme/v2",
+  "label": "Video-MME 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "videoholmes",
+  "label": "VideoHolmes",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "vision2web",
+  "label": "Vision2Web",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "wandr",
+  "label": "WANDR",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "webarena-verified",
+  "label": "WebArena-Verified",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "widesearch",
+  "label": "WideSearch",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "wildclawbench/35-text-only-tasks",
+  "label": "WildClawBench (35 text-only tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "workspacebench",
+  "label": "WorkSpaceBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "worldvqa/with-tools",
+  "label": "WorldVQA, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "zerobench",
+  "label": "ZeroBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "zerobench/main/with-tools",
+  "label": "ZeroBench (main), with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "zerobench/with-tools",
+  "label": "ZeroBench, with tools",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ }
+]
