@@ -20,9 +20,9 @@ standard Actions runners and Pages are free for public repositories, and `jshahb
 public. The site is served at **llmbench.site** (registered at Cloudflare; DNS-only A, AAAA and
 `www` CNAME records point at GitHub Pages, which issues the HTTPS certificate).
 
-**Status (2026-11-12):** Phases 0 and 1 are built — five sources, field-mapping extractor, change
-history, guards, issue reporting, name matching and the update workflow. Section 12 lists what was
-learned in each.
+**Status (2026-11-13):** Phases 0, 1 and 2 are built — five sources, field-mapping extractor, change
+history, guards, issue reporting, name matching, the update workflow, the explorer, and a page for
+every model, benchmark column and source. Section 12 lists what was learned in each.
 
 ### 1.1 Goals
 
@@ -222,11 +222,14 @@ llmbench/
 ├── scripts/
 │   ├── scrape.ts                 # fetch → extract → guard → diff
 │   ├── resolve.ts                # model matching and reports
-│   ├── build-data.ts             # data/ → files the site loads
-│   ├── add-source.ts, backfill.ts, validate.ts
-│   ├── lib/                      # fetchers, extractor, guards, diff, matcher
+│   ├── build.ts                  # data/ → site/dist: pages, data files, browser scripts
+│   ├── report-issues.ts, validate.ts   (add-source.ts, backfill.ts: Phase 4)
+│   ├── lib/                      # fetchers, extractor, guards, diff, matcher, tags
+│   ├── site/                     # page templates, data assembly, browser-code compiler
 │   └── sources/                  # plugins: whatmodel.ts, epoch.ts
-├── site/                         # Astro site with a React explorer
+├── site/
+│   ├── src/                      # the explorer (TypeScript; shared formatting and URL state)
+│   └── static/                   # style.css
 ├── tests/
 │   ├── fixtures/<id>/            # a saved payload and the rows it must produce
 │   └── *.test.ts
@@ -357,8 +360,15 @@ lists all of them. Pinning a context, such as non-thinking only, is a filter.
 
 ## 7. The site
 
-Static, built with Astro: one HTML page per source, model and benchmark so that links and search
-engines work on GitHub Pages, and a React explorer for the interactive part.
+Static: one HTML page per source, model and benchmark column so that links and search engines work on
+GitHub Pages, and one interactive page, the explorer.
+
+As built in Phase 2, without a framework. Astro and React were the plan; they turned out unnecessary.
+`scripts/build.ts` renders every page from TypeScript template functions with automatic escaping, and
+the explorer is plain TypeScript in `site/src/`, turned into browser modules by Node's own type
+stripping. That means no bundler and no new dependencies, the browser code is type-checked with
+everything else, and the formatting, URL-state and best-score code is shared between the pages, the
+explorer and the tests. The whole site (about 2,000 pages) builds in about a second.
 
 ### 7.1 Explorer (home)
 
@@ -385,22 +395,40 @@ time. All-time coverage favours old benchmarks (MMLU, GSM8K, HumanEval); models 
 12 months are mostly scored on GPQA Diamond, Arena, SWE-bench Verified and Humanity's Last Exam. With a
 "released in the last 12 months" filter the default view goes from 24% to 36% filled.
 
+As built: presets are the task tags (coding, agents & tools, math, knowledge & reasoning, chat &
+writing, vision & documents, web search), taken from whatmodel's task groupings plus `tags:` in
+`sources.yaml`. The column picker lists every metric by source with live coverage counts; sub-scores
+(non-headline metrics) are behind a toggle. Filters: name or maker, release window, size by total
+parameters, maker, open weights, permissive licence, who ran it (independent, submitted, lab), and
+unmatched names. Cells support arrow-key navigation, and Enter opens the popover. Chart mode moves to
+Phase 4, and a quantization filter waits for Phase 3's normalised context.
+
+URL parameters: `c` (a column id, repeated), `n` (how many most-covered columns), `tag`, `q`, `since`
+(months), `open`, `perm`, `size` (max total B; negative means "over"), `maker`, `by` (run-by codes,
+e.g. `01`), `um`, `min`, `sort` (a column id or `name`), `dir`, `m` (a model id for compare,
+repeated), `view=compare`.
+
 ### 7.2 Pages
 
 - `/sources/` — every source with status, last checked, last changed, licence and attribution.
-- `/sources/<id>/` — that leaderboard as the source publishes it: its rows, its names, all its metrics.
-  Works with zero curation.
-- `/models/<id>/` — every score for a model across all sources, grouped by category, with history and
-  each raw name that matched it.
-- `/benchmarks/` and `/benchmarks/<family>/` — directory of all metrics; a family's columns side by side.
+- `/sources/<id>/` — status and any held-run reasons, licence, where the data is read from, every
+  metric, every model name with how it was matched, and recent changes. Works with zero curation.
+- `/models/<id>/` — every score for a model across all sources, with rank in each column; sub-scores
+  folded away; each name the sources use for it; recent changes. Links to whatmodel.sh for memory needs
+  and run commands.
+- `/benchmarks/` — directory of all columns with a filter box. `/benchmarks/<source>/<metric>/` — the
+  full leaderboard for one column, and links to the same benchmark in other sources (via `family`).
 - `/method/` — how matching, dates and "best in cell" work.
-- `/data/` — downloads: everything as CSV, Parquet and SQLite, licensed CC BY-SA 4.0.
+- `/data/` — where the data lives and its licences. CSV, Parquet and SQLite downloads are Phase 3.
+- `404.html`, `sitemap.xml`, `robots.txt`.
 
 ### 7.3 Data the site loads
 
-The build writes `index.json` (sources, columns, models) and one `cells/<source>.json` per source. The
-explorer loads the index, then only the sources behind the columns in view. All filtering and sorting
-happens in the browser. A later option is an in-browser SQL console over the Parquet file.
+The build writes `index.json` (sources, columns, models, tags) and one `cells/<source>.json` per
+source: each score as a compact tuple with its run-by, date, context, source link, interval, the
+source's own name for the model, and its change history. The explorer loads all of it (about 0.6 MB
+compressed), so any column can be added instantly. All filtering and sorting happens in the browser.
+A later option is an in-browser SQL console over the Parquet file.
 
 ---
 
@@ -612,6 +640,9 @@ caught a real upstream problem on the first run (Arena listing one model twice).
 **Phase 2 — the explorer (about a week).** Column picker, sort, filters, URL state, popovers, compare
 mode. Source, model and benchmark pages.
 *Exit:* a visitor can build and share a table from any mix of sources.
+*Done 2026-11-13.* Checked in the browser: a shared link with four columns from four sources, filters
+and a sort reopened exactly; CSV export, compare mode, the popover with keyboard focus handling, the
+column picker, and phone width. Built without Astro or React (section 7).
 
 **Phase 3 — matching and exports (about a week).** Name parser, matcher, curation files, reports. CSV,
 Parquet and SQLite downloads. Method page.

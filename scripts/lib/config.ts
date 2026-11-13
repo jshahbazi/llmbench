@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { parse } from 'yaml';
+import { checkTags } from './tags.ts';
 import { RUN_BY, type RunBy, type SourceConfig } from './types.ts';
 
 const KNOWN_KEYS = new Set([
@@ -60,6 +61,8 @@ export function parseSources(text: string): SourceConfig[] {
 
     const options: Record<string, unknown> = {};
     for (const [k, v] of Object.entries(entry)) if (!KNOWN_KEYS.has(k)) options[k] = v;
+    const tagProblems = checkTags(options['tags'], at);
+    if (tagProblems.length) throw new ConfigError(tagProblems[0]!);
 
     out.push({
       id,

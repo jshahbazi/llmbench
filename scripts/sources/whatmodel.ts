@@ -145,9 +145,15 @@ export function toCatalogModel(m: WmModel): CatalogModel {
   return out;
 }
 
+export interface WmTask {
+  id: string;
+  category?: string;
+  benchmarks?: string[];
+}
+
 /** Pure transform from whatmodel's files to our rows, metrics and catalogue. */
 export function transform(
-  input: { results: WmResult[]; models: WmModel[]; benchmarks: WmBench[]; sources: WmSource[] },
+  input: { results: WmResult[]; models: WmModel[]; benchmarks: WmBench[]; sources: WmSource[]; tasks?: WmTask[] },
   categories: readonly string[],
 ): Omit<ExtractResult, 'revision' | 'revisionDate'> {
   const wanted = new Set(categories);
@@ -156,10 +162,25 @@ export function transform(
   const keys = rowKeys(results);
   const rows = results.map((r, i) => toRow(r, keys[i]!));
 
+  // whatmodel's task groupings (agents, coding, chat, math, vision, search) become metric tags.
+  const tagsByBench = new Map<string, Set<string>>();
+  for (const t of input.tasks ?? []) {
+    if (!wanted.has(t.category ?? 'llm')) continue;
+    for (const b of t.benchmarks ?? []) {
+      let s = tagsByBench.get(b);
+      if (!s) tagsByBench.set(b, (s = new Set()));
+      s.add(t.id);
+    }
+  }
+
   const benchIds = new Set(results.map((r) => r.bench));
   const metrics = input.benchmarks.filter((b) => benchIds.has(b.id)).map(metricFromBench);
   const missing = [...benchIds].filter((id) => !metrics.some((m) => m.id === id));
   for (const id of missing) metrics.push({ id, label: id, direction: 'higher', unit: 'score' });
+  for (const m of metrics) {
+    const tags = tagsByBench.get(m.id);
+    if (tags) m.tags = [...tags].sort();
+  }
 
   const catalog = input.models.filter((m) => wanted.has(modelCategory(m))).map(toCatalogModel);
 
@@ -184,16 +205,17 @@ const whatmodel: Plugin = async ({ source, previous, force }) => {
 
   const load = async <T>(file: string): Promise<T> =>
     (await (await githubFile(owner, repo, head.sha, `${path}/${file}`)).json()) as T;
-  const [results, models, benchmarks, sources] = await Promise.all([
+  const [results, models, benchmarks, sources, tasks] = await Promise.all([
     load<WmResult[]>('results.json'),
     load<WmModel[]>('models.json'),
     load<WmBench[]>('benchmarks.json'),
     load<WmSource[]>('sources.json'),
+    load<WmTask[]>('tasks.json'),
   ]);
 
   const opt = source.options['categories'];
   const categories = Array.isArray(opt) && opt.every((c) => typeof c === 'string') ? opt : ['llm'];
-  return { revision: head.sha, revisionDate: head.date, ...transform({ results, models, benchmarks, sources }, categories) };
+  return { revision: head.sha, revisionDate: head.date, ...transform({ results, models, benchmarks, sources, tasks }, categories) };
 };
 
 export default whatmodel;

@@ -51,6 +51,8 @@ export interface Metric {
   unit: string;
   /** Shown in the default "most covered" column choice. Others need "All columns". */
   headline?: boolean;
+  /** Task tags used by the explorer's presets: agents, coding, chat, math, vision, search, knowledge. */
+  tags?: string[];
   category?: string;
   family?: string;
   url?: string;

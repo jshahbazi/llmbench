@@ -5,8 +5,21 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0 and 1 are built: five sources, change history, checks on every update, and a scheduled
-GitHub workflow that commits new data and deploys the site.
+Phases 0–2 are built: five sources, change history, checks on every update, a scheduled GitHub
+workflow that commits new data and deploys the site, the explorer, and a page for every model,
+benchmark and source.
+
+## The site
+
+- **Explorer** (home): pick any columns from any source, or start from a preset such as Coding or
+  Math. Filter by release date, size, maker, licence and who ran the evaluation. Sort by any column,
+  click a score to see every score behind it and where each came from, and compare up to five models
+  side by side. The whole view is in the URL, so "Copy link" shares exactly what you see, and
+  "Download CSV" exports it.
+- **Model pages** (`/models/<id>/`): every score for one model, with its rank in each column.
+- **Benchmark pages** (`/benchmarks/<source>/<metric>/`): the full leaderboard for one column.
+- **Source pages** (`/sources/<id>/`): status, licence, metrics, how each model name was matched, and
+  recent changes.
 
 ## How it works
 
@@ -74,8 +87,10 @@ workflow from the Actions tab with `accept` set to the source id.
 | `data/catalog/models.jsonl` | Canonical models, seeded from whatmodel.sh | the workflow |
 | `data/resolved/aliases.csv` | How every model name was matched | the workflow |
 | `data/reports/unmatched.csv` | Model names with no match, most-used first | the workflow |
-| `scripts/` | Scraper, matching, build, source plugins | code |
-| `site/static/` | The page | code |
+| `scripts/` | Scraper, matching, source plugins | code |
+| `scripts/build.ts`, `scripts/site/` | Builds every page and data file into `site/dist` | code |
+| `site/src/` | The explorer (TypeScript, turned into browser modules at build time) | code |
+| `site/static/` | Stylesheet | code |
 
 ## Licence
 

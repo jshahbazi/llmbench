@@ -24,7 +24,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-  "description": "Agents' Last Exam pass@1 with the official scaffold as reported by the model publisher. Distinct from ale-openclaw-overall-pass (fixed OpenClaw + GUI-as-Tool harness)."
+  "description": "Agents' Last Exam pass@1 with the official scaffold as reported by the model publisher. Distinct from ale-openclaw-overall-pass (fixed OpenClaw + GUI-as-Tool harness).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "agents-last-exam-unspecified",
@@ -33,7 +36,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/blob/eb9eb208eb0d988989d07a6a12d0fdeb5f52574a/README.md",
-  "description": "Agents' Last Exam score where the publisher states neither the metric nor the harness (the GLM-5.3-Flash card's footnote for it is blank). Not merged with agents-last-exam (pass@1, official scaffold) or ale-openclaw-overall-pass."
+  "description": "Agents' Last Exam score where the publisher states neither the metric nor the harness (the GLM-5.3-Flash card's footnote for it is blank). Not merged with agents-last-exam (pass@1, official scaffold) or ale-openclaw-overall-pass.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "agentworldbench-overall",
@@ -166,7 +172,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "AI2D test accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "AI2D test accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "aider-code-editing",
@@ -175,7 +184,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/leaderboards/edit.md",
-  "description": "Aider's original code editing benchmark (superseded by the polyglot leaderboard): the model edits Python source files to complete 133 small Exercism exercises and must apply its own edits; score is pass_rate_2, the percent of exercises whose tests pass after at most two attempts (the second sees the test errors). Edit format per run in the note. Distinct from aider-polyglot (225 exercises, six languages)."
+  "description": "Aider's original code editing benchmark (superseded by the polyglot leaderboard): the model edits Python source files to complete 133 small Exercism exercises and must apply its own edits; score is pass_rate_2, the percent of exercises whose tests pass after at most two attempts (the second sees the test errors). Edit format per run in the note. Distinct from aider-polyglot (225 exercises, six languages).",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "aider-polyglot",
@@ -183,7 +195,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/_data/polyglot_leaderboard.yml"
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/_data/polyglot_leaderboard.yml",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "aime-2024",
@@ -192,14 +207,20 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/56d4cbbb4d29f4355bab4b9a39ccb717a14ad5ad/README.md",
-  "description": "Pass@1 / mean single-response accuracy, not majority-vote cons@64."
+  "description": "Pass@1 / mean single-response accuracy, not majority-vote cons@64.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "aime-2025",
   "label": "AIME 2025",
   "direction": "higher",
   "unit": "fraction",
-  "url": "https://artofproblemsolving.com/wiki/index.php/2025_AIME_I"
+  "url": "https://artofproblemsolving.com/wiki/index.php/2025_AIME_I",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "aime-2025-with-tools",
@@ -208,14 +229,20 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/zai-org/GLM-4.6/blob/be72194883d968d7923a07e2f61681ea9a2826d1/README.md",
-  "description": "AIME 2025 with tool-integrated reasoning (code execution) as labelled 'w/ Tools' by the source; separate from no-tool aime-2025. Tool setup per the source's TIR guide and the note."
+  "description": "AIME 2025 with tool-integrated reasoning (code execution) as labelled 'w/ Tools' by the source; separate from no-tool aime-2025. Tool setup per the source's TIR guide and the note.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "aime-2026",
   "label": "AIME 2026",
   "direction": "higher",
   "unit": "fraction",
-  "url": "https://artofproblemsolving.com/wiki/index.php/2026_AIME_I"
+  "url": "https://artofproblemsolving.com/wiki/index.php/2026_AIME_I",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "aime-2026-i",
@@ -224,7 +251,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/zai-org/GLM-5",
-  "description": "AIME 2026 contest I only (15 problems); distinct from aime-2026 (I and II)."
+  "description": "AIME 2026 contest I only (15 problems); distinct from aime-2026 (I and II).",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "ale-openclaw-overall-pass",
@@ -233,7 +263,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2606.05405v2",
-  "description": "Full-pass rate over all distinct ALE tasks (Near-Term 67, Full-Spectrum 55, Last-Exam 38) with the harness fixed to OpenClaw plus GUI-as-Tool (Table 1 model-comparison panel, Overall column)."
+  "description": "Full-pass rate over all distinct ALE tasks (Near-Term 67, Full-Spectrum 55, Last-Exam 38) with the harness fixed to OpenClaw plus GUI-as-Tool (Table 1 model-comparison panel, Overall column).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "alpacaeval1-winrate",
@@ -242,7 +275,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/tatsu-lab/alpaca_eval/blob/cd543a149df89434d8a54582c0151c0b945c3d20/src/alpaca_eval/leaderboards/data_AlpacaEval/alpaca_eval_gpt4_leaderboard.csv",
-  "description": "AlpacaEval 1.0: the share of 805 instructions where a GPT-4 judge prefers the model's answer to text-davinci-003's. Not length-controlled; the reference scores 50% by definition."
+  "description": "AlpacaEval 1.0: the share of 805 instructions where a GPT-4 judge prefers the model's answer to text-davinci-003's. Not length-controlled; the reference scores 50% by definition.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "alpacaeval2-lc",
@@ -251,7 +287,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2512.13961v2",
-  "description": "Length-controlled win rate; judge/version and decoding depend on source."
+  "description": "Length-controlled win rate; judge/version and decoding depend on source.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "androidworld",
@@ -296,7 +335,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/tencent/Hy3",
-  "description": "APEX-Agents professional-task agent benchmark, pass@1 as reported."
+  "description": "APEX-Agents professional-task agent benchmark, pass@1 as reported.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "api-bank-zeroshot-total-correctness",
@@ -323,7 +365,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/inception42/Leaderboards/blob/bef41ddf1f6c39bb3a20ad13e518e28e4f2654fc/assets/results/ifeval_results.jsonl",
-  "description": "Inception Arabic IFEval leaderboard, Arabic prompt-level instruction-following accuracy ('Ar Prompt-lvl'). Strict/loose checking not stated. English half of the leaderboard not imported."
+  "description": "Inception Arabic IFEval leaderboard, Arabic prompt-level instruction-following accuracy ('Ar Prompt-lvl'). Strict/loose checking not stated. English half of the leaderboard not imported.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "aragen-v3-3c3h",
@@ -386,7 +431,10 @@
   "unit": "IPS",
   "category": "llm",
   "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/blob/46919c467f7f93d9609b668a283bcd20d87c28bc/agent/latest-00000-of-00001.parquet",
-  "description": "Signed net improvement in the evaluated orchestrator/harness. Not Elo, accuracy or a win rate. Store raw IPS; divide by fixed 0.1 (ten percentage points of effect) for the latent fit. Overall aggregate only; component signals are not imported again. October 1 methodology version; highest available published reasoning effort per model in this task. Published intervals and counts retained per observation."
+  "description": "Signed net improvement in the evaluated orchestrator/harness. Not Elo, accuracy or a win rate. Store raw IPS; divide by fixed 0.1 (ten percentage points of effect) for the latent fit. Overall aggregate only; component signals are not imported again. October 1 methodology version; highest available published reasoning effort per model in this task. Published intervals and counts retained per observation.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "arena-hard-unspecified",
@@ -395,7 +443,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/Phi-4-reasoning",
-  "description": "Arena-Hard win rate where the source does not state the version (v0.1 vs v2) or judge. Not merged with arena-hard-v2."
+  "description": "Arena-Hard win rate where the source does not state the version (v0.1 vs v2) or judge. Not merged with arena-hard-v2.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "arena-hard-v0-1-gpt4-1106",
@@ -404,7 +455,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
-  "description": "Original Arena-Hard-Auto v0.1 win rate judged by GPT-4-1106-preview; not Arena-Hard v2."
+  "description": "Original Arena-Hard-Auto v0.1 win rate judged by GPT-4-1106-preview; not Arena-Hard v2.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "arena-hard-v2",
@@ -413,7 +467,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B/blob/6327cdbcf907e1c7cec9cb29fb6e6cebdf8feaf7/README.md",
-  "description": "Aggregate of hard prompts and creative writing. Component rows not also imported."
+  "description": "Aggregate of hard prompts and creative writing. Component rows not also imported.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "arena-hard-v2-creative-writing",
@@ -422,7 +479,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/lmarena/arena-hard-auto/blob/196f6b826783b3da7310e361a805fa36f0be83f3/README.md",
-  "description": "250 creative-writing prompts; win rate against gemini-2.0-flash-001 judged by an ensemble of GPT-4.1 and Gemini-2.5."
+  "description": "250 creative-writing prompts; win rate against gemini-2.0-flash-001 judged by an ensemble of GPT-4.1 and Gemini-2.5.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "arena-hard-v2-hard-prompt-sc-gemini25",
@@ -431,7 +491,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/lmarena/arena-hard-auto/blob/196f6b826783b3da7310e361a805fa36f0be83f3/README.md",
-  "description": "500 hard real-world prompts; pairwise win rate against o3-mini-2025-01-31 judged by Gemini-2.5 with style control (official configuration). Distinct from the arena-hard-v2 aggregate reported in model cards."
+  "description": "500 hard real-world prompts; pairwise win rate against o3-mini-2025-01-31 judged by Gemini-2.5 with style control (official configuration). Distinct from the arena-hard-v2 aggregate reported in model cards.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "asdiv",
@@ -520,7 +583,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2608.17895v1",
-  "description": "BEAR-Bench (arXiv:2608.17895v1, CC BY 4.0): 1,000 human-authored question-answer pairs over text-dense professional and academic document images (business 532, science 468; Russian 618, English 382; figures, diagrams, equations). Zero-shot, image + raw question, temperature 0.6; free-form answers judged correct/incorrect by GPT-4o for semantic equivalence. Score = Overall accuracy (Table 2)."
+  "description": "BEAR-Bench (arXiv:2608.17895v1, CC BY 4.0): 1,000 human-authored question-answer pairs over text-dense professional and academic document images (business 532, science 468; Russian 618, English 382; figures, diagrams, equations). Zero-shot, image + raw question, temperature 0.6; free-form answers judged correct/incorrect by GPT-4o for semantic equivalence. Score = Overall accuracy (Table 2).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "beyondaime",
@@ -547,7 +613,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2505.00949v5",
-  "description": "Berkeley Function Calling Leaderboard v2 'live' (user-contributed) subset accuracy; not the v3/v4 overall."
+  "description": "Berkeley Function Calling Leaderboard v2 'live' (user-contributed) subset accuracy; not the v3/v4 overall.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bfcl-v3",
@@ -556,7 +625,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/6533e8de2c68e4536bf7c411d7a3ce5734111476/README.md",
-  "description": "Berkeley Function Calling Leaderboard v3 aggregate. No aggregate-plus-subcomponent duplication."
+  "description": "Berkeley Function Calling Leaderboard v3 aggregate. No aggregate-plus-subcomponent duplication.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bfcl-v3-multiturn",
@@ -565,7 +637,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
-  "description": "Berkeley Function Calling Leaderboard v3 multi-turn category accuracy only (not the overall BFCL v3 score)."
+  "description": "Berkeley Function Calling Leaderboard v3 multi-turn category accuracy only (not the overall BFCL v3 score).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bfcl-v4",
@@ -573,7 +648,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://github.com/HuanzhiMao/BFCL-Result/blob/cadd76a8dc62984e7bf15ecaf358f070bae745cc/2025-12-16/score/data_overall.csv"
+  "url": "https://github.com/HuanzhiMao/BFCL-Result/blob/cadd76a8dc62984e7bf15ecaf358f070bae745cc/2025-12-16/score/data_overall.csv",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bfcl-v4-2025-08-26",
@@ -582,7 +660,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/HuanzhiMao/BFCL-Result/blob/cadd76a8dc62984e7bf15ecaf358f070bae745cc/2025-08-26/score/data_overall.csv",
-  "description": "Berkeley Function Calling Leaderboard V4 Overall Acc from the 2025-08-26 result archive, recorded only for models absent from the 2025-11-03 and 2025-12-16 archives. Kept apart from bfcl-v4 and bfcl-v4-2025-11-03 because the archive re-scores entries between snapshots. FC entry when available, otherwise Prompt."
+  "description": "Berkeley Function Calling Leaderboard V4 Overall Acc from the 2025-08-26 result archive, recorded only for models absent from the 2025-11-03 and 2025-12-16 archives. Kept apart from bfcl-v4 and bfcl-v4-2025-11-03 because the archive re-scores entries between snapshots. FC entry when available, otherwise Prompt.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bfcl-v4-2025-11-03",
@@ -591,7 +672,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/HuanzhiMao/BFCL-Result/blob/cadd76a8dc62984e7bf15ecaf358f070bae745cc/2025-11-03/score/data_overall.csv",
-  "description": "Berkeley Function Calling Leaderboard V4 Overall Acc from the 2025-11-03 result archive, recorded only for models that are absent from the 2025-12-16 archive (bfcl-v4). Kept apart from bfcl-v4 because the archive re-scores entries between snapshots. FC entry when available, otherwise Prompt."
+  "description": "Berkeley Function Calling Leaderboard V4 Overall Acc from the 2025-11-03 result archive, recorded only for models that are absent from the 2025-12-16 archive (bfcl-v4). Kept apart from bfcl-v4 because the archive re-scores entries between snapshots. FC entry when available, otherwise Prompt.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bfcl-version-unspecified",
@@ -600,7 +684,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2503.01743v2",
-  "description": "Berkeley Function Calling Leaderboard score as reported by a publisher without naming v1/v2/v3/v4 or the aggregation; not merged with bfcl-v3 or bfcl-v4."
+  "description": "Berkeley Function Calling Leaderboard score as reported by a publisher without naming v1/v2/v3/v4 or the aggregation; not merged with bfcl-v3 or bfcl-v4.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "bigbench-date-understanding",
@@ -627,7 +714,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ibm-granite/granite-4.0-h-small/blob/b8c0982bab7fde4eb48110f5a069527c008fab39/README.md",
-  "description": "BigCodeBench pass@1; split (full/hard, complete/instruct) per note. Link: first pinned publisher document in this batch that reports it."
+  "description": "BigCodeBench pass@1; split (full/hard, complete/instruct) per note. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "bigcodebench-complete",
@@ -654,7 +744,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://ai.google.dev/gemma/docs/core/model_card_3",
-  "description": "BIRD text-to-SQL dev set execution accuracy as reported."
+  "description": "BIRD text-to-SQL dev set execution accuracy as reported.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "birdbench",
@@ -690,7 +783,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/meituan-longcat/LongCat-2.0/blob/834bf5ffe3047aa9f6cc7a64a9bc068b146b8274/README.md",
-  "description": "OpenAI BrowseComp web-browsing agent benchmark; accuracy; harness/context management per source note. Link: first pinned publisher document in this batch that reports it."
+  "description": "OpenAI BrowseComp web-browsing agent benchmark; accuracy; harness/context management per source note. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "browsecomp-context-managed",
@@ -699,7 +796,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/zai-org/GLM-5",
-  "description": "BrowseComp where the agent manages context (discard-all, reset, or folding strategy as stated in the note) beyond the model window. Separate from plain browsecomp."
+  "description": "BrowseComp where the agent manages context (discard-all, reset, or folding strategy as stated in the note) beyond the model window. Separate from plain browsecomp.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "browsecomp-ling-single-context",
@@ -717,7 +818,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "Chinese BrowseComp-ZH browsing benchmark; accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "Chinese BrowseComp-ZH browsing benchmark; accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "browsecomp-zh-context-managed",
@@ -735,7 +840,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/ServiceNow/browsergym-leaderboard",
-  "description": "MiniWoB success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes."
+  "description": "MiniWoB success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "browsergym-genericagent-webarena",
@@ -744,7 +852,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/ServiceNow/browsergym-leaderboard",
-  "description": "WebArena success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes."
+  "description": "WebArena success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "browsergym-genericagent-workarena-l1",
@@ -753,7 +864,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/ServiceNow/browsergym-leaderboard",
-  "description": "WorkArena-L1 success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes."
+  "description": "WorkArena-L1 success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "browsergym-genericagent-workarena-l2",
@@ -762,7 +876,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/ServiceNow/browsergym-leaderboard",
-  "description": "WorkArena-L2 success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes."
+  "description": "WorkArena-L2 success rate for ServiceNow AgentLab's GenericAgent (TMLR configuration flags) with the named LLM as backend, as published on the BrowserGym leaderboard. Only rows marked Original and followed_evaluation_protocol=Yes.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "c-eval",
@@ -789,7 +906,10 @@
   "unit": "score",
   "category": "llm",
   "family": "caparena",
-  "url": "https://arxiv.org/html/2503.12329v1#A10.T8"
+  "url": "https://arxiv.org/html/2503.12329v1#A10.T8",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "cb",
@@ -807,7 +927,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "CC-OCR overall score. Link: first pinned publisher document in this batch that reports it."
+  "description": "CC-OCR overall score. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "chartarena-en-map",
@@ -816,7 +939,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2606.01348v3",
-  "description": "ChartArena (arXiv:2606.01348v3, CC BY 4.0): chart-to-structure parsing across eight chart families (bar, line, pie, radar, box plot, combination, flowchart, mind map) and three visual scenarios (digital rendering, printed photo, hand-drawn photo). Outputs in any format are normalised to triples (numeric charts) or labelled graphs (diagrams) and scored by mAP at the 'high' tolerance; score = English 'Average' column of Table 2 / Table C.3, stored /100."
+  "description": "ChartArena (arXiv:2606.01348v3, CC BY 4.0): chart-to-structure parsing across eight chart families (bar, line, pie, radar, box plot, combination, flowchart, mind map) and three visual scenarios (digital rendering, printed photo, hand-drawn photo). Outputs in any format are normalised to triples (numeric charts) or labelled graphs (diagrams) and scored by mAP at the 'high' tolerance; score = English 'Average' column of Table 2 / Table C.3, stored /100.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "chartography-with-tools",
@@ -825,7 +951,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-  "description": "Chartography visual chart reasoning with tool use, pass@1; harness per note."
+  "description": "Chartography visual chart reasoning with tool use, pass@1; harness per note.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "chartqa",
@@ -834,7 +963,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-  "description": "ChartQA test accuracy (relaxed accuracy as conventionally reported)."
+  "description": "ChartQA test accuracy (relaxed accuracy as conventionally reported).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "charxiv-dq",
@@ -843,7 +975,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2406.18521",
-  "description": "CharXiv descriptive-question accuracy (validation set): reading basic elements of real scientific charts (titles, axes, labels, counts), graded by GPT-4o. The reasoning questions are a separate benchmark (charxiv-rq)."
+  "description": "CharXiv descriptive-question accuracy (validation set): reading basic elements of real scientific charts (titles, axes, labels, counts), graded by GPT-4o. The reasoning questions are a separate benchmark (charxiv-rq).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "charxiv-dq-test",
@@ -852,7 +987,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2406.18521v1#A3.T4",
-  "description": "CharXiv descriptive-question accuracy on the held-out TEST split (1,323 charts, answers kept private, scored by the CharXiv authors), as printed in Appendix C Table 4 of arXiv:2406.18521v1. Different questions from charxiv-dq (validation split); not merged with it."
+  "description": "CharXiv descriptive-question accuracy on the held-out TEST split (1,323 charts, answers kept private, scored by the CharXiv authors), as printed in Appendix C Table 4 of arXiv:2406.18521v1. Different questions from charxiv-dq (validation split); not merged with it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "charxiv-rq",
@@ -861,7 +999,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "CharXiv reasoning-question accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "CharXiv reasoning-question accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "charxiv-rq-test",
@@ -870,7 +1011,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2406.18521v1#A3.T4",
-  "description": "CharXiv reasoning-question accuracy on the held-out TEST split (1,323 charts, answers kept private, scored by the CharXiv authors), as printed in Appendix C Table 4 of arXiv:2406.18521v1. Different questions from charxiv-rq (validation split); not merged with it."
+  "description": "CharXiv reasoning-question accuracy on the held-out TEST split (1,323 charts, answers kept private, scored by the CharXiv authors), as printed in Appendix C Table 4 of arXiv:2406.18521v1. Different questions from charxiv-rq (validation split); not merged with it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "chinese-simpleqa",
@@ -1004,7 +1148,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "codereviewqa",
-  "url": "https://arxiv.org/html/2503.16167v2#S6.T8"
+  "url": "https://arxiv.org/html/2503.16167v2#S6.T8",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "codereviewqa-clh-invariant-accuracy",
@@ -1013,7 +1160,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "codereviewqa",
-  "url": "https://arxiv.org/html/2503.16167v2#A6"
+  "url": "https://arxiv.org/html/2503.16167v2#A6",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "codereviewqa-ctr-invariant-accuracy",
@@ -1022,7 +1172,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "codereviewqa",
-  "url": "https://arxiv.org/html/2503.16167v2#A6"
+  "url": "https://arxiv.org/html/2503.16167v2#A6",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "codereviewqa-sih-invariant-accuracy",
@@ -1031,7 +1184,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "codereviewqa",
-  "url": "https://arxiv.org/html/2503.16167v2#A6"
+  "url": "https://arxiv.org/html/2503.16167v2#A6",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "collie",
@@ -1076,7 +1232,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2605.17281v2",
-  "description": "ContractBench (arXiv:2605.17281v2, CC BY 4.0): 33 programmatically validated tool-use agent tasks that test whether an agent preserves 'observation contracts' (temporal validity of presigned URLs/tokens under a virtual clock, and byte-level integrity checked by SHA-256). Success rate = passed episodes / 99 (33 tasks x k=3 rollouts, temperature 0, 600 s per episode), as printed in Table 10 (SR%)."
+  "description": "ContractBench (arXiv:2605.17281v2, CC BY 4.0): 33 programmatically validated tool-use agent tasks that test whether an agent preserves 'observation contracts' (temporal validity of presigned URLs/tokens under a virtual clock, and byte-level integrity checked by SHA-256). Success rate = passed episodes / 99 (33 tasks x k=3 rollouts, temperature 0, 600 s per episode), as printed in Table 10 (SR%).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "convre-re2text-normal-zeroshot",
@@ -1137,7 +1296,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "CountBench object-counting accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "CountBench object-counting accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "cptub-speakleash-avg",
@@ -1182,7 +1344,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/facebookresearch/cruxeval/blob/190faf16d175b5847b0af05d937872b1fb395942/README.md",
-  "description": "CRUXEval input prediction: given a short Python function and an output, produce an input that yields it (800 problems); pass@1, direct prediction without chain-of-thought unless the note says otherwise. Companion of cruxeval-o."
+  "description": "CRUXEval input prediction: given a short Python function and an output, produce an input that yields it (800 problems); pass@1, direct prediction without chain-of-thought unless the note says otherwise. Companion of cruxeval-o.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "cruxeval-o",
@@ -1191,7 +1356,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ibm-granite/granite-4.0-h-small/blob/b8c0982bab7fde4eb48110f5a069527c008fab39/README.md",
-  "description": "CRUXEval output prediction pass@1. Link: first pinned publisher document in this batch that reports it."
+  "description": "CRUXEval output prediction pass@1. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "cruxeval-zeroeval",
@@ -1199,7 +1367,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://github.com/WildEval/ZeroEval/blob/8c1485edf12c6efb5f69135a562927c5ad484059/result_dirs/crux.summary.json"
+  "url": "https://github.com/WildEval/ZeroEval/blob/8c1485edf12c6efb5f69135a562927c5ad484059/result_dirs/crux.summary.json",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "csk-pn-qa-10shot",
@@ -1235,7 +1406,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ibm-granite/granite-4.1-8b",
-  "description": "DeepMind Mathematics dataset accuracy as reported by the source (subset/aggregation as in the source's harness)."
+  "description": "DeepMind Mathematics dataset accuracy as reported by the source (subset/aggregation as in the source's harness).",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "deepplanning",
@@ -1253,7 +1427,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/tencent/Hy3",
-  "description": "DeepSearchQA deep-research question answering accuracy; harness per note."
+  "description": "DeepSearchQA deep-research question answering accuracy; harness per note.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "deepswe-v1-1",
@@ -1262,7 +1440,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-  "description": "DeepSWE v1.1 software-engineering agent benchmark, resolved rate; harness (mini-SWE, Claude Code, ...) per note."
+  "description": "DeepSWE v1.1 software-engineering agent benchmark, resolved rate; harness (mini-SWE, Claude Code, ...) per note.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "diagnosticiq-macro",
@@ -1280,7 +1462,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2608.12262v1",
-  "description": "Diagram-MMU (arXiv:2608.12262v1, CC BY 4.0): diagram question answering over 3.7k curated scientific TikZ diagrams in six domains (graph structures, charts, planar geometry, circuits, 3D shapes, chemistry); descriptive, standard-reasoning and what-if questions, two per diagram. Answers extracted and graded 0/1 by Qwen3-Next-80B-A3B-Instruct (97.5% agreement with humans). Direct answering, temperature 1.0. Score = DQA accuracy (Table 5)."
+  "description": "Diagram-MMU (arXiv:2608.12262v1, CC BY 4.0): diagram question answering over 3.7k curated scientific TikZ diagrams in six domains (graph structures, charts, planar geometry, circuits, 3D shapes, chemistry); descriptive, standard-reasoning and what-if questions, two per diagram. Answers extracted and graded 0/1 by Qwen3-Next-80B-A3B-Instruct (97.5% agreement with humans). Direct answering, temperature 1.0. Score = DQA accuracy (Table 5).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "dibimt-avg-acc",
@@ -1307,7 +1492,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-  "description": "DocVQA test ANLS as reported (0-100 scaled)."
+  "description": "DocVQA test ANLS as reported (0-100 scaled).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "drop",
@@ -1325,7 +1513,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2402.19173v1",
-  "description": "DS-1000 data-science code generation (1,000 problems over NumPy, Pandas, Matplotlib, PyTorch, SciPy, Scikit-Learn, TensorFlow); overall pass@1, completion format unless the note says otherwise."
+  "description": "DS-1000 data-science code generation (1,000 problems over NumPy, Pandas, Matplotlib, PyTorch, SciPy, Scikit-Learn, TensorFlow); overall pass@1, completion format unless the note says otherwise.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "dseffi-bench-pass",
@@ -1343,7 +1534,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "DynaMath dynamic visual math; worst-case or average accuracy as the source states. Link: first pinned publisher document in this batch that reports it."
+  "description": "DynaMath dynamic visual math; worst-case or average accuracy as the source states. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "e2e-swe-pass1",
@@ -1352,7 +1546,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2609.38335v1",
-  "description": "E2E-SWE (arXiv:2609.38335v1, CC BY 4.0): 186 tasks where an agent must build a complete working repository from a natural-language specification; a task counts only if the generated repository passes every hidden test. Simple ReAct scaffold (bash + edit + submit tools), 4-hour budget, strongest reliable reasoning effort per model; score = pass@1 averaged over 4 independent runs (Table 2)."
+  "description": "E2E-SWE (arXiv:2609.38335v1, CC BY 4.0): 186 tasks where an agent must build a complete working repository from a natural-language specification; a task counts only if the generated repository passes every hidden test. Simple ReAct scaffold (bash + edit + submit tools), 4-hour budget, strongest reliable reasoning effort per model; score = pass@1 averaged over 4 independent runs (Table 2).",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "eegagentbench-overall",
@@ -1361,7 +1559,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2609.31632v1",
-  "description": "EEGAgentBench (arXiv:2609.31632v1, CC BY 4.0): 1,072 instances from six public EEG datasets over six tasks - EEG knowledge QA (T1, direct answer) and five tool-based analyses (artifact detection, abnormality screening, dementia cohort classification, seizure event detection, full-night sleep staging) where the agent calls 10 deterministic signal-processing tools before answering. Single run per instance. Score = Overall, the unweighted mean of T1 accuracy, Macro-F1 (T2-T4, T6) and event-based F1 (T5), on a 0-1 scale (Table 2)."
+  "description": "EEGAgentBench (arXiv:2609.31632v1, CC BY 4.0): 1,072 instances from six public EEG datasets over six tasks - EEG knowledge QA (T1, direct answer) and five tool-based analyses (artifact detection, abnormality screening, dementia cohort classification, seizure event detection, full-night sleep staging) where the agent calls 10 deterministic signal-processing tools before answering. Single run per instance. Score = Overall, the unweighted mean of T1 accuracy, Macro-F1 (T2-T4, T6) and event-based F1 (T5), on a 0-1 scale (Table 2).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "embspatialbench",
@@ -1553,7 +1754,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2508.00828v1",
-  "description": "Finance Agent Benchmark as published in the paper (Vals AI, arXiv:2508.00828v1, CC BY 4.0): 537 expert-written financial-analyst research questions over recent SEC filings in nine task categories, answered by a tool-using agent (Google web search via SerpAPI, EDGAR full-text search, HTML page parsing, retrieval over stored pages). Rubric grading by an LLM judge. Score = class-balanced accuracy: accuracy per task category, averaged with equal weight. Not the later Finance Agent v1.1 or v2 leaderboards on vals.ai."
+  "description": "Finance Agent Benchmark as published in the paper (Vals AI, arXiv:2508.00828v1, CC BY 4.0): 537 expert-written financial-analyst research questions over recent SEC filings in nine task categories, answered by a tool-using agent (Google web search via SerpAPI, EDGAR full-text search, HTML page parsing, retrieval over stored pages). Rubric grading by an LLM judge. Score = class-balanced accuracy: accuracy per task category, averaged with equal weight. Not the later Finance Agent v1.1 or v2 leaderboards on vals.ai.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "finsheet-bench-acc",
@@ -1580,7 +1785,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2603.26996v1",
-  "description": "FormalProofBench (Vals AI, arXiv:2603.26996v1, CC BY 4.0; Vals' 'ProofBench'): 200 private advanced-undergraduate and graduate problems from qualifying exams and textbooks (analysis, probability, functional analysis, number theory, logic, algebra, algebraic geometry), each given as a natural-language statement plus a Lean 4 formal statement. The model works as an agent with Mathlib search (Loogle), Lean code execution and a submit tool, up to 40 turns; a problem counts only if the submitted proof passes the Lean 4 kernel (Lean v4.25.2, Mathlib c98ae54; axiom and local_instance rejected). Score = share of the 200 problems solved, as printed in Table 2."
+  "description": "FormalProofBench (Vals AI, arXiv:2603.26996v1, CC BY 4.0; Vals' 'ProofBench'): 200 private advanced-undergraduate and graduate problems from qualifying exams and textbooks (analysis, probability, functional analysis, number theory, logic, algebra, algebraic geometry), each given as a natural-language statement plus a Lean 4 formal statement. The model works as an agent with Mathlib search (Loogle), Lean code execution and a submit tool, up to 40 turns; a problem counts only if the submitted proof passes the Lean 4 kernel (Lean v4.25.2, Mathlib c98ae54; axiom and local_instance rejected). Score = share of the 200 problems solved, as printed in Table 2.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "forte",
@@ -1606,7 +1814,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://epoch.ai/benchmarks/use-this-data"
+  "url": "https://epoch.ai/benchmarks/use-this-data",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "frontiermath-erdos",
@@ -1615,7 +1826,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://epoch.ai/benchmarks/use-this-data",
-  "description": "Epoch AI internal evaluation file frontiermath_erdos.csv ('FrontierMath-Erdos' in Epoch's benchmark metadata, released 2026-09-03). Published 'Best score (across scorers)'. Few models run so far."
+  "description": "Epoch AI internal evaluation file frontiermath_erdos.csv ('FrontierMath-Erdos' in Epoch's benchmark metadata, released 2026-09-03). Published 'Best score (across scorers)'. Few models run so far.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "frontiermath-tier-4-v2",
@@ -1623,7 +1837,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://epoch.ai/benchmarks/use-this-data"
+  "url": "https://epoch.ai/benchmarks/use-this-data",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "frontierscience-olympiad",
@@ -1686,7 +1903,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/galileo-ai/agent-leaderboard/blob/8158b75ae542c2e847ff6d517a0b66caa704b19a/results_v1.csv",
-  "description": "Mean Tool Selection Quality over 14 subsets sampled from BFCL v3 (multi-turn, irrelevance), tau-bench long-context, xLAM and ToolACE; TSQ is Galileo's ChainPoll LLM-judge metric (GPT-4o). Equal weight per subset."
+  "description": "Mean Tool Selection Quality over 14 subsets sampled from BFCL v3 (multi-turn, irrelevance), tau-bench long-context, xLAM and ToolACE; TSQ is Galileo's ChainPoll LLM-judge metric (GPT-4o). Equal weight per subset.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "galileo-agent-v2-action-completion",
@@ -1695,7 +1915,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/galileo-ai/agent-leaderboard/blob/8158b75ae542c2e847ff6d517a0b66caa704b19a/results_v2.csv",
-  "description": "Average Action Completion over simulated multi-turn enterprise scenarios in banking, healthcare, insurance, investment and telecom (synthetic tools/personas, simulated user); AC judged by Galileo's LLM metric."
+  "description": "Average Action Completion over simulated multi-turn enterprise scenarios in banking, healthcare, insurance, investment and telecom (synthetic tools/personas, simulated user); AC judged by Galileo's LLM metric.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "gamelogicbench-claude-code",
@@ -1704,7 +1927,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2609.21562v2",
-  "description": "GameLogicBench (arXiv:2609.21562v2, CC BY 4.0): 72 coding-agent tasks (21 Atom, 28 Combo, 23 Repo) where the agent implements runtime game logic in a Godot 4.4 project; solutions are judged by deterministic tick-level state assertions over hidden scenarios. Score = average solve rate over all tasks (Table 3 'Average'), one sample per configuration, effort=high, 3,600 s limit, egress sealed, Claude Code 2.1.177 scaffold for every imported row."
+  "description": "GameLogicBench (arXiv:2609.21562v2, CC BY 4.0): 72 coding-agent tasks (21 Atom, 28 Combo, 23 Repo) where the agent implements runtime game logic in a Godot 4.4 project; solutions are judged by deterministic tick-level state assertions over hidden scenarios. Score = average solve rate over all tasks (Table 3 'Average'), one sample per configuration, effort=high, 3,600 s limit, egress sealed, Claude Code 2.1.177 scaffold for every imported row.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "global-mmlu",
@@ -1801,7 +2028,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ibm-granite/granite-4.1-8b",
-  "description": "GSM-Symbolic templated grade-school math accuracy; shots per note."
+  "description": "GSM-Symbolic templated grade-school math accuracy; shots per note.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "gsm8k",
@@ -1810,7 +2040,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/blob/cfbefacb99257ffa30c83adab238a50856ac3083/README.md",
-  "description": "Grade-school mathematics accuracy; shots and CoT setup in result notes."
+  "description": "Grade-school mathematics accuracy; shots and CoT setup in result notes.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "gsm8k-loose-substring",
@@ -1819,7 +2052,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2511.23404v1#A3",
-  "description": "Liquid internal harness: correct answer as substring after extraction, rather than exact-match accuracy."
+  "description": "Liquid internal harness: correct answer as substring after extraction, rather than exact-match accuracy.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "gsm8k-zeroeval",
@@ -1827,7 +2063,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://github.com/WildEval/ZeroEval/blob/8c1485edf12c6efb5f69135a562927c5ad484059/result_dirs/gsm.summary.json"
+  "url": "https://github.com/WildEval/ZeroEval/blob/8c1485edf12c6efb5f69135a562927c5ad484059/result_dirs/gsm.summary.json",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "haerae-korean-kim",
@@ -1844,7 +2083,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "HallusionBench average accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "HallusionBench average accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "halueval-dialogue-acc",
@@ -1994,7 +2236,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "HLE with tool use (search/code) as allowed by the source's agent harness; separate from no-tool HLE. Subset (text-only vs full) as stated in note. Link: first pinned publisher document in this batch that reports it."
+  "description": "HLE with tool use (search/code) as allowed by the source's agent harness; separate from no-tool HLE. Subset (text-only vs full) as stated in note. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "hmmt-2025-edition-unspecified",
@@ -2003,7 +2249,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.02346v1",
-  "description": "Source names HMMT25 without resolving the February or November contest edition."
+  "description": "Source names HMMT25 without resolving the February or November contest edition.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "hmmt-feb-2025",
@@ -2012,7 +2261,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528-Qwen3-8B/blob/6e8885a6ff5c1dc5201574c8fd700323f23c25fa/README.md",
-  "description": "February 2025 HMMT math contest; not November or other HMMT editions."
+  "description": "February 2025 HMMT math contest; not November or other HMMT editions.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "hmmt-feb-2026",
@@ -2021,7 +2273,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/IFM/K2-Horizon-7B/blob/036114ce8d46c32b24c15423211069abb9c5d25e/README.md",
-  "description": "February 2026 HMMT math contest."
+  "description": "February 2026 HMMT math contest.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "hmmt-nov-2025",
@@ -2030,7 +2285,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "November 2025 HMMT contest problems; not the February edition. Link: first pinned publisher document in this batch that reports it."
+  "description": "November 2025 HMMT contest problems; not the February edition. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "hr-bench-4k",
@@ -2048,7 +2306,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/phi-4/blob/2db69c1c3e91a05d2c64a3185acfbaf36f744e25/README.md",
-  "description": "Original HumanEval pass@1; distinct from HumanEval+."
+  "description": "Original HumanEval pass@1; distinct from HumanEval+.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "humaneval-plus",
@@ -2057,7 +2318,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2512.13961v2",
-  "description": "EvalPlus expanded-test pass@1; distinct from original HumanEval."
+  "description": "EvalPlus expanded-test pass@1; distinct from original HumanEval.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "humaneval-plus-pass5",
@@ -2066,7 +2330,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-  "description": "HumanEval+ (EvalPlus) pass@5, not pass@1."
+  "description": "HumanEval+ (EvalPlus) pass@5, not pass@1.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "humanevalexplain",
@@ -2075,7 +2342,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2405.04324v1#S6.T10",
-  "description": "HumanEvalPack explanation task (Muennighoff et al. 2023): the model explains a reference solution in natural language, then regenerates the code from its own explanation alone; pass@1 of the regenerated code, averaged over Python, JavaScript, Java, Go, C++ and Rust as printed by the source; greedy. Distinct from HumanEvalSynthesize and HumanEvalFix."
+  "description": "HumanEvalPack explanation task (Muennighoff et al. 2023): the model explains a reference solution in natural language, then regenerates the code from its own explanation alone; pass@1 of the regenerated code, averaged over Python, JavaScript, Java, Go, C++ and Rust as printed by the source; greedy. Distinct from HumanEvalSynthesize and HumanEvalFix.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "humanevalfix",
@@ -2084,7 +2354,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2405.04324v1#S6.T11",
-  "description": "HumanEvalPack bug-fixing task (Muennighoff et al. 2023): the model repairs a subtly buggy solution given failing unit tests; pass@1 averaged over Python, JavaScript, Java, Go, C++ and Rust as printed by the source; greedy. Distinct from HumanEvalSynthesize and HumanEvalExplain."
+  "description": "HumanEvalPack bug-fixing task (Muennighoff et al. 2023): the model repairs a subtly buggy solution given failing unit tests; pass@1 averaged over Python, JavaScript, Java, Go, C++ and Rust as printed by the source; greedy. Distinct from HumanEvalSynthesize and HumanEvalExplain.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "humanevalsynthesize",
@@ -2093,7 +2366,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2405.04324v1",
-  "description": "HumanEvalPack synthesis task (Muennighoff et al. 2023): pass@1 averaged over Python, JavaScript, Java, Go, C++ and Rust as printed by the source; greedy. Not the Python-only original HumanEval."
+  "description": "HumanEvalPack synthesis task (Muennighoff et al. 2023): pass@1 averaged over Python, JavaScript, Java, Go, C++ and Rust as printed by the source; greedy. Not the Python-only original HumanEval.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "ifbench",
@@ -2136,7 +2412,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://arxiv.org/html/2607.02770v1"
+  "url": "https://arxiv.org/html/2607.02770v1",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-instruction-strict",
@@ -2145,7 +2424,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/6533e8de2c68e4536bf7c411d7a3ce5734111476/README.md",
-  "description": "Strict instruction-level accuracy, distinct from prompt-level and loose scores."
+  "description": "Strict instruction-level accuracy, distinct from prompt-level and loose scores.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-mean-four",
@@ -2154,7 +2436,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2511.23404v1#A3",
-  "description": "Arithmetic mean of strict/loose prompt-level and instruction-level accuracies. Distinct from any individual IFEval measure."
+  "description": "Arithmetic mean of strict/loose prompt-level and instruction-level accuracies. Distinct from any individual IFEval measure.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-prompt-loose",
@@ -2163,7 +2448,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2501.00656v3",
-  "description": "IFEval prompt-level loose accuracy (pass@1). Distinct from strict and instruction-level scores."
+  "description": "IFEval prompt-level loose accuracy (pass@1). Distinct from strict and instruction-level scores.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-prompt-strict",
@@ -2172,7 +2460,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
-  "description": "IFEval prompt-level strict accuracy."
+  "description": "IFEval prompt-level strict accuracy.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-prompt-unspecified-strictness",
@@ -2181,7 +2472,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16/blob/dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f/README.md",
-  "description": "Prompt-level score explicitly identified, but strict versus loose checking not specified."
+  "description": "Prompt-level score explicitly identified, but strict versus loose checking not specified.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-strict-level-unspecified",
@@ -2190,7 +2484,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/Phi-4-reasoning",
-  "description": "IFEval strict accuracy where the source does not say prompt-level or instruction-level."
+  "description": "IFEval strict accuracy where the source does not say prompt-level or instruction-level.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-strict-mean",
@@ -2199,7 +2496,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/pdf/2504.00698v2",
-  "description": "Average of IFEval prompt-level strict and instruction-level strict accuracies (as defined by the Command A report); distinct from either component."
+  "description": "Average of IFEval prompt-level strict and instruction-level strict accuracies (as defined by the Command A report); distinct from either component.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "ifeval-unspecified",
@@ -2208,7 +2508,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/blob/a07cc9a04f16550a088caea529712d1d335b0ac1/README.md",
-  "description": "Published IFEval score; source does not identify instruction/prompt or strict/loose aggregation."
+  "description": "Published IFEval score; source does not identify instruction/prompt or strict/loose aggregation.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "imagenetvc-llm-avg",
@@ -2226,7 +2529,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash/blob/ef06d91fe382109ae82647da88ff99b0f11745b0/README.md",
-  "description": "IMO-AnswerBench answer accuracy; no majority-vote aggregation assumed."
+  "description": "IMO-AnswerBench answer accuracy; no majority-vote aggregation assumed.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "include",
@@ -2261,7 +2567,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://arxiv.org/html/2607.02770v1"
+  "url": "https://arxiv.org/html/2607.02770v1",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "intphys-2",
@@ -2306,7 +2615,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology",
-  "description": "JobBench: 65 professional tasks across 35 white-collar occupations; the agent produces a work product scored against task-specific rubrics. Mean rubric score (mean reward) across tasks."
+  "description": "JobBench: 65 professional tasks across 35 white-collar occupations; the agent produces a work product scored against task-specific rubrics. Mean rubric score (mean reward) across tasks.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "judgemark-v2",
@@ -2324,7 +2636,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2606.02404v1",
-  "description": "K-BrowseComp (arXiv:2606.02404v1, CC BY 4.0): 300 human-verified BrowseComp-style questions grounded in Korean contexts (multi-hop or parallel-constraint, >=4 steps). Agents run in Perplexity's search_evals deep-research agent with Perplexity Search and a budget of 10 search calls per question; final answers extracted by GPT-5.4-mini and matched to gold. Score = single-run accuracy (pass@1) on the Verified subset (Table 2)."
+  "description": "K-BrowseComp (arXiv:2606.02404v1, CC BY 4.0): 300 human-verified BrowseComp-style questions grounded in Korean contexts (multi-hop or parallel-constraint, >=4 steps). Agents run in Perplexity's search_evals deep-research agent with Perplexity Search and a budget of 10 search calls per question; final answers extracted by GPT-5.4-mini and matched to gold. Score = single-run accuracy (pass@1) on the Verified subset (Table 2).",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "kaleidoscope-overall",
@@ -2333,7 +2649,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "kaleidoscope",
-  "url": "https://arxiv.org/html/2504.07072v2#S3.T2"
+  "url": "https://arxiv.org/html/2504.07072v2#S3.T2",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "kcl-essay-vanilla",
@@ -2369,7 +2688,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2609.38480v2",
-  "description": "KlinikeBench (arXiv:2609.38480v2, CC BY 4.0): 333 clinician-authored interactive clinical encounters run in Harbor with the Terminus-2 ReAct harness; the model questions an LLM-simulated patient (GPT-5.4-mini) and executes sandboxed clinical tools. Strict pass@1 = share of tasks with correct diagnosis AND all required tools AND argument-level action constraints AND full must-ask coverage; one rollout per task, medium reasoning effort, 32-turn cap (Table 7)."
+  "description": "KlinikeBench (arXiv:2609.38480v2, CC BY 4.0): 333 clinician-authored interactive clinical encounters run in Harbor with the Terminus-2 ReAct harness; the model questions an LLM-simulated patient (GPT-5.4-mini) and executes sandboxed clinical tools. Strict pass@1 = share of tasks with correct diagnosis AND all required tools AND argument-level action constraints AND full must-ask coverage; one rollout per task, medium reasoning effort, 32-turn cap (Table 7).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "kmmlu-hard-kim",
@@ -2429,7 +2751,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2610.00609v1",
-  "description": "Legal Research Bench (Vals AI, arXiv:2610.00609v1, CC BY 4.0): 413 original U.S. legal research questions written by practising attorneys across eight areas of law. Models run as tool-using agents (web search, case-law search, page parsing, retrieval). Score = all-pass: an answer counts only if it meets every attorney-written rubric criterion and every cited authority verifies. Graded by a GPT-5.4 judge validated against attorneys."
+  "description": "Legal Research Bench (Vals AI, arXiv:2610.00609v1, CC BY 4.0): 413 original U.S. legal research questions written by practising attorneys across eight areas of law. Models run as tool-using agents (web search, case-law search, page parsing, retrieval). Score = all-pass: an answer counts only if it meets every attorney-written rubric criterion and every cited authority verifies. Graded by a GPT-5.4 judge validated against attorneys.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "legal-research-bench-no-tools-allpass",
@@ -2501,7 +2827,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2508.06471v1",
-  "description": "LiveCodeBench pass@1 on problems dated 2024-07-01 to 2025-01-01 as stated by the source; release version not stated."
+  "description": "LiveCodeBench pass@1 on problems dated 2024-07-01 to 2025-01-01 as stated by the source; release version not stated.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-202408-202501",
@@ -2510,7 +2839,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2504.21318v1",
-  "description": "LiveCodeBench pass@1 on problems dated August 2024 to January 2025 as stated by the source; release version not stated. Separate from all other windows."
+  "description": "LiveCodeBench pass@1 on problems dated August 2024 to January 2025 as stated by the source; release version not stated. Separate from all other windows.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-202408-202502",
@@ -2519,7 +2851,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2505.00949v5",
-  "description": "LiveCodeBench pass@1 on problems dated 2024-08 to 2025-02 as stated by the source; release version not stated."
+  "description": "LiveCodeBench pass@1 on problems dated 2024-08 to 2025-02 as stated by the source; release version not stated.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-202408-202505-version-unspecified",
@@ -2528,7 +2863,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash/blob/ef06d91fe382109ae82647da88ff99b0f11745b0/README.md",
-  "description": "Source explicitly labels 2408–2505 window but not release version. Kept separate from a v6 claim."
+  "description": "Source explicitly labels 2408–2505 window but not release version. Kept separate from a v6 claim.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-20240801-20250201",
@@ -2537,7 +2875,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/Phi-4-reasoning",
-  "description": "LiveCodeBench pass@1 on problems dated 2024-08-01 to 2025-02-01 as labelled by the source; version not stated."
+  "description": "LiveCodeBench pass@1 on problems dated 2024-08-01 to 2025-02-01 as labelled by the source; version not stated.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-official-20231101-20250201",
@@ -2547,7 +2888,10 @@
   "category": "llm",
   "family": "livecodebench-codegeneration",
   "url": "https://github.com/LiveCodeBench/livecodebench.github.io/blob/f186ab5041d6b768733b8ae8145151c867942134/build/v5.json",
-  "description": "Official website code-generation pass@1 from the release_v5 data file (build/v5.json). Inclusive UTC filter 2023-11-01 00:00:00 through 2025-02-01 00:00:00 (the v5 page's default slider bounds); 629 identical problem IDs per selected model. Mean then one-decimal percentage rounding as upstream. No difficulty components or repaired/composite scores. Only models with no other LiveCodeBench window are recorded here."
+  "description": "Official website code-generation pass@1 from the release_v5 data file (build/v5.json). Inclusive UTC filter 2023-11-01 00:00:00 through 2025-02-01 00:00:00 (the v5 page's default slider bounds); 629 identical problem IDs per selected model. Mean then one-decimal percentage rounding as upstream. No difficulty components or repaired/composite scores. Only models with no other LiveCodeBench window are recorded here.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-official-20240101-20241101",
@@ -2557,7 +2901,10 @@
   "category": "llm",
   "family": "livecodebench-codegeneration",
   "url": "https://github.com/LiveCodeBench/livecodebench.github.io/blob/aa37a9f8317713b146ff5ada8ab8b2513bb20b70/src/mocks/performances_generation.json",
-  "description": "Official website code-generation pass@1. Inclusive UTC filter 2024-01-01 00:00:00 through 2024-11-01 00:00:00; 387 identical problem IDs per selected model. Mean then one-decimal percentage rounding as upstream. No difficulty components or repaired/composite scores."
+  "description": "Official website code-generation pass@1. Inclusive UTC filter 2024-01-01 00:00:00 through 2024-11-01 00:00:00; 387 identical problem IDs per selected model. Mean then one-decimal percentage rounding as upstream. No difficulty components or repaired/composite scores.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-official-20240801-20250501",
@@ -2567,7 +2914,10 @@
   "category": "llm",
   "family": "livecodebench-codegeneration",
   "url": "https://github.com/LiveCodeBench/livecodebench.github.io/blob/f186ab5041d6b768733b8ae8145151c867942134/build/performances_generation.json",
-  "description": "Official website code-generation pass@1. Inclusive UTC filter 2024-08-01 00:00:00 through 2025-05-01 00:00:00; 454 identical problem IDs per selected model. Mean then one-decimal percentage rounding as upstream. No difficulty components or repaired/composite scores."
+  "description": "Official website code-generation pass@1. Inclusive UTC filter 2024-08-01 00:00:00 through 2025-05-01 00:00:00; 454 identical problem IDs per selected model. Mean then one-decimal percentage rounding as upstream. No difficulty components or repaired/composite scores.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-pro-2025q2-easy",
@@ -2576,7 +2926,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2506.11928",
-  "description": "LiveCodeBench Pro 2025Q2 release (problems from 2025/04-2025/07, 167 problems in total), Easy difficulty split, pass@1 (avg@8 in the NVIDIA reports). Not LiveCodeBench v5/v6; not the 25Q1 split or the Medium/Hard splits."
+  "description": "LiveCodeBench Pro 2025Q2 release (problems from 2025/04-2025/07, 167 problems in total), Easy difficulty split, pass@1 (avg@8 in the NVIDIA reports). Not LiveCodeBench v5/v6; not the 25Q1 split or the Medium/Hard splits.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-pro-2025q2-medium",
@@ -2585,7 +2938,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2506.11928",
-  "description": "LiveCodeBench Pro 2025Q2 release (2025/04-2025/07, 167 problems in total), Medium difficulty split, pass@1 (avg@8 in the NVIDIA reports). Same experiment as the Easy split but a disjoint problem subset."
+  "description": "LiveCodeBench Pro 2025Q2 release (2025/04-2025/07, 167 problems in total), Medium difficulty split, pass@1 (avg@8 in the NVIDIA reports). Same experiment as the Easy split but a disjoint problem subset.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-unversioned",
@@ -2594,7 +2950,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/56d4cbbb4d29f4355bab4b9a39ccb717a14ad5ad/README.md",
-  "description": "Published pass@1; source does not specify version/date window. Separate from every versioned score."
+  "description": "Published pass@1; source does not specify version/date window. Separate from every versioned score.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v2",
@@ -2603,7 +2962,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/LiveCodeBench/LiveCodeBench",
-  "description": "LiveCodeBench release_v2 code-generation pass@1 (problems published May 2023 to May 2024, 511 problems; 'LCBv2' / 'LCBv2 All' in Open Thoughts' Evalchemy tables); distinct from the v3-v6 windows and from per-difficulty subsets."
+  "description": "LiveCodeBench release_v2 code-generation pass@1 (problems published May 2023 to May 2024, 511 problems; 'LCBv2' / 'LCBv2 All' in Open Thoughts' Evalchemy tables); distinct from the v3-v6 windows and from per-difficulty subsets.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v3",
@@ -2612,7 +2974,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2512.13961v2",
-  "description": "LiveCodeBench v3 pass@1; distinct from v4, v5, and v6 windows."
+  "description": "LiveCodeBench v3 pass@1; distinct from v4, v5, and v6 windows.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v4",
@@ -2621,7 +2986,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
-  "description": "LiveCodeBench release v4 pass@1; distinct from v3, v5 and v6."
+  "description": "LiveCodeBench release v4 pass@1; distinct from v3, v5 and v6.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v5-202407-202412",
@@ -2630,7 +2998,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16/blob/2dc98e2afe4face0e4ce40972a915c45368bd34a/README.md",
-  "description": "Source-specified v5 evaluation window 2024-07 through 2024-12."
+  "description": "Source-specified v5 evaluation window 2024-07 through 2024-12.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v5-202410-202502",
@@ -2639,7 +3010,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/pdf/2504.00698v2",
-  "description": "LiveCodeBench release v5 restricted to problems dated 10/2024–02/2025 as stated by the source; pass@1."
+  "description": "LiveCodeBench release v5 restricted to problems dated 10/2024–02/2025 as stated by the source; pass@1.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v5-window-unspecified",
@@ -2648,7 +3022,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://ai.google.dev/gemma/docs/gemma-3n/model_card",
-  "description": "Explicit v5 pass@1; date filter not specified, not merged with a different filtered v5 setup."
+  "description": "Explicit v5 pass@1; date filter not specified, not merged with a different filtered v5 setup.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v6",
@@ -2656,7 +3033,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://epoch.ai/benchmarks/use-this-data"
+  "url": "https://epoch.ai/benchmarks/use-this-data",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v6-202408-202505",
@@ -2665,7 +3045,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528-Qwen3-8B/blob/6e8885a6ff5c1dc5201574c8fd700323f23c25fa/README.md",
-  "description": "Explicit full 2408–2505 window; NOT the Feb–May 2025 v6 slice already in the shared dataset."
+  "description": "Explicit full 2408–2505 window; NOT the Feb–May 2025 v6 slice already in the shared dataset.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v6-window-unspecified",
@@ -2674,7 +3057,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.02346v1",
-  "description": "v6 explicitly specified but date filter not stated. Do not silently merge with a date-filtered slice."
+  "description": "v6 explicitly specified but date filter not stated. Do not silently merge with a date-filtered slice.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "livecodebench-v6-window-unspecified-with-tools",
@@ -2683,7 +3069,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/zai-org/GLM-4.6/blob/be72194883d968d7923a07e2f61681ea9a2826d1/README.md",
-  "description": "LiveCodeBench v6 pass@1 with tool-integrated reasoning as labelled 'w/ Tools' by the source; date window not stated. Separate from no-tool livecodebench-v6-window-unspecified."
+  "description": "LiveCodeBench v6 pass@1 with tool-integrated reasoning as labelled 'w/ Tools' by the source; date window not stated. Separate from no-tool livecodebench-v6-window-unspecified.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "llm-blender-mixinstruct-gpt-rank",
@@ -2691,7 +3080,10 @@
   "direction": "lower",
   "unit": "mean rank (1-11)",
   "category": "llm",
-  "url": "https://arxiv.org/html/2306.02561v3#S5.T2"
+  "url": "https://arxiv.org/html/2306.02561v3#S5.T2",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "lmarena-document",
@@ -2699,7 +3091,10 @@
   "direction": "higher",
   "unit": "elo",
   "category": "llm",
-  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "lmarena-search",
@@ -2707,14 +3102,20 @@
   "direction": "higher",
   "unit": "elo",
   "category": "llm",
-  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+  "tags": [
+   "search"
+  ]
  },
  {
   "id": "lmarena-text",
   "label": "LMArena (text)",
   "direction": "higher",
   "unit": "elo",
-  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "lmarena-vision",
@@ -2722,7 +3123,10 @@
   "direction": "higher",
   "unit": "elo",
   "category": "llm",
-  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "lmarena-webdev",
@@ -2730,7 +3134,10 @@
   "direction": "higher",
   "unit": "elo",
   "category": "llm",
-  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+  "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "lmentry-accuracy",
@@ -2775,7 +3182,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/datasets/TorpedoSoftware/LuauLeetcode",
-  "description": "Single-shot Luau code generation on 208 Leetcode problems (47 easy/97 medium/64 hard), Jest-Lua unit tests; score = problems with all tests passing (fullPass summed over difficulties) / 208. The site's weighted 'coding subscore' is not used."
+  "description": "Single-shot Luau code generation on 208 Leetcode problems (47 easy/97 medium/64 hard), Jest-Lua unit tests; score = problems with all tests passing (fullPass summed over difficulties) / 208. The site's weighted 'coding subscore' is not used.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "lvbench",
@@ -2792,7 +3202,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://aclanthology.org/2025.findings-emnlp.1099.pdf"
+  "url": "https://aclanthology.org/2025.findings-emnlp.1099.pdf",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "math",
@@ -2801,7 +3214,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/blob/cfbefacb99257ffa30c83adab238a50856ac3083/README.md",
-  "description": "Full MATH test accuracy; prompt and sample setup retained in each result."
+  "description": "Full MATH test accuracy; prompt and sample setup retained in each result.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "math-500",
@@ -2810,7 +3226,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/56d4cbbb4d29f4355bab4b9a39ccb717a14ad5ad/README.md",
-  "description": "Accuracy on the 500-problem MATH test subset. Do not combine with full MATH."
+  "description": "Accuracy on the 500-problem MATH test subset. Do not combine with full MATH.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "math-l5-zeroeval",
@@ -2819,7 +3238,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/WildEval/ZeroEval/blob/8c1485edf12c6efb5f69135a562927c5ad484059/result_dirs/math-l5.summary.json",
-  "description": "ZeroEval's MATH Level 5 task: the 721-problem AI-MO/aimo-validation-math-level-5 set (MATH test Level 5 problems with integer answers), zero-shot with reasoning and a JSON-formatted answer, greedy decoding, field Acc. Not Epoch's math-level-5 (all MATH Level 5 test problems, different harness) and not full MATH or MATH-500."
+  "description": "ZeroEval's MATH Level 5 task: the 721-problem AI-MO/aimo-validation-math-level-5 set (MATH test Level 5 problems with integer answers), zero-shot with reasoning and a JSON-formatted answer, greedy decoding, field Acc. Not Epoch's math-level-5 (all MATH Level 5 test problems, different harness) and not full MATH or MATH-500.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "math-level-5",
@@ -2827,7 +3249,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://epoch.ai/benchmarks/use-this-data"
+  "url": "https://epoch.ai/benchmarks/use-this-data",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "math-subset-unspecified",
@@ -2836,7 +3261,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/phi-4/blob/2db69c1c3e91a05d2c64a3185acfbaf36f744e25/README.md",
-  "description": "Source only identifies MATH; full 5000-question test versus MATH-500 is unresolved. Not merged with either."
+  "description": "Source only identifies MATH; full 5000-question test versus MATH-500 is unresolved. Not merged with either.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "math-vision",
@@ -2845,7 +3273,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2607.02770v1",
-  "description": "Chance 0.0717: published random baseline (https://arxiv.org/abs/2402.14804; MATH-Vision paper, results table: 'Random Chance 7.17' (Overall); text: 'the comparison of models’ performance with random chance (7.17% overall)'.)."
+  "description": "Chance 0.0717: published random baseline (https://arxiv.org/abs/2402.14804; MATH-Vision paper, results table: 'Random Chance 7.17' (Overall); text: 'the comparison of models’ performance with random chance (7.17% overall)'.).",
+  "tags": [
+   "math",
+   "vision"
+  ]
  },
  {
   "id": "matharena-apex",
@@ -2854,7 +3286,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-  "description": "MathArena Apex hardest final-answer competition problems, pass@1 as reported by the source (lab-run unless stated)."
+  "description": "MathArena Apex hardest final-answer competition problems, pass@1 as reported by the source (lab-run unless stated).",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivlean-2026-03",
@@ -2864,7 +3299,10 @@
   "category": "llm",
   "family": "matharena-arxivlean",
   "url": "https://huggingface.co/datasets/MathArena/arxivlean-0326",
-  "description": "Prove formal Lean 4 (v4.29.0, mathlib) statements from March 2026 arXiv papers with MathArena's Lean tool loop (verify_lean, verify_submission, add_to_file, loogle, lean_explore_search; max 200 tool calls); success = Lean-verified proof of the unmodified statement. One attempt per problem."
+  "description": "Prove formal Lean 4 (v4.29.0, mathlib) statements from March 2026 arXiv papers with MathArena's Lean tool loop (verify_lean, verify_submission, add_to_file, loogle, lean_explore_search; max 200 tool calls); success = Lean-verified proof of the unmodified statement. One attempt per problem.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivlean-2026-06",
@@ -2874,7 +3312,10 @@
   "category": "llm",
   "family": "matharena-arxivlean",
   "url": "https://huggingface.co/datasets/MathArena/arxivlean-0626",
-  "description": "Prove formal Lean 4 (v4.31.0, mathlib) statements from June 2026 arXiv papers with MathArena's Lean tool loop (max 200 tool calls; harness opt-in per model config); success = Lean-verified proof of the unmodified statement. One attempt per problem."
+  "description": "Prove formal Lean 4 (v4.31.0, mathlib) statements from June 2026 arXiv papers with MathArena's Lean tool loop (max 200 tool calls; harness opt-in per model config); success = Lean-verified proof of the unmodified statement. One attempt per problem.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2025-12",
@@ -2884,7 +3325,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-1225",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-01",
@@ -2894,7 +3338,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0126",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-02",
@@ -2904,7 +3351,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0226",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-03",
@@ -2914,7 +3364,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0326",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-04",
@@ -2924,7 +3377,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0426",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-05",
@@ -2934,7 +3390,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0526",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-06",
@@ -2944,7 +3403,10 @@
   "category": "llm",
   "family": "matharena-arxivmath",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0626",
-  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks."
+  "description": "Research-level final-answer questions extracted by MathArena from arXiv papers of that month (fresh set each month, like AIME years). Plain prompt, no tools; answer in \\boxed{} parsed and compared to the gold answer. Score = mean accuracy over attempts. Separate monthly question sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-arxivmath-2026-08",
@@ -2954,7 +3416,10 @@
   "category": "llm",
   "family": "matharena-arxivmath-tools",
   "url": "https://huggingface.co/datasets/MathArena/arxivmath-0826",
-  "description": "Research-level final-answer questions from August 2026 arXiv papers. Unlike earlier months, models run in an agent harness with shell, Python and SageMath (no internet; 12 h / $100 per attempt) and answers are graded by MathArena's LLM answer judge. Score = mean correctness over attempts, per problem then over problems. Not merged with the earlier no-tools months."
+  "description": "Research-level final-answer questions from August 2026 arXiv papers. Unlike earlier months, models run in an agent harness with shell, Python and SageMath (no internet; 12 h / $100 per attempt) and answers are graded by MathArena's LLM answer judge. Score = mean correctness over attempts, per problem then over problems. Not merged with the earlier no-tools months.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-brokenarxiv-2026-02",
@@ -2964,7 +3429,10 @@
   "category": "llm",
   "family": "matharena-brokenarxiv",
   "url": "https://huggingface.co/datasets/MathArena/brokenarxiv-0226",
-  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks."
+  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-brokenarxiv-2026-03",
@@ -2974,7 +3442,10 @@
   "category": "llm",
   "family": "matharena-brokenarxiv",
   "url": "https://huggingface.co/datasets/MathArena/brokenarxiv-0326",
-  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks."
+  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-brokenarxiv-2026-04",
@@ -2984,7 +3455,10 @@
   "category": "llm",
   "family": "matharena-brokenarxiv",
   "url": "https://huggingface.co/datasets/MathArena/brokenarxiv-0426",
-  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks."
+  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-brokenarxiv-2026-05",
@@ -2994,7 +3468,10 @@
   "category": "llm",
   "family": "matharena-brokenarxiv",
   "url": "https://huggingface.co/datasets/MathArena/brokenarxiv-0526",
-  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks."
+  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-brokenarxiv-2026-06",
@@ -3004,7 +3481,10 @@
   "category": "llm",
   "family": "matharena-brokenarxiv",
   "url": "https://huggingface.co/datasets/MathArena/brokenarxiv-0626",
-  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks."
+  "description": "Model is asked to prove a subtly false statement derived from an arXiv theorem; an LLM judge (Gemini 3.1 Pro, medium; MathArena arxiv_judge prompt, revised after March 2026) awards 0-2 points, 2 = explicitly recognises the statement is false. Score = mean points/2. Measures non-sycophantic mathematical verification. Separate monthly sets are separate benchmarks.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "matharena-brokenarxiv-2026-08",
@@ -3014,7 +3494,10 @@
   "category": "llm",
   "family": "matharena-brokenarxiv-tools",
   "url": "https://huggingface.co/datasets/MathArena/brokenarxiv-0826",
-  "description": "Model is asked to prove a subtly false statement derived from an August 2026 arXiv theorem, in an agent harness with shell, Python and SageMath (no internet). Judged by Gemini 3.8 Flash with MathArena's arxiv judge; 1 = explicitly recognises the statement is false. Score = mean normalised judge score. Not merged with earlier no-tools months."
+  "description": "Model is asked to prove a subtly false statement derived from an August 2026 arXiv theorem, in an agent harness with shell, Python and SageMath (no internet). Judged by Gemini 3.8 Flash with MathArena's arxiv judge; 1 = explicitly recognises the statement is false. Score = mean normalised judge score. Not merged with earlier no-tools months.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mathconstraint-329-notools",
@@ -3023,7 +3506,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2605.08498v1",
-  "description": "Verifier-accepted accuracy on 329 generated combinatorial/constraint reasoning instances without tools (Table 2, Accuracy column). Georgia Tech authors' own runs."
+  "description": "Verifier-accepted accuracy on 329 generated combinatorial/constraint reasoning instances without tools (Table 2, Accuracy column). Georgia Tech authors' own runs.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mathnet-solve-test-micro",
@@ -3032,7 +3518,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2604.18584v2",
-  "description": "Accuracy on MathNet-Solve-Test olympiad problems graded against expert reference solutions (Table 3, Micro Avg.). MIT authors' runs."
+  "description": "Accuracy on MathNet-Solve-Test olympiad problems graded against expert reference solutions (Table 3, Micro Avg.). MIT authors' runs.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mathqa",
@@ -3041,7 +3530,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://math-qa.github.io/",
-  "description": "MathQA 5-option math word problems, multiple-choice accuracy by likelihood ranking (EleutherAI harness formulation). Zero-shot."
+  "description": "MathQA 5-option math word problems, multiple-choice accuracy by likelihood ranking (EleutherAI harness formulation). Zero-shot.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mathvista-mini",
@@ -3050,7 +3542,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "MathVista testmini accuracy. Link: first pinned publisher document in this batch that reports it. Chance 0.179: published random baseline (https://arxiv.org/abs/2310.02255; MathVista (ICLR 2024), Table 2 (testmini), 'Heuristics baselines': 'Random chance - 17.9' (ALL). Text: 'We include random chance (i.e., one of the options in mu)."
+  "description": "MathVista testmini accuracy. Link: first pinned publisher document in this batch that reports it. Chance 0.179: published random baseline (https://arxiv.org/abs/2310.02255; MathVista (ICLR 2024), Table 2 (testmini), 'Heuristics baselines': 'Random chance - 17.9' (ALL). Text: 'We include random chance (i.e., one of the options in mu).",
+  "tags": [
+   "math",
+   "vision"
+  ]
  },
  {
   "id": "mawps",
@@ -3077,7 +3573,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://ai.google.dev/gemma/docs/gemma-3n/model_card",
-  "description": "Original MBPP pass@1; not MBPP+ expanded test suite."
+  "description": "Original MBPP pass@1; not MBPP+ expanded test suite.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "mbpp-plus",
@@ -3086,7 +3585,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2512.13961v2",
-  "description": "EvalPlus expanded-test MBPP pass@1."
+  "description": "EvalPlus expanded-test MBPP pass@1.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "mbpp-plus-pass5",
@@ -3095,7 +3597,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-  "description": "MBPP+ (EvalPlus) pass@5, not pass@1."
+  "description": "MBPP+ (EvalPlus) pass@5, not pass@1.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "mc-taco-yes-no-acc",
@@ -3113,7 +3618,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B/blob/995ad96eacd98c81ed38be0c5b274b04031597b0/README.md",
-  "description": "MCP-Atlas public set pass rate; harness/judge per note. Separate from mcp-atlas-v1-500 when the source does not state v1 public500. Link: first pinned publisher document in this batch that reports it."
+  "description": "MCP-Atlas public set pass rate; harness/judge per note. Separate from mcp-atlas-v1-500 when the source does not state v1 public500. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "mcp-atlas-v1-500",
@@ -3131,7 +3639,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/8472618112abcbd45acbcdc58436aff4233c23f7/README.md",
-  "description": "MCPMark MCP tool-use benchmark pass rate; MCP server versions and truncation per note."
+  "description": "MCPMark MCP tool-use benchmark pass rate; MCP server versions and truncation per note.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "medmarks-v-mean-win-rate",
@@ -3210,7 +3721,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/blob/cfbefacb99257ffa30c83adab238a50856ac3083/README.md",
-  "description": "Multilingual grade-school mathematics accuracy."
+  "description": "Multilingual grade-school mathematics accuracy.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mgsm-5lang",
@@ -3219,7 +3733,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ibm-granite/granite-4.1-8b",
-  "description": "MGSM restricted to English, Spanish, French, Japanese and Chinese (IBM Granite evaluation), 8-shot. Not full MGSM."
+  "description": "MGSM restricted to English, Spanish, French, Japanese and Chinese (IBM Granite evaluation), 8-shot. Not full MGSM.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mgsm-liquid-six-language-loose",
@@ -3237,7 +3754,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2604.25578v1",
-  "description": "Multilingual GSM exact match, Avg@8; no assumption about language aggregation."
+  "description": "Multilingual GSM exact match, Avg@8; no assumption about language aggregation.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "mideind-icelandic-average",
@@ -3273,7 +3793,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ibm-granite/granite-4.0-h-small/blob/b8c0982bab7fde4eb48110f5a069527c008fab39/README.md",
-  "description": "MATH scored with Minerva-style answer normalisation, as reported. Link: first pinned publisher document in this batch that reports it."
+  "description": "MATH scored with Minerva-style answer normalisation, as reported. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "minif2f-pass1",
@@ -3318,7 +3841,10 @@
   "unit": "MM-MT-Bench score (1-10)",
   "category": "llm",
   "url": "https://arxiv.org/html/2410.07073v2#S3",
-  "description": "Multimodal MT-Bench (Mistral AI, Pixtral 12B paper Sec. 3; dataset mistralai/MM-MT-Bench, eval split): 92 conversations over charts, tables, PDF pages, diagrams and miscellaneous images (69 single-turn, 23 multi-turn); an independent LLM judge (GPT-4o in the paper's Table 2) grades each response 1-10 against a reference answer for correctness and completeness; score = mean grade. Raw judge units (kind linear, fixed latent_scale 1 = one point), not accuracy."
+  "description": "Multimodal MT-Bench (Mistral AI, Pixtral 12B paper Sec. 3; dataset mistralai/MM-MT-Bench, eval split): 92 conversations over charts, tables, PDF pages, diagrams and miscellaneous images (69 single-turn, 23 multi-turn); an independent LLM judge (GPT-4o in the paper's Table 2) grades each response 1-10 against a reference answer for correctness and completeness; score = mean grade. Raw judge units (kind linear, fixed latent_scale 1 = one point), not accuracy.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmau",
@@ -3336,7 +3862,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "MMBench English dev v1.1 accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "MMBench English dev v1.1 accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmlongbench-doc",
@@ -3449,7 +3978,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "MMMU validation accuracy; not MMMU-Pro. Link: first pinned publisher document in this batch that reports it. Chance 0.221: published random baseline (https://arxiv.org/abs/2311.16502; MMMU paper, main results table: 'Random Choice 22.1' (Validation Overall, 900) and 'Frequent Choice 26.8'. Text: 'For reference, we add Random Choice and Freque)."
+  "description": "MMMU validation accuracy; not MMMU-Pro. Link: first pinned publisher document in this batch that reports it. Chance 0.221: published random baseline (https://arxiv.org/abs/2311.16502; MMMU paper, main results table: 'Random Choice 22.1' (Validation Overall, 900) and 'Frequent Choice 26.8'. Text: 'For reference, we add Random Choice and Freque).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmmu-pro",
@@ -3458,7 +3990,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2607.02770v1",
-  "description": "Chance 0.126: published random baseline (https://arxiv.org/abs/2409.02813; MMMU-Pro paper, Table 1: 'Random Choice 24.9 | 12.8 | 12.4' for Standard (4 Opts) | Standard (10 Opts) | Vision. Section 3: 'The overall performance score for M)."
+  "description": "Chance 0.126: published random baseline (https://arxiv.org/abs/2409.02813; MMMU-Pro paper, Table 1: 'Random Choice 24.9 | 12.8 | 12.4' for Standard (4 Opts) | Standard (10 Opts) | Vision. Section 3: 'The overall performance score for M).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmmu-pro-standard-lmms-exaone45",
@@ -3467,7 +4002,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/SqueezeBits/FlatQuant-EXAONE4.5/blob/5f1ea65605d1f9301cd7d243b1e8a2c6590d2b46/README.md",
-  "description": "Chance 0.128: published random baseline (https://arxiv.org/abs/2409.02813; MMMU-Pro paper, Table 1: 'Random Choice ... 12.8' for Standard (10 Opts).)."
+  "description": "Chance 0.128: published random baseline (https://arxiv.org/abs/2409.02813; MMMU-Pro paper, Table 1: 'Random Choice ... 12.8' for Standard (10 Opts).).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmmu-pro-vision-lmms-exaone45",
@@ -3476,7 +4014,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/SqueezeBits/FlatQuant-EXAONE4.5/blob/5f1ea65605d1f9301cd7d243b1e8a2c6590d2b46/README.md",
-  "description": "Chance 0.124: published random baseline (https://arxiv.org/abs/2409.02813; MMMU-Pro paper, Table 1: 'Random Choice ... 12.4' for Vision.)."
+  "description": "Chance 0.124: published random baseline (https://arxiv.org/abs/2409.02813; MMMU-Pro paper, Table 1: 'Random Choice ... 12.4' for Vision.).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmstar",
@@ -3485,7 +4026,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "MMStar accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "MMStar accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mmvu",
@@ -3503,7 +4047,10 @@
   "unit": "elo",
   "category": "llm",
   "url": "https://huggingface.co/allenai/Molmo-72B-0924/blob/ab586dd9640de059566975b8e5bcd0c6fdc73956/README.md#evaluations",
-  "description": "Human preference evaluation run by Ai2 for the Molmo release (Deitke et al., arXiv 2409.17146): ~15k diverse image+text prompts were sent to 27 vision-language models, and ~870 annotators made ~325k pairwise preference judgments; ratings are Elo/Bradley-Terry scores published in the Molmo model cards ('Human Preference Elo Rating'). One fixed study (Sept 2024); not LMArena vision."
+  "description": "Human preference evaluation run by Ai2 for the Molmo release (Deitke et al., arXiv 2409.17146): ~15k diverse image+text prompts were sent to 27 vision-language models, and ~870 annotators made ~325k pairwise preference judgments; ratings are Elo/Bradley-Terry scores published in the Molmo model cards ('Human Preference Elo Rating'). One fixed study (Sept 2024); not LMArena vision.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "molmo2-captest-f1",
@@ -3512,7 +4059,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.10611v4#S4.T2",
-  "description": "Molmo2-CapTest (Ai2, arXiv 2601.10611): 693 Creative Commons videos, each with at least four human-written captions; an LLM judge scores the precision and recall of statements in the model's caption against the annotators' statements, reported as F1 (0-1)."
+  "description": "Molmo2-CapTest (Ai2, arXiv 2601.10611): 693 Creative Commons videos, each with at least four human-written captions; an LLM judge scores the precision and recall of statements in the model's caption against the annotators' statements, reported as F1 (0-1).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "molmo2-human-pref-elo",
@@ -3521,7 +4071,10 @@
   "unit": "elo",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.10611v4#S4.T2",
-  "description": "Human preference study run by Ai2 for the Molmo2 report (arXiv 2601.10611, Sec. 4.1): 450 manually filtered open-ended questions from annotators plus 51 video-captioning queries; two models' outputs are compared pairwise by annotators (over 105K ratings, 501 per model pair, 21 models); Elo via the Bradley-Terry model. Distinct from the Sept 2024 Molmo study and from LMArena."
+  "description": "Human preference study run by Ai2 for the Molmo2 report (arXiv 2601.10611, Sec. 4.1): 450 manually filtered open-ended questions from annotators plus 51 video-captioning queries; two models' outputs are compared pairwise by annotators (over 105K ratings, 501 per model pair, 21 models); Elo via the Bradley-Terry model. Distinct from the Sept 2024 Molmo study and from LMArena.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "molmo2-videocount-acc",
@@ -3530,7 +4083,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.10611v4#S4.T2",
-  "description": "Molmo2-VideoCount (Ai2, arXiv 2601.10611): 533 diverse video counting questions (objects, actions, animals; up to 60 instances) built with the Molmo2-VideoPoint pipeline; accuracy = exact-count match on the val split."
+  "description": "Molmo2-VideoCount (Ai2, arXiv 2601.10611): 533 diverse video counting questions (objects, actions, animals; up to 60 instances) built with the Molmo2-VideoPoint pipeline; accuracy = exact-count match on the val split.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mrcr-v2-8needle-128k",
@@ -3547,7 +4103,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "msearth",
-  "url": "https://arxiv.org/html/2505.20740v3#S4.T4"
+  "url": "https://arxiv.org/html/2505.20740v3#S4.T4",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "mt-bench-gpt4-single",
@@ -3556,7 +4115,10 @@
   "unit": "MT-Bench score (1-10)",
   "category": "llm",
   "url": "https://huggingface.co/spaces/lmarena-ai/arena-leaderboard/blob/6f2eeeba09bf42144dbc118fe1a8e12e4c533f9d/leaderboard_table_20250804.csv",
-  "description": "MT-Bench (Zheng et al. 2023, arXiv 2306.05685): 80 two-turn open-ended questions in 8 categories (writing, roleplay, reasoning, math, coding, extraction, STEM, humanities); GPT-4 grades each answer 1-10 (single-answer grading, fastchat.llm_judge) and the score is the mean over all 160 turns. Raw judge-score units kept (kind linear, fixed latent_scale 1 = one MT-Bench point), not converted to accuracy. Only rows LMSYS published in its 2023 leaderboard tables (its own fastchat.llm_judge runs) are recorded; later rows whose values equal the makers' own announcements (e.g. Zephyr, Mixtral, Qwen1.5, Mistral 7B Instruct) are left out because LMSYS may have copied them."
+  "description": "MT-Bench (Zheng et al. 2023, arXiv 2306.05685): 80 two-turn open-ended questions in 8 categories (writing, roleplay, reasoning, math, coding, extraction, STEM, humanities); GPT-4 grades each answer 1-10 (single-answer grading, fastchat.llm_judge) and the score is the mean over all 160 turns. Raw judge-score units kept (kind linear, fixed latent_scale 1 = one MT-Bench point), not converted to accuracy. Only rows LMSYS published in its 2023 leaderboard tables (its own fastchat.llm_judge runs) are recorded; later rows whose values equal the makers' own announcements (e.g. Zephyr, Mixtral, Qwen1.5, Mistral 7B Instruct) are left out because LMSYS may have copied them.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "multi-if-three-turn-average",
@@ -3583,7 +4145,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
-  "description": "Multi-SWE-bench multilingual issue resolution rate as reported by the source; language set/scaffold not stated. Distinct from multi-swe-bench-7lang-magentless."
+  "description": "Multi-SWE-bench multilingual issue resolution rate as reported by the source; language set/scaffold not stated. Distinct from multi-swe-bench-7lang-magentless.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "multi-swe-bench-7lang-magentless",
@@ -3592,7 +4158,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/multi-swe-bench/experiments/tree/6a7d5566f62fa76f4192302cf763051b98e4facc/evaluation",
-  "description": "Multi-SWE-bench verified splits for Java, TypeScript, JavaScript, Go, Rust, C and C++ (1,632 instances), resolved fraction summed over the seven languages, for the ByteDance Seed team's MagentLess (Agentless-derived) baseline runs. Python excluded."
+  "description": "Multi-SWE-bench verified splits for Java, TypeScript, JavaScript, Go, Rust, C and C++ (1,632 instances), resolved fraction summed over the seven languages, for the ByteDance Seed team's MagentLess (Agentless-derived) baseline runs. Python excluded.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "multiarith",
@@ -3628,7 +4198,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/cdbee75f17c01a7cc42f958dc650907174af0554/README.md",
-  "description": "MultiPL-E multilingual code generation pass@1 averaged over the languages the source reports. Link: first pinned publisher document in this batch that reports it."
+  "description": "MultiPL-E multilingual code generation pass@1 averaged over the languages the source reports. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "musr",
@@ -3706,7 +4279,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "OCRBench score normalised to 0-100 by the source (raw 0-1000 divided by 10). Link: first pinned publisher document in this batch that reports it."
+  "description": "OCRBench score normalised to 0-100 by the source (raw 0-1000 divided by 10). Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "ocwcourses",
@@ -3742,7 +4318,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/allenai/Olmo-3-7B-Think",
-  "description": "OMEGA out-of-distribution math reasoning benchmark accuracy as reported by Ai2."
+  "description": "OMEGA out-of-distribution math reasoning benchmark accuracy as reported by Ai2.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "omni-math",
@@ -3759,7 +4338,10 @@
   "direction": "lower",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://arxiv.org/html/2607.02770v1"
+  "url": "https://arxiv.org/html/2607.02770v1",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "omnidocbench-1-5-overall",
@@ -3768,7 +4350,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "OmniDocBench v1.5 overall score as reported (higher is better). Distinct from omnidocbench-1-5 (edit distance, lower is better). Link: first pinned publisher document in this batch that reports it."
+  "description": "OmniDocBench v1.5 overall score as reported (higher is better). Distinct from omnidocbench-1-5 (edit distance, lower is better). Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "open-persian-llm-v2-avg21",
@@ -3804,7 +4389,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/xlang-ai/OSWorld-V2/blob/v2026.08.08/benchmark_releases/osworld-v2-2026.08.08.json",
-  "description": "OSWorld 2.0's v2026.08.08 task release (Anthropic: 'the authors' August 2026 task release' with later task fixes; Meta: 'version 08.08'): 108 long-horizon computer-use workflows. Mean per-task partial score, the primary metric. Distinct from the 06.24 release and from OSWorld 2.1."
+  "description": "OSWorld 2.0's v2026.08.08 task release (Anthropic: 'the authors' August 2026 task release' with later task fixes; Meta: 'version 08.08'): 108 long-horizon computer-use workflows. Mean per-task partial score, the primary metric. Distinct from the 06.24 release and from OSWorld 2.1.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "osworld-2-1",
@@ -3813,7 +4401,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/xlang-ai/OSWorld-V2/blob/osworld-v2.1/benchmark_releases/osworld-v2.1.json",
-  "description": "OSWorld 2.0's osworld-v2.1 release (tagged 2026-09-16; Anthropic describes its task files as the September 10, 2026 versions): 108 long-horizon computer-use workflows on an Ubuntu VM. Mean per-task partial score (checkpoint credit), the primary metric; not the strict pass rate. Distinct from earlier OSWorld 2.0 releases and from OSWorld-Verified."
+  "description": "OSWorld 2.0's osworld-v2.1 release (tagged 2026-09-16; Anthropic describes its task files as the September 10, 2026 versions): 108 long-horizon computer-use workflows on an Ubuntu VM. Mean per-task partial score (checkpoint credit), the primary metric; not the strict pass rate. Distinct from earlier OSWorld 2.0 releases and from OSWorld-Verified.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "osworld-verified",
@@ -3822,7 +4413,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "OSWorld-Verified computer-use success rate. Link: first pinned publisher document in this batch that reports it."
+  "description": "OSWorld-Verified computer-use success rate. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "otis-mock-aime",
@@ -3830,7 +4424,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://epoch.ai/benchmarks/use-this-data"
+  "url": "https://epoch.ai/benchmarks/use-this-data",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "phybench",
@@ -3848,7 +4445,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "physbench",
-  "url": "https://arxiv.org/html/2501.16411v2#S3.T3"
+  "url": "https://arxiv.org/html/2501.16411v2#S3.T3",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "piqa",
@@ -3866,7 +4466,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "PMC-VQA medical VQA accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "PMC-VQA medical VQA accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "polish-eq-bench-v2",
@@ -3893,7 +4496,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507/blob/6cbffae6d8e28b986a6b17bd36f42f9fa0f1f0a5/README.md",
-  "description": "PolyMath multilingual mathematical reasoning; score as reported (difficulty-weighted accuracy where the source uses it). Link: first pinned publisher document in this batch that reports it."
+  "description": "PolyMath multilingual mathematical reasoning; score as reported (difficulty-weighted accuracy where the source uses it). Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "polymath-marco",
@@ -3902,7 +4508,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2604.25578v1",
-  "description": "PolyMath exact-match Avg@8 as reported; language/difficulty aggregation not further specified."
+  "description": "PolyMath exact-match Avg@8 as reported; language/difficulty aggregation not further specified.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "polyrating-chatbot-arena-rating",
@@ -3911,7 +4520,10 @@
   "unit": "elo",
   "category": "llm",
   "url": "https://arxiv.org/html/2409.00696v3#A6.T7",
-  "description": "Polyrating main rating (Elo scale) from Table 7 of arXiv 2409.00696v3: the authors refit the public Chatbot Arena pairwise human votes (114 models, up to mid-2024) with a multidimensional Bradley-Terry model that separates response quality from task/prompt-type modifiers (English, Chinese, hardness, code). Same votes as lmarena-text, different rating model and snapshot; not merged with lmarena-text."
+  "description": "Polyrating main rating (Elo scale) from Table 7 of arXiv 2409.00696v3: the authors refit the public Chatbot Arena pairwise human votes (114 models, up to mid-2024) with a multidimensional Bradley-Terry model that separates response quality from task/prompt-type modifiers (English, Chinese, hardness, code). Same votes as lmarena-text, different rating model and snapshot; not merged with lmarena-text.",
+  "tags": [
+   "chat"
+  ]
  },
  {
   "id": "popqa",
@@ -3992,7 +4604,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2605.07492v2",
-  "description": "PureDocBench (arXiv:2605.07492v2, CC BY 4.0): full-page document parsing of 1,475 generated source pages in 10 domains, each as matched Clean, Digital-degraded and Real (recaptured) images (4,425 images). OmniDocBench framework: per-track Overall = ((1-TextEdit)x100 + FormulaCDM + TableTEDS)/3; score = mean of the three track Overalls (Avg3), Table 2 'Overall', stored /100."
+  "description": "PureDocBench (arXiv:2605.07492v2, CC BY 4.0): full-page document parsing of 1,475 generated source pages in 10 domains, each as matched Clean, Digital-degraded and Real (recaptured) images (4,425 images). OmniDocBench framework: per-track Overall = ((1-TextEdit)x100 + FormulaCDM + TableTEDS)/3; score = mean of the three track Overalls (Avg3), Table 2 'Overall', stored /100.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "qa4mre-2013",
@@ -4064,7 +4679,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "RealWorldQA accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "RealWorldQA accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "refspatialbench",
@@ -4145,7 +4763,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/meituan-longcat/LongCat-2.0",
-  "description": "RWSearch real-world search agent benchmark as reported."
+  "description": "RWSearch real-world search agent benchmark as reported.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "schedbench-subset-solver-feasibility",
@@ -4171,7 +4793,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://arxiv.org/html/2607.02770v1"
+  "url": "https://arxiv.org/html/2607.02770v1",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "scicode-main",
@@ -4180,7 +4805,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.02346v1",
-  "description": "End-to-end main scientific coding problems; subproblem score is deliberately not also added."
+  "description": "End-to-end main scientific coding problems; subproblem score is deliberately not also added.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "scicode-main-official",
@@ -4189,7 +4817,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/scicode-bench/SciCode/blob/e3158ea011d4235245a547460d3688d7ccbf9900/README.md",
-  "description": "Fraction of SciCode main problems fully solved (all subproblems pass), maintainers' runs; subproblem rate not also added."
+  "description": "Fraction of SciCode main problems fully solved (all subproblems pass), maintainers' runs; subproblem rate not also added.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "scicode-subtask",
@@ -4198,7 +4829,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/bf77c3174f68ad409e1c2aa60daeb46e32d1c606/README.md",
-  "description": "Subproblem score explicitly labelled by source. Distinct from main problems."
+  "description": "Subproblem score explicitly labelled by source. Distinct from main problems.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "scicode-unspecified",
@@ -4207,7 +4841,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/IFM/K2-Horizon-7B/blob/036114ce8d46c32b24c15423211069abb9c5d25e/README.md",
-  "description": "Source labels only SciCode; main-vs-subtask is not inferred."
+  "description": "Source labels only SciCode; main-vs-subtask is not inferred.",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "scidocbench-overall",
@@ -4216,7 +4853,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2609.05141v2",
-  "description": "SciDocBench (arXiv:2609.05141v2, CC BY 4.0): 124 expert-authored, difficulty-screened scientific-research tasks over full papers, multiple papers and associated code/data (seven capability groups, 19 subtasks), each asked in English and Chinese with two document representations (all page images first, or Markdown interleaved) = 496 instances. Scored by deterministic rules, a rubric LLM judge or execution; failures score 0. Score = Overall mean (Table 2), stored /100."
+  "description": "SciDocBench (arXiv:2609.05141v2, CC BY 4.0): 124 expert-authored, difficulty-screened scientific-research tasks over full papers, multiple papers and associated code/data (seven capability groups, 19 subtasks), each asked in English and Chinese with two document representations (all page images first, or Markdown interleaved) = 496 instances. Scored by deterministic rules, a rubric LLM judge or execution; failures score 0. Score = Overall mean (Table 2), stored /100.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "sciq",
@@ -4243,7 +4883,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "ScreenSpot-Pro GUI grounding accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "ScreenSpot-Pro GUI grounding accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "seal-0",
@@ -4252,7 +4895,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "Seal-0 subset of SealQA search-augmented QA; accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "Seal-0 subset of SealQA search-augmented QA; accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "search"
+  ]
  },
  {
   "id": "sec-bench-pro",
@@ -4306,7 +4952,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/openai/simple-evals/blob/652c89d0ca9df547706735883097e9537d40dc47/README.md",
-  "description": "Original HumanEval pass@1 with simple-evals sampler. OpenAI lab-reported (own models)."
+  "description": "Original HumanEval pass@1 with simple-evals sampler. OpenAI lab-reported (own models).",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "simple-evals-math",
@@ -4315,7 +4964,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/openai/simple-evals/blob/652c89d0ca9df547706735883097e9537d40dc47/README.md",
-  "description": "MATH column of the simple-evals README for OpenAI models evaluated before simple-evals switched to MATH-500 (footnote 6 applies to o1 and later). Values first published May-Aug 2024 and unchanged since; zero-shot CoT. OpenAI lab-reported (own models). Distinct from simple-evals-math500."
+  "description": "MATH column of the simple-evals README for OpenAI models evaluated before simple-evals switched to MATH-500 (footnote 6 applies to o1 and later). Values first published May-Aug 2024 and unchanged since; zero-shot CoT. OpenAI lab-reported (own models). Distinct from simple-evals-math500.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "simple-evals-math500",
@@ -4324,7 +4976,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/openai/simple-evals/blob/652c89d0ca9df547706735883097e9537d40dc47/README.md",
-  "description": "MATH-500 split for models released on or after o1 (README footnote 6), zero-shot CoT. OpenAI lab-reported (own models)."
+  "description": "MATH-500 split for models released on or after o1 (README footnote 6), zero-shot CoT. OpenAI lab-reported (own models).",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "simple-evals-mgsm",
@@ -4333,7 +4988,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/openai/simple-evals/blob/652c89d0ca9df547706735883097e9537d40dc47/README.md",
-  "description": "Multilingual grade-school math, simple-evals zero-shot CoT. OpenAI lab-reported (own models)."
+  "description": "Multilingual grade-school math, simple-evals zero-shot CoT. OpenAI lab-reported (own models).",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "simple-evals-mmlu",
@@ -4377,7 +5035,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "SimpleVQA factual visual QA accuracy. Link: first pinned publisher document in this batch that reports it."
+  "description": "SimpleVQA factual visual QA accuracy. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "simplevqa-with-tools",
@@ -4467,7 +5128,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2610.12402v1",
-  "description": "SpaceCast-Bench (arXiv:2610.12402v1, CC BY 4.0): 3,862 multiple-choice questions from 182 ScanNet/ScanNet++ scenes over 16 task types; the model sees depth-verified view chains and must predict spatial outcomes (direction, distance, occlusion, attributes) after hypothetical camera/object/world transformations at three levels (static, local, global). Chain-of-thought prompt, deterministic decoding. Score = unweighted macro-average of per-task accuracy (Table 1 'Overall'); random baseline 25.9%, humans 87.2%."
+  "description": "SpaceCast-Bench (arXiv:2610.12402v1, CC BY 4.0): 3,862 multiple-choice questions from 182 ScanNet/ScanNet++ scenes over 16 task types; the model sees depth-verified view chains and must predict spatial outcomes (direction, distance, occlusion, attributes) after hypothetical camera/object/world transformations at three levels (static, local, global). Chain-of-thought prompt, deterministic decoding. Score = unweighted macro-average of per-task accuracy (Table 1 'Overall'); random baseline 25.9%, humans 87.2%.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "spider-dev-ex-zeroshot-is",
@@ -4611,7 +5275,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2605.08366v1",
-  "description": "SWE Atlas (arXiv:2605.08366v1, CC BY 4.0): 284 expert-authored software-engineering tasks from 18 open-source repositories - Codebase Q&A (124), Test Writing (90) and Refactoring (70) - verified by programmatic checks (tests, mutation testing) plus rubric-based LLM-judge grading. Score = Pass@1 averaged over 3 trials with the minimal mini-SWE-agent (bash-only) scaffold in Harbor, highest thinking setting per Table 8 (Table 1)."
+  "description": "SWE Atlas (arXiv:2605.08366v1, CC BY 4.0): 284 expert-authored software-engineering tasks from 18 open-source repositories - Codebase Q&A (124), Test Writing (90) and Refactoring (70) - verified by programmatic checks (tests, mutation testing) plus rubric-based LLM-judge grading. Score = Pass@1 averaged over 3 trials with the minimal mini-SWE-agent (bash-only) scaffold in Harbor, highest thinking setting per Table 8 (Table 1).",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "swe-bench-live",
@@ -4620,7 +5288,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/b2cff646eb4bb1d68355c01b18ae02e7cf42d120/README.md",
-  "description": "Resolved fraction; exact snapshot not specified in source chart."
+  "description": "Resolved fraction; exact snapshot not specified in source chart.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "swe-bench-multilingual",
@@ -4629,14 +5301,22 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16/blob/2dc98e2afe4face0e4ce40972a915c45368bd34a/README.md",
-  "description": "Resolved fraction on SWE-bench Multilingual; scaffold retained."
+  "description": "Resolved fraction on SWE-bench Multilingual; scaffold retained.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "swe-bench-pro",
   "label": "SWE-bench Pro",
   "direction": "higher",
   "unit": "fraction",
-  "url": "https://scale.com/leaderboard/swe_bench_pro_public"
+  "url": "https://scale.com/leaderboard/swe_bench_pro_public",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "swe-bench-pro-qwen-refined",
@@ -4645,7 +5325,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.6-27B/blob/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/README.md",
-  "description": "SWE-bench Pro public set after Qwen corrected some problematic tasks and re-evaluated all baselines on the refined benchmark (Qwen3.6/3.8 cards). Not the official public or commercial split; harness per note."
+  "description": "SWE-bench Pro public set after Qwen corrected some problematic tasks and re-evaluated all baselines on the refined benchmark (Qwen3.6/3.8 cards). Not the official public or commercial split; harness per note.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "swe-bench-pro-split-unspecified",
@@ -4654,14 +5338,22 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next/blob/a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb/README.md",
-  "description": "Qwen release chart labels SWE-Bench Pro with SWE-Agent but does not identify public/private or a benchmark snapshot. Keep separate until split is established."
+  "description": "Qwen release chart labels SWE-Bench Pro with SWE-Agent but does not identify public/private or a benchmark snapshot. Keep separate until split is established.",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "swe-bench-verified",
   "label": "SWE-bench Verified",
   "direction": "higher",
   "unit": "fraction",
-  "url": "https://www.swebench.com"
+  "url": "https://www.swebench.com",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "sysbench-isr",
@@ -4688,7 +5380,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2606.11070v1",
-  "description": "T1-Bench (arXiv:2606.11070v1, CC BY 4.0): persistent multi-session tool-using customer-service conversations across 11 travel/dining/shopping domains and multi-domain combinations, with a Gemma4-26B-A4B-it user simulator. A conversation passes only if tool-call recall = 1, parameter recall = 1 and all tool outputs match exactly; score = Pass^K with K=3 (all three of three temperature-1.0 trials pass), averaged over domains (Table 2)."
+  "description": "T1-Bench (arXiv:2606.11070v1, CC BY 4.0): persistent multi-session tool-using customer-service conversations across 11 travel/dining/shopping domains and multi-domain combinations, with a Gemma4-26B-A4B-it user simulator. A conversation passes only if tool-call recall = 1, parameter recall = 1 and all tool outputs match exactly; score = Pass^K with K=3 (all three of three temperature-1.0 trials pass), averaged over domains (Table 2).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau-bench-airline",
@@ -4697,7 +5392,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/b2cff646eb4bb1d68355c01b18ae02e7cf42d120/README.md",
-  "description": "Original τ-bench Airline, not τ²-bench."
+  "description": "Original τ-bench Airline, not τ²-bench.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau-bench-airline-gpt41-user",
@@ -4706,7 +5404,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
-  "description": "Original τ-bench Airline with GPT-4.1 simulating the user (DeepSeek R1-0528 card)."
+  "description": "Original τ-bench Airline with GPT-4.1 simulating the user (DeepSeek R1-0528 card).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau-bench-retail",
@@ -4715,7 +5416,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/b2cff646eb4bb1d68355c01b18ae02e7cf42d120/README.md",
-  "description": "Original τ-bench Retail, not τ²-bench."
+  "description": "Original τ-bench Retail, not τ²-bench.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau-bench-retail-gpt41-user",
@@ -4724,7 +5428,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
-  "description": "Original τ-bench Retail with GPT-4.1 simulating the user."
+  "description": "Original τ-bench Retail with GPT-4.1 simulating the user.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-airline",
@@ -4733,7 +5440,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/ServiceNow-AI/Apriel-1.6-15b-Thinker/blob/5810d5f1723032300131e677450d7f95a15a05e7/README.md",
-  "description": "Airline-domain task success; no composite or Telecom value also imported from this source."
+  "description": "Airline-domain task success; no composite or Telecom value also imported from this source.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-airline-gemma4",
@@ -4741,7 +5451,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://arxiv.org/html/2607.02770v1"
+  "url": "https://arxiv.org/html/2607.02770v1",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-bench",
@@ -4750,7 +5463,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B/blob/6327cdbcf907e1c7cec9cb29fb6e6cebdf8feaf7/README.md",
-  "description": "Average of the Airline, Retail and Telecom domains. Only aggregate retained when provided."
+  "description": "Average of the Airline, Retail and Telecom domains. Only aggregate retained when provided.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-bench-weighted",
@@ -4759,7 +5475,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/zai-org/GLM-4.6/blob/be72194883d968d7923a07e2f61681ea9a2826d1/README.md",
-  "description": "τ²-bench overall score labelled '(Weighted)' by the source: domain results combined with a weighting the source does not spell out. Kept separate from tau2-bench (simple average of Airline, Retail and Telecom)."
+  "description": "τ²-bench overall score labelled '(Weighted)' by the source: domain results combined with a weighting the source does not spell out. Kept separate from tau2-bench (simple average of Airline, Retail and Telecom).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-retail",
@@ -4768,7 +5487,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B/blob/5dd22602c2e9f6a097b1de4c4efe0658b605015c/README.md",
-  "description": "Retail domain pass rate; only used when no aggregate is provided."
+  "description": "Retail domain pass rate; only used when no aggregate is provided.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-retail-gemma4",
@@ -4776,7 +5498,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://arxiv.org/html/2607.02770v1"
+  "url": "https://arxiv.org/html/2607.02770v1",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-telecom",
@@ -4785,7 +5510,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B/blob/5dd22602c2e9f6a097b1de4c4efe0658b605015c/README.md",
-  "description": "Telecom domain pass rate; only used when no aggregate is provided."
+  "description": "Telecom domain pass rate; only used when no aggregate is provided.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau2-verified-gpt51-user",
@@ -4793,7 +5521,10 @@
   "direction": "higher",
   "unit": "fraction",
   "category": "llm",
-  "url": "https://github.com/amazon-agi/tau2-bench-verified/blob/864350a8971a8f8ee9e7b8472e2edc380a806b0c/README.md"
+  "url": "https://github.com/amazon-agi/tau2-bench-verified/blob/864350a8971a8f8ee9e7b8472e2edc380a806b0c/README.md",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau3-airline",
@@ -4802,7 +5533,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/sierra-research/tau2-bench/tree/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699",
-  "description": "Airline domain of τ³-bench (tau2-bench v1.0.1+, with the 75+ task fixes): pass^1. Not comparable with the original τ²-bench airline domain."
+  "description": "Airline domain of τ³-bench (tau2-bench v1.0.1+, with the 75+ task fixes): pass^1. Not comparable with the original τ²-bench airline domain.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau3-banking",
@@ -4811,7 +5545,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/thinkingmachines/Inkling-Small/blob/8cc5877b44/README.md",
-  "description": "Banking domain of τ³-bench (tau-cubed), task pass rate as reported by the source; user simulator and harness per note. Not the τ³-bench average."
+  "description": "Banking domain of τ³-bench (tau-cubed), task pass rate as reported by the source; user simulator and harness per note. Not the τ³-bench average.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau3-banking-v101",
@@ -4820,7 +5557,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/sierra-research/tau2-bench/tree/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699",
-  "description": "Knowledge-retrieval banking domain of τ³-bench, graded with tau2-bench v1.0.1+ (the release notes say earlier banking scores are not comparable): pass^1."
+  "description": "Knowledge-retrieval banking domain of τ³-bench, graded with tau2-bench v1.0.1+ (the release notes say earlier banking scores are not comparable): pass^1.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau3-bench",
@@ -4829,7 +5569,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B/blob/995ad96eacd98c81ed38be0c5b274b04031597b0/README.md",
-  "description": "τ³-bench (tau-cubed) agent benchmark average as reported; distinct from τ²-bench. Link: first pinned publisher document in this batch that reports it."
+  "description": "τ³-bench (tau-cubed) agent benchmark average as reported; distinct from τ²-bench. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau3-retail",
@@ -4838,7 +5581,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/sierra-research/tau2-bench/tree/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699",
-  "description": "Retail domain of τ³-bench (tau2-bench v1.0.1+, with the task fixes): pass^1. Not comparable with the original τ²-bench retail domain."
+  "description": "Retail domain of τ³-bench (tau2-bench v1.0.1+, with the task fixes): pass^1. Not comparable with the original τ²-bench retail domain.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "tau3-telecom",
@@ -4847,7 +5593,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/sierra-research/tau2-bench/tree/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699",
-  "description": "Telecom domain of τ³-bench (tau2-bench v1.0.1+): pass^1."
+  "description": "Telecom domain of τ³-bench (tau2-bench v1.0.1+): pass^1.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-1-terminus1",
@@ -4856,7 +5605,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
-  "description": "Original Terminal-Bench (before 2.0) evaluated with the Terminus 1 framework, as in the DeepSeek-V3.1 card."
+  "description": "Original Terminal-Bench (before 2.0) evaluated with the Terminus 1 framework, as in the DeepSeek-V3.1 card.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-2",
@@ -4865,7 +5617,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B/blob/6327cdbcf907e1c7cec9cb29fb6e6cebdf8feaf7/README.md",
-  "description": "Terminal-Bench version 2.0. Agent scaffold, token limits, and subset retained in notes."
+  "description": "Terminal-Bench version 2.0. Agent scaffold, token limits, and subset retained in notes.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-2-terminus2",
@@ -4874,7 +5629,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2601.11868v1",
-  "description": "Task resolution rate on Terminal-Bench 2.0 (89 tasks) using the Terminus 2 scaffold, run by the Terminal-Bench authors with provider-default reasoning (medium for OpenAI/Anthropic), >=5 trials per task. Kept separate from terminal-bench-2 because that id mixes scaffolds."
+  "description": "Task resolution rate on Terminal-Bench 2.0 (89 tasks) using the Terminus 2 scaffold, run by the Terminal-Bench authors with provider-default reasoning (medium for OpenAI/Anthropic), >=5 trials per task. Kept separate from terminal-bench-2 because that id mixes scaffolds.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-2.1",
@@ -4883,7 +5641,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/IFM/K2-Horizon-7B/blob/036114ce8d46c32b24c15423211069abb9c5d25e/README.md",
-  "description": "Terminal-Bench version 2.1; distinct from version 2.0."
+  "description": "Terminal-Bench version 2.1; distinct from version 2.0.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-3",
@@ -4892,7 +5653,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-  "description": "Terminal-Bench version 3.0 pass@1; harness per note. Distinct from 2.0/2.1/4.0."
+  "description": "Terminal-Bench version 3.0 pass@1; harness per note. Distinct from 2.0/2.1/4.0.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-4",
@@ -4901,7 +5665,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-  "description": "Terminal-Bench version 4.0 pass@1; harness per note. Distinct from 2.x/3.0."
+  "description": "Terminal-Bench version 4.0 pass@1; harness per note. Distinct from 2.x/3.0.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminal-bench-pre-2",
@@ -4910,7 +5677,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2508.06471v1",
-  "description": "Terminal-Bench task success as reported before Terminal-Bench 2.0 existed (report dated before November 2025); task-set version not stated. Never merged with terminal-bench-2 or 2.1."
+  "description": "Terminal-Bench task success as reported before Terminal-Bench 2.0 existed (report dated before November 2025); task-set version not stated. Never merged with terminal-bench-2 or 2.1.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminalbench-hard-gemma4",
@@ -4919,7 +5689,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://github.com/NVIDIA-NeMo/Evaluator/blob/e77dfb31fd1538080cbfb5a50f0ba0e4cb8f253f/src/nemo_evaluator/benchmarks/terminal_bench_hard.py",
-  "description": "Hard-task subset of the original Terminal-Bench (terminal-bench-core, commit 74221fb; 47 tasks, or the 44-task Artificial Analysis split) run with the Terminus 2 agent, as used in the Artificial Analysis Intelligence Index. Pass rate. Task count, repeats and reasoning setting per note. Not Terminal-Bench 2.0/2.1/3.0/4.0, and not the 100-task \"TBH\" used in some papers."
+  "description": "Hard-task subset of the original Terminal-Bench (terminal-bench-core, commit 74221fb; 47 tasks, or the 44-task Artificial Analysis split) run with the Terminus 2 agent, as used in the Artificial Analysis Intelligence Index. Pass rate. Task count, repeats and reasoning setting per note. Not Terminal-Bench 2.0/2.1/3.0/4.0, and not the 100-task \"TBH\" used in some papers.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "terminalworld-verified-terminus2",
@@ -4928,7 +5701,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2605.22535v1",
-  "description": "Pass rate on the 200 human-verified real-world terminal tasks of TerminalWorld, Terminus-2 scaffold, provider-default reasoning, temperature 0.7 (Table 1 headline Pass Rate; tasks with harness errors count as failures)."
+  "description": "Pass rate on the 200 human-verified real-world terminal tasks of TerminalWorld, Terminus-2 scaffold, provider-default reasoning, temperature 0.7 (Table 1 headline Pass Rate; tasks with harness errors count as failures).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "textvqa",
@@ -4937,7 +5713,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://ai.google.dev/gemma/docs/core/model_card_3",
-  "description": "TextVQA accuracy (split as stated by the source)."
+  "description": "TextVQA accuracy (split as stated by the source).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "think-bench-accuracy",
@@ -4946,7 +5725,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "think-bench",
-  "url": "https://arxiv.org/html/2505.22113v1#S4.T2"
+  "url": "https://arxiv.org/html/2505.22113v1#S4.T2",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "thinkingbox-bench-pass1",
@@ -4955,7 +5737,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2608.19741v4",
-  "description": "Thinkingbox-bench (arXiv:2608.19741v4, CC BY 4.0): 507 tool-using agent tasks in five stateful business domains (retail, auto insurance, booking, neobank support, consulting) with MCP-compatible tools, a GPT-5.4-mini simulated user and executable backend-state checks (plus a response rubric on some tasks). A trial passes only if every executable check passes; score = pass@1 micro-averaged over tasks and N=20 independent trials (Table 15 / Table 4 'Average'). Agent temperature 1.0, reasoning effort medium."
+  "description": "Thinkingbox-bench (arXiv:2608.19741v4, CC BY 4.0): 507 tool-using agent tasks in five stateful business domains (retail, auto insurance, booking, neobank support, consulting) with MCP-compatible tools, a GPT-5.4-mini simulated user and executable backend-state checks (plus a response rubric on some tasks). A trial passes only if every executable check passes; score = pass@1 micro-averaged over tasks and N=20 independent trials (Table 15 / Table 4 'Average'). Agent temperature 1.0, reasoning effort medium.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "thunder-konubench-symbol-zero-shot",
@@ -4991,7 +5776,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/8472618112abcbd45acbcdc58436aff4233c23f7/README.md",
-  "description": "Toolathlon / Tool Decathlon agent benchmark pass@1 as reported. Link: first pinned publisher document in this batch that reports it."
+  "description": "Toolathlon / Tool Decathlon agent benchmark pass@1 as reported. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "toolathlon-verified",
@@ -5000,7 +5788,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
-  "description": "Verified subset/release of Toolathlon (Tool Decathlon) as labelled by the source; separate from toolathlon."
+  "description": "Verified subset/release of Toolathlon (Tool Decathlon) as labelled by the source; separate from toolathlon.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "triviaqa",
@@ -5043,7 +5834,10 @@
   "label": "Tulu 2: CodexEval pass@10",
   "direction": "higher",
   "unit": "fraction",
-  "url": "https://arxiv.org/html/2311.10702v2"
+  "url": "https://arxiv.org/html/2311.10702v2",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "tulu2-tydiqa-goldp-1shot-f1",
@@ -5077,7 +5871,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/tencent/Hy3",
-  "description": "USAMO 2026 proof problems score as reported (grading method per source)."
+  "description": "USAMO 2026 proof problems score as reported (grading method per source).",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "vec-embodied-avg",
@@ -5131,7 +5928,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/vector-institute/eval-leaderboard/blob/f348507a79f56dae8624b525574cb326359a20c8/data/results.json",
-  "description": "Vector Institute leaderboard run of inspect_evals `humaneval`, metric mean (pass@1)."
+  "description": "Vector Institute leaderboard run of inspect_evals `humaneval`, metric mean (pass@1).",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "vector-inspect-math",
@@ -5140,7 +5940,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/spaces/vector-institute/eval-leaderboard/blob/f348507a79f56dae8624b525574cb326359a20c8/data/results.json",
-  "description": "Vector Institute leaderboard run of inspect_evals `math` task (Hendrycks MATH test set as implemented by Inspect Evals), metric accuracy. Subset (full vs MATH-500) as implemented by inspect_evals at run time; kept separate from other MATH ids."
+  "description": "Vector Institute leaderboard run of inspect_evals `math` task (Hendrycks MATH test set as implemented by Inspect Evals), metric accuracy. Subset (full vs MATH-500) as implemented by inspect_evals at run time; kept separate from other MATH ids.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "vector-inspect-mmlu-pro",
@@ -5158,7 +5961,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2410.07112v2",
-  "description": "MathVista testmini as run by VHELM (HELM MathVistaScenario: testmini split filtered into grade × question-type sub-scenarios for elementary school, high school, college and daily life), zero-shot, exact match, averaged over the sub-runs as printed in VHELM Table 4. Not merged with mathvista-mini (different aggregation and grade filter)."
+  "description": "MathVista testmini as run by VHELM (HELM MathVistaScenario: testmini split filtered into grade × question-type sub-scenarios for elementary school, high school, college and daily life), zero-shot, exact match, averaged over the sub-runs as printed in VHELM Table 4. Not merged with mathvista-mini (different aggregation and grade filter).",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "vhelm-mmmu-val-em",
@@ -5167,7 +5973,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2410.07112v2",
-  "description": "MMMU validation split as run by Stanford CRFM's VHELM (HELM MMMUScenario: validation split, per subject × question type, multiple-choice and open), zero-shot prompting, exact-match accuracy averaged over HELM's MMMU sub-runs as printed in VHELM Table 4. Kept apart from 'mmmu' because HELM macro-averages its per-subject runs rather than reporting micro accuracy over the 900 questions."
+  "description": "MMMU validation split as run by Stanford CRFM's VHELM (HELM MMMUScenario: validation split, per subject × question type, multiple-choice and open), zero-shot prompting, exact-match accuracy averaged over HELM's MMMU sub-runs as printed in VHELM Table 4. Kept apart from 'mmmu' because HELM macro-averages its per-subject runs rather than reporting micro accuracy over the 900 questions.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "vibe-code-bench-test",
@@ -5176,7 +5985,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/abs/2603.04601v3",
-  "description": "Vibe Code Bench as published in the paper (Vals AI, arXiv:2603.04601v3, CC BY 4.0): build a complete, deployable web application (React + Vite, Supabase, Docker Compose; email and Stripe integrations where specified) from a natural-language specification inside an OpenHands-based sandbox with terminal, browser and web search, within 5 hours of wall-clock time. A Browser Use agent (Claude Sonnet 4.5) runs the app's pre-written user workflows; a workflow passes when at least 90% of its substeps succeed. Score = share of workflows passed per app, averaged over the 50 held-out test apps (473 workflows)."
+  "description": "Vibe Code Bench as published in the paper (Vals AI, arXiv:2603.04601v3, CC BY 4.0): build a complete, deployable web application (React + Vite, Supabase, Docker Compose; email and Stripe integrations where specified) from a natural-language specification inside an OpenHands-based sandbox with terminal, browser and web search, within 5 hours of wall-clock time. A Browser Use agent (Claude Sonnet 4.5) runs the app's pre-written user workflows; a workflow passes when at least 90% of its substeps succeed. Score = share of workflows passed per app, averaged over the 50 held-out test apps (473 workflows).",
+  "tags": [
+   "agents",
+   "coding"
+  ]
  },
  {
   "id": "video2world-v2wscore-opencode",
@@ -5185,7 +5998,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2610.04432v2",
-  "description": "Video2World (arXiv:2610.04432v2, CC BY-SA 4.0): 222 instances (189 embodied manipulation video clips, 39 task families); a coding agent must build an executable physics-simulated scene and robot behaviour that reproduce the video. V2WScore (0-100) combines build rate, task success/progress, geometric fidelity and dynamic fidelity, macro-averaged over task families (Table 2), stored /100. One autonomous attempt per instance, 180-minute limit, OpenCode 1.18.29 scaffold for every imported row (other scaffolds excluded)."
+  "description": "Video2World (arXiv:2610.04432v2, CC BY-SA 4.0): 222 instances (189 embodied manipulation video clips, 39 task families); a coding agent must build an executable physics-simulated scene and robot behaviour that reproduce the video. V2WScore (0-100) combines build rate, task success/progress, geometric fidelity and dynamic fidelity, macro-averaged over task families (Table 2), stored /100. One autonomous attempt per instance, 180-minute limit, OpenCode 1.18.29 scaffold for every imported row (other scaffolds excluded).",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "videoholmes",
@@ -5239,7 +6055,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2608.10408v1",
-  "description": "VisEditBench (arXiv:2608.10408v1, CC BY 4.0): 1,395 human-annotated tasks where a VLM receives visualization code (Matplotlib/Vega-Lite), a rendered buggy, human-marked or reference chart and an instruction, and must return revised executable code. Zero-shot, temperature 0.2, max 4,096 output tokens. Rendered output passes only if executable, task accuracy >=4.5/5, readability and visual quality >=4/5 and visual similarity >=90 (GPT-4o rubric judge, validated against human ratings). Score = Overall pass rate (Table 2)."
+  "description": "VisEditBench (arXiv:2608.10408v1, CC BY 4.0): 1,395 human-annotated tasks where a VLM receives visualization code (Matplotlib/Vega-Lite), a rendered buggy, human-marked or reference chart and an instruction, and must return revised executable code. Zero-shot, temperature 0.2, max 4,096 output tokens. Rendered output passes only if executable, task accuracy >=4.5/5, readability and visual quality >=4/5 and visual similarity >=90 (GPT-4o rubric judge, validated against human ratings). Score = Overall pass rate (Table 2).",
+  "tags": [
+   "coding",
+   "vision"
+  ]
  },
  {
   "id": "vita-bench",
@@ -5266,7 +6086,10 @@
   "unit": "fraction",
   "category": "llm",
   "family": "vmmu",
-  "url": "https://arxiv.org/html/2508.13680v5#S4.T2"
+  "url": "https://arxiv.org/html/2508.13680v5#S4.T2",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "vqav2-val",
@@ -5275,7 +6098,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://arxiv.org/html/2503.19786v1",
-  "description": "VQAv2 validation-split VQA accuracy."
+  "description": "VQAv2 validation-split VQA accuracy.",
+  "tags": [
+   "vision"
+  ]
  },
  {
   "id": "vstar-with-python",
@@ -5293,7 +6119,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/8472618112abcbd45acbcdc58436aff4233c23f7/README.md",
-  "description": "We-Math visual math score as reported. Link: first pinned publisher document in this batch that reports it."
+  "description": "We-Math visual math score as reported. Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "math"
+  ]
  },
  {
   "id": "webapp1k-duo-react-pass1",
@@ -5302,7 +6131,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/datasets/onekq-ai/WebApp1K-Duo-React",
-  "description": "1,000 harder two-feature React problems (arXiv 2409.13773). Score = mean over problems of Successes/Runs (the Space's pass@1 estimator)."
+  "description": "1,000 harder two-feature React problems (arXiv 2409.13773). Score = mean over problems of Successes/Runs (the Space's pass@1 estimator).",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "webapp1k-react-pass1",
@@ -5311,7 +6143,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/datasets/onekq-ai/WebApp1K-React",
-  "description": "1,000 React web-app problems (Jest tests; arXiv 2408.00019/2409.05177). Score = mean over problems of Successes/Runs (the Space's pass@1 estimator)."
+  "description": "1,000 React web-app problems (Jest tests; arXiv 2408.00019/2409.05177). Score = mean over problems of Successes/Runs (the Space's pass@1 estimator).",
+  "tags": [
+   "coding"
+  ]
  },
  {
   "id": "webarena-verified",
@@ -5320,7 +6155,10 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/README.md",
-  "description": "WebArena-Verified browser-agent success rate with the official WebArena-Verified grader; scaffold per note."
+  "description": "WebArena-Verified browser-agent success rate with the official WebArena-Verified grader; scaffold per note.",
+  "tags": [
+   "agents"
+  ]
  },
  {
   "id": "webcompass-overall",
@@ -5365,7 +6203,11 @@
   "unit": "fraction",
   "category": "llm",
   "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/dc4d348443bc740c68e2d77492492c11606384d5/README.md",
-  "description": "WideSearch broad information-seeking agent benchmark; item-level F1 or success as reported by source (see note). Link: first pinned publisher document in this batch that reports it."
+  "description": "WideSearch broad information-seeking agent benchmark; item-level F1 or success as reported by source (see note). Link: first pinned publisher document in this batch that reports it.",
+  "tags": [
+   "agents",
+   "search"
+  ]
  },
  {
   "id": "widesearch-corrected",

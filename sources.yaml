@@ -13,6 +13,8 @@
 #   context     columns describing how the model was run
 #   date, model_url, model_label, ci, ignore, filter, labels, unit, units, lower_is_better
 #   headline    metrics shown in the default "most covered" column choice (default: all)
+#   tags        explorer presets: a list for every metric, or metric (or glob) -> list.
+#               Known: coding, agents, math, knowledge, chat, vision, search
 #   min_rows    a run with fewer rows is held       rolling: true for ratings that drift
 #   duplicates  hold (default) | drop: what to do when the source repeats a row ambiguously
 #   round       decimals to keep for numeric scores, only where extra precision is noise
@@ -32,6 +34,14 @@ sources:
     plugin: whatmodel
     every: 1d
     categories: [llm]
+    tags:                        # added to whatmodel's own task tags
+      gpqa-diamond: [knowledge]
+      "hle*": [knowledge]
+      "mmlu*": [knowledge]
+      "simpleqa*": [knowledge]
+      bbh: [knowledge]
+      musr: [knowledge]
+      "arcprize-*": [knowledge]
     min_rows: 10000
     license: CC BY-SA 4.0
     attribution: >-
@@ -46,6 +56,18 @@ sources:
     fetch: https://epoch.ai/data/benchmark_data.zip
     plugin: epoch
     include_external: false     # Epoch's copies of other leaderboards; their terms are not reviewed
+    tags:
+      gpqa_diamond: [knowledge]
+      simpleqa_verified: [knowledge]
+      chess_puzzles: [knowledge]
+      mystery_game_puzzles: [knowledge]
+      "frontiermath*": [math]
+      math_level_5: [math]
+      otis_mock_aime_2024_2025: [math]
+      swe_bench_verified: [coding, agents]
+      mirrorcode: [coding]
+      furniture_assembly: [agents]
+      "spireclimb*": [agents]
     every: 1d
     min_rows: 500
     license: CC BY 4.0
@@ -86,6 +108,15 @@ sources:
       vision/overall: Arena vision
       search/overall: Arena search
       document/overall: Arena document
+    tags:
+      "text/*": [chat]
+      "text_style_control/*": [chat]
+      "*/coding": [coding]
+      "*/math": [math]
+      "webdev/*": [coding]
+      "vision/*": [vision]
+      "document/*": [vision]
+      "search/*": [search]
     license: CC BY 4.0
     attribution: Arena Leaderboard Dataset by LMArena (lmarena-ai), CC BY 4.0
     terms: allowed
@@ -106,6 +137,7 @@ sources:
       - Format Sensitivity Max Delta
       - Format Sensitivity Standard Deviation
     headline: [Overall Acc, Live Acc, Multi Turn Acc, Web Search Acc, Memory Acc]
+    tags: [agents]
     min_rows: 50
     license: Apache-2.0 (BFCL repository, ShishirPatil/gorilla)
     terms: allowed
@@ -125,6 +157,7 @@ sources:
       percent_cases_well_formed: Polyglot well-formed edits
     unit: percent
     headline: [pass_rate_2]
+    tags: [coding]
     every: 1d
     min_rows: 50
     license: Apache-2.0
