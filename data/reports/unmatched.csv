@@ -315,6 +315,7 @@ swe-bench,https://huggingface.co/agentica-org/DeepSWE-Preview,deepswe,2,2,
 tau2-bench,PrincipledMachines Cortex 0.1,principledmachines-cortex-0-1,1,2,
 terminal-bench,Fable 5.2,claude-fable-5-2,1,2,claude-fable-5 claude-fable-5-1
 terminal-bench,Inkling Small 2,inkling-small-2,1,2,inkling-small inkling
+terminal-bench,Muse Ember,muse-ember,1,2,
 arena,Diffbot-Small-XL,diffbot-small-xl,1,1,
 arena,GPT-4o (Search),gpt-4o,1,1,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 arena,Grok 4.1 Fast (Search),grok-4-1-fast,1,1,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
