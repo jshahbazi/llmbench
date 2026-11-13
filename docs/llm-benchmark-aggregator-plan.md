@@ -20,9 +20,10 @@ standard Actions runners and Pages are free for public repositories, and `jshahb
 public. The site is served at **llmbench.site** (registered at Cloudflare; DNS-only A, AAAA and
 `www` CNAME records point at GitHub Pages, which issues the HTTPS certificate).
 
-**Status (2026-11-13):** Phases 0, 1 and 2 are built — five sources, field-mapping extractor, change
-history, guards, issue reporting, name matching, the update workflow, the explorer, and a page for
-every model, benchmark column and source. Section 12 lists what was learned in each.
+**Status (2026-11-13):** Phases 0 to 3 are built — five sources, field-mapping extractor, change
+history, guards, issue reporting, the update workflow, the explorer, a page for every model, benchmark
+column and source, name matching with curation files, and CSV, Parquet and SQLite downloads. Section
+12 lists what was learned in each.
 
 ### 1.1 Goals
 
@@ -208,7 +209,7 @@ Structured files usually need 8 to 12 lines and no code. Of the launch sources, 
 llmbench/
 ├── sources.yaml                  # what to pull from                         (you)
 ├── curation/                     #                                           (you)
-│   ├── aliases.csv               # source,raw_name,model_id — fixes and overrides for matching
+│   ├── aliases.csv               # source,raw_name,model_id[,note] — "*" for any source, "-" to block
 │   └── models.yaml               # models to add to, or correct in, the catalogue
 ├── data/                         # written only by the workflow              (bot)
 │   ├── sources/<id>/
@@ -217,8 +218,9 @@ llmbench/
 │   │   ├── state.json            # upstream revision, etag, hash, row count, status
 │   │   └── raw.*                 # raw payload, only when small and not pinned upstream
 │   ├── catalog/models.jsonl      # canonical models, seeded from whatmodel
-│   ├── resolved/aliases.csv      # every automatic match and how it was made
-│   └── reports/unmatched.csv     # model names with no match, most-used first
+│   ├── resolved/aliases.csv      # every name: its model, how it matched, the qualifiers set aside
+│   ├── resolved/unlisted.csv     # models not in the catalogue, each gathering agreeing names
+│   └── reports/unmatched.csv     # names not in the catalogue, most-used first, with near misses
 ├── scripts/
 │   ├── scrape.ts                 # fetch → extract → guard → diff
 │   ├── resolve.ts                # model matching and reports
@@ -328,16 +330,32 @@ Rows from different sources line up only when their model names are matched to o
 - **Catalogue.** Seeded from whatmodel's `models.json`: 2,310 models, 1,230 of them LLMs (890 of those
   with a Hugging Face repo link, 917 with parameter counts). `curation/models.yaml` adds or corrects
   entries.
-- **Matching**, in order: a line in `curation/aliases.csv`; a Hugging Face link on the row; an exact
-  match on the normalized name against catalogue ids, names and repo names. Before matching, qualifiers
-  are split off the name into context: quantization (`BF16`, `Q4_K_M`), reasoning mode and effort
-  (`-thinking-64k-high-effort`), call mode (`(FC)`), scaffold.
+- **Matching**, in order (`scripts/lib/match.ts`): a line in `curation/aliases.csv`; a Hugging Face
+  link on the row; an exact match on the normalised name against catalogue ids, names and repo names;
+  the same after setting aside qualifiers; the same after a leading maker name that agrees with the
+  model's provider. The parser (`scripts/lib/names.ts`) knows reasoning effort (`(High)`, `_xhigh`),
+  thinking budget (`_32K`), thinking on or off, quantization (`FP8`, `NVFP4`, `Q4_K_M`), call mode
+  (`(FC)`, `(Prompt)`), web search or grounding, release stage (`Preview`, `Beta`) and snapshot dates
+  in every form the sources use (`2024-12-17`, `20250514`, `260428`, `0905`, `06-17`, `Aug 2024`).
+  Qualifiers set aside become the score's context; ones the model's own name already states are
+  dropped.
+- **Normalisation keeps numbers apart.** A separator between two numbers survives as ".", so
+  `OPT-1.3B` ≠ `OPT-13B` and `Qwen2.5-7B` ≠ `Qwen2-57B`; `+` reads as "plus", so `Command R+` ≠
+  `Command R`. The Phase 0 matcher got the last one wrong on the live site.
+- **Snapshots must agree.** When qualifiers are set aside, the candidates are the catalogue models
+  with the same core name, and a stated snapshot date must agree with the model's: `GPT-4o (Aug 2024)`
+  is `gpt-4o-2024-08-06`, and `Mistral Large (2411)` is never `mistral-large-2402`. An id that says one
+  model while a repository name says another (`Gemma 2B` is the instruct model's id and the base
+  model's repo) matches neither.
 - **No fuzzy auto-matching.** A wrong merge silently mixes two models' scores, which is worse than a
-  missing merge. Near misses go to `data/reports/unmatched.csv` with suggestions.
-- **Every automatic match is written to `data/resolved/aliases.csv`**, so a change in matching shows up
-  as a diff in the bot's commit.
-- **Unmatched names are still shown.** They appear on their source's page, and in the explorer as their
-  own rows under an "unmatched" toggle. Fixing one is a single line in `curation/aliases.csv`.
+  missing merge. Near misses go to `data/reports/unmatched.csv` as suggestions, ambiguous candidates
+  first.
+- **Every match is written to `data/resolved/aliases.csv`** with its method and qualifiers, so a change
+  in matching shows up as a diff in the bot's commit.
+- **Names outside the catalogue are models too.** Names whose core name and snapshot agree, across
+  sources, share one "unlisted" model with its own page, shown in the explorer by default and marked
+  "not in the catalogue". Fixing one is a line in `curation/aliases.csv`; adding it is a few lines in
+  `curation/models.yaml`. `npm run validate` checks both files.
 
 ### 6.3 Who ran it
 
@@ -400,8 +418,9 @@ writing, vision & documents, web search), taken from whatmodel's task groupings 
 `sources.yaml`. The column picker lists every metric by source with live coverage counts; sub-scores
 (non-headline metrics) are behind a toggle. Filters: name or maker, release window, size by total
 parameters, maker, open weights, permissive licence, who ran it (independent, submitted, lab), and
-unmatched names. Cells support arrow-key navigation, and Enter opens the popover. Chart mode moves to
-Phase 4, and a quantization filter waits for Phase 3's normalised context.
+models not in the catalogue, and "plain runs only" (no quantized or web-search runs, from Phase 3's
+normalised context). Cells support arrow-key navigation, and Enter opens the popover. Chart mode moves
+to Phase 4.
 
 URL parameters: `c` (a column id, repeated), `n` (how many most-covered columns), `tag`, `q`, `since`
 (months), `open`, `perm`, `size` (max total B; negative means "over"), `maker`, `by` (run-by codes,
@@ -419,7 +438,8 @@ repeated), `view=compare`.
 - `/benchmarks/` — directory of all columns with a filter box. `/benchmarks/<source>/<metric>/` — the
   full leaderboard for one column, and links to the same benchmark in other sources (via `family`).
 - `/method/` — how matching, dates and "best in cell" work.
-- `/data/` — where the data lives and its licences. CSV, Parquet and SQLite downloads are Phase 3.
+- `/data/` — downloads (every score as CSV, Parquet and SQLite, plus models, benchmarks, names and
+  sources as CSV), where the data lives, and its licences.
 - `404.html`, `sitemap.xml`, `robots.txt`.
 
 ### 7.3 Data the site loads
@@ -566,7 +586,8 @@ As built in Phase 1:
   column, so nothing is counted twice in a cell, and skipping would lose data until matching is complete.
 
 First-run matching: whatmodel 1,227 of 1,227 model names, Epoch 529 of 676, Arena 470 of 549,
-BFCL 91 of 109, Aider 55 of 68. The rest are in `data/reports/unmatched.csv` and hidden behind a toggle.
+BFCL 91 of 109, Aider 55 of 68. After Phase 3: Epoch 614, Arena 522, BFCL 107, Aider 57. The rest
+are rows of their own, marked "not in the catalogue", and listed in `data/reports/unmatched.csv`.
 
 ### 10.2 Next — live and openly licensed
 
@@ -647,6 +668,14 @@ column picker, and phone width. Built without Astro or React (section 7).
 **Phase 3 — matching and exports (about a week).** Name parser, matcher, curation files, reports. CSV,
 Parquet and SQLite downloads. Method page.
 *Exit:* the same model from two sources sits on one row, and a wrong match is a one-line fix.
+*Done 2026-11-13.* Names outside the catalogue fell from 257 to 102, and those left form 96 models of
+their own, joined across sources by core name. Every new and changed match was reviewed before the
+curation lines were written. Two matches that were live on the site turned out wrong and are now
+right: "Command R+ (08-2024)" sat on Command R's row (the `+` was dropped), and Epoch's "Mistral
+Large 2 (Jul 2024)" sat on the November model. 30 lines of `curation/aliases.csv` cover cases the rules
+cannot know (Arena's undated "Command R" is the March 2024 release). Downloads: about 48,700 scores;
+the Parquet file is 0.9 MB, the CSV and SQLite files about 12 MB each. SQLite needs no dependency
+(`node:sqlite`); Parquet uses `hyparquet-writer`.
 
 **Phase 4 — breadth (ongoing).** More sources. `render: browser` support. History backfill.
 `add-source` with LLM-assisted mapping. Chart mode. Optional SQL console.

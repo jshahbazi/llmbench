@@ -1,0 +1,21 @@
+# Models to add to the catalogue, or fields to correct on a model already in it (same id).
+# The catalogue itself comes from whatmodel.sh (data/catalog/models.jsonl); edits here apply on the
+# next build without re-reading any source. `npm run validate` checks this file.
+#
+# Fields: id, name, provider, released (YYYY-MM), open_weights, license, params_b, active_b,
+# context_k, model_repo, note. A new model needs at least id and name. For example:
+#
+# - id: example-model-7b
+#   name: Example Model 7B
+#   provider: Example Lab
+#   released: 2026-01
+#   open_weights: true
+#   license: apache-2.0
+#   params_b: 7.2
+#
+# To correct a catalogue model, give its id and only the fields to change:
+#
+# - id: nova-pro
+#   context_k: 300
+
+[]

@@ -11,19 +11,30 @@ export interface Candidate {
   rawName: string;
   source: string;
   history: HistoryEntry[] | null;
+  /** FLAG_* bits: how the run differs from the plain model. */
+  flags: number;
 }
+
+export const FLAG_QUANTIZED = 1;
+export const FLAG_SEARCH = 2;
 
 const better = (a: number, b: number, dir: 'higher' | 'lower') => (dir === 'lower' ? a < b : a > b);
 
 /**
  * The headline score in a cell: the best value by the column's direction among candidates whose
- * run-by is included, ties going to the newest date. `n` counts the included candidates.
+ * run-by is included and that have none of the `hide` flags, ties going to the newest date. `n`
+ * counts the included candidates.
  */
-export function pickBest(list: readonly Candidate[], dir: 'higher' | 'lower', runBy: ReadonlySet<number>): { best: Candidate; n: number } | null {
+export function pickBest(
+  list: readonly Candidate[],
+  dir: 'higher' | 'lower',
+  runBy: ReadonlySet<number>,
+  hide = 0,
+): { best: Candidate; n: number } | null {
   let best: Candidate | null = null;
   let n = 0;
   for (const c of list) {
-    if (!runBy.has(c.runBy)) continue;
+    if (!runBy.has(c.runBy) || c.flags & hide) continue;
     n++;
     if (!best || better(c.value, best.value, dir) || (c.value === best.value && c.date > best.date)) best = c;
   }

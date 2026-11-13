@@ -4,7 +4,7 @@
  */
 import { $, el, link } from './dom.ts';
 import { fmt, isPermissive, paramsLabel, RUN_BY_LABELS, safeUrl, unitSuffix } from './format.ts';
-import { pickBest, toCsv, type Candidate } from './select.ts';
+import { FLAG_QUANTIZED, FLAG_SEARCH, pickBest, toCsv, type Candidate } from './select.ts';
 import { parseState, serializeState, type ViewState } from './state.ts';
 import type { CellsFile, SiteColumn, SiteIndex, SiteModel } from './types.ts';
 
@@ -32,7 +32,9 @@ let view: View;
 
 const key = (mi: number, ci: number) => `${mi}:${ci}`;
 const colHref = (c: SiteColumn) => `benchmarks/${c.source}/${c.slug}/`;
-const modelHref = (m: SiteModel) => (m.unmatched ? `sources/${m.unmatched}/#names` : `models/${m.id}/`);
+const modelHref = (m: SiteModel) => `models/${m.id}/`;
+/** Flags whose runs the "plain runs only" filter leaves out. */
+const hidden = () => (state.plain ? FLAG_QUANTIZED | FLAG_SEARCH : 0);
 
 function sinceMonth(months: number): string | null {
   if (!months) return null;
@@ -44,7 +46,7 @@ function sinceMonth(months: number): string | null {
 
 function modelPasses(m: SiteModel): boolean {
   const s = state;
-  if (m.unmatched && !s.unmatched) return false;
+  if (m.unlisted && !s.unlisted) return false;
   if (s.open && m.open_weights !== true) return false;
   if (s.permissive && !isPermissive(m.license)) return false;
   if (s.maker && m.provider !== s.maker) return false;
@@ -61,6 +63,7 @@ function modelPasses(m: SiteModel): boolean {
 
 function compute(): View {
   const runBy = new Set(state.runBy);
+  const hide = hidden();
   const ok = index.models.map(modelPasses);
   const cell = new Map<string, Shown>();
   const coverage = new Array<number>(index.columns.length).fill(0);
@@ -69,7 +72,7 @@ function compute(): View {
     const mi = Number(k.slice(0, sep));
     if (!ok[mi]) continue;
     const ci = Number(k.slice(sep + 1));
-    const p = pickBest(list, index.columns[ci]!.direction, runBy);
+    const p = pickBest(list, index.columns[ci]!.direction, runBy, hide);
     if (!p) continue;
     cell.set(k, { ...p, all: list });
     coverage[ci] = (coverage[ci] ?? 0) + 1;
@@ -124,7 +127,7 @@ function compute(): View {
 // ---- Rendering ----------------------------------------------------------------------------------
 
 function modelSub(m: SiteModel): string {
-  if (m.unmatched) return `unmatched name from ${sourceName.get(m.unmatched) ?? m.unmatched}`;
+  if (m.unlisted) return 'not in the catalogue';
   return [m.provider, m.released, paramsLabel(m.params_b, m.active_b), m.open_weights === true ? 'open' : m.open_weights === false ? 'API' : '']
     .filter(Boolean)
     .join(' · ');
@@ -205,7 +208,7 @@ function renderTable() {
     });
     const tr = el(
       'tr',
-      { class: m.unmatched ? 'unmatched' : null },
+      { class: m.unlisted ? 'unlisted' : null },
       el('th', { class: 'model', scope: 'row' }, check, el('a', { href: modelHref(m), class: 'name' }, m.name), el('span', { class: 'sub' }, modelSub(m))),
     );
     for (const ci of cols) {
@@ -253,7 +256,7 @@ function renderCompare() {
   const ms = state.cmp.map((id) => modelById.get(id)).filter((mi): mi is number => mi !== undefined);
   const lines: Array<{ ci: number; vals: Array<Candidate | null> }> = [];
   index.columns.forEach((col, ci) => {
-    const vals = ms.map((mi) => pickBest(candidates.get(key(mi, ci)) ?? [], col.direction, runBy)?.best ?? null);
+    const vals = ms.map((mi) => pickBest(candidates.get(key(mi, ci)) ?? [], col.direction, runBy, hidden())?.best ?? null);
     const k = vals.filter(Boolean).length;
     if (k >= Math.min(2, ms.length)) lines.push({ ci, vals });
   });
@@ -346,14 +349,16 @@ function openPopover(td: HTMLElement) {
   const m = index.models[mi]!;
   const col = index.columns[ci]!;
   const runBy = new Set(state.runBy);
+  const hide = hidden();
   const list = [...(candidates.get(key(mi, ci)) ?? [])].sort((a, b) => (col.direction === 'lower' ? a.value - b.value : b.value - a.value));
   const close = el('button', { type: 'button', class: 'icon close', 'aria-label': 'Close' }, '×');
   close.addEventListener('click', closePopover);
   const items = list.map((c) => {
     const url = safeUrl(c.url);
+    const why = !runBy.has(c.runBy) ? 'the Run by filter' : c.flags & hide ? 'the plain-runs filter' : '';
     return el(
       'li',
-      { class: runBy.has(c.runBy) ? null : 'filtered' },
+      { class: why ? 'filtered' : null },
       el('strong', {}, `${fmt(c.value, col.unit)}${unitSuffix(col.unit)}`),
       c.interval ? el('span', { class: 'muted' }, ` (${c.interval})`) : null,
       el('br'),
@@ -371,7 +376,7 @@ function openPopover(td: HTMLElement) {
             ),
           )
         : null,
-      runBy.has(c.runBy) ? null : el('span', { class: 'muted' }, ' (hidden by the Run by filter)'),
+      why ? el('span', { class: 'muted' }, ` (hidden by ${why})`) : null,
     );
   });
   const p = $('popover');
@@ -380,7 +385,7 @@ function openPopover(td: HTMLElement) {
     el('h2', {}, m.name),
     el('p', { class: 'muted' }, el('a', { href: colHref(col) }, col.label), ` · ${sourceName.get(col.source) ?? col.source}`),
     el('ul', { class: 'cands' }, ...items),
-    el('p', { class: 'links' }, el('a', { href: modelHref(m) }, m.unmatched ? 'All names from this source' : 'All scores for this model'), ' · ', el('a', { href: colHref(col) }, 'Full leaderboard')),
+    el('p', { class: 'links' }, el('a', { href: modelHref(m) }, 'All scores for this model'), ' · ', el('a', { href: colHref(col) }, 'Full leaderboard')),
   );
   p.hidden = false;
   const r = td.getBoundingClientRect();
@@ -443,7 +448,8 @@ function syncControls() {
   $<HTMLSelectElement>('maker').value = state.maker;
   $<HTMLInputElement>('open').checked = state.open;
   $<HTMLInputElement>('perm').checked = state.permissive;
-  $<HTMLInputElement>('um').checked = state.unmatched;
+  $<HTMLInputElement>('um').checked = state.unlisted;
+  $<HTMLInputElement>('plain').checked = state.plain;
   $<HTMLSelectElement>('min').value = String(state.min);
   for (const box of document.querySelectorAll<HTMLInputElement>('input[data-runby]')) box.checked = state.runBy.includes(Number(box.dataset['runby']));
 }
@@ -455,7 +461,7 @@ function exportCsv() {
     const runBy = new Set(state.runBy);
     rows.push(['Benchmark', 'Source', 'Unit', ...ms.map((mi) => index.models[mi]!.name)]);
     index.columns.forEach((col, ci) => {
-      const vals = ms.map((mi) => pickBest(candidates.get(key(mi, ci)) ?? [], col.direction, runBy)?.best.value);
+      const vals = ms.map((mi) => pickBest(candidates.get(key(mi, ci)) ?? [], col.direction, runBy, hidden())?.best.value);
       if (vals.filter((v) => v !== undefined).length < 2) return;
       rows.push([col.label, sourceName.get(col.source) ?? col.source, unitSuffix(col.unit) || col.unit, ...vals.map((v) => (v === undefined ? '' : fmt(v, col.unit)))]);
     });
@@ -523,7 +529,11 @@ function wire() {
     update();
   });
   on('um', 'change', () => {
-    state.unmatched = $<HTMLInputElement>('um').checked;
+    state.unlisted = $<HTMLInputElement>('um').checked;
+    update();
+  });
+  on('plain', 'change', () => {
+    state.plain = $<HTMLInputElement>('plain').checked;
     update();
   });
   on('min', 'change', () => {
@@ -623,7 +633,7 @@ async function main() {
   );
   let total = 0;
   for (const f of files) {
-    for (const [mi, ci, value, runBy, date, context, ui, interval, ni, hi] of f.cells) {
+    for (const [mi, ci, value, runBy, date, context, ui, interval, ni, hi, flags] of f.cells) {
       const k = key(mi, ci);
       let list = candidates.get(k);
       if (!list) candidates.set(k, (list = []));
@@ -637,16 +647,16 @@ async function main() {
         rawName: ni >= 0 ? (f.names[ni] ?? '') : '',
         source: f.source,
         history: hi >= 0 ? (f.history[hi] ?? null) : null,
+        flags,
       });
       total++;
     }
   }
 
-  const matched = index.models.filter((m) => !m.unmatched).length;
   $('stats').textContent =
-    `${files.length} sources · ${total.toLocaleString()} scores · ${matched.toLocaleString()} models · ` +
+    `${files.length} sources · ${total.toLocaleString()} scores · ${index.models.length.toLocaleString()} models · ` +
     `${index.columns.length.toLocaleString()} metrics · updated ${index.generated_at.slice(0, 10)}`;
-  $('um-label').textContent = `Unmatched names (${index.stats.unmatched_models})`;
+  $('um-label').textContent = `Models not in the catalogue (${index.stats.unlisted_models})`;
 
   state = parseState(location.search);
   syncControls();

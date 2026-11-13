@@ -3,6 +3,7 @@
  *
  *   index.html, models/, benchmarks/, sources/, method/, data/   static pages
  *   data/index.json, data/cells/<source>.json                    what the explorer loads
+ *   downloads/                                                   CSV, Parquet and SQLite
  *   js/*.js                                                      the explorer, from site/src
  *   style.css, sitemap.xml, robots.txt, 404.html
  *
@@ -12,6 +13,7 @@ import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { compileClient } from './site/client.ts';
 import { loadSiteData } from './site/data.ts';
+import { writeDownloads } from './site/exports.ts';
 import { buildPages, SITE_URL, sitemap } from './site/pages.ts';
 
 const OUT = join('site', 'dist');
@@ -20,11 +22,13 @@ const started = Date.now();
 const d = await loadSiteData();
 await rm(OUT, { recursive: true, force: true });
 await mkdir(join(OUT, 'data', 'cells'), { recursive: true });
+await mkdir(join(OUT, 'downloads'), { recursive: true });
 
 await writeFile(join(OUT, 'data', 'index.json'), JSON.stringify(d.index));
 for (const f of d.cells) await writeFile(join(OUT, 'data', 'cells', `${f.source}.json`), JSON.stringify(f));
 
-const pages = buildPages(d);
+const downloads = await writeDownloads(d, join(OUT, 'downloads'));
+const pages = buildPages(d, downloads);
 for (const p of pages) {
   const file = p.path === '' ? 'index.html' : p.path.endsWith('/') ? join(p.path, 'index.html') : p.path;
   await mkdir(join(OUT, file, '..'), { recursive: true });
@@ -40,6 +44,6 @@ const { index } = d;
 const scores = d.cells.reduce((n, f) => n + f.cells.length, 0);
 console.log(
   `site/dist: ${pages.length} pages, ${scripts.length} scripts; ${scores} scores, ${index.columns.length} columns, ` +
-    `${index.models.length - index.stats.unmatched_models} models + ${index.stats.unmatched_models} unmatched names ` +
+    `${index.models.length} models (${index.stats.unlisted_models} not in the catalogue), ${downloads.length} downloads ` +
     `(${((Date.now() - started) / 1000).toFixed(1)}s)`,
 );

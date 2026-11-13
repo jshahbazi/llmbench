@@ -1,7 +1,7 @@
 /**
  * Reads data/ and assembles everything the site needs: the index, one cells file per source, and
- * lookups for the static pages. Model names are joined to the catalogue through
- * data/resolved/aliases.csv; names with no match become their own "unmatched" models.
+ * lookups for the static pages and downloads. Model names are joined to models through
+ * data/resolved/ (written by `npm run resolve`); the catalogue has curation/models.yaml applied.
  */
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -9,11 +9,14 @@ import { slugify } from '../../site/src/format.ts';
 import type { Candidate } from '../../site/src/select.ts';
 import type { CellsFile, CellTuple, HistoryEntry, SiteColumn, SiteIndex, SiteModel, SiteSource } from '../../site/src/types.ts';
 import { loadSources } from '../lib/config.ts';
-import { parseDelimited, tableToRecords } from '../lib/parse.ts';
+import { loadCatalog } from '../lib/curation.ts';
+import { slugifyModel } from '../lib/match.ts';
+import { describeQualifier, qualifierFlags, readQualifiers } from '../lib/names.ts';
+import { parseDelimited, tableToRecords, type Rec } from '../lib/parse.ts';
 import { parseScore } from '../lib/scores.ts';
-import { CATALOG_PATH, readHistory, readJson, readJsonl, readRows, readRunCache, readState, sourceDir } from '../lib/store.ts';
+import { readHistory, readJson, readRows, readRunCache, readState, sourceDir } from '../lib/store.ts';
 import { presentMetrics, TAGS } from '../lib/tags.ts';
-import type { CatalogModel, HistoryEvent, Metric, RunBy, SourceConfig } from '../lib/types.ts';
+import type { HistoryEvent, Metric, RunBy, SourceConfig } from '../lib/types.ts';
 
 const RUN_BY_CODE: Record<RunBy, number> = { independent: 0, submitted: 1, lab: 2 };
 
@@ -21,9 +24,27 @@ export interface NameEntry {
   raw: string;
   model: number;
   method: string;
+  /** How the source's name differs from the model, as shown: "high effort, snapshot 2024-12-17". */
   qualifiers: string;
   rows: number;
   scores: number;
+}
+
+/** One score as the downloads list it. */
+export interface ScoreRecord {
+  model: number;
+  column: number;
+  value: number;
+  /** The score exactly as the source wrote it. */
+  raw: string;
+  runBy: RunBy;
+  date: string;
+  context: string;
+  rawName: string;
+  url: string;
+  ciLow: string;
+  ciHigh: string;
+  rowKey: string;
 }
 
 export interface SiteData {
@@ -37,46 +58,58 @@ export interface SiteData {
   columnModels: Map<number, Set<number>>;
   names: Map<string, NameEntry[]>;
   history: Map<string, Array<HistoryEvent & { column?: number; modelIndex?: number }>>;
+  scores: ScoreRecord[];
   config: SourceConfig[];
 }
 
-async function resolvedAliases(): Promise<Map<string, { modelId: string; method: string; qualifiers: string }>> {
-  const out = new Map<string, { modelId: string; method: string; qualifiers: string }>();
-  let text: string;
+async function readCsv(path: string): Promise<Rec[] | undefined> {
   try {
-    text = await readFile(join('data', 'resolved', 'aliases.csv'), 'utf8');
+    return tableToRecords(parseDelimited(await readFile(path, 'utf8')));
   } catch (e) {
-    if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
-      console.warn('data/resolved/aliases.csv not found; run `npm run resolve` first. Every name will be unmatched.');
-      return out;
-    }
+    if ((e as NodeJS.ErrnoException).code === 'ENOENT') return undefined;
     throw e;
   }
-  for (const r of tableToRecords(parseDelimited(text))) {
-    out.set(`${r['source']}\u0000${r['raw_name']}`, {
+}
+
+interface Resolved {
+  modelId: string;
+  method: string;
+  qualifiers: string;
+}
+
+async function resolvedNames(): Promise<{ aliases: Map<string, Resolved>; unlisted: Map<string, string> }> {
+  const aliases = new Map<string, Resolved>();
+  const unlisted = new Map<string, string>();
+  const rows = await readCsv(join('data', 'resolved', 'aliases.csv'));
+  if (!rows) console.warn('data/resolved/aliases.csv not found; run `npm run resolve` first. No name will be matched.');
+  for (const r of rows ?? []) {
+    aliases.set(`${r['source']}\u0000${r['raw_name']}`, {
       modelId: String(r['model_id']),
       method: String(r['method'] ?? ''),
       qualifiers: String(r['qualifiers'] ?? ''),
     });
   }
-  return out;
+  for (const r of (await readCsv(join('data', 'resolved', 'unlisted.csv'))) ?? []) unlisted.set(String(r['model_id']), String(r['name']));
+  return { aliases, unlisted };
 }
 
 export async function loadSiteData(): Promise<SiteData> {
   const config = await loadSources();
-  const catalog = await readJsonl<CatalogModel>(CATALOG_PATH);
+  const catalog = await loadCatalog();
   const byId = new Map(catalog.map((m) => [m.id, m]));
-  const aliases = await resolvedAliases();
+  const { aliases, unlisted } = await resolvedNames();
   const runs = await readRunCache();
 
   const models: SiteModel[] = [];
   const modelIndex = new Map<string, number>();
-  const modelFor = (sourceId: string, raw: string): { index: number; qualifiers: string; method: string } => {
+  const idFor = (sourceId: string, raw: string): string =>
+    aliases.get(`${sourceId}\u0000${raw}`)?.modelId ?? `unlisted-${slugifyModel(sourceId)}-${slugifyModel(raw)}`;
+  const modelFor = (sourceId: string, raw: string): { index: number; resolved?: Resolved } => {
     const hit = aliases.get(`${sourceId}\u0000${raw}`);
-    const cat = hit ? byId.get(hit.modelId) : undefined;
-    const id = cat ? cat.id : `unmatched:${sourceId}:${raw}`;
+    const id = idFor(sourceId, raw);
     let i = modelIndex.get(id);
     if (i === undefined) {
+      const cat = byId.get(id);
       const m: SiteModel = cat
         ? {
             id: cat.id,
@@ -89,11 +122,11 @@ export async function loadSiteData(): Promise<SiteData> {
             active_b: cat.active_b,
             model_repo: cat.model_repo,
           }
-        : { id, name: raw, unmatched: sourceId };
+        : { id, name: unlisted.get(id) ?? raw, unlisted: true };
       i = models.push(m) - 1;
       modelIndex.set(id, i);
     }
-    return { index: i, qualifiers: cat ? hit!.qualifiers : '', method: cat ? hit!.method : '' };
+    return { index: i, ...(hit && { resolved: hit }) };
   };
 
   const columns: SiteColumn[] = [];
@@ -104,6 +137,7 @@ export async function loadSiteData(): Promise<SiteData> {
   const columnModels = new Map<number, Set<number>>();
   const names = new Map<string, NameEntry[]>();
   const history = new Map<string, Array<HistoryEvent & { column?: number; modelIndex?: number }>>();
+  const scores: ScoreRecord[] = [];
   let invalidExcluded = 0;
   let unparsable = 0;
 
@@ -176,19 +210,26 @@ export async function loadSiteData(): Promise<SiteData> {
     const urlIndex = new Map<string, number>();
     const nameIndex = new Map<string, number>();
     const histIndex = new Map<string, number>();
-    const nameStats = new Map<string, NameEntry>();
+    const nameStats = new Map<string, NameEntry & { context: string[]; flags: number }>();
 
     for (const r of rows) {
       if (r.extra && typeof r.extra['invalid'] === 'string') {
         invalidExcluded++;
         continue;
       }
-      const { index: mi, qualifiers, method } = modelFor(s.id, r.model);
-      const ns = nameStats.get(r.model) ?? { raw: r.model, model: mi, method, qualifiers, rows: 0, scores: 0 };
+      let ns = nameStats.get(r.model);
+      if (!ns) {
+        const { index, resolved } = modelFor(s.id, r.model);
+        const quals = readQualifiers(resolved?.qualifiers ?? '');
+        const context = quals.map(describeQualifier);
+        ns = { raw: r.model, model: index, method: resolved?.method ?? '', qualifiers: context.join(', '), rows: 0, scores: 0, context, flags: qualifierFlags(quals) };
+        nameStats.set(r.model, ns);
+      }
       ns.rows++;
-      nameStats.set(r.model, ns);
+      const mi = ns.model;
 
-      const runBy = RUN_BY_CODE[r.run_by ?? s.run_by];
+      const runByName = r.run_by ?? s.run_by;
+      const runBy = RUN_BY_CODE[runByName];
       const link = r.upstream_url ?? r.model_url;
       let ui = -1;
       if (link) {
@@ -197,7 +238,7 @@ export async function loadSiteData(): Promise<SiteData> {
       }
       let ni = nameIndex.get(r.model);
       if (ni === undefined) nameIndex.set(r.model, (ni = file.names.push(r.model) - 1));
-      const context = [...Object.values(r.context ?? {}), ...(qualifiers ? qualifiers.split('; ') : [])].join(' · ');
+      const context = [...Object.values(r.context ?? {}), ...ns.context].join(' · ');
 
       for (const [metric, rawValue] of Object.entries(r.scores)) {
         const ci = colIndex.get(metric);
@@ -217,13 +258,27 @@ export async function loadSiteData(): Promise<SiteData> {
         }
         const date = r.date?.slice(0, 10) ?? '';
         const intervalText = interval ? `${interval[0]}–${interval[1]}` : '';
-        const tuple: CellTuple = [mi, ci, value, runBy, date, context, ui, intervalText, ni, hi];
+        const tuple: CellTuple = [mi, ci, value, runBy, date, context, ui, intervalText, ni, hi, ns.flags];
         file.cells.push(tuple);
+        scores.push({
+          model: mi,
+          column: ci,
+          value,
+          raw: String(rawValue),
+          runBy: runByName,
+          date,
+          context,
+          rawName: r.model,
+          url: link ?? '',
+          ciLow: interval ? String(interval[0]) : '',
+          ciHigh: interval ? String(interval[1]) : '',
+          rowKey: r.key,
+        });
 
         const key = `${mi}:${ci}`;
         let list = byCell.get(key);
         if (!list) byCell.set(key, (list = []));
-        list.push({ value, runBy, date, context, url: link ?? null, interval: intervalText, rawName: r.model, source: s.id, history: hist ?? null });
+        list.push({ value, runBy, date, context, url: link ?? null, interval: intervalText, rawName: r.model, source: s.id, history: hist ?? null, flags: ns.flags });
         let mc = modelColumns.get(mi);
         if (!mc) modelColumns.set(mi, (mc = new Set()));
         mc.add(ci);
@@ -233,26 +288,25 @@ export async function loadSiteData(): Promise<SiteData> {
       }
     }
 
-    const nameList = [...nameStats.values()].sort((a, b) => b.scores - a.scores || a.raw.localeCompare(b.raw));
+    const nameList: NameEntry[] = [...nameStats.values()]
+      .map(({ raw, model, method, qualifiers, rows: n, scores: k }) => ({ raw, model, method, qualifiers, rows: n, scores: k }))
+      .sort((a, b) => b.scores - a.scores || a.raw.localeCompare(b.raw));
     names.set(s.id, nameList);
     site.names = nameList.length;
-    site.matched_names = nameList.filter((n) => !models[n.model]!.unmatched).length;
+    site.matched_names = nameList.filter((n) => !models[n.model]!.unlisted).length;
 
     history.set(
       s.id,
       events.map((e) => {
         const ci = colIndex.get(e.metric);
-        const hit = aliases.get(`${s.id}\u0000${e.model}`);
-        const mi = hit ? modelIndex.get(hit.modelId) : modelIndex.get(`unmatched:${s.id}:${e.model}`);
+        const mi = modelIndex.get(idFor(s.id, e.model));
         return { ...e, ...(ci !== undefined && { column: ci }), ...(mi !== undefined && { modelIndex: mi }) };
       }),
     );
     cellsFiles.push(file);
   }
 
-  for (const [ci, ms] of columnModels) {
-    columns[ci]!.coverage = [...ms].filter((mi) => !models[mi]!.unmatched).length;
-  }
+  for (const [ci, ms] of columnModels) columns[ci]!.coverage = ms.size;
 
   const index: SiteIndex = {
     generated_at: new Date().toISOString().replace(/\.\d+Z$/, 'Z'),
@@ -260,7 +314,7 @@ export async function loadSiteData(): Promise<SiteData> {
     columns,
     models,
     tags: [...TAGS],
-    stats: { invalid_excluded: invalidExcluded, unparsable, unmatched_models: models.filter((m) => m.unmatched).length },
+    stats: { invalid_excluded: invalidExcluded, unparsable, unlisted_models: models.filter((m) => m.unlisted).length },
   };
-  return { index, cells: cellsFiles, byCell, modelColumns, columnModels, names, history, config };
+  return { index, cells: cellsFiles, byCell, modelColumns, columnModels, names, history, scores, config };
 }

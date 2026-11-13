@@ -1,258 +1,103 @@
-source,raw_name,rows,scores
-arena,Gemini 3 Flash,5,74
-arena,Gemini 3 Pro,5,74
-arena,Gemini 3 Flash (Minimal),4,73
-arena,Gemini 3.1 Flash-Lite Preview,4,73
-arena,"Grok 4.20 Beta (Reasoning, 0309)",5,72
-arena,Qwen3.8-Max,5,72
-arena,GPT-5 Chat,3,68
-arena,"Gemini 2.5 Flash-Lite Preview (Thinking, 06-17)",3,68
-arena,Grok 4.20 Multi-Agent Beta (0309),4,68
-arena,"Gemini 2.5 Flash-Lite Preview (Non-Thinking, 09-2025)",3,66
-arena,DeepSeek-V4-Pro,3,62
-arena,Kimi K2 Thinking Turbo,3,62
-arena,MiniMax-M2.1 Preview,3,62
-arena,Grok 4.20 Beta 1,3,59
-arena,NVIDIA-Nemotron-3.5-Super-VL-120B-A12B (NVFP4),4,59
-arena,Amazon Nova 2 Lite,2,58
-arena,Amazon Nova Lite 1.0,3,58
-arena,Amazon Nova Pro 1.0,3,58
-arena,Command R,2,58
-arena,Command R+,2,58
-arena,DeepSeek-V4-Flash,2,58
-arena,GPT-5.3 Chat,2,58
-arena,Grok 3 Mini (High),2,58
-arena,Kimi K2 Preview (0711),2,58
-arena,Kimi K2 Preview (0905),2,58
-arena,LongCat-Flash-Chat Exp (2602),2,58
-arena,NVIDIA-Nemotron-3.5-Lightning-30B-A3B (NVFP4),2,58
-arena,Qwen2.5-Max,2,58
-arena,Amazon Nova Micro 1.0,2,56
-arena,DBRX Instruct Preview,2,56
-arena,Gemini Advanced (0514),2,56
-arena,Mistral Large (2411),2,56
-arena,Mistral Medium,2,56
-arena,NVIDIA-Nemotron-3-Ultra-550B-A55B (NVFP4),2,56
-arena,Phi-3 Mini 4K Instruct,2,56
-arena,Qwen-Max (0919),2,56
-arena,"Reka Flash 21B (Online, 20240226)",2,56
-arena,"DeepSeek-V4-Pro (High, 20260813)",3,54
-arena,Gemini Pro (Dev API),2,54
-arena,NVIDIA-Nemotron-3-Super-120B-A12B,2,54
-arena,Vicuna 13B,2,54
-arena,Vicuna 33B,2,54
-arena,Mistral 7B Instruct,2,50
-arena,Muse Glimmer,3,50
-arena,Qwen2.5-Plus (1127),2,50
-arena,Qwen-Plus (0125),2,48
-arena,WizardLM 70B,2,46
-arena,PaLM 2,2,42
-arena,Vicuna 7B,2,42
-arena,WizardLM 13B,2,42
-arena,Gemini Pro,2,40
-arena,Inkling 2 Small,3,40
-arena,OpenAssistant Pythia 12B,2,40
-arena,Dolly 2.0 12B,2,36
-bfcl,Mistral-Small-2506 (Prompt),1,31
-bfcl,Open-Mistral-Nemo-2407 (Prompt),1,31
-bfcl,ToolACE-2-8B (FC),1,31
-bfcl,mistral-large-2411 (Prompt),1,31
-bfcl,Amazon-Nova-2-Lite-v1:0 (FC),1,29
-bfcl,Amazon-Nova-Micro-v1:0 (FC),1,29
-bfcl,Amazon-Nova-Pro-v1:0 (FC),1,29
-bfcl,Command A Reasoning (FC),1,29
-bfcl,Command R7B (FC),1,29
-bfcl,Llama-4-Maverick-17B-128E-Instruct-FP8 (FC),1,29
-bfcl,MiniCPM3-4B-FC (FC),1,29
-bfcl,Mistral-small-2506 (FC),1,29
-bfcl,Moonshotai-Kimi-K2-Instruct (FC),1,29
-bfcl,Nanbeige3.5-Pro-Thinking (FC),1,29
-bfcl,Open-Mistral-Nemo-2407 (FC),1,29
-bfcl,mistral-large-2411 (FC),1,29
-bfcl,xLAM-2-70b-fc-r (FC),1,29
-bfcl,xLAM-2-8b-fc-r (FC),1,29
-epoch,claude-fable-5-2_max,10,10
-epoch,mistral-large-4-0_high,9,9
-epoch,qwen3.8-max-0902_xhigh,8,8
-epoch,qwen3.8-max_xhigh,8,8
-epoch,claude-haiku-4-5-20251001_32K,7,7
-epoch,o1-2024-12-17_high,7,7
-epoch,deepseek-v4-pro_max,6,6
-epoch,grok-4.3_high,6,6
-epoch,o1-2024-12-17_medium,5,5
-arena,Claude Fable 5.2 (xHigh),1,4
-arena,DeepSeek-V4-Flash (High),1,4
-arena,Muse Ember (Max),1,4
-arena,Spark-X2.6,1,4
-arena,U2 Flash,1,4
-epoch,MiniMax-M3_none,4,4
-epoch,claude-opus-4-1-20250805_27K,4,4
-epoch,deepseek-v4-pro_none,4,4
-epoch,doubao-seed-2.0-lite-260428_high,4,4
-epoch,doubao-seed-2.0-pro-260215_high,4,4
-epoch,doubao-seed-2.1-pro-260628_high,4,4
-epoch,doubao-seed-2.1-turbo-260628_high,4,4
-epoch,doubao-seed-evolving_high,4,4
-epoch,grok-3-mini-beta_high,4,4
-epoch,grok-3-mini-beta_low,4,4
-epoch,mistral-large-2411,4,4
-epoch,o1-2024-12-17_low,4,4
-epoch,o3-mini-2025-01-31_low,4,4
-epoch,seed-1.6,4,4
-aider-polyglot,DeepSeek Chat V2.5,1,3
-aider-polyglot,DeepSeek Chat V3 (prev),1,3
-aider-polyglot,DeepSeek R1 + claude-3-5-sonnet-20241022,1,3
-aider-polyglot,Optimus Alpha,1,3
-aider-polyglot,Quasar Alpha,1,3
-aider-polyglot,QwQ-32B + Qwen 2.5 Coder Instruct,1,3
-aider-polyglot,"Qwen3 235B A22B diff, no think, Alibaba API",1,3
-aider-polyglot,chatgpt-4o-latest (2025-02-15),1,3
-aider-polyglot,chatgpt-4o-latest (2025-03-29),1,3
-aider-polyglot,command-a-03-2025-quality,1,3
-aider-polyglot,grok-4 (high),1,3
-aider-polyglot,o1-2024-12-17 (high),1,3
-aider-polyglot,o3 (high) + gpt-4.1,1,3
-arena,LLaVA 1.6 34B,1,3
-epoch,deepseek-v4-pro_high,3,3
-epoch,mistral-small-2501,3,3
-epoch,mistral-small-2503,3,3
-epoch,nemotron-3-ultra,3,3
-arena,Qwen-VL-Max (1119),1,2
-arena,nvila-internal-15b-v1,1,2
-epoch,Qwen3-30B-A3B_none,2,2
-epoch,Qwen3-32B_none,2,2
-epoch,claude-opus-4-1-20250805_16K,2,2
-epoch,claude-opus-4-1-20250805_32K,2,2
-epoch,claude-sonnet-4-20250514_16K,2,2
-epoch,claude-sonnet-4-20250514_32K,2,2
-epoch,claude-sonnet-4-20250514_59K,2,2
-epoch,deepseek-chat,2,2
-epoch,gdm-ai-co-mathematician,2,2
-epoch,gemini-2.5-deep-think-2025-08-01-webapp,2,2
-epoch,glm-4.7-flash_none,2,2
-epoch,gpt-oss-20b_high,2,2
-epoch,gpt-oss-20b_low,2,2
-epoch,gpt-oss-20b_medium,2,2
-epoch,kimi-k2-thinking-turbo,2,2
-epoch,mistral-small-3-2501,2,2
-epoch,mistral-small-3.1-2503,2,2
-epoch,mistral-small-3.2-2506,2,2
-epoch,open-mistral-7b,2,2
-epoch,open-mistral-nemo-2407,2,2
-epoch,open-mixtral-8x22b,2,2
-epoch,open-mixtral-8x7b,2,2
-epoch,openai/gpt-oss-120b_high,2,2
-epoch,qwen3-1.7b_none,2,2
-epoch,qwen3-14b_none,2,2
-epoch,qwen3-8b_none,2,2
-epoch,qwen3.5-35b-a3b_none,2,2
-arena,Diffbot-Small-XL,1,1
-arena,GPT-4o (Search),1,1
-arena,Gemini 3 Flash (Grounding),1,1
-arena,Gemini 3 Pro (Grounding),1,1
-arena,Grok 4 (Search),1,1
-arena,Grok 4.1 Fast (Search),1,1
-arena,gemini-2.5-flash-lite-preview-06-17-thinking,1,1
-arena,gemini-2.5-flash-lite-preview-09-2025-no-thinking,1,1
-arena,gemini-3-flash,1,1
-arena,gemini-3-pro,1,1
-arena,gpt-5-chat,1,1
-arena,gpt-5-high,1,1
-arena,gpt-5-mini-high,1,1
-arena,gpt-5-nano-high,1,1
-arena,gpt-5.1-high,1,1
-arena,mistral-medium-2508,1,1
-arena,mistral-small-2506,1,1
-epoch,Baichuan 2-7B,1,1
-epoch,Baichuan2-13B,1,1
-epoch,Beam 1.0,1,1
-epoch,Cerebras-GPT-13B,1,1
-epoch,Claude 2,1,1
-epoch,Claude 3.5 Sonnet,1,1
-epoch,Claude 3.5 Sonnet (October 2024),1,1
-epoch,Claude Fable 5.2,1,1
-epoch,Claude Instant,1,1
-epoch,DeepSeek Coder 33B,1,1
-epoch,DeepSeek Coder 6.7B,1,1
-epoch,DeepSeek-Coder-V2-Lite-Base,1,1
-epoch,"DeepSeek-V2 (MoE-236B, May 2024)",1,1
-epoch,DeepSeek-V4-Flash,1,1
-epoch,DeepSeek-V4-Pro,1,1
-epoch,Dolly 2.0-12b,1,1
-epoch,Falcon-180B,1,1
-epoch,GPT-3.5 Turbo (Jan 2024),1,1
-epoch,GPT-3.5 Turbo (Jun 2023),1,1
-epoch,GPT-3.5 Turbo (Nov 2023),1,1
-epoch,GPT-4 (Jun 2023),1,1
-epoch,GPT-4 (Mar 2023),1,1
-epoch,GPT-4 Turbo (Apr 2024),1,1
-epoch,GPT-4 Turbo (Nov 2023),1,1
-epoch,GPT-4.5,1,1
-epoch,GPT-4o (Aug 2024),1,1
-epoch,GPT-4o (May 2024),1,1
-epoch,GPT-4o (Nov 2024),1,1
-epoch,GPT-4o mini,1,1
-epoch,Gemini 1.5 Flash (May 2024),1,1
-epoch,Gemini 1.5 Flash (Sep 2024),1,1
-epoch,Gemini 1.5 Pro (May 2024),1,1
-epoch,Gemini 1.5 Pro (Sept 2024),1,1
-epoch,Gemini 2.0 Flash (Feb 2025),1,1
-epoch,Gemini 2.0 Flash Thinking (Jan 2025),1,1
-epoch,Gemini 2.0 Pro,1,1
-epoch,Gemini 3 Flash,1,1
-epoch,Gemini 3 Pro,1,1
-epoch,Gemma 2B,1,1
-epoch,Gemma 7B,1,1
-epoch,Grok 3,1,1
-epoch,Grok 4,1,1
-epoch,Grok 4.3 Beta,1,1
-epoch,Grok-2 (Dec 2024),1,1
-epoch,Grok-3 mini,1,1
-epoch,INTELLECT-1,1,1
-epoch,Llama 2-34B,1,1
-epoch,Llama 3.1-8B,1,1
-epoch,Llama 3.2 90B,1,1
-epoch,MPT-30B,1,1
-epoch,Mistral Large,1,1
-epoch,Mistral Large 4 Preview,1,1
-epoch,Mistral Medium 3,1,1
-epoch,Mistral NeMo,1,1
-epoch,Mixtral 8x22B,1,1
-epoch,Mixtral 8x7B,1,1
-epoch,Nemotron 3 Ultra,1,1
-epoch,Nemotron-4 15B,1,1
-epoch,PaLM 2-L,1,1
-epoch,PaLM 2-M,1,1
-epoch,PaLM 2-S,1,1
-epoch,Qwen 3.8 Max,1,1
-epoch,Qwen-14B,1,1
-epoch,Qwen-1_8B,1,1
-epoch,Qwen2.5-Max,1,1
-epoch,Qwen3-235B-A22B-Instruct (Jul 2025),1,1
-epoch,Qwen3-235B-A22B-Thinking (Jul 2025),1,1
-epoch,Qwen3-30B-A3B-Instruct (Jul 2025),1,1
-epoch,Qwen3-30B-A3B-Thinking (Jul 2025),1,1
-epoch,Qwen3-Max,1,1
-epoch,Stable Beluga 2,1,1
-epoch,XGen-7B,1,1
-epoch,Yi 6B,1,1
-epoch,Yi-9B,1,1
-epoch,claude-opus-4-1-20250805_24K,1,1
-epoch,glm-5.1_none,1,1
-epoch,glm-5.2_minimal,1,1
-epoch,gpt-oss-120b_high,1,1
-epoch,gpt-oss-120b_medium,1,1
-epoch,grok-4-heavy-web-app,1,1
-epoch,internlm-20b,1,1
-epoch,internlm-7b,1,1
-epoch,kimi-k2.6_none,1,1
-epoch,o1,1,1
-epoch,open_llama_7b,1,1
-epoch,phi-3-medium 14B,1,1
-epoch,phi-3-mini 3.8B,1,1
-epoch,phi-3-small 7.4B,1,1
-epoch,qwen-plus-2025-04-28,1,1
-epoch,qwen3-4b_none,1,1
-epoch,qwen3.5-122b-a10b_none,1,1
-epoch,qwen3.5-4b_none,1,1
-epoch,qwen3.7-max_none,1,1
+source,raw_name,unlisted_as,rows,scores,suggestions
+arena,Kimi K2 Thinking Turbo,kimi-k2-thinking-turbo,3,62,kimi-k2-thinking kimi-k2 kimi-k2-0905
+arena,Grok 4.20 Beta 1,grok-4-20-beta-1,3,59,grok-4-20 grok-4-0709
+arena,Gemini Advanced (0514),gemini-advanced-0514,2,56,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+arena,Gemini Pro (Dev API),gemini-pro,2,54,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+arena,Vicuna 13B,vicuna-13b,2,54,vicuna-13b-v1-1 vicuna-13b-v1-3 vicuna-13b-v1-5
+arena,Vicuna 33B,vicuna-33b,2,54,vicuna-33b-v1-3
+arena,Mistral 7B Instruct,mistral-7b-instruct,2,50,mistral-7b-instruct-v0-1 mistral-7b-instruct-v0-2 mistral-7b-instruct-v0-3
+arena,Muse Glimmer,muse-glimmer,3,50,muse-glimmer-30b
+arena,Qwen2.5-Plus (1127),qwen2-5-plus-1127,2,50,qwen3-5-plus qwen3-6-plus qwen3-7-plus
+arena,WizardLM 70B,wizardlm-70b,2,46,wizardlm-70b-v1-0
+arena,Vicuna 7B,vicuna-7b,2,42,vicuna-7b-v1-1 vicuna-7b-v1-3 vicuna-7b-v1-5
+arena,WizardLM 13B,wizardlm-13b,2,42,wizardlm-13b-v1-2
+arena,Gemini Pro,gemini-pro,2,40,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+arena,Inkling 2 Small,inkling-2-small,3,40,inkling inkling-small
+arena,OpenAssistant Pythia 12B,openassistant-pythia-12b,2,40,oasst-pythia-12b-sft-v8-7k-steps
+arena,Dolly 2.0 12B,dolly-2-0-12b,2,36,
+bfcl,ToolACE-2-8B (FC),toolace-2-8b,1,31,toolace-8b
+bfcl,Nanbeige3.5-Pro-Thinking (FC),nanbeige3-5-pro-thinking,1,29,
+epoch,claude-fable-5-2_max,claude-fable-5-2,10,10,claude-fable-5 claude-fable-5-1
+arena,Claude Fable 5.2 (xHigh),claude-fable-5-2,1,4,claude-fable-5 claude-fable-5-1
+arena,Muse Ember (Max),muse-ember,1,4,
+arena,Spark-X2.6,spark-x2-6,1,4,spark-x2-6-4b spark-x2-6-1-7b
+arena,U2 Flash,u2-flash,1,4,
+epoch,doubao-seed-2.0-lite-260428_high,doubao-seed-2-0-lite-260428,4,4,
+epoch,doubao-seed-2.0-pro-260215_high,doubao-seed-2-0-pro-260215,4,4,
+epoch,doubao-seed-2.1-pro-260628_high,doubao-seed-2-1-pro-260628,4,4,
+epoch,doubao-seed-2.1-turbo-260628_high,doubao-seed-2-1-turbo-260628,4,4,
+epoch,doubao-seed-evolving_high,doubao-seed-evolving,4,4,
+epoch,seed-1.6,seed-1-6,4,4,
+aider-polyglot,DeepSeek Chat V2.5,deepseek-chat-v2-5,1,3,
+aider-polyglot,DeepSeek Chat V3 (prev),deepseek-chat-v3,1,3,
+aider-polyglot,DeepSeek R1 + claude-3-5-sonnet-20241022,deepseek-r1-plus-claude-3-5-sonnet-20241022,1,3,deepseek-r1 deepseek-r1-0528
+aider-polyglot,Optimus Alpha,optimus-alpha,1,3,
+aider-polyglot,Quasar Alpha,quasar-alpha,1,3,
+aider-polyglot,QwQ-32B + Qwen 2.5 Coder Instruct,qwq-32b-plus-qwen-2-5-coder-instruct,1,3,qwq-32b qwq-32b-preview
+aider-polyglot,"Qwen3 235B A22B diff, no think, Alibaba API",qwen3-235b-a22b-diff-no-think-alibaba-api,1,3,qwen3-235b-a22b
+aider-polyglot,chatgpt-4o-latest (2025-02-15),chatgpt-4o-latest-2025-02-15,1,3,chatgpt-4o-latest-20250326
+aider-polyglot,chatgpt-4o-latest (2025-03-29),chatgpt-4o-latest-2025-03-29,1,3,chatgpt-4o-latest-20250326
+aider-polyglot,command-a-03-2025-quality,command-a-03-2025-quality,1,3,command-a
+aider-polyglot,o3 (high) + gpt-4.1,o3-high-plus-gpt-4-1,1,3,
+arena,LLaVA 1.6 34B,llava-1-6-34b,1,3,llava-v1-6-34b
+epoch,nemotron-3-ultra,nemotron-3-ultra,3,3,nemotron-3-ultra-550b-a55b
+arena,nvila-internal-15b-v1,nvila-internal-15b-v1,1,2,
+epoch,deepseek-chat,deepseek-chat,2,2,deepseek-v2-chat-0628
+epoch,gdm-ai-co-mathematician,gdm-ai-co-mathematician,2,2,
+epoch,gemini-2.5-deep-think-2025-08-01-webapp,gemini-2-5-deep-think-2025-08-01-webapp,2,2,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+epoch,kimi-k2-thinking-turbo,kimi-k2-thinking-turbo,2,2,kimi-k2-thinking kimi-k2 kimi-k2-0905
+epoch,open-mistral-7b,open-mistral-7b,2,2,
+epoch,open-mixtral-8x22b,open-mixtral-8x22b,2,2,
+epoch,open-mixtral-8x7b,open-mixtral-8x7b,2,2,
+arena,Diffbot-Small-XL,diffbot-small-xl,1,1,
+arena,GPT-4o (Search),gpt-4o,1,1,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+arena,Grok 4.1 Fast (Search),grok-4-1-fast,1,1,grok-4-1-fast-non-reasoning grok-4-1-fast-reasoning grok-4-1
+arena,gemini-2.5-flash-lite-preview-06-17-thinking,gemini-2-5-flash-lite-preview-06-17-thinking,1,1,gemini-2-5-flash-lite-preview-06-17 gemini-2-5-flash-lite gemini-2-5-flash-lite-preview-09-2025
+arena,gemini-2.5-flash-lite-preview-09-2025-no-thinking,gemini-2-5-flash-lite-preview-09-2025-no-thinking,1,1,gemini-2-5-flash-lite-preview-09-2025 gemini-2-5-flash-lite gemini-2-5-flash-lite-preview-06-17
+epoch,Baichuan 2-7B,baichuan-2-7b,1,1,baichuan2-7b-base
+epoch,Baichuan2-13B,baichuan2-13b,1,1,
+epoch,Beam 1.0,beam-1-0,1,1,beam-1-0-501b-a23b
+epoch,Cerebras-GPT-13B,cerebras-gpt-13b,1,1,
+epoch,Claude 3.5 Sonnet,claude-3-5-sonnet,1,1,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude-3-7-sonnet-20250219
+epoch,Claude Fable 5.2,claude-fable-5-2,1,1,claude-fable-5 claude-fable-5-1
+epoch,Claude Instant,claude-instant,1,1,claude-instant-1-0 claude-instant-1-1 claude-instant-1-2
+epoch,DeepSeek Coder 33B,deepseek-coder-33b,1,1,deepseek-coder-33b-base deepseek-coder-33b-instruct
+epoch,DeepSeek Coder 6.7B,deepseek-coder-6-7b,1,1,deepseek-coder-6-7b-base deepseek-coder-6-7b-instruct
+epoch,DeepSeek-Coder-V2-Lite-Base,deepseek-coder-v2-lite-base,1,1,deepseek-coder-v2 deepseek-coder-v2-0724
+epoch,"DeepSeek-V2 (MoE-236B, May 2024)",deepseek-v2-may-2024,1,1,deepseek-v2-5 deepseek-v2-5-1210 deepseek-v2-chat-0628
+epoch,Dolly 2.0-12b,dolly-2-0-12b,1,1,
+epoch,Falcon-180B,falcon-180b,1,1,falcon-180b-chat falcon-40b falcon2-11b
+epoch,Gemini 1.5 Flash (May 2024),gemini-1-5-flash-may-2024,1,1,gemini-1-5-flash-001 gemini-1-5-flash-002 gemini-1-5-flash-exp-0827
+epoch,Gemini 1.5 Flash (Sep 2024),gemini-1-5-flash-sep-2024,1,1,gemini-1-5-flash-001 gemini-1-5-flash-002 gemini-1-5-flash-exp-0827
+epoch,Gemini 1.5 Pro (May 2024),gemini-1-5-pro-may-2024,1,1,gemini-1-5-pro-001 gemini-1-5-pro-002 gemini-1-5-pro-exp-0801
+epoch,Gemini 1.5 Pro (Sept 2024),gemini-1-5-pro-sept-2024,1,1,gemini-1-5-pro-001 gemini-1-5-pro-002 gemini-1-5-pro-exp-0801
+epoch,Gemma 2B,gemma-2b-unlisted,1,1,gemma-2b gemma-2b-base gemma-7b
+epoch,Gemma 7B,gemma-7b-unlisted,1,1,gemma-7b gemma-7b-base gemma-2b
+epoch,INTELLECT-1,intellect-1,1,1,intellect-3
+epoch,Llama 2-34B,llama-2-34b,1,1,llama-2-13b llama-2-70b llama-2-7b
+epoch,Llama 3.1-8B,llama-3-1-8b-unlisted,1,1,llama-3-1-8b llama-3-1-8b-base llama-3-1-8b-ultramedical
+epoch,Llama 3.2 90B,llama-3-2-90b,1,1,llama-3-2-90b-vision llama-3-1-70b llama-3-2-1b
+epoch,MPT-30B,mpt-30b,1,1,mpt-30b-chat opt-30b mpt-7b
+epoch,Mistral Large,mistral-large,1,1,mistral-large-2402 mistral-large-2407 mistral-large-2
+epoch,Mixtral 8x22B,mixtral-8x22b,1,1,mixtral-8x22b-v0-1 mixtral-8x22b-instruct-v0-1
+epoch,Mixtral 8x7B,mixtral-8x7b,1,1,mixtral-8x7b-v0-1 mixtral-8x7b-instruct-v0-1
+epoch,Nemotron 3 Ultra,nemotron-3-ultra,1,1,nemotron-3-ultra-550b-a55b
+epoch,Nemotron-4 15B,nemotron-4-15b,1,1,
+epoch,PaLM 2-L,palm-2-l,1,1,palm-62b palm-8b
+epoch,PaLM 2-M,palm-2-m,1,1,palm-62b palm-8b
+epoch,PaLM 2-S,palm-2-s,1,1,palm-62b palm-8b
+epoch,Qwen-14B,qwen-14b,1,1,qwen-14b-chat qwen-7b-base qwen3-14b
+epoch,Qwen-1_8B,qwen-1-8b,1,1,qwen3-8b qwen2-7b qwen3-4b
+epoch,Qwen3-Max,qwen3-max,1,1,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+epoch,Stable Beluga 2,stable-beluga-2,1,1,
+epoch,XGen-7B,xgen-7b,1,1,qwen-7b-base
+epoch,Yi 6B,yi-6b,1,1,yi-6b-chat
+epoch,Yi-9B,yi-9b,1,1,
+epoch,grok-4-heavy-web-app,grok-4-heavy-web-app,1,1,grok-4-0709
+epoch,internlm-20b,internlm-20b,1,1,
+epoch,internlm-7b,internlm-7b,1,1,
+epoch,open_llama_7b,open-llama-7b,1,1,open-llama-7b-v2
+epoch,phi-3-medium 14B,phi-3-medium-14b,1,1,
+epoch,phi-3-mini 3.8B,phi-3-mini-3-8b,1,1,phi-4-mini
+epoch,phi-3-small 7.4B,phi-3-small-7-4b,1,1,
+epoch,qwen-plus-2025-04-28,qwen-plus-2025-04-28,1,1,qwen-plus-2024-11-27 qwen-plus-2025-01-25 qwq-plus

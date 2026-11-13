@@ -5,9 +5,9 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0–2 are built: five sources, change history, checks on every update, a scheduled GitHub
-workflow that commits new data and deploys the site, the explorer, and a page for every model,
-benchmark and source.
+Phases 0–3 are built: five sources, change history, checks on every update, a scheduled GitHub
+workflow that commits new data and deploys the site, the explorer, a page for every model, benchmark
+and source, model-name matching you can correct in one line, and downloads.
 
 ## The site
 
@@ -20,6 +20,8 @@ benchmark and source.
 - **Benchmark pages** (`/benchmarks/<source>/<metric>/`): the full leaderboard for one column.
 - **Source pages** (`/sources/<id>/`): status, licence, metrics, how each model name was matched, and
   recent changes.
+- **Downloads** (`/data/`): every score as CSV, Parquet and SQLite, with models, benchmarks, names and
+  sources.
 
 ## How it works
 
@@ -70,6 +72,33 @@ npm run preview   # serve site/dist at http://localhost:4321
 
 `npm test` runs the tests and `npm run typecheck` type-checks.
 
+## Fixing a model match
+
+Sources name models differently ("o1-2024-12-17_high", "o1 (high)"). The matcher sets aside
+qualifiers such as reasoning effort, snapshot date or "(FC)", and matches only when exactly one
+catalogue model fits; the method page on the site explains the rules. Each source's page lists every
+name, the model it went to and how, and `data/reports/unmatched.csv` lists names with no catalogue
+model, with near misses.
+
+To fix one, add a line to [`curation/aliases.csv`](curation/aliases.csv):
+
+```csv
+source,raw_name,model_id,note
+arena,Command R,command-r-03-2024,Arena lists the 08-2024 release separately
+*,mistral-large-2411,mistral-large-2,
+epoch,Some Name,-,keep this name apart
+```
+
+`*` applies to every source, and `-` keeps a name from being matched. To add a model the catalogue
+lacks, or correct one, edit [`curation/models.yaml`](curation/models.yaml). Then:
+
+```sh
+npm run validate   # checks both files
+npm run resolve    # shows the new match counts
+```
+
+Pushing to `main` rebuilds the site.
+
 ## When a source is held
 
 A run is held when its new data fails a check: missing columns, far fewer rows than before, more than
@@ -82,11 +111,13 @@ workflow from the Actions tab with `accept` set to the source id.
 | Path | What | Edited by |
 | :-- | :-- | :-- |
 | `sources.yaml` | What to pull from | you |
-| `curation/aliases.csv` | Optional `source,raw_name,model_id` lines to fix model matching | you |
+| `curation/aliases.csv` | `source,raw_name,model_id` lines that fix model matching (`*` for any source, `-` to keep a name unmatched) | you |
+| `curation/models.yaml` | Models to add to the catalogue, or fields to correct | you |
 | `data/sources/<id>/` | Rows exactly as published, metrics, state, change history | the workflow |
 | `data/catalog/models.jsonl` | Canonical models, seeded from whatmodel.sh | the workflow |
-| `data/resolved/aliases.csv` | How every model name was matched | the workflow |
-| `data/reports/unmatched.csv` | Model names with no match, most-used first | the workflow |
+| `data/resolved/aliases.csv` | How every model name was matched, and the qualifiers set aside | the workflow |
+| `data/resolved/unlisted.csv` | Models not in the catalogue, each gathering the names that agree | the workflow |
+| `data/reports/unmatched.csv` | Names not in the catalogue, most-used first, with near misses | the workflow |
 | `scripts/` | Scraper, matching, source plugins | code |
 | `scripts/build.ts`, `scripts/site/` | Builds every page and data file into `site/dist` | code |
 | `site/src/` | The explorer (TypeScript, turned into browser modules at build time) | code |
