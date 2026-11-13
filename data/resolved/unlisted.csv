@@ -374,7 +374,7 @@ mistral-small-creative,mistral-small-creative,creative-writing-v3 creative-writi
 mixtral-8x22b,Mixtral 8x22B,epoch,1
 mixtral-8x7b,Mixtral 8x7B,epoch,1
 mpt-30b,MPT-30B,epoch,1
-muse-ember,Muse Ember,arena vals simplebench llm-chess,166
+muse-ember,Muse Ember,arena terminal-bench vals simplebench llm-chess,168
 muse-ember-max,muse-ember-max,llm-chess,4
 muse-glimmer,Muse Glimmer,arena,50
 muse-voice-transcribe,muse_voice_transcribe,vals,5
