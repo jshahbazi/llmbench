@@ -29,6 +29,10 @@
 #   round       decimals to keep for numeric scores, only where extra precision is noise
 #   every       how often to check (30m, 6h, 1d)
 #
+# Columns from different sources that measure the same benchmark are linked in
+# curation/benchmarks.csv. benchmark_ids: true marks a source whose metric ids are benchmark ids
+# (whatmodel), so linking a column to one of them puts the two side by side.
+#
 # Catalogue feeds: sources whose plugin returns models (name, maker, release date, open weights,
 # licence, size) instead of, or as well as, scores. They are merged in the order they appear here;
 # the first to describe a model wins, later ones fill only the fields it left empty (see
@@ -52,6 +56,7 @@ sources:
     plugin: whatmodel
     every: 1d
     categories: [llm]
+    benchmark_ids: true          # its metric ids name benchmarks; curation/benchmarks.csv links to them
     tags:                        # added to whatmodel's own task tags
       gpqa-diamond: [knowledge]
       "hle*": [knowledge]

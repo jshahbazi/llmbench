@@ -19,7 +19,9 @@ in one line, downloads, an in-browser SQL console, and a command that drafts a n
   side by side, or switch to a chart of any column against release date, size or another column. The
   whole view is in the URL, so "Copy link" shares exactly what you see, and "Download CSV" exports it.
 - **Model pages** (`/models/<id>/`): every score for one model, with its rank in each column.
-- **Benchmark pages** (`/benchmarks/<source>/<metric>/`): the full leaderboard for one column.
+- **Benchmark pages** (`/benchmarks/<source>/<metric>/`): the full leaderboard for one column, and
+  where other sources have the same benchmark, every model's score from each of them side by side.
+  The benchmarks page lists those benchmarks, each with its largest median gap between sources.
 - **Source pages** (`/sources/<id>/`): status, licence, metrics, how each model name was matched, and
   recent changes.
 - **Downloads** (`/data/`): every score as CSV, Parquet and SQLite, with models, benchmarks, names and
@@ -102,6 +104,14 @@ name, so a new feed never moves a name that already matched; the ones left out a
 `data/reports/catalog-left-out.csv` (`scripts/lib/catalog.ts` has the rules). To take one that is a
 release of its own, add a line with just its id to `curation/models.yaml`; the feed's entry is used.
 
+## Linking the same benchmark across sources
+
+Each source's columns stay separate, but a column can be linked to the benchmark it measures in
+[`curation/benchmarks.csv`](curation/benchmarks.csv) (`column,benchmark,note`). whatmodel.sh's metric
+ids are benchmark ids already, so `epoch:gpqa_diamond,gpqa-diamond` puts Epoch's GPQA Diamond runs
+next to whatmodel's column. Link only the same measurement: the same benchmark, version, split and
+scale. The benchmarks page shows each link's median gap, and a large one points at a wrong link.
+
 ## Fixing a model match
 
 Sources name models differently ("o1-2024-12-17_high", "o1 (high)"). The matcher sets aside
@@ -143,6 +153,7 @@ workflow from the Actions tab with `accept` set to the source id.
 | `sources.yaml` | What to pull from | you |
 | `curation/aliases.csv` | `source,raw_name,model_id` lines that fix model matching (`*` for any source, `-` to keep a name unmatched) | you |
 | `curation/models.yaml` | Models to add to the catalogue, or fields to correct | you |
+| `curation/benchmarks.csv` | `column,benchmark` lines linking columns that measure the same benchmark | you |
 | `data/sources/<id>/` | Rows exactly as published, metrics, state, change history | the workflow |
 | `data/catalog/<id>.jsonl` | Each catalogue feed's models (whatmodel.sh, models.dev, Epoch AI, Hugging Face), merged in `sources.yaml` order | the workflow |
 | `data/resolved/aliases.csv` | How every model name was matched, and the qualifiers set aside | the workflow |

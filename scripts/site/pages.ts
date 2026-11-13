@@ -62,6 +62,16 @@ ${o.body}
 
 const runByLabel = (code: number) => RUN_BY_LABELS[code] ?? 'unknown';
 const score = (c: Candidate, col: SiteColumn) => `${fmt(c.value, col.unit)}${unitSuffix(col.unit)}`;
+
+/** Units shown as percentages: a fraction (0-1) and a percent (0-100) compare once scaled. */
+const PERCENT_LIKE = new Set(['fraction', 'percent']);
+const sameScale = (a: string, b: string) => a === b || (PERCENT_LIKE.has(a) && PERCENT_LIKE.has(b));
+const onScale = (v: number, unit: string) => (unit === 'fraction' ? v * 100 : v);
+const median = (xs: readonly number[]) => {
+  const s = [...xs].sort((a, b) => a - b);
+  const h = s.length >> 1;
+  return s.length % 2 ? s[h]! : (s[h - 1]! + s[h]!) / 2;
+};
 const colHref = (u: string, col: SiteColumn) => `${u}benchmarks/${col.source}/${col.slug}/`;
 const modelHref = (u: string, m: SiteModel) => `${u}models/${m.id}/`;
 const explorerHref = (u: string, params: Record<string, string | string[]>) => {
@@ -121,6 +131,102 @@ export function buildPages(d: SiteData, downloads: readonly Download[] = []): Pa
     const vals = list.map((mi) => best(mi, ci)!.best.value);
     ranks(vals, col.direction).forEach((r, i) => rankOf.set(`${list[i]}:${ci}`, r));
   }
+
+  // Columns from different sources that measure the same benchmark (curation/benchmarks.csv).
+  const linked = new Map<string, number[]>();
+  index.columns.forEach((c, i) => {
+    if (c.benchmark) linked.set(c.benchmark, [...(linked.get(c.benchmark) ?? []), i]);
+  });
+  /** Median of (b − a) over the models both columns score, on one scale (fractions as percentages). */
+  const gap = (a: number, b: number): { n: number; median: number } | undefined => {
+    const ca = index.columns[a]!;
+    const cb = index.columns[b]!;
+    if (!sameScale(ca.unit, cb.unit)) return undefined;
+    const diffs: number[] = [];
+    for (const mi of d.columnModels.get(a) ?? []) {
+      const x = d.columnModels.get(b)?.has(mi) ? best(mi, a) : null;
+      const y = x && best(mi, b);
+      if (x && y) diffs.push(onScale(y.best.value, cb.unit) - onScale(x.best.value, ca.unit));
+    }
+    return diffs.length ? { n: diffs.length, median: median(diffs) } : undefined;
+  };
+  /** The size of a gap: "9.8 points", "2.2 Elo"; the sentence around it gives the direction. */
+  const gapSize = (median: number, unit: string) =>
+    `${Math.abs(Math.round(median * 10) / 10).toFixed(1)}${PERCENT_LIKE.has(unit) ? ' points' : unit === 'elo' ? ' Elo' : ''}`;
+  const colName = (c: SiteColumn) => `${c.label} (${sourceName.get(c.source) ?? c.source})`;
+  /** A column's source name, or its label where the source has two columns in the group. */
+  const shortName = (k: number, group: readonly number[]) => {
+    const c = index.columns[k]!;
+    return group.filter((j) => index.columns[j]!.source === c.source).length > 1 ? c.label : (sourceName.get(c.source) ?? c.source);
+  };
+  /** "Vals AI 9.8 points below whatmodel.sh, 30 models" for gap(a, b). */
+  const gapSentence = (a: number, b: number, g: { n: number; median: number }, group: readonly number[]) => {
+    const r = Math.round(g.median * 10) / 10;
+    const unit = index.columns[a]!.unit;
+    const size = gapSize(r, unit);
+    return r === 0
+      ? `${shortName(b, group)} and ${shortName(a, group)} agree, ${g.n} models`
+      : `${shortName(b, group)} ${size} ${r < 0 ? 'below' : 'above'} ${shortName(a, group)}, ${g.n} models`;
+  };
+
+  /**
+   * Benchmarks that columns from two or more sources measure, for the benchmarks page: each with its
+   * columns, the models scored in more than one, and the largest median gap between two columns.
+   */
+  const sharedTable = (u: string): Html => {
+    const groups = [...linked.values()]
+      .filter((g) => new Set(g.map((k) => index.columns[k]!.source)).size >= 2)
+      .map((g) => {
+        const models = new Map<number, number>();
+        for (const k of g) for (const mi of d.columnModels.get(k) ?? []) models.set(mi, (models.get(mi) ?? 0) + 1);
+        let widest: { a: number; b: number; g: { n: number; median: number } } | undefined;
+        for (const a of g)
+          for (const b of g) {
+            if (a >= b) continue;
+            const x = gap(a, b);
+            if (x && x.n >= 5 && (!widest || Math.abs(x.median) > Math.abs(widest.g.median))) widest = { a, b, g: x };
+          }
+        // Named after whatmodel's column, whose metric id is the benchmark id, else the most covered.
+        const main = g.find((k) => index.columns[k]!.metric === index.columns[k]!.benchmark) ?? [...g].sort((a, b) => index.columns[b]!.coverage - index.columns[a]!.coverage)[0]!;
+        return { g, main, shared: [...models.values()].filter((n) => n >= 2).length, widest };
+      })
+      .sort((x, y) => y.shared - x.shared || index.columns[x.main]!.label.localeCompare(index.columns[y.main]!.label));
+    if (!groups.length) return html``;
+    return html`<h2 id="shared">Benchmarks in several sources <span class="muted">${groups.length}</span></h2>
+<p>The same benchmark as each source measured or reported it, linked in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/benchmarks.csv">curation/benchmarks.csv</a>. Each benchmark's page shows its sources side by side. The gap is the largest median difference between two of its columns over the models both score: a model maker's number against an independent run, or two harnesses. Exact copies show 0.0.</p>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Benchmark</th><th scope="col">Columns</th><th scope="col" class="num">Models in 2+</th><th scope="col">Largest median gap</th></tr></thead><tbody>
+${groups.map(({ g, main, shared, widest }) => {
+  const c = index.columns[main]!;
+  return html`<tr><td><a href="${colHref(u, c)}#same-benchmark">${c.label}</a></td><td>${g.map((k, i) => html`${i ? ', ' : ''}<a href="${colHref(u, index.columns[k]!)}">${shortName(k, g)}</a>`)}</td><td class="num">${shared}</td><td>${widest ? gapSentence(widest.a, widest.b, widest.g, g) : html`<span class="muted">—</span>`}</td></tr>`;
+})}</tbody></table></div>`;
+  };
+
+  /** The benchmark page's side-by-side table: every model scored by two or more of the linked columns. */
+  const sameBenchmark = (ci: number, others: readonly number[], u: string): Html => {
+    const col = index.columns[ci]!;
+    const group = [ci, ...others];
+    const rows = [...new Set(group.flatMap((k) => [...(d.columnModels.get(k) ?? [])]))]
+      .map((mi) => ({ mi, vals: group.map((k) => best(mi, k)?.best) }))
+      .filter((r) => r.vals.filter(Boolean).length >= 2)
+      .sort((a, b) => {
+        const x = a.vals[0]?.value;
+        const y = b.vals[0]?.value;
+        if (x === undefined || y === undefined) return x === undefined ? (y === undefined ? 0 : 1) : -1;
+        return col.direction === 'lower' ? x - y : y - x;
+      });
+    const gaps = others.flatMap((k) => {
+      const g = gap(ci, k);
+      return g ? [{ k, g }] : [];
+    });
+    return html`<h2 id="same-benchmark">Same benchmark in other sources</h2>
+<p>${others.map((k, i) => html`${i ? ', ' : ''}<a href="${colHref(u, index.columns[k]!)}">${colName(index.columns[k]!)}</a>`)}. ${rows.length ? `${rows.length} models have scores in more than one of them.` : 'No model has scores in more than one of them yet.'}${gaps.length ? html` Median difference over the models both score: ${gaps.map(({ k, g }, i) => html`${i ? '; ' : ''}${gapSentence(ci, k, g, group)}`)}.` : ''} <a href="${explorerHref(u, { c: group.map((k) => index.columns[k]!.id), min: '2' })}">Open them together in the explorer</a>.</p>
+${rows.length ? html`<div class="table-scroll"><table class="data">
+<thead><tr><th scope="col">Model</th>${group.map((k) => html`<th scope="col" class="num"><a href="${colHref(u, index.columns[k]!)}">${sourceName.get(index.columns[k]!.source) ?? ''}</a><br><span class="muted">${index.columns[k]!.label}</span></th>`)}</tr></thead>
+<tbody>${rows.map(({ mi, vals }) => {
+  const m = index.models[mi]!;
+  return html`<tr><td><a href="${modelHref(u, m)}">${m.name}</a></td>${vals.map((v, i) => html`<td class="num">${v ? score(v, index.columns[group[i]!]!) : html`<span class="muted">—</span>`}</td>`)}</tr>`;
+})}</tbody></table></div>` : ''}`;
+  };
 
   // ---- Explorer -------------------------------------------------------------------------------
   pages.push({ path: '', html: explorerPage(d) });
@@ -193,7 +299,9 @@ ${changes.length ? html`<h2>Recent changes</h2><ul class="history">${changes.map
     const entries = [...(d.columnModels.get(ci) ?? [])]
       .map((mi) => ({ mi, b: best(mi, ci)!, all: d.byCell.get(`${mi}:${ci}`)!.length }))
       .sort((a, b) => (col.direction === 'lower' ? a.b.best.value - b.b.best.value : b.b.best.value - a.b.best.value));
-    const siblings = col.family ? index.columns.filter((c) => c.family === col.family && c.id !== col.id) : [];
+    const same = col.benchmark ? linked.get(col.benchmark)!.filter((k) => k !== ci) : [];
+    const sameIds = new Set(same.map((k) => index.columns[k]!.id));
+    const siblings = col.family ? index.columns.filter((c) => c.family === col.family && c.id !== col.id && !sameIds.has(c.id)) : [];
     const href = safeUrl(col.url);
     const body = html`
 <p class="crumbs"><a href="${u}benchmarks/">Benchmarks</a> › <a href="${u}sources/${col.source}/">${sourceName.get(col.source) ?? col.source}</a></p>
@@ -201,7 +309,9 @@ ${changes.length ? html`<h2>Recent changes</h2><ul class="history">${changes.map
 <p class="meta">From <a href="${u}sources/${col.source}/">${sourceName.get(col.source) ?? col.source}</a> · ${unitWords(col.unit)} · ${col.direction === 'lower' ? 'lower is better' : 'higher is better'} · ${col.coverage} models${col.tags?.length ? html` · ${col.tags.join(', ')}` : ''}</p>
 ${col.description ? html`<p>${col.description}</p>` : ''}
 <p class="links">${href ? html`<a href="${href}" rel="noopener">About this benchmark</a> · ` : ''}<a href="${explorerHref(u, { c: col.id, sort: col.id, min: '1' })}">Open in the explorer</a>${col.metric !== col.label ? html` · source's name for it: “${col.metric}”` : ''}</p>
-${siblings.length ? html`<p>Same benchmark elsewhere: ${siblings.map((s, k) => html`${k ? ', ' : ''}<a href="${colHref(u, s)}">${s.label}</a> (${sourceName.get(s.source) ?? s.source})`)}</p>` : ''}
+${siblings.length ? html`<p>Related: ${siblings.map((s, k) => html`${k ? ', ' : ''}<a href="${colHref(u, s)}">${s.label}</a> (${sourceName.get(s.source) ?? s.source})`)}</p>` : ''}
+${same.length ? sameBenchmark(ci, same, u) : ''}
+${same.length ? html`<h2>${col.label} <span class="muted">${sourceName.get(col.source) ?? col.source}</span></h2>` : ''}
 <div class="table-scroll"><table class="data">
 <thead><tr><th scope="col" class="num">#</th><th scope="col">Model</th><th scope="col" class="num">Score</th><th scope="col">Date</th><th scope="col">Run by</th><th scope="col">Context</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
 <tbody>${entries.map(({ mi, b, all }) => {
@@ -225,6 +335,8 @@ ${siblings.length ? html`<p>Same benchmark elsewhere: ${siblings.map((s, k) => h
     const body = html`
 <h1>Benchmarks</h1>
 <p>Every metric from every source: ${index.columns.length} columns. Each source's metrics stay separate, because the same benchmark run by two sources is not always the same measurement. Headline metrics are marked ★; the rest are sub-scores.</p>
+${sharedTable(u)}
+<h2>Every column</h2>
 <p><label>Filter <input type="search" id="filter" placeholder="Name, source or tag" autocomplete="off"></label></p>
 ${index.sources
   .filter((s) => s.metric_count)
@@ -430,6 +542,8 @@ function methodPage(): string {
 </ul>
 <h2 id="catalogue">The model catalogue</h2>
 <p>Each model's maker, release date, size, licence and context window come from the catalogue, which is merged from several feeds in order: <a href="https://whatmodel.sh">whatmodel.sh</a> first, then <a href="https://models.dev">models.dev</a> and <a href="https://epoch.ai/data/ai-models">Epoch AI's models database</a>, which add models released since, then the <a href="https://huggingface.co/models">Hugging Face Hub</a>, which only fills in parameter counts and licences for open-weights models. The first feed to describe a model wins; a later feed only fills details the earlier ones left empty. A later feed's model is added only when nothing in the catalogue shares its core name: “GPT-4o (Aug 2024)” or “Grok 4 Fast Non-Reasoning” from a later feed is left out where the catalogue already has GPT-4o or Grok 4 Fast, so adding a feed never moves a name that already matched. Left-out models are listed in <a href="https://github.com/jshahbazi/llmbench/blob/main/data/reports/catalog-left-out.csv">data/reports/catalog-left-out.csv</a>; one that is a release of its own is taken by a line with its id in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/models.yaml">curation/models.yaml</a>.</p>
+<h2 id="benchmarks">The same benchmark in several sources</h2>
+<p>Every source's columns stay separate: a model maker's GPQA Diamond number, Epoch's run and Vals AI's run are three columns. Columns that measure the same benchmark — the same version, split and scoring, on one scale — are linked by hand in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/benchmarks.csv">curation/benchmarks.csv</a>, and each benchmark's page then shows every model's score from each source side by side, with the median difference over the models they share. Easy and hard splits, one-try pass rates, cost and latency are not linked to the overall score. Each link was checked against the scores: copies of one leaderboard agree to 0.0, and a model maker's number against an independent run is the gap the page is there to show.</p>
 <h2 id="matching">Matching model names</h2>
 <p>Sources name the same model differently: “o1-2024-12-17_high”, “o1 (high)” and “o1 (2024-12-17)” are one model. Each name is matched to a model in the catalogue, and only on exact agreement, tried in this order:</p>
 <ol>

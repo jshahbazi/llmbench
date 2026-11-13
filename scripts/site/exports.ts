@@ -66,7 +66,7 @@ export const SQLITE_SCHEMA = `
   CREATE TABLE about (key TEXT PRIMARY KEY, value TEXT);
   CREATE TABLE sources (id TEXT PRIMARY KEY, name TEXT NOT NULL, homepage TEXT, license TEXT, reuse TEXT NOT NULL, attribution TEXT, rows INTEGER, changed_at TEXT, checked_at TEXT);
   CREATE TABLE models (id TEXT PRIMARY KEY, name TEXT NOT NULL, in_catalogue INTEGER NOT NULL, provider TEXT, released TEXT, open_weights INTEGER, license TEXT, params_b REAL, active_b REAL, model_repo TEXT, catalogue_source TEXT);
-  CREATE TABLE benchmarks (id TEXT PRIMARY KEY, source TEXT NOT NULL REFERENCES sources(id), metric TEXT NOT NULL, label TEXT NOT NULL, unit TEXT, higher_is_better INTEGER NOT NULL, headline INTEGER NOT NULL, family TEXT, tags TEXT, models INTEGER, url TEXT);
+  CREATE TABLE benchmarks (id TEXT PRIMARY KEY, source TEXT NOT NULL REFERENCES sources(id), metric TEXT NOT NULL, label TEXT NOT NULL, unit TEXT, higher_is_better INTEGER NOT NULL, headline INTEGER NOT NULL, family TEXT, tags TEXT, models INTEGER, url TEXT, same_benchmark TEXT);
   CREATE TABLE names (source TEXT NOT NULL REFERENCES sources(id), source_model_name TEXT NOT NULL, model_id TEXT NOT NULL REFERENCES models(id), method TEXT, qualifiers TEXT, scores INTEGER, PRIMARY KEY (source, source_model_name));
   CREATE TABLE scores (model_id TEXT NOT NULL REFERENCES models(id), benchmark_id TEXT NOT NULL REFERENCES benchmarks(id), value REAL NOT NULL, raw_value TEXT, run_by TEXT, date TEXT, context TEXT, source_model_name TEXT, ci_low REAL, ci_high REAL, url TEXT);
   CREATE INDEX scores_model ON scores (model_id);
@@ -93,8 +93,8 @@ export async function writeDownloads(d: SiteData, dir: string): Promise<Download
   const modelRows = index.models.map((m) => [m.id, m.name, !m.unlisted, m.provider, m.released, m.open_weights, m.license, m.params_b, m.active_b, m.model_repo, m.origin]);
   await csv('llmbench-models.csv', 'Every model, with maker, release date, size and licence where known, and the catalogue feed its details came from.', ['id', 'name', 'in_catalogue', 'provider', 'released', 'open_weights', 'license', 'params_b', 'active_b', 'model_repo', 'catalogue_source'], modelRows);
 
-  const columnRows = index.columns.map((c) => [c.id, c.source, c.metric, c.label, c.unit, c.direction === 'higher', c.headline, c.family, (c.tags ?? []).join(' '), c.coverage, c.url]);
-  await csv('llmbench-benchmarks.csv', 'Every benchmark column: its source, unit, direction and how many models have a score.', ['id', 'source', 'metric', 'label', 'unit', 'higher_is_better', 'headline', 'family', 'tags', 'models', 'url'], columnRows);
+  const columnRows = index.columns.map((c) => [c.id, c.source, c.metric, c.label, c.unit, c.direction === 'higher', c.headline, c.family, (c.tags ?? []).join(' '), c.coverage, c.url, c.benchmark]);
+  await csv('llmbench-benchmarks.csv', 'Every benchmark column: its source, unit, direction, how many models have a score, and the benchmark it shares with columns from other sources.', ['id', 'source', 'metric', 'label', 'unit', 'higher_is_better', 'headline', 'family', 'tags', 'models', 'url', 'same_benchmark'], columnRows);
 
   const nameRows = [...d.names].flatMap(([source, list]) => list.map((n) => [source, n.raw, index.models[n.model]!.id, n.method, n.qualifiers, n.scores]));
   await csv('llmbench-names.csv', "Each source's name for each model, and how it was matched.", ['source', 'source_model_name', 'model_id', 'method', 'qualifiers', 'scores'], nameRows);
@@ -142,7 +142,7 @@ ${SQLITE_SCHEMA}`);
     ]);
     insert('INSERT INTO sources VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', sourceRows);
     insert('INSERT INTO models VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', modelRows);
-    insert('INSERT INTO benchmarks VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', columnRows.map((r) => r.map((v) => (v === '' ? null : v))));
+    insert('INSERT INTO benchmarks VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', columnRows.map((r) => r.map((v) => (v === '' ? null : v))));
     insert('INSERT INTO names VALUES (?, ?, ?, ?, ?, ?)', nameRows);
     insert(
       'INSERT INTO scores VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',

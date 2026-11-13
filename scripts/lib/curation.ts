@@ -5,6 +5,9 @@
  *   curation/aliases.csv   source,raw_name,model_id[,note]: send a source's name for a model to a
  *                          catalogue model. source "*" applies to every source; model_id "-" keeps
  *                          the name from being matched at all.
+ *   curation/benchmarks.csv  column,benchmark[,note]: link a source's column to the benchmark it
+ *                          measures, so columns from different sources that measure the same thing
+ *                          are shown side by side.
  *   curation/models.yaml   models to add to the catalogue, or fields to correct on one already in it.
  *                          An entry with only the id of a model a catalogue feed left out (see
  *                          data/reports/catalog-left-out.csv) takes that feed's entry for it.
@@ -19,10 +22,61 @@ import { loadSources } from './config.ts';
 import { aliasMap, NO_MATCH, type Aliases } from './match.ts';
 import { normalize } from './names.ts';
 import { parseDelimited, tableToRecords, type Rec } from './parse.ts';
-import type { CatalogModel, SourceConfig } from './types.ts';
+import { readJson, sourceDir } from './store.ts';
+import type { CatalogModel, Metric, SourceConfig } from './types.ts';
 
 export const ALIASES_PATH = join('curation', 'aliases.csv');
 export const MODELS_PATH = join('curation', 'models.yaml');
+export const BENCHMARKS_PATH = join('curation', 'benchmarks.csv');
+
+const BENCHMARK_ID = /^[a-z0-9][a-z0-9.-]*$/;
+
+/** curation/benchmarks.csv (lines starting with "#" are comments): column id -> benchmark id. */
+export function parseBenchmarkLinks(text: string | undefined): { links: Map<string, string>; problems: string[] } {
+  const links = new Map<string, string>();
+  const problems: string[] = [];
+  if (!text) return { links, problems };
+  const body = text
+    .split('\n')
+    .filter((l) => !l.startsWith('#'))
+    .join('\n');
+  tableToRecords(parseDelimited(body)).forEach((r, i) => {
+    const where = `${BENCHMARKS_PATH} row ${i + 1}`;
+    const column = String(r['column'] ?? '').trim();
+    const id = String(r['benchmark'] ?? '').trim();
+    if (!/^[a-z0-9][a-z0-9-]*:./.test(column)) problems.push(`${where}: "column" must be <source>:<metric>`);
+    else if (!BENCHMARK_ID.test(id)) problems.push(`${where} (${column}): "benchmark" must be lower case letters, digits, "-" and "."`);
+    else if (links.has(column)) problems.push(`${where}: ${column} is listed twice`);
+    else links.set(column, id);
+  });
+  return { links, problems };
+}
+
+export async function loadBenchmarkLinks(): Promise<Map<string, string>> {
+  const { links, problems } = parseBenchmarkLinks(await readOptional(BENCHMARKS_PATH));
+  if (problems.length) throw new Error(problems.join('\n'));
+  return links;
+}
+
+/**
+ * The benchmark each column measures: its line in curation/benchmarks.csv, else its metric id for a
+ * source whose metric ids are benchmark ids (`benchmark_ids: true` in sources.yaml). Only benchmarks
+ * two or more columns share are kept: a benchmark id is a link between columns.
+ */
+export function benchmarkOf(
+  columns: ReadonlyArray<{ id: string; source: string; metric: string }>,
+  links: ReadonlyMap<string, string>,
+  idSources: ReadonlySet<string>,
+): Map<string, string> {
+  const raw = new Map<string, string>();
+  for (const c of columns) {
+    const b = links.get(c.id) ?? (idSources.has(c.source) ? c.metric : undefined);
+    if (b) raw.set(c.id, b);
+  }
+  const count = new Map<string, number>();
+  for (const b of raw.values()) count.set(b, (count.get(b) ?? 0) + 1);
+  return new Map([...raw].filter(([, b]) => count.get(b)! >= 2));
+}
 
 const MODEL_FIELDS: Record<string, 'string' | 'number' | 'boolean'> = {
   id: 'string',
@@ -141,7 +195,10 @@ export async function loadAliases(): Promise<Aliases> {
   return aliasMap(await readAliasRows());
 }
 
-/** Problems in the curation files: unknown sources or models, duplicates, new models without names. */
+/**
+ * Problems in the curation files: unknown sources, models or columns, duplicates, new models without
+ * names.
+ */
 export async function checkCuration(sources: readonly SourceConfig[]): Promise<string[]> {
   const sourceIds = sources.map((s) => s.id);
   const { catalog: base, leftOut } = await mergedFeeds(sources);
@@ -174,5 +231,22 @@ export async function checkCuration(sources: readonly SourceConfig[]): Promise<s
     seen.add(k);
     return undefined;
   });
+  const bench = parseBenchmarkLinks(await readOptional(BENCHMARKS_PATH));
+  problems.push(...bench.problems);
+  const metricIds = new Map<string, Set<string> | undefined>();
+  for (const column of bench.links.keys()) {
+    const source = column.slice(0, column.indexOf(':'));
+    if (!sourceSet.has(source)) {
+      problems.push(`${BENCHMARKS_PATH}: ${column}: no source "${source}" in sources.yaml`);
+      continue;
+    }
+    if (!metricIds.has(source)) {
+      const metrics = await readJson<Metric[]>(join(sourceDir(source), 'metrics.json'));
+      metricIds.set(source, metrics && new Set(metrics.map((m) => m.id)));
+    }
+    // A source not fetched yet has no metrics to check against.
+    const known = metricIds.get(source);
+    if (known && !known.has(column.slice(source.length + 1))) problems.push(`${BENCHMARKS_PATH}: ${column}: ${source} has no such metric`);
+  }
   return problems;
 }

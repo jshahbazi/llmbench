@@ -10,7 +10,7 @@ import type { Candidate } from '../../site/src/select.ts';
 import type { CellsFile, CellTuple, HistoryEntry, SiteColumn, SiteIndex, SiteModel, SiteSource } from '../../site/src/types.ts';
 import { loadSources } from '../lib/config.ts';
 import { fillsOnly } from '../lib/catalog.ts';
-import { curatedCatalog } from '../lib/curation.ts';
+import { benchmarkOf, curatedCatalog, loadBenchmarkLinks } from '../lib/curation.ts';
 import { slugifyModel } from '../lib/match.ts';
 import { describeQualifier, qualifierFlags, readQualifiers } from '../lib/names.ts';
 import { parseDelimited, tableToRecords, type Rec } from '../lib/parse.ts';
@@ -311,6 +311,12 @@ export async function loadSiteData(): Promise<SiteData> {
   }
 
   for (const [ci, ms] of columnModels) columns[ci]!.coverage = ms.size;
+  const idSources = new Set(config.filter((s) => s.options['benchmark_ids'] === true).map((s) => s.id));
+  const linked = benchmarkOf(columns, await loadBenchmarkLinks(), idSources);
+  for (const c of columns) {
+    const b = linked.get(c.id);
+    if (b) c.benchmark = b;
+  }
 
   const index: SiteIndex = {
     generated_at: new Date().toISOString().replace(/\.\d+Z$/, 'Z'),

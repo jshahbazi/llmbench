@@ -39,6 +39,11 @@ export interface SiteColumn {
   coverage: number;
   tags?: string[];
   family?: string;
+  /**
+   * The benchmark this column measures, shared with the columns from other sources that measure the
+   * same thing (curation/benchmarks.csv). Set only when two or more columns share it.
+   */
+  benchmark?: string;
   url?: string;
   description?: string;
 }
