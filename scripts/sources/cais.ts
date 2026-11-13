@@ -18,6 +18,7 @@
  */
 import { orderRow } from '../lib/extract.ts';
 import { fetchOk } from '../lib/http.ts';
+import { unescapeJs } from '../lib/parse.ts';
 import type { ExtractResult, Metric, Plugin, Row } from '../lib/types.ts';
 
 const HOME = 'https://dashboard.safe.ai/';
@@ -179,14 +180,6 @@ const plain = (html: string) =>
     .replace(/<[^>]+>/g, '')
     .replace(/\s+/g, ' ')
     .trim();
-
-/** Undo a single-quoted JavaScript string literal's escapes. */
-export function unescapeJs(s: string): string {
-  return s.replace(/\\(u\{[0-9a-fA-F]+\}|u[0-9a-fA-F]{4}|x[0-9a-fA-F]{2}|[\s\S])/g, (_, e: string) => {
-    if (e[0] === 'u' || e[0] === 'x') return String.fromCodePoint(parseInt(e.replace(/[ux{}]/g, ''), 16));
-    return ({ n: '\n', r: '\r', t: '\t', b: '\b', f: '\f', v: '\v', '0': '\0' } as Record<string, string>)[e] ?? e;
-  });
-}
 
 /** The dashboard's model list, if this script holds it. */
 export function modelsFromScript(js: string): Array<Record<string, unknown>> | undefined {

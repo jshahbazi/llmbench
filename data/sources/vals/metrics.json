@@ -1,0 +1,5644 @@
+[
+ {
+  "id": "a2j/cost_per_test",
+  "label": "Access to Justice Benchmark cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/a2j",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "a2j/latency",
+  "label": "Access to Justice Benchmark time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/a2j",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "a2j/overall",
+  "label": "Access to Justice Benchmark",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-a2j",
+  "url": "https://www.vals.ai/benchmarks/a2j",
+  "description": "To what extent can AI agents guide an unrepresented client through a real legal problem?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "aime/aime-2024",
+  "label": "AIME: AIME 2024",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/aime"
+ },
+ {
+  "id": "aime/aime-2025",
+  "label": "AIME: AIME 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/aime"
+ },
+ {
+  "id": "aime/latency",
+  "label": "AIME time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/aime",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "aime/overall",
+  "label": "AIME",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "vals-aime",
+  "url": "https://www.vals.ai/benchmarks/aime",
+  "description": "Challenging national math exam given to top high-school students. Vals has retired this version. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "biomysterybench/cost_per_test",
+  "label": "BioMysteryBench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/biomysterybench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "biomysterybench/human-difficult",
+  "label": "BioMysteryBench: Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/biomysterybench"
+ },
+ {
+  "id": "biomysterybench/human-solvable",
+  "label": "BioMysteryBench: Human-solvable",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/biomysterybench"
+ },
+ {
+  "id": "biomysterybench/latency",
+  "label": "BioMysteryBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/biomysterybench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "biomysterybench/overall",
+  "label": "BioMysteryBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "family": "vals-biomysterybench",
+  "url": "https://www.vals.ai/benchmarks/biomysterybench",
+  "description": "Anthropic's benchmark of whether AI agents can solve real-world bioinformatics mysteries from raw data. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "case_law_v2/latency",
+  "label": "CaseLaw v2 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/case_law_v2",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "case_law_v2/overall",
+  "label": "CaseLaw v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "vals-case-law",
+  "url": "https://www.vals.ai/benchmarks/case_law_v2",
+  "description": "Private question-answer benchmark over Canadian court-cases. Vals has retired this version. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "claimbench/cost_per_test",
+  "label": "ClaimBench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "claimbench/direct-support",
+  "label": "ClaimBench: Direct support",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench"
+ },
+ {
+  "id": "claimbench/latency",
+  "label": "ClaimBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "claimbench/missing-evidence",
+  "label": "ClaimBench: Missing evidence",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench"
+ },
+ {
+  "id": "claimbench/non-supporting-citation",
+  "label": "ClaimBench: Non-supporting citation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench"
+ },
+ {
+  "id": "claimbench/numeric-discrepancy",
+  "label": "ClaimBench: Numeric discrepancy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench"
+ },
+ {
+  "id": "claimbench/overall",
+  "label": "ClaimBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-claimbench",
+  "url": "https://www.vals.ai/benchmarks/claimbench",
+  "description": "Does a 10-K excerpt support a claim, contradict it, or say nothing about it?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "claimbench/subtle-contradiction",
+  "label": "ClaimBench: Subtle contradiction",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/claimbench"
+ },
+ {
+  "id": "code-migration-v1-1/cli",
+  "label": "Code Migration v1.1: CLI",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration-v1-1"
+ },
+ {
+  "id": "code-migration-v1-1/cobol",
+  "label": "Code Migration v1.1: COBOL",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration-v1-1"
+ },
+ {
+  "id": "code-migration-v1-1/code-quality",
+  "label": "Code Migration v1.1: Code Quality",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration-v1-1"
+ },
+ {
+  "id": "code-migration-v1-1/cost_per_test",
+  "label": "Code Migration v1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration-v1-1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "code-migration-v1-1/latency",
+  "label": "Code Migration v1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration-v1-1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "code-migration-v1-1/overall",
+  "label": "Code Migration v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-code-migration",
+  "url": "https://www.vals.ai/benchmarks/code-migration-v1-1",
+  "description": "Can language models reimplement real-world programs in another language?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "code-migration/cli",
+  "label": "Code Migration: CLI",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration"
+ },
+ {
+  "id": "code-migration/cobol",
+  "label": "Code Migration: COBOL",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration"
+ },
+ {
+  "id": "code-migration/code-quality",
+  "label": "Code Migration: Code Quality",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration"
+ },
+ {
+  "id": "code-migration/cost_per_test",
+  "label": "Code Migration cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "code-migration/latency",
+  "label": "Code Migration time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/code-migration",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "code-migration/overall",
+  "label": "Code Migration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-code-migration",
+  "url": "https://www.vals.ai/benchmarks/code-migration",
+  "description": "Can language models reimplement real-world programs in another language?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "corp_fin_v2/exact-pages",
+  "label": "CorpFin v2: Exact Pages",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/corp_fin_v2"
+ },
+ {
+  "id": "corp_fin_v2/latency",
+  "label": "CorpFin v2 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/corp_fin_v2",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "corp_fin_v2/max-fitting-context",
+  "label": "CorpFin v2: Max Fitting Context",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/corp_fin_v2"
+ },
+ {
+  "id": "corp_fin_v2/overall",
+  "label": "CorpFin v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-corp-fin",
+  "url": "https://www.vals.ai/benchmarks/corp_fin_v2",
+  "description": "A private benchmark evaluating understanding of long-context credit agreements. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "corp_fin_v2/shared-max-context",
+  "label": "CorpFin v2: Shared Max Context",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/corp_fin_v2"
+ },
+ {
+  "id": "cua_bench/cost_per_test",
+  "label": "CUA-bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "cua_bench/efootball",
+  "label": "CUA-bench: eFootball",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench"
+ },
+ {
+  "id": "cua_bench/held-out-reflex",
+  "label": "CUA-bench: Hidden reflex",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench"
+ },
+ {
+  "id": "cua_bench/held-out-sandbox",
+  "label": "CUA-bench: Hidden sandbox",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench"
+ },
+ {
+  "id": "cua_bench/held-out-sports",
+  "label": "CUA-bench: Hidden sports",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench"
+ },
+ {
+  "id": "cua_bench/latency",
+  "label": "CUA-bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "cua_bench/minecraft-nether",
+  "label": "CUA-bench: Minecraft",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench"
+ },
+ {
+  "id": "cua_bench/overall",
+  "label": "CUA-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-cua-bench",
+  "url": "https://www.vals.ai/benchmarks/cua_bench",
+  "description": "Can an AI agent play six commercial video games with only a keyboard and a mouse? Half of them are held out. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "cua_bench/superhot",
+  "label": "CUA-bench: SUPERHOT",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cua_bench"
+ },
+ {
+  "id": "cyber/cost_per_test",
+  "label": "CyberBench v1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cyber",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "cyber/latency",
+  "label": "CyberBench v1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cyber",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "cyber/overall",
+  "label": "CyberBench v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-cyberbench",
+  "url": "https://www.vals.ai/benchmarks/cyber",
+  "description": "Can autonomous agents craft PoC inputs that trigger OSS-Fuzz vulnerabilities—and produce source patches that fix them?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "cyber/patch",
+  "label": "CyberBench v1.1: Patch",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cyber"
+ },
+ {
+  "id": "cyber/poc",
+  "label": "CyberBench v1.1: PoC",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/cyber"
+ },
+ {
+  "id": "emb-v1-1/comps",
+  "label": "EMB v1.1: Comps",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/cost_per_test",
+  "label": "EMB v1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "emb-v1-1/dataroom",
+  "label": "EMB v1.1: Dataroom",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/dcf",
+  "label": "EMB v1.1: DCF",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/latency",
+  "label": "EMB v1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "emb-v1-1/lbo",
+  "label": "EMB v1.1: LBO",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/ma",
+  "label": "EMB v1.1: M&A",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/misc",
+  "label": "EMB v1.1: Misc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/operating",
+  "label": "EMB v1.1: Operating",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/overall",
+  "label": "EMB v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-emb",
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1",
+  "description": "Evaluating agents on Excel-based financial modeling tasks, graded by the GPT-6 Luna rubric judge with template scoring fixes. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "emb-v1-1/scratch",
+  "label": "EMB v1.1: Scratch",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb-v1-1/template",
+  "label": "EMB v1.1: Template",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb-v1-1"
+ },
+ {
+  "id": "emb/comps",
+  "label": "EMB: Comps",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/cost_per_test",
+  "label": "EMB cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "emb/dataroom",
+  "label": "EMB: Dataroom",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/dcf",
+  "label": "EMB: DCF",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/latency",
+  "label": "EMB time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "emb/lbo",
+  "label": "EMB: LBO",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/ma",
+  "label": "EMB: M&A",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/misc",
+  "label": "EMB: Misc",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/operating",
+  "label": "EMB: Operating",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/overall",
+  "label": "EMB",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-emb",
+  "url": "https://www.vals.ai/benchmarks/emb",
+  "description": "Evaluating agents on Excel-based financial modeling tasks. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "emb/scratch",
+  "label": "EMB: Scratch",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "emb/template",
+  "label": "EMB: Template",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/emb"
+ },
+ {
+  "id": "fabv2-1/adjustments",
+  "label": "Finance Agent v2.1: Adjustments",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/all-pass",
+  "label": "Finance Agent v2.1: All-Pass",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/comparables",
+  "label": "Finance Agent v2.1: Comparables",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/cost_per_test",
+  "label": "Finance Agent v2.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "fabv2-1/disclosure-analysis",
+  "label": "Finance Agent v2.1: Disclosure Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/earnings-analysis",
+  "label": "Finance Agent v2.1: Earnings Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/financial-modeling",
+  "label": "Finance Agent v2.1: Financial Modeling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/general-qualitative-analysis",
+  "label": "Finance Agent v2.1: General Qualitative Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/general-quantitative-analysis",
+  "label": "Finance Agent v2.1: General Quantitative Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/latency",
+  "label": "Finance Agent v2.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "fabv2-1/market-analysis",
+  "label": "Finance Agent v2.1: Market Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2-1/overall",
+  "label": "Finance Agent v2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-finance-agent",
+  "url": "https://www.vals.ai/benchmarks/fabv2-1",
+  "description": "Evaluating agents on core financial analyst tasks using the FAB v2 harness, on the reviewed FABv2.1 dataset. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "fabv2-1/precedents",
+  "label": "Finance Agent v2.1: Precedents",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2-1"
+ },
+ {
+  "id": "fabv2/adjustments",
+  "label": "Finance Agent (v2): Adjustments",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/all-pass",
+  "label": "Finance Agent (v2): All-Pass",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/comparables",
+  "label": "Finance Agent (v2): Comparables",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/cost_per_test",
+  "label": "Finance Agent (v2) cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "fabv2/disclosure-analysis",
+  "label": "Finance Agent (v2): Disclosure Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/earnings-analysis",
+  "label": "Finance Agent (v2): Earnings Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/financial-modeling",
+  "label": "Finance Agent (v2): Financial Modeling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/general-qualitative-analysis",
+  "label": "Finance Agent (v2): General Qualitative Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/general-quantitative-analysis",
+  "label": "Finance Agent (v2): General Quantitative Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/latency",
+  "label": "Finance Agent (v2) time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "fabv2/market-analysis",
+  "label": "Finance Agent (v2): Market Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "fabv2/overall",
+  "label": "Finance Agent (v2)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-finance-agent",
+  "url": "https://www.vals.ai/benchmarks/fabv2",
+  "description": "Evaluating agents on core financial analyst tasks using the FAB v2 harness. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "fabv2/precedents",
+  "label": "Finance Agent (v2): Precedents",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/fabv2"
+ },
+ {
+  "id": "finance_index/cost_per_test",
+  "label": "Vals Finance Index cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/finance_index",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "finance_index/emb",
+  "label": "Vals Finance Index: EMB v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/finance_index"
+ },
+ {
+  "id": "finance_index/finance-agent",
+  "label": "Vals Finance Index: Finance Agent v2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/finance_index"
+ },
+ {
+  "id": "finance_index/latency",
+  "label": "Vals Finance Index time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/finance_index",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "finance_index/overall",
+  "label": "Vals Finance Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-finance-index",
+  "url": "https://www.vals.ai/benchmarks/finance_index",
+  "description": "Agentic model performance on finance work, from analyst research and financial modeling to corporate tax research, weighted by each sub-sector's share of U.S. GDP. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "finance_index/tax-agent-bench",
+  "label": "Vals Finance Index: Tax Agent Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/finance_index"
+ },
+ {
+  "id": "financial-coaching-bench/cost_per_test",
+  "label": "Financial Coaching Bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/financial-coaching-bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "financial-coaching-bench/elicitation",
+  "label": "Financial Coaching Bench: Elicitation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/financial-coaching-bench"
+ },
+ {
+  "id": "financial-coaching-bench/latency",
+  "label": "Financial Coaching Bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/financial-coaching-bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "financial-coaching-bench/length-controlled",
+  "label": "Financial Coaching Bench: Length-Controlled",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/financial-coaching-bench"
+ },
+ {
+  "id": "financial-coaching-bench/overall",
+  "label": "Financial Coaching Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-financial-health",
+  "url": "https://www.vals.ai/benchmarks/financial-coaching-bench",
+  "description": "Can AI agents coach a simulated client through a real financial health problem?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "gpqa/diamond-few-shot-cot",
+  "label": "GPQA Diamond: Few-Shot CoT",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/gpqa"
+ },
+ {
+  "id": "gpqa/diamond-zero-shot-cot",
+  "label": "GPQA Diamond: Zero-Shot CoT",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/gpqa"
+ },
+ {
+  "id": "gpqa/latency",
+  "label": "GPQA Diamond time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/gpqa",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "gpqa/overall",
+  "label": "GPQA Diamond",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge"
+  ],
+  "family": "vals-gpqa",
+  "url": "https://www.vals.ai/benchmarks/gpqa",
+  "description": "Graduate-level Google-Proof Q&A benchmark evaluating models on questions that require deep reasoning. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "hlab-v1/antitrust-competition",
+  "label": "Harvey's Legal Agent Benchmark v1: Antitrust Competition",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/arbitration-international-dispute-resolution",
+  "label": "Harvey's Legal Agent Benchmark v1: Arbitration International Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/banking-finance",
+  "label": "Harvey's Legal Agent Benchmark v1: Banking Finance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/bankruptcy-restructuring",
+  "label": "Harvey's Legal Agent Benchmark v1: Bankruptcy Restructuring",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/capital-markets",
+  "label": "Harvey's Legal Agent Benchmark v1: Capital Markets",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/corporate-governance",
+  "label": "Harvey's Legal Agent Benchmark v1: Corporate Governance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/corporate-ma",
+  "label": "Harvey's Legal Agent Benchmark v1: Corporate Ma",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/cost_per_test",
+  "label": "Harvey's Legal Agent Benchmark v1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate",
+  "label": "Harvey's Legal Agent Benchmark v1: Criteria Pass Rate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-antitrust-competition",
+  "label": "Harvey's Legal Agent Benchmark v1: Antitrust Competition",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-arbitration-international-dispute-resolution",
+  "label": "Harvey's Legal Agent Benchmark v1: Arbitration International Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-banking-finance",
+  "label": "Harvey's Legal Agent Benchmark v1: Banking Finance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-bankruptcy-restructuring",
+  "label": "Harvey's Legal Agent Benchmark v1: Bankruptcy Restructuring",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-capital-markets",
+  "label": "Harvey's Legal Agent Benchmark v1: Capital Markets",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-corporate-governance",
+  "label": "Harvey's Legal Agent Benchmark v1: Corporate Governance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-corporate-ma",
+  "label": "Harvey's Legal Agent Benchmark v1: Corporate Ma",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-data-privacy-cybersecurity",
+  "label": "Harvey's Legal Agent Benchmark v1: Data Privacy Cybersecurity",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-emerging-companies-venture-capital",
+  "label": "Harvey's Legal Agent Benchmark v1: Emerging Companies Venture Capital",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-employment-labor",
+  "label": "Harvey's Legal Agent Benchmark v1: Employment Labor",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-energy-natural-resources",
+  "label": "Harvey's Legal Agent Benchmark v1: Energy Natural Resources",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-environmental-esg",
+  "label": "Harvey's Legal Agent Benchmark v1: Environmental Esg",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-funds-asset-management",
+  "label": "Harvey's Legal Agent Benchmark v1: Funds Asset Management",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-healthcare-life-sciences",
+  "label": "Harvey's Legal Agent Benchmark v1: Healthcare Life Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-immigration",
+  "label": "Harvey's Legal Agent Benchmark v1: Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-insurance",
+  "label": "Harvey's Legal Agent Benchmark v1: Insurance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-intellectual-property",
+  "label": "Harvey's Legal Agent Benchmark v1: Intellectual Property",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-international-trade-sanctions",
+  "label": "Harvey's Legal Agent Benchmark v1: International Trade Sanctions",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-litigation-dispute-resolution",
+  "label": "Harvey's Legal Agent Benchmark v1: Litigation Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-real-estate",
+  "label": "Harvey's Legal Agent Benchmark v1: Real Estate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-structured-finance-securitization",
+  "label": "Harvey's Legal Agent Benchmark v1: Structured Finance Securitization",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-tax",
+  "label": "Harvey's Legal Agent Benchmark v1: Tax",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-trusts-estates-private-client",
+  "label": "Harvey's Legal Agent Benchmark v1: Trusts Estates Private Client",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/criteria-pass-rate-white-collar-defense-investigations",
+  "label": "Harvey's Legal Agent Benchmark v1: White Collar Defense Investigations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/data-privacy-cybersecurity",
+  "label": "Harvey's Legal Agent Benchmark v1: Data Privacy Cybersecurity",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/emerging-companies-venture-capital",
+  "label": "Harvey's Legal Agent Benchmark v1: Emerging Companies Venture Capital",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/employment-labor",
+  "label": "Harvey's Legal Agent Benchmark v1: Employment Labor",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/energy-natural-resources",
+  "label": "Harvey's Legal Agent Benchmark v1: Energy Natural Resources",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/environmental-esg",
+  "label": "Harvey's Legal Agent Benchmark v1: Environmental Esg",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/funds-asset-management",
+  "label": "Harvey's Legal Agent Benchmark v1: Funds Asset Management",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/healthcare-life-sciences",
+  "label": "Harvey's Legal Agent Benchmark v1: Healthcare Life Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/immigration",
+  "label": "Harvey's Legal Agent Benchmark v1: Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/insurance",
+  "label": "Harvey's Legal Agent Benchmark v1: Insurance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/intellectual-property",
+  "label": "Harvey's Legal Agent Benchmark v1: Intellectual Property",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/international-trade-sanctions",
+  "label": "Harvey's Legal Agent Benchmark v1: International Trade Sanctions",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/latency",
+  "label": "Harvey's Legal Agent Benchmark v1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "hlab-v1/litigation-dispute-resolution",
+  "label": "Harvey's Legal Agent Benchmark v1: Litigation Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/overall",
+  "label": "Harvey's Legal Agent Benchmark v1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-legal-agent-benchmark",
+  "url": "https://www.vals.ai/benchmarks/hlab-v1",
+  "description": "Tests an agent's ability to complete legal work using documents, spreadsheets, presentations, and file-system tools. Vals has retired this version. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "hlab-v1/real-estate",
+  "label": "Harvey's Legal Agent Benchmark v1: Real Estate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/structured-finance-securitization",
+  "label": "Harvey's Legal Agent Benchmark v1: Structured Finance Securitization",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/tax",
+  "label": "Harvey's Legal Agent Benchmark v1: Tax",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/trusts-estates-private-client",
+  "label": "Harvey's Legal Agent Benchmark v1: Trusts Estates Private Client",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab-v1/white-collar-defense-investigations",
+  "label": "Harvey's Legal Agent Benchmark v1: White Collar Defense Investigations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab-v1"
+ },
+ {
+  "id": "hlab/antitrust-competition",
+  "label": "HLAB-Vals-1.1: Antitrust Competition",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/arbitration-international-dispute-resolution",
+  "label": "HLAB-Vals-1.1: Arbitration International Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/banking-finance",
+  "label": "HLAB-Vals-1.1: Banking Finance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/bankruptcy-restructuring",
+  "label": "HLAB-Vals-1.1: Bankruptcy Restructuring",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/capital-markets",
+  "label": "HLAB-Vals-1.1: Capital Markets",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/corporate-governance",
+  "label": "HLAB-Vals-1.1: Corporate Governance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/corporate-ma",
+  "label": "HLAB-Vals-1.1: Corporate Ma",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/cost_per_test",
+  "label": "HLAB-Vals-1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "hlab/criteria-pass-rate",
+  "label": "HLAB-Vals-1.1: Criteria Pass Rate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-antitrust-competition",
+  "label": "HLAB-Vals-1.1: Antitrust Competition",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-arbitration-international-dispute-resolution",
+  "label": "HLAB-Vals-1.1: Arbitration International Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-banking-finance",
+  "label": "HLAB-Vals-1.1: Banking Finance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-bankruptcy-restructuring",
+  "label": "HLAB-Vals-1.1: Bankruptcy Restructuring",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-capital-markets",
+  "label": "HLAB-Vals-1.1: Capital Markets",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-corporate-governance",
+  "label": "HLAB-Vals-1.1: Corporate Governance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-corporate-ma",
+  "label": "HLAB-Vals-1.1: Corporate Ma",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-data-privacy-cybersecurity",
+  "label": "HLAB-Vals-1.1: Data Privacy Cybersecurity",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-emerging-companies-venture-capital",
+  "label": "HLAB-Vals-1.1: Emerging Companies Venture Capital",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-employment-labor",
+  "label": "HLAB-Vals-1.1: Employment Labor",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-energy-natural-resources",
+  "label": "HLAB-Vals-1.1: Energy Natural Resources",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-environmental-esg",
+  "label": "HLAB-Vals-1.1: Environmental Esg",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-funds-asset-management",
+  "label": "HLAB-Vals-1.1: Funds Asset Management",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-healthcare-life-sciences",
+  "label": "HLAB-Vals-1.1: Healthcare Life Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-immigration",
+  "label": "HLAB-Vals-1.1: Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-insurance",
+  "label": "HLAB-Vals-1.1: Insurance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-intellectual-property",
+  "label": "HLAB-Vals-1.1: Intellectual Property",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-international-trade-sanctions",
+  "label": "HLAB-Vals-1.1: International Trade Sanctions",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-litigation-dispute-resolution",
+  "label": "HLAB-Vals-1.1: Litigation Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-real-estate",
+  "label": "HLAB-Vals-1.1: Real Estate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-structured-finance-securitization",
+  "label": "HLAB-Vals-1.1: Structured Finance Securitization",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-tax",
+  "label": "HLAB-Vals-1.1: Tax",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-trusts-estates-private-client",
+  "label": "HLAB-Vals-1.1: Trusts Estates Private Client",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/criteria-pass-rate-white-collar-defense-investigations",
+  "label": "HLAB-Vals-1.1: White Collar Defense Investigations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/data-privacy-cybersecurity",
+  "label": "HLAB-Vals-1.1: Data Privacy Cybersecurity",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/emerging-companies-venture-capital",
+  "label": "HLAB-Vals-1.1: Emerging Companies Venture Capital",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/employment-labor",
+  "label": "HLAB-Vals-1.1: Employment Labor",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/energy-natural-resources",
+  "label": "HLAB-Vals-1.1: Energy Natural Resources",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/environmental-esg",
+  "label": "HLAB-Vals-1.1: Environmental Esg",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/funds-asset-management",
+  "label": "HLAB-Vals-1.1: Funds Asset Management",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/healthcare-life-sciences",
+  "label": "HLAB-Vals-1.1: Healthcare Life Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/immigration",
+  "label": "HLAB-Vals-1.1: Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/insurance",
+  "label": "HLAB-Vals-1.1: Insurance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/intellectual-property",
+  "label": "HLAB-Vals-1.1: Intellectual Property",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/international-trade-sanctions",
+  "label": "HLAB-Vals-1.1: International Trade Sanctions",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/latency",
+  "label": "HLAB-Vals-1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "hlab/litigation-dispute-resolution",
+  "label": "HLAB-Vals-1.1: Litigation Dispute Resolution",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/overall",
+  "label": "HLAB-Vals-1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-legal-agent-benchmark",
+  "url": "https://www.vals.ai/benchmarks/hlab",
+  "description": "Tests an agent's ability to complete legal work using documents, spreadsheets, presentations, and file-system tools. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "hlab/real-estate",
+  "label": "HLAB-Vals-1.1: Real Estate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/structured-finance-securitization",
+  "label": "HLAB-Vals-1.1: Structured Finance Securitization",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/tax",
+  "label": "HLAB-Vals-1.1: Tax",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/trusts-estates-private-client",
+  "label": "HLAB-Vals-1.1: Trusts Estates Private Client",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "hlab/white-collar-defense-investigations",
+  "label": "HLAB-Vals-1.1: White Collar Defense Investigations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/hlab"
+ },
+ {
+  "id": "immigration/all-pass",
+  "label": "Immigration: All-Pass",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/immigration"
+ },
+ {
+  "id": "immigration/content",
+  "label": "Immigration: Content Checks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/immigration"
+ },
+ {
+  "id": "immigration/cost_per_test",
+  "label": "Immigration cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/immigration",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "immigration/intake",
+  "label": "Immigration: Intake Checks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/immigration"
+ },
+ {
+  "id": "immigration/latency",
+  "label": "Immigration time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/immigration",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "immigration/overall",
+  "label": "Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-immigration",
+  "url": "https://www.vals.ai/benchmarks/immigration",
+  "description": "Evaluating agents on SME-authored US immigration law questions graded against per-question rubrics. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "ioi/cost_per_test",
+  "label": "IOI cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/ioi",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "ioi/ioi2024",
+  "label": "IOI: IOI 2024",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/ioi"
+ },
+ {
+  "id": "ioi/ioi2025",
+  "label": "IOI: IOI 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/ioi"
+ },
+ {
+  "id": "ioi/ioi2026",
+  "label": "IOI: IOI 2026",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/ioi"
+ },
+ {
+  "id": "ioi/latency",
+  "label": "IOI time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/ioi",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "ioi/overall",
+  "label": "IOI",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-ioi",
+  "url": "https://www.vals.ai/benchmarks/ioi",
+  "description": "Based on the International Olympiad in Informatics. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "lcb/easy",
+  "label": "LiveCodeBench: Easy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding"
+  ],
+  "url": "https://www.vals.ai/benchmarks/lcb"
+ },
+ {
+  "id": "lcb/hard",
+  "label": "LiveCodeBench: Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding"
+  ],
+  "url": "https://www.vals.ai/benchmarks/lcb"
+ },
+ {
+  "id": "lcb/latency",
+  "label": "LiveCodeBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding"
+  ],
+  "url": "https://www.vals.ai/benchmarks/lcb",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "lcb/medium",
+  "label": "LiveCodeBench: Medium",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding"
+  ],
+  "url": "https://www.vals.ai/benchmarks/lcb"
+ },
+ {
+  "id": "lcb/overall",
+  "label": "LiveCodeBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding"
+  ],
+  "family": "vals-lcb",
+  "url": "https://www.vals.ai/benchmarks/lcb",
+  "description": "Our Implementation of the LiveCodeBench benchmark. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "legal_bench/conclusion-tasks",
+  "label": "LegalBench: Conclusion Tasks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/legal_bench"
+ },
+ {
+  "id": "legal_bench/interpretation-tasks",
+  "label": "LegalBench: Interpretation Tasks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/legal_bench"
+ },
+ {
+  "id": "legal_bench/issue-tasks",
+  "label": "LegalBench: Issue Tasks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/legal_bench"
+ },
+ {
+  "id": "legal_bench/latency",
+  "label": "LegalBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/legal_bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "legal_bench/overall",
+  "label": "LegalBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-legal-bench",
+  "url": "https://www.vals.ai/benchmarks/legal_bench",
+  "description": "Evaluating language models on a wide range of open source legal reasoning tasks. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "legal_bench/rhetoric-tasks",
+  "label": "LegalBench: Rhetoric Tasks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/legal_bench"
+ },
+ {
+  "id": "legal_bench/rule-tasks",
+  "label": "LegalBench: Rule Tasks",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/legal_bench"
+ },
+ {
+  "id": "legal_index/business-commercial",
+  "label": "Vals Legal Index: Business & Commercial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/civil-negligence",
+  "label": "Vals Legal Index: Civil Negligence",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/cost_per_test",
+  "label": "Vals Legal Index cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "legal_index/criminal",
+  "label": "Vals Legal Index: Criminal",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/family",
+  "label": "Vals Legal Index: Family",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/labor-employment",
+  "label": "Vals Legal Index: Labor & Employment",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/latency",
+  "label": "Vals Legal Index time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "legal_index/legal-agent-benchmark",
+  "label": "Vals Legal Index: HLAB Criteria Pass",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/legal-research",
+  "label": "Vals Legal Index: Legal Research",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/other-civil",
+  "label": "Vals Legal Index: Other Civil",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/overall",
+  "label": "Vals Legal Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-legal-index",
+  "url": "https://www.vals.ai/benchmarks/legal_index",
+  "description": "Model performance on legal research and legal drafting across practice areas, weighted by each area's share of U.S. law-office revenue. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "legal_index/real-estate",
+  "label": "Vals Legal Index: Real Estate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/tax-agent-bench",
+  "label": "Vals Legal Index: Tax Agent",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_index/wills-estates-trusts",
+  "label": "Vals Legal Index: Wills, Estates & Trusts",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_index"
+ },
+ {
+  "id": "legal_research/administrative-regulatory",
+  "label": "Legal Research Bench: Administrative / Regulatory",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/business-commercial",
+  "label": "Legal Research Bench: Business & Commercial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/civil-litigation",
+  "label": "Legal Research Bench: Civil Litigation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/constitutional-civil-rights",
+  "label": "Legal Research Bench: Constitutional / Civil Rights",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/cost_per_test",
+  "label": "Legal Research Bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "legal_research/criminal",
+  "label": "Legal Research Bench: Criminal",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/family",
+  "label": "Legal Research Bench: Family",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/health",
+  "label": "Legal Research Bench: Health",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/immigration",
+  "label": "Legal Research Bench: Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/latency",
+  "label": "Legal Research Bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "legal_research/overall",
+  "label": "Legal Research Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-legal-research",
+  "url": "https://www.vals.ai/benchmarks/legal_research",
+  "description": "Evaluating agents on legal research tasks across diverse areas of US law. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "legal_research/weighted-pass",
+  "label": "Legal Research Bench: Weighted Pass",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-administrative-regulatory",
+  "label": "Legal Research Bench: Administrative / Regulatory",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-business-commercial",
+  "label": "Legal Research Bench: Business & Commercial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-civil-litigation",
+  "label": "Legal Research Bench: Civil Litigation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-constitutional-civil-rights",
+  "label": "Legal Research Bench: Constitutional / Civil Rights",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-criminal",
+  "label": "Legal Research Bench: Criminal",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-family",
+  "label": "Legal Research Bench: Family",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-health",
+  "label": "Legal Research Bench: Health",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "legal_research/weighted-pass-immigration",
+  "label": "Legal Research Bench: Immigration",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/legal_research"
+ },
+ {
+  "id": "math500/latency",
+  "label": "MATH 500 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/math500",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "math500/overall",
+  "label": "MATH 500",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "vals-math500",
+  "url": "https://www.vals.ai/benchmarks/math500",
+  "description": "Academic math benchmark on probability, algebra, and trigonometry. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "medcode/latency",
+  "label": "MedCode time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medcode",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "medcode/overall",
+  "label": "MedCode",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-medcode",
+  "url": "https://www.vals.ai/benchmarks/medcode",
+  "description": "Can models support the medical billing process?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "medqa/asian",
+  "label": "MedQA: Asian",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa"
+ },
+ {
+  "id": "medqa/black",
+  "label": "MedQA: Black",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa"
+ },
+ {
+  "id": "medqa/hispanic",
+  "label": "MedQA: Hispanic",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa"
+ },
+ {
+  "id": "medqa/indigenous",
+  "label": "MedQA: Indigenous",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa"
+ },
+ {
+  "id": "medqa/latency",
+  "label": "MedQA time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "medqa/overall",
+  "label": "MedQA",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-medqa",
+  "url": "https://www.vals.ai/benchmarks/medqa",
+  "description": "Evaluating language model bias in medical questions. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "medqa/unbiased",
+  "label": "MedQA: Unbiased",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa"
+ },
+ {
+  "id": "medqa/white",
+  "label": "MedQA: White",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medqa"
+ },
+ {
+  "id": "medscribe/latency",
+  "label": "MedScribe time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/medscribe",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "medscribe/overall",
+  "label": "MedScribe",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-medscribe",
+  "url": "https://www.vals.ai/benchmarks/medscribe",
+  "description": "Can models support doctors with their administrative work?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "mgsm/latency",
+  "label": "MGSM time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "mgsm/mgsm-bn",
+  "label": "MGSM: Bengali",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-de",
+  "label": "MGSM: German",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-en",
+  "label": "MGSM: English",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-es",
+  "label": "MGSM: Spanish",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-fr",
+  "label": "MGSM: French",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-ja",
+  "label": "MGSM: Japanese",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-ru",
+  "label": "MGSM: Russian",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-sw",
+  "label": "MGSM: Swahili",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-te",
+  "label": "MGSM: Telugu",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-th",
+  "label": "MGSM: Thai",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/mgsm-zh",
+  "label": "MGSM: Chinese",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mgsm"
+ },
+ {
+  "id": "mgsm/overall",
+  "label": "MGSM",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "vals-mgsm",
+  "url": "https://www.vals.ai/benchmarks/mgsm",
+  "description": "A multilingual benchmark for mathematical questions. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "mmlu_pro/biology",
+  "label": "MMLU Pro: Biology",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/business",
+  "label": "MMLU Pro: Business",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/chemistry",
+  "label": "MMLU Pro: Chemistry",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/computer-science",
+  "label": "MMLU Pro: Computer Science",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/economics",
+  "label": "MMLU Pro: Economics",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/engineering",
+  "label": "MMLU Pro: Engineering",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/health",
+  "label": "MMLU Pro: Health",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/history",
+  "label": "MMLU Pro: History",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/latency",
+  "label": "MMLU Pro time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "mmlu_pro/law",
+  "label": "MMLU Pro: Law",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/math",
+  "label": "MMLU Pro: Math",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/other",
+  "label": "MMLU Pro: Others",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/overall",
+  "label": "MMLU Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge"
+  ],
+  "family": "vals-mmlu-pro",
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+  "description": "Academic multiple-choice benchmark covering 14 subjects including STEM, humanities, and social sciences. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "mmlu_pro/philosophy",
+  "label": "MMLU Pro: Philosophy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/physics",
+  "label": "MMLU Pro: Physics",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmlu_pro/psychology",
+  "label": "MMLU Pro: Psychology",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmlu_pro"
+ },
+ {
+  "id": "mmmu/latency",
+  "label": "MMMU Pro time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mmmu",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "mmmu/overall",
+  "label": "MMMU Pro",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge",
+   "vision"
+  ],
+  "family": "vals-mmmu",
+  "url": "https://www.vals.ai/benchmarks/mmmu",
+  "description": "Multimodal Multi-task Benchmark. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "mortgage_tax/latency",
+  "label": "MortgageTax time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/mortgage_tax",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "mortgage_tax/numerical-extraction",
+  "label": "MortgageTax: Numerical Extraction",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/mortgage_tax"
+ },
+ {
+  "id": "mortgage_tax/overall",
+  "label": "MortgageTax",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-mortgage-tax",
+  "url": "https://www.vals.ai/benchmarks/mortgage_tax",
+  "description": "Evaluating reading and understanding tax certificates as images. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "mortgage_tax/semantic-extraction",
+  "label": "MortgageTax: Semantic Extraction",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/mortgage_tax"
+ },
+ {
+  "id": "mysterymechanism/cost_per_test",
+  "label": "MysteryMechanism cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mysterymechanism",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "mysterymechanism/latency",
+  "label": "MysteryMechanism time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/mysterymechanism",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "mysterymechanism/overall",
+  "label": "MysteryMechanism",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "family": "vals-mysterymechanism",
+  "url": "https://www.vals.ai/benchmarks/mysterymechanism",
+  "description": "Can agents rediscover sealed mathematical mechanisms through bounded experiments?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "poker_agent/cost_per_test",
+  "label": "Agent Poker Bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/poker_agent",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "poker_agent/latency",
+  "label": "Agent Poker Bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/poker_agent",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "poker_agent/overall",
+  "label": "Agent Poker Bench",
+  "direction": "higher",
+  "unit": "score",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-poker-agent",
+  "url": "https://www.vals.ai/benchmarks/poker_agent",
+  "description": "Which model can make the most money playing poker?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "programbench/almost",
+  "label": "ProgramBench: Almost Resolved",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/programbench"
+ },
+ {
+  "id": "programbench/cost_per_test",
+  "label": "ProgramBench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/programbench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "programbench/latency",
+  "label": "ProgramBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/programbench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "programbench/overall",
+  "label": "ProgramBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-programbench",
+  "url": "https://www.vals.ai/benchmarks/programbench",
+  "description": "Can language models rebuild programs from scratch?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "programbench/partial",
+  "label": "ProgramBench: Raw Pass Rate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/programbench"
+ },
+ {
+  "id": "programbench/strict",
+  "label": "ProgramBench: Fully Resolved",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/programbench"
+ },
+ {
+  "id": "proof_bench/cost_per_test",
+  "label": "ProofBench v1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/proof_bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "proof_bench/latency",
+  "label": "ProofBench v1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "math",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/proof_bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "proof_bench/overall",
+  "label": "ProofBench v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math",
+   "agents"
+  ],
+  "family": "vals-proof-bench",
+  "url": "https://www.vals.ai/benchmarks/proof_bench",
+  "description": "Automated theorem proving benchmark. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "public-benefits-bench-v1/both",
+  "label": "Public Benefits Bench v1: Both",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1"
+ },
+ {
+  "id": "public-benefits-bench-v1/cost_per_test",
+  "label": "Public Benefits Bench v1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "public-benefits-bench-v1/latency",
+  "label": "Public Benefits Bench v1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "public-benefits-bench-v1/multi-turn",
+  "label": "Public Benefits Bench v1: Multi Turn",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1"
+ },
+ {
+  "id": "public-benefits-bench-v1/neither",
+  "label": "Public Benefits Bench v1: Neither",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1"
+ },
+ {
+  "id": "public-benefits-bench-v1/overall",
+  "label": "Public Benefits Bench v1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-snap",
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1",
+  "description": "Can AI help people navigate SNAP benefits?. Vals has retired this version. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "public-benefits-bench-v1/web-search",
+  "label": "Public Benefits Bench v1: Web Search",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench-v1"
+ },
+ {
+  "id": "public-benefits-bench/cost_per_test",
+  "label": "Public Benefits Bench v1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "public-benefits-bench/latency",
+  "label": "Public Benefits Bench v1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "public-benefits-bench/overall",
+  "label": "Public Benefits Bench v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-snap",
+  "url": "https://www.vals.ai/benchmarks/public-benefits-bench",
+  "description": "Can AI help people navigate SNAP benefits?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "robo_bench/arm",
+  "label": "Robo-bench: Arm (13 tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench"
+ },
+ {
+  "id": "robo_bench/balance-scale",
+  "label": "Robo-bench: Balance scale (public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench"
+ },
+ {
+  "id": "robo_bench/cost_per_test",
+  "label": "Robo-bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "robo_bench/humanoid",
+  "label": "Robo-bench: Humanoid (11 tasks)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench"
+ },
+ {
+  "id": "robo_bench/latency",
+  "label": "Robo-bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "robo_bench/lego-manual",
+  "label": "Robo-bench: Lego manual (public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench"
+ },
+ {
+  "id": "robo_bench/ninja-course",
+  "label": "Robo-bench: Ninja course (public)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/robo_bench"
+ },
+ {
+  "id": "robo_bench/overall",
+  "label": "Robo-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "family": "vals-robo-bench",
+  "url": "https://www.vals.ai/benchmarks/robo_bench",
+  "description": "Can a model control a robot arm and a humanoid in a real-time physics simulation, from motor commands and camera images alone? Most tasks are held out. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "sage/cost_per_test",
+  "label": "SAGE cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/sage",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "sage/cs",
+  "label": "SAGE: Computer Science",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/sage"
+ },
+ {
+  "id": "sage/latency",
+  "label": "SAGE time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/sage",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "sage/linear-algebra",
+  "label": "SAGE: Linear Algebra",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/sage"
+ },
+ {
+  "id": "sage/overall",
+  "label": "SAGE",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-sage",
+  "url": "https://www.vals.ai/benchmarks/sage",
+  "description": "Student Assessment with Generative Evaluation. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "sage/pdes",
+  "label": "SAGE: Partial Differential Equations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/sage"
+ },
+ {
+  "id": "science_index/biomysterybench",
+  "label": "Vals Science Index: BioMysteryBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/science_index"
+ },
+ {
+  "id": "science_index/cost_per_test",
+  "label": "Vals Science Index cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/science_index",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "science_index/latency",
+  "label": "Vals Science Index time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/science_index",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "science_index/mysterymechanism",
+  "label": "Vals Science Index: MysteryMechanism",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/science_index"
+ },
+ {
+  "id": "science_index/overall",
+  "label": "Vals Science Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-science-index",
+  "url": "https://www.vals.ai/benchmarks/science_index",
+  "description": "A single measure of AI's ability to do science — agentic model performance on biology data investigation, mechanism discovery, and research workflows, weighted equally. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "science_index/terminal-bench-science",
+  "label": "Vals Science Index: Terminal-Bench-Science",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/science_index"
+ },
+ {
+  "id": "skillsbench/cost_per_test",
+  "label": "SkillsBench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/skillsbench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "skillsbench/latency",
+  "label": "SkillsBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/skillsbench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "skillsbench/no-skills",
+  "label": "SkillsBench: No Skills",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/skillsbench"
+ },
+ {
+  "id": "skillsbench/overall",
+  "label": "SkillsBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-skillsbench",
+  "url": "https://www.vals.ai/benchmarks/skillsbench",
+  "description": "How important are skills for agents?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "skillsbench/with-skills",
+  "label": "SkillsBench: With Skills",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/skillsbench"
+ },
+ {
+  "id": "srebench/cost_per_test",
+  "label": "SRE Bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/srebench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "srebench/latency",
+  "label": "SRE Bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/srebench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "srebench/overall",
+  "label": "SRE Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-sre-bench",
+  "url": "https://www.vals.ai/benchmarks/srebench",
+  "description": "Can AI agents reverse engineer real-world, contamination-free binaries?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "srebench/partial",
+  "label": "SRE Bench: Capability Score",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/srebench"
+ },
+ {
+  "id": "srebench/solved",
+  "label": "SRE Bench: Fully Solved",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/srebench"
+ },
+ {
+  "id": "swebench-multimodal/bpmn-js",
+  "label": "SWE-bench Multimodal: bpmn-js",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/carbon",
+  "label": "SWE-bench Multimodal: Carbon",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/cost_per_test",
+  "label": "SWE-bench Multimodal cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "swebench-multimodal/eslint",
+  "label": "SWE-bench Multimodal: ESLint",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/fusion-next",
+  "label": "SWE-bench Multimodal: Fusion Next",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/grommet",
+  "label": "SWE-bench Multimodal: Grommet",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/highlight-js",
+  "label": "SWE-bench Multimodal: highlight.js",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/latency",
+  "label": "SWE-bench Multimodal time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "swebench-multimodal/lighthouse",
+  "label": "SWE-bench Multimodal: Lighthouse",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/openlayers",
+  "label": "SWE-bench Multimodal: OpenLayers",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/overall",
+  "label": "SWE-bench Multimodal",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "family": "swe-bench-multimodal",
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal",
+  "description": "Resolving GitHub issues in JavaScript front-end repositories where the report is a screenshot as much as a description. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "swebench-multimodal/prettier",
+  "label": "SWE-bench Multimodal: Prettier",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/prism",
+  "label": "SWE-bench Multimodal: Prism",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench-multimodal/scratch-gui",
+  "label": "SWE-bench Multimodal: Scratch GUI",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench-multimodal"
+ },
+ {
+  "id": "swebench/1-4-hours",
+  "label": "SWE-bench: 1-4 hours",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench"
+ },
+ {
+  "id": "swebench/15-min-1-hour",
+  "label": "SWE-bench: 15 min - 1 hour",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench"
+ },
+ {
+  "id": "swebench/cost_per_test",
+  "label": "SWE-bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "swebench/latency",
+  "label": "SWE-bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "swebench/over-4-hours",
+  "label": "SWE-bench: >4 hours",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench"
+ },
+ {
+  "id": "swebench/overall",
+  "label": "SWE-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-verified",
+  "url": "https://www.vals.ai/benchmarks/swebench",
+  "description": "Solving production software engineering tasks. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "swebench/under-15-min-fix",
+  "label": "SWE-bench: <15 min fix",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/swebench"
+ },
+ {
+  "id": "tax_agent_bench/controversy-precedence-analysis",
+  "label": "Tax Agent Bench: Controversy & Precedence Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/cost_per_test",
+  "label": "Tax Agent Bench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "tax_agent_bench/current-temporal-analysis",
+  "label": "Tax Agent Bench: Current & Temporal Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/fact-pattern-analysis",
+  "label": "Tax Agent Bench: Fact-Pattern Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/forms-filings",
+  "label": "Tax Agent Bench: Forms & Filings",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/latency",
+  "label": "Tax Agent Bench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "tax_agent_bench/numbers-calculations",
+  "label": "Tax Agent Bench: Numbers & Calculations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/overall",
+  "label": "Tax Agent Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-tax-agent-bench",
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench",
+  "description": "Evaluating agents on research-grade US tax questions using the Tax Agent Bench harness. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "tax_agent_bench/rule-source-lookup",
+  "label": "Tax Agent Bench: Rule & Source Lookup",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass",
+  "label": "Tax Agent Bench: Weighted Pass",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass-controversy-precedence-analysis",
+  "label": "Tax Agent Bench: Controversy & Precedence Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass-current-temporal-analysis",
+  "label": "Tax Agent Bench: Current & Temporal Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass-fact-pattern-analysis",
+  "label": "Tax Agent Bench: Fact-Pattern Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass-forms-filings",
+  "label": "Tax Agent Bench: Forms & Filings",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass-numbers-calculations",
+  "label": "Tax Agent Bench: Numbers & Calculations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_agent_bench/weighted-pass-rule-source-lookup",
+  "label": "Tax Agent Bench: Rule & Source Lookup",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/tax_agent_bench"
+ },
+ {
+  "id": "tax_eval_v2/correctness",
+  "label": "TaxEval v2: Correctness",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/tax_eval_v2"
+ },
+ {
+  "id": "tax_eval_v2/latency",
+  "label": "TaxEval v2 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/tax_eval_v2",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "tax_eval_v2/overall",
+  "label": "TaxEval v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-tax-eval",
+  "url": "https://www.vals.ai/benchmarks/tax_eval_v2",
+  "description": "A Vals-created set of questions and responses to tax questions. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "tax_eval_v2/stepwise-reasoning",
+  "label": "TaxEval v2: Stepwise Reasoning",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/tax_eval_v2"
+ },
+ {
+  "id": "terminal-bench-2-1/cost_per_test",
+  "label": "Terminal-Bench 2.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-2-1/easy",
+  "label": "Terminal-Bench 2.1: Easy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+ },
+ {
+  "id": "terminal-bench-2-1/hard",
+  "label": "Terminal-Bench 2.1: Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+ },
+ {
+  "id": "terminal-bench-2-1/latency",
+  "label": "Terminal-Bench 2.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-2-1/medium",
+  "label": "Terminal-Bench 2.1: Medium",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+ },
+ {
+  "id": "terminal-bench-2-1/overall",
+  "label": "Terminal-Bench 2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "terminal-bench-accuracy",
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+  "description": "State-of-the-art set of difficult terminal-based tasks. Vals has retired this version. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "terminal-bench-2/cost_per_test",
+  "label": "Terminal-Bench 2.0 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-2/easy",
+  "label": "Terminal-Bench 2.0: Easy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2"
+ },
+ {
+  "id": "terminal-bench-2/hard",
+  "label": "Terminal-Bench 2.0: Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2"
+ },
+ {
+  "id": "terminal-bench-2/latency",
+  "label": "Terminal-Bench 2.0 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-2/medium",
+  "label": "Terminal-Bench 2.0: Medium",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2"
+ },
+ {
+  "id": "terminal-bench-2/overall",
+  "label": "Terminal-Bench 2.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "terminal-bench-accuracy",
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+  "description": "State-of-the-art set of difficult terminal-based tasks. Vals has retired this version. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "terminal-bench-4/cost_per_test",
+  "label": "Terminal-Bench 4.0 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-4/hardware",
+  "label": "Terminal-Bench 4.0: Hardware",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-4/latency",
+  "label": "Terminal-Bench 4.0 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-4/media",
+  "label": "Terminal-Bench 4.0: Media",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-4/ml",
+  "label": "Terminal-Bench 4.0: ML",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-4/operations",
+  "label": "Terminal-Bench 4.0: Operations",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-4/overall",
+  "label": "Terminal-Bench 4.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "terminal-bench-accuracy",
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4",
+  "description": "Frontier-difficulty terminal tasks across software, science, ML, operations, hardware, security, and media. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "terminal-bench-4/science",
+  "label": "Terminal-Bench 4.0: Science",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-4/security",
+  "label": "Terminal-Bench 4.0: Security",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-4/software",
+  "label": "Terminal-Bench 4.0: Software",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+ },
+ {
+  "id": "terminal-bench-science/cost_per_test",
+  "label": "Terminal-Bench-Science cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-science/earth-sciences",
+  "label": "Terminal-Bench-Science: Earth Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+ },
+ {
+  "id": "terminal-bench-science/engineering-sciences",
+  "label": "Terminal-Bench-Science: Engineering Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+ },
+ {
+  "id": "terminal-bench-science/latency",
+  "label": "Terminal-Bench-Science time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "terminal-bench-science/life-sciences",
+  "label": "Terminal-Bench-Science: Life Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+ },
+ {
+  "id": "terminal-bench-science/mathematical-sciences",
+  "label": "Terminal-Bench-Science: Mathematical Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+ },
+ {
+  "id": "terminal-bench-science/overall",
+  "label": "Terminal-Bench-Science",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "family": "vals-terminal-bench-science",
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science",
+  "description": "Research workflow tasks contributed by practicing scientists across five domains. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "terminal-bench-science/physical-sciences",
+  "label": "Terminal-Bench-Science: Physical Sciences",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "knowledge",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+ },
+ {
+  "id": "time_horizon_index/cost_per_test",
+  "label": "Time Horizon Index: KSP cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/time_horizon_index",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "time_horizon_index/mean-progress-to-date",
+  "label": "Time Horizon Index: KSP: Progress efficiency",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/time_horizon_index"
+ },
+ {
+  "id": "time_horizon_index/overall",
+  "label": "Time Horizon Index: KSP",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-ksp-bench",
+  "url": "https://www.vals.ai/benchmarks/time_horizon_index",
+  "description": "Can an AI agent build and run a space program in Kerbal Space Program?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "vals_index/code-migration",
+  "label": "Vals Index: Code Migration v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/cost_per_test",
+  "label": "Vals Index cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "vals_index/emb",
+  "label": "Vals Index: EMB v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/finance-agent",
+  "label": "Vals Index: Finance Agent v2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/latency",
+  "label": "Vals Index time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "vals_index/legal-agent-benchmark",
+  "label": "Vals Index: HLAB-Vals-1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/legal-research",
+  "label": "Vals Index: Legal Research",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/overall",
+  "label": "Vals Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-vals-index",
+  "url": "https://www.vals.ai/benchmarks/vals_index",
+  "description": "A single measure of AI's potential economic impact — agentic model performance across finance, coding, legal, and tax tasks, weighted by each sector's share of U.S. GDP. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "vals_index/tax-agent-bench",
+  "label": "Vals Index: Tax Agent",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/terminal-bench-4",
+  "label": "Vals Index: Terminal-Bench 4.0",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_index/vibe-code-bench",
+  "label": "Vals Index: Vibe Code Bench v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_index"
+ },
+ {
+  "id": "vals_multimodal_index/corp-fin-v2",
+  "label": "Vals Multimodal Index: CorpFin v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vals_multimodal_index/cost_per_test",
+  "label": "Vals Multimodal Index cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "vals_multimodal_index/finance-agent",
+  "label": "Vals Multimodal Index: Finance Agent v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vals_multimodal_index/latency",
+  "label": "Vals Multimodal Index time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "vals_multimodal_index/mortgage-tax",
+  "label": "Vals Multimodal Index: Mortgage Tax",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vals_multimodal_index/overall",
+  "label": "Vals Multimodal Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "family": "vals-vals-multimodal-index",
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index",
+  "description": "Benchmark consisting of a weighted performance across finance, coding, and education tasks. Showing the potential impact that LLM's can have on the economy. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "vals_multimodal_index/sage",
+  "label": "Vals Multimodal Index: SAGE",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vals_multimodal_index/swebench",
+  "label": "Vals Multimodal Index: SWE-bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vals_multimodal_index/terminal-bench-2-1",
+  "label": "Vals Multimodal Index: Terminal-Bench 2.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vals_multimodal_index/vibe-code-bench",
+  "label": "Vals Multimodal Index: Vibe Code Bench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "vision"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vals_multimodal_index"
+ },
+ {
+  "id": "vcb-1-100/cost_per_test",
+  "label": "Vibe Code Bench 1-100 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vcb-1-100",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "vcb-1-100/latency",
+  "label": "Vibe Code Bench 1-100 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vcb-1-100",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "vcb-1-100/overall",
+  "label": "Vibe Code Bench 1-100",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-vcb-1-100",
+  "url": "https://www.vals.ai/benchmarks/vcb-1-100",
+  "description": "Can models extend a working web application across a long sequence of dependent requests?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "vibe-code/cost_per_test",
+  "label": "Vibe Code Bench v1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vibe-code",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "vibe-code/latency",
+  "label": "Vibe Code Bench v1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vibe-code",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "vibe-code/overall",
+  "label": "Vibe Code Bench v1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-vibe-code-bench",
+  "url": "https://www.vals.ai/benchmarks/vibe-code",
+  "description": "Can models build web applications from scratch?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "voice-code-bench/cost_per_test",
+  "label": "VoiceCodeBench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/voice-code-bench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "voice-code-bench/ctem",
+  "label": "VoiceCodeBench: CTEM",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/voice-code-bench"
+ },
+ {
+  "id": "voice-code-bench/latency",
+  "label": "VoiceCodeBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/voice-code-bench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "voice-code-bench/overall",
+  "label": "VoiceCodeBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "vals-voice-code-bench",
+  "url": "https://www.vals.ai/benchmarks/voice-code-bench",
+  "description": "Can speech recognition preserve exact structured values in workplace audio?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "voice-code-bench/wer",
+  "label": "VoiceCodeBench: WER",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "url": "https://www.vals.ai/benchmarks/voice-code-bench"
+ },
+ {
+  "id": "web_search/cost_per_test",
+  "label": "Vals Web Search Index cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents",
+   "search"
+  ],
+  "url": "https://www.vals.ai/benchmarks/web_search",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "web_search/finance",
+  "label": "Vals Web Search Index: Finance Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "search"
+  ],
+  "url": "https://www.vals.ai/benchmarks/web_search"
+ },
+ {
+  "id": "web_search/latency",
+  "label": "Vals Web Search Index time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents",
+   "search"
+  ],
+  "url": "https://www.vals.ai/benchmarks/web_search",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "web_search/legal",
+  "label": "Vals Web Search Index: Legal Research",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "search"
+  ],
+  "url": "https://www.vals.ai/benchmarks/web_search"
+ },
+ {
+  "id": "web_search/overall",
+  "label": "Vals Web Search Index",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents",
+   "search"
+  ],
+  "family": "vals-web-search",
+  "url": "https://www.vals.ai/benchmarks/web_search",
+  "description": "Comparing native provider search against independent web-search tools on legal-research and finance-analysis tasks. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ }
+]

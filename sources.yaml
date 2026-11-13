@@ -9,14 +9,18 @@
 #
 # Quick reference for a source without a plugin:
 #   fetch       github:owner/repo/path (globs allowed) | hf:owner/dataset | https://...
-#               CSV, TSV, JSON, JSON Lines, YAML, Parquet or a Markdown table (README.md)
-#   table       for Markdown: which table, by position (0 = first) or heading text
+#               CSV, TSV, JSON, JSON Lines, YAML, Parquet, a Markdown or HTML table, or a
+#               variable in a JavaScript file (read as data, never run)
+#   table       for Markdown: which table, by position (0 = first) or heading text; HTML: position
+#   rows        JSON/YAML: dot path to the rows; script: the variable, then any path (DATA.models)
 #   model       column with the model name                 (required)
+#   model_match regular expression whose first group is the name ('^[*!]*(.+)$' strips flags)
 #   scores      score columns; omit to take every numeric column
 #   metric/value  for long tables: column(s) naming the metric, column holding the number
 #   key         column(s) that make a row unique when the model name does not
 #   context     columns describing how the model was run
-#   date, model_url, model_label, ci, ignore, filter, labels, unit, units, lower_is_better
+#   date, model_url, model_label, ignore, filter, exclude, labels, unit, units, lower_is_better
+#   ci          [low, high] columns; for a wide table with several scores, { score: [low, high] }
 #   headline    metrics shown in the default "most covered" column choice (default: all)
 #   tags        explorer presets: a list for every metric, or metric (or glob) -> list.
 #               Known: coding, agents, math, knowledge, chat, vision, search
@@ -293,6 +297,144 @@ sources:
     attribution: >-
       Reproduced with permission of Center for AI Safety, Inc. CAIS AI Dashboard
       (dashboard.safe.ai).
+    terms: allowed
+
+  # Vals AI: an independent evaluator running every model itself on about 60 benchmarks (public
+  # ones such as SWE-bench, Terminal-Bench, GPQA and LiveCodeBench, and its own legal, finance, tax,
+  # medical and agent benchmarks). One data file per benchmark, found through its page; see
+  # scripts/sources/vals.ts. No terms page and no licence; the footer says "All rights reserved"
+  # (checked 2026-11-13), which is a copyright notice, not a ban on reuse or automated access.
+  - id: vals
+    name: Vals AI
+    homepage: https://www.vals.ai
+    plugin: vals
+    fetch: https://www.vals.ai/benchmarks
+    every: 1d
+    min_rows: 2000
+    license: none stated
+    attribution: Vals AI (vals.ai)
+    terms: allowed
+
+  # MathArena (ETH Zürich): models on maths competitions as soon as they are held. One table per
+  # competition; measured accuracy only (estimates for questions not run are kept as a note), and a
+  # model released after the competition is flagged. See scripts/sources/matharena.ts. No terms
+  # page and no licence on the site (checked 2026-11-13); the code is MIT.
+  - id: matharena
+    name: MathArena
+    homepage: https://matharena.ai
+    plugin: matharena
+    fetch: https://matharena.ai/
+    every: 1d
+    min_rows: 300
+    license: none stated
+    attribution: MathArena (matharena.ai), SRI Lab, ETH Zürich
+    terms: allowed
+
+  # SimpleBench: everyday-reasoning trick questions, run by its authors. The leaderboard is a list in
+  # the site's script (read as data, not run); the two human baselines are left out.
+  - id: simplebench
+    name: SimpleBench
+    homepage: https://simple-bench.com
+    fetch: https://simple-bench.com/static/js/leaderboard-data.js
+    rows: leaderboardData
+    model: model
+    scores: [score]
+    labels: { score: SimpleBench score }
+    unit: percent
+    date: dateAdded
+    exclude: { rank: "-" }
+    ignore: [rank]
+    tags: [knowledge]
+    every: 1d
+    min_rows: 30
+    license: none stated
+    attribution: SimpleBench by AI Explained (simple-bench.com)
+    terms: allowed
+
+  # EQ-Bench (Sam Paech): each board is a CSV or a data object inside the page's script. Names
+  # starting with "*" (new) or "!" (adult-content model) carry a flag that model_match strips.
+  # Judge-scored throughout; Elo comes from pairwise comparisons. Spiral-Bench is left out: its
+  # newest model is from 2025.
+  - id: eqbench3
+    name: EQ-Bench 3
+    homepage: https://eqbench.com/eqbench3.html
+    fetch: https://eqbench.com/eqbench3.js
+    rows: leaderboardDataEQBench3
+    model: model_name
+    model_match: '^[*!]*(.+)$'
+    scores: [elo_norm, rubric_0_100]
+    ci: { elo_norm: [ci_low_norm, ci_high_norm] }
+    labels: { elo_norm: EQ-Bench 3 Elo, rubric_0_100: EQ-Bench 3 rubric score }
+    units: { elo_norm: elo, rubric_0_100: score }
+    headline: [elo_norm]
+    tags: [chat]
+    every: 1d
+    min_rows: 50
+    license: none stated
+    attribution: EQ-Bench by Sam Paech (eqbench.com)
+    terms: allowed
+
+  - id: eqbench4
+    name: EQ-Bench 4
+    homepage: https://eqbench.com
+    fetch: https://eqbench.com/eqbench4/eqbench4_data.js
+    rows: EQBENCH4_DATA.models
+    model: model
+    scores: [elo]
+    ci: [ci_low, ci_high]
+    labels: { elo: EQ-Bench 4 Elo }
+    unit: elo
+    ignore: [display, slug, rank, is_new, transcript_dir, profile_points, ability_modes]
+    tags: [chat]
+    every: 1d
+    min_rows: 20
+    license: none stated
+    attribution: EQ-Bench by Sam Paech (eqbench.com)
+    terms: allowed
+
+  - id: creative-writing-v3
+    name: EQ-Bench Creative Writing v3
+    homepage: https://eqbench.com/creative_writing.html
+    fetch: https://eqbench.com/creative_writing.js
+    rows: leaderboardDataCreativeWritingV3
+    model: model_name
+    model_match: '^[*!]*(.+)$'
+    scores: [elo_score, creative_writing_score, slop_score, repetition_score]
+    lower_is_better: [slop_score, repetition_score]
+    labels:
+      elo_score: Creative Writing v3 Elo
+      creative_writing_score: Creative Writing v3 rubric score
+      slop_score: Creative Writing v3 slop
+      repetition_score: Creative Writing v3 repetition
+    units: { elo_score: elo, creative_writing_score: score, slop_score: score, repetition_score: score }
+    headline: [elo_score]
+    tags: [chat]
+    every: 1d
+    min_rows: 80
+    license: none stated
+    attribution: EQ-Bench Creative Writing by Sam Paech (eqbench.com)
+    terms: allowed
+
+  - id: creative-writing-longform
+    name: EQ-Bench Longform Creative Writing
+    homepage: https://eqbench.com/creative_writing_longform.html
+    fetch: https://eqbench.com/creative_writing_longform.js
+    rows: leaderboardDataLongformV3
+    model: model_name
+    model_match: '^[*!]*(.+)$'
+    scores: [overall_score_100, slop_score, repetition_score]
+    lower_is_better: [slop_score, repetition_score]
+    labels:
+      overall_score_100: Longform writing score
+      slop_score: Longform writing slop
+      repetition_score: Longform writing repetition
+    unit: score
+    headline: [overall_score_100]
+    tags: [chat]
+    every: 1d
+    min_rows: 80
+    license: none stated
+    attribution: EQ-Bench Longform Creative Writing by Sam Paech (eqbench.com)
     terms: allowed
 
   # Lech Mazur's benchmarks. Each repository's README starts with a Markdown table of models; none

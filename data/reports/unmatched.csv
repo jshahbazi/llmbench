@@ -1,10 +1,31 @@
 source,raw_name,unlisted_as,rows,scores,suggestions
+vals,thinkingmachines/inkling-2-small,inkling-2-small,19,215,inkling inkling-small
+vals,anthropic/claude-fable-5-2,claude-fable-5-2,19,214,claude-fable-5 claude-fable-5-1
+vals,alibaba/qwen3.8-max-internal,qwen3-8-max-internal,14,191,qwen3-8-2-4t-a95b qwen3-8-max-0902
+vals,inception/mercury-2.5,mercury-2-5,18,179,mercury-2 mercury
+vals,fireworks/ember-1,ember-1,17,177,
+vals,reflection/Beam-1.0,beam-1-0,17,177,beam-1-0-501b-a23b
+vals,inception/mercury-3,mercury-3,11,163,mercury mercury-2
+vals,google/gemini-4-hydrogen,gemini-4-hydrogen,10,157,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+vals,meta/muse-ember,muse-ember,10,157,
+vals,mistralai/mistral-large-4-oss,mistral-large-4-oss,10,157,mistral-large-4 mistral-large-4-2610 mistral-large-2402
+vals,fireworks/nemotron-lightning-3p5-30b-a3b,nemotron-lightning-3p5-30b-a3b,14,156,
+vals,ant/ling-3.0-flash-af-rc3,ling-3-0-flash-af-rc3,12,144,ling-3-0-flash
 livebench,dracarys2-llama-3.1-70b-instruct,dracarys2-llama-3-1-70b-instruct,4,99,
 livebench,gpt-5.1-codex-max,gpt-5-1-codex-max,3,88,gpt-5-1-codex gpt-5-1 gpt-5
 livebench,gpt-5.1-codex-max-high,gpt-5-1-codex-max,3,88,gpt-5-1-codex gpt-5-1 gpt-5
+vals,fireworks/llama4-maverick-instruct-basic,llama4-maverick-instruct-basic,16,87,llama-4-maverick
+vals,mistralai/mistral-large-2512,mistral-large-2512,14,87,mistral-large-2402 mistral-large-2407 mistral-large-2
+vals,zai/glm-legal,glm-legal,3,79,
+vals,grok/grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,13,76,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
 livebench,hunyuan-turbos-20250313,hunyuan-turbos-20250313,3,74,hunyuan-turbos-20250226 hunyuan-turbos-20250416 hunyuan-turbo-0110
 livebench,learnlm-1.5-pro-experimental,learnlm-1-5-pro,3,74,
 livebench,phi-3-small-128k-instruct,phi-3-small-128k-instruct,3,74,phi-3-small-8k-instruct
+vals,alibaba/qwen3-max,qwen3-max,12,74,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+vals,ai21labs/jamba-large-1.6,jamba-large-1-6,10,68,jamba-large-1-7
+vals,ai21labs/jamba-mini-1.6,jamba-mini-1-6,10,68,jamba-mini-1-7
+vals,grok/grok-3-mini-fast-high-reasoning,grok-3-mini-fast-high-reasoning,10,68,grok-3-mini-beta grok-3-beta grok-3-preview-02-24
+vals,grok/grok-3-mini-fast-low-reasoning,grok-3-mini-fast-low-reasoning,10,68,grok-3-mini-beta grok-3-beta grok-3-preview-02-24
 arena,Kimi K2 Thinking Turbo,kimi-k2-thinking-turbo,3,62,kimi-k2-thinking kimi-k2 kimi-k2-0905
 arena,Grok 4.20 Beta 1,grok-4-20-beta-1,3,59,grok-4-20 grok-4-0709
 livebench,gpt-5.1-codex-max-xhigh,gpt-5-1-codex-max,2,57,gpt-5-1-codex gpt-5-1 gpt-5
@@ -25,7 +46,10 @@ arena,WizardLM 13B,wizardlm-13b,2,42,wizardlm-13b-v1-2
 arena,Gemini Pro,gemini-pro,2,40,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
 arena,Inkling 2 Small,inkling-2-small,3,40,inkling inkling-small
 arena,OpenAssistant Pythia 12B,openassistant-pythia-12b,2,40,oasst-pythia-12b-sft-v8-7k-steps
+vals,cohere/command-r-plus,command-r-plus,5,40,command-r-plus-04-2024 command-r-plus-08-2024 command-r-03-2024
 arena,Dolly 2.0 12B,dolly-2-0-12b,2,36,
+vals,together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561,llama-3-3-nemotron-super-49b-v1-42e84561,6,35,llama-3-3-nemotron-super-49b-v1
+vals,together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561-thinking,llama-3-3-nemotron-super-49b-v1-42e84561-thinking,6,35,llama-3-3-nemotron-super-49b-v1
 bfcl,ToolACE-2-8B (FC),toolace-2-8b,1,31,toolace-8b
 livebench,elephant-alpha,elephant-alpha,1,31,
 livebench,gpt-5.3-instant,gpt-5-3-instant,1,31,gpt-5 gpt-5-5-instant
@@ -39,6 +63,11 @@ livebench,grok-2,grok-2,1,25,grok-2-0813 grok-2-1212 grok-2-mini-0813
 livebench,grok-beta,grok,1,25,grok-2-0813 grok-2-1212 grok-3-beta
 livebench,perplexity-sonar,perplexity-sonar,1,25,
 livebench,learnlm-2.0-flash-experimental,learnlm-2-0-flash,1,24,
+vals,openai/gpt-5.5-codex,gpt-5-5-codex,4,21,gpt-5-5 gpt-5 gpt-5-1-codex
+vals,openai/gpt-3.5-turbo,gpt-3-5-turbo,3,19,gpt-3-5-turbo-0125 gpt-3-5-turbo-0301 gpt-3-5-turbo-0613
+matharena,Inkling 2 Small (0.99),inkling-2-small,8,16,inkling inkling-small
+vals,anthropic/claude-opus-4-8-claude-code,claude-opus-4-8-claude-code,3,16,claude-opus-4-8 claude-opus-4-20250514
+vals,openai/gpt-5.5-factory,gpt-5-5-factory,3,16,gpt-5-5 gpt-5
 mmlu-pro,DeepSeek-Chat-V2_5,deepseek-chat-v2-5,1,15,
 mmlu-pro,DeepSeek-Coder-V2-Lite-Base,deepseek-coder-v2-lite-base,1,15,deepseek-coder-v2 deepseek-coder-v2-0724
 mmlu-pro,DeepseekMath-7B-Instruct,deepseekmath-7b-instruct,1,15,
@@ -86,15 +115,92 @@ mmlu-pro,Yi-34B,yi-34b,1,15,yi-34b-200k yi-34b-chat
 mmlu-pro,Yi-6B,yi-6b,1,15,yi-6b-chat
 mmlu-pro,azerogpt,azerogpt,1,15,
 mmlu-pro,magnum-72b-v1,magnum-72b-v1,1,15,
+vals,mistralai/mistral-small-2603,mistral-small-2603,3,15,mistral-small-2402 mistral-small-2409 mistral-small-3
+vals,cursor/composer-2.5,composer-2-5,3,12,
 epoch,claude-fable-5-2_max,claude-fable-5-2,10,10,claude-fable-5 claude-fable-5-1
+vals,anthropic/claude-opus-5-5-range,claude-opus-5-5-range,2,10,claude-opus-5-5 claude-opus-5
+vals,openai/gpt-daybreak-blue,gpt-daybreak-blue,2,10,
 livebench,claude-fable-5.2,claude-fable-5-2,1,9,claude-fable-5 claude-fable-5-1
 livebench,gemini-4-hydrogen,gemini-4-hydrogen,1,9,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+vals,decision/classify-1,classify-1,1,8,
+vals,decision/clef,clef,1,8,
+vals,decision/clef-flash,clef-flash,1,8,
+vals,decision/clef-omni,clef-omni,1,8,
+vals,decision/d1,d1,1,8,
+vals,decision/d1-ultra,d1-ultra,1,8,
+vals,decision/decider-flash-v1.2,decider-flash-v1-2,1,8,
+vals,decision/decider-v1.1-27b,decider-v1-1-27b,1,8,
+vals,decision/decider-v1.2,decider-v1-2,1,8,
+vals,decision/drex-max,drex-max,1,8,
+vals,decision/drex-v1.5,drex-v1-5,1,8,
+vals,decision/drex-v2.0,drex-v2-0,1,8,
+vals,decision/jev-1.13.0,jev-1-13-0,1,8,
+vals,decision/jev-1.14,jev-1-14,1,8,
+vals,decision/mercury-decide,mercury-decide,1,8,mercury
+vals,decision/microsoft-decision-1,microsoft-decision-1,1,8,
+vals,decision/solar-decide,solar-decide,1,8,
+vals,decision/solar-decide-flash,solar-decide-flash,1,8,
+vals,decision/tev1-4b-experimental,tev1-4b,1,8,
+vals,openai/gpt-5.1-codex-max,gpt-5-1-codex-max,2,8,gpt-5-1-codex gpt-5-1 gpt-5
+vals,cohere/command-r,command-r,1,7,command-r-03-2024 command-r-08-2024 command-r7b-12-2024
+vals,google/gemini-1.0-pro-002,gemini-1-0-pro-002,1,7,gemini-1-0-pro-001 gemini-exp-1114 gemini-exp-1121
 swe-bench,Qwen 2.5,qwen-2-5,5,5,qwen-max-2025-01-25 qwen2-5-3b qwen2-5-7b
 tau2-bench,RAFT-30B-A3B,raft-30b-a3b,1,5,
+vals,anthropic/claude-fable-5-exa,claude-fable-5-exa,1,5,claude-fable-5
+vals,anthropic/claude-opus-5-5-parallel-advanced,claude-opus-5-5-parallel-advanced,1,5,claude-opus-5-5 claude-opus-5
+vals,anthropic/claude-opus-5-5-parallel-fast,claude-opus-5-5-parallel-fast,1,5,claude-opus-5-5 claude-opus-5
+vals,anthropic/claude-sonnet-5-range,claude-sonnet-5-range,1,5,claude-sonnet-5
+vals,assemblyai/universal-3-5-pro,universal-3-5-pro,1,5,
+vals,deepgram/flux-general-en,flux-general-en,1,5,
+vals,deepgram/nova-3-streaming,nova-3-streaming,1,5,
+vals,elevenlabs/scribe_v2_realtime,scribe-v2-realtime,1,5,
+vals,google/gemini-3.5-flash-exa,gemini-3-5-flash-exa,1,5,gemini-3-5-flash gemini-exp-1114 gemini-exp-1121
+vals,google_cloud/chirp_3,chirp-3,1,5,
+vals,grok/grok-2-vision-1212,grok-2-vision-1212,2,5,grok-2-0813 grok-2-1212
+vals,grok/grok-4.5-exa,grok-4-5-exa,1,5,grok-4-5 grok-4-0709
+vals,grok/grok-voice-transcribe-1.0,grok-voice-transcribe-1-0,1,5,
+vals,grok/grok-voice-transcribe-2.0,grok-voice-transcribe-2-0,1,5,
+vals,groq/whisper-large-v3,whisper-large-v3,1,5,
+vals,groq/whisper-large-v3-turbo,whisper-large-v3-turbo,1,5,
+vals,inworld/inworld-stt-1,inworld-stt-1,1,5,
+vals,meta/muse_voice_transcribe,muse-voice-transcribe,1,5,
+vals,mistral/voxtral-mini-2602,voxtral-mini-2602,1,5,
+vals,mistral/voxtral-mini-transcribe-realtime-2602,voxtral-mini-transcribe-realtime-2602,1,5,
+vals,mistralai/labs-devstral-small-2512,labs-devstral-small-2512,1,5,
+vals,openai/gpt-4o-mini-transcribe-streaming-response,gpt-4o-mini-transcribe-streaming-response,1,5,gpt-4o-mini-2024-07-18 gpt-4o-2024-05-13 gpt-4o-2024-08-06
+vals,openai/gpt-4o-transcribe,gpt-4o-transcribe,1,5,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+vals,openai/gpt-5.6-sol-exa,gpt-5-6-sol-exa,1,5,gpt-5-6-sol gpt-5
+vals,openai/gpt-5.6-sol-keenable,gpt-5-6-sol-keenable,1,5,gpt-5-6-sol gpt-5
+vals,openai/gpt-live-transcribe,gpt-live-transcribe,1,5,
+vals,reson8/resonant-1,resonant-1,1,5,
 arena,Claude Fable 5.2 (xHigh),claude-fable-5-2,1,4,claude-fable-5 claude-fable-5-1
 arena,Muse Ember (Max),muse-ember,1,4,
 arena,Spark-X2.6,spark-x2-6,1,4,spark-x2-6-4b spark-x2-6-1-7b
 arena,U2 Flash,u2-flash,1,4,
+creative-writing-v3,AlexWortega/Qwen3.8-27B-antislop,qwen3-8-27b-antislop,1,4,qwen3-8-27b
+creative-writing-v3,Altworld/Hemmingway-1,hemmingway-1,1,4,
+creative-writing-v3,NousResearch/Hermes-4-405B,hermes-4-405b,1,4,
+creative-writing-v3,THUDM/GLM-4-32B-0414,glm-4-32b-0414,1,4,glm-4-0116 glm-4-0520
+creative-writing-v3,ToastyPigeon/Gemma-3-Starshine-12B,gemma-3-starshine-12b,1,4,
+creative-writing-v3,aion-3.5,aion-3-5,1,4,
+creative-writing-v3,allura-org/Gemma-3-Glitter-12B,gemma-3-glitter-12b,1,4,
+creative-writing-v3,chatgpt-4o-latest-2025-01-29,chatgpt-4o-latest-2025-01-29,1,4,chatgpt-4o-latest-20250326
+creative-writing-v3,gemini-2.5-flash-preview,gemini-2-5-flash-unlisted,1,4,gemini-2-5-flash gemini-2-5-flash-preview-04-17 gemini-2-5-flash-preview-05-20
+creative-writing-v3,grok-4.1-fast,grok-4-1-fast,1,4,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
+creative-writing-v3,hunter-alpha,hunter-alpha,1,4,
+creative-writing-v3,ifable/gemma-2-Ifable-9B,gemma-2-ifable-9b,1,4,
+creative-writing-v3,liquid/lfm-7b,lfm-7b,1,4,
+creative-writing-v3,mistral-small-creative,mistral-small-creative,1,4,mistral-small-2402 mistral-small-2409
+creative-writing-v3,openrouter/cypher-alpha,cypher-alpha,1,4,
+creative-writing-v3,openrouter/horizon-alpha,horizon-alpha,1,4,
+creative-writing-v3,openrouter/horizon-beta,horizon,1,4,
+creative-writing-v3,openrouter/pony-alpha,pony-alpha,1,4,
+creative-writing-v3,openrouter/sherlock-dash-alpha,sherlock-dash-alpha,1,4,
+creative-writing-v3,optimus-alpha,optimus-alpha,1,4,
+creative-writing-v3,ox-alpha,ox-alpha,1,4,
+creative-writing-v3,quasar-alpha,quasar-alpha,1,4,
+creative-writing-v3,sam-paech/Darkest-muse-v1,darkest-muse-v1,1,4,
+creative-writing-v3,space-bunny-alpha,space-bunny-alpha,1,4,
 epoch,doubao-seed-2.0-lite-260428_high,doubao-seed-2-0-lite-260428,4,4,
 epoch,doubao-seed-2.0-pro-260215_high,doubao-seed-2-0-pro-260215,4,4,
 epoch,doubao-seed-2.1-pro-260628_high,doubao-seed-2-1-pro-260628,4,4,
@@ -178,7 +284,6 @@ llm-chess,grok-2,grok-2,1,4,grok-2-0813 grok-2-1212 grok-2-mini-0813
 llm-chess,grok-4-20-non-reasoning,grok-4-20-non-reasoning,1,4,grok-4-20 grok-4-0709
 llm-chess,grok-4-20-reasoning,grok-4-20-reasoning,1,4,grok-4-20 grok-4-0709
 llm-chess,grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,1,4,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
-llm-chess,grok-4-fast-reasoning,grok-4-fast-reasoning,1,4,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
 llm-chess,inception-mercury-3-high,inception-mercury-3,1,4,
 llm-chess,k2-think@iq4_xs,k2-think-iq4-xs,1,4,k2-think
 llm-chess,llama3.1-8b,llama-3-1-8b-unlisted,1,4,llama-3-1-8b llama-3-1-8b-base llama-3-1-8b-ultramedical
@@ -193,8 +298,15 @@ llm-chess,qwen-max,qwen-max,1,4,qwen-max-2024-09-19 qwen-max-2025-01-25 qwen3-ma
 llm-chess,qwen-plus,qwen-plus,1,4,qwen-plus-2024-11-27 qwen-plus-2025-01-25 qwq-plus
 llm-chess,qwen3-next-80b-a3b,qwen3-next-80b-a3b,1,4,qwen3-next-80b-a3b-instruct qwen3-next-80b-a3b-thinking
 llm-chess,unsloth/qwen3.8-27b@q2_k_xl,qwen3-8-27b-q2-k-xl,1,4,qwen3-8-27b
+matharena,AlephProver,alephprover,2,4,
+matharena,Claude-3.5-Sonnet,claude-3-5-sonnet,2,4,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude-3-7-sonnet-20250219
+matharena,gpt-4o,gpt-4o,2,4,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 tau2-bench,Distyl ButtonAgent,distyl-buttonagent,1,4,
 tau2-bench,Grok 4.1 fast,grok-4-1-fast,1,4,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
+vals,alibaba/qwen3-vl-plus-2025-09-23,qwen3-vl-plus-2025-09-23,2,4,qwen3-5-plus qwen3-6-plus qwen3-7-plus
+vals,azure_speech/universal-language-model,universal-language-model,1,4,
+vals,cartesia/ink-2,ink-2,1,4,
+vals,cohere/cohere-transcribe-03-2026,cohere-transcribe-03-2026,1,4,
 aider-polyglot,DeepSeek Chat V2.5,deepseek-chat-v2-5,1,3,
 aider-polyglot,DeepSeek Chat V3 (prev),deepseek-chat-v3,1,3,
 aider-polyglot,DeepSeek R1 + claude-3-5-sonnet-20241022,deepseek-r1-plus-claude-3-5-sonnet-20241022,1,3,deepseek-r1 deepseek-r1-0528
@@ -212,7 +324,6 @@ confabulations,Claude 3.7 Sonnet Thinking 16K,claude-3-7-sonnet-thinking-16k,1,3
 confabulations,Claude Opus 4 Thinking 16K,claude-opus-4-thinking-16k,1,3,claude-opus-4-20250514
 confabulations,Claude Opus 4.1 Thinking 16K,claude-opus-4-1-thinking-16k,1,3,claude-opus-4-1-20250805 claude-opus-4-20250514
 confabulations,Claude Sonnet 4 Thinking 16K,claude-sonnet-4-thinking-16k,1,3,claude-sonnet-4-20250514
-confabulations,DeepSeek R1 05/28,28,1,3,
 confabulations,GPT-4o Feb 2025,gpt-4o-feb-2025,1,3,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 confabulations,GPT-4o Mar 2025,gpt-4o-mar-2025,1,3,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 confabulations,Gemini 1.5 Pro (Sept),gemini-1-5-pro,1,3,gemini-1-5-pro-001 gemini-1-5-pro-002 gemini-1-5-pro-exp-0801
@@ -222,6 +333,30 @@ confabulations,Grok 2 12-12,grok-2-12-12,1,3,grok-2-0813 grok-2-1212
 confabulations,MiniMax-Text-01,minimax-text-01,1,3,
 confabulations,Qwen 3 235B A22B 25-07 Think,qwen-3-235b-a22b-25-07-think,1,3,qwen3-235b-a22b
 confabulations,Qwen QwQ-32B 16K,qwen-qwq-32b-16k,1,3,
+creative-writing-longform,AlexWortega/Qwen3.8-27B-antislop,qwen3-8-27b-antislop,1,3,qwen3-8-27b
+creative-writing-longform,Altworld/Hemmingway-1,hemmingway-1,1,3,
+creative-writing-longform,NousResearch/Hermes-4-405B,hermes-4-405b,1,3,
+creative-writing-longform,aion-3.5,aion-3-5,1,3,
+creative-writing-longform,bytedance-seed-1.6,bytedance-seed-1-6,1,3,
+creative-writing-longform,claude-3.5-sonnet,claude-3-5-sonnet,1,3,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude-3-7-sonnet-20250219
+creative-writing-longform,ftpo-exp501,ftpo-exp501,1,3,
+creative-writing-longform,gpt-5-chat-latest-2025-08-07,gpt-5-chat-latest-2025-08-07,1,3,gpt-5-chat-20261002 gpt-5 gpt-5-2-chat-latest-20260210
+creative-writing-longform,grok-4.1-fast,grok-4-1-fast,1,3,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
+creative-writing-longform,healer-alpha,healer-alpha,1,3,
+creative-writing-longform,horizon-alpha,horizon-alpha,1,3,
+creative-writing-longform,hunter-alpha,hunter-alpha,1,3,
+creative-writing-longform,inclusionai/ling-1t,ling-1t,1,3,
+creative-writing-longform,microsoft/phi-4-multimodal-instruct,phi-4-multimodal-instruct,1,3,phi-4
+creative-writing-longform,minimax-m2-her,minimax-m2-her,1,3,minimax-m2
+creative-writing-longform,mistral-small-creative,mistral-small-creative,1,3,mistral-small-2402 mistral-small-2409
+creative-writing-longform,openrouter/aurora-alpha,aurora-alpha,1,3,
+creative-writing-longform,openrouter/bert-nebulon-alpha,bert-nebulon-alpha,1,3,
+creative-writing-longform,openrouter/sherlock-dash-alpha,sherlock-dash-alpha,1,3,
+creative-writing-longform,ox-alpha,ox-alpha,1,3,
+creative-writing-longform,sam-paech/gemma-3-27b-it-antislop,gemma-3-27b-it-antislop,1,3,gemma-3-27b
+creative-writing-longform,solar-pro-3,solar-pro-3,1,3,solar-pro-preview solar-pro-4 sonar-pro
+creative-writing-longform,sonoma-sky-alpha,sonoma-sky-alpha,1,3,
+creative-writing-longform,tngtech/DeepSeek-R1T-Chimera,deepseek-r1t-chimera,1,3,deepseek-r1 deepseek-r1-0528
 epoch,nemotron-3-ultra,nemotron-3-ultra,3,3,nemotron-3-ultra-550b-a55b
 llm-chess,amazon.nova-lite-v1,amazon-nova-lite-v1,1,3,
 llm-chess,amazon.nova-pro-v1,amazon-nova-pro-v1,1,3,
@@ -253,16 +388,16 @@ swe-bench,Honeycomb,honeycomb,3,3,
 swe-bench,RAG + ChatGPT 3.5,rag-plus-chatgpt-3-5,3,3,
 swe-bench,RAG + SWE-Llama 13B,rag-plus-swe-llama-13b,3,3,
 swe-bench,SWE-Llama,swe-llama,3,3,
+vals,anthropic/claude-sonnet-4-6-claude-code,claude-sonnet-4-6-claude-code,1,3,claude-sonnet-4-6 claude-sonnet-4-20250514
+vals,logicalintelligence/alephprover,alephprover,1,3,
 vectara-hhem,antgroup/finixs132b,finixs132b,1,3,
 vectara-hhem,xai-org/grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,1,3,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
-vectara-hhem,xai-org/grok-4-fast-reasoning,grok-4-fast-reasoning,1,3,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
 arena,nvila-internal-15b-v1,nvila-internal-15b-v1,1,2,
 elimination-game,Claude 3.7 Sonnet Thinking 16K,claude-3-7-sonnet-thinking-16k,1,2,claude-3-7-sonnet-20250219
 elimination-game,Claude Opus 4 Thinking 16K,claude-opus-4-thinking-16k,1,2,claude-opus-4-20250514
 elimination-game,Claude Opus 4.5 Thinking 16K,claude-opus-4-5-thinking-16k,1,2,claude-opus-4-5 claude-opus-4-20250514
 elimination-game,Claude Sonnet 4 Thinking 16K,claude-sonnet-4-thinking-16k,1,2,claude-sonnet-4-20250514
 elimination-game,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,1,2,claude-sonnet-4-5 claude-sonnet-4-20250514
-elimination-game,DeepSeek R1 05/28,28,1,2,
 elimination-game,GPT-4o Feb 2025,gpt-4o-feb-2025,1,2,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 elimination-game,GPT-4o Mar 2025,gpt-4o-mar-2025,1,2,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 elimination-game,Gemini 2.0 Flash Think Exp 01-21,gemini-2-0-flash-think-01-21,1,2,gemini-2-0-flash-thinking-exp-01-21 gemini-2-0-flash-001 gemini-2-0-flash-exp
@@ -279,6 +414,12 @@ epoch,kimi-k2-thinking-turbo,kimi-k2-thinking-turbo,2,2,kimi-k2-thinking kimi-k2
 epoch,open-mistral-7b,open-mistral-7b,2,2,
 epoch,open-mixtral-8x22b,open-mixtral-8x22b,2,2,
 epoch,open-mixtral-8x7b,open-mixtral-8x7b,2,2,
+eqbench3,NousResearch/Hermes-4-405B,hermes-4-405b,1,2,
+eqbench3,chatgpt-4o-latest-2025-04-25,chatgpt-4o-latest-2025-04-25,1,2,chatgpt-4o-latest-20250326
+eqbench3,gemini-2.5-flash-preview,gemini-2-5-flash-unlisted,1,2,gemini-2-5-flash gemini-2-5-flash-preview-04-17 gemini-2-5-flash-preview-05-20
+eqbench3,gpt-5-chat-latest-2025-08-07,gpt-5-chat-latest-2025-08-07,1,2,gpt-5-chat-20261002 gpt-5 gpt-5-2-chat-latest-20260210
+eqbench3,grok-4.1-fast,grok-4-1-fast,1,2,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
+eqbench3,openrouter/horizon-alpha,horizon-alpha,1,2,
 lechmazur-generalization,Arcee Trinity Large Thinking,arcee-trinity-large-thinking,1,2,
 lechmazur-generalization,ByteDance Seed2.0 Pro,bytedance-seed2-0-pro,1,2,
 lechmazur-generalization,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,1,2,gemma-4-31b
@@ -295,6 +436,11 @@ lechmazur-writing,Claude Sonnet 4.6 Thinking 16K,claude-sonnet-4-6-thinking-16k,
 lechmazur-writing,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,1,2,gemma-4-31b
 lechmazur-writing,Kimi K2.5 Thinking,kimi-k2-5-thinking,1,2,kimi-k2-5 kimi-k2 kimi-k2-0905
 lechmazur-writing,Xiaomi MiMo V2.6 Pro (thinking)※,xiaomi-mimo-v2-6-pro-thinking,1,2,
+matharena,Aristotle,aristotle,2,2,
+matharena,DeepSeek-v3.2-Speciale Agent,deepseek-v3-2-speciale-agent,1,2,deepseek-v3-2-speciale deepseek-v3-2 deepseek-v3-2-exp
+matharena,GPT-5 (High) Agent,gpt-5-high-agent,1,2,gpt-5
+matharena,Gemini Deep Think 3 (12/25),gemini-deep-think-3,1,2,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+matharena,o1-pro (high),o1-pro,1,2,o3-pro
 swe-bench,Amazon Q Developer Agent (v20241202-dev),amazon-q-developer-agent,2,2,
 swe-bench,Amazon Q Developer Agent (v20250405-dev),amazon-q-developer-agent,2,2,
 swe-bench,AppMap Navie v2,appmap-navie-v2,2,2,
@@ -315,6 +461,7 @@ swe-bench,https://huggingface.co/agentica-org/DeepSWE-Preview,deepswe,2,2,
 tau2-bench,PrincipledMachines Cortex 0.1,principledmachines-cortex-0-1,1,2,
 terminal-bench,Fable 5.2,claude-fable-5-2,1,2,claude-fable-5 claude-fable-5-1
 terminal-bench,Inkling Small 2,inkling-small-2,1,2,inkling-small inkling
+vals,devin/swe-1-6-fast,swe-1-6-fast,1,2,
 arena,Diffbot-Small-XL,diffbot-small-xl,1,1,
 arena,GPT-4o (Search),gpt-4o,1,1,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 arena,Grok 4.1 Fast (Search),grok-4-1-fast,1,1,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
@@ -347,7 +494,6 @@ epoch,MPT-30B,mpt-30b,1,1,mpt-30b-chat opt-30b mpt-7b
 epoch,Mistral Large,mistral-large,1,1,mistral-large-2402 mistral-large-2407 mistral-large-2
 epoch,Mixtral 8x22B,mixtral-8x22b,1,1,mixtral-8x22b-v0-1 mixtral-8x22b-instruct-v0-1
 epoch,Mixtral 8x7B,mixtral-8x7b,1,1,mixtral-8x7b-v0-1 mixtral-8x7b-instruct-v0-1
-epoch,Nemotron 3 Ultra,nemotron-3-ultra,1,1,nemotron-3-ultra-550b-a55b
 epoch,Nemotron-4 15B,nemotron-4-15b,1,1,
 epoch,PaLM 2-L,palm-2-l,1,1,palm-62b palm-8b
 epoch,PaLM 2-M,palm-2-m,1,1,palm-62b palm-8b
@@ -371,6 +517,8 @@ lechmazur-debate,ByteDance Seed2.0 Pro,bytedance-seed2-0-pro,1,1,
 lechmazur-debate,Grok 4.20 0309 (Non-Reasoning),grok-4-20-0309,1,1,grok-4-20 grok-4-0709
 lechmazur-debate,Kimi K2.5 Thinking,kimi-k2-5-thinking,1,1,kimi-k2-5 kimi-k2 kimi-k2-0905
 lechmazur-debate,Muse Wonder 1.0 (high),muse-wonder-1-0,1,1,muse-wonder
+matharena,Gemini IMO Deep Think,gemini-imo-deep-think,1,1,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+matharena,Leanstral 1.5,leanstral-1-5,1,1,
 mmlu-pro,Cohere-Aya-Vision,cohere-aya-vision,1,1,
 mmlu-pro,Doubao-1.5-Pro,doubao-1-5-pro,1,1,
 mmlu-pro,ERNIE-4.5-21B-A3B-Base,ernie-4-5-21b-a3b-base,1,1,ernie-4-5-21b-a3b
@@ -427,12 +575,22 @@ nyt-connections,Ling 2.6 1T,ling-2-6-1t,1,1,ring-2-6-1t
 nyt-connections,Muse Wonder 1.0 (high reasoning),muse-wonder-1-0,1,1,muse-wonder
 nyt-connections,Nemotron 3 Super,nemotron-3-super,1,1,nemotron-3-super-120b-a12b
 nyt-connections,Qwen 3 Max Thinking,qwen-3-max-thinking,1,1,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+simplebench,Claude Fable,claude-fable,1,1,claude-fable-5 claude-fable-5-1
+simplebench,Claude Fable 5.2,claude-fable-5-2,1,1,claude-fable-5 claude-fable-5-1
+simplebench,Command R+,command-r-plus,1,1,command-r-plus-04-2024 command-r-plus-08-2024 command-r-03-2024
+simplebench,GPT-3.5 Turbo,gpt-3-5-turbo,1,1,gpt-3-5-turbo-0125 gpt-3-5-turbo-0301 gpt-3-5-turbo-0613
+simplebench,GPT-5.6 Sol Pro (xhigh),gpt-5-6-sol-pro,1,1,gpt-5-6-sol gpt-5
+simplebench,GPT-6 Astra Pro,gpt-6-astra-pro,1,1,gpt-6-astra
+simplebench,Gemini 2.5 Pro (03-25),gemini-2-5-pro-03-25,1,1,gemini-2-5-pro gemini-2-5-pro-exp-03-25 gemini-2-5-pro-preview-03-25
+simplebench,Grok 2,grok-2,1,1,grok-2-0813 grok-2-1212 grok-2-mini-0813
+simplebench,Grok 4.1 Fast,grok-4-1-fast,1,1,grok-4-1 grok-4-0709 grok-4-1-fast-reasoning
+simplebench,Muse Ember,muse-ember,1,1,
+simplebench,Ox Alpha,ox-alpha,1,1,
 step-game,Claude 3.7 Sonnet Thinking 16K,claude-3-7-sonnet-thinking-16k,1,1,claude-3-7-sonnet-20250219
 step-game,Claude Opus 4 Thinking 16K,claude-opus-4-thinking-16k,1,1,claude-opus-4-20250514
 step-game,Claude Opus 4.1 Thinking 16K,claude-opus-4-1-thinking-16k,1,1,claude-opus-4-1-20250805 claude-opus-4-20250514
 step-game,Claude Sonnet 4 Thinking 16K,claude-sonnet-4-thinking-16k,1,1,claude-sonnet-4-20250514
 step-game,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,1,1,claude-sonnet-4-5 claude-sonnet-4-20250514
-step-game,DeepSeek R1 05/28,28,1,1,
 step-game,DeepSeek V3.1 Non-Think,deepseek-v3-1-non-think,1,1,deepseek-v3-1 deepseek-v3 deepseek-v3-0324
 step-game,DeepSeek V3.1 Reasoner,deepseek-v3-1-reasoner,1,1,deepseek-v3-1 deepseek-v3 deepseek-v3-0324
 step-game,GPT-4o Feb 2025,gpt-4o-feb-2025,1,1,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
@@ -533,3 +691,4 @@ terminal-bench,Warp + claude-haiku-4-5-20251001 + claude-sonnet-4-5-20250929 + g
 terminal-bench,Warp + claude-haiku-4-5-20251001 + gemini-3-pro-preview + gpt-5-nano,warp-plus-claude-haiku-4-5-20251001-plus-gemini-3-pro-preview-plus-gpt-5-nano,1,1,
 terminal-bench,gpt-5.1-codex-max,gpt-5-1-codex-max,1,1,gpt-5-1-codex gpt-5-1 gpt-5
 terminal-bench,gpt-oss-20b-rl,gpt-oss-20b-rl,1,1,gpt-oss-20b
+vals,aristotle/aristotle,aristotle,1,1,

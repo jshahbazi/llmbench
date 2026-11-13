@@ -10,7 +10,7 @@ import { html, raw, up, type Html } from './html.ts';
 /** Text ending in a full stop, for attributions followed by more text. */
 const sentence = (t: string) => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`);
 import type { SiteData } from './data.ts';
-import type { Download } from './exports.ts';
+import { SQLITE_SCHEMA, type Download } from './exports.ts';
 
 export const SITE_URL = (process.env['SITE_URL'] ?? 'https://llmbench.site').replace(/\/$/, '');
 const ALL_RUN_BY = new Set([0, 1, 2]);
@@ -26,6 +26,7 @@ const NAV: Array<[string, string, string]> = [
   ['sources', 'sources/', 'Sources'],
   ['method', 'method/', 'Method'],
   ['data', 'data/', 'Data'],
+  ['sql', 'sql/', 'SQL'],
 ];
 
 function layout(o: { title: string; description: string; depth: number; active: string; body: Html; path: string; script?: string }): string {
@@ -301,6 +302,7 @@ ${events.length ? html`<ul class="history">${events.map((e) => {
 
   pages.push({ path: 'method/', html: methodPage() });
   pages.push({ path: 'data/', html: dataPage(d, downloads) });
+  pages.push({ path: 'sql/', html: sqlPage(d, downloads) });
   pages.push({
     path: '404.html',
     html: layout({ title: 'Not found — llmbench', description: 'Page not found.', depth: 0, active: '', path: '404.html', body: html`<h1>Not found</h1><p>That page does not exist. Try the <a href="/">explorer</a> or the <a href="/benchmarks/">list of benchmarks</a>.</p>` }),
@@ -436,6 +438,60 @@ function size(bytes: number): string {
   return bytes >= 1e6 ? `${(bytes / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1e3))} kB`;
 }
 
+/** Tables and views in a schema, with their columns, for the SQL page. */
+export function schemaTables(sql: string): Array<{ name: string; kind: 'table' | 'view'; columns: string[] }> {
+  const out: Array<{ name: string; kind: 'table' | 'view'; columns: string[] }> = [];
+  for (const m of sql.matchAll(/CREATE TABLE (\w+) \(([^;]*)\);/g)) {
+    const columns = m[2]!
+      .split(/,(?![^(]*\))/)
+      .map((c) => c.trim().split(/\s+/)[0]!)
+      .filter((c) => c && !/^(PRIMARY|FOREIGN|UNIQUE|CHECK|CONSTRAINT)$/i.test(c));
+    out.push({ name: m[1]!, kind: 'table', columns });
+  }
+  for (const m of sql.matchAll(/CREATE VIEW (\w+) AS\s+SELECT ([\s\S]*?)\s+FROM/g)) {
+    out.push({ name: m[1]!, kind: 'view', columns: m[2]!.split(',').map((c) => c.trim().split(/\s+AS\s+|\./i).pop()!.trim()) });
+  }
+  return out;
+}
+
+export const SQL_EXAMPLES: Array<[string, string]> = [
+  ['Benchmarks with the most models', `SELECT id, label, source, models\nFROM benchmarks\nORDER BY models DESC\nLIMIT 20;`],
+  ['Best score per model on one benchmark', `SELECT m.name AS model, max(s.value) AS best, count(*) AS runs\nFROM scores s JOIN models m ON m.id = s.model_id\nWHERE s.benchmark_id = 'cais:hle'\nGROUP BY m.id\nORDER BY best DESC\nLIMIT 20;`],
+  ["One model's scores everywhere", `SELECT source, benchmark, value, unit, run_by, context\nFROM scores_named\nWHERE model = 'Claude Opus 5.5'\nORDER BY source, benchmark;`],
+  ['Makers\' own numbers next to an independent run', `-- Humanity's Last Exam: model makers' reports (via whatmodel, 0-1) against CAIS's runs (0-100)\nSELECT m.name AS model,\n  round(max(CASE WHEN s.benchmark_id = 'whatmodel:hle' THEN s.value * 100 END), 1) AS reported,\n  round(max(CASE WHEN s.benchmark_id = 'cais:hle' THEN s.value END), 1) AS cais\nFROM scores s JOIN models m ON m.id = s.model_id\nWHERE s.benchmark_id IN ('whatmodel:hle', 'cais:hle')\nGROUP BY m.id\nHAVING reported IS NOT NULL AND cais IS NOT NULL\nORDER BY cais DESC;`],
+  ['Models with the most benchmarks', `SELECT m.name, m.provider, count(DISTINCT s.benchmark_id) AS benchmarks\nFROM scores s JOIN models m ON m.id = s.model_id\nGROUP BY m.id\nORDER BY benchmarks DESC\nLIMIT 20;`],
+  ['Sources and how their data may be reused', `SELECT id, name, license, reuse, rows\nFROM sources\nORDER BY rows DESC;`],
+];
+
+function sqlPage(d: SiteData, downloads: readonly Download[]): string {
+  const u = up(1);
+  const db = downloads.find((f) => f.file === 'llmbench.sqlite');
+  const tables = schemaTables(SQLITE_SCHEMA);
+  const first = SQL_EXAMPLES[0]![1];
+  const body = html`
+<h1>SQL console</h1>
+<p>Query everything llmbench holds with SQL, in your browser. The first query loads SQLite (about 1 MB) and the <a href="${u}data/#downloads">database download</a>${db ? html` (${size(db.bytes)}, a few MB compressed)` : ''}, built ${day(d.index.generated_at)}. Nothing you type leaves your browser, and any changes you make stay in this tab.</p>
+<noscript><p class="notice">The SQL console needs JavaScript. The <a href="${u}data/#downloads">SQLite file</a> works with any SQLite tool.</p></noscript>
+<form id="sql-form" class="sql" data-db="${u}downloads/llmbench.sqlite" data-vendor="${u}vendor/sql.js/">
+<label for="sql-q">Query</label>
+<textarea id="sql-q" name="q" rows="9" spellcheck="false" autocapitalize="off" autocomplete="off">${first}</textarea>
+<p class="sql-actions"><button type="submit" id="sql-run">Run</button> <span class="muted">or Ctrl+Enter</span>
+<button type="button" id="sql-csv" disabled>Download CSV</button>
+<button type="button" id="sql-link">Copy link</button></p>
+</form>
+<p id="sql-status" class="muted" role="status" aria-live="polite"></p>
+<div id="sql-out" class="table-scroll"></div>
+<h2>Examples</h2>
+<ul class="sql-examples">${SQL_EXAMPLES.map(([label, q]) => html`<li><button type="button" class="link" data-q="${q}">${label}</button></li>`)}</ul>
+<h2>Tables</h2>
+<p>Scores are on each source's own scale (unit <code>fraction</code> is 0 to 1, <code>percent</code> 0 to 100). Benchmark ids are <code>source:metric</code>, as in the explorer's links. <code>scores_named</code> joins the names in for you.</p>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Table</th><th scope="col">Columns</th></tr></thead><tbody>
+${tables.map((t) => html`<tr><td><code>${t.name}</code>${t.kind === 'view' ? html` <span class="muted">view</span>` : ''}</td><td>${t.columns.map((c, i) => html`${i ? ', ' : ''}<code>${c}</code>`)}</td></tr>`)}
+</tbody></table></div>
+`;
+  return layout({ title: 'SQL console — llmbench', description: 'Query every llmbench score with SQL in your browser.', depth: 1, active: 'sql', body, path: 'sql/', script: 'js/sql.js' });
+}
+
 function dataPage(d: SiteData, downloads: readonly Download[]): string {
   const u = up(1);
   const body = html`
@@ -447,7 +503,7 @@ ${downloads.length
 ${downloads.map((f) => html`<tr><td><a href="${u}downloads/${f.file}" download>${f.file}</a></td><td>${f.format}</td><td class="num">${f.rows.toLocaleString('en')}</td><td class="num">${size(f.bytes)}</td><td>${f.description}</td></tr>`)}
 </tbody></table></div>
 <p>Values are on each source's own scale: unit “fraction” runs from 0 to 1, “percent” from 0 to 100, and “elo” is a rating. A model can have several scores for one benchmark (re-runs, reasoning efforts, agent set-ups); <code>context</code> says how each was run. Models not in the catalogue have <code>in_catalogue</code> false and no maker, date or size.</p>
-<p>For example, with <a href="https://duckdb.org">DuckDB</a>:</p>
+<p>To query everything in your browser, use the <a href="${u}sql/">SQL console</a>. Or, for example, with <a href="https://duckdb.org">DuckDB</a>:</p>
 <pre><code>SELECT model, benchmark, max(value) AS best
 FROM 'https://llmbench.site/downloads/llmbench-scores.parquet'
 WHERE source = 'bfcl' AND benchmark = 'Overall Acc'
