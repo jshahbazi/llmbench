@@ -312,6 +312,7 @@ mistral-large,Mistral Large,epoch,1
 mistral-large-2512,mistral-large (2512),vals,87
 mistral-large-4-oss,mistral-large-4-oss,vals,157
 mistral-medium,mistral-medium,kagi,4
+mistral-medium-latest,mistral-medium-latest,models-dev,1
 mistral-nemo-12b-instruct,mistral-nemo-12b-instruct,llm-chess,3
 mistral-nemo-base-2407,Mistral-Nemo-Base (2407),mmlu-pro,15
 mistral-small,mistral-small,kagi,4

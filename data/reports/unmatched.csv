@@ -442,6 +442,7 @@ mmlu-pro,Seed-Thinking-v1.5,seed-thinking-v1-5,1,1,
 mmlu-pro,Seed1.6-Ada-Thinking,seed1-6-ada-thinking,1,1,seed-1-6
 mmlu-pro,Seed1.6-Base,seed1-6-base,1,1,seed-1-6
 mmlu-pro,SkyThought-T1,skythought-t1,1,1,
+models-dev,mistral/mistral-medium-latest,mistral-medium-latest,1,1,mistral-medium-2312 mistral-medium-2505 mistral-medium-3-1
 nyt-connections,Arcee Trinity Large Thinking,arcee-trinity-large-thinking,1,1,
 nyt-connections,Claude Opus 4.5 Thinking 16K,claude-opus-4-5-thinking-16k,1,1,claude-opus-4-5 claude-opus-4-20250514 claude
 nyt-connections,Claude Opus 4.6 Thinking 16K,claude-opus-4-6-thinking-16k,1,1,claude-opus-4-6 claude-opus-4-20250514 claude
