@@ -72,7 +72,6 @@ codart-ai,Codart AI,swe-bench,1
 codefuse-aais,CodeFuse-AAIS,swe-bench,1
 codefuse-cgm,CodeFuse-CGM,swe-bench,1
 codestory-aide-plus-mixed-models,CodeStory Aide + Mixed Models,swe-bench,1
-codestral-2508,codestral (2508),kagi,4
 codev,Codev,swe-bench,1
 cogito-v2-preview-deepseek-671b,cogito-v2-preview-deepseek-671b,kagi,4
 cogito-v2-preview-llama-4-scout,cogito-v2-preview-llama-4-scout,kagi,4
@@ -183,7 +182,6 @@ gpt-4-32k,gpt-4-32k,llm-chess,4
 gpt-4-mini,GPT-4-mini,mmlu-pro,1
 gpt-4o,GPT-4o,arena matharena,5
 gpt-4o-feb-2025,GPT-4o Feb 2025,elimination-game step-game confabulations,6
-gpt-4o-mar-2025,GPT-4o Mar 2025,elimination-game step-game confabulations,6
 gpt-4o-mini-transcribe-streaming-response,gpt-4o-mini-transcribe-streaming-response,vals,5
 gpt-4o-transcribe,gpt-4o-transcribe,vals,5
 gpt-5-3-codex-medium,gpt-5.3-codex-medium,llm-chess,4

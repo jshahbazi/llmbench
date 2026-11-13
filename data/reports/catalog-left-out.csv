@@ -1,7 +1,6 @@
 source,model_id,name,provider,released,catalogue_models_like_it
 models-dev,claude-opus-4-0,Claude Opus 4 (latest),Anthropic,2025-05-22,claude-opus-4-20250514 claude-opus-4-1-20250805 claude-opus-4-5
 models-dev,claude-sonnet-4-0,Claude Sonnet 4 (latest),Anthropic,2025-05-22,claude-sonnet-4-20250514 claude-sonnet-4-5 claude-sonnet-4-6
-models-dev,codestral-2508,Codestral 25.08,Mistral,2025-07-30,codestral-2501
 models-dev,deepseek-v4-pro-0423,DeepSeek V4 Pro 0423,DeepSeek,2026-04-23,deepseek-v4-pro deepseek-v4-pro-preview
 models-dev,gemini-2-0-flash,Gemini 2.0 Flash,Google,2024-12-11,gemini-2-0-flash-001 gemini-2-0-flash-exp gemini-2-0-flash-lite-001
 models-dev,gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Google,2024-12-11,gemini-2-0-flash-lite-001 gemini-2-0-flash-lite-preview-02-05 gemini-2-0-flash-001
@@ -18,7 +17,6 @@ models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra
 models-dev,grok-4-20-0309-non-reasoning,Grok 4.20 (Non-Reasoning),xAI,2026-03-09,grok-4-20 grok-4-0709 grok-4-20-multi-agent-0309
 models-dev,grok-4-fast-non-reasoning,Grok-4-Fast-Non-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
 models-dev,grok-4-fast-reasoning,Grok-4-Fast-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
-models-dev,hy4,Hy4,tencent,2026-11-04,hy4-preview
 models-dev,ling-3-1-flash,Ling 3.1 Flash,inclusionai,2026-09-29,ling-3-1-flash-1019 ling-3-0-flash ling-2-6-flash
 models-dev,longcat-2-5-preview,LongCat-2.5-Preview,meituan,2026-09-25,longcat-2-5 longcat-2-0
 models-dev,magistral-medium-latest,Magistral Medium (latest),Mistral,2025-03-17,magistral-medium-2506 magistral-medium-2507 magistral-medium-2509
@@ -50,7 +48,7 @@ epoch-models,awd-lstm-doc-fin-37m,AWD-LSTM-DOC (fin) (37M),NTT Communication Sci
 epoch-models,claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,2024-06,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude
 epoch-models,claude-3-5-sonnet-october-2024,Claude 3.5 Sonnet (October 2024),Anthropic,2024-10,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude
 epoch-models,clip-vit-l-14-336px,CLIP (ViT L/14@336px),OpenAI,2021-01,clip-resnet-50
-epoch-models,codestral,Codestral,Mistral AI,2024-05,codestral-2501 codestral-embed codestral-mamba
+epoch-models,codestral,Codestral,Mistral AI,2024-05,codestral-2501 codestral-2508 codestral-embed
 epoch-models,cohere-command-a,Cohere Command A,Cohere,2025-03,cohere-command
 epoch-models,cohere-command-a-reasoning,Cohere Command A Reasoning,Cohere,2025-08,cohere-command
 epoch-models,command-a-vision,Command A Vision,Cohere,2025-07,command-a-vision-07-2025 command-a
@@ -106,7 +104,6 @@ epoch-models,grok-3,Grok 3,xAI,2025-02,grok-3-beta grok-3-preview-02-24 grok-3-m
 epoch-models,grok-3-mini,Grok-3 mini,xAI,2025-02,grok-3-mini-beta grok-3-beta grok-3-preview-02-24
 epoch-models,grok-4,Grok 4,xAI,2025-07,grok-4-0709 grok-4-1 grok-4-3
 epoch-models,grok-4-3-beta,Grok 4.3 Beta,xAI,2026-04,grok-4-3 grok-4-0709 grok-4-1
-epoch-models,hunyuan-large,Hunyuan-Large,Tencent,2024-11,hunyuan-large-2025-02-10 hunyuan hunyuan-large-vision
 epoch-models,hunyuan-turbo,Hunyuan Turbo,Tencent,2024-09,hunyuan-turbo-0110 hunyuan-turbos-20250226 hunyuan-turbos-20250416
 epoch-models,hunyuan-turbos,Hunyuan-TurboS,Tencent,2025-03,hunyuan-turbos-20250226 hunyuan-turbos-20250416 hunyuan-turbo-0110
 epoch-models,jurassic-1-jumbo,Jurassic-1-Jumbo,AI21 Labs,2021-08,j1-jumbo jurassic-2-jumbo
@@ -148,7 +145,6 @@ epoch-models,qwen3-max-thinking,Qwen3-Max-Thinking,Alibaba,2026-01,qwen3-max-202
 epoch-models,reka-core,Reka Core,Reka AI,2024-04,reka-core-20240501 reka-core-20240904
 epoch-models,reka-flash,Reka Flash,Reka AI,2024-04,reka-flash-20240904 reka-flash-3 reka-flash-21b-20240226
 epoch-models,rl-mapping-instructions-troubleshooting,RL mapping instructions (troubleshooting),Massachusetts Institute of Technology (MIT),2009-08,rl-mapping-instructions-games
-epoch-models,seed-1-6-thinking,Seed-1.6-Thinking,ByteDance,2025-06,seed-1-6 seed-1-6-flash seed-1-6-vision
 epoch-models,solar-pro,Solar Pro,Upstage,2024-09,solar-pro-preview solar-pro-4 solar-pro2
 epoch-models,sonar-reasoning,Sonar Reasoning,Perplexity,2025-01,sonar-reasoning-pro sonar
 epoch-models,tencent-hy3,Tencent Hy3,Tencent,2026-07,
