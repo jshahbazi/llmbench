@@ -200,8 +200,13 @@ sources:
    latency, error rates), a key when model names repeat, context columns, and the repository's licence
    where GitHub or Hugging Face states one. The draft says `terms: blocked` until you have read the
    source's terms. It also tries the draft and reports the rows and metrics it would give. *Built.*
-   Asking an LLM to propose the mapping for awkward tables is still to come; the LLM would never
-   touch the values.
+   With `--ai`, Claude (Opus 5.5 by default, high effort, structured outputs, server-side refusal
+   fallback) proposes the mapping from the column profile, the first 25 rows and the rule-based
+   draft: labels, units, headline, rows to exclude, who ran the evaluations, and notes on what to
+   check. Its answer is run on every record exactly as an update run would; problems (a missing
+   column, repeated rows, a bad expression) go back to it, up to three answers in all. It maps
+   columns only: it never sees more than the sample, never touches values, and never sets
+   `license` or `terms`. *Built* (`scripts/lib/ai-draft.ts`).
 2. Paste the entry into `sources.yaml`, set `license` and `terms`.
 3. `npm run scrape -- --source <id> --dry-run` shows exactly what would be recorded and writes
    nothing. *Built.*
@@ -782,8 +787,9 @@ the CAIS AI Dashboard as a plugin. Unlisted names now join under a fuller label 
 EQ-Bench boards with no code, through two new formats (a variable in a JavaScript file, read without
 running it, and HTML tables) and three mapping options (`model_match`, `exclude`, a per-column `ci`).
 Matching learned OpenRouter's `:free`-style suffixes. 29 sources, about 111,000 scores.
-Still to do: `render: browser` (no source needs it yet), history backfill and the LLM step in
-`add-source`.
+*Fifth slice, 2026-11-13:* `npm run add-source -- <location> --ai`, Claude's draft checked on every
+record (3.2).
+Still to do: `render: browser` (no source needs it yet) and history backfill.
 
 ---
 

@@ -29,7 +29,7 @@
 #   round       decimals to keep for numeric scores, only where extra precision is noise
 #   every       how often to check (30m, 6h, 1d)
 #
-# To draft an entry for a new file: npm run add-source -- <location>
+# To draft an entry for a new file: npm run add-source -- <location>   (add --ai to have Claude draft it)
 # To try an entry without writing anything: npm run scrape -- --source <id> --dry-run
 
 defaults:

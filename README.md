@@ -41,9 +41,15 @@ leaderboard in a README), let the tool draft the entry:
 ```sh
 npm run add-source -- https://example.org/leaderboard.csv
 npm run add-source -- github:owner/repo/README.md --table 0
+npm run add-source -- https://example.org/leaderboard.csv --ai
 ```
 
-It reads the file, lists its columns, and prints an entry to check and paste into `sources.yaml`,
+It reads the file, lists its columns, and prints an entry to check and paste into `sources.yaml`.
+With `--ai`, Claude drafts the mapping instead (labels, units, rows to leave out, who ran the
+evaluations) from the columns and the first 25 rows, and the draft is run on every record before
+you see it; problems go back to Claude to fix. This sends that sample to the Claude API, so it needs
+`ANTHROPIC_API_KEY` or a profile from `ant auth login`; `--model` picks another model. Either way the
+entry comes
 with `terms: blocked` until you have read the source's terms. A source is blocked only when its
 terms forbid reuse or automated access; a missing or non-commercial licence is not a reason, and is
 labelled on the site and in every download instead. A finished entry looks like this:
