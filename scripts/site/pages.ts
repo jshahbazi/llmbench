@@ -7,6 +7,7 @@ import { pickBest, ranks, type Candidate } from '../../site/src/select.ts';
 import type { SiteColumn, SiteModel, SiteSource } from '../../site/src/types.ts';
 import { html, raw, up, type Html } from './html.ts';
 import type { SiteData } from './data.ts';
+import type { Download } from './exports.ts';
 
 export const SITE_URL = (process.env['SITE_URL'] ?? 'https://llmbench.site').replace(/\/$/, '');
 const ALL_RUN_BY = new Set([0, 1, 2]);
@@ -58,7 +59,7 @@ ${o.body}
 const runByLabel = (code: number) => RUN_BY_LABELS[code] ?? 'unknown';
 const score = (c: Candidate, col: SiteColumn) => `${fmt(c.value, col.unit)}${unitSuffix(col.unit)}`;
 const colHref = (u: string, col: SiteColumn) => `${u}benchmarks/${col.source}/${col.slug}/`;
-const modelHref = (u: string, m: SiteModel) => (m.unmatched ? `${u}sources/${m.unmatched}/#names` : `${u}models/${m.id}/`);
+const modelHref = (u: string, m: SiteModel) => `${u}models/${m.id}/`;
 const explorerHref = (u: string, params: Record<string, string | string[]>) => {
   const p = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) for (const x of Array.isArray(v) ? v : [v]) p.append(k, x);
@@ -102,17 +103,17 @@ function statusText(s: SiteSource): string {
 
 const day = (t?: string) => (t ? t.slice(0, 10) : '—');
 
-export function buildPages(d: SiteData): Page[] {
+export function buildPages(d: SiteData, downloads: readonly Download[] = []): Page[] {
   const { index } = d;
   const pages: Page[] = [];
   const sourceName = new Map(index.sources.map((s) => [s.id, s.name]));
   const best = (mi: number, ci: number) => pickBest(d.byCell.get(`${mi}:${ci}`) ?? [], index.columns[ci]!.direction, ALL_RUN_BY);
 
-  // Ranks per column among matched models, by each model's best score.
+  // Ranks per column, by each model's best score.
   const rankOf = new Map<string, number>();
   for (const [ci, ms] of d.columnModels) {
     const col = index.columns[ci]!;
-    const list = [...ms].filter((mi) => !index.models[mi]!.unmatched);
+    const list = [...ms];
     const vals = list.map((mi) => best(mi, ci)!.best.value);
     ranks(vals, col.direction).forEach((r, i) => rankOf.set(`${list[i]}:${ci}`, r));
   }
@@ -123,7 +124,6 @@ export function buildPages(d: SiteData): Page[] {
   // ---- Models ---------------------------------------------------------------------------------
   const sourceOrder = new Map(index.sources.map((s, i) => [s.id, i]));
   index.models.forEach((m, mi) => {
-    if (m.unmatched) return;
     const u = up(2);
     const cols = [...(d.modelColumns.get(mi) ?? [])].sort((a, b) => {
       const ca = index.columns[a]!;
@@ -160,8 +160,10 @@ export function buildPages(d: SiteData): Page[] {
     const body = html`
 <p class="crumbs"><a href="${u}">Explorer</a> › Models</p>
 <h1>${m.name}</h1>
-<p class="meta">${modelMeta(m)}</p>
-<p class="links">${repo ? html`<a href="${repo}" rel="noopener">Model repository</a> · ` : ''}<a href="https://whatmodel.sh/model/${m.id}" rel="noopener">whatmodel.sh page</a> (memory needed, how to run it) · <a href="${explorerHref(u, { q: m.name, min: '1' })}">Show in the explorer</a> · <a href="${explorerHref(u, { m: m.id, view: 'compare' })}">Compare with other models</a></p>
+${m.unlisted
+  ? html`<div class="notice soft"><p>Not in the model catalogue yet, so its maker, release date and size are unknown. These are names from the sources that agree with each other. If this is a catalogue model under another name, one line in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/aliases.csv">curation/aliases.csv</a> moves its scores there; to add it, use <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/models.yaml">curation/models.yaml</a>.</p></div>`
+  : html`<p class="meta">${modelMeta(m)}</p>`}
+<p class="links">${repo ? html`<a href="${repo}" rel="noopener">Model repository</a> · ` : ''}${m.unlisted ? '' : html`<a href="https://whatmodel.sh/model/${m.id}" rel="noopener">whatmodel.sh page</a> (memory needed, how to run it) · `}<a href="${explorerHref(u, { q: m.name, min: '1' })}">Show in the explorer</a> · <a href="${explorerHref(u, { m: m.id, view: 'compare' })}">Compare with other models</a></p>
 <p>${cols.length} benchmark scores from ${bySource.size} source${bySource.size === 1 ? '' : 's'}. Rank is among every model with a score in that column, using each model's best score.</p>
 ${[...bySource].map(([sid, cis]) => {
   const main = cis.filter((ci) => index.columns[ci]!.headline);
@@ -172,7 +174,7 @@ ${main.length ? scoreTable(main) : ''}
 ${subs.length ? html`<details class="subscores"${main.length ? '' : raw(' open')}><summary>${subs.length} sub-score${subs.length === 1 ? '' : 's'}</summary>${scoreTable(subs)}</details>` : ''}`;
 })}
 <h2>Names in the sources</h2>
-<ul class="names">${aliases.map((a) => html`<li><a href="${u}sources/${a.sid}/">${sourceName.get(a.sid) ?? a.sid}</a>: “${a.raw}”${a.qualifiers ? html` <span class="muted">(context: ${a.qualifiers})</span>` : ''}</li>`)}</ul>
+<ul class="names">${aliases.map((a) => html`<li><a href="${u}sources/${a.sid}/#names">${sourceName.get(a.sid) ?? a.sid}</a>: “${a.raw}” <span class="muted">(${methodText(a.method)}${a.qualifiers ? `; context: ${a.qualifiers}` : ''})</span></li>`)}</ul>
 ${changes.length ? html`<h2>Recent changes</h2><ul class="history">${changes.map((e) => html`<li>${day(e.t)} · ${sourceName.get(e.sid) ?? e.sid} · ${e.column !== undefined ? index.columns[e.column]!.label : e.metric}: ${changeText(e.op, e.from, e.to)}</li>`)}</ul>` : ''}
 `;
     pages.push({
@@ -201,8 +203,8 @@ ${siblings.length ? html`<p>Same benchmark elsewhere: ${siblings.map((s, k) => h
 <tbody>${entries.map(({ mi, b, all }) => {
     const m = index.models[mi]!;
     const rank = rankOf.get(`${mi}:${ci}`);
-    return html`<tr${m.unmatched ? raw(' class="unmatched"') : ''}><td class="num">${rank ?? ''}</td>
-<td><a href="${modelHref(u, m)}">${m.name}</a>${m.unmatched ? html` <span class="muted">(unmatched name)</span>` : ''}</td>
+    return html`<tr${m.unlisted ? raw(' class="unlisted"') : ''}><td class="num">${rank ?? ''}</td>
+<td><a href="${modelHref(u, m)}">${m.name}</a>${m.unlisted ? html` <span class="muted">(not in the catalogue)</span>` : ''}</td>
 <td class="num">${score(b.best, col)}${b.best.interval ? html`<span class="ci">${b.best.interval}</span>` : ''}${all > 1 ? html`<span class="muted" title="${all} scores for this model; best shown"> +${all - 1}</span>` : ''}</td>
 <td class="date">${b.best.date || '—'}</td><td>${runByLabel(b.best.runBy)}</td><td>${b.best.context}</td><td>${ext(b.best.url)}</td></tr>`;
   })}</tbody></table></div>
@@ -276,18 +278,18 @@ ${s.terms !== 'allowed' ? html`<p>This source is listed for the record and is no
 <div class="table-scroll"><table class="data"><thead><tr><th scope="col">Metric</th><th scope="col" class="num">Models</th><th scope="col">Tags</th></tr></thead><tbody>
 ${cols.map((c) => html`<tr><td>${c.headline ? '★ ' : ''}<a href="${colHref(u, c)}">${c.label}</a>${c.label !== c.metric ? html` <span class="muted">${c.metric}</span>` : ''}</td><td class="num">${c.coverage}</td><td>${(c.tags ?? []).join(', ')}</td></tr>`)}
 </tbody></table></div>
-<h2 id="names">Model names <span class="muted">${s.matched_names} of ${s.names} matched</span></h2>
-<p>How each name in this source was matched to a model. Unmatched names are still shown in the explorer when “Show unmatched model names” is on. Fix a match by adding a line to <code>curation/aliases.csv</code>.</p>
-<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Name in the source</th><th scope="col">Model</th><th scope="col" class="num">Scores</th><th scope="col">Context</th></tr></thead><tbody>
+<h2 id="names">Model names <span class="muted">${s.matched_names} of ${s.names} in the catalogue</span></h2>
+<p>How each name in this source was matched to a model (see the <a href="${u}method/#matching">method</a>). Names that match no catalogue model are shown as models of their own, joined with the same name from other sources. A wrong or missing match is one line in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/aliases.csv">curation/aliases.csv</a>.</p>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Name in the source</th><th scope="col">Model</th><th scope="col">Matched by</th><th scope="col" class="num">Scores</th><th scope="col">Set aside as context</th></tr></thead><tbody>
 ${names.map((n) => {
   const m = index.models[n.model]!;
-  return html`<tr${m.unmatched ? raw(' class="unmatched"') : ''}><td>${n.raw}</td><td>${m.unmatched ? html`<span class="muted">unmatched</span>` : html`<a href="${u}models/${m.id}/">${m.name}</a>`}</td><td class="num">${n.scores}</td><td>${n.qualifiers}</td></tr>`;
+  return html`<tr${m.unlisted ? raw(' class="unlisted"') : ''}><td>${n.raw}</td><td><a href="${u}models/${m.id}/">${m.name}</a></td><td>${methodText(n.method)}</td><td class="num">${n.scores}</td><td>${n.qualifiers}</td></tr>`;
 })}
 </tbody></table></div>
 <h2>Recent changes</h2>
 ${events.length ? html`<ul class="history">${events.map((e) => {
   const m = e.modelIndex !== undefined ? index.models[e.modelIndex] : undefined;
-  return html`<li>${day(e.t)} · ${m && !m.unmatched ? html`<a href="${u}models/${m.id}/">${m.name}</a>` : e.model} · ${e.column !== undefined ? index.columns[e.column]!.label : e.metric}: ${changeText(e.op, e.from, e.to)}</li>`;
+  return html`<li>${day(e.t)} · ${m ? html`<a href="${u}models/${m.id}/">${m.name}</a>` : e.model} · ${e.column !== undefined ? index.columns[e.column]!.label : e.metric}: ${changeText(e.op, e.from, e.to)}</li>`;
 })}</ul>` : html`<p class="muted">No changes recorded since this source was first imported on ${day(s.changed_at)}.</p>`}
 `}
 `;
@@ -295,13 +297,24 @@ ${events.length ? html`<ul class="history">${events.map((e) => {
   }
 
   pages.push({ path: 'method/', html: methodPage() });
-  pages.push({ path: 'data/', html: dataPage(d) });
+  pages.push({ path: 'data/', html: dataPage(d, downloads) });
   pages.push({
     path: '404.html',
     html: layout({ title: 'Not found — llmbench', description: 'Page not found.', depth: 0, active: '', path: '404.html', body: html`<h1>Not found</h1><p>That page does not exist. Try the <a href="/">explorer</a> or the <a href="/benchmarks/">list of benchmarks</a>.</p>` }),
   });
   return pages;
 }
+
+const METHODS: Record<string, string> = {
+  alias: 'curation file',
+  link: 'repository link',
+  exact: 'exact name',
+  variant: 'name minus qualifiers',
+  maker: 'name minus maker',
+  unlisted: 'not in the catalogue',
+  blocked: 'kept apart by curation',
+};
+const methodText = (method: string) => METHODS[method] ?? (method || 'not matched');
 
 function changeText(op: string, from: unknown, to: unknown): string {
   const v = (x: unknown) => (x === undefined || x === null ? '' : String(x));
@@ -313,7 +326,7 @@ function changeText(op: string, from: unknown, to: unknown): string {
 
 function explorerPage(d: SiteData): string {
   const makers = new Map<string, number>();
-  for (const m of d.index.models) if (!m.unmatched && m.provider) makers.set(m.provider, (makers.get(m.provider) ?? 0) + 1);
+  for (const m of d.index.models) if (m.provider) makers.set(m.provider, (makers.get(m.provider) ?? 0) + 1);
   const body = html`
 <h1 class="sr">llmbench explorer</h1>
 <p class="lede">Benchmark results from every listed source, side by side. Pick any columns, sort by any of them, and click a score to see where it came from.</p>
@@ -338,7 +351,8 @@ function explorerPage(d: SiteData): string {
     <label><input type="checkbox" data-runby="1" checked> submitted</label>
     <label><input type="checkbox" data-runby="2" checked> lab</label>
   </fieldset>
-  <label><input id="um" type="checkbox"> <span id="um-label">Unmatched names</span></label>
+  <label><input id="um" type="checkbox" checked> <span id="um-label">Models not in the catalogue</span></label>
+  <label title="Leave out scores from quantized models and from runs with web search or grounding"><input id="plain" type="checkbox"> Plain runs only</label>
   <label><span>Hide models with fewer than</span> <select id="min"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="10">10</option></select> <span>scores in view</span></label>
 </form>
 
@@ -385,15 +399,24 @@ function methodPage(): string {
 <h2>One column per source</h2>
 <p>The same benchmark run by two sources is often not the same measurement: different prompts, settings, versions of the question set or scoring. So each source's metric is its own column, labelled with the source. Where two columns measure the same benchmark, the benchmark page links them.</p>
 <h2>Which score a cell shows</h2>
-<p>A model can have several scores in one column: re-runs, reasoning modes, agent set-ups, or several entries in the source. The cell shows the best one that passes your filters, labelled with how the model was run, and a small number when there are others. Click the cell to see all of them.</p>
+<p>A model can have several scores in one column: re-runs, reasoning efforts, agent set-ups, or several entries in the source. The cell shows the best one that passes your filters, and a small number when there are others. Click the cell to see all of them, each with how the model was run. “Plain runs only” leaves out scores from quantized models and from runs with web search or grounding.</p>
 <h2>Who ran it</h2>
 <ul>
 <li><strong>Independent</strong>: someone other than the model's maker ran the evaluation (for example Epoch AI, or Arena's human votes).</li>
 <li><strong>Submitted</strong>: the score was submitted to a leaderboard by whoever built the model or agent, and who executed it is not established.</li>
 <li><strong>Lab</strong>: reported by the model's maker, for example in a model card or release post.</li>
 </ul>
-<h2>Matching model names</h2>
-<p>Sources name models differently. A name is matched to a model only on an exact match, after ignoring case and punctuation and setting aside qualifiers such as “(High)”, “(FC)” or a snapshot date, which are kept as context. There is no fuzzy matching: a wrong merge would mix two models' scores. Names that do not match are listed on each source's page and can be shown in the explorer.</p>
+<h2 id="matching">Matching model names</h2>
+<p>Sources name the same model differently: “o1-2024-12-17_high”, “o1 (high)” and “o1 (2024-12-17)” are one model. Each name is matched to a model in the catalogue, which is seeded from <a href="https://whatmodel.sh">whatmodel.sh</a>, and only on exact agreement, tried in this order:</p>
+<ol>
+<li><strong>Curation file.</strong> A line in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/aliases.csv">curation/aliases.csv</a> decides. It can also keep a name from being matched.</li>
+<li><strong>Repository link.</strong> The source links to the model's Hugging Face repository, and the catalogue knows that repository.</li>
+<li><strong>Exact name.</strong> The name equals a catalogue model's id, name or repository name, ignoring case and punctuation. A separator between two numbers still counts, so “OPT-1.3B” never matches “OPT-13B”, and so does “+”, so “Command R+” never matches “Command R”.</li>
+<li><strong>Name minus qualifiers.</strong> Qualifiers come off the name: reasoning effort (“High”, “_xhigh”), thinking budget (“_32K”), thinking on or off, quantization (“FP8”, “NVFP4”), calling mode (“FC”, “Prompt”), web search or grounding, release stage (“Preview”, “Beta”) and snapshot date. What is left must fit exactly one catalogue model, and a stated snapshot date must agree with that model's own. So “GPT-4o (Aug 2024)” is GPT-4o 2024-08-06, and “Mistral Large (2411)” is never Mistral Large 2402.</li>
+<li><strong>Name minus maker.</strong> The same, after a leading maker name such as “NVIDIA-” or “Amazon”, when the catalogue model is by that maker.</li>
+</ol>
+<p>Qualifiers that were set aside stay with each score as its context, so a high-effort and a low-effort run of one model remain distinguishable in the same cell. There is no fuzzy matching. When a name could be two models, such as “GPT-4o” with three dated releases in the catalogue, it is not matched at all, because a wrong merge would silently mix two models' scores.</p>
+<p>A name that matches no catalogue model still gets a row of its own, shared with the same name from other sources, and is marked “not in the catalogue”. Each source's page lists every name, the model it went to and how. Fixing a match is one line in curation/aliases.csv, and adding or correcting a model is a few lines in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/models.yaml">curation/models.yaml</a>. Names not in the catalogue, with near misses to check, are in <a href="https://github.com/jshahbazi/llmbench/blob/main/data/reports/unmatched.csv">data/reports/unmatched.csv</a>.</p>
 <h2>Dates</h2>
 <p>A score's date is the date the source gives for the evaluation. When the source gives none, no date is shown; the site never substitutes the day it first saw a score.</p>
 <h2>When a source breaks</h2>
@@ -404,18 +427,37 @@ function methodPage(): string {
   return layout({ title: 'Method — llmbench', description: 'How llmbench collects, matches and shows benchmark results.', depth: 1, active: 'method', body, path: 'method/' });
 }
 
-function dataPage(d: SiteData): string {
+function size(bytes: number): string {
+  return bytes >= 1e6 ? `${(bytes / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1e3))} kB`;
+}
+
+function dataPage(d: SiteData, downloads: readonly Download[]): string {
   const u = up(1);
   const body = html`
 <h1>Data</h1>
+<h2 id="downloads">Downloads</h2>
+${downloads.length
+  ? html`<p>Rebuilt with the site on every update, last on ${day(d.index.generated_at)}. Every score is included, not only the best one per cell, with its model, benchmark, source, date and how the model was run.</p>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">File</th><th scope="col">Format</th><th scope="col" class="num">Rows</th><th scope="col" class="num">Size</th><th scope="col">Contents</th></tr></thead><tbody>
+${downloads.map((f) => html`<tr><td><a href="${u}downloads/${f.file}" download>${f.file}</a></td><td>${f.format}</td><td class="num">${f.rows.toLocaleString('en')}</td><td class="num">${size(f.bytes)}</td><td>${f.description}</td></tr>`)}
+</tbody></table></div>
+<p>Values are on each source's own scale: unit “fraction” runs from 0 to 1, “percent” from 0 to 100, and “elo” is a rating. A model can have several scores for one benchmark (re-runs, reasoning efforts, agent set-ups); <code>context</code> says how each was run. Models not in the catalogue have <code>in_catalogue</code> false and no maker, date or size.</p>
+<p>For example, with <a href="https://duckdb.org">DuckDB</a>:</p>
+<pre><code>SELECT model, benchmark, max(value) AS best
+FROM 'https://llmbench.site/downloads/llmbench-scores.parquet'
+WHERE source = 'bfcl' AND benchmark = 'Overall Acc'
+GROUP BY ALL ORDER BY best DESC LIMIT 10;</code></pre>`
+  : html`<p>The downloads are built with the site.</p>`}
+<h2>Source files</h2>
 <p>All data is in the <a href="https://github.com/jshahbazi/llmbench/tree/main/data">data/ folder on GitHub</a> as plain text, updated by the scheduled job. Git history is the full record of every change.</p>
 <ul>
 <li><code>data/sources/&lt;source&gt;/rows.jsonl</code>: every row exactly as the source published it.</li>
 <li><code>data/sources/&lt;source&gt;/history.jsonl</code>: every score that was added, changed or removed after the first import.</li>
-<li><code>data/catalog/models.jsonl</code>: the model catalogue, seeded from whatmodel.sh.</li>
-<li><code>data/resolved/aliases.csv</code> and <code>data/reports/unmatched.csv</code>: how each source's model names were matched.</li>
+<li><code>data/catalog/models.jsonl</code>: the model catalogue, seeded from whatmodel.sh. <code>curation/models.yaml</code> adds to it and corrects it.</li>
+<li><code>data/resolved/aliases.csv</code>: every name in every source, the model it was matched to, how, and the qualifiers set aside. <code>data/resolved/unlisted.csv</code>: the models not in the catalogue.</li>
+<li><code>data/reports/unmatched.csv</code>: names not in the catalogue, most used first, with near misses to check.</li>
 </ul>
-<p>The files this site loads are also public: <a href="${u}data/index.json">index.json</a> and one <code>data/cells/&lt;source&gt;.json</code> per source. Downloads in CSV, Parquet and SQLite are planned.</p>
+<p>The files this site loads are also public: <a href="${u}data/index.json">index.json</a> and one <code>data/cells/&lt;source&gt;.json</code> per source.</p>
 <h2>Licence</h2>
 <p>The compilation is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, because it builds on the whatmodel.sh compilation. Each source keeps its own licence:</p>
 <ul>${d.index.sources

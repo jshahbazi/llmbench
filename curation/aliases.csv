@@ -1,0 +1,30 @@
+source,raw_name,model_id,note
+arena,Command R,command-r-03-2024,Arena lists the 08-2024 release separately
+arena,Command R+,command-r-plus-04-2024,Arena lists the 08-2024 release separately
+arena,Mistral Medium,mistral-medium-2312,The original Mistral Medium; Medium 3 and 3.1 came later
+arena,PaLM 2,palm-2-chat-bison,Arena's PaLM 2 entry is chat-bison-001
+epoch,Claude 2,claude-2-0,Claude 2.1 is named separately
+epoch,Gemini 2.5 Pro (Mar 2025),gemini-2-5-pro-exp-03-25,The March 2025 release; the 03-25 preview served the same model
+*,Mistral Large (2411),mistral-large-2,
+*,mistral-large-2411,mistral-large-2,
+*,mistral-large-2411 (FC),mistral-large-2,
+*,mistral-large-2411 (Prompt),mistral-large-2,
+*,mistral-small-2501,mistral-small-3,
+*,mistral-small-3-2501,mistral-small-3,
+*,mistral-small-2503,mistral-small-3-1,
+*,mistral-small-3.1-2503,mistral-small-3-1,
+*,mistral-small-2506,mistral-small-3-2,
+*,mistral-small-3.2-2506,mistral-small-3-2,
+*,Mistral-Small-2506 (Prompt),mistral-small-3-2,
+*,Mistral-small-2506 (FC),mistral-small-3-2,
+*,mistral-medium-2508,mistral-medium-3-1,
+*,Mistral NeMo,mistral-nemo-instruct-2407,
+*,open-mistral-nemo-2407,mistral-nemo-instruct-2407,
+*,Open-Mistral-Nemo-2407 (FC),mistral-nemo-instruct-2407,
+*,Open-Mistral-Nemo-2407 (Prompt),mistral-nemo-instruct-2407,
+arena,Amazon Nova Micro 1.0,nova-micro,
+arena,Amazon Nova Lite 1.0,nova-lite,
+arena,Amazon Nova Pro 1.0,nova-pro,
+bfcl,Amazon-Nova-Micro-v1:0 (FC),nova-micro,
+bfcl,Amazon-Nova-Pro-v1:0 (FC),nova-pro,
+bfcl,Amazon-Nova-2-Lite-v1:0 (FC),nova-2-lite,

@@ -1,4 +1,5 @@
-# Checks a pull request: config, types, tests and a site build from the committed data.
+# Checks a pull request: config and curation, types, tests, matching and a site build from the
+# committed data.
 # No network fetches, no secrets, read-only.
 name: ci
 
@@ -22,4 +23,5 @@ jobs:
       - run: npm run validate
       - run: npm run typecheck
       - run: npm test
+      - run: npm run resolve    # offline: matches the committed data with this branch's matcher and curation
       - run: npm run build

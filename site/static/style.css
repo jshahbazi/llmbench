@@ -41,6 +41,8 @@ a { color: var(--accent); }
 h1 { font-size: 24px; margin: 8px 0 6px; }
 h2 { font-size: 18px; margin: 24px 0 8px; }
 code { font-size: 12px; }
+pre { background: var(--head); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; overflow-x: auto; max-width: 100%; }
+pre code { font-size: 12px; }
 .muted { color: var(--muted); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 button, input, select {
@@ -84,7 +86,7 @@ table.data th, table.data td { text-align: left; padding: 4px 10px 4px 0; border
 table.data th { font-weight: 600; color: var(--muted); font-size: 12px; }
 table.data .num { text-align: right; }
 table.data tr.sub td { color: var(--muted); border-bottom-style: dotted; }
-table.data tr.unmatched td:nth-child(2) a { font-style: italic; }
+table.data tr.unlisted td:nth-child(2) a { font-style: italic; }
 .ci, .of { color: var(--muted); font-size: 12px; }
 table.data .ci { display: block; }
 table.data td.date { white-space: nowrap; }
@@ -166,7 +168,7 @@ table.matrix thead th.model button.sort { font-size: 13px; }
 table.matrix th.model input[type="checkbox"] { margin: 0 6px 0 0; vertical-align: -1px; }
 table.matrix th.model .name { font-weight: 600; overflow-wrap: anywhere; }
 table.matrix .sub { display: block; color: var(--muted); font-size: 12px; font-weight: 400; }
-table.matrix tr.unmatched th.model .name { font-style: italic; font-weight: 500; }
+table.matrix tr.unlisted th.model .name { font-style: italic; font-weight: 500; }
 table.matrix td.score {
   text-align: right;
   padding: 4px 6px;

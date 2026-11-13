@@ -1,104 +1,265 @@
 /**
- * Matches a source's model name to a catalogue model. Exact matches only, after normalising case
- * and punctuation and setting aside qualifiers the name carries. No fuzzy matching: a wrong merge
- * silently mixes two models' scores, which is worse than a missing one.
+ * Matches a source's model name to a catalogue model. Exact matches only: no fuzzy matching, because
+ * a wrong merge silently mixes two models' scores, which is worse than a missing one. In order:
  *
- *   "Gemini 4 Carbon (High)"           -> base "Gemini 4 Carbon", qualifier "High"
- *   "Claude-Opus-4-5-20251101 (FC)"    -> base "Claude-Opus-4-5", qualifiers "FC", "20251101"
- *   "Qwen/Qwen3-32B"                   -> base "Qwen3-32B"
+ *   alias    a line in curation/aliases.csv
+ *   link     the row links to a Hugging Face repository the catalogue knows
+ *   exact    the whole name equals a catalogue id, name or repository name, ignoring case and
+ *            punctuation
+ *   variant  the name minus its qualifiers (effort, snapshot, "Preview", "(FC)"...) equals one, and
+ *            exactly one catalogue model fits: a stated snapshot date must agree with the model's
+ *   maker    the same, after a leading maker name ("NVIDIA-", "Amazon ") that agrees with the
+ *            model's provider
+ *
+ * Qualifiers set aside to make a match are kept as the score's context.
  */
+import { normalize, parseName, readSnapshot, sameSnapshot, type ParsedName, type Qualifier, type Snapshot } from './names.ts';
 import type { CatalogModel } from './types.ts';
 
-export interface Split {
-  base: string;
-  qualifiers: string[];
-}
-
-const DATE_SUFFIX = /[-_ .@]((?:19|20)\d{2}-?\d{2}-?\d{2}|\d{4}|\d{2}-\d{2})$/;
-
-/** Takes trailing "(…)" / "[…]" groups and a trailing snapshot date off a name. */
-export function splitQualifiers(raw: string): Split {
-  let base = raw.trim();
-  const qualifiers: string[] = [];
-  for (;;) {
-    const m = /\s*[([]([^()[\]]*)[)\]]\s*$/.exec(base);
-    if (!m || m.index === 0) break;
-    qualifiers.unshift(m[1]!.trim());
-    base = base.slice(0, m.index).trim();
-  }
-  const slash = base.lastIndexOf('/');
-  if (slash > 0 && slash < base.length - 1) base = base.slice(slash + 1);
-  const d = DATE_SUFFIX.exec(base);
-  // Only a full date (YYYYMMDD or YYYY-MM-DD) is a snapshot; "0905" or "2507" may be a version.
-  if (d && /^(?:19|20)\d{2}-?\d{2}-?\d{2}$/.test(d[1]!)) {
-    qualifiers.push(d[1]!);
-    base = base.slice(0, d.index);
-  }
-  return { base, qualifiers };
-}
-
-export const normalize = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+export type MatchMethod = 'alias' | 'link' | 'exact' | 'variant' | 'maker';
 
 export interface Match {
   modelId: string;
-  method: 'alias' | 'id' | 'name' | 'base_name' | 'label' | 'base_label';
-  qualifiers: string[];
+  method: MatchMethod;
+  qualifiers: Qualifier[];
 }
+
+export interface NameHints {
+  /** The source's display name, when its model field is an identifier. */
+  label?: string;
+  /** A link the row gives for the model. */
+  url?: string;
+}
+
+/** source id (or "*") -> raw name -> model id, or "-" for "never match". */
+export type Aliases = Map<string, Map<string, string>>;
+export const NO_MATCH = '-';
+
+interface Member {
+  id: string;
+  snapshot?: Snapshot;
+  stage: string[];
+  provider: string;
+}
+
+const hfRepo = (url: string | undefined): string | undefined => {
+  const m = url && /^https?:\/\/huggingface\.co\/([^/?#]+)\/([^/?#]+)/i.exec(url);
+  return m && !['datasets', 'spaces'].includes(m[1]!) ? `${m[1]}/${m[2]}`.toLowerCase() : undefined;
+};
+
+const add = <K, V>(map: Map<K, Set<V>>, k: K, v: V) => {
+  let set = map.get(k);
+  if (!set) map.set(k, (set = new Set()));
+  set.add(v);
+};
+
+const sameStage = (a: readonly string[], b: readonly string[]) => a.length === b.length && a.every((x) => b.includes(x));
 
 export class Matcher {
   private readonly ids = new Set<string>();
-  private readonly byKey = new Map<string, Set<string>>();
-  /** source id -> raw name -> model id, from curation/aliases.csv */
-  private readonly aliases: Map<string, Map<string, string>>;
+  /** Normalised catalogue id or name -> model ids */
+  private readonly exactKeys = new Map<string, Set<string>>();
+  /** Normalised repository name -> model ids. Weaker: a preview and its release can share a repo. */
+  private readonly repoKeys = new Map<string, Set<string>>();
+  /** "org/name" of a Hugging Face repository -> model id */
+  private readonly repos = new Map<string, Set<string>>();
+  /** Normalised core name (qualifiers removed) -> the models it could be */
+  private readonly families = new Map<string, Map<string, Member>>();
+  /** Normalised maker word -> normalised provider names it can stand for */
+  private readonly makers = new Map<string, Set<string>>();
+  /** Model id -> the snapshot and release stage its own name states */
+  private readonly own = new Map<string, { snapshot?: Snapshot; stage: string[] }>();
+  private readonly aliases: Aliases;
 
-  constructor(catalog: readonly CatalogModel[], aliases: Map<string, Map<string, string>> = new Map()) {
+  constructor(catalog: readonly CatalogModel[], aliases: Aliases = new Map()) {
     this.aliases = aliases;
     for (const m of catalog) {
       this.ids.add(m.id);
-      const keys = new Set([normalize(m.id), normalize(m.name)]);
-      const repo = m.model_repo && /huggingface\.co\/[^/]+\/([^/?#]+)/.exec(m.model_repo)?.[1];
-      if (repo) keys.add(normalize(repo));
-      for (const k of keys) {
-        if (!k) continue;
-        let set = this.byKey.get(k);
-        if (!set) this.byKey.set(k, (set = new Set()));
-        set.add(m.id);
+      add(this.exactKeys, normalize(m.id), m.id);
+      add(this.exactKeys, normalize(m.name), m.id);
+      const repo = hfRepo(m.model_repo);
+      const repoName = repo?.split('/')[1];
+      if (repo) add(this.repos, repo, m.id);
+      if (repoName) add(this.repoKeys, normalize(repoName), m.id);
+
+      const provider = normalize(m.provider ?? '');
+      const parses = [m.name, m.id, ...(repoName ? [repoName] : [])].map(parseName);
+      const snapshot = parses.find((p) => p.snapshot)?.snapshot;
+      const stage = [...new Set(parses.flatMap((p) => p.stage))];
+      this.own.set(m.id, { ...(snapshot && { snapshot }), stage });
+      for (const p of parses) {
+        const key = normalize(p.core);
+        if (!key) continue;
+        let fam = this.families.get(key);
+        if (!fam) this.families.set(key, (fam = new Map()));
+        fam.set(m.id, { id: m.id, ...(snapshot && { snapshot }), stage, provider });
+      }
+      if (m.provider) {
+        const first = normalize(m.provider.split(/[\s(/,&]+/)[0] ?? '');
+        for (const k of new Set([provider, first])) if (k.length >= 3) add(this.makers, k, provider);
       }
     }
   }
 
-  /** The catalogue model for a normalised key, unless two models share it. */
-  private unique(key: string): string | undefined {
-    const set = this.byKey.get(key);
+  has(id: string): boolean {
+    return this.ids.has(id);
+  }
+
+  private aliasFor(source: string, raw: string): string | undefined {
+    return this.aliases.get(source)?.get(raw) ?? this.aliases.get('*')?.get(raw);
+  }
+
+  /** True when curation says this name must not be matched. */
+  blocked(source: string, raw: string): boolean {
+    return this.aliasFor(source, raw) === NO_MATCH;
+  }
+
+  private unique(map: Map<string, Set<string>>, key: string): string | undefined {
+    const set = key ? map.get(key) : undefined;
     return set && set.size === 1 ? [...set][0] : undefined;
   }
 
-  match(source: string, raw: string, label?: string): Match | undefined {
-    const alias = this.aliases.get(source)?.get(raw);
-    if (alias) return { modelId: alias, method: 'alias', qualifiers: [] };
-    if (this.ids.has(raw)) return { modelId: raw, method: 'id', qualifiers: [] };
+  /**
+   * The model whose id or name is this key, else whose repository name is. When the two disagree,
+   * neither: "Gemma 2B" is the id of the instruct model but the repository name of the base one.
+   */
+  private exactId(key: string): string | undefined {
+    const byName = this.exactKeys.get(key);
+    const byRepo = this.repoKeys.get(key);
+    if (byName) return byName.size === 1 && (!byRepo || byRepo.has([...byName][0]!)) ? [...byName][0] : undefined;
+    return this.unique(this.repoKeys, key);
+  }
 
-    const tries: Array<[string | undefined, Match['method']]> = [];
-    const s = splitQualifiers(raw);
-    tries.push([normalize(raw), 'name'], [normalize(s.base), 'base_name']);
-    let labelSplit: Split | undefined;
-    if (label) {
-      labelSplit = splitQualifiers(label);
-      tries.push([normalize(label), 'label'], [normalize(labelSplit.base), 'base_label']);
+  /**
+   * The one catalogue model a parsed name can be, or undefined. Candidates share its core name; a
+   * stated snapshot must agree; then the release stage, then "no snapshot either", break ties.
+   */
+  private pick(p: ParsedName, key: string, provider?: Set<string>): string | undefined {
+    const fam = this.families.get(key);
+    if (!fam) return undefined;
+    let list = [...fam.values()].filter((m) => sameSnapshot(p.snapshot, m.snapshot) && (!provider || provider.has(m.provider)));
+    if (p.snapshot && list.some((m) => m.snapshot)) list = list.filter((m) => m.snapshot);
+    if (list.length > 1) {
+      const staged = list.filter((m) => sameStage(m.stage, p.stage));
+      if (staged.length) list = staged;
     }
-    for (const [key, method] of tries) {
-      const id = key ? this.unique(key) : undefined;
-      if (!id) continue;
-      const qualifiers = method === 'base_name' ? s.qualifiers : method === 'base_label' ? labelSplit!.qualifiers : [];
-      return { modelId: id, method, qualifiers };
+    if (list.length > 1 && !p.snapshot) {
+      const undated = list.filter((m) => !m.snapshot);
+      if (undated.length) list = undated;
+    }
+    return list.length === 1 ? list[0]!.id : undefined;
+  }
+
+  /**
+   * Leaves out qualifiers the model's own name already states: "Ministral-8B-2410" matched to
+   * "Ministral 8B (2410)" needs no "snapshot 2410" on every score.
+   */
+  private trim(m: Match): Match {
+    const own = this.own.get(m.modelId);
+    if (!own) return m;
+    const qualifiers = m.qualifiers.filter(
+      (q) =>
+        !(q.kind === 'snapshot' && own.snapshot && sameSnapshot(readSnapshot(q.value), own.snapshot)) &&
+        !(q.kind === 'stage' && own.stage.includes(q.value)),
+    );
+    return qualifiers.length === m.qualifiers.length ? m : { ...m, qualifiers };
+  }
+
+  match(source: string, raw: string, hints: NameHints = {}): Match | undefined {
+    const m = this.find(source, raw, hints);
+    return m && this.trim(m);
+  }
+
+  private find(source: string, raw: string, hints: NameHints): Match | undefined {
+    const parsed = parseName(raw);
+    const context = parsed.pair ? [] : parsed.qualifiers;
+
+    const alias = this.aliasFor(source, raw);
+    if (alias === NO_MATCH) return undefined;
+    if (alias) return { modelId: alias, method: 'alias', qualifiers: context };
+    if (parsed.pair) return undefined;
+
+    const repo = hfRepo(hints.url);
+    const linked = repo ? this.repos.get(repo) : undefined;
+    if (linked?.size === 1) return { modelId: [...linked][0]!, method: 'link', qualifiers: context };
+
+    if (this.ids.has(raw)) return { modelId: raw, method: 'exact', qualifiers: [] };
+    const names = [raw, ...(parsed.org ? [raw.slice(parsed.org.length + 1)] : []), ...(hints.label ? [hints.label] : [])];
+    for (const n of names) {
+      const id = this.exactId(normalize(n));
+      if (id) return { modelId: id, method: 'exact', qualifiers: [] };
+    }
+
+    const parses = [parsed, ...(hints.label ? [parseName(hints.label)] : [])].filter((p) => !p.pair);
+    for (const p of parses) {
+      const id = this.pick(p, normalize(p.core));
+      if (id) return { modelId: id, method: 'variant', qualifiers: p.qualifiers };
+    }
+
+    for (const p of parses) {
+      const words = p.core.split(/[-_ ]+/).filter(Boolean);
+      for (let i = 1; i <= 2 && i < words.length; i++) {
+        const providers = this.makers.get(normalize(words.slice(0, i).join(' ')));
+        if (!providers) continue;
+        const rest = normalize(words.slice(i).join(' '));
+        if (rest.length < 3) continue;
+        const id = this.pick(p, rest, providers);
+        if (id) return { modelId: id, method: 'maker', qualifiers: p.qualifiers };
+      }
     }
     return undefined;
   }
+
+  /**
+   * Catalogue models a name nearly matches, for the unmatched report: models sharing its core name
+   * (where the match was ambiguous), then names that start with it or differ by a character or two.
+   */
+  suggest(raw: string, label?: string, limit = 3): string[] {
+    const scored = new Map<string, number>();
+    const note = (id: string, score: number) => {
+      if (!scored.has(id) || scored.get(id)! > score) scored.set(id, score);
+    };
+    for (const p of [parseName(raw), ...(label ? [parseName(label)] : [])]) {
+      const key = normalize(p.pair ? p.raw : p.core);
+      if (key.length < 3) continue;
+      for (const id of this.families.get(key)?.keys() ?? []) note(id, 0);
+      for (const map of [this.families, this.exactKeys]) {
+        for (const [k, ids] of map) {
+          let score: number | undefined;
+          if (k !== key && k.length >= 4 && (k.startsWith(key) || key.startsWith(k))) score = 1 + Math.abs(k.length - key.length) / 100;
+          else if (key.length >= 5 && Math.abs(k.length - key.length) <= 2) {
+            const d = editDistance(k, key, 2);
+            if (d > 0 && d <= 2) score = 2 + d;
+          }
+          if (score !== undefined) for (const id of ids instanceof Map ? ids.keys() : ids) note(id, score);
+        }
+      }
+    }
+    return [...scored].sort((a, b) => a[1] - b[1] || a[0].localeCompare(b[0])).slice(0, limit).map(([id]) => id);
+  }
+}
+
+/** Levenshtein distance, giving up (returning max + 1) once it exceeds `max`. */
+export function editDistance(a: string, b: string, max: number): number {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    let low = i;
+    for (let j = 1; j <= b.length; j++) {
+      const v = Math.min(prev[j]! + 1, cur[j - 1]! + 1, prev[j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1));
+      cur.push(v);
+      if (v < low) low = v;
+    }
+    if (low > max) return max + 1;
+    prev = cur;
+  }
+  return prev[b.length]!;
 }
 
 /** Parses curation/aliases.csv rows (source, raw_name, model_id) into a lookup. */
-export function aliasMap(rows: ReadonlyArray<Record<string, unknown>>): Map<string, Map<string, string>> {
-  const out = new Map<string, Map<string, string>>();
+export function aliasMap(rows: ReadonlyArray<Record<string, unknown>>): Aliases {
+  const out: Aliases = new Map();
   for (const r of rows) {
     const source = String(r['source'] ?? '').trim();
     const raw = String(r['raw_name'] ?? '');
@@ -118,4 +279,13 @@ export function toCsv(header: readonly string[], rows: ReadonlyArray<ReadonlyArr
     return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
   };
   return [header, ...rows].map((r) => r.map(cell).join(',')).join('\n') + '\n';
+}
+
+/** A URL path segment for a model with no catalogue id. */
+export function slugifyModel(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/\+/g, '-plus')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }

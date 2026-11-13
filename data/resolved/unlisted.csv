@@ -1,0 +1,97 @@
+model_id,name,sources,scores
+baichuan-2-7b,Baichuan 2-7B,epoch,1
+baichuan2-13b,Baichuan2-13B,epoch,1
+beam-1-0,Beam 1.0,epoch,1
+cerebras-gpt-13b,Cerebras-GPT-13B,epoch,1
+chatgpt-4o-latest-2025-02-15,chatgpt-4o-latest (2025-02-15),aider-polyglot,3
+chatgpt-4o-latest-2025-03-29,chatgpt-4o-latest (2025-03-29),aider-polyglot,3
+claude-3-5-sonnet,Claude 3.5 Sonnet,epoch,1
+claude-fable-5-2,Claude Fable 5.2,epoch arena,15
+claude-instant,Claude Instant,epoch,1
+command-a-03-2025-quality,command-a-03-2025-quality,aider-polyglot,3
+deepseek-chat,deepseek-chat,epoch,2
+deepseek-chat-v2-5,DeepSeek Chat V2.5,aider-polyglot,3
+deepseek-chat-v3,DeepSeek Chat V3,aider-polyglot,3
+deepseek-coder-33b,DeepSeek Coder 33B,epoch,1
+deepseek-coder-6-7b,DeepSeek Coder 6.7B,epoch,1
+deepseek-coder-v2-lite-base,DeepSeek-Coder-V2-Lite-Base,epoch,1
+deepseek-r1-plus-claude-3-5-sonnet-20241022,DeepSeek R1 + claude-3-5-sonnet-20241022,aider-polyglot,3
+deepseek-v2-may-2024,DeepSeek-V2 (May 2024),epoch,1
+diffbot-small-xl,Diffbot-Small-XL,arena,1
+dolly-2-0-12b,Dolly 2.0 12B,epoch arena,37
+doubao-seed-2-0-lite-260428,doubao-seed-2.0-lite (260428),epoch,4
+doubao-seed-2-0-pro-260215,doubao-seed-2.0-pro (260215),epoch,4
+doubao-seed-2-1-pro-260628,doubao-seed-2.1-pro (260628),epoch,4
+doubao-seed-2-1-turbo-260628,doubao-seed-2.1-turbo (260628),epoch,4
+doubao-seed-evolving,doubao-seed-evolving,epoch,4
+falcon-180b,Falcon-180B,epoch,1
+gdm-ai-co-mathematician,gdm-ai-co-mathematician,epoch,2
+gemini-1-5-flash-may-2024,Gemini 1.5 Flash (May 2024),epoch,1
+gemini-1-5-flash-sep-2024,Gemini 1.5 Flash (Sep 2024),epoch,1
+gemini-1-5-pro-may-2024,Gemini 1.5 Pro (May 2024),epoch,1
+gemini-1-5-pro-sept-2024,Gemini 1.5 Pro (Sept 2024),epoch,1
+gemini-2-5-deep-think-2025-08-01-webapp,gemini-2.5-deep-think-2025-08-01-webapp,epoch,2
+gemini-2-5-flash-lite-preview-06-17-thinking,gemini-2.5-flash-lite-preview-06-17-thinking,arena,1
+gemini-2-5-flash-lite-preview-09-2025-no-thinking,gemini-2.5-flash-lite-preview-09-2025-no-thinking,arena,1
+gemini-advanced-0514,Gemini Advanced (0514),arena,56
+gemini-pro,Gemini Pro,arena,94
+gemma-2b-unlisted,Gemma 2B,epoch,1
+gemma-7b-unlisted,Gemma 7B,epoch,1
+gpt-4o,GPT-4o,arena,1
+grok-4-1-fast,Grok 4.1 Fast,arena,1
+grok-4-20-beta-1,Grok 4.20 Beta 1,arena,59
+grok-4-heavy-web-app,grok-4-heavy-web-app,epoch,1
+inkling-2-small,Inkling 2 Small,arena,40
+intellect-1,INTELLECT-1,epoch,1
+internlm-20b,internlm-20b,epoch,1
+internlm-7b,internlm-7b,epoch,1
+kimi-k2-thinking-turbo,Kimi K2 Thinking Turbo,epoch arena,64
+llama-2-34b,Llama 2-34B,epoch,1
+llama-3-1-8b-unlisted,Llama 3.1-8B,epoch,1
+llama-3-2-90b,Llama 3.2 90B,epoch,1
+llava-1-6-34b,LLaVA 1.6 34B,arena,3
+mistral-7b-instruct,Mistral 7B Instruct,arena,50
+mistral-large,Mistral Large,epoch,1
+mixtral-8x22b,Mixtral 8x22B,epoch,1
+mixtral-8x7b,Mixtral 8x7B,epoch,1
+mpt-30b,MPT-30B,epoch,1
+muse-ember,Muse Ember,arena,4
+muse-glimmer,Muse Glimmer,arena,50
+nanbeige3-5-pro-thinking,Nanbeige3.5-Pro-Thinking,bfcl,29
+nemotron-3-ultra,Nemotron 3 Ultra,epoch,4
+nemotron-4-15b,Nemotron-4 15B,epoch,1
+nvila-internal-15b-v1,nvila-internal-15b-v1,arena,2
+o3-high-plus-gpt-4-1,o3 (high) + gpt-4.1,aider-polyglot,3
+open-llama-7b,open_llama_7b,epoch,1
+open-mistral-7b,open-mistral-7b,epoch,2
+open-mixtral-8x22b,open-mixtral-8x22b,epoch,2
+open-mixtral-8x7b,open-mixtral-8x7b,epoch,2
+openassistant-pythia-12b,OpenAssistant Pythia 12B,arena,40
+optimus-alpha,Optimus Alpha,aider-polyglot,3
+palm-2-l,PaLM 2-L,epoch,1
+palm-2-m,PaLM 2-M,epoch,1
+palm-2-s,PaLM 2-S,epoch,1
+phi-3-medium-14b,phi-3-medium 14B,epoch,1
+phi-3-mini-3-8b,phi-3-mini 3.8B,epoch,1
+phi-3-small-7-4b,phi-3-small 7.4B,epoch,1
+quasar-alpha,Quasar Alpha,aider-polyglot,3
+qwen-1-8b,Qwen-1_8B,epoch,1
+qwen-14b,Qwen-14B,epoch,1
+qwen-plus-2025-04-28,qwen-plus (2025-04-28),epoch,1
+qwen2-5-plus-1127,Qwen2.5-Plus (1127),arena,50
+qwen3-235b-a22b-diff-no-think-alibaba-api,"Qwen3 235B A22B diff, no think, Alibaba API",aider-polyglot,3
+qwen3-max,Qwen3-Max,epoch,1
+qwq-32b-plus-qwen-2-5-coder-instruct,QwQ-32B + Qwen 2.5 Coder Instruct,aider-polyglot,3
+seed-1-6,seed-1.6,epoch,4
+spark-x2-6,Spark-X2.6,arena,4
+stable-beluga-2,Stable Beluga 2,epoch,1
+toolace-2-8b,ToolACE-2-8B,bfcl,31
+u2-flash,U2 Flash,arena,4
+vicuna-13b,Vicuna 13B,arena,54
+vicuna-33b,Vicuna 33B,arena,54
+vicuna-7b,Vicuna 7B,arena,42
+wizardlm-13b,WizardLM 13B,arena,42
+wizardlm-70b,WizardLM 70B,arena,46
+xgen-7b,XGen-7B,epoch,1
+yi-6b,Yi 6B,epoch,1
+yi-9b,Yi-9B,epoch,1

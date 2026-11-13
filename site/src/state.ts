@@ -18,7 +18,10 @@ export interface ViewState {
   maker: string;
   /** Run-by codes to include: 0 independent, 1 submitted, 2 lab. */
   runBy: number[];
-  unmatched: boolean;
+  /** Include models that are not in the catalogue. */
+  unlisted: boolean;
+  /** Leave out quantized runs and runs with web search or grounding. */
+  plain: boolean;
   min: number;
   /** A column id, 'name', or '' for newest release first. */
   sort: string;
@@ -39,7 +42,8 @@ export const DEFAULTS: ViewState = {
   size: 0,
   maker: '',
   runBy: [0, 1, 2],
-  unmatched: false,
+  unlisted: true,
+  plain: false,
   min: 3,
   sort: '',
   dir: 'desc',
@@ -70,7 +74,8 @@ export function parseState(search: string): ViewState {
     size: int(p.get('size'), 0),
     maker: p.get('maker') ?? '',
     runBy: runBy.sort(),
-    unmatched: p.get('um') === '1',
+    unlisted: p.get('um') !== '0',
+    plain: p.get('plain') === '1',
     min: Math.max(0, int(p.get('min'), DEFAULTS.min)),
     sort: p.get('sort') ?? '',
     dir: p.get('dir') === 'asc' ? 'asc' : 'desc',
@@ -92,7 +97,8 @@ export function serializeState(s: ViewState): string {
   if (s.maker) p.set('maker', s.maker);
   const by = [...s.runBy].sort().join('');
   if (by !== DEFAULTS.runBy.join('')) p.set('by', by);
-  if (s.unmatched) p.set('um', '1');
+  if (!s.unlisted) p.set('um', '0');
+  if (s.plain) p.set('plain', '1');
   if (s.min !== DEFAULTS.min) p.set('min', String(s.min));
   if (s.sort) p.set('sort', s.sort);
   if (s.sort && s.dir !== 'desc') p.set('dir', s.dir);

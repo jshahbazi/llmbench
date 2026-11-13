@@ -12,6 +12,7 @@ export interface SiteSource {
   every: string;
   row_count: number;
   metric_count: number;
+  /** Distinct model names in the source, and how many matched a catalogue model. */
   names: number;
   matched_names: number;
   upstream_revision?: string;
@@ -50,8 +51,11 @@ export interface SiteModel {
   params_b?: number;
   active_b?: number;
   model_repo?: string;
-  /** Set for a source's model name that matched no catalogue model: the source id. */
-  unmatched?: string;
+  /**
+   * Not in the catalogue: names from the sources that agree with each other but match no catalogue
+   * model. No release date, size or licence is known.
+   */
+  unlisted?: true;
 }
 
 export interface SiteIndex {
@@ -60,7 +64,7 @@ export interface SiteIndex {
   columns: SiteColumn[];
   models: SiteModel[];
   tags: Array<{ id: string; label: string }>;
-  stats: { invalid_excluded: number; unparsable: number; unmatched_models: number };
+  stats: { invalid_excluded: number; unparsable: number; unlisted_models: number };
 }
 
 /** [time, op, from, to] */
@@ -68,9 +72,10 @@ export type HistoryEntry = [string, string, string | number | null, string | num
 
 /**
  * One score: [model index, column index, value, run-by code, date, context, url index,
- * interval, raw-name index, history index]. Indexes of -1 mean none.
+ * interval, raw-name index, history index, flags]. Indexes of -1 mean none. Flags: 1 quantized,
+ * 2 run with web search or grounding.
  */
-export type CellTuple = [number, number, number, number, string, string, number, string, number, number];
+export type CellTuple = [number, number, number, number, string, string, number, string, number, number, number];
 
 export interface CellsFile {
   source: string;

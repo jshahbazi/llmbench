@@ -6,7 +6,7 @@ import { buildPages, fetchUrl, sitemap } from '../scripts/site/pages.ts';
 import type { SiteData } from '../scripts/site/data.ts';
 import { applyTags, checkTags } from '../scripts/lib/tags.ts';
 import { fmt, isPermissive, paramsLabel, safeUrl, slugify } from '../site/src/format.ts';
-import { pickBest, ranks, toCsv, type Candidate } from '../site/src/select.ts';
+import { FLAG_QUANTIZED, FLAG_SEARCH, pickBest, ranks, toCsv, type Candidate } from '../site/src/select.ts';
 import { DEFAULTS, parseState, serializeState } from '../site/src/state.ts';
 
 test('URL state: defaults serialize to nothing, and every field round-trips', () => {
@@ -22,7 +22,8 @@ test('URL state: defaults serialize to nothing, and every field round-trips', ()
     size: -250,
     maker: 'Alibaba',
     runBy: [0, 1],
-    unmatched: true,
+    unlisted: false,
+    plain: true,
     min: 1,
     sort: 'bfcl:Overall Acc',
     dir: 'asc' as const,
@@ -32,6 +33,8 @@ test('URL state: defaults serialize to nothing, and every field round-trips', ()
   assert.deepEqual(parseState(serializeState(s)), s);
   // Junk in the URL falls back to defaults rather than breaking the page.
   assert.deepEqual(parseState('?n=abc&by=9x&dir=sideways&min=-4'), { ...DEFAULTS, min: 0 });
+  // Old links that asked to show unmatched names still show them (now the default).
+  assert.equal(parseState('?um=1').unlisted, true);
 });
 
 test('number formatting by unit', () => {
@@ -57,7 +60,7 @@ test('links: only http(s); slugs; fetch locations', () => {
   assert.equal(fetchUrl('hf:org/ds'), 'https://huggingface.co/datasets/org/ds');
 });
 
-const cand = (value: number, runBy: number, date = ''): Candidate => ({
+const cand = (value: number, runBy: number, date = '', flags = 0): Candidate => ({
   value,
   runBy,
   date,
@@ -67,6 +70,7 @@ const cand = (value: number, runBy: number, date = ''): Candidate => ({
   rawName: 'x',
   source: 's',
   history: null,
+  flags,
 });
 
 test('a cell shows the best included score; ties go to the newest', () => {
@@ -77,6 +81,10 @@ test('a cell shows the best included score; ties go to the newest', () => {
   assert.equal(p?.n, 2);
   assert.equal(pickBest(list, 'lower', new Set([0, 1, 2]))?.best.value, 70);
   assert.equal(pickBest(list, 'higher', new Set()), null);
+  // "Plain runs only" leaves out flagged runs, such as a quantized model's.
+  const flagged = [cand(90, 0, '', FLAG_QUANTIZED), cand(85, 0, '', FLAG_SEARCH), cand(60, 0)];
+  assert.equal(pickBest(flagged, 'higher', new Set([0]))?.best.value, 90);
+  assert.equal(pickBest(flagged, 'higher', new Set([0]), FLAG_QUANTIZED | FLAG_SEARCH)?.best.value, 60);
 });
 
 test('competition ranks and CSV escaping', () => {
@@ -117,9 +125,9 @@ test('pages escape scraped text and link every model and column', () => {
         { id: 'src', name: 'Source', homepage: 'https://src.example', terms: 'allowed', every: '6h', row_count: 2, metric_count: 1, names: 2, matched_names: 1, license: 'MIT' },
       ],
       columns: [{ id: 'src:acc', source: 'src', metric: 'acc', label: `Accuracy ${evil}`, direction: 'higher', unit: 'percent', headline: true, slug: 'acc', coverage: 1 }],
-      models: [{ id: 'm1', name: 'Model One' }, { id: 'unmatched:src:x', name: evil, unmatched: 'src' }],
+      models: [{ id: 'm1', name: 'Model One' }, { id: 'x', name: evil, unlisted: true }],
       tags: [],
-      stats: { invalid_excluded: 0, unparsable: 0, unmatched_models: 1 },
+      stats: { invalid_excluded: 0, unparsable: 0, unlisted_models: 1 },
     },
     cells: [],
     byCell: new Map([
@@ -128,14 +136,15 @@ test('pages escape scraped text and link every model and column', () => {
     ]),
     modelColumns: new Map([[0, new Set([0])], [1, new Set([0])]]),
     columnModels: new Map([[0, new Set([0, 1])]]),
-    names: new Map([['src', [{ raw: 'Model One', model: 0, method: 'name', qualifiers: '', rows: 1, scores: 1 }, { raw: evil, model: 1, method: '', qualifiers: '', rows: 1, scores: 1 }]]]),
+    names: new Map([['src', [{ raw: 'Model One', model: 0, method: 'exact', qualifiers: '', rows: 1, scores: 1 }, { raw: evil, model: 1, method: 'unlisted', qualifiers: evil, rows: 1, scores: 1 }]]]),
     history: new Map(),
+    scores: [],
     config: [],
   };
   const pages = buildPages(d);
   const paths = pages.map((p) => p.path);
-  for (const p of ['', 'models/m1/', 'benchmarks/', 'benchmarks/src/acc/', 'sources/', 'sources/src/', 'method/', 'data/', '404.html']) assert.ok(paths.includes(p), p);
-  assert.ok(!paths.some((p) => p.includes('unmatched')), 'no page for an unmatched name');
+  for (const p of ['', 'models/m1/', 'models/x/', 'benchmarks/', 'benchmarks/src/acc/', 'sources/', 'sources/src/', 'method/', 'data/', '404.html']) assert.ok(paths.includes(p), p);
+  assert.match(pages.find((p) => p.path === 'models/x/')!.html, /Not in the model catalogue/);
   for (const p of pages) {
     assert.ok(!p.html.includes('<img src=x'), `raw markup leaked into ${p.path || 'index'}`);
     assert.ok(!p.html.includes('javascript:alert'), `unsafe link in ${p.path || 'index'}`);
@@ -158,4 +167,61 @@ test('display settings from sources.yaml apply at build time', async () => {
     presentMetrics(metrics, { labels: { a: 'Alpha' }, headline: ['b'], tags: { a: ['math'] } }).map((m) => [m.label, m.headline, m.tags]),
     [['Alpha', false, ['math']], ['b', true, undefined]],
   );
+});
+
+test('downloads: CSV, Parquet and SQLite hold the same scores', async () => {
+  const { mkdtemp, readFile, rm } = await import('node:fs/promises');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { DatabaseSync } = await import('node:sqlite');
+  const { asyncBufferFromFile, parquetReadObjects } = await import('hyparquet');
+  const { writeDownloads } = await import('../scripts/site/exports.ts');
+  const d: SiteData = {
+    index: {
+      generated_at: '2026-11-13T00:00:00Z',
+      sources: [{ id: 'src', name: 'Source', homepage: 'https://src.example', terms: 'allowed', every: '6h', row_count: 2, metric_count: 1, names: 2, matched_names: 1, license: 'MIT' }],
+      columns: [{ id: 'src:acc', source: 'src', metric: 'acc', label: 'Accuracy', direction: 'higher', unit: 'percent', headline: true, slug: 'acc', coverage: 2 }],
+      models: [{ id: 'm1', name: 'Model One', provider: 'Lab', params_b: 7 }, { id: 'x', name: 'Name, with "quotes"', unlisted: true }],
+      tags: [],
+      stats: { invalid_excluded: 0, unparsable: 0, unlisted_models: 1 },
+    },
+    cells: [],
+    byCell: new Map(),
+    modelColumns: new Map(),
+    columnModels: new Map(),
+    names: new Map([['src', [{ raw: 'm-one_high', model: 0, method: 'variant', qualifiers: 'high effort', rows: 1, scores: 1 }]]]),
+    history: new Map(),
+    scores: [
+      { model: 0, column: 0, value: 71.5, raw: '71.5%', runBy: 'independent', date: '2026-01-02', context: 'high effort', rawName: 'm-one_high', url: 'https://src.example/1', ciLow: '70', ciHigh: '73', rowKey: 'a' },
+      { model: 1, column: 0, value: 60, raw: '60', runBy: 'submitted', date: '', context: '', rawName: 'Name, with "quotes"', url: '', ciLow: '', ciHigh: '', rowKey: 'b' },
+    ],
+    config: [],
+  };
+  const dir = await mkdtemp(join(tmpdir(), 'llmbench-'));
+  try {
+    const files = await writeDownloads(d, dir);
+    assert.deepEqual(files.map((f) => f.file), ['llmbench-scores.csv', 'llmbench-models.csv', 'llmbench-benchmarks.csv', 'llmbench-names.csv', 'llmbench-sources.csv', 'llmbench-scores.parquet', 'llmbench.sqlite']);
+    const csv = await readFile(join(dir, 'llmbench-scores.csv'), 'utf8');
+    assert.match(csv, /^model_id,model,in_catalogue,source,column_id,benchmark,/);
+    assert.match(csv, /x,"Name, with ""quotes""",false,src,src:acc,Accuracy,acc,60,percent,true,60,submitted,,,/);
+
+    const rows = await parquetReadObjects({ file: await asyncBufferFromFile(join(dir, 'llmbench-scores.parquet')) });
+    assert.equal(rows.length, 2);
+    assert.deepEqual([rows[0]!['model_id'], rows[0]!['value'], rows[0]!['ci_low'], rows[0]!['in_catalogue']], ['m1', 71.5, 70, true]);
+    assert.deepEqual([rows[1]!['date'], rows[1]!['ci_low']], [null, null]);
+
+    const db = new DatabaseSync(join(dir, 'llmbench.sqlite'), { readOnly: true });
+    try {
+      const got = db.prepare('SELECT model, benchmark, value, context FROM scores_named ORDER BY value DESC').all();
+      assert.deepEqual(got.map((r) => ({ ...r })), [
+        { model: 'Model One', benchmark: 'Accuracy', value: 71.5, context: 'high effort' },
+        { model: 'Name, with "quotes"', benchmark: 'Accuracy', value: 60, context: null },
+      ]);
+      assert.equal((db.prepare('SELECT in_catalogue FROM models WHERE id = ?').get('x') as { in_catalogue: number }).in_catalogue, 0);
+    } finally {
+      db.close();
+    }
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
 });
