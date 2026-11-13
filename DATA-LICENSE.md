@@ -12,7 +12,9 @@ the files the site builds from it, are a different matter.
   `upstream_source`) and that source's licence and attribution are in
   `data/sources/whatmodel/upstream-sources.jsonl`.
 - **Non-commercial sources.** Some sources are licensed for non-commercial use only (for example
-  SWE-bench, CC BY-NC 4.0). llmbench is a non-commercial project. If you reuse the data
+  SWE-bench, CC BY-NC 4.0, and the CAIS AI Dashboard, whose terms allow not-for-profit and
+  educational use with the credit "Reproduced with permission of Center for AI Safety, Inc").
+  llmbench is a non-commercial project. If you reuse the data
   commercially, leave out the rows whose `source_license` is non-commercial (`reuse` is
   `noncommercial` in the sources table).
 - **Sources with no licence.** Some sources state no licence (`none stated`). Their scores are

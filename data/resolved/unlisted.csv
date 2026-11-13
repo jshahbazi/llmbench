@@ -38,7 +38,7 @@ claude-3-7-sonnet-thinking-2048,claude-3-7-sonnet_thinking_2048,llm-chess,4
 claude-3-7-sonnet-thinking-5000,claude-3-7-sonnet_thinking_5000,llm-chess,4
 claude-4-haiku,claude-4-haiku,kagi,4
 claude-4-haiku-thinking,claude-4-haiku Thinking,kagi,4
-claude-fable-5-2,Claude Fable 5.2,epoch arena livebench nyt-connections,25
+claude-fable-5-2,Claude Fable 5.2,epoch arena terminal-bench livebench cais nyt-connections,31
 claude-fable-5-high,Claude Fable 5 (high)§,lechmazur-writing,2
 claude-haiku-4-5-thinking-16000,claude-haiku-4-5_thinking_16000,llm-chess,4
 claude-instant,Claude Instant,epoch,1
@@ -115,7 +115,6 @@ ernie-4-5-21b-a3b-base,ERNIE-4.5-21B-A3B-Base,mmlu-pro,1
 ernie-4-5-300b-a47b-base,ERNIE-4.5-300B-A47B-Base,mmlu-pro,1
 experepair-v1-0,ExpeRepair-v1.0,swe-bench,1
 experepair-v1-0-plus-claude-4-sonnet,ExpeRepair-v1.0 + Claude 4 Sonnet,swe-bench,1
-fable-5-2,Fable 5.2,terminal-bench,2
 factory-code-droid,Factory Code Droid,swe-bench,3
 falcon-180b,Falcon-180B,epoch,1
 finixs132b,finixs132b,vectara-hhem,3
@@ -189,7 +188,6 @@ grok,grok,livebench,25
 grok-2,Grok-2,livebench llm-chess mmlu-pro,44
 grok-2-12-12,Grok 2 12-12,elimination-game step-game confabulations,6
 grok-4-1-fast,Grok 4.1 fast,arena tau2-bench,5
-grok-4-2,Grok 4.2,tau2-bench,4
 grok-4-20-0309,Grok 4.20 0309,nyt-connections lechmazur-debate lechmazur-generalization,4
 grok-4-20-beta-1,Grok 4.20 Beta 1,arena,59
 grok-4-20-multi-agent-0304,Grok 4.20 Multi-Agent (0304),nyt-connections,1
@@ -256,6 +254,8 @@ magnum-72b-v1,magnum-72b-v1,mmlu-pro,15
 mammoth2-7b-plus,MAmmoTH2-7B-Plus,mmlu-pro,15
 mammoth2-8b-plus,MAmmoTH2-8B-Plus,mmlu-pro,15
 mammoth2-8x7b-plus,MAmmoTH2-8x7B-Plus,mmlu-pro,15
+manus-1-5,Manus 1.5,cais,1
+manus-1-6-max,Manus 1.6 Max,cais,1
 mcts-refine-7b,MCTS-Refine-7B,swe-bench,2
 mercury-coder,mercury-coder,kagi,4
 mercury-coder-small,mercury-coder-small,llm-chess,3

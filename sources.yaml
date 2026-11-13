@@ -219,13 +219,15 @@ sources:
       (media/data/evaluations.json) would otherwise be easy to read.
 
   - id: scale-seal
-    name: Scale SEAL leaderboards (including Humanity's Last Exam)
+    name: Scale SEAL leaderboards
     homepage: https://labs.scale.com/leaderboard
     terms: blocked
     terms_note: >-
       Scale's terms (scale.com/legal/terms, checked 2026-11-13) forbid accessing the sites "in
-      order to build a competitive product or service". Whether an aggregator counts is a
-      judgement call; left out until decided.
+      order to build a competitive product or service". Left out by decision (2026-11-13). Its
+      benchmarks come from elsewhere: Humanity's Last Exam, EnigmaEval, MASK and the Remote Labor
+      Index from the CAIS dashboard (cais), and SWE-bench Pro, MCP Atlas, MultiChallenge and SWE
+      Atlas from model makers' own reports (whatmodel).
 
   # SWE-bench: agents fixing real GitHub issues, five boards in one file. A plugin keeps runs where
   # the SWE-bench team put every model in the same minimal agent ("bash only") apart from systems
@@ -273,6 +275,24 @@ sources:
     min_rows: 400
     license: none stated
     attribution: LiveBench (livebench.ai)
+    terms: allowed
+
+  # The Center for AI Safety's own runs: Humanity's Last Exam (and HLE-Diamond), TextQuests, MASK,
+  # EnigmaEval, the Remote Labor Index, vision and safety benchmarks. CAIS co-created several of
+  # these with Scale AI and publishes its runs here. The scores sit in the page's scripts; see
+  # scripts/sources/cais.ts. Terms (safe.ai/terms-of-service, checked 2026-11-13): content may be
+  # copied and adapted "solely for not-for-profit or educational purposes", with the credit below.
+  - id: cais
+    name: CAIS AI Dashboard
+    homepage: https://dashboard.safe.ai
+    plugin: cais
+    fetch: https://dashboard.safe.ai/
+    every: 1d
+    min_rows: 50
+    license: Non-commercial use with credit (CAIS terms of use)
+    attribution: >-
+      Reproduced with permission of Center for AI Safety, Inc. CAIS AI Dashboard
+      (dashboard.safe.ai).
     terms: allowed
 
   # Lech Mazur's benchmarks. Each repository's README starts with a Markdown table of models; none

@@ -56,3 +56,5 @@ livebench,nemotron-super-vl-3.5-nvfp4,nemotron-3-5-super-vl-120b-a12b,NVFP4 weig
 livebench,nemotron-ultra-3,nemotron-3-ultra-550b-a55b,
 *,Beam 1.0,beam-1-0-501b-a23b,
 *,Nemotron 3.5 Super VL,nemotron-3-5-super-vl-120b-a12b,
+*,Grok 4.2,grok-4-20,"xAI's Grok 4.20, released 2026-03-09; CAIS and tau2-bench write 4.2"
+*,grok-4-2,grok-4-20,CAIS run id for Grok 4.20

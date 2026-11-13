@@ -75,17 +75,20 @@ const groupName = (raw: string): string => {
   if (p.pair) return raw;
   return p.snapshot ? `${coreOf(p)} (${p.snapshot.text})` : coreOf(p);
 };
+// A short name whose source gives a fuller label ("Fable 5.2", shown as "Claude Fable 5.2") is
+// grouped under the label, so it joins the sources that write the maker's name.
+const nameOf = (n: NameInfo): string => (n.label?.toLowerCase().endsWith(` ${n.raw.toLowerCase()}`) ? n.label : n.raw);
 const groups = new Map<string, NameInfo[]>();
 for (const n of unmatched) {
-  const p = parseName(n.raw);
+  const p = parseName(nameOf(n));
   const d = p.snapshot;
-  const k = p.pair ? normalize(n.raw) : `${normalize(coreOf(p))}@${d ? `${d.y ?? ''}-${d.m ?? ''}-${d.d ?? ''}-${d.four ?? ''}` : ''}`;
+  const k = p.pair ? normalize(nameOf(n)) : `${normalize(coreOf(p))}@${d ? `${d.y ?? ''}-${d.m ?? ''}-${d.d ?? ''}-${d.four ?? ''}` : ''}`;
   groups.set(k, [...(groups.get(k) ?? []), n]);
 }
 const display = (list: NameInfo[]): string => {
   const weight = new Map<string, number>();
   for (const n of list) {
-    const core = groupName(n.raw);
+    const core = groupName(nameOf(n));
     weight.set(core, (weight.get(core) ?? 0) + n.scores);
   }
   const looksNamed = (s: string) => Number(/[A-Z]/.test(s)) + Number(/ /.test(s));

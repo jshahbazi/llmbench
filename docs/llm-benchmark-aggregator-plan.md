@@ -625,6 +625,10 @@ Added in the second Phase 4 slice, after the licence decision in 10.3:
   sycophancy, Step Game and confabulations benchmarks (Markdown tables in each README), Kagi's LLM
   benchmark (a Markdown table in its docs), LLM Chess (CSV, Apache-2.0) and MMLU-Pro (CSV on Hugging
   Face, Apache-2.0, with `run_by_from` telling TIGER-Lab's runs from self-reported scores).
+- **CAIS AI Dashboard** (non-commercial use with credit, plugin): the Center for AI Safety's own runs
+  of Humanity's Last Exam and HLE-Diamond, TextQuests, MASK, EnigmaEval, the Remote Labor Index and
+  vision and safety benchmarks, read from the scores the page's scripts carry. Added to cover Scale's
+  benchmarks without Scale's site (10.3). 88 rows, 19 columns.
 
 Found and not yet added: EQ-Bench 3 and 4 and Creative Writing v3 (CSV inside the site's JavaScript;
 needs a small plugin), SimpleBench (a JavaScript literal), Vals.ai (per-benchmark JSON behind hashed
@@ -656,8 +660,22 @@ access:
 | Source | Why it is blocked |
 | :-- | :-- |
 | ARC Prize | Its terms forbid access "through automated or non-human means, whether through a bot, script or otherwise". |
-| Scale SEAL (including Humanity's Last Exam) | Its terms forbid accessing the sites "in order to build a competitive product or service". Whether an aggregator counts is the owner's call. |
+| Scale SEAL | Its terms forbid accessing the sites "in order to build a competitive product or service". Left out by the owner's decision. |
 | Artificial Analysis | whatmodel's ledger records its terms as personal, non-commercial use only and no building a similar service. |
+
+Scale's benchmarks are still covered, from other places (checked against its leaderboard list,
+2026-11-13):
+
+| Scale benchmark | Where llmbench gets it |
+| :-- | :-- |
+| Humanity's Last Exam, HLE-Diamond | CAIS dashboard (CAIS's own runs; CAIS co-created HLE) and model makers' reports via whatmodel |
+| Remote Labor Index | CAIS dashboard (CAIS co-runs it) |
+| EnigmaEval, MASK | CAIS dashboard |
+| SWE-bench Pro, MCP Atlas, MultiChallenge, SWE Atlas | Model makers' reports and papers via whatmodel |
+| Humanity's Sixth Sense, DistressBench, DrugDiscoveryBench, HiL-Bench, AudioMultiChallenge, Professional Reasoning Bench, Fortress, and the retired VISTA, TutorBench, VisualToolBench, PropensityBench, MultiNRC, SciPredict | Not found anywhere else yet |
+
+The CAIS dashboard's SWE-bench Pro and ARC-AGI-2 columns are left out: the dashboard no longer
+shows them and does not say where they came from.
 
 ### 10.4 Not usable
 
@@ -746,6 +764,9 @@ that Claude names come in both orders ("Claude 4 Sonnet", "Claude Sonnet 4"), AP
 (`-thinking-64k`, `-high-effort`, "Max Effort", `-nothinking`), Together's `-Instruct-Turbo` as FP8,
 `amazon.nova-*` maker prefixes, and that a model named "… Thinking" is its own model (a name with
 "thinking" goes to it only when the dates agree). 21 sources, about 75,000 scores.
+*Third slice, 2026-11-13:* Scale left out by decision; its benchmarks found elsewhere (10.3), adding
+the CAIS AI Dashboard as a plugin. Unlisted names now join under a fuller label their source gives
+("Fable 5.2" shown as "Claude Fable 5.2"). 22 sources, about 78,000 scores.
 Still to do: the SQL console, `render: browser` (no source needs it yet), history backfill, the LLM
 step in `add-source`, and the sources found but not yet added (10.2).
 

@@ -5,7 +5,7 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0–3 are built and Phase 4 is under way: 21 sources, change history, checks on every update,
+Phases 0–3 are built and Phase 4 is under way: 22 sources, change history, checks on every update,
 a scheduled GitHub workflow that commits new data and deploys the site, the explorer with a chart
 mode, a page for every model, benchmark and source, model-name matching you can correct in one line,
 downloads, and a command that drafts a new source's entry.
