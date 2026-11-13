@@ -1,0 +1,93 @@
+{"id":"acegpt-13b-chat","name":"AceGPT-13B-chat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/AceGPT-13B-chat","license":"apache-2.0"}
+{"id":"acegpt-7b-chat","name":"AceGPT-7B-chat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat","license":"apache-2.0"}
+{"id":"ajibawa-code-13b","name":"Code-13B (ajibawa-2023)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ajibawa-2023/Code-13B","license":"cc-by-nc-nd-4.0"}
+{"id":"ajibawa-code-33b","name":"Code-33B (ajibawa-2023)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ajibawa-2023/Code-33B","license":"cc-by-nc-nd-4.0"}
+{"id":"allam-2-7b","name":"ALLaM-2-7b","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ALLaM-AI/ALLaM-2.0-7B-Instruct"}
+{"id":"apodex-1-1-mini","name":"Apodex 1.1 Mini","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/apodex/Apodex-1.1-mini","params_b":35.95,"license":"apache-2.0"}
+{"id":"asure-12b","name":"Trendyol Asure 12B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Trendyol/Trendyol-LLM-Asure-12B","params_b":12.19,"license":"gemma"}
+{"id":"autoglm-phone-9b-multilingual","name":"AutoGLM Phone 9B Multilingual","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/zai-org/AutoGLM-Phone-9B-Multilingual","license":"mit"}
+{"id":"baichuan-13b-chat","name":"Baichuan-13B-Chat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/baichuan-inc/Baichuan-13B-Chat"}
+{"id":"baichuan-m1-14b-instruct","name":"Baichuan-M1-14B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/baichuan-inc/Baichuan-M1-14B-Instruct","params_b":14.47}
+{"id":"baichuan2-7b-base","name":"Baichuan2-7B-Base","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/baichuan-inc/Baichuan2-7B-Base","license":"other"}
+{"id":"baize-v2-7b","name":"Baize v2 7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/project-baize/baize-v2-7b","license":"cc-by-nc-4.0"}
+{"id":"biomistral-7b","name":"BioMistral-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/BioMistral/BioMistral-7B","license":"apache-2.0"}
+{"id":"c4ai-aya-vision-8b","name":"Aya Vision 8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/aya-vision-8b","params_b":8.63,"license":"cc-by-nc-4.0"}
+{"id":"chatglm3-6b-128k","name":"ChatGLM3 6B 128K","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/zai-org/chatglm3-6b-128k"}
+{"id":"command-a-reasoning-08-2025","name":"Command A Reasoning (08-2025)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/command-a-reasoning-08-2025","params_b":111.06,"license":"cc-by-nc-4.0"}
+{"id":"command-a-vision-07-2025","name":"Command A Vision (07-2025)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/command-a-vision-07-2025","params_b":111.87,"license":"cc-by-nc-4.0"}
+{"id":"deepseek-v4-1-flash-1017","name":"DeepSeek V4.1 Flash 1017","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017","license":"mit"}
+{"id":"devstral-small-2507","name":"Devstral Small","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mistralai/Devstral-Small-2507","params_b":23.57,"license":"apache-2.0"}
+{"id":"dolphin-2-6-mixtral-8x7b","name":"Dolphin 2.6 Mixtral 8x7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/dphn/dolphin-2.6-mixtral-8x7b","license":"apache-2.0"}
+{"id":"dracarys-llama-3-1-70b-instruct","name":"Dracarys Llama 3.1 70B Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/abacusai/Dracarys-Llama-3.1-70B-Instruct","params_b":70.55,"license":"llama3"}
+{"id":"fusechat-gemma-2-9b-instruct","name":"FuseChat-Gemma-2-9B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Gemma-2-9B-Instruct","params_b":9.24}
+{"id":"fusechat-llama-3-2-1b-instruct","name":"FuseChat-Llama-3.2-1B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Llama-3.2-1B-Instruct","params_b":1.24}
+{"id":"fusechat-llama-3-2-3b-instruct","name":"FuseChat-Llama-3.2-3B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Llama-3.2-3B-Instruct","params_b":3.21}
+{"id":"fusechat-qwen-2-5-7b-instruct","name":"FuseChat-Qwen-2.5-7B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Qwen-2.5-7B-Instruct","params_b":7.62}
+{"id":"gemma-2-9b-it-dpo","name":"Gemma 2 9B IT DPO (Princeton)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/princeton-nlp/gemma-2-9b-it-DPO","params_b":9.24}
+{"id":"gemma-2-9b-it-wpo-hb","name":"gemma-2-9b-it-WPO-HB","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/wzhouad/gemma-2-9b-it-WPO-HB","params_b":9.24}
+{"id":"gemma-sea-lion-v4-27b-it","name":"Gemma-SEA-LION-v4-27B-IT","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/aisingapore/Gemma-SEA-LION-v4-27B-IT","params_b":27.43,"license":"mit"}
+{"id":"glm-4-6v-flash","name":"GLM-4.6V-Flash","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/zai-org/GLM-4.6V-Flash","params_b":10.29,"license":"mit"}
+{"id":"gpt-oss-safeguard-120b","name":"GPT OSS Safeguard 120B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openai/gpt-oss-safeguard-120b","license":"apache-2.0"}
+{"id":"gpt-oss-safeguard-20b","name":"GPT OSS Safeguard 20B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openai/gpt-oss-safeguard-20b","license":"apache-2.0"}
+{"id":"kolibri-1","name":"Kolibri 1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Aleph-Alpha/Kolibri-1","params_b":78.1,"license":"apache-2.0"}
+{"id":"krutrim-2-instruct","name":"Krutrim-2 Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct","license":"krutrim-community-license-agreement-version-1.0"}
+{"id":"lightonocr-3-0-8b","name":"LightOnOCR-3 0.8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lightonai/LightOnOCR-3-0.8B","params_b":0.85,"license":"apache-2.0"}
+{"id":"ling-3-0-flash-fin","name":"Ling 3.0 Flash Fin","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin","params_b":127.49,"license":"mit"}
+{"id":"ling-3-0-flash-vl","name":"Ling 3.0 Flash VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-VL","params_b":124.85,"license":"mit"}
+{"id":"llama-3-8b-instruct-skillmix","name":"Llama-3-8B-Instruct-SkillMix","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/PrincetonPLI/Llama-3-8B-Instruct-SkillMix","license":"llama3"}
+{"id":"llama-3-instruct-8b-simpo","name":"Llama-3-Instruct-8B-SimPO","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/princeton-nlp/Llama-3-Instruct-8B-SimPO","params_b":8.03}
+{"id":"llama-3-instruct-8b-simpo-v0-2","name":"Llama-3-Instruct-8B-SimPO-v0.2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/princeton-nlp/Llama-3-Instruct-8B-SimPO-v0.2","params_b":8.03}
+{"id":"llama-3-nanda-10b-chat","name":"Llama-3-Nanda-10B-Chat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/MBZUAI/Llama-3-Nanda-10B-Chat","license":"llama3"}
+{"id":"llama-guard-3-8b","name":"Llama-Guard-3-8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/meta-llama/Llama-Guard-3-8B","params_b":8.03,"license":"llama3.1"}
+{"id":"llama-guard-4-12b","name":"Llama Guard 4 12B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/meta-llama/Llama-Guard-4-12B","params_b":12,"license":"llama4"}
+{"id":"llama-prompt-guard-2-22m","name":"Llama Prompt Guard 2 22M","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-22M","params_b":0.07,"license":"llama4"}
+{"id":"llama-prompt-guard-2-86m","name":"Llama Prompt Guard 2 86M","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M","params_b":0.28,"license":"llama4"}
+{"id":"llama3-instruct-8b-wpo-hb-v2","name":"Llama3-Instruct-8B-WPO-HB-v2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/wzhouad/Llama3-Instruct-8B-WPO-HB-v2","params_b":8.03}
+{"id":"llama3-openbiollm-70b","name":"Llama3-OpenBioLLM-70B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/aaditya/Llama3-OpenBioLLM-70B","license":"llama3"}
+{"id":"llama3-openbiollm-8b","name":"Llama3-OpenBioLLM-8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/aaditya/Llama3-OpenBioLLM-8B","license":"llama3"}
+{"id":"lwm-text-chat-1m","name":"LWM-Text-Chat-1M","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/LargeWorldModel/LWM-Text-Chat-1M"}
+{"id":"macaron-v1-tall","name":"Macaron V1 Tall","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Tall","params_b":35.95,"license":"mit"}
+{"id":"macaron-v1-venti","name":"Macaron V1 Venti","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Venti","params_b":753.33,"license":"mit"}
+{"id":"mimo-v2-5-pro-ultraspeed","name":"MiMo-V2.5-Pro-UltraSpeed","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash","license":"mit"}
+{"id":"minicpm-v-4-7-1b","name":"MiniCPM-V 4.7 1B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-1B","params_b":1.55,"license":"apache-2.0"}
+{"id":"minicpm-v-4-7-35b-a3b","name":"MiniCPM-V 4.7 35B-A3B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B","params_b":35.21,"license":"apache-2.0"}
+{"id":"minicpm5-1b","name":"MiniCPM5-1B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openbmb/MiniCPM5-1B","params_b":1.08,"license":"apache-2.0"}
+{"id":"minotaur-13b-fixed","name":"Minotaur 13B (fixed)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openaccess-ai-collective/minotaur-13b-fixed","license":"apache-2.0"}
+{"id":"mythomax-l2-13b","name":"MythoMax L2 13B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Gryphe/MythoMax-L2-13b","license":"other"}
+{"id":"nex-n2-pro","name":"Nex-N2-Pro","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nex-agi/Nex-N2-Pro","params_b":396.8,"license":"apache-2.0"}
+{"id":"nous-hermes-13b","name":"Nous-Hermes-13b","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/NousResearch/Nous-Hermes-13b","license":"gpl"}
+{"id":"oasst-pythia-12b-sft-v8-7k-steps","name":"OpenAssistant Pythia 12B SFT v8 (7k steps)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/OpenAssistant/pythia-12b-sft-v8-7k-steps","license":"apache-2.0"}
+{"id":"open-llama-3b-v2","name":"OpenLLaMA 3B v2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openlm-research/open_llama_3b_v2","license":"apache-2.0"}
+{"id":"open-llama-7b-v2","name":"OpenLLaMA 7B v2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openlm-research/open_llama_7b_v2","license":"apache-2.0"}
+{"id":"opencodeinterpreter-ds-33b","name":"OpenCodeInterpreter-DS-33B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/m-a-p/OpenCodeInterpreter-DS-33B","license":"apache-2.0"}
+{"id":"ornith-1-0-397b","name":"Ornith 1.0 397B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B","params_b":396.8,"license":"mit"}
+{"id":"ornith-1-0-9b","name":"Ornith 1.0 9B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B","license":"mit"}
+{"id":"paddleocr-vl","name":"PaddleOCR VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/PaddlePaddle/PaddleOCR-VL","params_b":0.96,"license":"apache-2.0"}
+{"id":"phi-4-multimodal-instruct","name":"Phi-4-multimodal-instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/microsoft/Phi-4-multimodal-instruct","params_b":5.57,"license":"mit"}
+{"id":"platolm-7b","name":"PlatoLM-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/PlatoLM-7B","license":"apache-2.0"}
+{"id":"qwen3-5-35b-a3b-base","name":"Qwen3.5 35B-A3B Base","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3.5-35B-A3B-Base","params_b":35.95,"license":"apache-2.0"}
+{"id":"qwen3-5-9b-base","name":"Qwen3.5 9B Base","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3.5-9B-Base","params_b":9.65,"license":"apache-2.0"}
+{"id":"qwen3-omni-30b-a3b-thinking","name":"Qwen3 Omni 30B A3B Thinking","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Thinking","params_b":31.72,"license":"apache-2.0"}
+{"id":"rebel-llama-3","name":"REBEL-Llama-3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Cornell-AGI/REBEL-Llama-3","license":"apache-2.0"}
+{"id":"rnj-1-instruct","name":"Rnj-1 Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/EssentialAI/rnj-1-instruct","params_b":8.31,"license":"apache-2.0"}
+{"id":"snorkel-mistral-pairrm-dpo","name":"Snorkel-Mistral-PairRM-DPO","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/snorkelai/Snorkel-Mistral-PairRM-DPO","license":"apache-2.0"}
+{"id":"speechless-code-mistral-7b-v1-0","name":"speechless-code-mistral-7b-v1.0","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-code-mistral-7b-v1.0","license":"apache-2.0"}
+{"id":"speechless-codellama-34b-v2-0","name":"speechless-codellama-34b-v2.0","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-codellama-34b-v2.0","license":"llama2"}
+{"id":"speechless-coder-ds-6-7b","name":"speechless-coder-ds-6.7b","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-coder-ds-6.7b","license":"apache-2.0"}
+{"id":"speechless-coding-7b-16k-tora","name":"speechless-coding-7b-16k-tora","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-coding-7b-16k-tora","license":"llama2"}
+{"id":"starchat2-15b-v0-1","name":"StarChat2 15B v0.1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/HuggingFaceH4/starchat2-15b-v0.1","params_b":15.96}
+{"id":"tiny-aya-earth","name":"Tiny Aya Earth","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-earth","params_b":3.35,"license":"cc-by-nc-4.0"}
+{"id":"tiny-aya-fire","name":"Tiny Aya Fire","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-fire","params_b":3.35,"license":"cc-by-nc-4.0"}
+{"id":"tiny-aya-global","name":"Tiny Aya Global","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-global","params_b":3.35,"license":"cc-by-nc-4.0"}
+{"id":"tiny-aya-water","name":"Tiny Aya Water","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-water","params_b":3.35,"license":"cc-by-nc-4.0"}
+{"id":"trinity-nano-preview","name":"Trinity Nano Preview","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/arcee-ai/Trinity-Nano-Preview","params_b":6.12,"license":"openmdw-1.1"}
+{"id":"trurl-2-13b-academic","name":"Trurl 2 13B Academic","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Voicelab/trurl-2-13b-academic"}
+{"id":"vicuna-13b-v1-3","name":"Vicuna 13B v1.3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lmsys/vicuna-13b-v1.3"}
+{"id":"vicuna-7b-v1-3","name":"Vicuna 7B v1.3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lmsys/vicuna-7b-v1.3"}
+{"id":"vicuna-7b-v1-5-16k","name":"Vicuna 7B v1.5 16K","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lmsys/vicuna-7b-v1.5-16k","license":"llama2"}
+{"id":"voxtral-mini-3b-2507","name":"Voxtral Mini 3B 2507","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mistralai/Voxtral-Mini-3B-2507","params_b":4.68,"license":"apache-2.0"}
+{"id":"voxtral-small-24b-2507","name":"Voxtral Small 24B 2507","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mistralai/Voxtral-Small-24B-2507","params_b":24.26,"license":"apache-2.0"}
+{"id":"wavecoder-ultra-6-7b","name":"WaveCoder-Ultra-6.7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/microsoft/wavecoder-ultra-6.7b","license":"mit"}
+{"id":"whiterabbitneo-33b-v1","name":"WhiteRabbitNeo-33B-v1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/WhiteRabbitNeo/WhiteRabbitNeo-33B-v1","license":"deepseek"}
+{"id":"wizardcoder-15b-v1-0","name":"WizardCoder-15B-V1.0","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/WizardLMTeam/WizardCoder-15B-V1.0","license":"bigscience-openrail-m"}
+{"id":"xwincoder-34b","name":"XwinCoder-34B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Xwin-LM/XwinCoder-34B","license":"llama2"}

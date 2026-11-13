@@ -1,0 +1,162 @@
+source,model_id,name,provider,released,catalogue_models_like_it
+models-dev,claude-opus-4-0,Claude Opus 4 (latest),Anthropic,2025-05-22,claude-opus-4-20250514 claude-opus-4-1-20250805 claude-opus-4-5
+models-dev,claude-sonnet-4-0,Claude Sonnet 4 (latest),Anthropic,2025-05-22,claude-sonnet-4-20250514 claude-sonnet-4-5 claude-sonnet-4-6
+models-dev,codestral-2508,Codestral 25.08,Mistral,2025-07-30,codestral-2501
+models-dev,deepseek-v4-pro-0423,DeepSeek V4 Pro 0423,DeepSeek,2026-04-23,deepseek-v4-pro deepseek-v4-pro-preview
+models-dev,gemini-2-0-flash,Gemini 2.0 Flash,Google,2024-12-11,gemini-2-0-flash-001 gemini-2-0-flash-exp gemini-2-0-flash-lite-001
+models-dev,gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Google,2024-12-11,gemini-2-0-flash-lite-001 gemini-2-0-flash-lite-preview-02-05 gemini-2-0-flash-001
+models-dev,gemini-3-1-flash-lite-preview,Gemini 3.1 Flash Lite Preview,Google,2026-03-03,gemini-3-1-flash-lite gemini-exp-1114 gemini-exp-1121
+models-dev,gpt-3-5-turbo,GPT-3.5-turbo,OpenAI,2023-03-01,gpt-3-5-turbo-0125 gpt-3-5-turbo-0301 gpt-3-5-turbo-0613
+models-dev,gpt-4,GPT-4,OpenAI,2023-11-06,gpt-4-0314 gpt-4-0613 gpt-4o-2024-05-13
+models-dev,gpt-4-turbo,GPT-4 Turbo,OpenAI,2023-11-06,gpt-4-0125-preview gpt-4-1106-preview gpt-4-turbo-2024-04-09
+models-dev,gpt-4o,GPT-4o,OpenAI,2024-05-13,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+models-dev,gpt-4o-mini,GPT-4o mini,OpenAI,2024-07-18,gpt-4o-mini-2024-07-18 gpt-4o-2024-05-13 gpt-4o-2024-08-06
+models-dev,gpt-5-2-chat-latest,GPT-5.2 Chat,OpenAI,2025-12-11,gpt-5-2-chat-latest-20260210 gpt-5-2 gpt-5
+models-dev,gpt-5-3-chat-latest,GPT-5.3 Chat (latest),OpenAI,2026-03-03,gpt-5-3-chat-latest-20261002 gpt-5 gpt-5-1-chat-latest
+models-dev,gpt-5-chat-latest,GPT-5 Chat (latest),OpenAI,2025-08-07,gpt-5-chat-20261002 gpt-5 gpt-5-1-chat-latest
+models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra
+models-dev,grok-4-20-0309-non-reasoning,Grok 4.20 (Non-Reasoning),xAI,2026-03-09,grok-4-20 grok-4-0709 grok-4-20-multi-agent-0309
+models-dev,grok-4-fast-non-reasoning,Grok-4-Fast-Non-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
+models-dev,grok-4-fast-reasoning,Grok-4-Fast-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
+models-dev,hy4,Hy4,tencent,2026-11-04,hy4-preview
+models-dev,ling-3-1-flash,Ling 3.1 Flash,inclusionai,2026-09-29,ling-3-1-flash-1019 ling-3-0-flash ling-2-6-flash
+models-dev,longcat-2-5-preview,LongCat-2.5-Preview,meituan,2026-09-25,longcat-2-5 longcat-2-0
+models-dev,magistral-medium-latest,Magistral Medium (latest),Mistral,2025-03-17,magistral-medium-2506 magistral-medium-2507 magistral-medium-2509
+models-dev,minimax-m3-1-flash-preview,MiniMax-M3.1-Flash-Preview,MiniMax (minimax.io),2026-09-27,minimax-m3-1-flash minimax-m3
+models-dev,ministral-14b-2512,Ministral 3 14B 2512,Mistral,2025-12-02,ministral-3-14b ministral-3-14b-reasoning ministral-3-3b
+models-dev,ministral-3b,Ministral 3B,Mistral,2024-10-16,ministral-3b-2410 ministral-8b-2410 ministral-3-3b
+models-dev,ministral-3b-2512,Ministral 3 3B 2512,Mistral,2025-12-02,ministral-3-3b ministral-3-3b-reasoning ministral-3-8b
+models-dev,ministral-8b-2512,Ministral 3 8B 2512,Mistral,2025-12-02,ministral-3-8b ministral-3-8b-reasoning ministral-3-3b
+models-dev,mistral-large,Mistral Large,Mistral,2024-02-26,mistral-large-2402 mistral-large-2407 mistral-large-2
+models-dev,mistral-medium-3,Mistral Medium 3,Mistral,2025-05-07,mistral-medium-2505 mistral-medium-2312 mistral-medium-3-1
+models-dev,mistral-small-3-1-24b-instruct,Mistral Small 3.1 24B,Mistral,2025-03-17,mistral-small-3-1 mistral-small-3 mistral-small-2402
+models-dev,o1,o1,OpenAI,2024-12-05,
+models-dev,palmyra-x4,Palmyra X4,writer,2024-10-09,palmyra-x-004 palmyra-x5
+models-dev,pixtral-large-2502,Pixtral Large (25.02),Mistral,2025-04-08,pixtral-large mistral-large-2402 mistral-large-2407
+models-dev,qwen-max,Qwen Max,Alibaba,2024-04-03,qwen-max-2024-09-19 qwen-max-2025-01-25 qwen3-max-2025-09-23
+models-dev,qwen-plus,Qwen Plus,Alibaba,2024-01-25,qwen-plus-2024-11-27 qwen-plus-2025-01-25 qwen-mt-plus
+models-dev,qwen-turbo,Qwen Turbo,Alibaba,2024-11-01,qwen-turbo-2024-11-01
+models-dev,qwen-vl-max,Qwen-VL Max,Alibaba,2024-04-08,qwen-vl-max-2024-11-19 qwen-vl-max-2025-08-13 qwen-vl
+models-dev,qwen3-8-max,Qwen3.8 Max,Alibaba,2026-08-03,qwen3-8-2-4t-a95b qwen3-8-max-0902 qwen3-8-max-prime
+models-dev,qwen3-8-max-preview,Qwen3.8 Max Preview,Alibaba,2026-07-19,qwen3-8-2-4t-a95b qwen3-8-max-0902 qwen3-8-max-prime
+models-dev,qwen3-max,Qwen3 Max,Alibaba,2025-09-23,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+models-dev,seed-2-1-pro,Seed 2.1 Pro,bytedance-seed,2026-06-23,seed-2-1-pro-preview seed-2-0-pro
+epoch-models,amazon-nova-lite,Amazon Nova Lite,Amazon,2024-12,
+epoch-models,amazon-nova-micro,Amazon Nova Micro,Amazon,2024-12,
+epoch-models,amazon-nova-premier,Amazon Nova Premier,Amazon,2025-04,
+epoch-models,amazon-nova-pro,Amazon Nova Pro,Amazon,2024-12,
+epoch-models,arcee-trinity-large,Arcee Trinity Large,Prime Intellect,2026-02,
+epoch-models,awd-lstm-doc-fin-37m,AWD-LSTM-DOC (fin) (37M),NTT Communication Science Laboratories,2018-08,awd-lstm-doc-fin-23m
+epoch-models,claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,2024-06,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude
+epoch-models,claude-3-5-sonnet-october-2024,Claude 3.5 Sonnet (October 2024),Anthropic,2024-10,claude-3-5-sonnet-20240620 claude-3-5-sonnet-20241022 claude
+epoch-models,clip-vit-l-14-336px,CLIP (ViT L/14@336px),OpenAI,2021-01,clip-resnet-50
+epoch-models,codestral,Codestral,Mistral AI,2024-05,codestral-2501 codestral-embed codestral-mamba
+epoch-models,cohere-command-a,Cohere Command A,Cohere,2025-03,cohere-command
+epoch-models,cohere-command-a-reasoning,Cohere Command A Reasoning,Cohere,2025-08,cohere-command
+epoch-models,command-a-vision,Command A Vision,Cohere,2025-07,command-a-vision-07-2025 command-a
+epoch-models,command-r,Command R,Cohere,2024-03,command-r-03-2024 command-r-08-2024 command-r7b-12-2024
+epoch-models,command-r-plus,Command R+,Cohere,2024-04,command-r-plus-04-2024 command-r-plus-08-2024 command-r-03-2024
+epoch-models,deepseek-r1-may-2025,DeepSeek-R1 (May 2025),DeepSeek,2025-05,deepseek-r1 deepseek-r1-0528 deepseek-r1-lite-preview
+epoch-models,deepseek-v3-mar-2025,DeepSeek-V3 (Mar 2025),DeepSeek,2025-03,deepseek-v3 deepseek-v3-0324 deepseek-v3-1
+epoch-models,devstral-2-123b,Devstral 2 (123B),Mistral AI,2025-12,devstral-2
+epoch-models,devstral-2-24b,Devstral 2 (24B),Mistral AI,2025-12,devstral-2
+epoch-models,devstral-medium,Devstral Medium,Mistral AI,2025-06,devstral-medium-2507
+epoch-models,doubao-seed-2-0-lite-apr-2026,Doubao Seed 2.0 Lite (Apr 2026),ByteDance,2026-04,doubao-seed-2-0-lite dou-bao
+epoch-models,ensemble-awd-lstm-doc-fin-5-wt2,(ensemble): AWD-LSTM-DOC (fin) × 5 (WT2),NTT Communication Science Laboratories,2018-08,ensemble-awd-lstm-doc-fin-5-ptb
+epoch-models,ernie-4-5-vl-424b-a47b-4-5,ERNIE-4.5-VL-424B-A47B (文心大模型4.5),Baidu,2025-03,ernie-4-5-vl-424b-a47b
+epoch-models,gemini-1-0-pro,Gemini 1.0 Pro,Google DeepMind,2023-12,gemini-1-0-pro-001 gemini-1-0-pro-vision gemini-exp-1114
+epoch-models,gemini-1-5-flash,Gemini 1.5 Flash,Google DeepMind,2024-05,gemini-1-5-flash-001 gemini-1-5-flash-002 gemini-1-5-flash-exp-0827
+epoch-models,gemini-1-5-flash-8b,Gemini 1.5 Flash 8B,Google DeepMind,2024-05,gemini-1-5-flash-8b-001 gemini-1-5-flash-8b-exp-0827 gemini-1-5-flash-8b-exp-0924
+epoch-models,gemini-1-5-pro,Gemini 1.5 Pro,Google DeepMind,2024-02,gemini-1-5-pro-001 gemini-1-5-pro-002 gemini-1-5-pro-exp-0801
+epoch-models,gemini-2-0-flash,Gemini 2.0 Flash,Google DeepMind,2024-12,gemini-2-0-flash-001 gemini-2-0-flash-exp gemini-2-0-flash-lite-001
+epoch-models,gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Google DeepMind,2025-02,gemini-2-0-flash-lite-001 gemini-2-0-flash-lite-preview-02-05 gemini-2-0-flash-001
+epoch-models,gemini-2-0-flash-thinking,Gemini 2.0 Flash Thinking,Google DeepMind,2024-12,gemini-2-0-flash-thinking-exp-01-21 gemini-2-0-flash-001 gemini-2-0-flash-exp
+epoch-models,gemini-2-0-pro,Gemini 2.0 Pro,Google DeepMind,2024-12,gemini-2-0-pro-exp-02-05 gemini-exp-1114 gemini-exp-1121
+epoch-models,gemini-2-5-computer-use,Gemini 2.5 Computer Use,Google,2025-10,gemini-2-5-computer-use-preview-10-2025 gemini-exp-1114 gemini-exp-1121
+epoch-models,gemini-2-5-pro-jun-2025,Gemini 2.5 Pro (Jun 2025),Google DeepMind,2025-06,gemini-2-5-pro gemini-2-5-pro-exp-03-25 gemini-2-5-pro-preview-03-25
+epoch-models,gemini-2-5-pro-mar-2025,Gemini 2.5 Pro (Mar 2025),Google DeepMind,2025-03,gemini-2-5-pro gemini-2-5-pro-exp-03-25 gemini-2-5-pro-preview-03-25
+epoch-models,gemini-2-5-pro-may-2025,Gemini 2.5 Pro (May 2025),Google DeepMind,2025-05,gemini-2-5-pro gemini-2-5-pro-exp-03-25 gemini-2-5-pro-preview-03-25
+epoch-models,gemini-3-pro,Gemini 3 Pro,Google DeepMind,2025-11,gemini-3-pro-preview gemini-exp-1114 gemini-exp-1121
+epoch-models,gemini-robotics-er-1-6,Gemini Robotics-ER 1.6,Google,2026-04,gemini-robotics-er-1-6-preview gemini-exp-1114 gemini-exp-1121
+epoch-models,glm-4,GLM-4,Z.ai (Zhipu AI),2024-01,glm-4-0116 glm-4-0520 glm-4-5
+epoch-models,glove-6b,GloVe (6B),Stanford University,2014-01,glove-32b
+epoch-models,gpt-2-1-5b,GPT-2 (1.5B),OpenAI,2019-02,gpt-2-medium gpt-2-small gpt-2-xl
+epoch-models,gpt-2-124m,GPT-2 (124M),OpenAI,2019-02,gpt-2-medium gpt-2-small gpt-2-xl
+epoch-models,gpt-2-355m,GPT-2 (355M),OpenAI,2019-02,gpt-2-medium gpt-2-small gpt-2-xl
+epoch-models,gpt-2-774m,GPT-2 (774M),OpenAI,2019-02,gpt-2-medium gpt-2-small gpt-2-xl
+epoch-models,gpt-2-amps,GPT-2 (AMPS),University of California (UC) Berkeley,2021-11,gpt-2-medium gpt-2-small gpt-2-xl
+epoch-models,gpt-2-medium-flashattention,GPT-2 Medium (FlashAttention),Stanford University,2022-05,gpt-2-medium gpt-2-small gpt-3-medium
+epoch-models,gpt-3-175b-davinci,GPT-3 175B (davinci),OpenAI,2020-05,gpt-3-175b gpt-3-medium gpt-3-13b
+epoch-models,gpt-3-5-davinci-003,GPT-3.5 (davinci-003),OpenAI,2022-11,gpt-3-5-davinci-002 gpt-3-medium gpt-3-5-turbo-0125
+epoch-models,gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,2023-06,gpt-3-5-turbo-0125 gpt-3-5-turbo-0301 gpt-3-5-turbo-0613
+epoch-models,gpt-4-5,GPT-4.5,OpenAI,2025-02,gpt-4-5-preview-2025-02-27 gpt-4-0314 gpt-4-0613
+epoch-models,gpt-4-jun-2023,GPT-4 (Jun 2023),OpenAI,2023-06,gpt-4-0314 gpt-4-0613 gpt-4o-2024-05-13
+epoch-models,gpt-4-mar-2023,GPT-4 (Mar 2023),OpenAI,2023-03,gpt-4-0314 gpt-4-0613 gpt-4o-2024-05-13
+epoch-models,gpt-4-turbo-apr-2024,GPT-4 Turbo (Apr 2024),OpenAI,2024-04,gpt-4-0125-preview gpt-4-1106-preview gpt-4-turbo-2024-04-09
+epoch-models,gpt-4-turbo-nov-2023,GPT-4 Turbo (Nov 2023),OpenAI,2023-11,gpt-4-0125-preview gpt-4-1106-preview gpt-4-turbo-2024-04-09
+epoch-models,gpt-4o,GPT-4o,OpenAI,2024-05,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+epoch-models,gpt-4o-aug-2024,GPT-4o (Aug 2024),OpenAI,2024-08,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+epoch-models,gpt-4o-jan-2025,GPT-4o (Jan 2025),OpenAI,2025-01,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+epoch-models,gpt-4o-mar-2025,GPT-4o (Mar 2025),OpenAI,2025-03,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+epoch-models,gpt-4o-mini,GPT-4o mini,OpenAI,2024-07,gpt-4o-mini-2024-07-18 gpt-4o-2024-05-13 gpt-4o-2024-08-06
+epoch-models,gpt-4o-nov-2024,GPT-4o (Nov 2024),OpenAI,2024-11,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
+epoch-models,grok-2,Grok-2,xAI,2024-08,grok-2-0813 grok-2-1212 grok-2-mini-0813
+epoch-models,grok-2-mini,Grok-2 mini,xAI,2024-08,grok-2-mini-0813 grok-2-0813 grok-2-1212
+epoch-models,grok-3,Grok 3,xAI,2025-02,grok-3-beta grok-3-preview-02-24 grok-3-mini-beta
+epoch-models,grok-3-mini,Grok-3 mini,xAI,2025-02,grok-3-mini-beta grok-3-beta grok-3-preview-02-24
+epoch-models,grok-4,Grok 4,xAI,2025-07,grok-4-0709 grok-4-1 grok-4-3
+epoch-models,grok-4-3-beta,Grok 4.3 Beta,xAI,2026-04,grok-4-3 grok-4-0709 grok-4-1
+epoch-models,hunyuan-large,Hunyuan-Large,Tencent,2024-11,hunyuan-large-2025-02-10 hunyuan hunyuan-large-vision
+epoch-models,hunyuan-turbo,Hunyuan Turbo,Tencent,2024-09,hunyuan-turbo-0110 hunyuan-turbos-20250226 hunyuan-turbos-20250416
+epoch-models,hunyuan-turbos,Hunyuan-TurboS,Tencent,2025-03,hunyuan-turbos-20250226 hunyuan-turbos-20250416 hunyuan-turbo-0110
+epoch-models,jurassic-1-jumbo,Jurassic-1-Jumbo,AI21 Labs,2021-08,j1-jumbo jurassic-2-jumbo
+epoch-models,k-exaone,K-EXAONE,LG AI Research,2025-12,k-exaone-236b-a23b k-exaone-2-0
+epoch-models,ling-lite-1-5-bailing,"Ling-lite-1.5 (""Bailing"")",Ant Group,2025-03,ling-lite-1-5
+epoch-models,llama-7b-protein-oriented-instruction-tuned,LLaMA-7B (protein-oriented instruction-tuned),Zhejiang University (ZJU),2023-10,llama-7b allam-7b llama-13b
+epoch-models,lstm-2018,LSTM (2018),Intel Labs,2018-03,lstm lstm-lm lstm-with-forget-gates
+epoch-models,magistral-medium-1-1,Magistral Medium 1.1,Mistral AI,2025-06,magistral-medium-2507 magistral-medium-2506 magistral-medium-2509
+epoch-models,magistral-medium-1-2,Magistral Medium 1.2,Mistral AI,2025-09,magistral-medium-2509 magistral-medium-2506 magistral-medium-2507
+epoch-models,magistral-small-1-0,Magistral Small 1.0,Mistral AI,2025-06,magistral-small-2506 magistral-small-2507 magistral-small-2509
+epoch-models,magistral-small-1-1,Magistral Small 1.1,Mistral AI,2025-07,magistral-small-2507 magistral-small-2506 magistral-small-2509
+epoch-models,metamath-7b-mistral-finetune,MetaMath 7B (Mistral finetune),University of Cambridge,2024-05,metamath-7b-llama-finetune metamath-70b
+epoch-models,ministral-3b,Ministral 3B,Mistral AI,2024-10,ministral-3b-2410 ministral-8b-2410 ministral-3-3b
+epoch-models,ministral-8b,Ministral 8B,Mistral AI,2024-10,ministral-8b-2410 ministral-3b-2410 ministral-3-8b
+epoch-models,mistral-large,Mistral Large,Mistral AI,2024-02,mistral-large-2402 mistral-large-2407 mistral-large-2
+epoch-models,mistral-medium,Mistral Medium,Mistral AI,2023-12,mistral-medium-2312 mistral-medium-2505 mistral-medium-3-1
+epoch-models,mistral-medium-3,Mistral Medium 3,Mistral AI,2025-05,mistral-medium-2505 mistral-medium-2312 mistral-medium-3-1
+epoch-models,nplm-brown,NPLM (Brown),University of Montreal / Université de Montréal,2003-03,nplm-ap-news
+epoch-models,o1,o1,OpenAI,2024-12,
+epoch-models,openthaigpt-v1-0-0-7b,OpenThaiGPT v1.0.0 (7B),Mahidol University,2024-04,openthaigpt-v1-0-0-13b
+epoch-models,opt-1-3b-finetuned,OPT-1.3B (finetuned),Meta AI,2022-06,opt-1-3b opt-13b opt-175b
+epoch-models,opt-1-3b-finetuned-on-ptb,OPT-1.3B (finetuned on PTB),Meta AI,2022-06,opt-1-3b opt-13b opt-175b
+epoch-models,opt-125m-finetuned,OPT-125M (finetuned),Meta AI,2022-06,opt-125m opt-175b
+epoch-models,opt-125m-finetuned-on-ptb,OPT-125M (finetuned on PTB),Meta AI,2022-06,opt-125m opt-175b
+epoch-models,opt-2-7b-finetuned-on-ptb,OPT-2.7B (finetuned on PTB),Meta AI,2022-06,opt-2-7b opt-6-7b opt-1-3b
+epoch-models,opt-2-7b-finetuned-on-wt2,OPT-2.7B (finetuned on WT2),Meta AI,2022-06,opt-2-7b opt-6-7b opt-1-3b
+epoch-models,qwen-3-8-max,Qwen 3.8 Max,Alibaba,2026-07,qwen3-8-2-4t-a95b qwen3-8-max-0902 qwen3-8-max-prime
+epoch-models,qwen-plus,Qwen Plus,Alibaba,2024-02,qwen-plus-2024-11-27 qwen-plus-2025-01-25 qwen-mt-plus
+epoch-models,qwen-turbo,Qwen-Turbo,Alibaba,2024-02,qwen-turbo-2024-11-01
+epoch-models,qwen-vl-max,Qwen-VL-Max,Alibaba,2024-01,qwen-vl-max-2024-11-19 qwen-vl-max-2025-08-13 qwen-vl
+epoch-models,qwen2-5-instruct-72b,Qwen2.5 Instruct (72B),Alibaba,2024-09,qwen2-5-instruct-32b qwen2-7b
+epoch-models,qwen2-5-instruct-7b,Qwen2.5 Instruct (7B),Alibaba,2024-09,qwen2-5-instruct-32b qwen2-7b
+epoch-models,qwen2-5-max,Qwen2.5-Max,Alibaba,2025-01,qwen-max-2025-01-25 qwen3-5-max-preview qwen3-6-max-preview
+epoch-models,qwen3-235b-a22b-jul-2025,Qwen3-235B-A22B (Jul 2025),Alibaba,2025-07,qwen3-235b-a22b qwen3-235b-a22b-instruct-2507 qwen3-235b-a22b-thinking-2507
+epoch-models,qwen3-235b-a22b-thinking-jul-2025,Qwen3-235B-A22B-Thinking (Jul 2025),Alibaba,2025-07,qwen3-235b-a22b qwen3-235b-a22b-instruct-2507 qwen3-235b-a22b-thinking-2507
+epoch-models,qwen3-30b-a3b-jul-2025,Qwen3-30B-A3B (Jul 2025),Alibaba,2025-07,qwen3-30b-a3b qwen3-30b-a3b-instruct-2507 qwen3-30b-a3b-thinking-2507
+epoch-models,qwen3-max,Qwen3-Max,Alibaba,2025-09,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+epoch-models,qwen3-max-thinking,Qwen3-Max-Thinking,Alibaba,2026-01,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+epoch-models,reka-core,Reka Core,Reka AI,2024-04,reka-core-20240501 reka-core-20240904
+epoch-models,reka-flash,Reka Flash,Reka AI,2024-04,reka-flash-20240904 reka-flash-3 reka-flash-21b-20240226
+epoch-models,rl-mapping-instructions-troubleshooting,RL mapping instructions (troubleshooting),Massachusetts Institute of Technology (MIT),2009-08,rl-mapping-instructions-games
+epoch-models,seed-1-6-thinking,Seed-1.6-Thinking,ByteDance,2025-06,seed-1-6 seed-1-6-flash seed-1-6-vision
+epoch-models,solar-pro,Solar Pro,Upstage,2024-09,solar-pro-preview solar-pro-4 solar-pro2
+epoch-models,sonar-reasoning,Sonar Reasoning,Perplexity,2025-01,sonar-reasoning-pro sonar
+epoch-models,tencent-hy3,Tencent Hy3,Tencent,2026-07,
+epoch-models,tencent-hy3-preview,Tencent Hy3 preview,Tencent,2026-04,
+epoch-models,tencent-hy4-preview,Tencent Hy4 preview,Tencent,2026-08,
+epoch-models,tf-lm-discourse-lstm-wt2,TF-LM-discourse LSTM (WT2),ESAT - PSI,2018-05,tf-lm-discourse-lstm-ptb
+epoch-models,tinyllama-1-1b-3t-token-checkpoint,TinyLlama-1.1B (3T token checkpoint),Singapore University of Technology & Design,2023-10,tinyllama-1-1b-1t-token-checkpoint tinyllama-1-1b-chat-v1-0
+epoch-models,trimelmext-7m,TRIMELMext (7M),Princeton University,2022-05,trimelmext-247m
+epoch-models,word2vec-small,Word2Vec (small),Google,2013-10,word2vec-large
+epoch-models,yarn-llama-2-70b,YaRN (Llama 2 70B),Nous Research,2023-11,yarn-llama-2-13b
+epoch-models,zephyr-7b,Zephyr 7B,Hugging Face,2023-10,zephyr-7b-beta zephyr-7b-alpha zephyr-7b-beta-expo
