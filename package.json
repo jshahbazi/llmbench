@@ -21,6 +21,7 @@
     "fflate": "0.8.3",
     "hyparquet": "1.33.0",
     "hyparquet-writer": "0.17.0",
+    "sql.js": "1.15.2",
     "yaml": "2.9.1"
   },
   "devDependencies": {

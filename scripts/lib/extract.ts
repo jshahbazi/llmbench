@@ -10,6 +10,8 @@ import { RUN_BY, type Metric, type Row, type RunBy, type Value } from './types.t
 
 export interface MappingSpec {
   model: string;
+  /** A regular expression whose first group (or whole match) is the model name: strips flags such as a leading "*". */
+  model_match?: string;
   model_label?: string;
   model_url?: string;
   key?: string | string[];
@@ -18,9 +20,15 @@ export interface MappingSpec {
   scores?: string[];
   metric?: string | string[];
   value?: string;
-  ci?: [string, string];
+  /**
+   * Confidence interval columns: [low, high] for a long table or a table with one score, or
+   * { score column: [low, high] } for a wide table.
+   */
+  ci?: [string, string] | Record<string, [string, string]>;
   ignore?: string[];
   filter?: Record<string, Value | Value[]>;
+  /** Rows to leave out: column -> value(s). A row matching any of them is dropped. */
+  exclude?: Record<string, Value | Value[]>;
   lower_is_better?: string[];
   labels?: Record<string, string>;
   unit?: string;
@@ -44,6 +52,8 @@ export interface MappingSpec {
   run_by_from?: { column: string; values: Record<string, RunBy> };
 }
 
+const ciColumns = (ci: MappingSpec['ci']): string[] => (!ci ? [] : Array.isArray(ci) ? ci : Object.values(ci).flat());
+
 const asList = (v: unknown): string[] | undefined =>
   v === undefined ? undefined : Array.isArray(v) ? v.map(String) : [String(v)];
 
@@ -51,8 +61,25 @@ const asList = (v: unknown): string[] | undefined =>
 export function mappingFrom(options: Record<string, unknown>, where: string): MappingSpec {
   const model = options['model'];
   if (typeof model !== 'string') throw new Error(`${where}: "model" must name a column`);
-  const ci = asList(options['ci']);
-  if (ci && ci.length !== 2) throw new Error(`${where}: "ci" must be two columns [low, high]`);
+  const rawCi = options['ci'];
+  let ci: MappingSpec['ci'];
+  const pair = (v: unknown, what: string): [string, string] => {
+    const l = asList(v);
+    if (!l || l.length !== 2) throw new Error(`${where}: ${what} must be two columns [low, high]`);
+    return [l[0]!, l[1]!];
+  };
+  if (rawCi && typeof rawCi === 'object' && !Array.isArray(rawCi)) {
+    ci = Object.fromEntries(Object.entries(rawCi).map(([k, v]) => [k, pair(v, `"ci" for "${k}"`)]));
+  } else if (rawCi !== undefined) ci = pair(rawCi, '"ci"');
+  const modelMatch = options['model_match'];
+  if (modelMatch !== undefined) {
+    if (typeof modelMatch !== 'string') throw new Error(`${where}: "model_match" must be a regular expression`);
+    try {
+      new RegExp(modelMatch);
+    } catch (e) {
+      throw new Error(`${where}: "model_match" is not a valid regular expression: ${(e as Error).message}`);
+    }
+  }
   const metric = options['metric'];
   const value = options['value'];
   if ((metric === undefined) !== (value === undefined)) throw new Error(`${where}: "metric" and "value" go together`);
@@ -66,6 +93,10 @@ export function mappingFrom(options: Record<string, unknown>, where: string): Ma
   const filter = options['filter'];
   if (filter !== undefined && (!filter || typeof filter !== 'object' || Array.isArray(filter))) {
     throw new Error(`${where}: "filter" must be a mapping of column to value(s)`);
+  }
+  const exclude = options['exclude'];
+  if (exclude !== undefined && (!exclude || typeof exclude !== 'object' || Array.isArray(exclude))) {
+    throw new Error(`${where}: "exclude" must be a mapping of column to value(s)`);
   }
   const duplicates = options['duplicates'] ?? 'hold';
   if (duplicates !== 'hold' && duplicates !== 'drop') throw new Error(`${where}: "duplicates" must be "hold" or "drop"`);
@@ -97,9 +128,11 @@ export function mappingFrom(options: Record<string, unknown>, where: string): Ma
     scores: asList(options['scores']),
     metric: metric === undefined ? undefined : (asList(metric) as string[]),
     value: value === undefined ? undefined : String(value),
-    ci: ci as [string, string] | undefined,
+    ci,
+    ...(typeof modelMatch === 'string' && { model_match: modelMatch }),
     ignore: asList(options['ignore']),
     filter: filter as Record<string, Value | Value[]> | undefined,
+    exclude: exclude as Record<string, Value | Value[]> | undefined,
     lower_is_better: asList(options['lower_is_better']),
     labels: record('labels'),
     unit: options['unit'] === undefined ? undefined : String(options['unit']),
@@ -148,10 +181,11 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
   const seen = new Set<string>();
   for (const r of records) for (const k of Object.keys(r)) seen.add(k);
 
-  const filtered = records.filter((r) =>
-    Object.entries(spec.filter ?? {}).every(([col, want]) =>
-      (Array.isArray(want) ? want : [want]).map(String).includes(cellText(r[col])),
-    ),
+  const listed = (r: Rec, col: string, values: Value | Value[]) => (Array.isArray(values) ? values : [values]).map(String).includes(cellText(r[col]));
+  const filtered = records.filter(
+    (r) =>
+      Object.entries(spec.filter ?? {}).every(([col, want]) => listed(r, col, want)) &&
+      !Object.entries(spec.exclude ?? {}).some(([col, drop]) => listed(r, col, drop)),
   );
 
   const keyCols = spec.key ? (Array.isArray(spec.key) ? spec.key : [spec.key]) : undefined;
@@ -164,9 +198,10 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
     spec.date,
     ...(Array.isArray(spec.metric) ? spec.metric : spec.metric ? [spec.metric] : []),
     spec.value,
-    ...(spec.ci ?? []),
+    ...ciColumns(spec.ci),
     ...(spec.scores ?? []),
     ...Object.keys(spec.filter ?? {}),
+    ...Object.keys(spec.exclude ?? {}),
     spec.run_by_from?.column,
   ].filter((c): c is string => !!c);
   if (records.length) {
@@ -195,8 +230,17 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
   /** Long tables: the other columns of each (row, metric) record, folded into `extra` at the end. */
   const longExtras = new Map<string, Map<string, Rec>>();
 
+  const nameRe = spec.model_match ? new RegExp(spec.model_match) : undefined;
+  const nameOf = (raw: string): string => {
+    if (!nameRe) return raw;
+    const m = nameRe.exec(raw);
+    return (m ? (m[1] ?? m[0]) : raw).trim();
+  };
+  const ciFor = (col: string): [string, string] | undefined =>
+    !spec.ci ? undefined : Array.isArray(spec.ci) ? (scoreCols.length === 1 ? spec.ci : undefined) : spec.ci[col];
+
   for (const r of filtered) {
-    const model = cellText(r[spec.model]).trim();
+    const model = nameOf(cellText(r[spec.model]).trim());
     if (!model) continue;
     const context: Record<string, string> = {};
     for (const c of spec.context ?? []) {
@@ -243,7 +287,7 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
       const metric = (Array.isArray(spec.metric) ? spec.metric : [spec.metric]).map((c) => cellText(r[c]).trim()).join('/');
       if (!metric) continue;
       if (put(metric, r[spec.value])) {
-        if (spec.ci) {
+        if (Array.isArray(spec.ci)) {
           const lo = r[spec.ci[0]];
           const hi = r[spec.ci[1]];
           if (!isMissing(lo) && !isMissing(hi)) (row.ci ??= {})[metric] = [scoreValue(lo, spec.round), scoreValue(hi, spec.round)];
@@ -255,7 +299,12 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
         byMetric.set(metric, rest);
       }
     } else {
-      for (const c of scoreCols) put(c, r[c]);
+      for (const c of scoreCols) {
+        const cols = ciFor(c);
+        if (put(c, r[c]) && cols && !isMissing(r[cols[0]]) && !isMissing(r[cols[1]])) {
+          (row.ci ??= {})[c] = [scoreValue(r[cols[0]], spec.round), scoreValue(r[cols[1]], spec.round)];
+        }
+      }
       for (const [k, v] of Object.entries(r)) {
         if (used.has(k) || scoreSet.has(k) || isMissing(v)) continue;
         (row.extra ??= {})[k] = v;

@@ -1,0 +1,30 @@
+[
+ {
+  "id": "creative_writing_score",
+  "label": "Creative Writing v3 rubric score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "elo_score",
+  "label": "Creative Writing v3 Elo",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "repetition_score",
+  "label": "Creative Writing v3 repetition",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "slop_score",
+  "label": "Creative Writing v3 slop",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ }
+]

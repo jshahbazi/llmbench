@@ -1,0 +1,1227 @@
+[
+ {
+  "id": "aime--aime_2025/accuracy",
+  "label": "MathArena AIME 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-aime",
+  "url": "https://matharena.ai/#aime--aime_2025",
+  "description": "Accuracy on AIME 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "aime--aime_2025/cost",
+  "label": "MathArena AIME 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#aime--aime_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "aime--aime_2026/accuracy",
+  "label": "MathArena AIME 2026",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-aime",
+  "url": "https://matharena.ai/#aime--aime_2026",
+  "description": "Accuracy on AIME 2026, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "aime--aime_2026/cost",
+  "label": "MathArena AIME 2026 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#aime--aime_2026",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "apex--apex_2025/accuracy",
+  "label": "MathArena Apex",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-apex",
+  "url": "https://matharena.ai/#apex--apex_2025",
+  "description": "Accuracy on Apex, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "apex--apex_2025/cost",
+  "label": "MathArena Apex cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#apex--apex_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "apex--shortlist_2025/accuracy",
+  "label": "MathArena Apex Shortlist",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-apex",
+  "url": "https://matharena.ai/#apex--shortlist_2025",
+  "description": "Accuracy on Apex Shortlist, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "apex--shortlist_2025/cost",
+  "label": "MathArena Apex Shortlist cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#apex--shortlist_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--april/accuracy",
+  "label": "MathArena BrokenArXiv 2026-04",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--april",
+  "description": "Accuracy on BrokenArXiv 2026-04, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--april/cost",
+  "label": "MathArena BrokenArXiv 2026-04 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--april",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--august/accuracy",
+  "label": "MathArena BrokenArXiv 2026-08",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--august",
+  "description": "Accuracy on BrokenArXiv 2026-08, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--august/cost",
+  "label": "MathArena BrokenArXiv 2026-08 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--august",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--february/accuracy",
+  "label": "MathArena BrokenArXiv 2026-02",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--february",
+  "description": "Accuracy on BrokenArXiv 2026-02, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--february/cost",
+  "label": "MathArena BrokenArXiv 2026-02 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--february",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--june/accuracy",
+  "label": "MathArena BrokenArXiv 2026-06",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--june",
+  "description": "Accuracy on BrokenArXiv 2026-06, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--june/cost",
+  "label": "MathArena BrokenArXiv 2026-06 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--june",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--march/accuracy",
+  "label": "MathArena BrokenArXiv 2026-03",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--march",
+  "description": "Accuracy on BrokenArXiv 2026-03, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--march/cost",
+  "label": "MathArena BrokenArXiv 2026-03 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--march",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--may/accuracy",
+  "label": "MathArena BrokenArXiv 2026-05",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--may",
+  "description": "Accuracy on BrokenArXiv 2026-05, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--may/cost",
+  "label": "MathArena BrokenArXiv 2026-05 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--may",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--october/accuracy",
+  "label": "MathArena BrokenArXiv 2026-10",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--october",
+  "description": "Accuracy on BrokenArXiv 2026-10, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--october/cost",
+  "label": "MathArena BrokenArXiv 2026-10 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--october",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv_false--september/accuracy",
+  "label": "MathArena BrokenArXiv 2026-09",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#arxiv_false--september",
+  "description": "Accuracy on BrokenArXiv 2026-09, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv_false--september/cost",
+  "label": "MathArena BrokenArXiv 2026-09 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv_false--september",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--april/accuracy",
+  "label": "MathArena ArXivMath 2026-04",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--april",
+  "description": "Accuracy on ArXivMath 2026-04, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--april/cost",
+  "label": "MathArena ArXivMath 2026-04 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--april",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--august/accuracy",
+  "label": "MathArena ArXivMath 2026-08",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--august",
+  "description": "Accuracy on ArXivMath 2026-08, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--august/cost",
+  "label": "MathArena ArXivMath 2026-08 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--august",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--december/accuracy",
+  "label": "MathArena ArXivMath 2025-12",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--december",
+  "description": "Accuracy on ArXivMath 2025-12, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--december/cost",
+  "label": "MathArena ArXivMath 2025-12 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--december",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--february/accuracy",
+  "label": "MathArena ArXivMath 2026-02",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--february",
+  "description": "Accuracy on ArXivMath 2026-02, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--february/cost",
+  "label": "MathArena ArXivMath 2026-02 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--february",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--january/accuracy",
+  "label": "MathArena ArXivMath 2026-01",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--january",
+  "description": "Accuracy on ArXivMath 2026-01, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--january/cost",
+  "label": "MathArena ArXivMath 2026-01 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--january",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--june/accuracy",
+  "label": "MathArena ArXivMath 2026-06",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--june",
+  "description": "Accuracy on ArXivMath 2026-06, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--june/cost",
+  "label": "MathArena ArXivMath 2026-06 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--june",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--march/accuracy",
+  "label": "MathArena ArXivMath 2026-03",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--march",
+  "description": "Accuracy on ArXivMath 2026-03, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--march/cost",
+  "label": "MathArena ArXivMath 2026-03 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--march",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--may/accuracy",
+  "label": "MathArena ArXivMath 2026-05",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--may",
+  "description": "Accuracy on ArXivMath 2026-05, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--may/cost",
+  "label": "MathArena ArXivMath 2026-05 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--may",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--october/accuracy",
+  "label": "MathArena ArXivMath 2026-10",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--october",
+  "description": "Accuracy on ArXivMath 2026-10, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--october/cost",
+  "label": "MathArena ArXivMath 2026-10 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--october",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxiv--september/accuracy",
+  "label": "MathArena ArXivMath 2026-09",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#arxiv--september",
+  "description": "Accuracy on ArXivMath 2026-09, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxiv--september/cost",
+  "label": "MathArena ArXivMath 2026-09 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxiv--september",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxivlean--june/accuracy",
+  "label": "MathArena ArXivLean 2026-06",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivlean",
+  "url": "https://matharena.ai/#arxivlean--june",
+  "description": "Accuracy on ArXivLean 2026-06, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxivlean--june/cost",
+  "label": "MathArena ArXivLean 2026-06 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxivlean--june",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxivlean--march/accuracy",
+  "label": "MathArena ArXivLean 2026-03",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivlean",
+  "url": "https://matharena.ai/#arxivlean--march",
+  "description": "Accuracy on ArXivLean 2026-03, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxivlean--march/cost",
+  "label": "MathArena ArXivLean 2026-03 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxivlean--march",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "arxivlean--september/accuracy",
+  "label": "MathArena ArXivLean 2026-09",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivlean",
+  "url": "https://matharena.ai/#arxivlean--september",
+  "description": "Accuracy on ArXivLean 2026-09, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "arxivlean--september/cost",
+  "label": "MathArena ArXivLean 2026-09 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#arxivlean--september",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "brumo--brumo_2025/accuracy",
+  "label": "MathArena BRUMO 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brumo",
+  "url": "https://matharena.ai/#brumo--brumo_2025",
+  "description": "Accuracy on BRUMO 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "brumo--brumo_2025/cost",
+  "label": "MathArena BRUMO 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#brumo--brumo_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "cmimc--cmimc_2025/accuracy",
+  "label": "MathArena CMIMC 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-cmimc",
+  "url": "https://matharena.ai/#cmimc--cmimc_2025",
+  "description": "Accuracy on CMIMC 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "cmimc--cmimc_2025/cost",
+  "label": "MathArena CMIMC 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#cmimc--cmimc_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "euler--euler/accuracy",
+  "label": "MathArena Project Euler",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-euler",
+  "url": "https://matharena.ai/#euler--euler",
+  "description": "Accuracy on Project Euler, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "euler--euler/cost",
+  "label": "MathArena Project Euler cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#euler--euler",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "hmmt--hmmt_feb_2025/accuracy",
+  "label": "MathArena HMMT Feb 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-hmmt",
+  "url": "https://matharena.ai/#hmmt--hmmt_feb_2025",
+  "description": "Accuracy on HMMT Feb 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "hmmt--hmmt_feb_2025/cost",
+  "label": "MathArena HMMT Feb 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#hmmt--hmmt_feb_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "hmmt--hmmt_feb_2026/accuracy",
+  "label": "MathArena HMMT Feb 2026",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-hmmt",
+  "url": "https://matharena.ai/#hmmt--hmmt_feb_2026",
+  "description": "Accuracy on HMMT Feb 2026, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "hmmt--hmmt_feb_2026/cost",
+  "label": "MathArena HMMT Feb 2026 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#hmmt--hmmt_feb_2026",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "hmmt--hmmt_nov_2025/accuracy",
+  "label": "MathArena HMMT Nov 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-hmmt",
+  "url": "https://matharena.ai/#hmmt--hmmt_nov_2025",
+  "description": "Accuracy on HMMT Nov 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "hmmt--hmmt_nov_2025/cost",
+  "label": "MathArena HMMT Nov 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#hmmt--hmmt_nov_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "imc--imc_2025/accuracy",
+  "label": "MathArena IMC 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-imc",
+  "url": "https://matharena.ai/#imc--imc_2025",
+  "description": "Accuracy on IMC 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "imc--imc_2025/cost",
+  "label": "MathArena IMC 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#imc--imc_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "imo--imo_2025/accuracy",
+  "label": "MathArena IMO 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-imo",
+  "url": "https://matharena.ai/#imo--imo_2025",
+  "description": "Accuracy on IMO 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "imo--imo_2025/cost",
+  "label": "MathArena IMO 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#imo--imo_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_1-2/accuracy",
+  "label": "MathArena Kangaroo 2025 1-2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-kangaroo",
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_1-2",
+  "description": "Accuracy on Kangaroo 2025 1-2, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_1-2/cost",
+  "label": "MathArena Kangaroo 2025 1-2 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_1-2",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_11-12/accuracy",
+  "label": "MathArena Kangaroo 2025 11-12",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-kangaroo",
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_11-12",
+  "description": "Accuracy on Kangaroo 2025 11-12, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_11-12/cost",
+  "label": "MathArena Kangaroo 2025 11-12 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_11-12",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_3-4/accuracy",
+  "label": "MathArena Kangaroo 2025 3-4",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-kangaroo",
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_3-4",
+  "description": "Accuracy on Kangaroo 2025 3-4, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_3-4/cost",
+  "label": "MathArena Kangaroo 2025 3-4 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_3-4",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_5-6/accuracy",
+  "label": "MathArena Kangaroo 2025 5-6",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-kangaroo",
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_5-6",
+  "description": "Accuracy on Kangaroo 2025 5-6, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_5-6/cost",
+  "label": "MathArena Kangaroo 2025 5-6 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_5-6",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_7-8/accuracy",
+  "label": "MathArena Kangaroo 2025 7-8",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-kangaroo",
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_7-8",
+  "description": "Accuracy on Kangaroo 2025 7-8, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_7-8/cost",
+  "label": "MathArena Kangaroo 2025 7-8 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_7-8",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_9-10/accuracy",
+  "label": "MathArena Kangaroo 2025 9-10",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-kangaroo",
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_9-10",
+  "description": "Accuracy on Kangaroo 2025 9-10, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "kangaroo--kangaroo_2025_9-10/cost",
+  "label": "MathArena Kangaroo 2025 9-10 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#kangaroo--kangaroo_2025_9-10",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "leanlean--oct26/cost",
+  "label": "MathArena LeanLean 2026-10 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#leanlean--oct26",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "leanlean--oct26/score",
+  "label": "MathArena LeanLean 2026-10 score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-leanlean",
+  "url": "https://matharena.ai/#leanlean--oct26",
+  "description": "Score on LeanLean 2026-10, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "miklos--2025/accuracy",
+  "label": "MathArena Miklós Schweitzer 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-miklos",
+  "url": "https://matharena.ai/#miklos--2025",
+  "description": "Accuracy on Miklós Schweitzer 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "miklos--2025/cost",
+  "label": "MathArena Miklós Schweitzer 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#miklos--2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "overall--arxivmath/accuracy",
+  "label": "MathArena ArXivMath overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-arxivmath",
+  "url": "https://matharena.ai/#overall--arxivmath",
+  "description": "Accuracy on ArXivMath overall, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "overall--arxivmath/cost",
+  "label": "MathArena ArXivMath overall cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#overall--arxivmath",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "overall--brokenarxiv/accuracy",
+  "label": "MathArena BrokenArXiv overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-brokenarxiv",
+  "url": "https://matharena.ai/#overall--brokenarxiv",
+  "description": "Accuracy on BrokenArXiv overall, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "overall--brokenarxiv/cost",
+  "label": "MathArena BrokenArXiv overall cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#overall--brokenarxiv",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "overall--final_answer_comps/accuracy",
+  "label": "MathArena Final-answer competitions overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-final-answer-comps",
+  "url": "https://matharena.ai/#overall--final_answer_comps",
+  "description": "Accuracy on Final-answer competitions overall, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "overall--final_answer_comps/cost",
+  "label": "MathArena Final-answer competitions overall cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#overall--final_answer_comps",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "overall--visual_math/accuracy",
+  "label": "MathArena Visual maths (Kangaroo) overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-visual-math",
+  "url": "https://matharena.ai/#overall--visual_math",
+  "description": "Accuracy on Visual maths (Kangaroo) overall, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "overall--visual_math/cost",
+  "label": "MathArena Visual maths (Kangaroo) overall cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#overall--visual_math",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "putnam--putnam_2025/accuracy",
+  "label": "MathArena Putnam 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-putnam",
+  "url": "https://matharena.ai/#putnam--putnam_2025",
+  "description": "Accuracy on Putnam 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "putnam--putnam_2025/cost",
+  "label": "MathArena Putnam 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#putnam--putnam_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smt--smt_2025/accuracy",
+  "label": "MathArena SMT 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smt",
+  "url": "https://matharena.ai/#smt--smt_2025",
+  "description": "Accuracy on SMT 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smt--smt_2025/cost",
+  "label": "MathArena SMT 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smt--smt_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "usamo--usamo_2025/accuracy",
+  "label": "MathArena USAMO 2025",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-usamo",
+  "url": "https://matharena.ai/#usamo--usamo_2025",
+  "description": "Accuracy on USAMO 2025, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "usamo--usamo_2025/cost",
+  "label": "MathArena USAMO 2025 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#usamo--usamo_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "usamo--usamo_2026/accuracy",
+  "label": "MathArena USAMO 2026",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-usamo",
+  "url": "https://matharena.ai/#usamo--usamo_2026",
+  "description": "Accuracy on USAMO 2026, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "usamo--usamo_2026/cost",
+  "label": "MathArena USAMO 2026 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#usamo--usamo_2026",
+  "description": "Cost of one model run on one problem, in US dollars."
+ }
+]

@@ -266,3 +266,12 @@ svg.chart .dot.selected { stroke: var(--fg); }
 svg.chart .dot.active { stroke: var(--fg); stroke-width: 2.5; r: 7px; }
 svg.chart .labels text { fill: var(--fg); font-size: 11px; paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
 .chart-tip { position: absolute; z-index: 2; max-width: 300px; padding: 6px 8px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); font-size: 12px; line-height: 1.4; pointer-events: none; }
+
+/* SQL console */
+form.sql label { display: block; font-weight: 600; margin-bottom: 4px; }
+form.sql textarea { width: 100%; box-sizing: border-box; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; resize: vertical; }
+.sql-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+ul.sql-examples { list-style: none; padding: 0; margin: 0; }
+ul.sql-examples li { margin: 2px 0; }
+#sql-out table.data td { white-space: nowrap; max-width: 48ch; overflow: hidden; text-overflow: ellipsis; }
+#sql-status.notice { color: var(--fg); padding: 8px 12px; }

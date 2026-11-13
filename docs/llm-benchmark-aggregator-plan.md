@@ -166,20 +166,21 @@ sources:
 | Field | Required | Meaning |
 | :-- | :-- | :-- |
 | `id`, `name`, `homepage` | yes | Identity and the link shown on the site |
-| `fetch` | yes, unless blocked | `github:owner/repo/path` (globs allowed; each file's path is available as `_file`), `hf:owner/dataset` with `config`/`configs` and `split` (each config's name is available as `_config`), or any `https://` URL to CSV, TSV, JSON, JSON Lines, YAML, Parquet or Markdown (pipe tables, as in a README). ZIP and HTML need a plugin for now. |
-| `format`, `rows` | no | Override format detection; dot path to the row list inside JSON or YAML |
+| `fetch` | yes, unless blocked | `github:owner/repo/path` (globs allowed; each file's path is available as `_file`), `hf:owner/dataset` with `config`/`configs` and `split` (each config's name is available as `_config`), or any `https://` URL to CSV, TSV, JSON, JSON Lines, YAML, Parquet, Markdown (pipe tables, as in a README), an HTML table, or a JavaScript file holding the data in a variable (read as data, never run). ZIP needs a plugin. |
+| `format`, `rows` | no | Override format detection; dot path to the row list inside JSON or YAML; for a script, the variable and an optional path (`EQBENCH4_DATA.models`), whose value is a list, an object or a CSV string |
 | `model_label` | no | Column with the source's display name, when `model` is an identifier; used for matching |
 | `model` | yes, unless `plugin` | Column holding the model name |
+| `model_match` | no | A regular expression whose first group is the model name, for names carrying flags (`'^[*!]*(.+)$'` strips EQ-Bench's "new" and "adult" marks) |
 | `scores` | no | Columns that are scores. Omitted means every numeric column not named elsewhere. |
 | `metric` + `value` | no | For long-form tables: the column naming the metric and the column holding the number |
 | `key` | no | Column or columns that make a row unique when the model name alone does not |
 | `context` | no | Columns describing how the model was run: quantization, reasoning effort, scaffold, edit format |
-| `date`, `model_url`, `ci` | no | Evaluation date, link to the model, confidence-interval columns |
-| `table` | no | Which Markdown table to read: its position (0 is the first) or text from the heading above it. For HTML pages (later): a CSS selector. |
+| `date`, `model_url`, `ci` | no | Evaluation date, link to the model, confidence-interval columns: `[low, high]` for a long table or a table with one score, `{ score: [low, high] }` for a wide one |
+| `table` | no | Which Markdown table to read: its position (0 is the first) or text from the heading above it. For an HTML page: its position. |
 | `render: browser` | no (Phase 4) | Load the page in headless Chromium first. Optional `capture:` URL pattern grabs the JSON the page loads. |
 | `plugin` | no | Name of a script in `scripts/sources/` for sources that need custom logic |
 | `ignore`, `lower_is_better`, `labels`, `family` | no | Columns to drop; direction; display names; grouping across sources (6.1) |
-| `filter` | no | Keep only records where a column has the given value(s) |
+| `filter`, `exclude` | no | Keep only records where a column has the given value(s); leave out records where it does (SimpleBench's human baselines) |
 | `unit`, `units` | no | `percent`, `fraction`, `elo` or a free-form unit, for all metrics or per metric. Default: `percent` when every value ends in `%`, else `score`. |
 | `headline` | no | Metrics shown in the default "most covered" column choice; the rest (sub-scores) need "All". Default: all. |
 | `every`, `rolling`, `min_rows` | no | Check interval; rating-style series (5.4); minimum rows before a run is trusted |
@@ -458,7 +459,7 @@ The build writes `index.json` (sources, columns, models, tags) and one `cells/<s
 source: each score as a compact tuple with its run-by, date, context, source link, interval, the
 source's own name for the model, and its change history. The explorer loads all of it (about 0.6 MB
 compressed), so any column can be added instantly. All filtering and sorting happens in the browser.
-A later option is an in-browser SQL console over the Parquet file.
+The SQL console (`/sql/`) loads SQLite in WebAssembly (sql.js, vendored from npm at a pinned version) and the SQLite download (a few MB compressed) on the first query, and runs queries in the page; the query is kept in the URL.
 
 ---
 
@@ -630,10 +631,20 @@ Added in the second Phase 4 slice, after the licence decision in 10.3:
   vision and safety benchmarks, read from the scores the page's scripts carry. Added to cover Scale's
   benchmarks without Scale's site (10.3). 88 rows, 19 columns.
 
-Found and not yet added: EQ-Bench 3 and 4 and Creative Writing v3 (CSV inside the site's JavaScript;
-needs a small plugin), SimpleBench (a JavaScript literal), Vals.ai (per-benchmark JSON behind hashed
-URLs), MathArena (tables as HTML inside JSON). OpenCompass, HELM, LiveCodeBench, BigCodeBench and the
-Open LLM Leaderboard are stale or tiny.
+Added in the fourth slice (none states a licence or has terms; Vals AI's footer says "All rights
+reserved", a copyright notice rather than a ban on reuse or automated access):
+
+- **Vals AI** (plugin): an independent evaluator that runs every model itself on about 60 benchmarks,
+  public (SWE-bench, Terminal-Bench 4.0, GPQA, MMLU-Pro, LiveCodeBench, AIME) and its own (legal,
+  finance, tax, medical, agents). One data file per benchmark, named on its page. About 3,600 rows.
+- **MathArena** (plugin): every competition's summary table (AIME, HMMT, USAMO, IMO, Putnam, the
+  monthly ArXivMath, BrokenArXiv and ArXivLean sets, Kangaroo, Project Euler). Measured accuracy
+  only; MathArena's estimates for questions it did not run are kept as notes, and models released
+  after a competition are flagged. whatmodel's copy stopped in August 2026.
+- **No code**, with the new script format: SimpleBench, EQ-Bench 3 and 4, EQ-Bench Creative Writing
+  v3 and Longform. Spiral-Bench is left out (its newest model is from 2025).
+
+OpenCompass, HELM, LiveCodeBench, BigCodeBench and the Open LLM Leaderboard are stale or tiny.
 
 Checked and not added (2026-11-13):
 
@@ -767,8 +778,12 @@ that Claude names come in both orders ("Claude 4 Sonnet", "Claude Sonnet 4"), AP
 *Third slice, 2026-11-13:* Scale left out by decision; its benchmarks found elsewhere (10.3), adding
 the CAIS AI Dashboard as a plugin. Unlisted names now join under a fuller label their source gives
 ("Fable 5.2" shown as "Claude Fable 5.2"). 22 sources, about 78,000 scores.
-Still to do: the SQL console, `render: browser` (no source needs it yet), history backfill, the LLM
-step in `add-source`, and the sources found but not yet added (10.2).
+*Fourth slice, 2026-11-13:* the SQL console; Vals AI and MathArena as plugins; SimpleBench and four
+EQ-Bench boards with no code, through two new formats (a variable in a JavaScript file, read without
+running it, and HTML tables) and three mapping options (`model_match`, `exclude`, a per-column `ci`).
+Matching learned OpenRouter's `:free`-style suffixes. 29 sources, about 111,000 scores.
+Still to do: `render: browser` (no source needs it yet), history backfill and the LLM step in
+`add-source`.
 
 ---
 

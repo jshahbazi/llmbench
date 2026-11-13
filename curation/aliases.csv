@@ -40,7 +40,6 @@ livebench,command-r,command-r-03-2024,LiveBench lists the 08-2024 release separa
 livebench,command-r-plus,command-r-plus-04-2024,LiveBench lists the 08-2024 release separately
 livebench,gemini-1.5-flash-api-0514,gemini-1-5-flash-001,The May 2024 API release
 livebench,gemini-1.5-pro-api-0514,gemini-1-5-pro-001,The May 2024 API release
-livebench,chatgpt-4o-latest-2025-03-27,chatgpt-4o-latest-20250326,The March 2025 chatgpt-4o-latest update
 livebench,llama4-maverick-instruct-basic,llama-4-maverick,"Fireworks' ""basic"" endpoint"
 *,grok-code-fast-1-0825,grok-code-fast-1,
 *,open-mistral-nemo,mistral-nemo-instruct-2407,
@@ -58,3 +57,25 @@ livebench,nemotron-ultra-3,nemotron-3-ultra-550b-a55b,
 *,Nemotron 3.5 Super VL,nemotron-3-5-super-vl-120b-a12b,
 *,Grok 4.2,grok-4-20,"xAI's Grok 4.20, released 2026-03-09; CAIS and tau2-bench write 4.2"
 *,grok-4-2,grok-4-20,CAIS run id for Grok 4.20
+*,chatgpt-4o-latest-2025-03-27,chatgpt-4o-latest-20250326,The March 2025 chatgpt-4o-latest update
+*,DeepSeek 3.2 Speciale,deepseek-v3-2-speciale,
+*,DeepSeek V3 03-24,deepseek-v3-0324,
+*,DeepSeek R1 05/28,deepseek-r1-0528,
+*,Nemotron 3 Ultra,nemotron-3-ultra-550b-a55b,
+*,Mistral Large v2,mistral-large-2407,Mistral Large 2 is the 2407 release
+*,nova-2-lite-v1,nova-2-lite,
+creative-writing-longform,gpt-5-2025-08-07-high-reasoning-high-reasoning,gpt-5,"Doubled setting in the name; GPT-5 (2025-08-07), high reasoning"
+*,grok-4-fast-reasoning,grok-4-fast,"xAI's API name for Grok 4 Fast (reasoning); the org prefix is ignored"
+matharena,Grok 4 Fast R,grok-4-fast,"""R"" is the reasoning mode"
+matharena,Qwen3-30B-A3B-2507-Think,qwen3-30b-a3b-thinking-2507,
+matharena,Qwen3-4B-2507-Think,qwen3-4b-thinking-2507,
+matharena,Qwen3-235B-2507-Think,qwen3-235b-a22b-thinking-2507,
+matharena,Qwen3-VL-235B Instruct,qwen3-vl-235b-a22b-instruct,
+matharena,DeepSeek-R1-Distill-1.5B,deepseek-r1-distill-qwen-1-5b,The 1.5B distill is Qwen-based
+matharena,DeepSeek-R1-Distill-14B,deepseek-r1-distill-qwen-14b,The 14B distill is Qwen-based
+matharena,DeepSeek-R1-Distill-32B,deepseek-r1-distill-qwen-32b,The 32B distill is Qwen-based
+matharena,DeepSeek-R1-Distill-70B,deepseek-r1-distill-llama-70b,The 70B distill is Llama-based
+matharena,NVIDIA-Nemotron-3-Super,nemotron-3-super-120b-a12b,
+matharena,Qwen3.6-35B,qwen3-6-35b-a3b,
+matharena,Claude-Opus-4.0 (Think),claude-opus-4-20250514,Claude Opus 4 with extended thinking
+*,DeepSeek-V3-03-24,deepseek-v3-0324,

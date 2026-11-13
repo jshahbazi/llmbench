@@ -128,6 +128,8 @@ export function classify(part: string): Qualifier {
  * separator and the qualifier, so the name is cut where the match starts.
  */
 const SUFFIXES: Array<{ re: RegExp; take: (m: RegExpExecArray) => Qualifier | undefined }> = [
+  // OpenRouter routing variants of the same model: nvidia/nemotron-3-nano-30b-a3b:free
+  { re: /:(free|extended|nitro|floor)$/i, take: (m) => ({ kind: 'other', value: `OpenRouter :${m[1]!.toLowerCase()}` }) },
   // Epoch-style run settings: o1-2024-12-17_high, claude-opus-4-1-20250805_27K
   { re: /_(none|minimal|low|medium|high|xhigh|max)$/i, take: (m) => ({ kind: 'effort', value: m[1]!.toLowerCase() }) },
   { re: /_(\d+)K$/i, take: (m) => ({ kind: 'budget', value: `${m[1]}K` }) },

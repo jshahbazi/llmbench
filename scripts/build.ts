@@ -4,7 +4,8 @@
  *   index.html, models/, benchmarks/, sources/, method/, data/   static pages
  *   data/index.json, data/cells/<source>.json                    what the explorer loads
  *   downloads/                                                   CSV, Parquet and SQLite
- *   js/*.js                                                      the explorer, from site/src
+ *   js/*.js                                                      the explorer and SQL console, from site/src
+ *   vendor/sql.js/                                               SQLite in WebAssembly for the SQL console
  *   style.css, sitemap.xml, robots.txt, 404.html
  *
  * Run `npm run resolve` first so model names are matched.
@@ -39,6 +40,16 @@ await writeFile(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SI
 
 const scripts = await compileClient(join('site', 'src'), join(OUT, 'js'));
 await cp(join('site', 'static'), OUT, { recursive: true });
+// SQLite for the SQL console, from the pinned sql.js package (MIT).
+const sqljs = join('node_modules', 'sql.js');
+await mkdir(join(OUT, 'vendor', 'sql.js'), { recursive: true });
+for (const [from, to] of [
+  ['dist/sql-wasm.js', 'sql-wasm.js'],
+  ['dist/sql-wasm.wasm', 'sql-wasm.wasm'],
+  ['LICENSE', 'LICENSE'],
+]) {
+  await cp(join(sqljs, from!), join(OUT, 'vendor', 'sql.js', to!));
+}
 
 const { index } = d;
 const scores = d.cells.reduce((n, f) => n + f.cells.length, 0);

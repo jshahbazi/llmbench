@@ -1,0 +1,16 @@
+[
+ {
+  "id": "elo_norm",
+  "label": "EQ-Bench 3 Elo",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "rubric_0_100",
+  "label": "EQ-Bench 3 rubric score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": false
+ }
+]

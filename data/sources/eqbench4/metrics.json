@@ -1,0 +1,8 @@
+[
+ {
+  "id": "elo",
+  "label": "EQ-Bench 4 Elo",
+  "direction": "higher",
+  "unit": "elo"
+ }
+]

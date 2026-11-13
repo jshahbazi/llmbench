@@ -1,0 +1,23 @@
+[
+ {
+  "id": "overall_score_100",
+  "label": "Longform writing score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": true
+ },
+ {
+  "id": "repetition_score",
+  "label": "Longform writing repetition",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "slop_score",
+  "label": "Longform writing slop",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ }
+]

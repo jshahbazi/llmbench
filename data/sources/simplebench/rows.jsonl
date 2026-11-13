@@ -1,0 +1,112 @@
+{"key":"Claude 3 Opus","model":"Claude 3 Opus","scores":{"score":"23.5%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 3.5 Sonnet 06-20","model":"Claude 3.5 Sonnet 06-20","scores":{"score":"27.5%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 3.5 Sonnet 10-22","model":"Claude 3.5 Sonnet 10-22","scores":{"score":"41.4%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","scores":{"score":"44.9%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 3.7 Sonnet (thinking)","model":"Claude 3.7 Sonnet (thinking)","scores":{"score":"46.4%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 4 Opus","model":"Claude 4 Opus","scores":{"score":"58.8%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 4 Sonnet (thinking)","model":"Claude 4 Sonnet (thinking)","scores":{"score":"45.5%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 4.1 Opus","model":"Claude 4.1 Opus","scores":{"score":"60.0%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude 4.5 Sonnet","model":"Claude 4.5 Sonnet","scores":{"score":"54.3%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Fable","model":"Claude Fable","date":"2026-06-10","scores":{"score":"81.9%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Fable 5.1","model":"Claude Fable 5.1","date":"2026-09-03","scores":{"score":"86.6%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Fable 5.2","model":"Claude Fable 5.2","date":"2026-11-10","scores":{"score":"94.9%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Haiku 5.5","model":"Claude Haiku 5.5","date":"2026-11-12","scores":{"score":"59.2%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Opus 4.5","model":"Claude Opus 4.5","date":"2025-11-20","scores":{"score":"62.0%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Opus 4.6","model":"Claude Opus 4.6","date":"2026-02-17","scores":{"score":"67.6%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Opus 4.7","model":"Claude Opus 4.7","date":"2026-04-22","scores":{"score":"61.7%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Opus 4.8","model":"Claude Opus 4.8","date":"2026-05-29","scores":{"score":"64.8%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Opus 5","model":"Claude Opus 5","date":"2026-07-24","scores":{"score":"80.6%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Opus 5.5","model":"Claude Opus 5.5","date":"2026-09-24","scores":{"score":"88.4%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Sonnet 5","model":"Claude Sonnet 5","date":"2026-07-09","scores":{"score":"60.6%"},"extra":{"organization":"Anthropic"}}
+{"key":"Claude Sonnet 5.5","model":"Claude Sonnet 5.5","date":"2026-10-01","scores":{"score":"75.9%"},"extra":{"organization":"Anthropic"}}
+{"key":"Command R+","model":"Command R+","scores":{"score":"17.4%"},"extra":{"organization":"Cohere"}}
+{"key":"DeepSeek 3.2 Speciale","model":"DeepSeek 3.2 Speciale","date":"2025-12-12","scores":{"score":"52.6%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek R1","model":"DeepSeek R1","scores":{"score":"30.9%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek R1 05/28","model":"DeepSeek R1 05/28","scores":{"score":"40.8%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V3","model":"DeepSeek V3","scores":{"score":"18.9%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V3 03-24","model":"DeepSeek V3 03-24","scores":{"score":"27.2%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V3.1","model":"DeepSeek V3.1","scores":{"score":"40.0%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V4 Flash","model":"DeepSeek V4 Flash","date":"2026-08-03","scores":{"score":"61.1%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V4 Flash (preview)","model":"DeepSeek V4 Flash (preview)","date":"2026-06-02","scores":{"score":"46.3%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V4 Pro","model":"DeepSeek V4 Pro","date":"2026-06-02","scores":{"score":"50.9%"},"extra":{"organization":"DeepSeek"}}
+{"key":"DeepSeek V4.1 Flash","model":"DeepSeek V4.1 Flash","date":"2026-09-12","scores":{"score":"66.7%"},"extra":{"organization":"DeepSeek"}}
+{"key":"GLM 4.7","model":"GLM 4.7","date":"2025-12-23","scores":{"score":"47.7%"},"extra":{"organization":"Z.ai"}}
+{"key":"GLM 5","model":"GLM 5","date":"2026-02-17","scores":{"score":"53.2%"},"extra":{"organization":"Zhipu AI"}}
+{"key":"GLM 5.1","model":"GLM 5.1","date":"2026-07-09","scores":{"score":"55.1%"},"extra":{"organization":"Z.ai"}}
+{"key":"GLM 5.2","model":"GLM 5.2","date":"2026-06-17","scores":{"score":"58.8%"},"extra":{"organization":"Z.ai"}}
+{"key":"GLM 5.3","model":"GLM 5.3","date":"2026-08-19","scores":{"score":"66.2%"},"extra":{"organization":"Z.ai"}}
+{"key":"GPT-3.5 Turbo","model":"GPT-3.5 Turbo","scores":{"score":"8.0%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-4 Turbo","model":"GPT-4 Turbo","scores":{"score":"25.1%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-4.1","model":"GPT-4.1","scores":{"score":"27.0%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-4.5","model":"GPT-4.5","scores":{"score":"34.5%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-4o 08-06","model":"GPT-4o 08-06","scores":{"score":"17.8%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-4o mini","model":"GPT-4o mini","scores":{"score":"10.7%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5 (high)","model":"GPT-5 (high)","scores":{"score":"56.7%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5 Pro","model":"GPT-5 Pro","date":"2025-10-22","scores":{"score":"61.6%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.1 (high)","model":"GPT-5.1 (high)","date":"2025-11-16","scores":{"score":"53.2%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.2 (high)","model":"GPT-5.2 (high)","date":"2025-12-12","scores":{"score":"45.8%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.2 Pro (xhigh)","model":"GPT-5.2 Pro (xhigh)","date":"2025-12-12","scores":{"score":"57.4%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.5","model":"GPT-5.5","date":"2026-04-24","scores":{"score":"69.0%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.5 Pro","model":"GPT-5.5 Pro","date":"2026-04-24","scores":{"score":"76.9%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.6 Luna (xhigh)","model":"GPT-5.6 Luna (xhigh)","date":"2026-07-09","scores":{"score":"46.8%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.6 Sol (xhigh)","model":"GPT-5.6 Sol (xhigh)","date":"2026-07-09","scores":{"score":"64.8%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.6 Sol Pro (xhigh)","model":"GPT-5.6 Sol Pro (xhigh)","date":"2026-07-09","scores":{"score":"71.7%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-5.6 Terra (xhigh)","model":"GPT-5.6 Terra (xhigh)","date":"2026-07-09","scores":{"score":"48.9%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-6 Astra","model":"GPT-6 Astra","date":"2026-09-07","scores":{"score":"83.6%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-6 Astra Pro","model":"GPT-6 Astra Pro","date":"2026-09-07","scores":{"score":"86.5%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-6 Sol","model":"GPT-6 Sol","date":"2026-09-24","scores":{"score":"73.1%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-6.1 Sol","model":"GPT-6.1 Sol","date":"2026-10-01","scores":{"score":"82.9%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-6.1 Terra","model":"GPT-6.1 Terra","date":"2026-11-10","scores":{"score":"72.2%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-OSS 120B","model":"GPT-OSS 120B","scores":{"score":"22.1%"},"extra":{"organization":"OpenAI"}}
+{"key":"Gemini 1.5 Pro 002","model":"Gemini 1.5 Pro 002","scores":{"score":"27.1%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 2.0 Flash Exp","model":"Gemini 2.0 Flash Exp","scores":{"score":"18.9%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 2.0 Flash Thinking","model":"Gemini 2.0 Flash Thinking","scores":{"score":"30.7%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 2.5 Flash (latest)","model":"Gemini 2.5 Flash (latest)","date":"2025-10-22","scores":{"score":"41.2%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 2.5 Pro (03-25)","model":"Gemini 2.5 Pro (03-25)","scores":{"score":"51.6%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 2.5 Pro (06-05)","model":"Gemini 2.5 Pro (06-05)","scores":{"score":"62.4%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 3 Flash Preview","model":"Gemini 3 Flash Preview","date":"2025-12-19","scores":{"score":"61.1%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 3 Pro Preview","model":"Gemini 3 Pro Preview","date":"2025-11-18","scores":{"score":"76.4%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 3.1 Pro Preview","model":"Gemini 3.1 Pro Preview","date":"2026-02-17","scores":{"score":"79.6%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 3.5 Flash","model":"Gemini 3.5 Flash","date":"2026-05-20","scores":{"score":"76.7%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 3.8 Flash","model":"Gemini 3.8 Flash","date":"2026-09-03","scores":{"score":"82.4%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 4 Argon","model":"Gemini 4 Argon","date":"2026-11-10","scores":{"score":"91.7%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 4 Carbon","model":"Gemini 4 Carbon","date":"2026-11-10","scores":{"score":"92.6%"},"extra":{"organization":"Google"}}
+{"key":"Gemini-exp-1206","model":"Gemini-exp-1206","scores":{"score":"31.1%"},"extra":{"organization":"Google"}}
+{"key":"Grok 2","model":"Grok 2","scores":{"score":"22.7%"},"extra":{"organization":"xAI"}}
+{"key":"Grok 3","model":"Grok 3","scores":{"score":"36.1%"},"extra":{"organization":"xAI"}}
+{"key":"Grok 4","model":"Grok 4","scores":{"score":"60.5%"},"extra":{"organization":"xAI"}}
+{"key":"Grok 4.1 Fast","model":"Grok 4.1 Fast","date":"2025-11-20","scores":{"score":"56.0%"},"extra":{"organization":"xAI"}}
+{"key":"Grok 4.5","model":"Grok 4.5","date":"2026-07-08","scores":{"score":"70.0%"},"extra":{"organization":"xAI"}}
+{"key":"Grok 4.6","model":"Grok 4.6","date":"2026-08-13","scores":{"score":"75.9%"},"extra":{"organization":"xAI"}}
+{"key":"Inkling","model":"Inkling","date":"2026-07-22","scores":{"score":"50.0%"},"extra":{"organization":"Thinking Machines"}}
+{"key":"Kimi K2","model":"Kimi K2","scores":{"score":"26.3%"},"extra":{"organization":"Moonshot AI"}}
+{"key":"Kimi K2 Thinking","model":"Kimi K2 Thinking","date":"2025-11-07","scores":{"score":"39.6%"},"extra":{"organization":"Moonshot AI"}}
+{"key":"Kimi K2.5","model":"Kimi K2.5","date":"2026-02-17","scores":{"score":"46.8%"},"extra":{"organization":"Moonshot AI"}}
+{"key":"Kimi K2.7 Code","model":"Kimi K2.7 Code","date":"2026-07-09","scores":{"score":"57.9%"},"extra":{"organization":"Moonshot AI"}}
+{"key":"Kimi K3 (max)","model":"Kimi K3 (max)","date":"2026-07-17","scores":{"score":"60.7%"},"extra":{"organization":"Moonshot AI"}}
+{"key":"Llama 3.1 405b instruct","model":"Llama 3.1 405b instruct","scores":{"score":"23.0%"},"extra":{"organization":"Meta"}}
+{"key":"Llama 3.3 70b instruct","model":"Llama 3.3 70b instruct","scores":{"score":"19.9%"},"extra":{"organization":"Meta"}}
+{"key":"Llama 4 Maverick","model":"Llama 4 Maverick","scores":{"score":"27.7%"},"extra":{"organization":"Meta"}}
+{"key":"MiniMax M2","model":"MiniMax M2","date":"2025-11-19","scores":{"score":"25.0%"},"extra":{"organization":"MiniMax"}}
+{"key":"MiniMax M2.1","model":"MiniMax M2.1","date":"2025-12-23","scores":{"score":"34.7%"},"extra":{"organization":"MiniMax"}}
+{"key":"MiniMax M3","model":"MiniMax M3","date":"2026-07-09","scores":{"score":"45.8%"},"extra":{"organization":"MiniMax"}}
+{"key":"Mistral Large 3","model":"Mistral Large 3","date":"2025-12-04","scores":{"score":"20.4%"},"extra":{"organization":"Mistral"}}
+{"key":"Mistral Large v2","model":"Mistral Large v2","scores":{"score":"22.5%"},"extra":{"organization":"Mistral"}}
+{"key":"Muse Ember","model":"Muse Ember","date":"2026-11-10","scores":{"score":"72.7%"},"extra":{"organization":"Meta"}}
+{"key":"Muse Spark 1.2","model":"Muse Spark 1.2","date":"2026-08-13","scores":{"score":"74.5%"},"extra":{"organization":"Meta"}}
+{"key":"Muse Spark 1.3","model":"Muse Spark 1.3","date":"2026-09-03","scores":{"score":"81.8%"},"extra":{"organization":"Meta"}}
+{"key":"Nemotron 3 Ultra","model":"Nemotron 3 Ultra","date":"2026-06-07","scores":{"score":"41.7%"},"extra":{"organization":"Nvidia"}}
+{"key":"Ox Alpha","model":"Ox Alpha","date":"2026-08-22","scores":{"score":"55.1%"},"extra":{"organization":"Unknown"}}
+{"key":"Qwen 3.6 Flash","model":"Qwen 3.6 Flash","date":"2026-07-10","scores":{"score":"35.2%"},"extra":{"organization":"Alibaba"}}
+{"key":"Qwen 3.6 Max Preview","model":"Qwen 3.6 Max Preview","date":"2026-05-20","scores":{"score":"63.0%"},"extra":{"organization":"Alibaba"}}
+{"key":"Qwen 3.7 Max","model":"Qwen 3.7 Max","date":"2026-05-22","scores":{"score":"70.4%"},"extra":{"organization":"Alibaba"}}
+{"key":"Qwen 3.8 2.4T A95B","model":"Qwen 3.8 2.4T A95B","date":"2026-08-13","scores":{"score":"62.5%"},"extra":{"organization":"Alibaba"}}
+{"key":"Qwen 3.8 27B","model":"Qwen 3.8 27B","date":"2026-08-20","scores":{"score":"60.2%"},"extra":{"organization":"Alibaba"}}
+{"key":"Qwen3 235B-A22B","model":"Qwen3 235B-A22B","scores":{"score":"31.0%"},"extra":{"organization":"Alibaba"}}
+{"key":"o1-2024-12-17 (high)","model":"o1-2024-12-17 (high)","scores":{"score":"40.1%"},"extra":{"organization":"OpenAI"}}
+{"key":"o1-2024-12-17 (med)","model":"o1-2024-12-17 (med)","scores":{"score":"36.7%"},"extra":{"organization":"OpenAI"}}
+{"key":"o1-mini","model":"o1-mini","scores":{"score":"18.1%"},"extra":{"organization":"OpenAI"}}
+{"key":"o1-preview","model":"o1-preview","scores":{"score":"41.7%"},"extra":{"organization":"OpenAI"}}
+{"key":"o3 (high)","model":"o3 (high)","scores":{"score":"53.1%"},"extra":{"organization":"OpenAI"}}
+{"key":"o3-mini (high)","model":"o3-mini (high)","scores":{"score":"22.8%"},"extra":{"organization":"OpenAI"}}
+{"key":"o4-mini (high)","model":"o4-mini (high)","scores":{"score":"38.7%"},"extra":{"organization":"OpenAI"}}

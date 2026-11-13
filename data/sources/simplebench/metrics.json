@@ -1,0 +1,8 @@
+[
+ {
+  "id": "score",
+  "label": "SimpleBench score",
+  "direction": "higher",
+  "unit": "percent"
+ }
+]

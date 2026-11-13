@@ -61,6 +61,21 @@ function scoreTable(d: SiteData) {
   });
 }
 
+/** The SQLite download's tables and view. The SQL console page lists them from this. */
+export const SQLITE_SCHEMA = `
+  CREATE TABLE about (key TEXT PRIMARY KEY, value TEXT);
+  CREATE TABLE sources (id TEXT PRIMARY KEY, name TEXT NOT NULL, homepage TEXT, license TEXT, reuse TEXT NOT NULL, attribution TEXT, rows INTEGER, changed_at TEXT, checked_at TEXT);
+  CREATE TABLE models (id TEXT PRIMARY KEY, name TEXT NOT NULL, in_catalogue INTEGER NOT NULL, provider TEXT, released TEXT, open_weights INTEGER, license TEXT, params_b REAL, active_b REAL, model_repo TEXT);
+  CREATE TABLE benchmarks (id TEXT PRIMARY KEY, source TEXT NOT NULL REFERENCES sources(id), metric TEXT NOT NULL, label TEXT NOT NULL, unit TEXT, higher_is_better INTEGER NOT NULL, headline INTEGER NOT NULL, family TEXT, tags TEXT, models INTEGER, url TEXT);
+  CREATE TABLE names (source TEXT NOT NULL REFERENCES sources(id), source_model_name TEXT NOT NULL, model_id TEXT NOT NULL REFERENCES models(id), method TEXT, qualifiers TEXT, scores INTEGER, PRIMARY KEY (source, source_model_name));
+  CREATE TABLE scores (model_id TEXT NOT NULL REFERENCES models(id), benchmark_id TEXT NOT NULL REFERENCES benchmarks(id), value REAL NOT NULL, raw_value TEXT, run_by TEXT, date TEXT, context TEXT, source_model_name TEXT, ci_low REAL, ci_high REAL, url TEXT);
+  CREATE INDEX scores_model ON scores (model_id);
+  CREATE INDEX scores_benchmark ON scores (benchmark_id);
+  CREATE VIEW scores_named AS
+    SELECT m.name AS model, b.label AS benchmark, b.source, s.value, b.unit, b.higher_is_better, s.run_by, s.date, s.context, s.url, src.license AS source_license
+    FROM scores s JOIN models m ON m.id = s.model_id JOIN benchmarks b ON b.id = s.benchmark_id JOIN sources src ON src.id = b.source;
+`;
+
 export async function writeDownloads(d: SiteData, dir: string): Promise<Download[]> {
   const { index } = d;
   const out: Download[] = [];
@@ -111,20 +126,8 @@ export async function writeDownloads(d: SiteData, dir: string): Promise<Download
   await rm(dbFile, { force: true });
   const db = new DatabaseSync(dbFile);
   try {
-    db.exec(`
-      PRAGMA journal_mode = OFF;
-      CREATE TABLE about (key TEXT PRIMARY KEY, value TEXT);
-      CREATE TABLE sources (id TEXT PRIMARY KEY, name TEXT NOT NULL, homepage TEXT, license TEXT, reuse TEXT NOT NULL, attribution TEXT, rows INTEGER, changed_at TEXT, checked_at TEXT);
-      CREATE TABLE models (id TEXT PRIMARY KEY, name TEXT NOT NULL, in_catalogue INTEGER NOT NULL, provider TEXT, released TEXT, open_weights INTEGER, license TEXT, params_b REAL, active_b REAL, model_repo TEXT);
-      CREATE TABLE benchmarks (id TEXT PRIMARY KEY, source TEXT NOT NULL REFERENCES sources(id), metric TEXT NOT NULL, label TEXT NOT NULL, unit TEXT, higher_is_better INTEGER NOT NULL, headline INTEGER NOT NULL, family TEXT, tags TEXT, models INTEGER, url TEXT);
-      CREATE TABLE names (source TEXT NOT NULL REFERENCES sources(id), source_model_name TEXT NOT NULL, model_id TEXT NOT NULL REFERENCES models(id), method TEXT, qualifiers TEXT, scores INTEGER, PRIMARY KEY (source, source_model_name));
-      CREATE TABLE scores (model_id TEXT NOT NULL REFERENCES models(id), benchmark_id TEXT NOT NULL REFERENCES benchmarks(id), value REAL NOT NULL, raw_value TEXT, run_by TEXT, date TEXT, context TEXT, source_model_name TEXT, ci_low REAL, ci_high REAL, url TEXT);
-      CREATE INDEX scores_model ON scores (model_id);
-      CREATE INDEX scores_benchmark ON scores (benchmark_id);
-      CREATE VIEW scores_named AS
-        SELECT m.name AS model, b.label AS benchmark, b.source, s.value, b.unit, b.higher_is_better, s.run_by, s.date, s.context, s.url, src.license AS source_license
-        FROM scores s JOIN models m ON m.id = s.model_id JOIN benchmarks b ON b.id = s.benchmark_id JOIN sources src ON src.id = b.source;
-    `);
+    db.exec(`PRAGMA journal_mode = OFF;
+${SQLITE_SCHEMA}`);
     const insert = (sql: string, rows: Array<Array<string | number | boolean | null | undefined>>) => {
       const st = db.prepare(sql);
       for (const r of rows) st.run(...r.map((v) => (v === undefined ? null : typeof v === 'boolean' ? Number(v) : v)));
