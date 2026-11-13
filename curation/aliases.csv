@@ -32,3 +32,29 @@ bfcl,Amazon-Nova-2-Lite-v1:0 (FC),nova-2-lite,
 *,c4ai-aya-expanse-8b,aya-expanse-8b,Cohere For AI's earlier name for the same repository
 *,mistral-3-large-2512,mistral-large-3,Mistral Large 3 was released in December 2025
 *,jamba-mini-2,jamba2-mini,
+livebench,claude-4-sonnet-20250514-base,claude-sonnet-4-20250514,"LiveBench's ""-base"" means thinking off, not a base model"
+livebench,claude-4-opus-20250514-base,claude-opus-4-20250514,"LiveBench's ""-base"" means thinking off, not a base model"
+livebench,claude-4-1-opus-20250805-base,claude-opus-4-1-20250805,"LiveBench's ""-base"" means thinking off, not a base model"
+livebench,claude-3-7-sonnet-20250219-base,claude-3-7-sonnet-20250219,"LiveBench's ""-base"" means thinking off, not a base model"
+livebench,command-r,command-r-03-2024,LiveBench lists the 08-2024 release separately
+livebench,command-r-plus,command-r-plus-04-2024,LiveBench lists the 08-2024 release separately
+livebench,gemini-1.5-flash-api-0514,gemini-1-5-flash-001,The May 2024 API release
+livebench,gemini-1.5-pro-api-0514,gemini-1-5-pro-001,The May 2024 API release
+livebench,chatgpt-4o-latest-2025-03-27,chatgpt-4o-latest-20250326,The March 2025 chatgpt-4o-latest update
+livebench,llama4-maverick-instruct-basic,llama-4-maverick,"Fireworks' ""basic"" endpoint"
+*,grok-code-fast-1-0825,grok-code-fast-1,
+*,open-mistral-nemo,mistral-nemo-instruct-2407,
+*,devstral-2512,devstral-2,Devstral 2 was released in December 2025
+*,devstral-small-2512,devstral-small-2,Devstral Small 2 was released in December 2025
+*,llama-4-maverick-instruct,llama-4-maverick,
+*,llama-4-scout-instruct,llama-4-scout,
+*,deepseek-v3.2-reasoner,deepseek-v3-2,deepseek-reasoner is the API's thinking mode
+swe-bench,claude-2,claude-2-0,The October 2023 runs predate Claude 2.1
+*,muse-wonder-1.0,muse-wonder,
+*,muse-wonder-1.0-max,muse-wonder,LiveBench's max-effort run
+livebench,nemotron-super-vl-3.5-nvfp4,nemotron-3-5-super-vl-120b-a12b,NVFP4 weights; the quantization is kept as context
+livebench,nemotron-ultra-3,nemotron-3-ultra-550b-a55b,
+*,Beam 1.0,beam-1-0-501b-a23b,
+*,Nemotron 3.5 Super VL,nemotron-3-5-super-vl-120b-a12b,
+*,Grok 4.2,grok-4-20,"xAI's Grok 4.20, released 2026-03-09; CAIS and tau2-bench write 4.2"
+*,grok-4-2,grok-4-20,CAIS run id for Grok 4.20

@@ -1,0 +1,107 @@
+[
+ {
+  "id": "Biology",
+  "label": "Biology",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Business",
+  "label": "Business",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Chemistry",
+  "label": "Chemistry",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Computer Science",
+  "label": "Computer Science",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Economics",
+  "label": "Economics",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Engineering",
+  "label": "Engineering",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Health",
+  "label": "Health",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "History",
+  "label": "History",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Law",
+  "label": "Law",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Math",
+  "label": "Math",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Other",
+  "label": "Other",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Overall",
+  "label": "Overall",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": true
+ },
+ {
+  "id": "Philosophy",
+  "label": "Philosophy",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Physics",
+  "label": "Physics",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ },
+ {
+  "id": "Psychology",
+  "label": "Psychology",
+  "direction": "higher",
+  "unit": "fraction",
+  "headline": false
+ }
+]

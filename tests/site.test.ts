@@ -5,7 +5,7 @@ import { esc, html, raw, up } from '../scripts/site/html.ts';
 import { buildPages, fetchUrl, sitemap } from '../scripts/site/pages.ts';
 import type { SiteData } from '../scripts/site/data.ts';
 import { applyTags, checkTags } from '../scripts/lib/tags.ts';
-import { fmt, isPermissive, paramsLabel, safeUrl, slugify } from '../site/src/format.ts';
+import { dataReuse, fmt, isPermissive, paramsLabel, safeUrl, slugify } from '../site/src/format.ts';
 import { FLAG_QUANTIZED, FLAG_SEARCH, pickBest, ranks, toCsv, type Candidate } from '../site/src/select.ts';
 import { DEFAULTS, parseState, serializeState } from '../site/src/state.ts';
 
@@ -49,6 +49,14 @@ test('number formatting by unit', () => {
 test('permissive licences exclude custom and non-commercial ones', () => {
   for (const l of ['apache-2.0', 'MIT', 'bsd-3-clause', 'cc-by-4.0']) assert.ok(isPermissive(l), l);
   for (const l of ['llama3.3', 'gemma', 'cc-by-nc-4.0', 'proprietary', undefined]) assert.ok(!isPermissive(l), String(l));
+});
+
+test('source licences: stated, non-commercial, or none', () => {
+  assert.equal(dataReuse('MIT'), 'licensed');
+  assert.equal(dataReuse('CC BY 4.0'), 'licensed');
+  assert.equal(dataReuse('CC BY-NC 4.0'), 'noncommercial');
+  assert.equal(dataReuse('none stated'), 'unstated');
+  assert.equal(dataReuse(undefined), 'unstated');
 });
 
 test('links: only http(s); slugs; fetch locations', () => {
@@ -202,13 +210,14 @@ test('downloads: CSV, Parquet and SQLite hold the same scores', async () => {
     const files = await writeDownloads(d, dir);
     assert.deepEqual(files.map((f) => f.file), ['llmbench-scores.csv', 'llmbench-models.csv', 'llmbench-benchmarks.csv', 'llmbench-names.csv', 'llmbench-sources.csv', 'llmbench-scores.parquet', 'llmbench.sqlite']);
     const csv = await readFile(join(dir, 'llmbench-scores.csv'), 'utf8');
-    assert.match(csv, /^model_id,model,in_catalogue,source,column_id,benchmark,/);
-    assert.match(csv, /x,"Name, with ""quotes""",false,src,src:acc,Accuracy,acc,60,percent,true,60,submitted,,,/);
+    assert.match(csv, /^model_id,model,in_catalogue,source,source_license,column_id,benchmark,/);
+    assert.match(csv, /x,"Name, with ""quotes""",false,src,MIT,src:acc,Accuracy,acc,60,percent,true,60,submitted,,,/);
 
     const rows = await parquetReadObjects({ file: await asyncBufferFromFile(join(dir, 'llmbench-scores.parquet')) });
     assert.equal(rows.length, 2);
     assert.deepEqual([rows[0]!['model_id'], rows[0]!['value'], rows[0]!['ci_low'], rows[0]!['in_catalogue']], ['m1', 71.5, 70, true]);
     assert.deepEqual([rows[1]!['date'], rows[1]!['ci_low']], [null, null]);
+    assert.equal(rows[0]!['source_license'], 'MIT');
 
     const db = new DatabaseSync(join(dir, 'llmbench.sqlite'), { readOnly: true });
     try {
@@ -218,6 +227,8 @@ test('downloads: CSV, Parquet and SQLite hold the same scores', async () => {
         { model: 'Name, with "quotes"', benchmark: 'Accuracy', value: 60, context: null },
       ]);
       assert.equal((db.prepare('SELECT in_catalogue FROM models WHERE id = ?').get('x') as { in_catalogue: number }).in_catalogue, 0);
+      assert.deepEqual({ ...db.prepare('SELECT license, reuse FROM sources').get() }, { license: 'MIT', reuse: 'licensed' });
+      assert.equal((db.prepare('SELECT DISTINCT source_license FROM scores_named').get() as { source_license: string }).source_license, 'MIT');
     } finally {
       db.close();
     }

@@ -131,9 +131,17 @@ const SUFFIXES: Array<{ re: RegExp; take: (m: RegExpExecArray) => Qualifier | un
   // Epoch-style run settings: o1-2024-12-17_high, claude-opus-4-1-20250805_27K
   { re: /_(none|minimal|low|medium|high|xhigh|max)$/i, take: (m) => ({ kind: 'effort', value: m[1]!.toLowerCase() }) },
   { re: /_(\d+)K$/i, take: (m) => ({ kind: 'budget', value: `${m[1]}K` }) },
-  // gpt-5-mini-high. Not "-medium" or "-max", which are model names (Mistral Medium, Qwen-Max).
+  // gpt-5-mini-high. Not "-medium" or "-max", which are model names (Mistral Medium, Qwen-Max),
+  // except "-medium" straight after a number or a size word: o3-2025-04-16-medium, gpt-5.4-mini-medium.
   { re: /-(minimal|low|high|xhigh)$/i, take: (m) => ({ kind: 'effort', value: m[1]!.toLowerCase() }) },
-  { re: new RegExp(`[-_ ](${QUANT_WORDS})$`, 'i'), take: (m) => ({ kind: 'quant', value: m[1]!.toUpperCase() }) },
+  { re: /(?<=\d|mini|nano)-(medium)$/i, take: (m) => ({ kind: 'effort', value: m[1]!.toLowerCase() }) },
+  // LiveBench-style run settings: -high-effort, "Max Effort", -thinking-64k, -thinking-auto, -nothinking, -highthinking
+  { re: /[-_ ](none|minimal|low|medium|high|xhigh|max)[-_ ]effort$/i, take: (m) => ({ kind: 'effort', value: m[1]!.toLowerCase() }) },
+  { re: /-thinking-(\d+)k$/i, take: (m) => ({ kind: 'budget', value: `${m[1]}K` }) },
+  { re: /-(?:(no|non|low|high)-?)?thinking(-auto)?$/i, take: (m) => ({ kind: 'reasoning', value: /^no/i.test(m[1] ?? '') ? 'non-thinking' : `${m[1] ? `${m[1].toLowerCase()} ` : ''}thinking${m[2] ? ' auto' : ''}` }) },
+  // Together AI's "Turbo" endpoints serve FP8 weights: Meta-Llama-3.1-70B-Instruct-Turbo
+  { re: /(?<=instruct)-(turbo)$/i, take: () => ({ kind: 'quant', value: 'Turbo (FP8)' }) },
+  { re: new RegExp(`[-_ @](${QUANT_WORDS})$`, 'i'), take: (m) => ({ kind: 'quant', value: m[1]!.toUpperCase() }) },
   { re: /[-_ ](preview|beta|exp|experimental)$/i, take: (m) => ({ kind: 'stage', value: m[1]!.toLowerCase().replace('experimental', 'exp') }) },
   // A cloud provider's version tag: amazon.nova-pro-v1:0
   { re: /-(v\d+:\d+)$/, take: (m) => ({ kind: 'other', value: m[1]! }) },
@@ -205,9 +213,22 @@ export function parseName(raw: string): ParsedName {
  * "plus", so "Command R+" is "Command R Plus" and not "Command R"; and "4p7", a common way to write
  * a version in an identifier, reads as "4.7".
  */
+/**
+ * Claude names put the version first up to 3.x ("Claude 3.5 Sonnet") and the tier first from 4
+ * ("Claude Sonnet 4.5"). Sources use both orders, so each is turned into the one Anthropic uses.
+ */
+function claudeOrder(s: string): string {
+  return s
+    .replace(/\bclaude[-_ ](\d)(?:[-_. ](\d))?(?!\d)[-_ ](opus|sonnet|haiku|fable)\b/g, (all, major: string, minor: string | undefined, tier: string) =>
+      Number(major) >= 4 ? `claude ${tier} ${major}${minor ? `.${minor}` : ''}` : all,
+    )
+    .replace(/\bclaude[-_ ](opus|sonnet|haiku|fable)[-_ ](\d)(?:[-_. ](\d))?(?!\d)/g, (all, tier: string, major: string, minor: string | undefined) =>
+      Number(major) < 4 ? `claude ${major}${minor ? `.${minor}` : ''} ${tier}` : all,
+    );
+}
+
 export function normalize(s: string): string {
-  const dated = s
-    .toLowerCase()
+  const dated = claudeOrder(s.toLowerCase())
     .replace(/\+/g, ' plus ')
     .replace(/(\d)p(\d)/g, '$1.$2')
     .replace(/((?:19|20)\d{2})[-_. ](\d{2})[-_. ](\d{2})(?!\d)/g, '$1$2$3');

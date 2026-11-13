@@ -2,10 +2,13 @@
  * Static pages: one per model, per benchmark column and per source, plus directories, the method
  * and data pages. Plain HTML that works without JavaScript; the explorer is the one interactive page.
  */
-import { fmt, paramsLabel, RUN_BY_LABELS, safeUrl, unitSuffix, unitWords } from '../../site/src/format.ts';
+import { dataReuse, fmt, paramsLabel, REUSE_TEXT, RUN_BY_LABELS, safeUrl, unitSuffix, unitWords } from '../../site/src/format.ts';
 import { pickBest, ranks, type Candidate } from '../../site/src/select.ts';
 import type { SiteColumn, SiteModel, SiteSource } from '../../site/src/types.ts';
 import { html, raw, up, type Html } from './html.ts';
+
+/** Text ending in a full stop, for attributions followed by more text. */
+const sentence = (t: string) => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`);
 import type { SiteData } from './data.ts';
 import type { Download } from './exports.ts';
 
@@ -252,7 +255,7 @@ f.addEventListener('input', () => {
 <div class="table-scroll"><table class="data">
 <thead><tr><th scope="col">Source</th><th scope="col">Status</th><th scope="col" class="num">Rows</th><th scope="col" class="num">Metrics</th><th scope="col" class="num">Names matched</th><th scope="col">Licence</th><th scope="col">Checked</th><th scope="col">Changed</th></tr></thead>
 <tbody>${index.sources.map(
-      (s) => html`<tr><td><a href="${u}sources/${s.id}/">${s.name}</a></td><td class="status-${statusText(s).split(' ')[0]}">${statusText(s)}</td><td class="num">${s.row_count || ''}</td><td class="num">${s.metric_count || ''}</td><td class="num">${s.names ? `${s.matched_names} / ${s.names}` : ''}</td><td>${s.license ?? ''}</td><td>${day(s.checked_at)}</td><td>${day(s.changed_at)}</td></tr>`,
+      (s) => html`<tr><td><a href="${u}sources/${s.id}/">${s.name}</a></td><td class="status-${statusText(s).split(' ')[0]}">${statusText(s)}</td><td class="num">${s.row_count || ''}</td><td class="num">${s.metric_count || ''}</td><td class="num">${s.names ? `${s.matched_names} / ${s.names}` : ''}</td><td>${s.license ?? ''}${s.terms === 'allowed' && dataReuse(s.license) === 'noncommercial' ? html` <span class="muted">(non-commercial)</span>` : ''}</td><td>${day(s.checked_at)}</td><td>${day(s.changed_at)}</td></tr>`,
     )}</tbody></table></div>
 `;
     pages.push({ path: 'sources/', html: layout({ title: 'Sources — llmbench', description: 'Every leaderboard and dataset llmbench pulls from, with status and licence.', depth: 1, active: 'sources', body, path: 'sources/' }) });
@@ -271,8 +274,8 @@ f.addEventListener('input', () => {
 <p class="meta">Status: ${statusText(s)} · checked ${day(s.checked_at)} · last changed ${day(s.changed_at)}${s.every ? ` · checked every ${s.every}` : ''}</p>
 ${s.reasons?.length ? html`<div class="notice"><p>${s.outcome === 'held' ? 'The latest data was held at the last good version:' : 'The latest check failed:'}</p><ul>${s.reasons.map((r) => html`<li>${r}</li>`)}</ul></div>` : ''}
 ${s.warnings?.length ? html`<div class="notice soft"><ul>${s.warnings.map((w) => html`<li>${w}</li>`)}</ul></div>` : ''}
-<p class="links"><a href="${safeUrl(s.homepage) ?? '#'}" rel="noopener">Website</a>${where ? html` · <a href="${where}" rel="noopener">Data we read</a>` : ''}${s.upstream_revision ? html` · pinned to upstream commit <code>${s.upstream_revision.slice(0, 7)}</code>` : ''}${headline.length ? html` · <a href="${explorerHref(u, { c: headline, min: '1' })}">Open its headline metrics in the explorer</a>` : ''}</p>
-<p>Licence: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${s.attribution}` : ''}${s.terms_note ? html` <span class="muted">${s.terms_note}</span>` : ''}</p>
+<p class="links"><a href="${safeUrl(s.homepage) ?? '#'}" rel="noopener">Website</a>${where ? html` · <a href="${where}" rel="noopener">Data we read</a>` : ''}${s.upstream_revision && /^[0-9a-f]{40}$/.test(s.upstream_revision) ? html` · pinned to upstream commit <code>${s.upstream_revision.slice(0, 7)}</code>` : ''}${headline.length ? html` · <a href="${explorerHref(u, { c: headline, min: '1' })}">Open its headline metrics in the explorer</a>` : ''}</p>
+<p>Licence: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${sentence(s.attribution)}` : ''}${s.terms !== 'allowed' ? '' : dataReuse(s.license) === 'licensed' ? '' : html` <strong>${REUSE_TEXT[dataReuse(s.license)]}</strong>`}${s.terms_note ? html` <span class="muted">${s.terms_note}</span>` : ''}</p>
 ${s.terms !== 'allowed' ? html`<p>This source is listed for the record and is not fetched.</p>` : html`
 <h2>Metrics <span class="muted">${cols.length}</span></h2>
 <div class="table-scroll"><table class="data"><thead><tr><th scope="col">Metric</th><th scope="col" class="num">Models</th><th scope="col">Tags</th></tr></thead><tbody>
@@ -461,10 +464,11 @@ GROUP BY ALL ORDER BY best DESC LIMIT 10;</code></pre>`
 </ul>
 <p>The files this site loads are also public: <a href="${u}data/index.json">index.json</a> and one <code>data/cells/&lt;source&gt;.json</code> per source.</p>
 <h2>Licence</h2>
-<p>The compilation is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, because it builds on the whatmodel.sh compilation. Each source keeps its own licence:</p>
+<p>The compilation (the selection, matching and arrangement) is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, because it builds on the whatmodel.sh compilation. Each source's scores keep that source's own licence, which every download carries on every row (<code>source_license</code>):</p>
 <ul>${d.index.sources
     .filter((s) => s.terms === 'allowed')
-    .map((s) => html`<li><a href="${u}sources/${s.id}/">${s.name}</a>: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${s.attribution}` : ''}</li>`)}</ul>
+    .map((s) => html`<li><a href="${u}sources/${s.id}/">${s.name}</a>: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${sentence(s.attribution)}` : ''}${dataReuse(s.license) === 'licensed' ? '' : html` <strong>${REUSE_TEXT[dataReuse(s.license)]}</strong>`}</li>`)}</ul>
+<p>llmbench is a non-commercial project. If you reuse the downloads commercially, leave out the rows from non-commercial sources (filter on <code>source_license</code>). If you run a source and want it credited differently or removed, <a href="https://github.com/jshahbazi/llmbench/issues">open an issue</a>.</p>
 <p>No source endorses this project.</p>
 `;
   return layout({ title: 'Data — llmbench', description: 'Where llmbench data lives, and its licences.', depth: 1, active: 'data', body, path: 'data/' });

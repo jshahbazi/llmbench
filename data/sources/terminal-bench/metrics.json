@@ -1,0 +1,65 @@
+[
+ {
+  "id": "2.0/accuracy",
+  "label": "Terminal-Bench 2.0 accuracy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "coding"
+  ],
+  "family": "terminal-bench-accuracy",
+  "description": "Share of task trials solved by an agent and model together; the agent is shown with each score."
+ },
+ {
+  "id": "2.1/accuracy",
+  "label": "Terminal-Bench 2.1 accuracy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents",
+   "coding"
+  ],
+  "family": "terminal-bench-accuracy",
+  "description": "Share of task trials solved by an agent and model together; the agent is shown with each score."
+ },
+ {
+  "id": "2.1/cost_per_trial",
+  "label": "Terminal-Bench 2.1 cost per trial ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents",
+   "coding"
+  ],
+  "description": "Total cost of the run divided by its number of trials."
+ },
+ {
+  "id": "4.1/accuracy",
+  "label": "Terminal-Bench 4.1 accuracy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents",
+   "coding"
+  ],
+  "family": "terminal-bench-accuracy",
+  "description": "Share of task trials solved by an agent and model together; the agent is shown with each score."
+ },
+ {
+  "id": "4.1/cost_per_trial",
+  "label": "Terminal-Bench 4.1 cost per trial ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents",
+   "coding"
+  ],
+  "description": "Total cost of the run divided by its number of trials."
+ }
+]

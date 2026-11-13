@@ -1,0 +1,59 @@
+{"key":"Amazon Nova Pro","model":"Amazon Nova Pro","scores":{"μ":"3.524","Avg Points":"0.477"},"extra":{"σ":"0.135","Exposed (μ)":"3.524","Games":"1253","Points Sum":"597.857"}}
+{"key":"Claude 3.5 Haiku","model":"Claude 3.5 Haiku","scores":{"μ":"3.154","Avg Points":"0.452"},"extra":{"σ":"0.139","Exposed (μ)":"3.154","Games":"1193","Points Sum":"539.714"}}
+{"key":"Claude 3.5 Sonnet 2024-10-22","model":"Claude 3.5 Sonnet 2024-10-22","scores":{"μ":"5.097","Avg Points":"0.597"},"extra":{"σ":"0.180","Exposed (μ)":"5.097","Games":"731","Points Sum":"436.286"}}
+{"key":"Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","scores":{"μ":"4.778","Avg Points":"0.561"},"extra":{"σ":"0.149","Exposed (μ)":"4.778","Games":"1042","Points Sum":"584.429"}}
+{"key":"Claude 3.7 Sonnet Thinking 16K","model":"Claude 3.7 Sonnet Thinking 16K","scores":{"μ":"5.278","Avg Points":"0.593"},"extra":{"σ":"0.158","Exposed (μ)":"5.278","Games":"947","Points Sum":"561.429"}}
+{"key":"Claude Opus 4 (no reasoning)","model":"Claude Opus 4 (no reasoning)","scores":{"μ":"4.413","Avg Points":"0.527"},"extra":{"σ":"0.292","Exposed (μ)":"4.413","Games":"273","Points Sum":"144.000"}}
+{"key":"Claude Opus 4 Thinking 16K","model":"Claude Opus 4 Thinking 16K","scores":{"μ":"3.857","Avg Points":"0.490"},"extra":{"σ":"0.309","Exposed (μ)":"3.857","Games":"247","Points Sum":"121.000"}}
+{"key":"Claude Opus 4.1 (no reasoning)","model":"Claude Opus 4.1 (no reasoning)","scores":{"μ":"5.208","Avg Points":"0.578"},"extra":{"σ":"0.290","Exposed (μ)":"5.208","Games":"276","Points Sum":"159.429"}}
+{"key":"Claude Opus 4.5 Thinking 16K","model":"Claude Opus 4.5 Thinking 16K","scores":{"μ":"5.661","Avg Points":"0.594"},"extra":{"σ":"0.264","Exposed (μ)":"5.661","Games":"341","Points Sum":"202.429"}}
+{"key":"Claude Sonnet 4 (no reasoning)","model":"Claude Sonnet 4 (no reasoning)","scores":{"μ":"4.642","Avg Points":"0.539"},"extra":{"σ":"0.252","Exposed (μ)":"4.642","Games":"369","Points Sum":"198.714"}}
+{"key":"Claude Sonnet 4 Thinking 16K","model":"Claude Sonnet 4 Thinking 16K","scores":{"μ":"4.319","Avg Points":"0.515"},"extra":{"σ":"0.265","Exposed (μ)":"4.319","Games":"334","Points Sum":"172.000"}}
+{"key":"Claude Sonnet 4.5 Thinking 16K","model":"Claude Sonnet 4.5 Thinking 16K","scores":{"μ":"5.193","Avg Points":"0.559"},"extra":{"σ":"0.262","Exposed (μ)":"5.193","Games":"348","Points Sum":"194.571"}}
+{"key":"DeepSeek R1","model":"DeepSeek R1","scores":{"μ":"4.063","Avg Points":"0.512"},"extra":{"σ":"0.142","Exposed (μ)":"4.063","Games":"1165","Points Sum":"596.571"}}
+{"key":"DeepSeek R1 05/28","model":"DeepSeek R1 05/28","scores":{"μ":"5.350","Avg Points":"0.581"},"extra":{"σ":"0.204","Exposed (μ)":"5.350","Games":"565","Points Sum":"328.143"}}
+{"key":"DeepSeek-V3","model":"DeepSeek-V3","scores":{"μ":"4.071","Avg Points":"0.518"},"extra":{"σ":"0.140","Exposed (μ)":"4.071","Games":"1180","Points Sum":"610.714"}}
+{"key":"GLM-4.5","model":"GLM-4.5","scores":{"μ":"4.247","Avg Points":"0.505"},"extra":{"σ":"0.251","Exposed (μ)":"4.247","Games":"368","Points Sum":"185.714"}}
+{"key":"GLM-4.6","model":"GLM-4.6","scores":{"μ":"2.693","Avg Points":"0.386"},"extra":{"σ":"0.584","Exposed (μ)":"2.693","Games":"70","Points Sum":"27.000"}}
+{"key":"GPT-4.5 Preview","model":"GPT-4.5 Preview","scores":{"μ":"5.122","Avg Points":"0.597"},"extra":{"σ":"0.217","Exposed (μ)":"5.122","Games":"499","Points Sum":"297.714"}}
+{"key":"GPT-4o Feb 2025","model":"GPT-4o Feb 2025","scores":{"μ":"3.510","Avg Points":"0.493"},"extra":{"σ":"0.220","Exposed (μ)":"3.510","Games":"482","Points Sum":"237.714"}}
+{"key":"GPT-4o Mar 2025","model":"GPT-4o Mar 2025","scores":{"μ":"5.495","Avg Points":"0.602"},"extra":{"σ":"0.166","Exposed (μ)":"5.495","Games":"862","Points Sum":"519.286"}}
+{"key":"GPT-4o mini","model":"GPT-4o mini","scores":{"μ":"3.299","Avg Points":"0.462"},"extra":{"σ":"0.144","Exposed (μ)":"3.299","Games":"1114","Points Sum":"514.571"}}
+{"key":"GPT-5 (medium reasoning)","model":"GPT-5 (medium reasoning)","scores":{"μ":"5.968","Avg Points":"0.611"},"extra":{"σ":"0.212","Exposed (μ)":"5.968","Games":"556","Points Sum":"339.571"}}
+{"key":"GPT-5 mini (medium reasoning)","model":"GPT-5 mini (medium reasoning)","scores":{"μ":"5.732","Avg Points":"0.603"},"extra":{"σ":"0.226","Exposed (μ)":"5.732","Games":"465","Points Sum":"280.286"}}
+{"key":"GPT-5.2 (medium reasoning)","model":"GPT-5.2 (medium reasoning)","scores":{"μ":"7.517","Avg Points":"0.705"},"extra":{"σ":"0.276","Exposed (μ)":"7.517","Games":"331","Points Sum":"233.429"}}
+{"key":"GPT-OSS-120B","model":"GPT-OSS-120B","scores":{"μ":"3.794","Avg Points":"0.462"},"extra":{"σ":"0.210","Exposed (μ)":"3.794","Games":"519","Points Sum":"239.857"}}
+{"key":"Gemini 2.0 Flash","model":"Gemini 2.0 Flash","scores":{"μ":"1.954","Avg Points":"0.376"},"extra":{"σ":"0.177","Exposed (μ)":"1.954","Games":"757","Points Sum":"284.429"}}
+{"key":"Gemini 2.0 Flash Think Exp 01-21","model":"Gemini 2.0 Flash Think Exp 01-21","scores":{"μ":"2.811","Avg Points":"0.449"},"extra":{"σ":"0.213","Exposed (μ)":"2.811","Games":"522","Points Sum":"234.429"}}
+{"key":"Gemini 2.0 Pro Exp 02-05","model":"Gemini 2.0 Pro Exp 02-05","scores":{"μ":"3.072","Avg Points":"0.462"},"extra":{"σ":"0.218","Exposed (μ)":"3.072","Games":"494","Points Sum":"228.286"}}
+{"key":"Gemini 2.5 Flash","model":"Gemini 2.5 Flash","scores":{"μ":"4.727","Avg Points":"0.548"},"extra":{"σ":"0.202","Exposed (μ)":"4.727","Games":"578","Points Sum":"317.000"}}
+{"key":"Gemini 3 Flash Preview","model":"Gemini 3 Flash Preview","scores":{"μ":"5.655","Avg Points":"0.598"},"extra":{"σ":"0.244","Exposed (μ)":"5.655","Games":"398","Points Sum":"237.857"}}
+{"key":"Gemini 3 Pro Preview","model":"Gemini 3 Pro Preview","scores":{"μ":"4.887","Avg Points":"0.544"},"extra":{"σ":"0.271","Exposed (μ)":"4.887","Games":"324","Points Sum":"176.286"}}
+{"key":"Grok 2 12-12","model":"Grok 2 12-12","scores":{"μ":"3.350","Avg Points":"0.475"},"extra":{"σ":"0.171","Exposed (μ)":"3.350","Games":"792","Points Sum":"376.143"}}
+{"key":"Grok 3 Beta (no reasoning)","model":"Grok 3 Beta (no reasoning)","scores":{"μ":"5.096","Avg Points":"0.579"},"extra":{"σ":"0.207","Exposed (μ)":"5.096","Games":"539","Points Sum":"311.857"}}
+{"key":"Grok 3 Mini Beta (high reasoning)","model":"Grok 3 Mini Beta (high reasoning)","scores":{"μ":"5.529","Avg Points":"0.597"},"extra":{"σ":"0.216","Exposed (μ)":"5.529","Games":"511","Points Sum":"305.000"}}
+{"key":"Grok 4","model":"Grok 4","scores":{"μ":"5.153","Avg Points":"0.565"},"extra":{"σ":"0.228","Exposed (μ)":"5.153","Games":"455","Points Sum":"256.857"}}
+{"key":"Grok 4.1 Fast Reasoning","model":"Grok 4.1 Fast Reasoning","scores":{"μ":"3.624","Avg Points":"0.455"},"extra":{"σ":"0.246","Exposed (μ)":"3.624","Games":"385","Points Sum":"175.143"}}
+{"key":"Kimi K2","model":"Kimi K2","scores":{"μ":"3.405","Avg Points":"0.455"},"extra":{"σ":"0.252","Exposed (μ)":"3.405","Games":"378","Points Sum":"172.000"}}
+{"key":"Kimi K2 Thinking 64K","model":"Kimi K2 Thinking 64K","scores":{"μ":"4.325","Avg Points":"0.504"},"extra":{"σ":"0.311","Exposed (μ)":"4.325","Games":"238","Points Sum":"119.857"}}
+{"key":"Llama 3.1 405B","model":"Llama 3.1 405B","scores":{"μ":"3.072","Avg Points":"0.459"},"extra":{"σ":"0.172","Exposed (μ)":"3.072","Games":"784","Points Sum":"359.571"}}
+{"key":"Llama 3.3 70B","model":"Llama 3.3 70B","scores":{"μ":"3.589","Avg Points":"0.493"},"extra":{"σ":"0.166","Exposed (μ)":"3.589","Games":"836","Points Sum":"411.857"}}
+{"key":"Llama 4 Maverick","model":"Llama 4 Maverick","scores":{"μ":"3.625","Avg Points":"0.474"},"extra":{"σ":"0.142","Exposed (μ)":"3.625","Games":"1146","Points Sum":"543.714"}}
+{"key":"Microsoft Phi-4","model":"Microsoft Phi-4","scores":{"μ":"2.842","Avg Points":"0.425"},"extra":{"σ":"0.136","Exposed (μ)":"2.842","Games":"1254","Points Sum":"533.429"}}
+{"key":"MiniMax-M2","model":"MiniMax-M2","scores":{"μ":"4.565","Avg Points":"0.522"},"extra":{"σ":"0.280","Exposed (μ)":"4.565","Games":"291","Points Sum":"151.857"}}
+{"key":"MiniMax-Text-01","model":"MiniMax-Text-01","scores":{"μ":"3.450","Avg Points":"0.471"},"extra":{"σ":"0.131","Exposed (μ)":"3.450","Games":"1335","Points Sum":"629.000"}}
+{"key":"Mistral Large 2","model":"Mistral Large 2","scores":{"μ":"4.114","Avg Points":"0.522"},"extra":{"σ":"0.137","Exposed (μ)":"4.114","Games":"1229","Points Sum":"641.000"}}
+{"key":"Mistral Large 3","model":"Mistral Large 3","scores":{"μ":"3.640","Avg Points":"0.456"},"extra":{"σ":"0.262","Exposed (μ)":"3.640","Games":"337","Points Sum":"153.714"}}
+{"key":"Mistral Medium 3","model":"Mistral Medium 3","scores":{"μ":"2.192","Avg Points":"0.374"},"extra":{"σ":"0.216","Exposed (μ)":"2.192","Games":"510","Points Sum":"190.714"}}
+{"key":"Mistral Medium 3.1","model":"Mistral Medium 3.1","scores":{"μ":"0.296","Avg Points":"0.250"},"extra":{"σ":"0.289","Exposed (μ)":"0.296","Games":"310","Points Sum":"77.429"}}
+{"key":"Mistral Small 3","model":"Mistral Small 3","scores":{"μ":"3.389","Avg Points":"0.475"},"extra":{"σ":"0.161","Exposed (μ)":"3.389","Games":"889","Points Sum":"422.571"}}
+{"key":"Qwen 2.5 Max","model":"Qwen 2.5 Max","scores":{"μ":"2.459","Avg Points":"0.406"},"extra":{"σ":"0.178","Exposed (μ)":"2.459","Games":"749","Points Sum":"304.286"}}
+{"key":"Qwen 3 235B A22B","model":"Qwen 3 235B A22B","scores":{"μ":"3.517","Avg Points":"0.464"},"extra":{"σ":"0.205","Exposed (μ)":"3.517","Games":"558","Points Sum":"259.143"}}
+{"key":"Qwen 3 235B A22B 25-07 Instruct","model":"Qwen 3 235B A22B 25-07 Instruct","scores":{"μ":"4.407","Avg Points":"0.507"},"extra":{"σ":"0.274","Exposed (μ)":"4.407","Games":"305","Points Sum":"154.571"}}
+{"key":"Qwen 3 30B A3B","model":"Qwen 3 30B A3B","scores":{"μ":"1.863","Avg Points":"0.358"},"extra":{"σ":"0.212","Exposed (μ)":"1.863","Games":"535","Points Sum":"191.286"}}
+{"key":"Qwen 3 Max Thinking","model":"Qwen 3 Max Thinking","scores":{"μ":"4.490","Avg Points":"0.516"},"extra":{"σ":"0.285","Exposed (μ)":"4.490","Games":"286","Points Sum":"147.714"}}
+{"key":"Qwen QwQ-32B 16K","model":"Qwen QwQ-32B 16K","scores":{"μ":"2.048","Avg Points":"0.382"},"extra":{"σ":"0.203","Exposed (μ)":"2.048","Games":"586","Points Sum":"223.857"}}
+{"key":"o1 (medium reasoning)","model":"o1 (medium reasoning)","scores":{"μ":"3.856","Avg Points":"0.510"},"extra":{"σ":"0.171","Exposed (μ)":"3.856","Games":"798","Points Sum":"406.857"}}
+{"key":"o3 (medium reasoning)","model":"o3 (medium reasoning)","scores":{"μ":"4.477","Avg Points":"0.523"},"extra":{"σ":"0.192","Exposed (μ)":"4.477","Games":"656","Points Sum":"343.000"}}
+{"key":"o3-mini (medium reasoning)","model":"o3-mini (medium reasoning)","scores":{"μ":"4.371","Avg Points":"0.531"},"extra":{"σ":"0.139","Exposed (μ)":"4.371","Games":"1194","Points Sum":"634.571"}}
+{"key":"o4-mini (high reasoning)","model":"o4-mini (high reasoning)","scores":{"μ":"3.298","Avg Points":"0.445"},"extra":{"σ":"0.209","Exposed (μ)":"3.298","Games":"534","Points Sum":"237.571"}}

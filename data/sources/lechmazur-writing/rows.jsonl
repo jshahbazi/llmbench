@@ -1,0 +1,60 @@
+{"key":"Baidu Ernie 5.1","model":"Baidu Ernie 5.1","scores":{"Comparison score":"-1.297","Estimated win chance":"31%"},"extra":{"95% bootstrap interval":"-1.418 to -1.170"}}
+{"key":"ByteDance Seed2.0 Pro","model":"ByteDance Seed2.0 Pro","scores":{"Comparison score":"-2.000","Estimated win chance":"22%"},"extra":{"95% bootstrap interval":"-2.114 to -1.893"}}
+{"key":"Claude Fable 5 (high)§","model":"Claude Fable 5 (high)§","scores":{"Comparison score":"2.810","Estimated win chance":"86%"},"extra":{"95% bootstrap interval":"2.745 to 2.869"}}
+{"key":"Claude Fable 5.1 (high)","model":"Claude Fable 5.1 (high)","scores":{"Comparison score":"3.745","Estimated win chance":"93%"},"extra":{"95% bootstrap interval":"3.663 to 3.829"}}
+{"key":"Claude Opus 4.6 Thinking 16K","model":"Claude Opus 4.6 Thinking 16K","scores":{"Comparison score":"1.083","Estimated win chance":"66%"},"extra":{"95% bootstrap interval":"0.918 to 1.275"}}
+{"key":"Claude Opus 4.7 (high)†","model":"Claude Opus 4.7 (high)†","scores":{"Comparison score":"1.720","Estimated win chance":"74%"},"extra":{"95% bootstrap interval":"1.623 to 1.821"}}
+{"key":"Claude Opus 4.8 (high)‡","model":"Claude Opus 4.8 (high)‡","scores":{"Comparison score":"0.204","Estimated win chance":"53%"},"extra":{"95% bootstrap interval":"0.111 to 0.320"}}
+{"key":"Claude Opus 4.8 (xhigh)","model":"Claude Opus 4.8 (xhigh)","scores":{"Comparison score":"0.717","Estimated win chance":"61%"},"extra":{"95% bootstrap interval":"0.605 to 0.828"}}
+{"key":"Claude Opus 5 (high)","model":"Claude Opus 5 (high)","scores":{"Comparison score":"3.322","Estimated win chance":"90%"},"extra":{"95% bootstrap interval":"3.233 to 3.431"}}
+{"key":"Claude Opus 5 (xhigh)","model":"Claude Opus 5 (xhigh)","scores":{"Comparison score":"3.685","Estimated win chance":"93%"},"extra":{"95% bootstrap interval":"3.635 to 3.735"}}
+{"key":"Claude Opus 5.5 (high)","model":"Claude Opus 5.5 (high)","scores":{"Comparison score":"3.693","Estimated win chance":"93%"},"extra":{"95% bootstrap interval":"3.586 to 3.776"}}
+{"key":"Claude Sonnet 4.6 Thinking 16K","model":"Claude Sonnet 4.6 Thinking 16K","scores":{"Comparison score":"1.610","Estimated win chance":"73%"},"extra":{"95% bootstrap interval":"1.507 to 1.712"}}
+{"key":"DeepSeek V3.2","model":"DeepSeek V3.2","scores":{"Comparison score":"-2.917","Estimated win chance":"13%"},"extra":{"95% bootstrap interval":"-3.162 to -2.680"}}
+{"key":"DeepSeek V4 Pro (high)","model":"DeepSeek V4 Pro (high)","scores":{"Comparison score":"0.441","Estimated win chance":"57%"},"extra":{"95% bootstrap interval":"0.342 to 0.555"}}
+{"key":"DeepSeek V4 Pro Preview","model":"DeepSeek V4 Pro Preview","scores":{"Comparison score":"-0.587","Estimated win chance":"41%"},"extra":{"95% bootstrap interval":"-0.700 to -0.469"}}
+{"key":"DeepSeek V4.1 Flash (high)","model":"DeepSeek V4.1 Flash (high)","scores":{"Comparison score":"-0.550","Estimated win chance":"42%"},"extra":{"95% bootstrap interval":"-0.665 to -0.439"}}
+{"key":"GLM-5.1","model":"GLM-5.1","scores":{"Comparison score":"-1.084","Estimated win chance":"34%"},"extra":{"95% bootstrap interval":"-1.257 to -0.897"}}
+{"key":"GLM-5.2 (max)","model":"GLM-5.2 (max)","scores":{"Comparison score":"0.412","Estimated win chance":"56%"},"extra":{"95% bootstrap interval":"0.312 to 0.492"}}
+{"key":"GLM-5.3 (max)","model":"GLM-5.3 (max)","scores":{"Comparison score":"2.950","Estimated win chance":"87%"},"extra":{"95% bootstrap interval":"2.856 to 3.047"}}
+{"key":"GPT-5.2 (medium)","model":"GPT-5.2 (medium)","scores":{"Comparison score":"0.287","Estimated win chance":"54%"},"extra":{"95% bootstrap interval":"0.131 to 0.439"}}
+{"key":"GPT-5.4 (medium)","model":"GPT-5.4 (medium)","scores":{"Comparison score":"1.922","Estimated win chance":"77%"},"extra":{"95% bootstrap interval":"1.808 to 2.034"}}
+{"key":"GPT-5.4 (xhigh)","model":"GPT-5.4 (xhigh)","scores":{"Comparison score":"1.916","Estimated win chance":"76%"},"extra":{"95% bootstrap interval":"1.801 to 2.025"}}
+{"key":"GPT-5.5 (xhigh)","model":"GPT-5.5 (xhigh)","scores":{"Comparison score":"2.390","Estimated win chance":"82%"},"extra":{"95% bootstrap interval":"2.322 to 2.459"}}
+{"key":"GPT-5.6 Sol (high)","model":"GPT-5.6 Sol (high)","scores":{"Comparison score":"2.237","Estimated win chance":"80%"},"extra":{"95% bootstrap interval":"2.153 to 2.305"}}
+{"key":"GPT-5.6 Sol (xhigh)","model":"GPT-5.6 Sol (xhigh)","scores":{"Comparison score":"2.425","Estimated win chance":"82%"},"extra":{"95% bootstrap interval":"2.353 to 2.512"}}
+{"key":"GPT-6 Astra (high)","model":"GPT-6 Astra (high)","scores":{"Comparison score":"3.416","Estimated win chance":"91%"},"extra":{"95% bootstrap interval":"3.355 to 3.494"}}
+{"key":"GPT-OSS-120B","model":"GPT-OSS-120B","scores":{"Comparison score":"-3.174","Estimated win chance":"11%"},"extra":{"95% bootstrap interval":"-3.282 to -3.066"}}
+{"key":"Gemini 3.1 Pro Preview","model":"Gemini 3.1 Pro Preview","scores":{"Comparison score":"-2.214","Estimated win chance":"19%"},"extra":{"95% bootstrap interval":"-2.314 to -2.110"}}
+{"key":"Gemini 3.5 Flash","model":"Gemini 3.5 Flash","scores":{"Comparison score":"-2.031","Estimated win chance":"22%"},"extra":{"95% bootstrap interval":"-2.114 to -1.946"}}
+{"key":"Gemini 3.7 Flash (high)","model":"Gemini 3.7 Flash (high)","scores":{"Comparison score":"-0.755","Estimated win chance":"39%"},"extra":{"95% bootstrap interval":"-0.870 to -0.640"}}
+{"key":"Gemini 3.8 Flash (high)","model":"Gemini 3.8 Flash (high)","scores":{"Comparison score":"0.081","Estimated win chance":"51%"},"extra":{"95% bootstrap interval":"-0.035 to 0.215"}}
+{"key":"Gemini 4 Argon (high)","model":"Gemini 4 Argon (high)","scores":{"Comparison score":"0.719","Estimated win chance":"61%"},"extra":{"95% bootstrap interval":"0.603 to 0.825"}}
+{"key":"Gemma 4 31B Reasoning","model":"Gemma 4 31B Reasoning","scores":{"Comparison score":"-1.910","Estimated win chance":"23%"},"extra":{"95% bootstrap interval":"-2.007 to -1.823"}}
+{"key":"Grok 4.3","model":"Grok 4.3","scores":{"Comparison score":"-4.298","Estimated win chance":"4%"},"extra":{"95% bootstrap interval":"-4.474 to -4.141"}}
+{"key":"Grok 4.5 (high)","model":"Grok 4.5 (high)","scores":{"Comparison score":"-5.131","Estimated win chance":"2%"},"extra":{"95% bootstrap interval":"-5.209 to -5.044"}}
+{"key":"Grok 4.6 (high)","model":"Grok 4.6 (high)","scores":{"Comparison score":"-2.930","Estimated win chance":"12%"},"extra":{"95% bootstrap interval":"-3.084 to -2.776"}}
+{"key":"Grok 4.7 (high)","model":"Grok 4.7 (high)","scores":{"Comparison score":"0.351","Estimated win chance":"55%"},"extra":{"95% bootstrap interval":"0.154 to 0.540"}}
+{"key":"Kimi K2.5 Thinking","model":"Kimi K2.5 Thinking","scores":{"Comparison score":"-1.131","Estimated win chance":"33%"},"extra":{"95% bootstrap interval":"-1.314 to -0.953"}}
+{"key":"Kimi K2.6","model":"Kimi K2.6","scores":{"Comparison score":"0.034","Estimated win chance":"50%"},"extra":{"95% bootstrap interval":"-0.078 to 0.143"}}
+{"key":"Kimi K3","model":"Kimi K3","scores":{"Comparison score":"2.347","Estimated win chance":"81%"},"extra":{"95% bootstrap interval":"2.279 to 2.418"}}
+{"key":"Kimi K3.1 Pro (high)","model":"Kimi K3.1 Pro (high)","scores":{"Comparison score":"2.723","Estimated win chance":"85%"},"extra":{"95% bootstrap interval":"2.634 to 2.799"}}
+{"key":"MiniMax-M2.7","model":"MiniMax-M2.7","scores":{"Comparison score":"-3.808","Estimated win chance":"6%"},"extra":{"95% bootstrap interval":"-3.941 to -3.660"}}
+{"key":"MiniMax-M3","model":"MiniMax-M3","scores":{"Comparison score":"-0.143","Estimated win chance":"48%"},"extra":{"95% bootstrap interval":"-0.244 to -0.024"}}
+{"key":"Mistral Large 3","model":"Mistral Large 3","scores":{"Comparison score":"-1.815","Estimated win chance":"24%"},"extra":{"95% bootstrap interval":"-1.932 to -1.704"}}
+{"key":"Mistral Large 4 (high)","model":"Mistral Large 4 (high)","scores":{"Comparison score":"-1.681","Estimated win chance":"26%"},"extra":{"95% bootstrap interval":"-1.787 to -1.583"}}
+{"key":"Mistral Medium 3.1","model":"Mistral Medium 3.1","scores":{"Comparison score":"-0.432","Estimated win chance":"43%"},"extra":{"95% bootstrap interval":"-0.566 to -0.306"}}
+{"key":"Mistral Medium 3.5","model":"Mistral Medium 3.5","scores":{"Comparison score":"-2.565","Estimated win chance":"16%"},"extra":{"95% bootstrap interval":"-2.699 to -2.432"}}
+{"key":"Muse Spark 1.1 (high)","model":"Muse Spark 1.1 (high)","scores":{"Comparison score":"0.713","Estimated win chance":"61%"},"extra":{"95% bootstrap interval":"0.608 to 0.801"}}
+{"key":"Muse Spark 1.2 (high)","model":"Muse Spark 1.2 (high)","scores":{"Comparison score":"-0.095","Estimated win chance":"48%"},"extra":{"95% bootstrap interval":"-0.182 to 0.003"}}
+{"key":"Muse Spark 1.3 (high)","model":"Muse Spark 1.3 (high)","scores":{"Comparison score":"0.500","Estimated win chance":"57%"},"extra":{"95% bootstrap interval":"0.428 to 0.581"}}
+{"key":"Muse Wonder (high)","model":"Muse Wonder (high)","scores":{"Comparison score":"1.900","Estimated win chance":"76%"},"extra":{"95% bootstrap interval":"1.809 to 1.994"}}
+{"key":"Qwen 3 Max Preview","model":"Qwen 3 Max Preview","scores":{"Comparison score":"-0.732","Estimated win chance":"39%"},"extra":{"95% bootstrap interval":"-0.893 to -0.572"}}
+{"key":"Qwen 3.6 Max Preview","model":"Qwen 3.6 Max Preview","scores":{"Comparison score":"-0.983","Estimated win chance":"35%"},"extra":{"95% bootstrap interval":"-1.102 to -0.863"}}
+{"key":"Qwen 3.6 Plus","model":"Qwen 3.6 Plus","scores":{"Comparison score":"-2.325","Estimated win chance":"18%"},"extra":{"95% bootstrap interval":"-2.485 to -2.142"}}
+{"key":"Qwen 3.7 Max","model":"Qwen 3.7 Max","scores":{"Comparison score":"-2.709","Estimated win chance":"14%"},"extra":{"95% bootstrap interval":"-2.828 to -2.580"}}
+{"key":"Qwen 3.8 Max¶","model":"Qwen 3.8 Max¶","scores":{"Comparison score":"0.116","Estimated win chance":"52%"},"extra":{"95% bootstrap interval":"0.005 to 0.221"}}
+{"key":"Qwen3.8-27B^","model":"Qwen3.8-27B^","scores":{"Comparison score":"-0.703","Estimated win chance":"39%"},"extra":{"95% bootstrap interval":"-0.858 to -0.549"}}
+{"key":"Xiaomi MiMo V2 Pro","model":"Xiaomi MiMo V2 Pro","scores":{"Comparison score":"-1.267","Estimated win chance":"31%"},"extra":{"95% bootstrap interval":"-1.490 to -1.035"}}
+{"key":"Xiaomi MiMo V2.5 Pro","model":"Xiaomi MiMo V2.5 Pro","scores":{"Comparison score":"-0.723","Estimated win chance":"39%"},"extra":{"95% bootstrap interval":"-0.858 to -0.596"}}
+{"key":"Xiaomi MiMo V2.6 Pro (thinking)※","model":"Xiaomi MiMo V2.6 Pro (thinking)※","scores":{"Comparison score":"1.520","Estimated win chance":"72%"},"extra":{"95% bootstrap interval":"1.399 to 1.645"}}

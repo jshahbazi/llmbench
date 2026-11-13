@@ -1,0 +1,16 @@
+[
+ {
+  "id": "Conditional",
+  "label": "Conditional sycophancy",
+  "direction": "lower",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Sycophancy",
+  "label": "Sycophancy",
+  "direction": "lower",
+  "unit": "percent",
+  "headline": true
+ }
+]

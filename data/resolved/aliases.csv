@@ -577,8 +577,8 @@ arena,claude-sonnet-4-20250514,claude-sonnet-4-20250514,exact,
 arena,ernie-5.0-preview-1220,ernie-5-0-preview-1220,exact,
 arena,gemini-2.0-flash-001,gemini-2-0-flash-001,exact,
 arena,gemini-2.5-flash,gemini-2-5-flash,exact,
-arena,gemini-2.5-flash-lite-preview-06-17-thinking,gemini-2-5-flash-lite-preview-06-17-thinking,unlisted,
-arena,gemini-2.5-flash-lite-preview-09-2025-no-thinking,gemini-2-5-flash-lite-preview-09-2025-no-thinking,unlisted,
+arena,gemini-2.5-flash-lite-preview-06-17-thinking,gemini-2-5-flash-lite-preview-06-17,variant,reasoning:thinking
+arena,gemini-2.5-flash-lite-preview-09-2025-no-thinking,gemini-2-5-flash-lite-preview-09-2025,variant,reasoning:non-thinking
 arena,gemini-2.5-flash-preview-09-2025,gemini-2-5-flash-preview-09-2025,exact,
 arena,gemini-2.5-pro,gemini-2-5-pro,exact,
 arena,gemini-3-flash,gemini-3-flash-preview,variant,
@@ -691,8 +691,8 @@ bfcl,Mistral-Medium-2505 (FC),mistral-medium-2505,variant,mode:FC
 bfcl,Mistral-Small-2506 (Prompt),mistral-small-3-2,alias,mode:Prompt
 bfcl,Mistral-small-2506 (FC),mistral-small-3-2,alias,mode:FC
 bfcl,Moonshotai-Kimi-K2-Instruct (FC),kimi-k2,link,mode:FC
-bfcl,Nanbeige3.5-Pro-Thinking (FC),nanbeige3-5-pro-thinking,unlisted,mode:FC
-bfcl,Nanbeige4-3B-Thinking-2511 (FC),nanbeige4-3b-thinking-2511,link,mode:FC
+bfcl,Nanbeige3.5-Pro-Thinking (FC),nanbeige3-5-pro-thinking,unlisted,reasoning:thinking; mode:FC
+bfcl,Nanbeige4-3B-Thinking-2511 (FC),nanbeige4-3b-thinking-2511,link,reasoning:thinking; mode:FC
 bfcl,Open-Mistral-Nemo-2407 (FC),mistral-nemo-instruct-2407,alias,mode:FC
 bfcl,Open-Mistral-Nemo-2407 (Prompt),mistral-nemo-instruct-2407,alias,mode:Prompt
 bfcl,Phi-4 (Prompt),phi-4,link,mode:Prompt
@@ -725,9 +725,222 @@ bfcl,xLAM-2-32b-fc-r (FC),xlam-2-32b-fc-r,link,mode:FC
 bfcl,xLAM-2-3b-fc-r (FC),xlam-2-3b-fc-r,link,mode:FC
 bfcl,xLAM-2-70b-fc-r (FC),llama-xlam-2-70b-fc-r,link,mode:FC
 bfcl,xLAM-2-8b-fc-r (FC),llama-xlam-2-8b-fc-r,link,mode:FC
+cais,Fable 5,claude-fable-5,exact,
+cais,Fable 5.1,claude-fable-5-1,exact,
+cais,Fable 5.2,claude-fable-5-2,unlisted,
+cais,GPT-5,gpt-5,exact,
+cais,GPT-5.2,gpt-5-2,exact,
+cais,GPT-5.5,gpt-5-5,exact,
+cais,GPT-6 Astra,gpt-6-astra,exact,
+cais,Gemini 2.5 Pro,gemini-2-5-pro,exact,
+cais,Gemini 3 Pro,gemini-3-pro-preview,variant,
+cais,Gemini 3.7 Flash,gemini-3-7-flash,exact,
+cais,Gemini 3.8 Flash,gemini-3-8-flash,exact,
+cais,Grok 4,grok-4-0709,variant,
+cais,Manus 1.5,manus-1-5,unlisted,
+cais,Manus 1.6 Max,manus-1-6-max,unlisted,
+cais,Opus 4.5,claude-opus-4-5,exact,
+cais,Opus 4.6,claude-opus-4-6,exact,
+cais,Opus 4.8,claude-opus-4-8,exact,
+cais,Opus 5.5,claude-opus-5-5,exact,
+cais,Sonnet 4.5,claude-sonnet-4-5,exact,
+cais,claude-fable-5-1-high,claude-fable-5-1,exact,
+cais,claude-fable-5-2-high,claude-fable-5-2,unlisted,effort:high
+cais,claude-fable-5-high,claude-fable-5,exact,
+cais,claude-opus-5-5-high,claude-opus-5-5,exact,
+cais,claude-opus-5-high,claude-opus-5,exact,
+cais,deepseek-r1,deepseek-r1,exact,
+cais,deepseek-v3.2-thinking,deepseek-v3-2,variant,reasoning:thinking
+cais,deepseek-v4-pro,deepseek-v4-pro,exact,
+cais,gemini-2-5-flash-high,gemini-2-5-flash,exact,
+cais,gemini-2-5-flash-lite-high,gemini-2-5-flash-lite,exact,
+cais,gemini-2-5-pro-exp-high,gemini-2-5-pro-exp-03-25,variant,effort:high
+cais,gemini-2-5-pro-high,gemini-2-5-pro,exact,
+cais,gemini-3-flash-preview-high,gemini-3-flash-preview,variant,effort:high
+cais,gemini-3-pro-preview-high,gemini-3-pro-preview,variant,effort:high
+cais,gemini-3.1-flash-lite-high,gemini-3-1-flash-lite,exact,
+cais,gemini-3.1-pro-preview-high,gemini-3-1-pro,exact,
+cais,gemini-3.5-flash,gemini-3-5-flash,exact,
+cais,gemini-3.7-flash-high,gemini-3-7-flash,exact,
+cais,gemini-3.8-flash-high,gemini-3-8-flash,exact,
+cais,gemini-4-argon-high,gemini-4-argon,exact,
+cais,gemini-4-carbon-high,gemini-4-carbon,exact,
+cais,glm-5.1,glm-5-1,exact,
+cais,glm-5.2,glm-5-2,exact,
+cais,glm-5.3,glm-5-3,exact,
+cais,gpt-4o-2024-11-20,gpt-4o-2024-11-20,exact,
+cais,gpt-5-high,gpt-5,exact,
+cais,gpt-5-mini-high,gpt-5-mini,exact,
+cais,gpt-5-nano-high,gpt-5-nano,exact,
+cais,gpt-5.1-high,gpt-5-1,exact,
+cais,gpt-5.2-high,gpt-5-2,exact,
+cais,gpt-5.4-high,gpt-5-4,exact,
+cais,gpt-5.4-mini-high,gpt-5-4-mini,exact,
+cais,gpt-5.4-nano-high,gpt-5-4-nano,exact,
+cais,gpt-5.5-high,gpt-5-5,exact,
+cais,gpt-5.6-luna-high,gpt-5-6-luna,exact,
+cais,gpt-5.6-sol-high,gpt-5-6-sol,exact,
+cais,gpt-5.6-terra-high,gpt-5-6-terra,exact,
+cais,gpt-6-astra-high,gpt-6-astra,exact,
+cais,gpt-6.1-sol-high,gpt-6-1-sol,exact,
+cais,grok-4,grok-4-0709,variant,
+cais,grok-4-2,grok-4-20,alias,
+cais,grok-4-3,grok-4-3,exact,
+cais,grok-4-7,grok-4-7,exact,
+cais,grok-4-fast-reasoning,grok-4-fast,exact,
+cais,grok-4.1-fast-reasoning,grok-4-1-fast-reasoning,exact,
+cais,grok-4.5,grok-4-5,exact,
+cais,grok-4.6,grok-4-6,exact,
+cais,haiku-4-5-thinking-32k,claude-haiku-4-5,exact,
+cais,kimi-k2-thinking,kimi-k2-thinking,exact,
+cais,kimi-k2.5-thinking,kimi-k2-5,exact,
+cais,kimi-k2.6-64k,kimi-k2-6,exact,
+cais,kimi-k3-high,kimi-k3,exact,
+cais,kimi-k3.1-pro-high,kimi-k3-1-pro,exact,
+cais,muse-spark-1.1-high,muse-spark-1-1,exact,
+cais,muse-spark-1.3-high,muse-spark-1-3,exact,
+cais,muse-spark-open-high,muse-spark-open,link,effort:high
+cais,muse-wonder-high,muse-wonder,exact,
+cais,o1,o1-2024-12-17,variant,
+cais,o3-high,o3,exact,
+cais,o3-mini-high,o3-mini,exact,
+cais,o4-mini-high,o4-mini,exact,
+cais,opus-4-5-thinking-32k,claude-opus-4-5,exact,
+cais,opus-4-6-adaptive-64k,claude-opus-4-6,exact,
+cais,opus-4-7-adaptive-64k,claude-opus-4-7,exact,
+cais,opus-4-8-high,claude-opus-4-8,exact,
+cais,sonnet-3-7-thinking-16k,claude-3-7-sonnet-20250219,exact,
+cais,sonnet-4-5-thinking-32k,claude-sonnet-4-5,exact,
+cais,sonnet-4-6-adaptive-64k,claude-sonnet-4-6,exact,
+cais,sonnet-4-thinking-16k,claude-sonnet-4-20250514,exact,
+confabulations,Amazon Nova Pro,nova-pro,maker,
+confabulations,Baidu Ernie 4.5 300B A47B,ernie-4-5-300b-a47b,maker,
+confabulations,Claude 3 Haiku,claude-3-haiku-20240307,exact,
+confabulations,Claude 3 Opus,claude-3-opus-20240229,exact,
+confabulations,Claude 3.5 Haiku,claude-3-5-haiku-20241022,exact,
+confabulations,Claude 3.5 Sonnet 2024-10-22,claude-3-5-sonnet-20241022,exact,
+confabulations,Claude 3.7 Sonnet,claude-3-7-sonnet-20250219,exact,
+confabulations,Claude 3.7 Sonnet Thinking 16K,claude-3-7-sonnet-thinking-16k,unlisted,
+confabulations,Claude Opus 4 (no reasoning),claude-opus-4-20250514,variant,reasoning:non-thinking
+confabulations,Claude Opus 4 Thinking 16K,claude-opus-4-thinking-16k,unlisted,
+confabulations,Claude Opus 4.1 (no reasoning),claude-opus-4-1-20250805,variant,reasoning:non-thinking
+confabulations,Claude Opus 4.1 Thinking 16K,claude-opus-4-1-thinking-16k,unlisted,
+confabulations,Claude Sonnet 4 (no reasoning),claude-sonnet-4-20250514,variant,reasoning:non-thinking
+confabulations,Claude Sonnet 4 Thinking 16K,claude-sonnet-4-thinking-16k,unlisted,
+confabulations,DeepSeek R1,deepseek-r1,exact,
+confabulations,DeepSeek R1 05/28,28,unlisted,
+confabulations,DeepSeek V3-0324,deepseek-v3-0324,exact,
+confabulations,GLM-4.5,glm-4-5,exact,
+confabulations,GPT-4 Turbo,gpt-4-turbo-2024-04-09,variant,
+confabulations,GPT-4.5 Preview,gpt-4-5-preview-2025-02-27,exact,
+confabulations,GPT-4o 2024-08-06,gpt-4o-2024-08-06,exact,
+confabulations,GPT-4o 2024-11-20,gpt-4o-2024-11-20,exact,
+confabulations,GPT-4o Feb 2025,gpt-4o-feb-2025,unlisted,
+confabulations,GPT-4o Mar 2025,gpt-4o-mar-2025,unlisted,
+confabulations,GPT-4o mini,gpt-4o-mini-2024-07-18,variant,
+confabulations,GPT-5 (medium reasoning),gpt-5,variant,effort:medium
+confabulations,GPT-5 mini (medium reasoning),gpt-5-mini,variant,effort:medium
+confabulations,GPT-OSS-120B (medium reasoning),gpt-oss-120b,variant,effort:medium
+confabulations,Gemini 1.5 Pro (Sept),gemini-1-5-pro,unlisted,other:Sept
+confabulations,Gemini 2.0 Flash,gemini-2-0-flash-001,variant,
+confabulations,Gemini 2.0 Flash Think Exp 01-21,gemini-2-0-flash-think-01-21,unlisted,stage:exp; snapshot:01-21
+confabulations,Gemini 2.0 Pro Exp 02-05,gemini-2-0-pro-exp-02-05,exact,
+confabulations,Gemini 2.5 Flash Preview 24K,gemini-2-5-flash-preview-24k,unlisted,
+confabulations,Gemini 2.5 Pro,gemini-2-5-pro,exact,
+confabulations,Gemini 2.5 Pro Exp 03-25,gemini-2-5-pro-exp-03-25,exact,
+confabulations,Gemini 2.5 Pro Preview 05-06,gemini-2-5-pro-preview-05-06,exact,
+confabulations,Gemma 2 27B,gemma-2-27b,exact,
+confabulations,Gemma 3 27B,gemma-3-27b,exact,
+confabulations,Grok 2 12-12,grok-2-12-12,unlisted,
+confabulations,Grok 3 Beta (no reasoning),grok-3-beta,variant,reasoning:non-thinking
+confabulations,Grok 3 Mini Beta (high),grok-3-mini-beta,variant,effort:high
+confabulations,Grok 3 Mini Beta (low),grok-3-mini-beta,variant,effort:low
+confabulations,Grok 4,grok-4-0709,variant,
+confabulations,Kimi K2,kimi-k2,exact,
+confabulations,Llama 3.1 405B,llama-3-1-405b,exact,
+confabulations,Llama 3.3 70B,llama-3-3-70b,exact,
+confabulations,Llama 4 Maverick,llama-4-maverick,exact,
+confabulations,Microsoft Phi-4,phi-4,maker,
+confabulations,MiniMax-Text-01,minimax-text-01,unlisted,
+confabulations,Mistral Large 2,mistral-large-2,exact,
+confabulations,Mistral Medium 3,mistral-medium-2505,variant,
+confabulations,Mistral Small 3,mistral-small-3,exact,
+confabulations,Qwen 2.5 72B,qwen2-5-72b,exact,
+confabulations,Qwen 2.5 Max,qwen-max-2025-01-25,variant,
+confabulations,Qwen 3 235B A22B,qwen3-235b-a22b,exact,
+confabulations,Qwen 3 235B A22B 25-07 Think,qwen-3-235b-a22b-25-07-think,unlisted,
+confabulations,Qwen 3 30B A3B,qwen3-30b-a3b,exact,
+confabulations,Qwen QwQ-32B 16K,qwen-qwq-32b-16k,unlisted,
+confabulations,o1 (medium reasoning),o1-2024-12-17,variant,effort:medium
+confabulations,o1-mini,o1-mini,exact,
+confabulations,o1-preview,o1-preview,exact,
+confabulations,o3 (high reasoning),o3,variant,effort:high
+confabulations,o3-mini (high reasoning),o3-mini,variant,effort:high
+confabulations,o3-mini (medium reasoning),o3-mini,variant,effort:medium
+confabulations,o3-pro (medium reasoning),o3-pro,variant,effort:medium
+confabulations,o4-mini (high reasoning),o4-mini,variant,effort:high
+elimination-game,Amazon Nova Pro,nova-pro,maker,
+elimination-game,Claude 3.5 Haiku,claude-3-5-haiku-20241022,exact,
+elimination-game,Claude 3.5 Sonnet 2024-10-22,claude-3-5-sonnet-20241022,exact,
+elimination-game,Claude 3.7 Sonnet,claude-3-7-sonnet-20250219,exact,
+elimination-game,Claude 3.7 Sonnet Thinking 16K,claude-3-7-sonnet-thinking-16k,unlisted,
+elimination-game,Claude Opus 4 (no reasoning),claude-opus-4-20250514,variant,reasoning:non-thinking
+elimination-game,Claude Opus 4 Thinking 16K,claude-opus-4-thinking-16k,unlisted,
+elimination-game,Claude Opus 4.1 (no reasoning),claude-opus-4-1-20250805,variant,reasoning:non-thinking
+elimination-game,Claude Opus 4.5 Thinking 16K,claude-opus-4-5-thinking-16k,unlisted,
+elimination-game,Claude Sonnet 4 (no reasoning),claude-sonnet-4-20250514,variant,reasoning:non-thinking
+elimination-game,Claude Sonnet 4 Thinking 16K,claude-sonnet-4-thinking-16k,unlisted,
+elimination-game,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,unlisted,
+elimination-game,DeepSeek R1,deepseek-r1,exact,
+elimination-game,DeepSeek R1 05/28,28,unlisted,
+elimination-game,DeepSeek-V3,deepseek-v3,exact,
+elimination-game,GLM-4.5,glm-4-5,exact,
+elimination-game,GLM-4.6,glm-4-6,exact,
+elimination-game,GPT-4.5 Preview,gpt-4-5-preview-2025-02-27,exact,
+elimination-game,GPT-4o Feb 2025,gpt-4o-feb-2025,unlisted,
+elimination-game,GPT-4o Mar 2025,gpt-4o-mar-2025,unlisted,
+elimination-game,GPT-4o mini,gpt-4o-mini-2024-07-18,variant,
+elimination-game,GPT-5 (medium reasoning),gpt-5,variant,effort:medium
+elimination-game,GPT-5 mini (medium reasoning),gpt-5-mini,variant,effort:medium
+elimination-game,GPT-5.2 (medium reasoning),gpt-5-2,variant,effort:medium
+elimination-game,GPT-OSS-120B,gpt-oss-120b,exact,
+elimination-game,Gemini 2.0 Flash,gemini-2-0-flash-001,variant,
+elimination-game,Gemini 2.0 Flash Think Exp 01-21,gemini-2-0-flash-think-01-21,unlisted,stage:exp; snapshot:01-21
+elimination-game,Gemini 2.0 Pro Exp 02-05,gemini-2-0-pro-exp-02-05,exact,
+elimination-game,Gemini 2.5 Flash,gemini-2-5-flash,exact,
+elimination-game,Gemini 3 Flash Preview,gemini-3-flash-preview,exact,
+elimination-game,Gemini 3 Pro Preview,gemini-3-pro-preview,exact,
+elimination-game,Grok 2 12-12,grok-2-12-12,unlisted,
+elimination-game,Grok 3 Beta (no reasoning),grok-3-beta,variant,reasoning:non-thinking
+elimination-game,Grok 3 Mini Beta (high reasoning),grok-3-mini-beta,variant,effort:high
+elimination-game,Grok 4,grok-4-0709,variant,
+elimination-game,Grok 4.1 Fast Reasoning,grok-4-1-fast-reasoning,exact,
+elimination-game,Kimi K2,kimi-k2,exact,
+elimination-game,Kimi K2 Thinking 64K,kimi-k2-thinking-64k,unlisted,
+elimination-game,Llama 3.1 405B,llama-3-1-405b,exact,
+elimination-game,Llama 3.3 70B,llama-3-3-70b,exact,
+elimination-game,Llama 4 Maverick,llama-4-maverick,exact,
+elimination-game,Microsoft Phi-4,phi-4,maker,
+elimination-game,MiniMax-M2,minimax-m2,exact,
+elimination-game,MiniMax-Text-01,minimax-text-01,unlisted,
+elimination-game,Mistral Large 2,mistral-large-2,exact,
+elimination-game,Mistral Large 3,mistral-large-3,exact,
+elimination-game,Mistral Medium 3,mistral-medium-2505,variant,
+elimination-game,Mistral Medium 3.1,mistral-medium-3-1,exact,
+elimination-game,Mistral Small 3,mistral-small-3,exact,
+elimination-game,Qwen 2.5 Max,qwen-max-2025-01-25,variant,
+elimination-game,Qwen 3 235B A22B,qwen3-235b-a22b,exact,
+elimination-game,Qwen 3 235B A22B 25-07 Instruct,qwen-3-235b-a22b-25-07-instruct,unlisted,
+elimination-game,Qwen 3 30B A3B,qwen3-30b-a3b,exact,
+elimination-game,Qwen 3 Max Thinking,qwen-3-max-thinking,unlisted,
+elimination-game,Qwen QwQ-32B 16K,qwen-qwq-32b-16k,unlisted,
+elimination-game,o1 (medium reasoning),o1-2024-12-17,variant,effort:medium
+elimination-game,o3 (medium reasoning),o3,variant,effort:medium
+elimination-game,o3-mini (medium reasoning),o3-mini,variant,effort:medium
+elimination-game,o4-mini (high reasoning),o4-mini,variant,effort:high
 epoch,Baichuan 2-7B,baichuan-2-7b,unlisted,
 epoch,Baichuan2-13B,baichuan2-13b,unlisted,
-epoch,Beam 1.0,beam-1-0,unlisted,
+epoch,Beam 1.0,beam-1-0-501b-a23b,alias,
 epoch,Cerebras-GPT-13B,cerebras-gpt-13b,unlisted,
 epoch,Claude 2,claude-2-0,alias,
 epoch,Claude 3 Haiku,claude-3-haiku-20240307,exact,
@@ -1401,6 +1614,1619 @@ epoch,seed-oss-36b-instruct,seed-oss-36b,exact,
 epoch,vicuna-13b-v1.1,vicuna-13b-v1-1,exact,
 epoch,zai-org/GLM-4.6,glm-4-6,exact,
 epoch,zai-org/GLM-4.7,glm-4-7,exact,
+kagi,Qwen/Qwen2.5-VL-72B-Instruct,qwen2-5-vl-72b,exact,
+kagi,Qwen3-14B,qwen3-14b,exact,
+kagi,Qwen3-30B-A3B-Thinking-2507,qwen3-30b-a3b-thinking-2507,exact,
+kagi,Qwen3-32B (No Thinking),qwen3-32b,variant,reasoning:non-thinking
+kagi,Qwen3-32B-fast (thinking),qwen3-32b-fast-thinking,unlisted,reasoning:thinking
+kagi,ai21/jamba-large-1.7,jamba-large-1-7,exact,
+kagi,ai21/jamba-mini-1.7,jamba-mini-1-7,exact,
+kagi,amazon/nova-premier-v1,nova-premier-v1,unlisted,
+kagi,arcee-ai/AFM-4.5B,afm-4-5b,exact,
+kagi,arcee-ai/maestro-reasoning,maestro-reasoning,unlisted,
+kagi,arcee-ai/spotlight,spotlight,unlisted,
+kagi,arcee-ai/virtuoso-large,virtuoso-large,unlisted,
+kagi,baidu/ernie-4.5-300b-a47b,ernie-4-5-300b-a47b,exact,
+kagi,bytedance/ui-tars-1.5-7b,ui-tars-1-5-7b,unlisted,
+kagi,chatgpt-4o (points to gpt 5.3),chatgpt-4o-latest-20250326,variant,other:points to gpt 5.3
+kagi,claude-3-haiku,claude-3-haiku-20240307,exact,
+kagi,claude-4-5-opus,claude-opus-4-5,exact,
+kagi,claude-4-5-opus-thinking,claude-opus-4-5,variant,reasoning:thinking
+kagi,claude-4-5-sonnet,claude-sonnet-4-5,exact,
+kagi,claude-4-6-opus,claude-opus-4-6,exact,
+kagi,claude-4-6-opus-thinking,claude-opus-4-6,variant,reasoning:thinking
+kagi,claude-4-7-opus,claude-opus-4-7,exact,
+kagi,claude-4-7-opus-thinking,claude-opus-4-7,variant,reasoning:thinking
+kagi,claude-4-8-opus-thinking,claude-opus-4-8,variant,reasoning:thinking
+kagi,claude-4-haiku,claude-4-haiku,unlisted,
+kagi,claude-4-haiku-thinking,claude-4-haiku-thinking,unlisted,reasoning:thinking
+kagi,claude-4-opus,claude-opus-4-20250514,exact,
+kagi,claude-4-opus-thinking,claude-opus-4-20250514,variant,reasoning:thinking
+kagi,claude-4-sonnet,claude-sonnet-4-20250514,exact,
+kagi,claude-4-sonnet-thinking,claude-sonnet-4-20250514,variant,reasoning:thinking
+kagi,claude-5-fable,claude-fable-5,exact,
+kagi,claude-5-fable-thinking,claude-fable-5,variant,reasoning:thinking
+kagi,cogito-v2-preview-deepseek-671b,cogito-v2-preview-deepseek-671b,unlisted,
+kagi,cogito-v2-preview-llama-4-scout,cogito-v2-preview-llama-4-scout,unlisted,
+kagi,cogito-v2-preview-llama-405b,cogito-v2-preview-llama-405b,unlisted,
+kagi,cohere/command-a,command-a,exact,
+kagi,deepseek chat v3,deepseek-chat-v3,unlisted,
+kagi,deepseek chat v3.1,deepseek-chat-v3-1,unlisted,
+kagi,deepseek-r1,deepseek-r1,exact,
+kagi,deepseek-r1-distill-llama-70b,deepseek-r1-distill-llama-70b,exact,
+kagi,deepseek-v3.1-terminus,deepseek-v3-1-terminus,exact,
+kagi,deepseek-v4-flash,deepseek-v4-flash,exact,
+kagi,deepseek-v4-pro,deepseek-v4-pro,exact,
+kagi,deepseek/deepseek-v3.2-exp,deepseek-v3-2-exp,exact,
+kagi,gemini-2-5-flash,gemini-2-5-flash,exact,
+kagi,gemini-2-5-flash-lite,gemini-2-5-flash-lite,exact,
+kagi,gemini-2-5-flash-thinking,gemini-2-5-flash,variant,reasoning:thinking
+kagi,gemini-2-5-pro,gemini-2-5-pro,exact,
+kagi,gemini-3-1-flash-lite,gemini-3-1-flash-lite,exact,
+kagi,gemini-3-pro,gemini-3-pro-preview,variant,
+kagi,gemini-flash 2.0,gemini-flash-2-0,unlisted,
+kagi,gemma-3-27b,gemma-3-27b,exact,
+kagi,gemma-4-31b,gemma-4-31b,exact,
+kagi,glm-4-5,glm-4-5,exact,
+kagi,glm-5,glm-5,exact,
+kagi,glm-5-2,glm-5-2,exact,
+kagi,glm-5-2-thinking,glm-5-2,variant,reasoning:thinking
+kagi,glm-5-thinking,glm-5,variant,reasoning:thinking
+kagi,google/gemma-3-27b-it-fast,gemma-3-27b-it-fast,unlisted,
+kagi,google/gemma-3-4b-it,gemma-3-4b,exact,
+kagi,google/gemma-3n-e4b-it,gemma-3n-e4b,exact,
+kagi,gpt-4-1,gpt-4-1,exact,
+kagi,gpt-4-1-mini,gpt-4-1-mini,exact,
+kagi,gpt-4-1-nano,gpt-4-1-nano-2025-04-14,exact,
+kagi,gpt-4o-mini,gpt-4o-mini-2024-07-18,variant,
+kagi,gpt-5,gpt-5,exact,
+kagi,gpt-5-2,gpt-5-2,exact,
+kagi,gpt-5-4,gpt-5-4,exact,
+kagi,gpt-5-4-mini,gpt-5-4-mini,exact,
+kagi,gpt-5-4-nano,gpt-5-4-nano,exact,
+kagi,gpt-5-5,gpt-5-5,exact,
+kagi,gpt-5-6-luna,gpt-5-6-luna,exact,
+kagi,gpt-5-6-sol,gpt-5-6-sol,exact,
+kagi,gpt-5-6-terra,gpt-5-6-terra,exact,
+kagi,gpt-5-codex,gpt-5-codex,exact,
+kagi,gpt-5-mini,gpt-5-mini,exact,
+kagi,gpt-5-nano,gpt-5-nano,exact,
+kagi,gpt-5-pro,gpt-5-pro,exact,
+kagi,gpt-oss-120b,gpt-oss-120b,exact,
+kagi,gpt-oss-20b,gpt-oss-20b,exact,
+kagi,grok-3,grok-3-beta,variant,
+kagi,grok-3-mini,grok-3-mini-beta,variant,
+kagi,grok-4,grok-4-0709,variant,
+kagi,grok-4-20,grok-4-20,exact,
+kagi,grok-4-20-thinking,grok-4-20,variant,reasoning:thinking
+kagi,grok-4-5,grok-4-5,exact,
+kagi,grok-4-fast,grok-4-fast,exact,
+kagi,grok-4-fast-thinking,grok-4-fast,variant,reasoning:thinking
+kagi,grok-code-fast-1,grok-code-fast-1,exact,
+kagi,hermes-4-405b (no thinking),hermes-4-405b,unlisted,reasoning:non-thinking
+kagi,hermes-4-405b (thinking),hermes-4-405b-thinking,unlisted,reasoning:thinking
+kagi,inception/mercury,mercury,exact,
+kagi,inception/mercury-coder,mercury-coder,unlisted,
+kagi,inclusionai/ling-1t,ling-1t,unlisted,
+kagi,inclusionai/ring-1t,ring-1t,unlisted,
+kagi,kimi-k2-0711 (see note below),kimi-k2,variant,other:see note below
+kagi,kimi-k2-0905 (see note below),kimi-k2-0905,variant,other:see note below
+kagi,kimi-k2-5,kimi-k2-5,exact,
+kagi,kimi-k2-5-thinking,kimi-k2-5,variant,reasoning:thinking
+kagi,llama-3-405b,llama-3-405b,unlisted,
+kagi,llama-3-70b,llama-3-70b,exact,
+kagi,llama-4-maverick,llama-4-maverick,exact,
+kagi,llama-4-scout,llama-4-scout,exact,
+kagi,magistral-medium,magistral-medium,unlisted,
+kagi,magistral-small,magistral-small,unlisted,
+kagi,meituan/longcat-flash-chat,longcat-flash-chat,exact,
+kagi,microsoft/phi-4-multimodal-instruct,phi-4-multimodal-instruct,unlisted,
+kagi,microsoft/phi-4-reasoning-plus,phi-4-reasoning-plus,exact,
+kagi,minimax-m2-5,minimax-m2-5,exact,
+kagi,minimax/minimax-m2,minimax-m2,exact,
+kagi,mistral-large-3,mistral-large-3,exact,
+kagi,mistral-medium,mistral-medium,unlisted,
+kagi,mistral-medium-3-5,mistral-medium-3-5,exact,
+kagi,mistral-small,mistral-small,unlisted,
+kagi,mistral-small-3.2-24b-it,mistral-small-3-2-24b-it,unlisted,
+kagi,mistral-small-4,mistral-small-4,exact,
+kagi,mistralai/Devstral-Small-2505,devstral-small-2505,unlisted,snapshot:2505
+kagi,mistralai/codestral-2508,codestral-2508,unlisted,snapshot:2508
+kagi,mistralai/devstral-medium,devstral-medium-2507,variant,
+kagi,mistralai/devstral-small,devstral-small,unlisted,
+kagi,moonshotai/kimi-k2-thinking,kimi-k2-thinking,exact,
+kagi,nvidia/nemotron-nano-12b-v2-vl,nemotron-nano-12b-v2-vl,unlisted,
+kagi,nvidia/nemotron-nano-9b-v2,nemotron-nano-9b-v2,exact,
+kagi,o3,o3,exact,
+kagi,o3-pro,o3-pro,exact,
+kagi,o4-mini,o4-mini,exact,
+kagi,qwen-3-235b-a22b (no thinking),qwen3-235b-a22b,variant,reasoning:non-thinking
+kagi,qwen-3-235b-a22b-thinking,qwen3-235b-a22b,variant,reasoning:thinking
+kagi,qwen-3-5-397b,qwen-3-5-397b,unlisted,
+kagi,qwen-3-coder,qwen-3-coder,unlisted,
+kagi,qwen-plus-2025-07-28,qwen-plus-2025-07-28,unlisted,snapshot:2025-07-28
+kagi,qwen/qwen3-max,qwen3-max,unlisted,
+kagi,qwen3-max,qwen3-max,unlisted,
+kagi,qwen3-next-80b-a3b-instruct,qwen3-next-80b-a3b-instruct,exact,
+kagi,qwen3-next-80b-a3b-thinking,qwen3-next-80b-a3b-thinking,exact,
+kagi,stepfun-ai/step3,step-3,exact,
+kagi,thedrummer/anubis-70b-v1.1,anubis-70b-v1-1,unlisted,
+kagi,thedrummer/valkyrie-49b-v1,valkyrie-49b-v1,unlisted,
+kagi,thudm/glm-4-32b,glm-4-32b,unlisted,
+kagi,z-ai/glm-4.5-air,glm-4-5-air,exact,
+kagi,z-ai/glm-4.5v,glm-4-5v,exact,
+kagi,z-ai/glm-4.6,glm-4-6,exact,
+kagi,z-ai/glm-4.6:exacto,glm-4-6-exacto,unlisted,
+lechmazur-debate,Baidu Ernie 5.0,ernie-5-0-0110,maker,
+lechmazur-debate,Baidu Ernie 5.1,ernie-5-1,maker,
+lechmazur-debate,ByteDance Seed2.0 Pro,bytedance-seed2-0-pro,unlisted,
+lechmazur-debate,Claude Fable 5 (high),claude-fable-5,variant,effort:high
+lechmazur-debate,Claude Fable 5.1 (high),claude-fable-5-1,variant,effort:high
+lechmazur-debate,Claude Opus 4.7 (high),claude-opus-4-7,variant,effort:high
+lechmazur-debate,Claude Opus 4.8 (high),claude-opus-4-8,variant,effort:high
+lechmazur-debate,Claude Opus 5 (high),claude-opus-5,variant,effort:high
+lechmazur-debate,Claude Opus 5.5 (high),claude-opus-5-5,variant,effort:high
+lechmazur-debate,Claude Sonnet 4.6 (high),claude-sonnet-4-6,variant,effort:high
+lechmazur-debate,Claude Sonnet 4.6 (no reasoning),claude-sonnet-4-6,variant,reasoning:non-thinking
+lechmazur-debate,Claude Sonnet 5 (high),claude-sonnet-5,variant,effort:high
+lechmazur-debate,DeepSeek V3.2,deepseek-v3-2,exact,
+lechmazur-debate,DeepSeek V4 Pro 0813 (high),deepseek-v4-pro,variant,effort:high
+lechmazur-debate,DeepSeek V4 Pro Preview,deepseek-v4-pro-preview,exact,
+lechmazur-debate,DeepSeek V4.1 Flash (high),deepseek-v4-1-flash,variant,effort:high
+lechmazur-debate,DeepSeek V4.1 Flash 1017 (high),deepseek-v4-1-flash-1017,variant,effort:high
+lechmazur-debate,GLM-5.1,glm-5-1,exact,
+lechmazur-debate,GLM-5.2 (max),glm-5-2,variant,effort:max
+lechmazur-debate,GLM-5.3 (high),glm-5-3,variant,effort:high
+lechmazur-debate,GPT-5.4 (high),gpt-5-4,variant,effort:high
+lechmazur-debate,GPT-5.4 (no reasoning),gpt-5-4,variant,reasoning:non-thinking
+lechmazur-debate,GPT-5.5 (high),gpt-5-5,variant,effort:high
+lechmazur-debate,GPT-5.6 Sol (high),gpt-5-6-sol,variant,effort:high
+lechmazur-debate,GPT-6 Astra (high),gpt-6-astra,variant,effort:high
+lechmazur-debate,GPT-OSS-120B,gpt-oss-120b,exact,
+lechmazur-debate,Gemini 3.1 Flash-Lite Preview,gemini-3-1-flash-lite,variant,stage:preview
+lechmazur-debate,Gemini 3.1 Pro Preview,gemini-3-1-pro,exact,
+lechmazur-debate,Gemini 3.5 Flash,gemini-3-5-flash,exact,
+lechmazur-debate,Gemini 3.7 Flash (high),gemini-3-7-flash,variant,effort:high
+lechmazur-debate,Gemini 3.8 Flash (high),gemini-3-8-flash,variant,effort:high
+lechmazur-debate,Gemini 4 Argon (high),gemini-4-argon,variant,effort:high
+lechmazur-debate,Grok 4.20 0309 (Non-Reasoning),grok-4-20-0309,unlisted,reasoning:non-thinking
+lechmazur-debate,Grok 4.20 0309 (Reasoning),grok-4-20,exact,
+lechmazur-debate,Grok 4.3,grok-4-3,exact,
+lechmazur-debate,Grok 4.5 (high),grok-4-5,variant,effort:high
+lechmazur-debate,Grok 4.6 (high),grok-4-6,variant,effort:high
+lechmazur-debate,Grok 4.7 (high),grok-4-7,variant,effort:high
+lechmazur-debate,Kimi K2.5 Thinking,kimi-k2-5-thinking,unlisted,
+lechmazur-debate,Kimi K2.6,kimi-k2-6,exact,
+lechmazur-debate,Kimi K3,kimi-k3,exact,
+lechmazur-debate,Kimi K3.1 Pro (high),kimi-k3-1-pro,variant,effort:high
+lechmazur-debate,Llama 4 Maverick,llama-4-maverick,exact,
+lechmazur-debate,MiniMax-M2.7,minimax-m2-7,exact,
+lechmazur-debate,MiniMax-M3,minimax-m3,exact,
+lechmazur-debate,Mistral Large 3,mistral-large-3,exact,
+lechmazur-debate,Mistral Large 4 (high),mistral-large-4-2610,variant,effort:high
+lechmazur-debate,Mistral Medium 3.5 (high),mistral-medium-3-5,variant,effort:high
+lechmazur-debate,Muse Spark 1.1 (high),muse-spark-1-1,variant,effort:high
+lechmazur-debate,Muse Spark 1.3 (high),muse-spark-1-3,variant,effort:high
+lechmazur-debate,Muse Wonder 1.0 (high),muse-wonder-1-0,unlisted,effort:high
+lechmazur-debate,Qwen 3.6 Max Preview,qwen3-6-max-preview,exact,
+lechmazur-debate,Qwen 3.7 Max,qwen3-7-max,exact,
+lechmazur-debate,Qwen 3.8 Max,qwen3-8-2-4t-a95b,variant,
+lechmazur-debate,Qwen3.5-397B-A17B,qwen3-5-397b-a17b,exact,
+lechmazur-debate,Step 3.7 Flash (high),step-3-7-flash,variant,effort:high
+lechmazur-debate,Tencent Hy3 Preview (high),hy3-preview,maker,effort:high
+lechmazur-debate,Tencent Hy4 Preview (high),hy4-preview,maker,effort:high
+lechmazur-debate,Xiaomi MiMo V2 Pro,mimo-v2-pro,maker,
+lechmazur-debate,Xiaomi MiMo V2.5 Pro,mimo-v2-5-pro,maker,
+lechmazur-debate,Xiaomi MiMo V2.6 Pro (thinking),mimo-v2-6-pro,maker,reasoning:thinking
+lechmazur-generalization,Arcee Trinity Large Thinking,arcee-trinity-large-thinking,unlisted,
+lechmazur-generalization,Baidu Ernie 5.0,ernie-5-0-0110,maker,
+lechmazur-generalization,ByteDance Seed2.0 Pro,bytedance-seed2-0-pro,unlisted,
+lechmazur-generalization,Claude Opus 4.6 (high reasoning),claude-opus-4-6,variant,effort:high
+lechmazur-generalization,Claude Opus 4.6 (no reasoning),claude-opus-4-6,variant,reasoning:non-thinking
+lechmazur-generalization,Claude Opus 4.7 (high reasoning),claude-opus-4-7,variant,effort:high
+lechmazur-generalization,Claude Opus 4.7 (no reasoning),claude-opus-4-7,variant,reasoning:non-thinking
+lechmazur-generalization,Claude Sonnet 4.6 (high reasoning),claude-sonnet-4-6,variant,effort:high
+lechmazur-generalization,Claude Sonnet 4.6 (no reasoning),claude-sonnet-4-6,variant,reasoning:non-thinking
+lechmazur-generalization,DeepSeek V3.2,deepseek-v3-2,exact,
+lechmazur-generalization,GLM-5.1,glm-5-1,exact,
+lechmazur-generalization,GPT-5.4 (high reasoning),gpt-5-4,variant,effort:high
+lechmazur-generalization,GPT-5.4 (medium reasoning),gpt-5-4,variant,effort:medium
+lechmazur-generalization,GPT-5.4 (no reasoning),gpt-5-4,variant,reasoning:non-thinking
+lechmazur-generalization,GPT-5.4 (xhigh reasoning),gpt-5-4,variant,effort:xhigh
+lechmazur-generalization,GPT-5.4 Mini (xhigh reasoning),gpt-5-4-mini,variant,effort:xhigh
+lechmazur-generalization,Gemini 3.1 Flash-Lite Preview,gemini-3-1-flash-lite,variant,stage:preview
+lechmazur-generalization,Gemini 3.1 Pro Preview,gemini-3-1-pro,exact,
+lechmazur-generalization,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,unlisted,
+lechmazur-generalization,Grok 4.20 0309 (Non-Reasoning),grok-4-20-0309,unlisted,reasoning:non-thinking
+lechmazur-generalization,Grok 4.20 0309 (Reasoning),grok-4-20,exact,
+lechmazur-generalization,Kimi K2.5 Thinking,kimi-k2-5-thinking,unlisted,
+lechmazur-generalization,MiniMax-M2.7,minimax-m2-7,exact,
+lechmazur-generalization,Mistral Large 3,mistral-large-3,exact,
+lechmazur-generalization,Mistral Medium 3.1,mistral-medium-3-1,exact,
+lechmazur-generalization,Qwen 3.6 Plus,qwen3-6-plus,exact,
+lechmazur-generalization,Qwen3.5-122B-A10B,qwen3-5-122b-a10b,exact,
+lechmazur-generalization,Qwen3.5-27B,qwen3-5-27b,exact,
+lechmazur-generalization,Qwen3.5-397B-A17B,qwen3-5-397b-a17b,exact,
+lechmazur-generalization,Xiaomi MiMo V2 Pro,mimo-v2-pro,maker,
+lechmazur-sycophancy,Arcee Trinity Large Thinking,arcee-trinity-large-thinking,unlisted,
+lechmazur-sycophancy,Baidu Ernie 5.1,ernie-5-1,maker,
+lechmazur-sycophancy,ByteDance Seed2.1 Pro,seed-2-1-pro-preview,maker,
+lechmazur-sycophancy,Claude Fable 5 (medium reasoning),claude-fable-5,variant,effort:medium
+lechmazur-sycophancy,Claude Sonnet 5 (high reasoning),claude-sonnet-5,variant,effort:high
+lechmazur-sycophancy,DeepSeek V4 Flash (high reasoning),deepseek-v4-flash,variant,effort:high
+lechmazur-sycophancy,DeepSeek V4 Pro,deepseek-v4-pro,variant,
+lechmazur-sycophancy,GLM-5.2 (max reasoning),glm-5-2,variant,effort:max
+lechmazur-sycophancy,GPT-5.6 Luna (high reasoning),gpt-5-6-luna,variant,effort:high
+lechmazur-sycophancy,GPT-5.6 Sol (high reasoning),gpt-5-6-sol,variant,effort:high
+lechmazur-sycophancy,GPT-5.6 Terra (high reasoning),gpt-5-6-terra,variant,effort:high
+lechmazur-sycophancy,Gemini 3.5 Flash-Lite,gemini-3-5-flash-lite,exact,
+lechmazur-sycophancy,Gemini 3.6 Flash,gemini-3-6-flash,exact,
+lechmazur-sycophancy,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,unlisted,
+lechmazur-sycophancy,Grok 4.5 (high reasoning),grok-4-5,variant,effort:high
+lechmazur-sycophancy,Inkling (high reasoning),inkling,variant,effort:high
+lechmazur-sycophancy,Kimi K3,kimi-k3,exact,
+lechmazur-sycophancy,MiniMax-M3,minimax-m3,exact,
+lechmazur-sycophancy,Mistral Medium 3.5 (high),mistral-medium-3-5,variant,effort:high
+lechmazur-sycophancy,Qwen 3.7 Flash,qwen3-7-flash,exact,
+lechmazur-sycophancy,Qwen 3.7 Max (2026-06-08),qwen3-7-max,variant,snapshot:2026-06-08
+lechmazur-sycophancy,Qwen 3.7 Plus,qwen3-7-plus,exact,
+lechmazur-sycophancy,Tencent Hy3 (high),hy3,maker,effort:high
+lechmazur-sycophancy,Xiaomi MiMo V2.5 Pro,mimo-v2-5-pro,maker,
+lechmazur-writing,Baidu Ernie 5.1,ernie-5-1,maker,
+lechmazur-writing,ByteDance Seed2.0 Pro,bytedance-seed2-0-pro,unlisted,
+lechmazur-writing,Claude Fable 5 (high)§,claude-fable-5-high,unlisted,
+lechmazur-writing,Claude Fable 5.1 (high),claude-fable-5-1,variant,effort:high
+lechmazur-writing,Claude Opus 4.6 Thinking 16K,claude-opus-4-6-thinking-16k,unlisted,
+lechmazur-writing,Claude Opus 4.7 (high)†,claude-opus-4-7-high,unlisted,
+lechmazur-writing,Claude Opus 4.8 (high)‡,claude-opus-4-8-high,unlisted,
+lechmazur-writing,Claude Opus 4.8 (xhigh),claude-opus-4-8,variant,effort:xhigh
+lechmazur-writing,Claude Opus 5 (high),claude-opus-5,variant,effort:high
+lechmazur-writing,Claude Opus 5 (xhigh),claude-opus-5,variant,effort:xhigh
+lechmazur-writing,Claude Opus 5.5 (high),claude-opus-5-5,variant,effort:high
+lechmazur-writing,Claude Sonnet 4.6 Thinking 16K,claude-sonnet-4-6-thinking-16k,unlisted,
+lechmazur-writing,DeepSeek V3.2,deepseek-v3-2,exact,
+lechmazur-writing,DeepSeek V4 Pro (high),deepseek-v4-pro,variant,effort:high
+lechmazur-writing,DeepSeek V4 Pro Preview,deepseek-v4-pro-preview,exact,
+lechmazur-writing,DeepSeek V4.1 Flash (high),deepseek-v4-1-flash,variant,effort:high
+lechmazur-writing,GLM-5.1,glm-5-1,exact,
+lechmazur-writing,GLM-5.2 (max),glm-5-2,variant,effort:max
+lechmazur-writing,GLM-5.3 (max),glm-5-3,variant,effort:max
+lechmazur-writing,GPT-5.2 (medium),gpt-5-2,variant,effort:medium
+lechmazur-writing,GPT-5.4 (medium),gpt-5-4,variant,effort:medium
+lechmazur-writing,GPT-5.4 (xhigh),gpt-5-4,variant,effort:xhigh
+lechmazur-writing,GPT-5.5 (xhigh),gpt-5-5,variant,effort:xhigh
+lechmazur-writing,GPT-5.6 Sol (high),gpt-5-6-sol,variant,effort:high
+lechmazur-writing,GPT-5.6 Sol (xhigh),gpt-5-6-sol,variant,effort:xhigh
+lechmazur-writing,GPT-6 Astra (high),gpt-6-astra,variant,effort:high
+lechmazur-writing,GPT-OSS-120B,gpt-oss-120b,exact,
+lechmazur-writing,Gemini 3.1 Pro Preview,gemini-3-1-pro,exact,
+lechmazur-writing,Gemini 3.5 Flash,gemini-3-5-flash,exact,
+lechmazur-writing,Gemini 3.7 Flash (high),gemini-3-7-flash,variant,effort:high
+lechmazur-writing,Gemini 3.8 Flash (high),gemini-3-8-flash,variant,effort:high
+lechmazur-writing,Gemini 4 Argon (high),gemini-4-argon,variant,effort:high
+lechmazur-writing,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,unlisted,
+lechmazur-writing,Grok 4.3,grok-4-3,exact,
+lechmazur-writing,Grok 4.5 (high),grok-4-5,variant,effort:high
+lechmazur-writing,Grok 4.6 (high),grok-4-6,variant,effort:high
+lechmazur-writing,Grok 4.7 (high),grok-4-7,variant,effort:high
+lechmazur-writing,Kimi K2.5 Thinking,kimi-k2-5-thinking,unlisted,
+lechmazur-writing,Kimi K2.6,kimi-k2-6,exact,
+lechmazur-writing,Kimi K3,kimi-k3,exact,
+lechmazur-writing,Kimi K3.1 Pro (high),kimi-k3-1-pro,variant,effort:high
+lechmazur-writing,MiniMax-M2.7,minimax-m2-7,exact,
+lechmazur-writing,MiniMax-M3,minimax-m3,exact,
+lechmazur-writing,Mistral Large 3,mistral-large-3,exact,
+lechmazur-writing,Mistral Large 4 (high),mistral-large-4-2610,variant,effort:high
+lechmazur-writing,Mistral Medium 3.1,mistral-medium-3-1,exact,
+lechmazur-writing,Mistral Medium 3.5,mistral-medium-3-5,exact,
+lechmazur-writing,Muse Spark 1.1 (high),muse-spark-1-1,variant,effort:high
+lechmazur-writing,Muse Spark 1.2 (high),muse-spark-1-2,variant,effort:high
+lechmazur-writing,Muse Spark 1.3 (high),muse-spark-1-3,variant,effort:high
+lechmazur-writing,Muse Wonder (high),muse-wonder,variant,effort:high
+lechmazur-writing,Qwen 3 Max Preview,qwen3-max-preview,exact,
+lechmazur-writing,Qwen 3.6 Max Preview,qwen3-6-max-preview,exact,
+lechmazur-writing,Qwen 3.6 Plus,qwen3-6-plus,exact,
+lechmazur-writing,Qwen 3.7 Max,qwen3-7-max,exact,
+lechmazur-writing,Qwen 3.8 Max¶,qwen3-8-2-4t-a95b,variant,
+lechmazur-writing,Qwen3.8-27B^,qwen3-8-27b,exact,
+lechmazur-writing,Xiaomi MiMo V2 Pro,mimo-v2-pro,maker,
+lechmazur-writing,Xiaomi MiMo V2.5 Pro,mimo-v2-5-pro,maker,
+lechmazur-writing,Xiaomi MiMo V2.6 Pro (thinking)※,xiaomi-mimo-v2-6-pro-thinking,unlisted,
+livebench,amazon.nova-lite-v1:0,nova-lite,exact,
+livebench,amazon.nova-micro-v1:0,nova-micro,exact,
+livebench,amazon.nova-pro-v1:0,nova-pro,exact,
+livebench,arcee-trinity-large-preview,trinity-large-preview,link,
+livebench,azerogpt,azerogpt,unlisted,
+livebench,beam-1.0,beam-1-0-501b-a23b,link,
+livebench,chatgpt-4o-latest,chatgpt-4o-latest-20250326,variant,
+livebench,chatgpt-4o-latest-0903,chatgpt-4o-latest-20250326,variant,
+livebench,chatgpt-4o-latest-2025-01-29,chatgpt-4o-latest-20250326,variant,
+livebench,chatgpt-4o-latest-2025-03-27,chatgpt-4o-latest-20250326,alias,snapshot:2025-03-27
+livebench,claude-3-5-haiku-20241022,claude-3-5-haiku-20241022,exact,
+livebench,claude-3-5-sonnet-20240620,claude-3-5-sonnet-20240620,exact,
+livebench,claude-3-5-sonnet-20241022,claude-3-5-sonnet-20241022,exact,
+livebench,claude-3-7-sonnet,claude-3-7-sonnet-20250219,exact,
+livebench,claude-3-7-sonnet-20250219-base,claude-3-7-sonnet-20250219,alias,
+livebench,claude-3-7-sonnet-20250219-thinking-64k,claude-3-7-sonnet-20250219,variant,budget:64K
+livebench,claude-3-7-sonnet-thinking,claude-3-7-sonnet-20250219,variant,reasoning:thinking
+livebench,claude-3-haiku-20240307,claude-3-haiku-20240307,exact,
+livebench,claude-3-opus-20240229,claude-3-opus-20240229,exact,
+livebench,claude-3-sonnet-20240229,claude-3-sonnet-20240229,exact,
+livebench,claude-4-1-opus-20250805-base,claude-opus-4-1-20250805,alias,
+livebench,claude-4-1-opus-20250805-thinking-32k,claude-opus-4-1-20250805,variant,budget:32K
+livebench,claude-4-opus-20250514-base,claude-opus-4-20250514,alias,
+livebench,claude-4-opus-20250514-thinking-32k,claude-opus-4-20250514,variant,budget:32K
+livebench,claude-4-sonnet-20250514-base,claude-sonnet-4-20250514,alias,
+livebench,claude-4-sonnet-20250514-thinking-64k,claude-sonnet-4-20250514,variant,budget:64K
+livebench,claude-fable-5,claude-fable-5,exact,
+livebench,claude-fable-5-1-max-effort,claude-fable-5-1,variant,effort:max
+livebench,claude-fable-5-max-effort,claude-fable-5,variant,effort:max
+livebench,claude-fable-5.1,claude-fable-5-1,exact,
+livebench,claude-fable-5.2,claude-fable-5-2,unlisted,
+livebench,claude-haiku-4-5-20251001,claude-haiku-4-5,exact,
+livebench,claude-haiku-4-5-20251001-thinking-64k,claude-haiku-4-5,variant,budget:64K; snapshot:20251001
+livebench,claude-haiku-4.5,claude-haiku-4-5,exact,
+livebench,claude-haiku-5-5-max-effort,claude-haiku-5-5,variant,effort:max
+livebench,claude-haiku-5-5-xhigh-effort,claude-haiku-5-5,variant,effort:xhigh
+livebench,claude-haiku-5.5,claude-haiku-5-5,exact,
+livebench,claude-opus-4-5-20251101-high-effort,claude-opus-4-5,variant,effort:high; snapshot:20251101
+livebench,claude-opus-4-5-20251101-low-effort,claude-opus-4-5,variant,effort:low; snapshot:20251101
+livebench,claude-opus-4-5-20251101-medium-effort,claude-opus-4-5,variant,effort:medium; snapshot:20251101
+livebench,claude-opus-4-5-20251101-thinking-64k-high-effort,claude-opus-4-5,variant,effort:high; budget:64K; snapshot:20251101
+livebench,claude-opus-4-5-20251101-thinking-64k-low-effort,claude-opus-4-5,variant,effort:low; budget:64K; snapshot:20251101
+livebench,claude-opus-4-5-20251101-thinking-64k-medium-effort,claude-opus-4-5,variant,effort:medium; budget:64K; snapshot:20251101
+livebench,claude-opus-4-5-20251101-thinking-high-effort,claude-opus-4-5,variant,reasoning:thinking; effort:high; snapshot:20251101
+livebench,claude-opus-4-5-20251101-thinking-low-effort,claude-opus-4-5,variant,reasoning:thinking; effort:low; snapshot:20251101
+livebench,claude-opus-4-5-20251101-thinking-medium-effort,claude-opus-4-5,variant,reasoning:thinking; effort:medium; snapshot:20251101
+livebench,claude-opus-4-6-thinking-auto-high-effort,claude-opus-4-6,variant,reasoning:thinking auto; effort:high
+livebench,claude-opus-4-7-high-effort,claude-opus-4-7,variant,effort:high
+livebench,claude-opus-4-7-low-effort,claude-opus-4-7,variant,effort:low
+livebench,claude-opus-4-7-medium-effort,claude-opus-4-7,variant,effort:medium
+livebench,claude-opus-4-7-xhigh-effort,claude-opus-4-7,variant,effort:xhigh
+livebench,claude-opus-4-8-high-effort,claude-opus-4-8,variant,effort:high
+livebench,claude-opus-4-8-low-effort,claude-opus-4-8,variant,effort:low
+livebench,claude-opus-4-8-max-effort,claude-opus-4-8,variant,effort:max
+livebench,claude-opus-4-8-medium-effort,claude-opus-4-8,variant,effort:medium
+livebench,claude-opus-4-8-xhigh-effort,claude-opus-4-8,variant,effort:xhigh
+livebench,claude-opus-4.8,claude-opus-4-8,exact,
+livebench,claude-opus-5,claude-opus-5,exact,
+livebench,claude-opus-5-5-max-effort,claude-opus-5-5,variant,effort:max
+livebench,claude-opus-5-5-xhigh-effort,claude-opus-5-5,variant,effort:xhigh
+livebench,claude-opus-5-max-effort,claude-opus-5,variant,effort:max
+livebench,claude-opus-5.5,claude-opus-5-5,exact,
+livebench,claude-sonnet-4-5-20250929,claude-sonnet-4-5,exact,
+livebench,claude-sonnet-4-5-20250929-thinking-64k,claude-sonnet-4-5,variant,budget:64K; snapshot:20250929
+livebench,claude-sonnet-4-6-thinking-auto-high-effort,claude-sonnet-4-6,variant,reasoning:thinking auto; effort:high
+livebench,claude-sonnet-4-6-thinking-auto-low-effort,claude-sonnet-4-6,variant,reasoning:thinking auto; effort:low
+livebench,claude-sonnet-4-6-thinking-auto-medium-effort,claude-sonnet-4-6,variant,reasoning:thinking auto; effort:medium
+livebench,claude-sonnet-4.6,claude-sonnet-4-6,exact,
+livebench,claude-sonnet-5,claude-sonnet-5,exact,
+livebench,claude-sonnet-5-5-max-effort,claude-sonnet-5-5,variant,effort:max
+livebench,claude-sonnet-5-5-xhigh-effort,claude-sonnet-5-5,variant,effort:xhigh
+livebench,claude-sonnet-5-xhigh-effort,claude-sonnet-5,variant,effort:xhigh
+livebench,claude-sonnet-5.5,claude-sonnet-5-5,exact,
+livebench,command-a-03-2025,command-a,exact,
+livebench,command-r,command-r-03-2024,alias,
+livebench,command-r-08-2024,command-r-08-2024,exact,
+livebench,command-r-plus,command-r-plus-04-2024,alias,
+livebench,command-r-plus-08-2024,command-r-plus-08-2024,exact,
+livebench,deepseek-coder-v2,deepseek-coder-v2,exact,
+livebench,deepseek-coder-v2-lite-instruct,deepseek-coder-v2-lite-instruct,exact,
+livebench,deepseek-r1,deepseek-r1,link,
+livebench,deepseek-r1-0528,deepseek-r1-0528,link,
+livebench,deepseek-r1-distill-llama-70b,deepseek-r1-distill-llama-70b,link,
+livebench,deepseek-r1-distill-qwen-32b,deepseek-r1-distill-qwen-32b,link,
+livebench,deepseek-v2-lite-chat,deepseek-v2-lite-chat,exact,
+livebench,deepseek-v2.5,deepseek-v2-5,link,
+livebench,deepseek-v3,deepseek-v3,link,
+livebench,deepseek-v3-0324,deepseek-v3-0324,link,
+livebench,deepseek-v3.1-terminus,deepseek-v3-1-terminus,link,
+livebench,deepseek-v3.1-terminus-thinking,deepseek-v3-1-terminus,link,reasoning:thinking
+livebench,deepseek-v3.2,deepseek-v3-2,link,
+livebench,deepseek-v3.2-exp,deepseek-v3-2-exp,link,
+livebench,deepseek-v3.2-exp-thinking,deepseek-v3-2-exp,link,reasoning:thinking
+livebench,deepseek-v3.2-speciale,deepseek-v3-2-speciale,link,
+livebench,deepseek-v3.2-thinking,deepseek-v3-2,link,reasoning:thinking
+livebench,deepseek-v4-flash,deepseek-v4-flash,link,
+livebench,deepseek-v4-flash-0731,deepseek-v4-flash,link,
+livebench,deepseek-v4-flash-vision,deepseek-v4-flash-vision-exp,link,
+livebench,deepseek-v4-flash-vision-exp,deepseek-v4-flash-vision-exp,link,
+livebench,deepseek-v4-pro,deepseek-v4-pro,exact,
+livebench,deepseek-v4-pro-0813,deepseek-v4-pro-preview,link,snapshot:0813
+livebench,deepseek-v4.1-flash,deepseek-v4-1-flash,exact,
+livebench,deepseek-v4.1-flash-1017,deepseek-v4-1-flash-1017,link,
+livebench,deepseek-v4.1-flash-max,deepseek-v4-1-flash,link,
+livebench,devstral-2512,devstral-2,alias,
+livebench,dracarys-72b-instruct,dracarys-72b-instruct,unlisted,
+livebench,dracarys-llama-3.1-70b-instruct,dracarys-llama-3-1-70b-instruct,unlisted,
+livebench,dracarys2-72b-instruct,dracarys2-72b-instruct,link,
+livebench,dracarys2-llama-3.1-70b-instruct,dracarys2-llama-3-1-70b-instruct,unlisted,
+livebench,elephant-alpha,elephant-alpha,unlisted,
+livebench,gemini-1.5-flash-002,gemini-1-5-flash-002,exact,
+livebench,gemini-1.5-flash-8b-001,gemini-1-5-flash-8b-001,exact,
+livebench,gemini-1.5-flash-8b-exp-0827,gemini-1-5-flash-8b-exp-0827,exact,
+livebench,gemini-1.5-flash-api-0514,gemini-1-5-flash-001,alias,snapshot:0514
+livebench,gemini-1.5-flash-exp-0827,gemini-1-5-flash-exp-0827,exact,
+livebench,gemini-1.5-pro-002,gemini-1-5-pro-002,exact,
+livebench,gemini-1.5-pro-api-0514,gemini-1-5-pro-001,alias,snapshot:0514
+livebench,gemini-1.5-pro-exp-0801,gemini-1-5-pro-exp-0801,exact,
+livebench,gemini-1.5-pro-exp-0827,gemini-1-5-pro-exp-0827,exact,
+livebench,gemini-2.0-flash,gemini-2-0-flash-001,variant,
+livebench,gemini-2.0-flash-001,gemini-2-0-flash-001,exact,
+livebench,gemini-2.0-flash-exp,gemini-2-0-flash-exp,exact,
+livebench,gemini-2.0-flash-lite,gemini-2-0-flash-lite-001,variant,
+livebench,gemini-2.0-flash-lite-001,gemini-2-0-flash-lite-001,exact,
+livebench,gemini-2.0-flash-lite-preview-02-05,gemini-2-0-flash-lite-preview-02-05,exact,
+livebench,gemini-2.0-flash-thinking-exp-01-21,gemini-2-0-flash-thinking-exp-01-21,exact,
+livebench,gemini-2.0-pro-exp-02-05,gemini-2-0-pro-exp-02-05,exact,
+livebench,gemini-2.5-flash-06-05-highthinking,gemini-2-5-flash,variant,reasoning:high thinking; snapshot:06-05
+livebench,gemini-2.5-flash-lite-highthinking,gemini-2-5-flash-lite,variant,reasoning:high thinking
+livebench,gemini-2.5-flash-lite-preview-09-2025-highthinking,gemini-2-5-flash-lite-preview-09-2025,variant,reasoning:high thinking
+livebench,gemini-2.5-flash-preview-04-17,gemini-2-5-flash-preview-04-17,exact,
+livebench,gemini-2.5-flash-preview-05-20,gemini-2-5-flash-preview-05-20,exact,
+livebench,gemini-2.5-flash-preview-09-2025-highthinking,gemini-2-5-flash-preview-09-2025,variant,reasoning:high thinking
+livebench,gemini-2.5-pro-06-05-highthinking,gemini-2-5-pro-preview-06-05,variant,reasoning:high thinking
+livebench,gemini-2.5-pro-exp-03-25,gemini-2-5-pro-exp-03-25,exact,
+livebench,gemini-2.5-pro-preview-03-25,gemini-2-5-pro-preview-03-25,exact,
+livebench,gemini-2.5-pro-preview-05-06,gemini-2-5-pro-preview-05-06,exact,
+livebench,gemini-3-flash-preview-high,gemini-3-flash-preview,variant,effort:high
+livebench,gemini-3-flash-preview-minimal,gemini-3-flash-preview,variant,effort:minimal
+livebench,gemini-3-pro-preview-11-2025-high,gemini-3-pro-preview,variant,effort:high; snapshot:11-2025
+livebench,gemini-3-pro-preview-11-2025-low,gemini-3-pro-preview,variant,effort:low; snapshot:11-2025
+livebench,gemini-3.1-flash-lite-preview-high,gemini-3-1-flash-lite,variant,effort:high; stage:preview
+livebench,gemini-3.1-pro,gemini-3-1-pro,exact,
+livebench,gemini-3.1-pro-preview-high,gemini-3-1-pro,variant,effort:high
+livebench,gemini-3.5-flash-high,gemini-3-5-flash,variant,effort:high
+livebench,gemini-3.5-flash-lite-high,gemini-3-5-flash-lite,variant,effort:high
+livebench,gemini-3.6-flash-high,gemini-3-6-flash,variant,effort:high
+livebench,gemini-3.7-flash,gemini-3-7-flash,exact,
+livebench,gemini-3.7-flash-high,gemini-3-7-flash,variant,effort:high
+livebench,gemini-3.8-flash,gemini-3-8-flash,exact,
+livebench,gemini-3.8-flash-high,gemini-3-8-flash,variant,effort:high
+livebench,gemini-4-argon,gemini-4-argon,exact,
+livebench,gemini-4-carbon,gemini-4-carbon,exact,
+livebench,gemini-4-hydrogen,gemini-4-hydrogen,unlisted,
+livebench,gemini-exp-1114,gemini-exp-1114,exact,
+livebench,gemini-exp-1121,gemini-exp-1121,exact,
+livebench,gemini-exp-1206,gemini-exp-1206,exact,
+livebench,gemma-1.1-7b-it,gemma-1-1-7b,exact,
+livebench,gemma-2-27b-it,gemma-2-27b,exact,
+livebench,gemma-2-9b-it,gemma-2-9b,exact,
+livebench,gemma-3-12b-it,gemma-3-12b,link,
+livebench,gemma-3-27b-it,gemma-3-27b,link,
+livebench,gemma-3-4b-it,gemma-3-4b,link,
+livebench,gemma-4-31b,gemma-4-31b,link,
+livebench,gemma-4-31b-it,gemma-4-31b,link,
+livebench,glm-4.5,glm-4-5,link,
+livebench,glm-4.5-air,glm-4-5-air,link,
+livebench,glm-4.6,glm-4-6,link,
+livebench,glm-4.6v,glm-4-6v,link,
+livebench,glm-4.7,glm-4-7,link,
+livebench,glm-5,glm-5,link,
+livebench,glm-5.1,glm-5-1,link,
+livebench,glm-5.2,glm-5-2,link,
+livebench,glm-5.3,glm-5-3,link,
+livebench,glm-5.3-flash,glm-5-3-flash,link,
+livebench,glm-5v-turbo,glm-5v-turbo,exact,
+livebench,gpt-3.5-turbo-0125,gpt-3-5-turbo-0125,exact,
+livebench,gpt-4-0125-preview,gpt-4-0125-preview,exact,
+livebench,gpt-4-0613,gpt-4-0613,exact,
+livebench,gpt-4-turbo-2024-04-09,gpt-4-turbo-2024-04-09,exact,
+livebench,gpt-4.1-2025-04-14,gpt-4-1,exact,
+livebench,gpt-4.1-mini-2025-04-14,gpt-4-1-mini,exact,
+livebench,gpt-4.1-nano-2025-04-14,gpt-4-1-nano-2025-04-14,exact,
+livebench,gpt-4.5-preview,gpt-4-5-preview-2025-02-27,exact,
+livebench,gpt-4.5-preview-2025-02-27,gpt-4-5-preview-2025-02-27,exact,
+livebench,gpt-4o-2024-05-13,gpt-4o-2024-05-13,exact,
+livebench,gpt-4o-2024-08-06,gpt-4o-2024-08-06,exact,
+livebench,gpt-4o-2024-11-20,gpt-4o-2024-11-20,exact,
+livebench,gpt-4o-mini-2024-07-18,gpt-4o-mini-2024-07-18,exact,
+livebench,gpt-5,gpt-5,exact,
+livebench,gpt-5-chat,gpt-5-chat-20261002,variant,
+livebench,gpt-5-codex,gpt-5-codex,exact,
+livebench,gpt-5-high,gpt-5,variant,effort:high
+livebench,gpt-5-low,gpt-5,variant,effort:low
+livebench,gpt-5-mini,gpt-5-mini,exact,
+livebench,gpt-5-mini-high,gpt-5-mini,variant,effort:high
+livebench,gpt-5-mini-low,gpt-5-mini,variant,effort:low
+livebench,gpt-5-mini-minimal,gpt-5-mini,variant,effort:minimal
+livebench,gpt-5-minimal,gpt-5,variant,effort:minimal
+livebench,gpt-5-nano,gpt-5-nano,exact,
+livebench,gpt-5-nano-high,gpt-5-nano,variant,effort:high
+livebench,gpt-5-nano-low,gpt-5-nano,variant,effort:low
+livebench,gpt-5-pro-2025-10-06,gpt-5-pro,exact,
+livebench,gpt-5.1-2025-11-13-high,gpt-5-1,variant,effort:high; snapshot:2025-11-13
+livebench,gpt-5.1-2025-11-13-low,gpt-5-1,variant,effort:low; snapshot:2025-11-13
+livebench,gpt-5.1-2025-11-13-medium,gpt-5-1,variant,effort:medium; snapshot:2025-11-13
+livebench,gpt-5.1-2025-11-13-nothinking,gpt-5-1,variant,reasoning:non-thinking; snapshot:2025-11-13
+livebench,gpt-5.1-codex,gpt-5-1-codex,exact,
+livebench,gpt-5.1-codex-max,gpt-5-1-codex-max,unlisted,
+livebench,gpt-5.1-codex-max-high,gpt-5-1-codex-max,unlisted,effort:high
+livebench,gpt-5.1-codex-max-xhigh,gpt-5-1-codex-max,unlisted,effort:xhigh
+livebench,gpt-5.1-codex-mini,gpt-5-1-codex-mini,exact,
+livebench,gpt-5.2-2025-12-11-high,gpt-5-2,variant,effort:high; snapshot:2025-12-11
+livebench,gpt-5.2-2025-12-11-low,gpt-5-2,variant,effort:low; snapshot:2025-12-11
+livebench,gpt-5.2-2025-12-11-medium,gpt-5-2,variant,effort:medium; snapshot:2025-12-11
+livebench,gpt-5.2-2025-12-11-nothinking,gpt-5-2,variant,reasoning:non-thinking; snapshot:2025-12-11
+livebench,gpt-5.2-codex,gpt-5-2-codex,exact,
+livebench,gpt-5.3-codex-high,gpt-5-3-codex,variant,effort:high
+livebench,gpt-5.3-codex-xhigh,gpt-5-3-codex,variant,effort:xhigh
+livebench,gpt-5.3-instant,gpt-5-3-instant,unlisted,
+livebench,gpt-5.4-high,gpt-5-4,variant,effort:high
+livebench,gpt-5.4-mini,gpt-5-4-mini,exact,
+livebench,gpt-5.4-mini-high,gpt-5-4-mini,variant,effort:high
+livebench,gpt-5.4-mini-low,gpt-5-4-mini,variant,effort:low
+livebench,gpt-5.4-mini-medium,gpt-5-4-mini,variant,effort:medium
+livebench,gpt-5.4-mini-xhigh,gpt-5-4-mini,variant,effort:xhigh
+livebench,gpt-5.4-nano,gpt-5-4-nano,exact,
+livebench,gpt-5.4-nano-high,gpt-5-4-nano,variant,effort:high
+livebench,gpt-5.4-nano-low,gpt-5-4-nano,variant,effort:low
+livebench,gpt-5.4-nano-medium,gpt-5-4-nano,variant,effort:medium
+livebench,gpt-5.4-nano-xhigh,gpt-5-4-nano,variant,effort:xhigh
+livebench,gpt-5.4-xhigh,gpt-5-4,variant,effort:xhigh
+livebench,gpt-5.5,gpt-5-5,exact,
+livebench,gpt-5.5-high,gpt-5-5,variant,effort:high
+livebench,gpt-5.5-medium,gpt-5-5,variant,effort:medium
+livebench,gpt-5.5-xhigh,gpt-5-5,variant,effort:xhigh
+livebench,gpt-5.6-luna,gpt-5-6-luna,exact,
+livebench,gpt-5.6-luna-max,gpt-5-6-luna,variant,effort:max
+livebench,gpt-5.6-sol,gpt-5-6-sol,exact,
+livebench,gpt-5.6-sol-max,gpt-5-6-sol,variant,effort:max
+livebench,gpt-5.6-terra,gpt-5-6-terra,exact,
+livebench,gpt-5.6-terra-max,gpt-5-6-terra,variant,effort:max
+livebench,gpt-6-astra,gpt-6-astra,exact,
+livebench,gpt-6-astra-max,gpt-6-astra,variant,effort:max
+livebench,gpt-6-luna,gpt-6-luna,exact,
+livebench,gpt-6-luna-max,gpt-6-luna,variant,effort:max
+livebench,gpt-6-sol,gpt-6-sol,exact,
+livebench,gpt-6-sol-max,gpt-6-sol,variant,effort:max
+livebench,gpt-6.1-sol,gpt-6-1-sol,exact,
+livebench,gpt-6.1-sol-max,gpt-6-1-sol,variant,effort:max
+livebench,gpt-6.1-sol-xhigh,gpt-6-1-sol,variant,effort:xhigh
+livebench,gpt-6.1-terra,gpt-6-1-terra,exact,
+livebench,gpt-oss-120b,gpt-oss-120b,link,
+livebench,grok-2,grok-2,unlisted,
+livebench,grok-2-1212,grok-2-1212,exact,
+livebench,grok-2-mini,grok-2-mini-0813,variant,
+livebench,grok-3-beta,grok-3-beta,exact,
+livebench,grok-3-mini-beta-high,grok-3-mini-beta,variant,effort:high
+livebench,grok-4-0709,grok-4-0709,exact,
+livebench,grok-4-1-fast-non-reasoning,grok-4-1-fast-non-reasoning,exact,
+livebench,grok-4-1-fast-reasoning,grok-4-1-fast-reasoning,exact,
+livebench,grok-4-fast-non-reasoning-2511,grok-4-fast,variant,reasoning:non-thinking
+livebench,grok-4-fast-reasoning-2511,grok-4-fast,exact,
+livebench,grok-4.20-beta-0309-non-reasoning,grok-4-20,variant,reasoning:non-thinking; stage:beta
+livebench,grok-4.20-beta-0309-reasoning,grok-4-20,variant,stage:beta
+livebench,grok-4.3,grok-4-3,exact,
+livebench,grok-4.5,grok-4-5,exact,
+livebench,grok-4.6,grok-4-6,exact,
+livebench,grok-4.7,grok-4-7,exact,
+livebench,grok-4.7-xhigh,grok-4-7,variant,effort:xhigh
+livebench,grok-beta,grok,unlisted,stage:beta
+livebench,grok-build-0.1,grok-build-0-1,exact,
+livebench,grok-code-fast-1-0825,grok-code-fast-1,alias,
+livebench,hermes-3-llama-3.1-70b,hermes-3-llama-3-1-70b,exact,
+livebench,hunyuan-turbos-20250313,hunyuan-turbos-20250313,unlisted,snapshot:20250313
+livebench,inkling,inkling,exact,
+livebench,inkling-xhigh,inkling,variant,effort:xhigh
+livebench,kimi-k2-instruct,kimi-k2,link,
+livebench,kimi-k2-thinking,kimi-k2-thinking,link,reasoning:thinking
+livebench,kimi-k2.5-thinking,kimi-k2-5,link,reasoning:thinking
+livebench,kimi-k2.6-thinking,kimi-k2-6,link,reasoning:thinking
+livebench,kimi-k2.7-code,kimi-k2-7-code,link,
+livebench,kimi-k3,kimi-k3,link,
+livebench,kimi-k3.1-pro,kimi-k3-1-pro,exact,
+livebench,learnlm-1.5-pro-experimental,learnlm-1-5-pro,unlisted,stage:exp
+livebench,learnlm-2.0-flash-experimental,learnlm-2-0-flash,unlisted,stage:exp
+livebench,llama-2-7b-chat-hf,llama-2-7b-chat,exact,
+livebench,llama-3.1-nemotron-70b-instruct,llama-3-1-nemotron-70b,exact,
+livebench,llama-3.3-70b-instruct-turbo,llama-3-3-70b,link,quant:Turbo (FP8)
+livebench,llama-4-maverick-17b-128e-instruct,llama-4-maverick,link,
+livebench,llama4-maverick-instruct-basic,llama-4-maverick,alias,
+livebench,mathstral-7b-v0.1,mathstral-7b-v0-1,exact,
+livebench,meta-llama-3-70b-instruct,llama-3-70b,exact,
+livebench,meta-llama-3-8b-instruct,llama-3-8b,exact,
+livebench,meta-llama-3.1-405b-instruct-turbo,llama-3-1-405b,link,quant:Turbo (FP8)
+livebench,meta-llama-3.1-70b-instruct-turbo,llama-3-1-70b,link,quant:Turbo (FP8)
+livebench,meta-llama-3.1-8b-instruct-turbo,llama-3-1-8b,link,quant:Turbo (FP8)
+livebench,mimo-v2-pro,mimo-v2-pro,exact,
+livebench,mimo-v2.6-pro,mimo-v2-6-pro,link,
+livebench,minimax-m2,minimax-m2,link,
+livebench,minimax-m2.5,minimax-m2-5,link,
+livebench,minimax-m2.7,minimax-m2-7,exact,
+livebench,minimax-m3,minimax-m3,exact,
+livebench,minimax-m3.1-flash,minimax-m3-1-flash,exact,
+livebench,mistral-7b-instruct-v0.2,mistral-7b-instruct-v0-2,exact,
+livebench,mistral-7b-instruct-v0.3,mistral-7b-instruct-v0-3,exact,
+livebench,mistral-large-2402,mistral-large-2402,exact,
+livebench,mistral-large-2407,mistral-large-2407,link,
+livebench,mistral-large-2411,mistral-large-2,alias,
+livebench,mistral-large-4,mistral-large-4,exact,
+livebench,mistral-large-4-0,mistral-large-4-2610,link,
+livebench,mistral-large-4-high,mistral-large-4-2610,variant,effort:high
+livebench,mistral-medium-2505,mistral-medium-2505,exact,
+livebench,mistral-small-2402,mistral-small-2402,exact,
+livebench,mistral-small-2501,mistral-small-3,alias,
+livebench,mistral-small-2503,mistral-small-3-1,alias,
+livebench,mixtral-8x22b-instruct-v0.1,mixtral-8x22b-instruct-v0-1,link,
+livebench,mixtral-8x7b-instruct-v0.1,mixtral-8x7b-instruct-v0-1,exact,
+livebench,muse-spark-1.1-xhigh,muse-spark-1-1,variant,effort:xhigh
+livebench,muse-spark-1.2,muse-spark-1-2,exact,
+livebench,muse-spark-1.2-xhigh,muse-spark-1-2,variant,effort:xhigh
+livebench,muse-spark-1.3,muse-spark-1-3,exact,
+livebench,muse-spark-1.3-xhigh,muse-spark-1-3,variant,effort:xhigh
+livebench,muse-spark-open,muse-spark-open,link,
+livebench,muse-wonder-1.0,muse-wonder,alias,
+livebench,muse-wonder-1.0-max,muse-wonder,alias,
+livebench,nemotron-3-super-120b-a12b,nemotron-3-super-120b-a12b,exact,
+livebench,nemotron-3-ultra-550b-a55b,nemotron-3-ultra-550b-a55b,exact,
+livebench,nemotron-3.5-lightning-30b-a3b,nemotron-3-5-lightning,link,
+livebench,nemotron-lightning-3.5,nemotron-3-5-lightning,link,
+livebench,nemotron-super-vl-3.5,nemotron-3-5-super-vl-120b-a12b,link,
+livebench,nemotron-super-vl-3.5-nvfp4,nemotron-3-5-super-vl-120b-a12b,alias,quant:NVFP4
+livebench,nemotron-ultra-3,nemotron-3-ultra-550b-a55b,alias,
+livebench,o1-2024-12-17-high,o1-2024-12-17,variant,effort:high
+livebench,o1-mini-2024-09-12,o1-mini,exact,
+livebench,o1-preview-2024-09-12,o1-preview,exact,
+livebench,o3-2025-04-16-high,o3,variant,effort:high; snapshot:2025-04-16
+livebench,o3-2025-04-16-medium,o3,variant,effort:medium; snapshot:2025-04-16
+livebench,o3-mini-2025-01-31-high,o3-mini,variant,effort:high; snapshot:2025-01-31
+livebench,o3-mini-2025-01-31-low,o3-mini,variant,effort:low; snapshot:2025-01-31
+livebench,o3-mini-2025-01-31-medium,o3-mini,variant,effort:medium; snapshot:2025-01-31
+livebench,o4-mini-2025-04-16-high,o4-mini,variant,effort:high; snapshot:2025-04-16
+livebench,o4-mini-2025-04-16-medium,o4-mini,variant,effort:medium; snapshot:2025-04-16
+livebench,olmo-2-1124-13b-instruct,olmo-2-13b,link,
+livebench,open-mistral-nemo,mistral-nemo-instruct-2407,alias,
+livebench,openhermes-2.5-mistral-7b,openhermes-2-5-mistral-7b,exact,
+livebench,ox-alpha-max,ox-alpha-max,unlisted,
+livebench,perplexity-sonar,perplexity-sonar,unlisted,
+livebench,perplexity-sonar-pro,sonar-pro,maker,
+livebench,phi-3-medium-128k-instruct,phi-3-medium-128k-instruct,link,
+livebench,phi-3-medium-4k-instruct,phi-3-medium-4k-instruct,link,
+livebench,phi-3-mini-128k-instruct,phi-3-mini-128k-instruct,link,
+livebench,phi-3-mini-4k-instruct,phi-3-mini-4k-instruct,exact,
+livebench,phi-3-small-128k-instruct,phi-3-small-128k-instruct,unlisted,
+livebench,phi-3-small-8k-instruct,phi-3-small-8k-instruct,link,
+livebench,phi-3.5-mini-instruct,phi-3-5-mini-instruct,link,
+livebench,phi-3.5-moe-instruct,phi-3-5-moe-instruct,link,
+livebench,phi-4,phi-4,link,
+livebench,phi-4-reasoning-plus,phi-4-reasoning-plus,link,
+livebench,qwen1.5-0.5b-chat,qwen1-5-0-5b-chat,exact,
+livebench,qwen1.5-1.8b-chat,qwen1-5-1-8b-chat,exact,
+livebench,qwen1.5-110b-chat,qwen1-5-110b-chat,exact,
+livebench,qwen1.5-4b-chat,qwen1-5-4b-chat,exact,
+livebench,qwen1.5-72b-chat,qwen1-5-72b-chat,exact,
+livebench,qwen1.5-7b-chat,qwen1-5-7b-chat,exact,
+livebench,qwen2-0.5b-instruct,qwen2-0-5b,exact,
+livebench,qwen2-1.5b-instruct,qwen2-1-5b,exact,
+livebench,qwen2-72b-instruct,qwen2-72b,exact,
+livebench,qwen2-7b-instruct,qwen2-7b,exact,
+livebench,qwen2.5-72b-instruct,qwen2-5-72b,exact,
+livebench,qwen2.5-72b-instruct-turbo,qwen2-5-72b,link,quant:Turbo (FP8)
+livebench,qwen2.5-7b-instruct-turbo,qwen2-5-7b,link,quant:Turbo (FP8)
+livebench,qwen2.5-coder-32b-instruct,qwen2-5-coder-32b,link,
+livebench,qwen2.5-max,qwen-max-2025-01-25,variant,
+livebench,qwen3-14b-thinking,qwen3-14b,link,reasoning:thinking
+livebench,qwen3-235b-a22b-instruct-2507,qwen3-235b-a22b-instruct-2507,link,
+livebench,qwen3-235b-a22b-thinking,qwen3-235b-a22b,link,reasoning:thinking
+livebench,qwen3-235b-a22b-thinking-2507,qwen3-235b-a22b-thinking-2507,link,reasoning:thinking
+livebench,qwen3-30b-a3b-thinking,qwen3-30b-a3b,exact,
+livebench,qwen3-32b-thinking,qwen3-32b,link,reasoning:thinking
+livebench,qwen3-coder-480b-a35b-instruct,qwen3-coder-480b-a35b,link,
+livebench,qwen3-max-2025-09-23,qwen3-max-2025-09-23,exact,
+livebench,qwen3-next-80b-a3b-instruct,qwen3-next-80b-a3b-instruct,link,
+livebench,qwen3-next-80b-a3b-thinking,qwen3-next-80b-a3b-thinking,link,reasoning:thinking
+livebench,qwen3.6-27b,qwen3-6-27b,link,
+livebench,qwen3.6-flash,qwen3-6-flash,exact,
+livebench,qwen3.6-plus,qwen3-6-plus,exact,
+livebench,qwen3.7-max,qwen3-7-max,exact,
+livebench,qwen3.8-27b,qwen3-8-27b,link,
+livebench,qwen3.8-flash,qwen3-8-flash-next,link,
+livebench,qwen3.8-flash-next,qwen3-8-flash-next,link,
+livebench,qwen3.8-max,qwen3-8-2-4t-a95b,link,
+livebench,qwq-32b,qwq-32b,link,
+livebench,qwq-32b-preview,qwq-32b-preview,link,
+livebench,smaug-agentic,smaug-agentic,unlisted,
+livebench,smaug-flash,smaug-flash,unlisted,
+livebench,smaug-mini,smaug-mini,unlisted,
+livebench,smaug-nemotron-3.5-nvfp4,smaug-nemotron-3-5,unlisted,quant:NVFP4
+livebench,smaug-qwen2-72b-instruct,smaug-qwen2-72b-instruct,unlisted,
+livebench,starling-lm-7b-beta,starling-lm-7b-beta,exact,
+livebench,step-2-16k-202411,step-2-16k-exp-202412,variant,
+livebench,step-5-preview,step-5-preview,exact,
+livebench,vicuna-7b-v1.5,vicuna-7b-v1-5,exact,
+livebench,vicuna-7b-v1.5-16k,vicuna-7b-v1-5-16k,exact,
+livebench,yi-6b-chat,yi-6b-chat,exact,
+livebench,zephyr-7b-alpha,zephyr-7b-alpha,exact,
+livebench,zephyr-7b-beta,zephyr-7b-beta,exact,
+llm-chess,Ternary-Bonsai-2-27B-gguf:TQ1_0-high,ternary-bonsai-2-27b-gguf-tq1-0,unlisted,effort:high
+llm-chess,agents-a1@q4_k_m,agents-a1,unlisted,quant:Q4_K_M
+llm-chess,amazon.nova-lite-v1,amazon-nova-lite-v1,unlisted,
+llm-chess,amazon.nova-premier,nova-premier,maker,
+llm-chess,amazon.nova-pro-v1,amazon-nova-pro-v1,unlisted,
+llm-chess,chat-bison-32k@002,chat-bison-32k-002,unlisted,
+llm-chess,claude-2,claude-2,unlisted,
+llm-chess,claude-2-1,claude-2-1,exact,
+llm-chess,claude-3-5-haiku,claude-3-5-haiku-20241022,exact,
+llm-chess,claude-3-5-sonnet,claude-3-5-sonnet,unlisted,
+llm-chess,claude-3-5-sonnet-v2,claude-3-5-sonnet-v2,unlisted,
+llm-chess,claude-3-7-sonnet,claude-3-7-sonnet-20250219,exact,
+llm-chess,claude-3-7-sonnet_thinking_10000,claude-3-7-sonnet-thinking-10000,unlisted,
+llm-chess,claude-3-7-sonnet_thinking_1024,claude-3-7-sonnet-thinking-1024,unlisted,snapshot:1024
+llm-chess,claude-3-7-sonnet_thinking_2048,claude-3-7-sonnet-thinking-2048,unlisted,
+llm-chess,claude-3-7-sonnet_thinking_5000,claude-3-7-sonnet-thinking-5000,unlisted,
+llm-chess,claude-3-haiku,claude-3-haiku-20240307,exact,
+llm-chess,claude-3-opus,claude-3-opus-20240229,exact,
+llm-chess,claude-3-sonnet,claude-3-sonnet-20240229,exact,
+llm-chess,claude-haiku-4-5,claude-haiku-4-5,exact,
+llm-chess,claude-haiku-4-5_thinking_16000,claude-haiku-4-5-thinking-16000,unlisted,
+llm-chess,claude-haiku-5-5-high,claude-haiku-5-5,variant,effort:high
+llm-chess,claude-opus-4,claude-opus-4-20250514,exact,
+llm-chess,claude-opus-4-1,claude-opus-4-1-20250805,exact,
+llm-chess,claude-opus-4-5,claude-opus-4-5,exact,
+llm-chess,claude-opus-4-5-thinking_16000,claude-opus-4-5-thinking-16000,unlisted,
+llm-chess,claude-opus-4-6,claude-opus-4-6,exact,
+llm-chess,claude-opus-4-6-high,claude-opus-4-6,variant,effort:high
+llm-chess,claude-opus-4-7-high,claude-opus-4-7,variant,effort:high
+llm-chess,claude-opus-4-8-high,claude-opus-4-8,variant,effort:high
+llm-chess,claude-opus-4_thinking_16000,claude-opus-4-thinking-16000,unlisted,
+llm-chess,claude-opus-5-5-high,claude-opus-5-5,variant,effort:high
+llm-chess,claude-opus-5_adaptive-thinking-high,claude-opus-5-adaptive-thinking,unlisted,reasoning:thinking; effort:high
+llm-chess,claude-sonnet-4,claude-sonnet-4-20250514,exact,
+llm-chess,claude-sonnet-4-5,claude-sonnet-4-5,exact,
+llm-chess,claude-sonnet-4-5_thinking_16000,claude-sonnet-4-5-thinking-16000,unlisted,
+llm-chess,claude-sonnet-4-6,claude-sonnet-4-6,exact,
+llm-chess,claude-sonnet-4-6_thinking-high,claude-sonnet-4-6-thinking,unlisted,effort:high
+llm-chess,claude-sonnet-4_thinking_16000,claude-sonnet-4-thinking-16000,unlisted,
+llm-chess,claude-sonnet-5,claude-sonnet-5,exact,
+llm-chess,claude-sonnet-5-5-high,claude-sonnet-5-5,variant,effort:high
+llm-chess,claude-sonnet-5-high,claude-sonnet-5,variant,effort:high
+llm-chess,cursor_cli_composer_1,cursor-cli-composer-1,unlisted,
+llm-chess,cursor_cli_composer_1.5,cursor-cli-composer-1-5,unlisted,
+llm-chess,cursor_cli_composer_2,cursor-cli-composer-2,unlisted,
+llm-chess,deephermes-3-llama-3-8b-preview@q8,deephermes-3-llama-3-8b,unlisted,quant:Q8; stage:preview
+llm-chess,deepseek-V3.2_non-reasoning,deepseek-v3-2-non-reasoning,unlisted,
+llm-chess,deepseek-r1,deepseek-r1,exact,
+llm-chess,deepseek-r1-0528,deepseek-r1-0528,exact,
+llm-chess,deepseek-r1-distill-qwen-14b@q8_0,deepseek-r1-distill-qwen-14b,variant,quant:Q8_0
+llm-chess,deepseek-r1-distill-qwen-32b@q4_k_m|isol_temp06,deepseek-r1-distill-qwen-32b-q4-k-m-isol-temp06,unlisted,
+llm-chess,deepseek-v3,deepseek-v3,exact,
+llm-chess,deepseek-v3-0324,deepseek-v3-0324,exact,
+llm-chess,deepseek-v4.1-flash-2026-09-10-high,deepseek-v4-1-flash,variant,effort:high; snapshot:2026-09-10
+llm-chess,gemini-1.5-flash-001,gemini-1-5-flash-001,exact,
+llm-chess,gemini-1.5-pro-preview,gemini-1-5-pro,unlisted,stage:preview
+llm-chess,gemini-2.0-flash-001,gemini-2-0-flash-001,exact,
+llm-chess,gemini-2.0-flash-exp,gemini-2-0-flash-exp,exact,
+llm-chess,gemini-2.0-flash-lite-001,gemini-2-0-flash-lite-001,exact,
+llm-chess,gemini-2.0-flash-lite-preview,gemini-2-0-flash-lite-preview-02-05,variant,
+llm-chess,gemini-2.0-flash-thinking-exp-01-21,gemini-2-0-flash-thinking-exp-01-21,exact,
+llm-chess,gemini-2.0-flash-thinking-exp-1219,gemini-2-0-flash-exp,variant,reasoning:thinking; snapshot:1219
+llm-chess,gemini-2.5-flash,gemini-2-5-flash,exact,
+llm-chess,gemini-2.5-pro,gemini-2-5-pro,exact,
+llm-chess,gemini-2.5-pro-preview-03-25,gemini-2-5-pro-preview-03-25,exact,
+llm-chess,gemini-2.5-pro-preview-05-06,gemini-2-5-pro-preview-05-06,exact,
+llm-chess,gemini-3-flash-preview,gemini-3-flash-preview,exact,
+llm-chess,gemini-3-pro-preview-high,gemini-3-pro-preview,variant,effort:high
+llm-chess,gemini-3.1-flash-lite-preview,gemini-3-1-flash-lite,variant,stage:preview
+llm-chess,gemini-3.1-pro-preview-high,gemini-3-1-pro,variant,effort:high
+llm-chess,gemini-3.5-flash-medium,gemini-3-5-flash-medium,unlisted,
+llm-chess,gemini-3.6-flash-high,gemini-3-6-flash,variant,effort:high
+llm-chess,gemini-3.6-flash-low,gemini-3-6-flash,variant,effort:low
+llm-chess,gemini-3.6-flash-medium,gemini-3-6-flash-medium,unlisted,
+llm-chess,gemini-3.7-flash-high,gemini-3-7-flash,variant,effort:high
+llm-chess,gemini-3.8-flash-high,gemini-3-8-flash,variant,effort:high
+llm-chess,gemini-3.8-flash-medium,gemini-3-8-flash-medium,unlisted,
+llm-chess,gemini-4-argon-high,gemini-4-argon,variant,effort:high
+llm-chess,gemma-2-27b-it@q6_k_l,gemma-2-27b,variant,quant:Q6_K_L
+llm-chess,gemma-2-9b-it-8bit,gemma-2-9b,variant,quant:8BIT
+llm-chess,gemma-3-4b-it@iq4_qs,gemma-3-4b-it-iq4-qs,unlisted,
+llm-chess,gemma-3-4b-it@iq4_qs@PGN,gemma-3-4b-it-iq4-qs-pgn,unlisted,
+llm-chess,gemma2-9b-it,gemma-2-9b,exact,
+llm-chess,glm-4.7-flash@q4,glm-4-7-flash,variant,quant:Q4
+llm-chess,glm-5.3-flash-high,glm-5-3-flash,variant,effort:high
+llm-chess,glm-5.3-high,glm-5-3,variant,effort:high
+llm-chess,google_gemma-3-12b-it@iq4_xs,google-gemma-3-12b-it-iq4-xs,unlisted,
+llm-chess,google_gemma-3-12b-it@q8_0,gemma-3-12b,maker,quant:Q8_0
+llm-chess,google_gemma-3-27b-it@iq4_xs,google-gemma-3-27b-it-iq4-xs,unlisted,
+llm-chess,google_gemma-3-4b-it@bf16,gemma-3-4b,maker,quant:BF16
+llm-chess,google_gemma-3-4b-it@q8_0,gemma-3-4b,maker,quant:Q8_0
+llm-chess,gpt-35-turbo-0125,gpt-35-turbo-0125,unlisted,snapshot:0125
+llm-chess,gpt-35-turbo-0301,gpt-35-turbo-0301,unlisted,snapshot:0301
+llm-chess,gpt-35-turbo-0613,gpt-35-turbo-0613,unlisted,snapshot:0613
+llm-chess,gpt-35-turbo-1106,gpt-35-turbo-1106,unlisted,snapshot:1106
+llm-chess,gpt-4,gpt-4,unlisted,
+llm-chess,gpt-4-32k,gpt-4-32k,unlisted,
+llm-chess,gpt-4-turbo,gpt-4-turbo-2024-04-09,variant,
+llm-chess,gpt-4.1,gpt-4-1,exact,
+llm-chess,gpt-4.1-mini,gpt-4-1-mini,exact,
+llm-chess,gpt-4.1-nano,gpt-4-1-nano-2025-04-14,exact,
+llm-chess,gpt-4.5-preview,gpt-4-5-preview-2025-02-27,exact,
+llm-chess,gpt-4o-2024-05-13,gpt-4o-2024-05-13,exact,
+llm-chess,gpt-4o-2024-08-06,gpt-4o-2024-08-06,exact,
+llm-chess,gpt-4o-2024-11-20,gpt-4o-2024-11-20,exact,
+llm-chess,gpt-4o-mini,gpt-4o-mini-2024-07-18,variant,
+llm-chess,gpt-5-chat,gpt-5-chat-20261002,variant,
+llm-chess,gpt-5-low,gpt-5,variant,effort:low
+llm-chess,gpt-5-medium,gpt-5,variant,effort:medium
+llm-chess,gpt-5-mini-high,gpt-5-mini,variant,effort:high
+llm-chess,gpt-5-mini-low,gpt-5-mini,variant,effort:low
+llm-chess,gpt-5-mini-medium,gpt-5-mini,variant,effort:medium
+llm-chess,gpt-5-nano-high,gpt-5-nano,variant,effort:high
+llm-chess,gpt-5-nano-low,gpt-5-nano,variant,effort:low
+llm-chess,gpt-5-nano-medium,gpt-5-nano,variant,effort:medium
+llm-chess,gpt-5.1-chat,gpt-5-1-chat,unlisted,
+llm-chess,gpt-5.1-codex-low,gpt-5-1-codex,variant,effort:low
+llm-chess,gpt-5.1-codex-mini-high,gpt-5-1-codex-mini,variant,effort:high
+llm-chess,gpt-5.1-low,gpt-5-1,variant,effort:low
+llm-chess,gpt-5.1-medium,gpt-5-1,variant,effort:medium
+llm-chess,gpt-5.2-chat,gpt-5-2-chat-latest-20260210,variant,
+llm-chess,gpt-5.2-low,gpt-5-2,variant,effort:low
+llm-chess,gpt-5.2-medium,gpt-5-2,variant,effort:medium
+llm-chess,gpt-5.3-codex-medium,gpt-5-3-codex-medium,unlisted,
+llm-chess,gpt-5.4-high,gpt-5-4,variant,effort:high
+llm-chess,gpt-5.4-low,gpt-5-4,variant,effort:low
+llm-chess,gpt-5.4-medium,gpt-5-4,variant,effort:medium
+llm-chess,gpt-5.4-mini-high,gpt-5-4-mini,variant,effort:high
+llm-chess,gpt-5.4-mini-low,gpt-5-4-mini,variant,effort:low
+llm-chess,gpt-5.4-nano-high,gpt-5-4-nano,variant,effort:high
+llm-chess,gpt-5.5-high,gpt-5-5,variant,effort:high
+llm-chess,gpt-5.5-medium,gpt-5-5,variant,effort:medium
+llm-chess,gpt-5.6-luna-high,gpt-5-6-luna,variant,effort:high
+llm-chess,gpt-5.6-luna-medium,gpt-5-6-luna-medium,unlisted,
+llm-chess,gpt-5.6-luna-xhigh,gpt-5-6-luna,variant,effort:xhigh
+llm-chess,gpt-5.6-sol-high,gpt-5-6-sol,variant,effort:high
+llm-chess,gpt-5.6-sol-medium,gpt-5-6-sol-medium,unlisted,
+llm-chess,gpt-5.6-sol-xhigh,gpt-5-6-sol,variant,effort:xhigh
+llm-chess,gpt-5.6-terra-high,gpt-5-6-terra,variant,effort:high
+llm-chess,gpt-5.6-terra-medium,gpt-5-6-terra-medium,unlisted,
+llm-chess,gpt-5.6-terra-xhigh,gpt-5-6-terra,variant,effort:xhigh
+llm-chess,gpt-6-astra-high,gpt-6-astra,variant,effort:high
+llm-chess,gpt-6-astra-xhigh,gpt-6-astra,variant,effort:xhigh
+llm-chess,gpt-6-luna-high,gpt-6-luna,variant,effort:high
+llm-chess,gpt-6-luna-max,gpt-6-luna-max,unlisted,
+llm-chess,gpt-6-luna-xhigh,gpt-6-luna,variant,effort:xhigh
+llm-chess,gpt-6-sol-high,gpt-6-sol,variant,effort:high
+llm-chess,gpt-6-sol-xhigh,gpt-6-sol,variant,effort:xhigh
+llm-chess,gpt-6.1-sol-high,gpt-6-1-sol,variant,effort:high
+llm-chess,gpt-6.1-sol-xhigh,gpt-6-1-sol,variant,effort:xhigh
+llm-chess,gpt-6.1-terra-high,gpt-6-1-terra,variant,effort:high
+llm-chess,gpt-6.1-terra-xhigh,gpt-6-1-terra,variant,effort:xhigh
+llm-chess,gpt-oss-120b-high,gpt-oss-120b,variant,effort:high
+llm-chess,gpt-oss-120b-low,gpt-oss-120b,variant,effort:low
+llm-chess,gpt-oss-120b-medium,gpt-oss-120b-medium,unlisted,
+llm-chess,gpt-oss-20b-high,gpt-oss-20b,variant,effort:high
+llm-chess,gpt-oss-20b-low,gpt-oss-20b,variant,effort:low
+llm-chess,gpt-oss-20b-medium,gpt-oss-20b-medium,unlisted,
+llm-chess,granite-3.1-8b-instruct,granite-3-1-8b,exact,
+llm-chess,grok-2,grok-2,unlisted,
+llm-chess,grok-3-beta,grok-3-beta,exact,
+llm-chess,grok-3-mini-beta,grok-3-mini-beta,exact,
+llm-chess,grok-3-mini-beta-high,grok-3-mini-beta,variant,effort:high
+llm-chess,grok-3-mini-beta-low,grok-3-mini-beta,variant,effort:low
+llm-chess,grok-4-1-fast-non-reasoning,grok-4-1-fast-non-reasoning,exact,
+llm-chess,grok-4-1-fast-reasoning,grok-4-1-fast-reasoning,exact,
+llm-chess,grok-4-20-non-reasoning,grok-4-20-non-reasoning,unlisted,
+llm-chess,grok-4-20-reasoning,grok-4-20-reasoning,unlisted,
+llm-chess,grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,unlisted,
+llm-chess,grok-4-fast-reasoning,grok-4-fast-reasoning,unlisted,
+llm-chess,grok-4.3-high,grok-4-3,variant,effort:high
+llm-chess,grok-4.6-high,grok-4-6,variant,effort:high
+llm-chess,grok-4.7-high,grok-4-7,variant,effort:high
+llm-chess,inception-mercury-3-high,inception-mercury-3,unlisted,effort:high
+llm-chess,internlm3-8b-instruct,internlm3-8b-instruct,exact,
+llm-chess,k2-think@iq4_xs,k2-think-iq4-xs,unlisted,
+llm-chess,kimi-k2-instruct,kimi-k2,exact,
+llm-chess,kimi-k2.5,kimi-k2-5,exact,
+llm-chess,llama-2-7b-chat,llama-2-7b-chat,exact,
+llm-chess,llama-3-70b-instruct-awq,llama-3-70b,variant,quant:AWQ
+llm-chess,llama-3.1-tulu-3-8b@q8_0,llama-3-1-tulu-3-8b,variant,quant:Q8_0
+llm-chess,llama-3.3-70b,llama-3-3-70b,exact,
+llm-chess,llama-4-maverick-17b-128e-instruct,llama-4-maverick,exact,
+llm-chess,llama3-8b-8192,llama3-8b-8192,unlisted,
+llm-chess,llama3.1-8b,llama-3-1-8b-unlisted,unlisted,
+llm-chess,magistral-small,magistral-small,unlisted,
+llm-chess,mercury-coder-small,mercury-coder-small,unlisted,
+llm-chess,meta.llama4-scout-17b-instruct-v1:0,meta-llama4-scout-17b-instruct,unlisted,other:v1:0
+llm-chess,minimax-m2,minimax-m2,exact,
+llm-chess,minimax.minimax-m2.1,minimax-m2-1,maker,
+llm-chess,minimax.minimax-m2.5,minimax-m2-5,maker,
+llm-chess,ministral-8b-instruct,ministral-8b-2410,variant,
+llm-chess,mistral-nemo-12b-instruct,mistral-nemo-12b-instruct,unlisted,
+llm-chess,mistral-small-24b-instruct@q4_k_m,mistral-small-3,variant,quant:Q4_K_M
+llm-chess,mistral-small-instruct,mistral-small-2409,variant,
+llm-chess,muse-ember-max,muse-ember-max,unlisted,
+llm-chess,muse-ember-xhigh,muse-ember,unlisted,effort:xhigh
+llm-chess,muse-glimmer-30b@q4_k_m,muse-glimmer-30b,variant,quant:Q4_K_M
+llm-chess,nemotron-3-nano@q3_k_l,nemotron-3-nano,unlisted,quant:Q3_K_L
+llm-chess,non-deepseek-r1-t03_mini41-t10_mini41-t03,non-deepseek-r1-t03-mini41-t10-mini41-t03,unlisted,
+llm-chess,non-gemini-25pro-t03_mini41-t00_mini41-t03,non-gemini-25pro-t03-mini41-t00-mini41-t03,unlisted,
+llm-chess,o1-low,o1-2024-12-17,variant,effort:low
+llm-chess,o1-medium,o1-2024-12-17,variant,effort:medium
+llm-chess,o1-mini,o1-mini,exact,
+llm-chess,o1-preview,o1-preview,exact,
+llm-chess,o3-low,o3,variant,effort:low
+llm-chess,o3-medium,o3,variant,effort:medium
+llm-chess,o3-mini-high,o3-mini,variant,effort:high
+llm-chess,o3-mini-low,o3-mini,variant,effort:low
+llm-chess,o3-mini-medium,o3-mini,variant,effort:medium
+llm-chess,o4-mini-high,o4-mini,variant,effort:high
+llm-chess,o4-mini-low,o4-mini,variant,effort:low
+llm-chess,o4-mini-low@PGN,o4-mini-low-pgn,unlisted,
+llm-chess,o4-mini-medium,o4-mini,variant,effort:medium
+llm-chess,phi-4,phi-4,exact,
+llm-chess,qwen-3-235b-a22b-instruct-2507,qwen3-235b-a22b-instruct-2507,exact,
+llm-chess,qwen-3-32b,qwen3-32b,exact,
+llm-chess,qwen-max,qwen-max,unlisted,
+llm-chess,qwen-plus,qwen-plus,unlisted,
+llm-chess,qwen-turbo,qwen-turbo-2024-11-01,variant,
+llm-chess,qwen2.5-14b-instruct-1m,qwen2-5-14b-instruct-1m,unlisted,
+llm-chess,qwen2.5-14b-instruct@q8_0,qwen2-5-14b,variant,quant:Q8_0
+llm-chess,qwen2.5-72b-instruct,qwen2-5-72b,exact,
+llm-chess,qwen2.5-7b-chess-mmxl@f16,qwen2-5-7b-chess-mmxl-f16,unlisted,
+llm-chess,qwen2.5-7b-instruct-1m,qwen2-5-7b-instruct-1m,unlisted,
+llm-chess,qwen3-14b@iq4_xs-thinking,qwen3-14b-iq4-xs-thinking,unlisted,reasoning:thinking
+llm-chess,qwen3-30b-a3b-thinking@q4_k_m,qwen3-30b-a3b,variant,reasoning:thinking; quant:Q4_K_M
+llm-chess,qwen3-4b-thinking@q8,qwen3-4b,variant,reasoning:thinking; quant:Q8
+llm-chess,qwen3-next-80b-a3b,qwen3-next-80b-a3b,unlisted,
+llm-chess,qwen3.5-0.8b@bf16,qwen3-5-0-8b,variant,quant:BF16
+llm-chess,qwen3.5-2b@bf16,qwen3-5-2b,variant,quant:BF16
+llm-chess,qwen3.5-35b-a3b@q4_k_m,qwen3-5-35b-a3b,variant,quant:Q4_K_M
+llm-chess,qwen3.5-4b-thinking@bf16,qwen3-5-4b,variant,reasoning:thinking; quant:BF16
+llm-chess,qwen3.5-9b-thinking@bf16,qwen3-5-9b,variant,reasoning:thinking; quant:BF16
+llm-chess,qwen3.5-9b@q8_0,qwen3-5-9b,variant,quant:Q8_0
+llm-chess,qwen3.6-27b@q4_k_s,qwen3-6-27b,variant,quant:Q4_K_S
+llm-chess,qwen3.8-27b@q4_k_m,qwen3-8-27b,variant,quant:Q4_K_M
+llm-chess,qwq-32b,qwq-32b,exact,
+llm-chess,qwq-32b-preview@q4_k_m,qwq-32b-preview,variant,quant:Q4_K_M
+llm-chess,ring-mini-2.0@q8_0,ring-mini-2-0,unlisted,quant:Q8_0
+llm-chess,sky-t1-32b-preview,sky-t1-32b-preview,exact,
+llm-chess,unsloth/qwen3.8-27b@q2_k_xl,qwen3-8-27b-q2-k-xl,unlisted,
+llm-chess,zai.glm-5,glm-5,maker,
+mmlu-pro,Athene-V2-Chat,athene-v2-chat,exact,
+mmlu-pro,Athene-V2-Chat (0-shot),athene-v2-chat,variant,other:0-shot
+mmlu-pro,Aya-Expanse-32B,aya-expanse-32b,exact,
+mmlu-pro,Aya-Expanse-8B,aya-expanse-8b,exact,
+mmlu-pro,Claude-3-5-Haiku-20241022,claude-3-5-haiku-20241022,exact,
+mmlu-pro,Claude-3-Haiku-20240307,claude-3-haiku-20240307,exact,
+mmlu-pro,Claude-3-Opus,claude-3-opus-20240229,exact,
+mmlu-pro,Claude-3-Sonnet,claude-3-sonnet-20240229,exact,
+mmlu-pro,Claude-3.5-Sonnet (2024-06-20),claude-3-5-sonnet-20240620,exact,
+mmlu-pro,Claude-3.5-Sonnet (2024-10-22),claude-3-5-sonnet-20241022,exact,
+mmlu-pro,Claude-3.7-Sonnet-Thinking,claude-3-7-sonnet-20250219,variant,reasoning:thinking
+mmlu-pro,Claude-4-Opus-Thinking,claude-opus-4-20250514,variant,reasoning:thinking
+mmlu-pro,Claude-4-Sonnet,claude-sonnet-4-20250514,exact,
+mmlu-pro,Claude-4.5-Opus(Thinking),claude-opus-4-5,variant,reasoning:thinking
+mmlu-pro,Claude-4.5-Sonnet(Thinking),claude-sonnet-4-5,variant,reasoning:thinking
+mmlu-pro,Claude-4.6-Opus(Thinking),claude-opus-4-6,variant,reasoning:thinking
+mmlu-pro,Claude-4.6-Sonnet(Thinking),claude-sonnet-4-6,variant,reasoning:thinking
+mmlu-pro,Cohere-Aya-Vision,cohere-aya-vision,unlisted,
+mmlu-pro,DeepSeek-Chat-V2_5,deepseek-chat-v2-5,unlisted,
+mmlu-pro,DeepSeek-Coder-V2-Instruct,deepseek-coder-v2,exact,
+mmlu-pro,DeepSeek-Coder-V2-Lite-Base,deepseek-coder-v2-lite-base,unlisted,
+mmlu-pro,DeepSeek-Coder-V2-Lite-Instruct,deepseek-coder-v2-lite-instruct,exact,
+mmlu-pro,DeepSeek-R1,deepseek-r1,exact,
+mmlu-pro,DeepSeek-R1-0528,deepseek-r1-0528,exact,
+mmlu-pro,DeepSeek-V3.1-NonThinking,deepseek-v3-1,variant,reasoning:non-thinking
+mmlu-pro,DeepSeek-V3.1-Thinking,deepseek-v3-1,variant,reasoning:thinking
+mmlu-pro,DeepSeek-V3.2-Thinking,deepseek-v3-2,variant,reasoning:thinking
+mmlu-pro,Deepseek-V2-Chat,deepseek-v2-chat-0628,variant,
+mmlu-pro,Deepseek-V3,deepseek-v3,exact,
+mmlu-pro,Deepseek-V3-0324,deepseek-v3-0324,exact,
+mmlu-pro,DeepseekMath-7B-Instruct,deepseekmath-7b-instruct,unlisted,
+mmlu-pro,Doubao-1.5-Pro,doubao-1-5-pro,unlisted,
+mmlu-pro,ECHO_Ego_v2_14B,echo-ego-v2-14b,unlisted,
+mmlu-pro,ERNIE-4.5-21B-A3B-Base,ernie-4-5-21b-a3b-base,unlisted,
+mmlu-pro,ERNIE-4.5-300B-A47B,ernie-4-5-300b-a47b,exact,
+mmlu-pro,ERNIE-4.5-300B-A47B-Base,ernie-4-5-300b-a47b-base,unlisted,
+mmlu-pro,EXAONE-3.5-2.4B-Instruct,exaone-3-5-2-4b,exact,
+mmlu-pro,EXAONE-3.5-32B-Instruct,exaone-3-5-32b,exact,
+mmlu-pro,EXAONE-3.5-7.8B-Instruct,exaone-3-5-7-8b,exact,
+mmlu-pro,GLM-4-9B,glm-4-9b,unlisted,
+mmlu-pro,GLM-4-9B-Chat,glm-4-9b-chat,exact,
+mmlu-pro,GLM-4.5,glm-4-5,exact,
+mmlu-pro,GLM-4.5-Air,glm-4-5-air,exact,
+mmlu-pro,GLM-5,glm-5,exact,
+mmlu-pro,GPT-4-Turbo,gpt-4-turbo-2024-04-09,variant,
+mmlu-pro,GPT-4-mini (high),gpt-4-mini,unlisted,effort:high
+mmlu-pro,GPT-4.1,gpt-4-1,exact,
+mmlu-pro,GPT-4.5,gpt-4-5-preview-2025-02-27,variant,
+mmlu-pro,GPT-4o (2024-05-13),gpt-4o-2024-05-13,exact,
+mmlu-pro,GPT-4o (2024-08-06),gpt-4o-2024-08-06,exact,
+mmlu-pro,GPT-4o (2024-11-20),gpt-4o-2024-11-20,exact,
+mmlu-pro,GPT-4o-mini,gpt-4o-mini-2024-07-18,variant,
+mmlu-pro,GPT-5(high),gpt-5,variant,effort:high
+mmlu-pro,GPT-5.1,gpt-5-1,exact,
+mmlu-pro,GPT-5.2,gpt-5-2,exact,
+mmlu-pro,GPT-5.4,gpt-5-4,exact,
+mmlu-pro,GPT-o1,gpt-o1,unlisted,
+mmlu-pro,GPT-o1-mini,gpt-o1-mini,unlisted,
+mmlu-pro,GPT-o3-high,gpt-o3,unlisted,effort:high
+mmlu-pro,GPT-o3-mini,gpt-o3-mini,unlisted,
+mmlu-pro,GPT-oss-120B(high),gpt-oss-120b,variant,effort:high
+mmlu-pro,GPT-oss-20B(high),gpt-oss-20b,variant,effort:high
+mmlu-pro,GPT-oss-20B(medium),gpt-oss-20b,variant,effort:medium
+mmlu-pro,Gemini-1.5-Flash,gemini-1-5-flash,unlisted,
+mmlu-pro,Gemini-1.5-Flash-002,gemini-1-5-flash-002,exact,
+mmlu-pro,Gemini-1.5-Pro,gemini-1-5-pro,unlisted,
+mmlu-pro,Gemini-1.5-Pro-002,gemini-1-5-pro-002,exact,
+mmlu-pro,Gemini-2.0-Flash,gemini-2-0-flash-001,variant,
+mmlu-pro,Gemini-2.0-Flash-Lite,gemini-2-0-flash-lite-001,variant,
+mmlu-pro,Gemini-2.0-Flash-exp,gemini-2-0-flash-exp,exact,
+mmlu-pro,Gemini-2.0-Pro,gemini-2-0-pro-exp-02-05,variant,
+mmlu-pro,Gemini-2.5-Pro,gemini-2-5-pro,exact,
+mmlu-pro,Gemini-2.5-Pro-Exp-03-25,gemini-2-5-pro-exp-03-25,exact,
+mmlu-pro,Gemini-3-Flash(12/25),gemini-3-flash-preview,variant,other:12/25
+mmlu-pro,Gemini-3-Pro(11/25),gemini-3-pro-preview,variant,other:11/25
+mmlu-pro,Gemini-3.1-Flash-Lite-Preview,gemini-3-1-flash-lite,variant,stage:preview
+mmlu-pro,Gemini-3.1-Pro,gemini-3-1-pro,exact,
+mmlu-pro,Gemma-2-27B-it,gemma-2-27b,exact,
+mmlu-pro,Gemma-2-2B-it,gemma-2-2b,exact,
+mmlu-pro,Gemma-2-9B,gemma-2-9b,exact,
+mmlu-pro,Gemma-2-9B-it,gemma-2-9b,exact,
+mmlu-pro,Gemma-2B,gemma-2b-unlisted,unlisted,
+mmlu-pro,Gemma-3-12B-it,gemma-3-12b,exact,
+mmlu-pro,Gemma-3-1B-it,gemma-3-1b,exact,
+mmlu-pro,Gemma-3-27B-it,gemma-3-27b,exact,
+mmlu-pro,Gemma-3-4B-it,gemma-3-4b,exact,
+mmlu-pro,Gemma-7B,gemma-7b-unlisted,unlisted,
+mmlu-pro,General-Reasoner-14B,general-reasoner-14b,unlisted,
+mmlu-pro,General-Reasoner-7B,general-reasoner-7b,unlisted,
+mmlu-pro,Granite-3.0-2B-Base,granite-3-0-2b-base,unlisted,
+mmlu-pro,Granite-3.0-8B-Base,granite-3-0-8b-base,unlisted,
+mmlu-pro,Granite-3.1-1B-A400M-Base,granite-3-1-1b-a400m-base,unlisted,
+mmlu-pro,Granite-3.1-1B-A400M-Instruct,granite-3-1-1b-a400m,exact,
+mmlu-pro,Granite-3.1-2B-Base,granite-3-1-2b-base,unlisted,
+mmlu-pro,Granite-3.1-2B-Instruct,granite-3-1-2b,exact,
+mmlu-pro,Granite-3.1-3B-A800M-Base,granite-3-1-3b-a800m-base,unlisted,
+mmlu-pro,Granite-3.1-3B-A800M-Instruct,granite-3-1-3b-a800m,exact,
+mmlu-pro,Granite-3.1-8B-Base,granite-3-1-8b-base,unlisted,
+mmlu-pro,Granite-3.1-8B-Instruct,granite-3-1-8b,exact,
+mmlu-pro,Grok-2,grok-2,unlisted,
+mmlu-pro,Grok-2-mini,grok-2-mini-0813,variant,
+mmlu-pro,Grok-3-mini,grok-3-mini-beta,variant,
+mmlu-pro,Grok-4,grok-4-0709,variant,
+mmlu-pro,Grok-4.1-Fast(Non-Reasoning),grok-4-1-fast-non-reasoning,exact,
+mmlu-pro,Grok-4.1-Fast(Reasoning),grok-4-1-fast-reasoning,exact,
+mmlu-pro,Grok3-Beta,grok-3-beta,exact,
+mmlu-pro,Grok3-mini-Beta,grok-3-mini-beta,exact,
+mmlu-pro,Higgs-Llama-3-70B,higgs-llama-3-70b,unlisted,
+mmlu-pro,Hunyuan-A13B,hunyuan-a13b,unlisted,
+mmlu-pro,Hunyuan-Large,hunyuan-large-2025-02-10,variant,
+mmlu-pro,Hunyuan-T1,hunyuan-t1-20250711,variant,
+mmlu-pro,HunyuanTurboS,hunyuanturbos,unlisted,
+mmlu-pro,Intern-S1,intern-s1,unlisted,
+mmlu-pro,InternMath-20B-Plus,internmath-20b-plus,unlisted,
+mmlu-pro,InternMath-7B-Plus,internmath-7b-plus,unlisted,
+mmlu-pro,Internlm3-8B-Instruct,internlm3-8b-instruct,exact,
+mmlu-pro,Jamba-1.5-Large,jamba-1-5-large,exact,
+mmlu-pro,K2.5-1T-A32B,k2-5-1t-a32b,unlisted,
+mmlu-pro,Kimi-K2-Instruct,kimi-k2,exact,
+mmlu-pro,Llama-2-13B,llama-2-13b,exact,
+mmlu-pro,Llama-2-70B,llama-2-70b,exact,
+mmlu-pro,Llama-2-7B,llama-2-7b,exact,
+mmlu-pro,Llama-3-70B,llama-3-70b,exact,
+mmlu-pro,Llama-3-70B-Instruct,llama-3-70b,exact,
+mmlu-pro,Llama-3-8B,llama-3-8b,exact,
+mmlu-pro,Llama-3-8B-Instruct,llama-3-8b,exact,
+mmlu-pro,Llama-3.1-405B,llama-3-1-405b,exact,
+mmlu-pro,Llama-3.1-405B-Instruct,llama-3-1-405b,exact,
+mmlu-pro,Llama-3.1-70B,llama-3-1-70b,exact,
+mmlu-pro,Llama-3.1-70B-Instruct,llama-3-1-70b,exact,
+mmlu-pro,Llama-3.1-8B,llama-3-1-8b-unlisted,unlisted,
+mmlu-pro,Llama-3.1-8B-Instruct,llama-3-1-8b,exact,
+mmlu-pro,Llama-3.1-Nemotron-70B-Instruct-HF,llama-3-1-nemotron-70b,exact,
+mmlu-pro,Llama-3.2-1B,llama-3-2-1b,exact,
+mmlu-pro,Llama-3.2-3B,llama-3-2-3b,exact,
+mmlu-pro,Llama-3.3-70B-Instruct,llama-3-3-70b,exact,
+mmlu-pro,Llama3-Smaug-8B,llama3-smaug-8b,unlisted,
+mmlu-pro,Llama4-Behemoth,llama4-behemoth,unlisted,
+mmlu-pro,Llama4-Maverick,llama-4-maverick,exact,
+mmlu-pro,Llama4-Scout,llama-4-scout,exact,
+mmlu-pro,Llemma-7B,llemma-7b,unlisted,
+mmlu-pro,LongCat-Flash-Chat,longcat-flash-chat,exact,
+mmlu-pro,MAmmoTH2-7B-Plus,mammoth2-7b-plus,unlisted,
+mmlu-pro,MAmmoTH2-8B-Plus,mammoth2-8b-plus,unlisted,
+mmlu-pro,MAmmoTH2-8x7B-Plus,mammoth2-8x7b-plus,unlisted,
+mmlu-pro,Mathstral-7B-v0.1,mathstral-7b-v0-1,exact,
+mmlu-pro,Mimo-7B-RL,mimo-7b-rl,unlisted,
+mmlu-pro,Mimo-7B-base,mimo-7b-base,unlisted,
+mmlu-pro,MiniMax-M1,minimax-m1,exact,
+mmlu-pro,MiniMax-M2,minimax-m2,exact,
+mmlu-pro,MiniMax-M2.1,minimax-m2-1,exact,
+mmlu-pro,MiniMax-M2.5,minimax-m2-5,exact,
+mmlu-pro,MiniMax-Text-01,minimax-text-01,unlisted,
+mmlu-pro,Ministral-8B-Instruct-2410,ministral-8b-2410,exact,
+mmlu-pro,Mistral-3.1-Small,mistral-3-1-small,unlisted,
+mmlu-pro,Mistral-7B-Instruct-v0.1,mistral-7b-instruct-v0-1,exact,
+mmlu-pro,Mistral-7B-Instruct-v0.2,mistral-7b-instruct-v0-2,exact,
+mmlu-pro,Mistral-7B-v0.1,mistral-7b-v0-1,exact,
+mmlu-pro,Mistral-7B-v0.2,mistral-7b-v0-2,unlisted,
+mmlu-pro,Mistral-Large-Instruct-2407,mistral-large-2407,exact,
+mmlu-pro,Mistral-Large-Instruct-2411,mistral-large-2,exact,
+mmlu-pro,Mistral-Nemo-Base-2407,mistral-nemo-base-2407,unlisted,snapshot:2407
+mmlu-pro,Mistral-Nemo-Instruct-2407,mistral-nemo-instruct-2407,exact,
+mmlu-pro,Mistral-Small-Instruct-2409,mistral-small-2409,exact,
+mmlu-pro,Mistral-Small-base,mistral-small-base,unlisted,
+mmlu-pro,Mistral-Small-instruct,mistral-small-2409,variant,
+mmlu-pro,Mixtral-8x22B-Instruct-v0.1,mixtral-8x22b-instruct-v0-1,exact,
+mmlu-pro,Mixtral-8x7B-Instruct-v0.1,mixtral-8x7b-instruct-v0-1,exact,
+mmlu-pro,Mixtral-8x7B-v0.1,mixtral-8x7b-v0-1,exact,
+mmlu-pro,Nemotron-3-Nano-30B-A3B(BF16),nemotron-3-nano-30b-a3b,variant,quant:BF16
+mmlu-pro,Nemotron-3-Nano-30B-A3B(FP8),nemotron-3-nano-30b-a3b,variant,quant:FP8
+mmlu-pro,Nemotron-3-Nano-30B-A3B-Base,nemotron-3-nano-30b-a3b-base,unlisted,
+mmlu-pro,Nemotron-H-56B-Base,nemotron-h-56b-base,unlisted,
+mmlu-pro,Nemotron-H-8B-Base,nemotron-h-8b-base,unlisted,
+mmlu-pro,Neo-7B,neo-7b,unlisted,
+mmlu-pro,Neo-7B-Instruct,neo-7b-instruct,unlisted,
+mmlu-pro,NewenAI/Phi4-sft,phi4-sft,unlisted,
+mmlu-pro,OpenChat-3.5-8B,openchat-3-5-8b,unlisted,
+mmlu-pro,Phi-3.5-mini-instruct,phi-3-5-mini-instruct,exact,
+mmlu-pro,Phi-4,phi-4,exact,
+mmlu-pro,Phi-4-mini,phi-4-mini,exact,
+mmlu-pro,Phi-4-reasoning,phi-4-reasoning,exact,
+mmlu-pro,Phi-4-reasoning-plus,phi-4-reasoning-plus,exact,
+mmlu-pro,Phi3-medium-128k,phi3-medium-128k,unlisted,
+mmlu-pro,Phi3-medium-4k,phi3-medium-4k,unlisted,
+mmlu-pro,Phi3-mini-128k,phi3-mini-128k,unlisted,
+mmlu-pro,Phi3-mini-4k,phi3-mini-4k,unlisted,
+mmlu-pro,QwQ-32B,qwq-32b,exact,
+mmlu-pro,QwQ-32B-Preview,qwq-32b-preview,exact,
+mmlu-pro,Qwen1.5-110B,qwen1-5-110b,unlisted,
+mmlu-pro,Qwen1.5-14B-Chat,qwen1-5-14b-chat,exact,
+mmlu-pro,Qwen1.5-72B-Chat,qwen1-5-72b-chat,exact,
+mmlu-pro,Qwen1.5-7B-Chat,qwen1-5-7b-chat,exact,
+mmlu-pro,Qwen2-0.5B,qwen2-0-5b,exact,
+mmlu-pro,Qwen2-0.5B-Instruct,qwen2-0-5b,exact,
+mmlu-pro,Qwen2-1.5B,qwen2-1-5b,exact,
+mmlu-pro,Qwen2-1.5B-Instruct,qwen2-1-5b,exact,
+mmlu-pro,Qwen2-72B-32k,qwen2-72b-32k,unlisted,
+mmlu-pro,Qwen2-72B-Chat,qwen2-72b-chat,unlisted,
+mmlu-pro,Qwen2-7B,qwen2-7b,exact,
+mmlu-pro,Qwen2-7B-Instruct,qwen2-7b,exact,
+mmlu-pro,Qwen2.5-0.5B,qwen2-5-0-5b,exact,
+mmlu-pro,Qwen2.5-1.5B,qwen2-5-1-5b,exact,
+mmlu-pro,Qwen2.5-14B,qwen2-5-14b,exact,
+mmlu-pro,Qwen2.5-32B,qwen2-5-32b,exact,
+mmlu-pro,Qwen2.5-3B,qwen2-5-3b,exact,
+mmlu-pro,Qwen2.5-72B,qwen2-5-72b,exact,
+mmlu-pro,Qwen2.5-7B,qwen2-5-7b,exact,
+mmlu-pro,Qwen2.5-Max,qwen-max-2025-01-25,variant,
+mmlu-pro,Qwen2.5-Turbo,qwen2-5-turbo,unlisted,
+mmlu-pro,Qwen3-235B-A22B,qwen3-235b-a22b,exact,
+mmlu-pro,Qwen3-235B-A22B-Instruct-2507,qwen3-235b-a22b-instruct-2507,exact,
+mmlu-pro,Qwen3-235B-A22B-Thinking-2507,qwen3-235b-a22b-thinking-2507,exact,
+mmlu-pro,Qwen3-30B-A3B-Base,qwen3-30b-a3b-base,unlisted,
+mmlu-pro,Qwen3-30B-A3B-Thinking,qwen3-30b-a3b,variant,reasoning:thinking
+mmlu-pro,Qwen3-30B-A3B-Thinking-2507,qwen3-30b-a3b-thinking-2507,exact,
+mmlu-pro,Qwen3-Max-Thinking,qwen-3-max-thinking,unlisted,reasoning:thinking
+mmlu-pro,Qwen3.5-0.8B,qwen3-5-0-8b,exact,
+mmlu-pro,Qwen3.5-122B-A10B,qwen3-5-122b-a10b,exact,
+mmlu-pro,Qwen3.5-27B,qwen3-5-27b,exact,
+mmlu-pro,Qwen3.5-2B,qwen3-5-2b,exact,
+mmlu-pro,Qwen3.5-35B-A3B,qwen3-5-35b-a3b,exact,
+mmlu-pro,Qwen3.5-397B-A17B,qwen3-5-397b-a17b,exact,
+mmlu-pro,Qwen3.5-4B,qwen3-5-4b,exact,
+mmlu-pro,Qwen3.5-9B,qwen3-5-9b,exact,
+mmlu-pro,RRD2.5-9B,rrd2-5-9b,unlisted,
+mmlu-pro,Reflection-Llama-3.1-70B,reflection-llama-3-1-70b,unlisted,
+mmlu-pro,Reka 3,reka-3,unlisted,
+mmlu-pro,Seed-OSS-36B-Base(w/ syn.),seed-oss-36b-base,unlisted,other:w/ syn.
+mmlu-pro,Seed-OSS-36B-Base(w/o syn.),seed-oss-36b-base,unlisted,other:w/o syn.
+mmlu-pro,Seed-OSS-36B-Instruct,seed-oss-36b,exact,
+mmlu-pro,Seed-Thinking-v1.5,seed-thinking-v1-5,unlisted,
+mmlu-pro,Seed1.6-Ada-Thinking,seed1-6-ada-thinking,unlisted,reasoning:thinking
+mmlu-pro,Seed1.6-Base,seed1-6-base,unlisted,
+mmlu-pro,Seed1.6-Thinking,seed1-6-thinking,unlisted,reasoning:thinking
+mmlu-pro,Seed2.0-Lite,seed-2-0-lite,exact,
+mmlu-pro,Seed2.0-Mini,seed2-0-mini,unlisted,
+mmlu-pro,Seed2.0-Pro,seed2-0-pro,unlisted,
+mmlu-pro,SkyThought-T1,skythought-t1,unlisted,
+mmlu-pro,SmolLM-1.7B,smollm-1-7b,unlisted,
+mmlu-pro,SmolLM-135M,smollm-135m,unlisted,
+mmlu-pro,SmolLM-360M,smollm-360m,unlisted,
+mmlu-pro,SmolLM2-1.7B,smollm2-1-7b,exact,
+mmlu-pro,SmolLM2-135M,smollm2-135m,exact,
+mmlu-pro,SmolLM2-360M,smollm2-360m,exact,
+mmlu-pro,Staring-7B,staring-7b,unlisted,
+mmlu-pro,WizardLM-2-8x22B,wizardlm-2-8x22b,exact,
+mmlu-pro,Yi-1.5-34B-Chat,yi-1-5-34b-chat,exact,
+mmlu-pro,Yi-1.5-6B-Chat,yi-1-5-6b-chat,exact,
+mmlu-pro,Yi-1.5-9B-Chat,yi-1-5-9b-chat,exact,
+mmlu-pro,Yi-34B,yi-34b,unlisted,
+mmlu-pro,Yi-6B,yi-6b,unlisted,
+mmlu-pro,Yi-6B-Chat,yi-6b-chat,exact,
+mmlu-pro,Yi-Lightning,yi-lightning,exact,
+mmlu-pro,Yi-large,yi-large,exact,
+mmlu-pro,Zephyr-7B-Beta,zephyr-7b-beta,exact,
+mmlu-pro,azerogpt,azerogpt,unlisted,
+mmlu-pro,c4ai-command-r-v01,command-r-03-2024,exact,
+mmlu-pro,magnum-72b-v1,magnum-72b-v1,unlisted,
+nyt-connections,Arcee Trinity Large Thinking,arcee-trinity-large-thinking,unlisted,
+nyt-connections,Baidu Ernie 5.0,ernie-5-0-0110,maker,
+nyt-connections,Baidu Ernie 5.1,ernie-5-1,maker,
+nyt-connections,ByteDance Seed2.0 Pro,bytedance-seed2-0-pro,unlisted,
+nyt-connections,Claude 4.5 Haiku,claude-haiku-4-5,exact,
+nyt-connections,Claude Fable 5 (high reasoning),claude-fable-5,variant,effort:high
+nyt-connections,Claude Fable 5.1 (high reasoning),claude-fable-5-1,variant,effort:high
+nyt-connections,Claude Fable 5.2 (high reasoning),claude-fable-5-2,unlisted,effort:high
+nyt-connections,Claude Haiku 5.5 (high reasoning),claude-haiku-5-5,variant,effort:high
+nyt-connections,Claude Opus 4.5 (no reasoning),claude-opus-4-5,variant,reasoning:non-thinking
+nyt-connections,Claude Opus 4.5 Thinking 16K,claude-opus-4-5-thinking-16k,unlisted,
+nyt-connections,Claude Opus 4.6 (high reasoning),claude-opus-4-6,variant,effort:high
+nyt-connections,Claude Opus 4.6 (no reasoning),claude-opus-4-6,variant,reasoning:non-thinking
+nyt-connections,Claude Opus 4.6 Thinking 16K,claude-opus-4-6-thinking-16k,unlisted,
+nyt-connections,Claude Opus 4.7 (high reasoning),claude-opus-4-7,variant,effort:high
+nyt-connections,Claude Opus 4.7 (no reasoning),claude-opus-4-7,variant,reasoning:non-thinking
+nyt-connections,Claude Opus 4.8 (high reasoning),claude-opus-4-8,variant,effort:high
+nyt-connections,Claude Opus 4.8 (xhigh reasoning),claude-opus-4-8,variant,effort:xhigh
+nyt-connections,Claude Opus 5 (high reasoning),claude-opus-5,variant,effort:high
+nyt-connections,Claude Opus 5 (xhigh reasoning),claude-opus-5,variant,effort:xhigh
+nyt-connections,Claude Opus 5.5 (high reasoning),claude-opus-5-5,variant,effort:high
+nyt-connections,Claude Opus 5.5 (medium reasoning),claude-opus-5-5,variant,effort:medium
+nyt-connections,Claude Sonnet 4.5 (no reasoning),claude-sonnet-4-5,variant,reasoning:non-thinking
+nyt-connections,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,unlisted,
+nyt-connections,Claude Sonnet 4.6 (high reasoning),claude-sonnet-4-6,variant,effort:high
+nyt-connections,Claude Sonnet 4.6 (no reasoning),claude-sonnet-4-6,variant,reasoning:non-thinking
+nyt-connections,Claude Sonnet 4.6 Thinking 16K,claude-sonnet-4-6-thinking-16k,unlisted,
+nyt-connections,Claude Sonnet 4.6 Thinking 32K,claude-sonnet-4-6-thinking-32k,unlisted,
+nyt-connections,Claude Sonnet 5 (high reasoning),claude-sonnet-5,variant,effort:high
+nyt-connections,Claude Sonnet 5.5 (high reasoning),claude-sonnet-5-5,variant,effort:high
+nyt-connections,DeepSeek V3.2,deepseek-v3-2,exact,
+nyt-connections,DeepSeek V3.2 (no reasoning),deepseek-v3-2,variant,reasoning:non-thinking
+nyt-connections,DeepSeek V4 Flash,deepseek-v4-flash,variant,
+nyt-connections,DeepSeek V4 Pro (high reasoning),deepseek-v4-pro,variant,effort:high
+nyt-connections,DeepSeek V4 Pro Preview,deepseek-v4-pro-preview,exact,
+nyt-connections,DeepSeek V4.1 Flash (high reasoning),deepseek-v4-1-flash,variant,effort:high
+nyt-connections,DeepSeek V4.1 Flash 1017 (high reasoning),deepseek-v4-1-flash-1017,variant,effort:high
+nyt-connections,GLM-5,glm-5,exact,
+nyt-connections,GLM-5.1,glm-5-1,exact,
+nyt-connections,GLM-5.2 (high reasoning),glm-5-2,variant,effort:high
+nyt-connections,GLM-5.3 (high reasoning),glm-5-3,variant,effort:high
+nyt-connections,GPT-5.2 (high reasoning),gpt-5-2,variant,effort:high
+nyt-connections,GPT-5.2 (low reasoning),gpt-5-2,variant,effort:low
+nyt-connections,GPT-5.2 (medium reasoning),gpt-5-2,variant,effort:medium
+nyt-connections,GPT-5.2 (no reasoning),gpt-5-2,variant,reasoning:non-thinking
+nyt-connections,GPT-5.2 (xhigh reasoning),gpt-5-2,variant,effort:xhigh
+nyt-connections,GPT-5.2 Pro,gpt-5-2-pro,exact,
+nyt-connections,GPT-5.4 (high reasoning),gpt-5-4,variant,effort:high
+nyt-connections,GPT-5.4 (medium reasoning),gpt-5-4,variant,effort:medium
+nyt-connections,GPT-5.4 (no reasoning),gpt-5-4,variant,reasoning:non-thinking
+nyt-connections,GPT-5.4 (xhigh reasoning),gpt-5-4,variant,effort:xhigh
+nyt-connections,GPT-5.4 Mini (xhigh reasoning),gpt-5-4-mini,variant,effort:xhigh
+nyt-connections,GPT-5.5 (high reasoning),gpt-5-5,variant,effort:high
+nyt-connections,GPT-5.5 (medium reasoning),gpt-5-5,variant,effort:medium
+nyt-connections,GPT-5.5 (no reasoning),gpt-5-5,variant,reasoning:non-thinking
+nyt-connections,GPT-5.5 (xhigh reasoning),gpt-5-5,variant,effort:xhigh
+nyt-connections,GPT-5.6 Luna (high reasoning),gpt-5-6-luna,variant,effort:high
+nyt-connections,GPT-5.6 Sol (high reasoning),gpt-5-6-sol,variant,effort:high
+nyt-connections,GPT-5.6 Sol (xhigh reasoning),gpt-5-6-sol,variant,effort:xhigh
+nyt-connections,GPT-5.6 Terra (high reasoning),gpt-5-6-terra,variant,effort:high
+nyt-connections,GPT-6 Astra (high reasoning),gpt-6-astra,variant,effort:high
+nyt-connections,GPT-6 Astra (max reasoning),gpt-6-astra,variant,effort:max
+nyt-connections,GPT-6 Astra (xhigh reasoning),gpt-6-astra,variant,effort:xhigh
+nyt-connections,GPT-6 Luna (high reasoning),gpt-6-luna,variant,effort:high
+nyt-connections,GPT-6 Sol (high reasoning),gpt-6-sol,variant,effort:high
+nyt-connections,GPT-6.1 Sol (high reasoning),gpt-6-1-sol,variant,effort:high
+nyt-connections,GPT-6.1 Sol (max reasoning),gpt-6-1-sol,variant,effort:max
+nyt-connections,GPT-6.1 Terra (high reasoning),gpt-6-1-terra,variant,effort:high
+nyt-connections,Gemini 3 Flash Preview,gemini-3-flash-preview,exact,
+nyt-connections,Gemini 3 Pro Preview,gemini-3-pro-preview,exact,
+nyt-connections,Gemini 3.1 Flash-Lite Preview,gemini-3-1-flash-lite,variant,stage:preview
+nyt-connections,Gemini 3.1 Pro Preview,gemini-3-1-pro,exact,
+nyt-connections,Gemini 3.5 Flash,gemini-3-5-flash,exact,
+nyt-connections,Gemini 3.5 Flash-Lite (high reasoning),gemini-3-5-flash-lite,variant,effort:high
+nyt-connections,Gemini 3.6 Flash,gemini-3-6-flash,exact,
+nyt-connections,Gemini 3.7 Flash,gemini-3-7-flash,exact,
+nyt-connections,Gemini 3.8 Flash (high reasoning),gemini-3-8-flash,variant,effort:high
+nyt-connections,Gemini 4 Argon (high reasoning),gemini-4-argon,variant,effort:high
+nyt-connections,Gemini 4 Carbon (high reasoning),gemini-4-carbon,variant,effort:high
+nyt-connections,Gemma 4 31B IT,gemma-4-31b,exact,
+nyt-connections,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,unlisted,
+nyt-connections,Grok 4.1 Fast Non-Reasoning,grok-4-1-fast-non-reasoning,exact,
+nyt-connections,Grok 4.1 Fast Reasoning,grok-4-1-fast-reasoning,exact,
+nyt-connections,Grok 4.20 0309 (Non-Reasoning),grok-4-20-0309,unlisted,reasoning:non-thinking
+nyt-connections,Grok 4.20 0309 (Reasoning),grok-4-20,exact,
+nyt-connections,Grok 4.20 Multi-Agent Exp Beta 0304,grok-4-20-multi-agent-0304,unlisted,stage:exp; stage:beta; snapshot:0304
+nyt-connections,Grok 4.20 Non-Reasoning Exp Beta 0304,grok-4-20-non-reasoning-0304,unlisted,stage:exp; stage:beta; snapshot:0304
+nyt-connections,Grok 4.20 Reasoning Exp Beta 0304,grok-4-20-reasoning-0304,unlisted,stage:exp; stage:beta; snapshot:0304
+nyt-connections,Grok 4.3,grok-4-3,exact,
+nyt-connections,Grok 4.5 (high reasoning),grok-4-5,variant,effort:high
+nyt-connections,Grok 4.6 (high reasoning),grok-4-6,variant,effort:high
+nyt-connections,Grok 4.6 (xhigh reasoning),grok-4-6,variant,effort:xhigh
+nyt-connections,Grok 4.7 (high reasoning),grok-4-7,variant,effort:high
+nyt-connections,Kimi K2.5 Thinking,kimi-k2-5-thinking,unlisted,
+nyt-connections,Kimi K2.6,kimi-k2-6,exact,
+nyt-connections,Kimi K3,kimi-k3,exact,
+nyt-connections,Kimi K3.1 Pro (high reasoning),kimi-k3-1-pro,variant,effort:high
+nyt-connections,Ling 2.6 1T,ling-2-6-1t,unlisted,
+nyt-connections,Llama 4 Maverick,llama-4-maverick,exact,
+nyt-connections,LongCat Flash Thinking,longcat-flash-thinking,exact,
+nyt-connections,MiniMax M3.1 Flash (high reasoning),minimax-m3-1-flash,variant,effort:high
+nyt-connections,MiniMax-M2,minimax-m2,exact,
+nyt-connections,MiniMax-M2.1,minimax-m2-1,exact,
+nyt-connections,MiniMax-M2.5,minimax-m2-5,exact,
+nyt-connections,MiniMax-M2.7,minimax-m2-7,exact,
+nyt-connections,MiniMax-M3,minimax-m3,exact,
+nyt-connections,Mistral Large 3,mistral-large-3,exact,
+nyt-connections,Mistral Large 4 (high),mistral-large-4-2610,variant,effort:high
+nyt-connections,Mistral Medium 3.1,mistral-medium-3-1,exact,
+nyt-connections,Mistral Medium 3.5 (high),mistral-medium-3-5,variant,effort:high
+nyt-connections,Muse Spark 1.1 (high reasoning),muse-spark-1-1,variant,effort:high
+nyt-connections,Muse Spark 1.2 (high reasoning),muse-spark-1-2,variant,effort:high
+nyt-connections,Muse Spark 1.3 (high reasoning),muse-spark-1-3,variant,effort:high
+nyt-connections,Muse Spark Open (high reasoning),muse-spark-open,variant,effort:high
+nyt-connections,Muse Wonder 1.0 (high reasoning),muse-wonder-1-0,unlisted,effort:high
+nyt-connections,Nemotron 3 Super,nemotron-3-super,unlisted,
+nyt-connections,Qwen 3 Max Thinking,qwen-3-max-thinking,unlisted,
+nyt-connections,Qwen 3.6 Max Preview,qwen3-6-max-preview,exact,
+nyt-connections,Qwen 3.6 Plus,qwen3-6-plus,exact,
+nyt-connections,Qwen 3.7 Flash,qwen3-7-flash,exact,
+nyt-connections,Qwen 3.7 Max,qwen3-7-max,exact,
+nyt-connections,Qwen 3.7 Plus,qwen3-7-plus,exact,
+nyt-connections,Qwen 3.8 Max,qwen3-8-2-4t-a95b,variant,
+nyt-connections,Qwen3 Max (2026-01-23),qwen3-max-2026-01-23,exact,
+nyt-connections,Qwen3.5-122B-A10B,qwen3-5-122b-a10b,exact,
+nyt-connections,Qwen3.5-27B,qwen3-5-27b,exact,
+nyt-connections,Qwen3.5-397B-A17B,qwen3-5-397b-a17b,exact,
+nyt-connections,Qwen3.6-35B-A3B,qwen3-6-35b-a3b,exact,
+nyt-connections,Qwen3.8-27B,qwen3-8-27b,exact,
+nyt-connections,Step 3.5 Flash,step-3-5-flash,exact,
+nyt-connections,Step 3.7 Flash (high reasoning),step-3-7-flash,variant,effort:high
+nyt-connections,Step 5 Preview (high reasoning),step-5-preview,variant,effort:high
+nyt-connections,Tencent Hy3 (high),hy3,maker,effort:high
+nyt-connections,Tencent Hy3 (non-thinking),hy3,maker,reasoning:non-thinking
+nyt-connections,Tencent Hy3 Preview,hy3-preview,maker,
+nyt-connections,Tencent Hy4 (high),hy4-preview,maker,effort:high
+nyt-connections,Tencent Hy4 Preview,hy4-preview,maker,
+nyt-connections,Xiaomi MiMo V2 Pro,mimo-v2-pro,maker,
+nyt-connections,Xiaomi MiMo V2.5 Pro,mimo-v2-5-pro,maker,
+step-game,Claude 3.5 Haiku,claude-3-5-haiku-20241022,exact,
+step-game,Claude 3.5 Sonnet 2024-10-22,claude-3-5-sonnet-20241022,exact,
+step-game,Claude 3.7 Sonnet,claude-3-7-sonnet-20250219,exact,
+step-game,Claude 3.7 Sonnet Thinking 16K,claude-3-7-sonnet-thinking-16k,unlisted,
+step-game,Claude Opus 4 (no reasoning),claude-opus-4-20250514,variant,reasoning:non-thinking
+step-game,Claude Opus 4 Thinking 16K,claude-opus-4-thinking-16k,unlisted,
+step-game,Claude Opus 4.1 (no reasoning),claude-opus-4-1-20250805,variant,reasoning:non-thinking
+step-game,Claude Opus 4.1 Thinking 16K,claude-opus-4-1-thinking-16k,unlisted,
+step-game,Claude Opus 4.5 (no reasoning),claude-opus-4-5,variant,reasoning:non-thinking
+step-game,Claude Sonnet 4 (no reasoning),claude-sonnet-4-20250514,variant,reasoning:non-thinking
+step-game,Claude Sonnet 4 Thinking 16K,claude-sonnet-4-thinking-16k,unlisted,
+step-game,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,unlisted,
+step-game,DeepSeek R1,deepseek-r1,exact,
+step-game,DeepSeek R1 05/28,28,unlisted,
+step-game,DeepSeek V3.1 Non-Think,deepseek-v3-1-non-think,unlisted,
+step-game,DeepSeek V3.1 Reasoner,deepseek-v3-1-reasoner,unlisted,
+step-game,DeepSeek-V3,deepseek-v3,exact,
+step-game,Deepseek V3.2 Exp,deepseek-v3-2-exp,exact,
+step-game,GLM-4.5,glm-4-5,exact,
+step-game,GLM-4.6,glm-4-6,exact,
+step-game,GPT-4.5 Preview,gpt-4-5-preview-2025-02-27,exact,
+step-game,GPT-4o 2024-08-06,gpt-4o-2024-08-06,exact,
+step-game,GPT-4o Feb 2025,gpt-4o-feb-2025,unlisted,
+step-game,GPT-4o Mar 2025,gpt-4o-mar-2025,unlisted,
+step-game,GPT-4o mini,gpt-4o-mini-2024-07-18,variant,
+step-game,GPT-5 (medium reasoning),gpt-5,variant,effort:medium
+step-game,GPT-5 mini (medium reasoning),gpt-5-mini,variant,effort:medium
+step-game,GPT-5.1 (medium reasoning),gpt-5-1,variant,effort:medium
+step-game,GPT-OSS-120B,gpt-oss-120b,exact,
+step-game,Gemini 1.5 Flash,gemini-1-5-flash,unlisted,
+step-game,Gemini 1.5 Pro (Sept),gemini-1-5-pro,unlisted,other:Sept
+step-game,Gemini 2.0 Flash Exp,gemini-2-0-flash-exp,exact,
+step-game,Gemini 2.0 Flash Think Exp 01-21,gemini-2-0-flash-think-01-21,unlisted,stage:exp; snapshot:01-21
+step-game,Gemini 2.0 Flash Think Exp Old,gemini-2-0-flash-think-exp-old,unlisted,
+step-game,Gemini 2.0 Pro Exp 02-05,gemini-2-0-pro-exp-02-05,exact,
+step-game,Gemini 2.5 Flash,gemini-2-5-flash,exact,
+step-game,Gemini 2.5 Pro,gemini-2-5-pro,exact,
+step-game,Gemini 2.5 Pro Exp 03-25,gemini-2-5-pro-exp-03-25,exact,
+step-game,Gemini 3 Pro Preview,gemini-3-pro-preview,exact,
+step-game,Gemma 2 27B,gemma-2-27b,exact,
+step-game,Grok 2 12-12,grok-2-12-12,unlisted,
+step-game,Grok 3 Beta (No reasoning),grok-3-beta,variant,reasoning:non-thinking
+step-game,Grok 3 Mini Beta (High),grok-3-mini-beta,variant,effort:high
+step-game,Grok 4,grok-4-0709,variant,
+step-game,Grok 4.1 Fast Non-Reasoning,grok-4-1-fast-non-reasoning,exact,
+step-game,Grok 4.1 Fast Reasoning,grok-4-1-fast-reasoning,exact,
+step-game,Kimi K2,kimi-k2,exact,
+step-game,Kimi K2 Thinking 64K,kimi-k2-thinking-64k,unlisted,
+step-game,Llama 3.1 405B,llama-3-1-405b,exact,
+step-game,Llama 3.3 70B,llama-3-3-70b,exact,
+step-game,Llama 4 Maverick,llama-4-maverick,exact,
+step-game,Mistral Large 2,mistral-large-2,exact,
+step-game,Mistral Large 3,mistral-large-3,exact,
+step-game,Mistral Medium 3.1,mistral-medium-3-1,exact,
+step-game,Qwen 2.5 72B,qwen2-5-72b,exact,
+step-game,Qwen 2.5 Max,qwen-max-2025-01-25,variant,
+step-game,Qwen 3 235B A22B,qwen3-235b-a22b,exact,
+step-game,Qwen 3 235B A22B 25-07 Instruct,qwen-3-235b-a22b-25-07-instruct,unlisted,
+step-game,Qwen 3 30B A3B,qwen3-30b-a3b,exact,
+step-game,Qwen 3 Max Thinking,qwen-3-max-thinking,unlisted,
+step-game,Qwen QwQ Preview,qwen-qwq,unlisted,stage:preview
+step-game,Qwen QwQ-32B 16K,qwen-qwq-32b-16k,unlisted,
+step-game,Silent Blocker,silent-blocker,unlisted,
+step-game,Silent Closer,silent-closer,unlisted,
+step-game,Silent Collision Tracker,silent-collision-tracker,unlisted,
+step-game,Silent EVMax,silent-evmax,unlisted,
+step-game,Silent Greedy,silent-greedy,unlisted,
+step-game,Silent Random,silent-random,unlisted,
+step-game,Silent UCB,silent-ucb,unlisted,
+step-game,o1 (medium reasoning),o1-2024-12-17,variant,effort:medium
+step-game,o1-mini,o1-mini,exact,
+step-game,o3 (medium reasoning),o3,variant,effort:medium
+step-game,o3-mini (high reasoning),o3-mini,variant,effort:high
+step-game,o3-mini (medium reasoning),o3-mini,variant,effort:medium
+step-game,o4-mini (medium reasoning),o4-mini,variant,effort:medium
+swe-bench,ACoder,acoder,unlisted,
+swe-bench,AIGCode Infant-Coder(2024-08-30),aigcode-infant-coder-2024-08-30,unlisted,snapshot:2024-08-30
+swe-bench,Aider + GPT 4o & Claude 3 Opus,aider-plus-gpt-4o-claude-3-opus,unlisted,
+swe-bench,Alibaba Lingma Agent,alibaba-lingma-agent,unlisted,
+swe-bench,Amazon Q Developer Agent (v20240430-dev),amazon-q-developer-agent,unlisted,other:v20240430-dev
+swe-bench,Amazon Q Developer Agent (v20240719-dev),amazon-q-developer-agent,unlisted,other:v20240719-dev
+swe-bench,Amazon Q Developer Agent (v20241202-dev),amazon-q-developer-agent,unlisted,other:v20241202-dev
+swe-bench,Amazon Q Developer Agent (v20250405-dev),amazon-q-developer-agent,unlisted,other:v20250405-dev
+swe-bench,AppMap Navie v2,appmap-navie-v2,unlisted,
+swe-bench,Artemis Agent v1 (2024-11-20),artemis-agent-v1-2024-11-20,unlisted,snapshot:2024-11-20
+swe-bench,Atlassian Rovo Dev (2025-06-05),atlassian-rovo-dev-2025-06-05,unlisted,snapshot:2025-06-05
+swe-bench,Atlassian Rovo Dev (2025-09-02),atlassian-rovo-dev-2025-09-02,unlisted,snapshot:2025-09-02
+swe-bench,Augment Agent v0,augment-agent-v0,unlisted,
+swe-bench,Augment Agent v1,augment-agent-v1,unlisted,
+swe-bench,Blackbox AI Agent,blackbox-ai-agent,unlisted,
+swe-bench,Bracket.sh,bracket-sh,unlisted,
+swe-bench,Bytedance MarsCode Agent,bytedance-marscode-agent,unlisted,
+swe-bench,Codart AI,codart-ai,unlisted,
+swe-bench,CodeFuse-AAIS,codefuse-aais,unlisted,
+swe-bench,CodeFuse-CGM,codefuse-cgm,unlisted,
+swe-bench,CodeStory Aide + Mixed Models,codestory-aide-plus-mixed-models,unlisted,
+swe-bench,Codev,codev,unlisted,
+swe-bench,Composio SWE-Kit (2024-10-25),composio-swe-kit-2024-10-25,unlisted,snapshot:2024-10-25
+swe-bench,Composio SWE-Kit (2024-10-30),composio-swe-kit-2024-10-30,unlisted,snapshot:2024-10-30
+swe-bench,Composio SWEkit + Claude 3.5 Sonnet (2024-10-16),composio-swekit-plus-claude-3-5-sonnet-2024-10-16,unlisted,
+swe-bench,DARS Agent,dars-agent,unlisted,
+swe-bench,DeepSeek-V3-0324,deepseek-v3-0324,exact,
+swe-bench,Emergent E1 (v2024-10-12),emergent-e1,unlisted,other:v2024-10-12
+swe-bench,Emergent E1 (v2024-12-23),emergent-e1,unlisted,other:v2024-12-23
+swe-bench,ExpeRepair-v1.0,experepair-v1-0,unlisted,
+swe-bench,ExpeRepair-v1.0 + Claude 4 Sonnet,experepair-v1-0-plus-claude-4-sonnet,unlisted,
+swe-bench,Factory Code Droid,factory-code-droid,unlisted,
+swe-bench,FrogBoss-32B-2510,frogboss-32b-2510,unlisted,snapshot:2510
+swe-bench,FrogMini-14B-2510,frogmini-14b-2510,unlisted,snapshot:2510
+swe-bench,GLM-4.5,glm-4-5,exact,
+swe-bench,Globant Code Fixer Agent,globant-code-fixer-agent,unlisted,
+swe-bench,Google Jules + Gemini 2.0 Flash (v20241212-experimental),google-jules-plus-gemini-2-0-flash-v20241212-experimental,unlisted,
+swe-bench,Gru(2024-08-11),gru-2024-08-11,unlisted,snapshot:2024-08-11
+swe-bench,Gru(2024-08-24),gru-2024-08-24,unlisted,snapshot:2024-08-24
+swe-bench,Gru(2024-12-08),gru-2024-12-08,unlisted,snapshot:2024-12-08
+swe-bench,Honeycomb,honeycomb,unlisted,
+swe-bench,IBM AI Agent SWE-1.0 (with open LLMs),ibm-ai-agent-swe-1-0,unlisted,other:with open LLMs
+swe-bench,IBM Research Agent-101,ibm-research-agent-101,unlisted,
+swe-bench,Isoform,isoform,unlisted,
+swe-bench,JoyCode + Claude 4 Sonnet + GPT-4.1,joycode-plus-claude-4-sonnet-plus-gpt-4-1,unlisted,
+swe-bench,Kimi-K2-Instruct,kimi-k2,exact,
+swe-bench,Kimi-K2-Thinking,kimi-k2-thinking,exact,
+swe-bench,Lingma Agent + Lingma SWE-GPT 72b (v0918),lingma-agent-plus-lingma-swe-gpt-72b-v0918,unlisted,
+swe-bench,Lingma Agent + Lingma SWE-GPT 72b (v0925),lingma-agent-plus-lingma-swe-gpt-72b-v0925,unlisted,
+swe-bench,Lingma Agent + Lingma SWE-GPT 7b (v0918),lingma-agent-plus-lingma-swe-gpt-7b-v0918,unlisted,
+swe-bench,Lingma Agent + Lingma SWE-GPT 7b (v0925),lingma-agent-plus-lingma-swe-gpt-7b-v0925,unlisted,
+swe-bench,Llama3-SWE-RL-70B,llama3-swe-rl-70b,unlisted,
+swe-bench,MCTS-Refine-7B,mcts-refine-7b,unlisted,
+swe-bench,Nebius AI Qwen 2.5 72B Generator + LLama 3.1 70B Critic,nebius-ai-qwen-2-5-72b-generator-plus-llama-3-1-70b-critic,unlisted,
+swe-bench,Nemotron-CORTEXA,nemotron-cortexa,unlisted,
+swe-bench,OpenHands,openhands,unlisted,
+swe-bench,OpenHands + 4x Scaled (2024-02-03),openhands-plus-4x-scaled-2024-02-03,unlisted,
+swe-bench,OpenHands + CodeAct v2.1 (claude-3-5-sonnet-20241022),openhands-plus-codeact-v2-1-claude-3-5-sonnet-20241022,unlisted,
+swe-bench,PatchPilot + Co-PatcheR,patchpilot-plus-co-patcher,unlisted,
+swe-bench,Qodo Command,qodo-command,unlisted,
+swe-bench,Qwen 2.5,qwen-2-5,unlisted,
+swe-bench,Qwen2.5-Coder-32B-Instruct,qwen2-5-coder-32b,exact,
+swe-bench,Qwen3-Coder-30B-A3B-Instruct,qwen3-coder-30b-a3b,exact,
+swe-bench,Qwen3-Coder-480B-A35B-Instruct,qwen3-coder-480b-a35b,exact,
+swe-bench,RAG + ChatGPT 3.5,rag-plus-chatgpt-3-5,unlisted,
+swe-bench,RAG + SWE-Llama 13B,rag-plus-swe-llama-13b,unlisted,
+swe-bench,Refact.ai Agent,refact-ai-agent,unlisted,
+swe-bench,Refact.ai Agent + Claude 4 Sonnet + o4-mini,refact-ai-agent-plus-claude-4-sonnet-plus-o4-mini,unlisted,
+swe-bench,SWE-Llama,swe-llama,unlisted,
+swe-bench,SWE-Rizzo,swe-rizzo,unlisted,
+swe-bench,SWE-agent + Claude 3 Opus,swe-agent-plus-claude-3-opus,unlisted,
+swe-bench,SWE-agent + Claude Sonnet 3.5,swe-agent-plus-claude-sonnet-3-5,unlisted,
+swe-bench,SWE-agent + GPT 4o (2024-08-06),swe-agent-plus-gpt-4o-2024-08-06,unlisted,
+swe-bench,SWE-agent JavaScript + Claude Sonnet 3.5,swe-agent-javascript-plus-claude-sonnet-3-5,unlisted,
+swe-bench,SWE-agent JavaScript + GPT 4o (2024-08-06),swe-agent-javascript-plus-gpt-4o-2024-08-06,unlisted,
+swe-bench,SWE-agent Multimodal + GPT 4o (2024-08-06),swe-agent-multimodal-plus-gpt-4o-2024-08-06,unlisted,
+swe-bench,Salesforce AI Research SAGE (OpenHands),salesforce-ai-research-sage,unlisted,other:OpenHands
+swe-bench,Salesforce AI Research SAGE (bash-only),salesforce-ai-research-sage,unlisted,other:bash-only
+swe-bench,SemAgent_Multi-v1.0,semagent-multi-v1-0,unlisted,
+swe-bench,Solver (2024-09-12),solver-2024-09-12,unlisted,snapshot:2024-09-12
+swe-bench,Solver (2024-10-28),solver-2024-10-28,unlisted,snapshot:2024-10-28
+swe-bench,SuperCoder2.0,supercoder2-0,unlisted,
+swe-bench,TRAE,trae,unlisted,
+swe-bench,TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro,trae-plus-claude-sonnet-4-plus-opus-4-plus-sonnet-3-7-plus-gemini-2-5-pro,unlisted,
+swe-bench,TRAE + Doubao-Seed-Code,trae-plus-doubao-seed-code,unlisted,
+swe-bench,Tools + Claude 3.5 Sonnet (2024-10-22),tools-plus-claude-3-5-sonnet-2024-10-22,unlisted,
+swe-bench,Tools + Claude 3.7 Sonnet (2025-02-24),tools-plus-claude-3-7-sonnet-2025-02-24,unlisted,
+swe-bench,Warp,warp,unlisted,
+swe-bench,Zencoder (2025-03-10),zencoder-2025-03-10,unlisted,snapshot:2025-03-10
+swe-bench,Zencoder (2025-04-30),zencoder-2025-04-30,unlisted,snapshot:2025-04-30
+swe-bench,amazon.nova-premier-v1:0,nova-premier,maker,other:v1:0
+swe-bench,claude-2,claude-2-0,alias,
+swe-bench,claude-3-5-sonnet-20241022,claude-3-5-sonnet-20241022,exact,
+swe-bench,claude-3-7-sonnet-20250219,claude-3-7-sonnet-20250219,exact,
+swe-bench,claude-3-haiku-20240307,claude-3-haiku-20240307,exact,
+swe-bench,claude-3-opus-20240229,claude-3-opus-20240229,exact,
+swe-bench,claude-3.5-sonnet-20241022,claude-3-5-sonnet-20241022,exact,
+swe-bench,claude-4-5-opus,claude-opus-4-5,exact,
+swe-bench,claude-4-opus-20250514,claude-opus-4-20250514,exact,
+swe-bench,claude-4-sonnet,claude-sonnet-4-20250514,exact,
+swe-bench,claude-4-sonnet-20250514,claude-sonnet-4-20250514,exact,
+swe-bench,claude-haiku-4-5-20251001,claude-haiku-4-5,exact,
+swe-bench,claude-opus-4-5,claude-opus-4-5,exact,
+swe-bench,claude-opus-4-5-20251101,claude-opus-4-5,exact,
+swe-bench,claude-opus-4-6,claude-opus-4-6,exact,
+swe-bench,claude-sonnet-4-20250514,claude-sonnet-4-20250514,exact,
+swe-bench,claude-sonnet-4-5,claude-sonnet-4-5,exact,
+swe-bench,claude-sonnet-4-5-20250929,claude-sonnet-4-5,exact,
+swe-bench,deepseek-chat,deepseek-v3,exact,
+swe-bench,deepseek-v3,deepseek-v3,exact,
+swe-bench,deepseek-v3.2,deepseek-v3-2,exact,
+swe-bench,deepseek-v3.2-reasoner,deepseek-v3-2,alias,
+swe-bench,devlo,devlo,unlisted,
+swe-bench,devstral-2512,devstral-2,alias,
+swe-bench,devstral-small-2507,devstral-small-2507,unlisted,snapshot:2507
+swe-bench,devstral-small-2512,devstral-small-2,alias,
+swe-bench,gemini-2.0-flash,gemini-2-0-flash-001,variant,
+swe-bench,gemini-2.0-flash-exp,gemini-2-0-flash-exp,exact,
+swe-bench,gemini-2.5-flash,gemini-2-5-flash,exact,
+swe-bench,gemini-2.5-pro,gemini-2-5-pro,exact,
+swe-bench,gemini-3-flash,gemini-3-flash-preview,variant,
+swe-bench,gemini-3-flash-preview,gemini-3-flash-preview,exact,
+swe-bench,gemini-3-pro,gemini-3-pro-preview,variant,
+swe-bench,gemini-3-pro-preview,gemini-3-pro-preview,exact,
+swe-bench,glm-4.6,glm-4-6,exact,
+swe-bench,glm-5,glm-5,exact,
+swe-bench,gpt-4-0125-preview,gpt-4-0125-preview,exact,
+swe-bench,gpt-4-0613,gpt-4-0613,exact,
+swe-bench,gpt-4-1106-preview,gpt-4-1106-preview,exact,
+swe-bench,gpt-4.1-2025-04-14,gpt-4-1,exact,
+swe-bench,gpt-4.1-20250414,gpt-4-1,exact,
+swe-bench,gpt-4.1-mini-20250414,gpt-4-1-mini,exact,
+swe-bench,gpt-4o-2024-05-13,gpt-4o-2024-05-13,exact,
+swe-bench,gpt-4o-2024-08-06,gpt-4o-2024-08-06,exact,
+swe-bench,gpt-4o-20241120,gpt-4o-2024-11-20,exact,
+swe-bench,gpt-5-2,gpt-5-2,exact,
+swe-bench,gpt-5-2-codex,gpt-5-2-codex,exact,
+swe-bench,gpt-5-2025-08-07,gpt-5,exact,
+swe-bench,gpt-5-mini-2025-08-07,gpt-5-mini,exact,
+swe-bench,gpt-5-nano-2025-08-07,gpt-5-nano,exact,
+swe-bench,gpt-5.1-2025-11-13,gpt-5-1,exact,
+swe-bench,gpt-5.1-codex,gpt-5-1-codex,exact,
+swe-bench,gpt-5.2-2025-12-11,gpt-5-2,exact,
+swe-bench,gpt-oss-120b,gpt-oss-120b,exact,
+swe-bench,https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct,qwen3-coder-30b-a3b,exact,
+swe-bench,https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct,qwen3-coder-480b-a35b,exact,
+swe-bench,https://huggingface.co/agentica-org/DeepSWE-Preview,deepswe,unlisted,stage:preview
+swe-bench,https://huggingface.co/zai-org/GLM-4.5,glm-4-5,exact,
+swe-bench,https://huggingface.co/zai-org/GLM-4.6,glm-4-6,exact,
+swe-bench,kimi-k2-0905-preview,kimi-k2,exact,
+swe-bench,kimi-k2-instruct,kimi-k2,exact,
+swe-bench,kimi-k2.5,kimi-k2-5,exact,
+swe-bench,llama-4-maverick-instruct,llama-4-maverick,alias,
+swe-bench,llama-4-scout-instruct,llama-4-scout,alias,
+swe-bench,minimax-2.5,minimax-m2-5,exact,
+swe-bench,minimax-m2,minimax-m2,exact,
+swe-bench,minimax-m2.5,minimax-m2-5,exact,
+swe-bench,mistralai/Devstral-Small-2505,devstral-small-2505,unlisted,snapshot:2505
+swe-bench,moonshot/kimi-k2-0711-preview,kimi-k2,exact,
+swe-bench,nFactorial (2024-10-01),nfactorial-2024-10-01,unlisted,snapshot:2024-10-01
+swe-bench,nFactorial (2024-10-07),nfactorial-2024-10-07,unlisted,snapshot:2024-10-07
+swe-bench,nFactorial (2024-10-30),nfactorial-2024-10-30,unlisted,snapshot:2024-10-30
+swe-bench,nFactorial (2024-11-05),nfactorial-2024-11-05,unlisted,snapshot:2024-11-05
+swe-bench,o1-preview,o1-preview,exact,
+swe-bench,o3-2025-04-16,o3,exact,
+swe-bench,o3-20250416,o3,exact,
+swe-bench,o3-mini,o3-mini,exact,
+swe-bench,o4-mini,o4-mini,exact,
+swe-bench,o4-mini-2025-04-16,o4-mini,exact,
+swe-bench,o4-mini-20250416,o4-mini,exact,
+swe-bench,openai/gpt-5-2025-08-07,gpt-5,exact,
+swe-bench,ugaiforge,ugaiforge,unlisted,
 tau2-bench,Claude Fable 5,claude-fable-5,exact,
 tau2-bench,Claude Opus 4.5,claude-opus-4-5,exact,
 tau2-bench,Claude Opus 4.6,claude-opus-4-6,exact,
@@ -1421,7 +3247,7 @@ tau2-bench,Gemini 3 Pro,gemini-3-pro-preview,variant,
 tau2-bench,Gemini 3.1 Pro Preview,gemini-3-1-pro,exact,
 tau2-bench,Grok 4 fast,grok-4-fast,exact,
 tau2-bench,Grok 4.1 fast,grok-4-1-fast,unlisted,
-tau2-bench,Grok 4.2,grok-4-2,unlisted,
+tau2-bench,Grok 4.2,grok-4-20,alias,
 tau2-bench,Grok 4.5,grok-4-5,exact,
 tau2-bench,Inkling,inkling,exact,
 tau2-bench,Kimi K3,kimi-k3,exact,
@@ -1430,6 +3256,113 @@ tau2-bench,PrincipledMachines Cortex 0.1,principledmachines-cortex-0-1,unlisted,
 tau2-bench,Qwen 3.8 Max,qwen3-8-2-4t-a95b,variant,
 tau2-bench,Qwen3.5-397B-A17B,qwen3-5-397b-a17b,exact,
 tau2-bench,RAFT-30B-A3B,raft-30b-a3b,unlisted,
+terminal-bench,Abacus AI Desktop + claude-haiku-4-5 + gemini-3-pro-preview,abacus-ai-desktop-plus-claude-haiku-4-5-plus-gemini-3-pro-preview,unlisted,
+terminal-bench,Beam 1.0,beam-1-0-501b-a23b,alias,
+terminal-bench,DeepSeek V4 Pro 0813,deepseek-v4-pro,exact,
+terminal-bench,DeepSeek V4.1 Flash 1017,deepseek-v4-1-flash-1017,exact,
+terminal-bench,Fable 5,claude-fable-5,exact,
+terminal-bench,Fable 5.1,claude-fable-5-1,exact,
+terminal-bench,Fable 5.2,claude-fable-5-2,unlisted,
+terminal-bench,GLM-4.7,glm-4-7,exact,
+terminal-bench,GLM-5.1,glm-5-1,exact,
+terminal-bench,GLM-5.3,glm-5-3,exact,
+terminal-bench,GLM-5.3-Flash,glm-5-3-flash,exact,
+terminal-bench,GPT-5.4 Mini,gpt-5-4-mini,exact,
+terminal-bench,GPT-5.5,gpt-5-5,exact,
+terminal-bench,GPT-5.6 Luna,gpt-5-6-luna,exact,
+terminal-bench,GPT-5.6 Sol,gpt-5-6-sol,exact,
+terminal-bench,GPT-5.6 Terra,gpt-5-6-terra,exact,
+terminal-bench,GPT-6 Astra,gpt-6-astra,exact,
+terminal-bench,GPT-6 Luna,gpt-6-luna,exact,
+terminal-bench,GPT-6 Sol,gpt-6-sol,exact,
+terminal-bench,GPT-6.1 Sol,gpt-6-1-sol,exact,
+terminal-bench,GPT-6.1 Terra,gpt-6-1-terra,exact,
+terminal-bench,Gemini 3 Pro,gemini-3-pro-preview,variant,
+terminal-bench,Gemini 3.1 Pro,gemini-3-1-pro,exact,
+terminal-bench,Gemini 3.7 Flash,gemini-3-7-flash,exact,
+terminal-bench,Gemini 3.8 Flash,gemini-3-8-flash,exact,
+terminal-bench,Grok 4.5,grok-4-5,exact,
+terminal-bench,Grok 4.6,grok-4-6,exact,
+terminal-bench,Grok 4.7,grok-4-7,exact,
+terminal-bench,Haiku 5.5,claude-haiku-5-5,exact,
+terminal-bench,Hy4,hy4-preview,variant,
+terminal-bench,Inkling,inkling,exact,
+terminal-bench,Inkling Small,inkling-small,exact,
+terminal-bench,Inkling Small 2,inkling-small-2,unlisted,
+terminal-bench,Junie CLI + claude-opus-4-6 + gemini-3-flash-preview + gemini-3.1-pro-preview + gpt-5.3-codex,junie-cli-plus-claude-opus-4-6-plus-gemini-3-flash-preview-plus-gemini-3-1-pro-preview-plus-gpt-5-3-codex,unlisted,
+terminal-bench,Kimi K3,kimi-k3,exact,
+terminal-bench,Kimi K3.1 Pro,kimi-k3-1-pro,exact,
+terminal-bench,LemonHarness + gemini-3.1-pro-preview + gpt-3.5-codex,lemonharness-plus-gemini-3-1-pro-preview-plus-gpt-3-5-codex,unlisted,
+terminal-bench,LemonHarness + gemini-3.1-pro-preview + gpt-5.3-codex,lemonharness-plus-gemini-3-1-pro-preview-plus-gpt-5-3-codex,unlisted,
+terminal-bench,MiMo V2.6 Pro,mimo-v2-6-pro,exact,
+terminal-bench,MiniMax M3,minimax-m3,exact,
+terminal-bench,MiniMax-M2.7-highspeed,minimax-m2-7-highspeed,unlisted,
+terminal-bench,Mistral Large 4,mistral-large-4,exact,
+terminal-bench,Muse Spark 1.1,muse-spark-1-1,exact,
+terminal-bench,Muse Spark 1.3,muse-spark-1-3,exact,
+terminal-bench,Nemotron 3.5 Super VL,nemotron-3-5-super-vl-120b-a12b,alias,
+terminal-bench,Opus 4.7,claude-opus-4-7,exact,
+terminal-bench,Opus 4.8,claude-opus-4-8,exact,
+terminal-bench,Opus 5,claude-opus-5,exact,
+terminal-bench,Opus 5.5,claude-opus-5-5,exact,
+terminal-bench,Polaris + claude-opus-4-7 + gemini-3.1-pro-preview + gpt-5.5,polaris-plus-claude-opus-4-7-plus-gemini-3-1-pro-preview-plus-gpt-5-5,unlisted,
+terminal-bench,Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8,qwen3-coder-480b-a35b,variant,quant:FP8
+terminal-bench,Qwen/Qwen3.5-9B,qwen3-5-9b,exact,
+terminal-bench,Qwen/Qwen3.6-35B-A3B,qwen3-6-35b-a3b,exact,
+terminal-bench,Qwen3.8-Max-0902,qwen3-8-max-0902,exact,
+terminal-bench,Sonnet 5,claude-sonnet-5,exact,
+terminal-bench,Sonnet 5.5,claude-sonnet-5-5,exact,
+terminal-bench,UCSB-SURFI/TermiGen-32B,termigen-32b,unlisted,
+terminal-bench,Warp + claude-haiku-4-5 + gpt-5.2,warp-plus-claude-haiku-4-5-plus-gpt-5-2,unlisted,
+terminal-bench,Warp + claude-haiku-4-5-20251001 + claude-sonnet-4-5-20250929 + gpt-5-nano,warp-plus-claude-haiku-4-5-20251001-plus-claude-sonnet-4-5-20250929-plus-gpt-5-nano,unlisted,
+terminal-bench,Warp + claude-haiku-4-5-20251001 + gemini-3-pro-preview + gpt-5-nano,warp-plus-claude-haiku-4-5-20251001-plus-gemini-3-pro-preview-plus-gpt-5-nano,unlisted,
+terminal-bench,accounts/fireworks/models/glm-4p6,glm-4-6,exact,
+terminal-bench,accounts/fireworks/models/minimax-m2,minimax-m2,exact,
+terminal-bench,claude-4.5-sonnet,claude-sonnet-4-5,exact,
+terminal-bench,claude-4.6-opus,claude-opus-4-6,exact,
+terminal-bench,claude-haiku-4-5,claude-haiku-4-5,exact,
+terminal-bench,claude-haiku-4-5-20251001,claude-haiku-4-5,exact,
+terminal-bench,claude-opus-4-1-20250805,claude-opus-4-1-20250805,exact,
+terminal-bench,claude-opus-4-5,claude-opus-4-5,exact,
+terminal-bench,claude-opus-4-5-20251101,claude-opus-4-5,exact,
+terminal-bench,claude-opus-4-6,claude-opus-4-6,exact,
+terminal-bench,claude-opus-4-7,claude-opus-4-7,exact,
+terminal-bench,claude-opus-4.6,claude-opus-4-6,exact,
+terminal-bench,claude-sonnet-4-5,claude-sonnet-4-5,exact,
+terminal-bench,claude-sonnet-4-5-20250929,claude-sonnet-4-5,exact,
+terminal-bench,claude-sonnet-4-6,claude-sonnet-4-6,exact,
+terminal-bench,deepseek-v3.2,deepseek-v3-2,exact,
+terminal-bench,gemini-2.5-flash,gemini-2-5-flash,exact,
+terminal-bench,gemini-2.5-pro,gemini-2-5-pro,exact,
+terminal-bench,gemini-3-flash-preview,gemini-3-flash-preview,exact,
+terminal-bench,gemini-3-pro-preview,gemini-3-pro-preview,exact,
+terminal-bench,gemini-3.1-pro-preview,gemini-3-1-pro,exact,
+terminal-bench,glm-4.7,glm-4-7,exact,
+terminal-bench,glm-5,glm-5,exact,
+terminal-bench,gpt-5,gpt-5,exact,
+terminal-bench,gpt-5-codex,gpt-5-codex,exact,
+terminal-bench,gpt-5-mini,gpt-5-mini,exact,
+terminal-bench,gpt-5-nano,gpt-5-nano,exact,
+terminal-bench,gpt-5.1,gpt-5-1,exact,
+terminal-bench,gpt-5.1-codex,gpt-5-1-codex,exact,
+terminal-bench,gpt-5.1-codex-max,gpt-5-1-codex-max,unlisted,
+terminal-bench,gpt-5.1-codex-mini,gpt-5-1-codex-mini,exact,
+terminal-bench,gpt-5.2,gpt-5-2,exact,
+terminal-bench,gpt-5.2-codex,gpt-5-2-codex,exact,
+terminal-bench,gpt-5.3-codex,gpt-5-3-codex,exact,
+terminal-bench,gpt-5.5,gpt-5-5,exact,
+terminal-bench,gpt-oss-20b-rl,gpt-oss-20b-rl,unlisted,
+terminal-bench,grok-4-0709,grok-4-0709,exact,
+terminal-bench,grok-4.20-0309-reasoning,grok-4-20,exact,
+terminal-bench,grok-code-fast-1,grok-code-fast-1,exact,
+terminal-bench,kimi-k2.5,kimi-k2-5,exact,
+terminal-bench,minimax-m2.1,minimax-m2-1,exact,
+terminal-bench,minimax-m2.5,minimax-m2-5,exact,
+terminal-bench,minimax/MiniMax-M2.7,minimax-m2-7,exact,
+terminal-bench,moonshotai/Kimi-K2-Instruct-0905,kimi-k2-0905,exact,
+terminal-bench,moonshotai/Kimi-K2-Thinking,kimi-k2-thinking,exact,
+terminal-bench,openai/gpt-oss-120b,gpt-oss-120b,exact,
+terminal-bench,openai/gpt-oss-20b,gpt-oss-20b,exact,
 vectara-hhem,CohereLabs/c4ai-aya-expanse-32b,aya-expanse-32b,alias,
 vectara-hhem,CohereLabs/c4ai-aya-expanse-8b,aya-expanse-8b,alias,
 vectara-hhem,CohereLabs/command-a-03-2025,command-a,exact,
@@ -1479,7 +3412,7 @@ vectara-hhem,google/gemma-4-31b-it,gemma-4-31b,exact,
 vectara-hhem,ibm-granite/granite-3.3-8b-instruct,granite-3-3-8b,exact,
 vectara-hhem,ibm-granite/granite-4.0-h-small,granite-4-0-h-small,exact,
 vectara-hhem,inceptionlabs/mercury-2,mercury-2,exact,
-vectara-hhem,meta-llama/Llama-3.3-70B-Instruct-Turbo,llama-3-3-70b-instruct-turbo,unlisted,
+vectara-hhem,meta-llama/Llama-3.3-70B-Instruct-Turbo,llama-3-3-70b,variant,quant:Turbo (FP8)
 vectara-hhem,meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8,llama-4-maverick,variant,quant:FP8
 vectara-hhem,meta-llama/Llama-4-Scout-17B-16E-Instruct,llama-4-scout,exact,
 vectara-hhem,microsoft/Phi-4,phi-4,exact,

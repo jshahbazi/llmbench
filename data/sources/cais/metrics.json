@@ -1,0 +1,209 @@
+[
+ {
+  "id": "art",
+  "label": "Agent Red Teaming attack success",
+  "direction": "lower",
+  "tags": [
+   "agents"
+  ],
+  "url": "https://arxiv.org/abs/2507.20526",
+  "description": "Share of behaviours for which an attacker gets the agent to break policy within 100 tries (direct and indirect prompt injection). Lower is better.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "biotier_refusal",
+  "label": "BioTIER refusal",
+  "direction": "higher",
+  "url": "https://securebio.org/",
+  "description": "Refusal rate on the BioTIER dual-use biology refusal set.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "enigmaeval",
+  "label": "EnigmaEval",
+  "direction": "higher",
+  "headline": true,
+  "tags": [
+   "vision"
+  ],
+  "url": "https://arxiv.org/abs/2502.08859",
+  "description": "Multimodal puzzles from competitions such as the MIT Mystery Hunt, which take expert teams days to solve.",
+  "unit": "percent"
+ },
+ {
+  "id": "erqa",
+  "label": "ERQA (embodied reasoning)",
+  "direction": "higher",
+  "tags": [
+   "vision"
+  ],
+  "url": "https://github.com/embodiedreasoning/ERQA",
+  "description": "Embodied-reasoning questions for robotics: spatial, trajectory and action reasoning, state estimation, pointing and multi-view.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hle",
+  "label": "Humanity's Last Exam (CAIS run)",
+  "direction": "higher",
+  "headline": true,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://lastexam.ai",
+  "description": "Accuracy on HLE's 2,500 public expert-written questions, without tools, run by CAIS (co-creator of HLE).",
+  "unit": "percent"
+ },
+ {
+  "id": "hle_calibration_error",
+  "label": "Humanity's Last Exam calibration error",
+  "direction": "lower",
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://lastexam.ai",
+  "description": "RMS calibration error of the model's stated confidence on HLE: how over- or under-confident it is. Lower is better.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "hle_diamond",
+  "label": "Humanity's Last Exam Diamond",
+  "direction": "higher",
+  "headline": true,
+  "tags": [
+   "knowledge"
+  ],
+  "url": "https://lastexam.ai",
+  "description": "Accuracy on HLE-Diamond (released 2026-09), the harder follow-on set for when models near the noise ceiling of the original.",
+  "unit": "percent"
+ },
+ {
+  "id": "hpct_refusal",
+  "label": "HPCT refusal",
+  "direction": "higher",
+  "url": "https://securebio.org/",
+  "description": "Refusal rate on the Human Pathogen Capabilities Test refusal set.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "intphys2",
+  "label": "IntPhys 2 (intuitive physics)",
+  "direction": "higher",
+  "tags": [
+   "vision"
+  ],
+  "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks",
+  "description": "Telling physically possible video clips from impossible ones (permanence, solidity, continuity).",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "machiavelli",
+  "label": "Machiavelli deception",
+  "direction": "lower",
+  "unit": "score",
+  "url": "https://aypan17.github.io/machiavelli/",
+  "description": "Deceptive behaviour in 30 goal-driven text games, scaled so 100 is as deceptive as random play. Lower is better.",
+  "headline": false
+ },
+ {
+  "id": "masks",
+  "label": "MASK honesty",
+  "direction": "higher",
+  "url": "https://www.mask-benchmark.ai",
+  "description": "Share of answers that stay honest when the model is pressured to lie. The dashboard's risk table shows 100 minus this.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "mindcube",
+  "label": "MindCube Tiny (spatial)",
+  "direction": "higher",
+  "tags": [
+   "vision"
+  ],
+  "url": "https://mind-cube.github.io/",
+  "description": "Spatial reasoning over groups of images of the same scene from different views: occlusion, perspective and \"what if\" questions.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "pct",
+  "label": "Political inconsistency (PCT)",
+  "direction": "lower",
+  "url": "https://political-manipulation.ai",
+  "description": "Polarized Contrastive Pairs: how much sentiment and helpfulness shift between matched left- and right-coded subjects. Lower is better.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "refusal_avg",
+  "label": "Bioweapons refusal (average)",
+  "direction": "higher",
+  "url": "https://www.virologytest.ai",
+  "description": "Average refusal rate on three dual-use biology refusal sets (VCT, HPCT, BioTIER). The dashboard's risk table shows 100 minus this.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "rli",
+  "label": "Remote Labor Index automation rate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.remotelabor.ai/",
+  "description": "Share of 240 real paid freelance projects (design, games, video, data and more) that the agent completed to a standard a client would accept."
+ },
+ {
+  "id": "spatialviz",
+  "label": "SpatialViz",
+  "direction": "higher",
+  "tags": [
+   "vision"
+  ],
+  "url": "https://github.com/wangst0181/Spatial-Visualization-Benchmark",
+  "description": "Mental rotation, mental folding, visual penetration and mental animation.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "textquests",
+  "label": "TextQuests",
+  "direction": "higher",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://textquests.ai/",
+  "description": "Progress through 25 classic text adventure games, which take people hundreds of precise actions and over 30 hours.",
+  "unit": "percent"
+ },
+ {
+  "id": "textquests_harm",
+  "label": "TextQuests harm",
+  "direction": "lower",
+  "tags": [
+   "agents"
+  ],
+  "url": "https://textquests.ai/",
+  "description": "How often the agent takes wantonly harmful actions while playing the TextQuests games. Lower is better.",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "vct_refusal",
+  "label": "VCT refusal",
+  "direction": "higher",
+  "url": "https://www.virologytest.ai",
+  "description": "Refusal rate on the Virology Capabilities Test refusal set: expert-labelled questions that should be refused.",
+  "unit": "percent",
+  "headline": false
+ }
+]

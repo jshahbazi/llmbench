@@ -1,0 +1,30 @@
+[
+ {
+  "id": "elo",
+  "label": "Chess Elo",
+  "direction": "higher",
+  "unit": "elo",
+  "headline": true
+ },
+ {
+  "id": "mistakes_per_1000moves",
+  "label": "Mistakes per 1000 moves",
+  "direction": "lower",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "price_per_1000_moves",
+  "label": "Cost per 1000 moves ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false
+ },
+ {
+  "id": "win_loss",
+  "label": "Win/loss score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": false
+ }
+]

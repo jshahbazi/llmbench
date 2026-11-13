@@ -2,7 +2,10 @@
 # remove a source. Every field is described in docs/llm-benchmark-aggregator-plan.md, section 3.
 #
 # terms: allowed  -> fetched
-# terms: blocked  -> listed for the record, never fetched
+# terms: blocked  -> listed for the record, never fetched. Only for sources whose terms forbid reuse
+#                    or automated access; a missing or non-commercial licence is not a reason.
+# license: the data's licence as the source states it, or "none stated". Non-commercial (NC) and
+#          unstated licences are shown as such on the site and in every download.
 #
 # Quick reference for a source without a plugin:
 #   fetch       github:owner/repo/path (globs allowed) | hf:owner/dataset | https://...
@@ -206,17 +209,281 @@ sources:
       Per whatmodel's licence ledger, the site terms allow personal non-commercial use only
       and forbid building a similar or competing service.
 
-  - id: swe-bench
-    name: SWE-bench leaderboards
-    homepage: https://www.swebench.com
+  - id: arc-prize
+    name: ARC Prize
+    homepage: https://arcprize.org/leaderboard
     terms: blocked
     terms_note: >-
-      The leaderboard data (SWE-bench/swe-bench.github.io, data/leaderboards.json) is licensed
-      CC BY-NC 4.0, and the non-commercial condition cannot be carried into this site's
-      CC BY-SA 4.0 compilation. whatmodel carries some SWE-bench results under their own licences.
+      The site's terms (arcprize.org/terms, checked 2026-11-13) forbid accessing it "through
+      automated or non-human means, whether through a bot, script or otherwise". The data
+      (media/data/evaluations.json) would otherwise be easy to read.
 
+  - id: scale-seal
+    name: Scale SEAL leaderboards
+    homepage: https://labs.scale.com/leaderboard
+    terms: blocked
+    terms_note: >-
+      Scale's terms (scale.com/legal/terms, checked 2026-11-13) forbid accessing the sites "in
+      order to build a competitive product or service". Left out by decision (2026-11-13). Its
+      benchmarks come from elsewhere: Humanity's Last Exam, EnigmaEval, MASK and the Remote Labor
+      Index from the CAIS dashboard (cais), and SWE-bench Pro, MCP Atlas, MultiChallenge and SWE
+      Atlas from model makers' own reports (whatmodel).
+
+  # SWE-bench: agents fixing real GitHub issues, five boards in one file. A plugin keeps runs where
+  # the SWE-bench team put every model in the same minimal agent ("bash only") apart from systems
+  # submitted by their builders, so a model's score never silently becomes the best of any scaffold.
+  - id: swe-bench
+    name: SWE-bench
+    homepage: https://www.swebench.com
+    plugin: swebench
+    fetch: github:SWE-bench/swe-bench.github.io/data/leaderboards.json
+    every: 1d
+    min_rows: 200
+    license: CC BY-NC 4.0
+    attribution: SWE-bench leaderboards (github.com/SWE-bench/swe-bench.github.io), CC BY-NC 4.0
+    terms: allowed
+
+  # Terminal-Bench: agents doing hard tasks in a terminal, served by an open JSON endpoint. Each
+  # entry is an agent and a model; the agent is kept as context. Versions are listed here, newest
+  # first (the site only lists them in its own script): add a line when a new version appears.
+  - id: terminal-bench
+    name: Terminal-Bench
+    homepage: https://www.tbench.ai/leaderboard
+    plugin: terminalbench
+    fetch: https://ofhuhcpkvzjlejydnvyd.supabase.co/functions/v1/leaderboard-read
+    boards:
+      - { package: terminal-bench/terminal-bench, name: 4-1-0, version: "4.1" }
+      - { package: terminal-bench/terminal-bench-2-1, name: main, version: "2.1" }
+      - { package: terminal-bench/terminal-bench-2, name: 2-0, version: "2.0" }
+    every: 1d
+    min_rows: 150
+    run_by: submitted
+    license: Apache-2.0
+    attribution: Terminal-Bench (tbench.ai, github.com/harbor-framework/terminal-bench), Apache-2.0
+    terms: allowed
+
+  # LiveBench: questions are replaced at every release, so each release gets its own columns. Read
+  # from the site's own files (the GitHub copy stopped updating in mid-2026): LiveBench 1.0 releases
+  # (2024-06 to 2026-06) and LiveBench 2.0 (from 2026-10). Category averages, Overall and cost per
+  # task are computed the way the site computes them; see scripts/sources/livebench.ts.
   - id: livebench
     name: LiveBench
     homepage: https://livebench.ai
-    terms: blocked
-    terms_note: The site repository (LiveBench/livebench.github.io) has no licence, so its data cannot be reused.
+    plugin: livebench
+    fetch: https://livebench.ai/
+    every: 1d
+    min_rows: 400
+    license: none stated
+    attribution: LiveBench (livebench.ai)
+    terms: allowed
+
+  # The Center for AI Safety's own runs: Humanity's Last Exam (and HLE-Diamond), TextQuests, MASK,
+  # EnigmaEval, the Remote Labor Index, vision and safety benchmarks. CAIS co-created several of
+  # these with Scale AI and publishes its runs here. The scores sit in the page's scripts; see
+  # scripts/sources/cais.ts. Terms (safe.ai/terms-of-service, checked 2026-11-13): content may be
+  # copied and adapted "solely for not-for-profit or educational purposes", with the credit below.
+  - id: cais
+    name: CAIS AI Dashboard
+    homepage: https://dashboard.safe.ai
+    plugin: cais
+    fetch: https://dashboard.safe.ai/
+    every: 1d
+    min_rows: 50
+    license: Non-commercial use with credit (CAIS terms of use)
+    attribution: >-
+      Reproduced with permission of Center for AI Safety, Inc. CAIS AI Dashboard
+      (dashboard.safe.ai).
+    terms: allowed
+
+  # Lech Mazur's benchmarks. Each repository's README starts with a Markdown table of models; none
+  # states a licence. Names carry the reasoning setting in brackets: "GPT-5 (medium reasoning)".
+  - id: nyt-connections
+    name: NYT Connections (extended)
+    homepage: https://github.com/lechmazur/nyt-connections
+    fetch: github:lechmazur/nyt-connections/README.md
+    table: 0
+    model: Model
+    scores: [Score %]
+    labels: { Score %: NYT Connections score }
+    unit: percent
+    ignore: [Rank]
+    every: 1d
+    min_rows: 100
+    license: none stated
+    attribution: Extended NYT Connections benchmark by Lech Mazur (github.com/lechmazur/nyt-connections)
+    terms: allowed
+
+  - id: lechmazur-writing
+    name: Short-story writing (Lech Mazur)
+    homepage: https://github.com/lechmazur/writing
+    fetch: github:lechmazur/writing/README.md
+    table: 0
+    model: Model
+    scores: [Comparison score, Estimated win chance]
+    headline: [Comparison score]
+    units: { Estimated win chance: percent }
+    ignore: [Rank]
+    every: 1d
+    min_rows: 40
+    license: none stated
+    attribution: Creative short-story writing benchmark by Lech Mazur (github.com/lechmazur/writing)
+    terms: allowed
+
+  - id: lechmazur-debate
+    name: Debate (Lech Mazur)
+    homepage: https://github.com/lechmazur/debate
+    fetch: github:lechmazur/debate/README.md
+    table: 0
+    model: Model
+    scores: [BT]
+    labels: { BT: Bradley-Terry rating }
+    unit: elo
+    ignore: [Rank]
+    every: 1d
+    min_rows: 40
+    license: none stated
+    attribution: LLM debate benchmark by Lech Mazur (github.com/lechmazur/debate)
+    terms: allowed
+
+  - id: elimination-game
+    name: Elimination Game (Lech Mazur)
+    homepage: https://github.com/lechmazur/elimination_game
+    fetch: github:lechmazur/elimination_game/README.md
+    table: 0
+    model: Model
+    scores: [μ, Avg Points]
+    headline: [μ]
+    labels: { μ: TrueSkill μ, Avg Points: Average points }
+    ignore: [Rank]
+    duplicates: drop            # the README lists one model name twice
+    every: 7d
+    min_rows: 40
+    license: none stated
+    attribution: Elimination Game benchmark by Lech Mazur (github.com/lechmazur/elimination_game)
+    terms: allowed
+
+  - id: lechmazur-generalization
+    name: Thematic generalization (Lech Mazur)
+    homepage: https://github.com/lechmazur/generalization
+    fetch: github:lechmazur/generalization/README.md
+    table: 0
+    model: Model
+    scores: [Inverse-Rank Score, Top-1 Accuracy]
+    headline: [Inverse-Rank Score]
+    units: { Top-1 Accuracy: percent }
+    ignore: [Rank]
+    every: 7d
+    min_rows: 20
+    license: none stated
+    attribution: Thematic generalization benchmark by Lech Mazur (github.com/lechmazur/generalization)
+    terms: allowed
+
+  - id: lechmazur-sycophancy
+    name: Sycophancy (Lech Mazur)
+    homepage: https://github.com/lechmazur/sycophancy
+    fetch: github:lechmazur/sycophancy/README.md
+    table: 0
+    model: Model
+    scores: [Sycophancy, Conditional]
+    headline: [Sycophancy]
+    labels: { Conditional: Conditional sycophancy }
+    lower_is_better: [Sycophancy, Conditional]
+    unit: percent
+    ignore: [Rank]
+    every: 7d
+    min_rows: 15
+    license: none stated
+    attribution: Sycophancy benchmark by Lech Mazur (github.com/lechmazur/sycophancy)
+    terms: allowed
+
+  - id: step-game
+    name: Step Game (Lech Mazur)
+    homepage: https://github.com/lechmazur/step_game
+    fetch: github:lechmazur/step_game/README.md
+    table: 0
+    model: Model
+    scores: [mu]
+    labels: { mu: TrueSkill μ }
+    ignore: [Rank]
+    every: 7d
+    min_rows: 50
+    license: none stated
+    attribution: Step Game benchmark by Lech Mazur (github.com/lechmazur/step_game)
+    terms: allowed
+
+  - id: confabulations
+    name: Confabulations (Lech Mazur)
+    homepage: https://github.com/lechmazur/confabulations
+    fetch: github:lechmazur/confabulations/README.md
+    table: 0
+    model: Model
+    scores: [Weighted, Confab %, Non-Resp %]
+    headline: [Weighted]
+    labels: { Weighted: Weighted confabulation and non-response, Confab %: Confabulation rate, Non-Resp %: Non-response rate }
+    units: { Confab %: percent, Non-Resp %: percent }
+    lower_is_better: [Weighted, Confab %, Non-Resp %]
+    ignore: [Rank]
+    every: 7d
+    min_rows: 50
+    license: none stated
+    attribution: Confabulations benchmark by Lech Mazur (github.com/lechmazur/confabulations)
+    terms: allowed
+
+  # Kagi's own LLM benchmark, a Markdown table in its documentation repository.
+  - id: kagi
+    name: Kagi LLM Benchmark
+    homepage: https://help.kagi.com/kagi/ai/llm-benchmark.html
+    fetch: github:kagisearch/kagi-docs/docs/kagi/ai/llm-benchmark.md
+    table: 0
+    model: model
+    key: [model, provider]
+    context: [provider]
+    duplicates: drop            # two different minimax-01 rows from the same provider
+    scores: ["%accuracy", Cost($), time/task, TPS]
+    headline: ["%accuracy"]
+    labels: { "%accuracy": Kagi benchmark accuracy, Cost($): Cost ($), time/task: Seconds per task, TPS: Tokens per second }
+    units: { "%accuracy": percent, Cost($): USD, time/task: s }
+    lower_is_better: [Cost($), time/task]
+    every: 1d
+    min_rows: 100
+    license: none stated
+    attribution: Kagi LLM Benchmarking Project (help.kagi.com/kagi/ai/llm-benchmark.html)
+    terms: allowed
+
+  # LLM Chess: models play chess against a random player and each other; Elo with a 95% margin.
+  - id: llm-chess
+    name: LLM Chess
+    homepage: https://maxim-saplin.github.io/llm_chess/
+    fetch: github:maxim-saplin/llm_chess/data/elo_refined.csv
+    model: Player
+    scores: [elo, win_loss, mistakes_per_1000moves, price_per_1000_moves]
+    headline: [elo]
+    labels: { elo: Chess Elo, win_loss: Win/loss score, mistakes_per_1000moves: Mistakes per 1000 moves, price_per_1000_moves: Cost per 1000 moves ($) }
+    units: { elo: elo, price_per_1000_moves: USD }
+    lower_is_better: [mistakes_per_1000moves, price_per_1000_moves]
+    date: min_game_date
+    every: 1d
+    min_rows: 150
+    license: Apache-2.0
+    attribution: LLM Chess by Maksim Saplin (github.com/maxim-saplin/llm_chess), Apache-2.0
+    terms: allowed
+
+  # MMLU-Pro: TIGER-Lab's leaderboard mixes its own runs with scores model makers reported.
+  - id: mmlu-pro
+    name: MMLU-Pro
+    homepage: https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro
+    fetch: https://huggingface.co/datasets/TIGER-Lab/mmlu_pro_leaderboard_submission/resolve/main/results.csv
+    model: Models
+    key: [Models, Data Source]  # a model can have both a TIGER-Lab run and a self-reported score
+    context: [Data Source]
+    run_by_from: { column: Data Source, values: { TIGER-Lab: independent, TIGER-LAb: independent, Self-Reported: lab, Sefl-Reported: lab } }
+    duplicates: drop            # the file lists LLaDA twice
+    headline: [Overall]
+    ignore: [Model Size(B)]
+    unit: fraction
+    tags: [knowledge]
+    every: 7d
+    min_rows: 200
+    license: Apache-2.0
+    attribution: MMLU-Pro leaderboard by TIGER-Lab (huggingface.co/datasets/TIGER-Lab/mmlu_pro_leaderboard_submission), Apache-2.0
+    terms: allowed

@@ -188,11 +188,21 @@ function cellText(cell: string): { text: string; url?: string } {
     })
     .replace(/<[^>]+>/g, '')
     .replace(/(\*\*|__|\*|_|`|~~)(.+?)\1/g, '$2')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
+    .replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (all, e: string) => {
+      if (e[0] === '#') {
+        const n = e[1]?.toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : Number(e.slice(1));
+        return Number.isFinite(n) && n > 0 && n <= 0x10ffff ? String.fromCodePoint(n) : all;
+      }
+      return ENTITIES[e.toLowerCase()] ?? all;
+    })
     .trim();
   return { text, ...(url && { url }) };
 }
+
+const ENTITIES: Record<string, string> = {
+  nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", mu: 'μ', sigma: 'σ', alpha: 'α', beta: 'β',
+  plusmn: '±', times: '×', minus: '−', ndash: '–', mdash: '—', le: '≤', ge: '≥', deg: '°', hellip: '…',
+};
 
 /**
  * Picks a table from a Markdown document: by position (0 is the first) or by the text of the
@@ -206,7 +216,14 @@ export function markdownRecords(text: string, table: string | number | undefined
   else if (typeof table === 'number' || /^\d+$/.test(table)) t = tables[Number(table)];
   else t = tables.find((x) => x.heading.toLowerCase().includes(String(table).toLowerCase()));
   if (!t) throw new Error(`${where}: no Markdown table matches "table: ${table}" (${tables.length} tables, headings: ${tables.map((x) => JSON.stringify(x.heading)).join(', ')})`);
-  const header = t.header.map((h) => cellText(h).text);
+  // A repeated header gets a suffix, as in CSV, instead of overwriting the earlier column.
+  const seen = new Map<string, number>();
+  const header = t.header.map((h) => {
+    const name = cellText(h).text;
+    const n = (seen.get(name) ?? 0) + 1;
+    seen.set(name, n);
+    return n === 1 ? name : `${name} (${n})`;
+  });
   return t.rows.map((cells) => {
     const rec: Rec = {};
     header.forEach((h, k) => {

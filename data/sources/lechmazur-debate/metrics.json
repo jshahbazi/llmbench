@@ -1,0 +1,8 @@
+[
+ {
+  "id": "BT",
+  "label": "Bradley-Terry rating",
+  "direction": "higher",
+  "unit": "elo"
+ }
+]

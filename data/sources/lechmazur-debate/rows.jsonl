@@ -1,0 +1,61 @@
+{"key":"Baidu Ernie 5.0","model":"Baidu Ernie 5.0","scores":{"BT":"1239.0"},"extra":{"Matchups":"16"}}
+{"key":"Baidu Ernie 5.1","model":"Baidu Ernie 5.1","scores":{"BT":"1379.9"},"extra":{"Matchups":"198"}}
+{"key":"ByteDance Seed2.0 Pro","model":"ByteDance Seed2.0 Pro","scores":{"BT":"1447.1"},"extra":{"Matchups":"205"}}
+{"key":"Claude Fable 5 (high)","model":"Claude Fable 5 (high)","scores":{"BT":"1719.2"},"extra":{"Matchups":"205"}}
+{"key":"Claude Fable 5.1 (high)","model":"Claude Fable 5.1 (high)","scores":{"BT":"1727.1"},"extra":{"Matchups":"227"}}
+{"key":"Claude Opus 4.7 (high)","model":"Claude Opus 4.7 (high)","scores":{"BT":"1641.1"},"extra":{"Matchups":"120"}}
+{"key":"Claude Opus 4.8 (high)","model":"Claude Opus 4.8 (high)","scores":{"BT":"1623.8"},"extra":{"Matchups":"165"}}
+{"key":"Claude Opus 5 (high)","model":"Claude Opus 5 (high)","scores":{"BT":"1717.1"},"extra":{"Matchups":"207"}}
+{"key":"Claude Opus 5.5 (high)","model":"Claude Opus 5.5 (high)","scores":{"BT":"1691.5"},"extra":{"Matchups":"207"}}
+{"key":"Claude Sonnet 4.6 (high)","model":"Claude Sonnet 4.6 (high)","scores":{"BT":"1553.4"},"extra":{"Matchups":"139"}}
+{"key":"Claude Sonnet 4.6 (no reasoning)","model":"Claude Sonnet 4.6 (no reasoning)","scores":{"BT":"1534.2"},"extra":{"Matchups":"85"}}
+{"key":"Claude Sonnet 5 (high)","model":"Claude Sonnet 5 (high)","scores":{"BT":"1580.3"},"extra":{"Matchups":"247"}}
+{"key":"DeepSeek V3.2","model":"DeepSeek V3.2","scores":{"BT":"1354.5"},"extra":{"Matchups":"41"}}
+{"key":"DeepSeek V4 Pro 0813 (high)","model":"DeepSeek V4 Pro 0813 (high)","scores":{"BT":"1564.8"},"extra":{"Matchups":"203"}}
+{"key":"DeepSeek V4 Pro Preview","model":"DeepSeek V4 Pro Preview","scores":{"BT":"1440.7"},"extra":{"Matchups":"128"}}
+{"key":"DeepSeek V4.1 Flash (high)","model":"DeepSeek V4.1 Flash (high)","scores":{"BT":"1577.1"},"extra":{"Matchups":"120"}}
+{"key":"DeepSeek V4.1 Flash 1017 (high)","model":"DeepSeek V4.1 Flash 1017 (high)","scores":{"BT":"1593.0"},"extra":{"Matchups":"120"}}
+{"key":"GLM-5.1","model":"GLM-5.1","scores":{"BT":"1511.4"},"extra":{"Matchups":"99"}}
+{"key":"GLM-5.2 (max)","model":"GLM-5.2 (max)","scores":{"BT":"1556.4"},"extra":{"Matchups":"182"}}
+{"key":"GLM-5.3 (high)","model":"GLM-5.3 (high)","scores":{"BT":"1633.9"},"extra":{"Matchups":"153"}}
+{"key":"GPT-5.4 (high)","model":"GPT-5.4 (high)","scores":{"BT":"1539.5"},"extra":{"Matchups":"131"}}
+{"key":"GPT-5.4 (no reasoning)","model":"GPT-5.4 (no reasoning)","scores":{"BT":"1487.0"},"extra":{"Matchups":"93"}}
+{"key":"GPT-5.5 (high)","model":"GPT-5.5 (high)","scores":{"BT":"1520.4"},"extra":{"Matchups":"126"}}
+{"key":"GPT-5.6 Sol (high)","model":"GPT-5.6 Sol (high)","scores":{"BT":"1637.1"},"extra":{"Matchups":"277"}}
+{"key":"GPT-6 Astra (high)","model":"GPT-6 Astra (high)","scores":{"BT":"1604.1"},"extra":{"Matchups":"192"}}
+{"key":"GPT-OSS-120B","model":"GPT-OSS-120B","scores":{"BT":"1263.4"},"extra":{"Matchups":"61"}}
+{"key":"Gemini 3.1 Flash-Lite Preview","model":"Gemini 3.1 Flash-Lite Preview","scores":{"BT":"1322.2"},"extra":{"Matchups":"31"}}
+{"key":"Gemini 3.1 Pro Preview","model":"Gemini 3.1 Pro Preview","scores":{"BT":"1482.1"},"extra":{"Matchups":"250"}}
+{"key":"Gemini 3.5 Flash","model":"Gemini 3.5 Flash","scores":{"BT":"1399.9"},"extra":{"Matchups":"129"}}
+{"key":"Gemini 3.7 Flash (high)","model":"Gemini 3.7 Flash (high)","scores":{"BT":"1447.9"},"extra":{"Matchups":"117"}}
+{"key":"Gemini 3.8 Flash (high)","model":"Gemini 3.8 Flash (high)","scores":{"BT":"1504.5"},"extra":{"Matchups":"165"}}
+{"key":"Gemini 4 Argon (high)","model":"Gemini 4 Argon (high)","scores":{"BT":"1669.4"},"extra":{"Matchups":"190"}}
+{"key":"Grok 4.20 0309 (Non-Reasoning)","model":"Grok 4.20 0309 (Non-Reasoning)","scores":{"BT":"1396.1"},"extra":{"Matchups":"36"}}
+{"key":"Grok 4.20 0309 (Reasoning)","model":"Grok 4.20 0309 (Reasoning)","scores":{"BT":"1403.7"},"extra":{"Matchups":"49"}}
+{"key":"Grok 4.3","model":"Grok 4.3","scores":{"BT":"1363.4"},"extra":{"Matchups":"88"}}
+{"key":"Grok 4.5 (high)","model":"Grok 4.5 (high)","scores":{"BT":"1483.2"},"extra":{"Matchups":"122"}}
+{"key":"Grok 4.6 (high)","model":"Grok 4.6 (high)","scores":{"BT":"1597.9"},"extra":{"Matchups":"197"}}
+{"key":"Grok 4.7 (high)","model":"Grok 4.7 (high)","scores":{"BT":"1613.6"},"extra":{"Matchups":"124"}}
+{"key":"Kimi K2.5 Thinking","model":"Kimi K2.5 Thinking","scores":{"BT":"1445.4"},"extra":{"Matchups":"73"}}
+{"key":"Kimi K2.6","model":"Kimi K2.6","scores":{"BT":"1504.0"},"extra":{"Matchups":"131"}}
+{"key":"Kimi K3","model":"Kimi K3","scores":{"BT":"1691.2"},"extra":{"Matchups":"249"}}
+{"key":"Kimi K3.1 Pro (high)","model":"Kimi K3.1 Pro (high)","scores":{"BT":"1602.6"},"extra":{"Matchups":"159"}}
+{"key":"Llama 4 Maverick","model":"Llama 4 Maverick","scores":{"BT":"1021.2"},"extra":{"Matchups":"29"}}
+{"key":"MiniMax-M2.7","model":"MiniMax-M2.7","scores":{"BT":"1425.9"},"extra":{"Matchups":"89"}}
+{"key":"MiniMax-M3","model":"MiniMax-M3","scores":{"BT":"1496.0"},"extra":{"Matchups":"186"}}
+{"key":"Mistral Large 3","model":"Mistral Large 3","scores":{"BT":"1181.2"},"extra":{"Matchups":"57"}}
+{"key":"Mistral Large 4 (high)","model":"Mistral Large 4 (high)","scores":{"BT":"1448.1"},"extra":{"Matchups":"169"}}
+{"key":"Mistral Medium 3.5 (high)","model":"Mistral Medium 3.5 (high)","scores":{"BT":"1332.5"},"extra":{"Matchups":"152"}}
+{"key":"Muse Spark 1.1 (high)","model":"Muse Spark 1.1 (high)","scores":{"BT":"1630.8"},"extra":{"Matchups":"189"}}
+{"key":"Muse Spark 1.3 (high)","model":"Muse Spark 1.3 (high)","scores":{"BT":"1590.1"},"extra":{"Matchups":"212"}}
+{"key":"Muse Wonder 1.0 (high)","model":"Muse Wonder 1.0 (high)","scores":{"BT":"1647.1"},"extra":{"Matchups":"190"}}
+{"key":"Qwen 3.6 Max Preview","model":"Qwen 3.6 Max Preview","scores":{"BT":"1467.4"},"extra":{"Matchups":"84"}}
+{"key":"Qwen 3.7 Max","model":"Qwen 3.7 Max","scores":{"BT":"1426.9"},"extra":{"Matchups":"160"}}
+{"key":"Qwen 3.8 Max","model":"Qwen 3.8 Max","scores":{"BT":"1546.2"},"extra":{"Matchups":"193"}}
+{"key":"Qwen3.5-397B-A17B","model":"Qwen3.5-397B-A17B","scores":{"BT":"1382.2"},"extra":{"Matchups":"91"}}
+{"key":"Step 3.7 Flash (high)","model":"Step 3.7 Flash (high)","scores":{"BT":"1373.8"},"extra":{"Matchups":"190"}}
+{"key":"Tencent Hy3 Preview (high)","model":"Tencent Hy3 Preview (high)","scores":{"BT":"1379.4"},"extra":{"Matchups":"122"}}
+{"key":"Tencent Hy4 Preview (high)","model":"Tencent Hy4 Preview (high)","scores":{"BT":"1576.6"},"extra":{"Matchups":"222"}}
+{"key":"Xiaomi MiMo V2 Pro","model":"Xiaomi MiMo V2 Pro","scores":{"BT":"1382.3"},"extra":{"Matchups":"28"}}
+{"key":"Xiaomi MiMo V2.5 Pro","model":"Xiaomi MiMo V2.5 Pro","scores":{"BT":"1476.8"},"extra":{"Matchups":"187"}}
+{"key":"Xiaomi MiMo V2.6 Pro (thinking)","model":"Xiaomi MiMo V2.6 Pro (thinking)","scores":{"BT":"1600.3"},"extra":{"Matchups":"118"}}

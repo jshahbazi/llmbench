@@ -1,0 +1,16 @@
+[
+ {
+  "id": "Inverse-Rank Score",
+  "label": "Inverse-Rank Score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": true
+ },
+ {
+  "id": "Top-1 Accuracy",
+  "label": "Top-1 Accuracy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ }
+]

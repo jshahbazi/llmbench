@@ -1,0 +1,23 @@
+[
+ {
+  "id": "Confab %",
+  "label": "Confabulation rate",
+  "direction": "lower",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Non-Resp %",
+  "label": "Non-response rate",
+  "direction": "lower",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Weighted",
+  "label": "Weighted confabulation and non-response",
+  "direction": "lower",
+  "unit": "score",
+  "headline": true
+ }
+]

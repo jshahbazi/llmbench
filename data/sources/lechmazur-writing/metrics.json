@@ -1,0 +1,16 @@
+[
+ {
+  "id": "Comparison score",
+  "label": "Comparison score",
+  "direction": "higher",
+  "unit": "score",
+  "headline": true
+ },
+ {
+  "id": "Estimated win chance",
+  "label": "Estimated win chance",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ }
+]

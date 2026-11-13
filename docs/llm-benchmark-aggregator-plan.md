@@ -186,8 +186,9 @@ sources:
 | `duplicates` | no | `hold` (default) or `drop`. What to do when the source repeats a row with nothing to tell the entries apart. `drop` leaves those scores out and logs it. |
 | `round` | no | Decimals to keep for numeric scores. Only for computed values whose precision is noise (5.4). |
 | `run_by` | no | Who ran the evaluations (6.3) |
-| `license`, `attribution` | yes, unless blocked | Shown on the site and included in exports |
-| `terms` | yes | `allowed` or `blocked`. Only `allowed` sources are fetched. It is your record that you checked. |
+| `run_by_from` | no | Who ran each row, from a column: `{ column: Data Source, values: { TIGER-Lab: independent, Self-Reported: lab } }` |
+| `license`, `attribution` | yes, unless blocked | The data's licence as the source states it, or `none stated`. Shown on the site and on every download row. Non-commercial and unstated licences are labelled as such. |
+| `terms` | yes | `allowed` or `blocked`. Only `allowed` sources are fetched. It is your record that you checked. A source is blocked only when its terms forbid reuse or automated access; a missing or non-commercial licence is not a reason (decided 2026-11-13). |
 
 `npm run validate` checks the file against a schema. CI runs it on every pull request.
 
@@ -609,6 +610,31 @@ Added in Phase 4:
 - **Vectara hallucination leaderboard** (Apache-2.0): a Markdown table in the repository's README,
   read with no code through the new Markdown format. 111 models.
 
+Added in the second Phase 4 slice, after the licence decision in 10.3:
+
+- **SWE-bench** (CC BY-NC 4.0, plugin): five boards from one file. Runs where the SWE-bench team put
+  every model in the same minimal agent ("bash only") are separate columns from systems submitted by
+  their builders, so a model's score never silently becomes the best of any scaffold. 323 entries.
+- **LiveBench** (no licence stated, plugin): read from livebench.ai's own files, because the GitHub
+  copy stopped updating in mid-2026. All eleven 1.0 releases and the 2.0 releases, each release its
+  own columns. Category averages, the weighted 2.0 Overall and cost per task are computed the way the
+  site computes them, and were checked against its pages. 904 rows.
+- **Terminal-Bench** (Apache-2.0, plugin): versions 4.1, 2.1 and 2.0 from the leaderboard's open
+  JSON endpoint. Entries are agent and model systems; the agent is context. 217 entries.
+- **No code:** Lech Mazur's NYT Connections, writing, debate, Elimination Game, generalization,
+  sycophancy, Step Game and confabulations benchmarks (Markdown tables in each README), Kagi's LLM
+  benchmark (a Markdown table in its docs), LLM Chess (CSV, Apache-2.0) and MMLU-Pro (CSV on Hugging
+  Face, Apache-2.0, with `run_by_from` telling TIGER-Lab's runs from self-reported scores).
+- **CAIS AI Dashboard** (non-commercial use with credit, plugin): the Center for AI Safety's own runs
+  of Humanity's Last Exam and HLE-Diamond, TextQuests, MASK, EnigmaEval, the Remote Labor Index and
+  vision and safety benchmarks, read from the scores the page's scripts carry. Added to cover Scale's
+  benchmarks without Scale's site (10.3). 88 rows, 19 columns.
+
+Found and not yet added: EQ-Bench 3 and 4 and Creative Writing v3 (CSV inside the site's JavaScript;
+needs a small plugin), SimpleBench (a JavaScript literal), Vals.ai (per-benchmark JSON behind hashed
+URLs), MathArena (tables as HTML inside JSON). OpenCompass, HELM, LiveCodeBench, BigCodeBench and the
+Open LLM Leaderboard are stale or tiny.
+
 Checked and not added (2026-11-13):
 
 - **Terminal-Bench 4.0**: the results live in Harbor Hub (`hub.harborframework.com`), not in the
@@ -622,12 +648,34 @@ Checked and not added (2026-11-13):
 whatmodel already carries most of these at pinned revisions, so a direct entry is worth adding only
 where freshness or history matters.
 
-### 10.3 Live, but check the terms first
+### 10.3 Licences and terms (decided 2026-11-13)
 
-| Source | Location | Issue |
-| :-- | :-- | :-- |
-| SWE-bench (5 boards) | `SWE-bench/swe-bench.github.io`, `data/leaderboards.json`: one 4 MB file with `name`, `agent`, `date`, `resolved`, `reasoning_effort` and a stable `folder` key | The repository's licence is CC BY-NC 4.0. The non-commercial condition cannot be carried into the CC BY-SA compilation, so it is listed as blocked in `sources.yaml`. It would need the maintainers' permission, or a separately licensed part of the site. |
-| LiveBench | `LiveBench/livebench.github.io`, `public/table_<release>.csv` plus `categories_<release>.json` | No licence on the repository, so it is listed as blocked. Each release is a new question set, so each would be its own source entry, with a plugin: category averages are computed in the browser. |
+llmbench is non-commercial. A missing licence or a non-commercial licence is not a reason to leave a
+source out: such sources are fetched, labelled on their source page, on the data page and in every
+download (`source_license` on each score row, `reuse` in the sources table), and credited. The
+compilation stays CC BY-SA 4.0 for what we add (selection, matching, arrangement); each source's
+scores keep their own licence. A source stays out only when its terms forbid reuse or automated
+access:
+
+| Source | Why it is blocked |
+| :-- | :-- |
+| ARC Prize | Its terms forbid access "through automated or non-human means, whether through a bot, script or otherwise". |
+| Scale SEAL | Its terms forbid accessing the sites "in order to build a competitive product or service". Left out by the owner's decision. |
+| Artificial Analysis | whatmodel's ledger records its terms as personal, non-commercial use only and no building a similar service. |
+
+Scale's benchmarks are still covered, from other places (checked against its leaderboard list,
+2026-11-13):
+
+| Scale benchmark | Where llmbench gets it |
+| :-- | :-- |
+| Humanity's Last Exam, HLE-Diamond | CAIS dashboard (CAIS's own runs; CAIS co-created HLE) and model makers' reports via whatmodel |
+| Remote Labor Index | CAIS dashboard (CAIS co-runs it) |
+| EnigmaEval, MASK | CAIS dashboard |
+| SWE-bench Pro, MCP Atlas, MultiChallenge, SWE Atlas | Model makers' reports and papers via whatmodel |
+| Humanity's Sixth Sense, DistressBench, DrugDiscoveryBench, HiL-Bench, AudioMultiChallenge, Professional Reasoning Bench, Fortress, and the retired VISTA, TutorBench, VisualToolBench, PropensityBench, MultiNRC, SciPredict | Not found anywhere else yet |
+
+The CAIS dashboard's SWE-bench Pro and ARC-AGI-2 columns are left out: the dashboard no longer
+shows them and does not say where they came from.
 
 ### 10.4 Not usable
 
@@ -636,7 +684,6 @@ where freshness or history matters.
 | Open LLM Leaderboard v2, EvalPlus, BigCodeBench | Frozen since 2025-03, 2024-12 and 2025-04. Import once as archives if wanted; never polled. |
 | LiveCodeBench | Site repo untouched since 2025-08; no data file found in its `public/` folder |
 | arena.ai website | whatmodel's ledger records its terms as forbidding scrapers, and it serves a bot challenge. Use the dataset. |
-| Artificial Analysis | whatmodel's ledger records its terms as personal, non-commercial use only and no building a similar service. Read them yourself before deciding. |
 
 "Accept any site" has one hard edge: a site that forbids reuse, or that only answers a real logged-in
 browser, stays out. Tell me which other sites you rate and I will check each one's data location and
@@ -660,8 +707,9 @@ terms the same way.
   `LLMBENCH_USER_AGENT` names the deployment (for example `llmbench (+https://llmbench.site)`).
 - **Run cache.** When each source was last checked, and HTTP validators, live in `.cache/last-run.json`.
   The workflow carries it between runs with `actions/cache`; if it is lost, every source is simply due.
-- **Licensing.** Each source's licence and attribution are shown on its page and shipped in the exports.
-  The combined dataset is CC BY-SA 4.0 because it builds on whatmodel's compilation.
+- **Licensing.** Each source's licence and attribution are shown on its page and carried on every
+  download row. The compilation is CC BY-SA 4.0 because it builds on whatmodel's; non-commercial and
+  unstated source licences are labelled (10.3).
 
 ---
 
@@ -708,9 +756,19 @@ the Parquet file is 0.9 MB, the CSV and SQLite files about 12 MB each. SQLite ne
 and LiveBench (no licence) recorded as blocked; Markdown pipe tables as a source format;
 `npm run add-source` without the LLM step; `scrape --dry-run`; chart mode; matching learned `4p7` as
 4.7, year-month snapshots (`-2025-07`), cloud version tags (`-v1:0`), and curation lines that cover
-`org/name`. Still to do: `render: browser` (no source needs it yet), history backfill (the git
-sources already carry dates, so it adds little so far), the LLM step in `add-source`, the SQL console,
-and the sources in 10.2 and 10.3 that need a terms check.
+`org/name`.
+*Second slice, 2026-11-13:* the licence rule in 10.3; SWE-bench, LiveBench (1.0 and 2.0) and
+Terminal-Bench as plugins; eleven more sources with no code (10.2); `source_license` on every
+download row; `run_by_from`; HTML entities and repeated headers in Markdown tables. Matching learned
+that Claude names come in both orders ("Claude 4 Sonnet", "Claude Sonnet 4"), API-style run settings
+(`-thinking-64k`, `-high-effort`, "Max Effort", `-nothinking`), Together's `-Instruct-Turbo` as FP8,
+`amazon.nova-*` maker prefixes, and that a model named "… Thinking" is its own model (a name with
+"thinking" goes to it only when the dates agree). 21 sources, about 75,000 scores.
+*Third slice, 2026-11-13:* Scale left out by decision; its benchmarks found elsewhere (10.3), adding
+the CAIS AI Dashboard as a plugin. Unlisted names now join under a fuller label their source gives
+("Fable 5.2" shown as "Claude Fable 5.2"). 22 sources, about 78,000 scores.
+Still to do: the SQL console, `render: browser` (no source needs it yet), history backfill, the LLM
+step in `add-source`, and the sources found but not yet added (10.2).
 
 ---
 

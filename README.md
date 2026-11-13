@@ -5,7 +5,7 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0–3 are built and Phase 4 is under way: seven sources, change history, checks on every update,
+Phases 0–3 are built and Phase 4 is under way: 22 sources, change history, checks on every update,
 a scheduled GitHub workflow that commits new data and deploys the site, the explorer with a chart
 mode, a page for every model, benchmark and source, model-name matching you can correct in one line,
 downloads, and a command that drafts a new source's entry.
@@ -44,7 +44,9 @@ npm run add-source -- github:owner/repo/README.md --table 0
 ```
 
 It reads the file, lists its columns, and prints an entry to check and paste into `sources.yaml`,
-with `terms: blocked` until you have read the source's terms. A finished entry looks like this:
+with `terms: blocked` until you have read the source's terms. A source is blocked only when its
+terms forbid reuse or automated access; a missing or non-commercial licence is not a reason, and is
+labelled on the site and in every download instead. A finished entry looks like this:
 
 ```yaml
   - id: my-board
@@ -52,7 +54,7 @@ with `terms: blocked` until you have read the source's terms. A finished entry l
     homepage: https://example.org/leaderboard
     fetch: https://example.org/leaderboard.csv     # or github:owner/repo/path, or hf:owner/dataset
     model: Model                                   # the column with the model name
-    license: MIT
+    license: MIT                                   # as the source states it, or "none stated"
     terms: allowed                                 # only after you have read the site's terms
 ```
 
@@ -135,5 +137,7 @@ workflow from the Actions tab with `accept` set to the source id.
 
 ## Licence
 
-Code: MIT (`LICENSE`). Data: CC BY-SA 4.0, with every source's own licence and attribution kept; see
+Code: MIT (`LICENSE`). Data: the compilation is CC BY-SA 4.0, and every source's scores keep that
+source's own licence and attribution. Some sources are non-commercial (CC BY-NC) and some state no
+licence; both are labelled, and every download row carries its source's licence. See
 `DATA-LICENSE.md`.

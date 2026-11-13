@@ -49,7 +49,7 @@ export function profile(records: readonly Rec[]): ColumnProfile[] {
 
 const MODEL_NAMES = /^(model|model[ _-]?name|model[ _-]?id|name|llm|system|agent|submission)$/i;
 const RANK = /^(#|rank|ranking|position|place|no\.?|index|idx|id|unnamed: ?0)$/i;
-const NOT_A_SCORE = /param|size|tokens?\b|context|window|year|votes?\b|samples?|count|\bn\b|num_|length|words|version|release/i;
+const NOT_A_SCORE = /^#|param|size|tokens?\b|context|window|year|votes?\b|samples?|count|\bn\b|num_|length|words|version|release|matchups|\bgames\b|\bcases\b|coverage/i;
 const LOWER = /cost|price|\$|latency|time|seconds|\(s\)|duration|error|loss|hallucinat|perplexity|ttft|sensitivity|deviation/i;
 const SETTING = /(^|[^a-z])(effort|reasoning|mode|format|settings?|scaffold|agent|harness|quant|quantization|precision|temperature|variant|config)([^a-z]|$)/i;
 const DATE_NAME = /date|time|submitted|updated|evaluated|created/i;

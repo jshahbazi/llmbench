@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { draftEntry } from '../scripts/lib/draft.ts';
+import { extract as caisExtract, modelsFromScript, rliFromScript, runSetting } from '../scripts/sources/cais.ts';
 import { markdownRecords, markdownTables, parseRecords } from '../scripts/lib/parse.ts';
 import { metricList, submissionRow } from '../scripts/sources/tau2.ts';
+import { boardsFrom, entryRow as tbRow } from '../scripts/sources/terminalbench.ts';
 import { logTicks, niceTicks, yearTicks } from '../site/src/chart.ts';
 import { DEFAULTS, parseState, serializeState } from '../site/src/state.ts';
 
@@ -100,4 +102,67 @@ test('chart axes round-trip through the URL and are left out of other views', ()
   assert.deepEqual(parseState(serializeState(s)), s);
   assert.equal(serializeState({ ...DEFAULTS, x: 'params' }), '');
   assert.equal(parseState('?view=chart').x, 'released');
+});
+
+test('Markdown cells decode HTML entities', () => {
+  const recs = markdownRecords('| Model | &mu; | &sigma; &amp; more | &#956; |\n|---|---|---|---|\n| A | 1 | 2 | 3 |\n', 0, 't');
+  assert.deepEqual(Object.keys(recs[0]!), ['Model', 'μ', 'σ & more', 'μ (2)']);
+});
+
+test('Terminal-Bench: both row shapes, agent as context, Claude display names', () => {
+  const b = { package: 'p', name: 'n', version: '4.1' };
+  const v41 = tbRow(b, {
+    id: 'u1',
+    metadata: { date: '2026-09-22', agent_display: { label: 'Claude Code' }, model_display: { label: 'Opus 5.5', url: 'https://www.anthropic.com/claude-opus-5-5' }, model_org: { label: 'Anthropic' }, reasoning_effort: 'max' },
+    metrics: { accuracy: 65.76, accuracy_ci95_half_width: 3.11, total_cost_usd: 4718.65, n_trials: 330 },
+  }).row!;
+  assert.deepEqual([v41.model, v41.model_label, v41.context], ['Opus 5.5', 'Claude Opus 5.5', { agent: 'Claude Code', reasoning_effort: 'max effort' }]);
+  assert.deepEqual(v41.scores, { '4.1/accuracy': 65.76, '4.1/cost_per_trial': 14.2989 });
+  assert.deepEqual(v41.ci, { '4.1/accuracy': [62.65, 68.87] });
+  const b2 = { ...b, version: '2.0' };
+  const one = tbRow(b2, { id: 'u2', metadata: { agent_display: { label: 'Terminus 2' }, model_display: 'GPT-5.5', model_names: ['gpt-5.5'] }, metrics: { accuracy: 60 } }).row!;
+  assert.deepEqual([one.model, one.model_label], ['gpt-5.5', 'GPT-5.5']);
+  const many = tbRow(b2, { id: 'u3', metadata: { agent_display: { label: 'Warp' }, model_display: 'Multiple', model_names: ['gpt-5', 'claude-haiku-4-5'] }, metrics: { accuracy: 50 } }).row!;
+  assert.equal(many.model, 'Warp + gpt-5 + claude-haiku-4-5');
+  assert.match(tbRow(b2, { id: 'u4', metadata: {}, metrics: {} }).problem!, /no accuracy/);
+  assert.ok(boardsFrom({ boards: [{ package: 'p' }] }).problem);
+});
+
+test('CAIS dashboard: model list and RLI list from scripts, settings, skipped and unknown scores', () => {
+  const blob = JSON.stringify([
+    { name: 'Opus 5.5', id: 'claude-opus-5-5-high', provider: 'anthropic', scores: { hle: 55.36, masks: 89.4, swebench_pro: null, arc_agi_2: 20, new_bench: 3 }, modelCardUrl: 'https://www.anthropic.com/claude-opus-5-5', scoreNotes: { hle: 'Refuses <b>~1%</b>.<br>Falls back.' } },
+    { name: "Kimi K2.6", id: 'kimi-k2.6-64k', provider: 'moonshot', scores: { hle: 35.48, pct: null } },
+    { name: 'Empty', id: 'empty', provider: 'x', scores: { hle: null } },
+  ]).replace(/'/g, "\\'");
+  const js = `x,26974,e=>{e.v(JSON.parse('${blob}'))},63754,e=>{e.v([{name:"Fable 5.2",provider:"anthropic",rate:41.25},{name:"Gemini 2.5 Pro",provider:"google",rate:.83}])}`;
+  const models = modelsFromScript(js)!;
+  assert.equal(models.length, 3);
+  assert.deepEqual(rliFromScript(js), [
+    { name: 'Fable 5.2', provider: 'anthropic', rate: 41.25 },
+    { name: 'Gemini 2.5 Pro', provider: 'google', rate: 0.83 },
+  ]);
+  assert.equal(modelsFromScript('JSON.parse(\'[{"a":1}]\')'), undefined);
+
+  assert.deepEqual(runSetting('sonnet-4-6-adaptive-64k'), { reasoning: 'adaptive thinking, 64k budget' });
+  assert.deepEqual(runSetting('haiku-4-5-thinking-32k'), { reasoning: 'thinking, 32k budget' });
+  assert.deepEqual(runSetting('kimi-k2.6-64k'), { reasoning: '64k thinking budget' });
+  assert.deepEqual(runSetting('gpt-6-astra-high'), { reasoning_effort: 'high effort' });
+  assert.deepEqual(runSetting('o1'), {});
+
+  const out = caisExtract(models, rliFromScript(js)!);
+  assert.equal(out.rows.length, 4); // the model with no scores is left out
+  const opus = out.rows.find((r) => r.key === 'claude-opus-5-5-high')!;
+  assert.deepEqual([opus.model, opus.model_label, opus.context], ['claude-opus-5-5-high', 'Claude Opus 5.5', { reasoning_effort: 'high effort' }]);
+  assert.deepEqual(opus.scores, { hle: 55.36, masks: 89.4 }); // SWE-bench Pro and ARC-AGI-2 are skipped
+  assert.equal(opus.extra!['notes'], "Humanity's Last Exam (CAIS run): Refuses ~1%. Falls back.");
+  const fable = out.rows.find((r) => r.key === 'rli/Fable 5.2')!;
+  assert.deepEqual([fable.model, fable.model_label, fable.scores], ['Fable 5.2', 'Claude Fable 5.2', { rli: 41.25 }]);
+  assert.deepEqual(out.metrics.map((m) => [m.id, m.direction, m.unit]), [
+    ['hle', 'higher', 'percent'],
+    ['masks', 'higher', 'percent'],
+    ['rli', 'higher', 'percent'],
+  ]);
+  assert.deepEqual(out.metrics.filter((m) => m.headline).map((m) => m.id), ['hle', 'rli']);
+  assert.deepEqual(out.problems, []);
+  assert.match(out.warnings![0]!, /new_bench/);
 });

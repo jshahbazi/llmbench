@@ -66,23 +66,29 @@ for (const s of sources) {
   perSource.push(`${s.id} ${hit}/${names.size}`);
 }
 
-// Names with no catalogue model: one model per core name and snapshot, across sources.
+// Names with no catalogue model: one model per core name and snapshot, across sources. A name that
+// says "thinking" keeps it, as catalogue names do ("Kimi K2 Thinking" is a model of its own).
+const coreOf = (p: ReturnType<typeof parseName>): string =>
+  p.qualifiers.some((q) => q.kind === 'reasoning' && q.value === 'thinking') ? `${p.core} Thinking` : p.core;
 const groupName = (raw: string): string => {
   const p = parseName(raw);
   if (p.pair) return raw;
-  return p.snapshot ? `${p.core} (${p.snapshot.text})` : p.core;
+  return p.snapshot ? `${coreOf(p)} (${p.snapshot.text})` : coreOf(p);
 };
+// A short name whose source gives a fuller label ("Fable 5.2", shown as "Claude Fable 5.2") is
+// grouped under the label, so it joins the sources that write the maker's name.
+const nameOf = (n: NameInfo): string => (n.label?.toLowerCase().endsWith(` ${n.raw.toLowerCase()}`) ? n.label : n.raw);
 const groups = new Map<string, NameInfo[]>();
 for (const n of unmatched) {
-  const p = parseName(n.raw);
+  const p = parseName(nameOf(n));
   const d = p.snapshot;
-  const k = p.pair ? normalize(n.raw) : `${normalize(p.core)}@${d ? `${d.y ?? ''}-${d.m ?? ''}-${d.d ?? ''}-${d.four ?? ''}` : ''}`;
+  const k = p.pair ? normalize(nameOf(n)) : `${normalize(coreOf(p))}@${d ? `${d.y ?? ''}-${d.m ?? ''}-${d.d ?? ''}-${d.four ?? ''}` : ''}`;
   groups.set(k, [...(groups.get(k) ?? []), n]);
 }
 const display = (list: NameInfo[]): string => {
   const weight = new Map<string, number>();
   for (const n of list) {
-    const core = groupName(n.raw);
+    const core = groupName(nameOf(n));
     weight.set(core, (weight.get(core) ?? 0) + n.scores);
   }
   const looksNamed = (s: string) => Number(/[A-Z]/.test(s)) + Number(/ /.test(s));
