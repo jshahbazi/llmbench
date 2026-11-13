@@ -5,7 +5,8 @@
  *   data/resolved/unlisted.csv   models not in the catalogue, each gathering the names that agree
  *   data/reports/unmatched.csv   names not in the catalogue, most-used first, with near misses
  *   data/reports/catalog-left-out.csv   models a catalogue feed has that the merge left out, because
- *                                one already in the catalogue shares their core name (lib/catalog.ts)
+ *                                one already in the catalogue shares their core name (lib/catalog.ts),
+ *                                and that curation/models.yaml has not taken
  *
  * A name that matches no catalogue model still gets a model: names from any source whose core name
  * agrees exactly ("Gemini 3 Pro", "gemini-3-pro", "Gemini 3 Pro (Grounding)") share one, so they
@@ -14,7 +15,7 @@
  */
 import { join } from 'node:path';
 import { loadSources } from './lib/config.ts';
-import { loadAliases, loadCatalog, mergedFeeds } from './lib/curation.ts';
+import { curatedCatalog, loadAliases } from './lib/curation.ts';
 import { Matcher, slugifyModel, toCsv } from './lib/match.ts';
 import { formatQualifiers, normalize, parseName } from './lib/names.ts';
 import { DATA_DIR, readRows, writeText } from './lib/store.ts';
@@ -34,8 +35,8 @@ interface NameInfo {
 }
 
 const sources = await loadSources();
-const merged = await mergedFeeds(sources);
-const catalog = await loadCatalog({ sources });
+const merged = await curatedCatalog({ sources });
+const { catalog } = merged;
 const catalogIds = new Set(catalog.map((m) => m.id));
 const matcher = new Matcher(catalog, await loadAliases());
 

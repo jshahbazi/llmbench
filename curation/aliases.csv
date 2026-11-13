@@ -80,3 +80,4 @@ matharena,Qwen3.6-35B,qwen3-6-35b-a3b,
 matharena,Claude-Opus-4.0 (Think),claude-opus-4-20250514,Claude Opus 4 with extended thinking
 *,DeepSeek-V3-03-24,deepseek-v3-0324,
 mmlu-pro,GLM-4-9B,-,"The June 2024 GLM-4-9B, not the later GLM-4-9B-0414"
+*,GPT-4o Mar 2025,chatgpt-4o-latest-20250326,"The March 2025 GPT-4o update, served as chatgpt-4o-latest"

@@ -99,7 +99,8 @@ database, which add models released since, then Hugging Face, which only fills i
 and licences for open-weights models. The first feed to describe a model wins; later feeds fill only
 what it left empty. A later feed's model is added only when nothing in the catalogue shares its core
 name, so a new feed never moves a name that already matched; the ones left out are listed in
-`data/reports/catalog-left-out.csv` (`scripts/lib/catalog.ts` has the rules).
+`data/reports/catalog-left-out.csv` (`scripts/lib/catalog.ts` has the rules). To take one that is a
+release of its own, add a line with just its id to `curation/models.yaml`; the feed's entry is used.
 
 ## Fixing a model match
 
