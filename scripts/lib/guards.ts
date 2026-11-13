@@ -52,3 +52,10 @@ export function checkGuards(g: GuardInput): string[] {
   }
   return reasons;
 }
+
+/** Guards for a catalogue feed's models (lib/catalog.ts), like the row guards above. */
+export function checkCatalog(prev: number, next: number, min: number): string[] {
+  if (next < min) return [`model drop: ${next} catalogue models, fewer than the minimum of ${min}`];
+  if (prev >= 10 && next < prev / 2) return [`model drop: ${next} catalogue models, under half of the previous ${prev}`];
+  return [];
+}

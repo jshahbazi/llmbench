@@ -21,6 +21,8 @@ export interface SiteSource {
   outcome?: string;
   reasons?: string[];
   warnings?: string[];
+  /** For a catalogue feed: its models, and what the merge did with them (scripts/lib/catalog.ts). */
+  catalog?: { models: number; added: number; filled: number; left_out: number; fill_only?: boolean };
 }
 
 export interface SiteColumn {
@@ -51,6 +53,8 @@ export interface SiteModel {
   params_b?: number;
   active_b?: number;
   model_repo?: string;
+  /** The catalogue feed (a source id) or "curation" that the model's entry came from. */
+  origin?: string;
   /**
    * Not in the catalogue: names from the sources that agree with each other but match no catalogue
    * model. No release date, size or licence is known.

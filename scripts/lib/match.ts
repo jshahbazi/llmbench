@@ -73,39 +73,52 @@ export class Matcher {
 
   constructor(catalog: readonly CatalogModel[], aliases: Aliases = new Map()) {
     this.aliases = aliases;
-    for (const m of catalog) {
-      this.ids.add(m.id);
-      add(this.exactKeys, normalize(m.id), m.id);
-      add(this.exactKeys, normalize(m.name), m.id);
-      const repo = hfRepo(m.model_repo);
-      const repoName = repo?.split('/')[1];
-      if (repo) add(this.repos, repo, m.id);
-      if (repoName) add(this.repoKeys, normalize(repoName), m.id);
+    for (const m of catalog) this.add(m);
+  }
 
-      const provider = normalize(m.provider ?? '');
-      const parses = [m.name, m.id, ...(repoName ? [repoName] : [])].map(parseName);
-      const snapshot = parses.find((p) => p.snapshot)?.snapshot;
-      const stage = [...new Set(parses.flatMap((p) => p.stage))];
-      this.own.set(m.id, { ...(snapshot && { snapshot }), stage });
-      for (const p of parses) {
-        // "Kimi K2 Thinking" and "qwen3-235b-a22b-thinking-2507" are models of their own, not
-        // thinking-mode runs of Kimi K2 or Qwen3 235B; they stay out of those families.
-        if (p.qualifiers.some((q) => q.kind === 'reasoning')) continue;
-        const key = normalize(p.core);
-        if (!key) continue;
-        let fam = this.families.get(key);
-        if (!fam) this.families.set(key, (fam = new Map()));
-        fam.set(m.id, { id: m.id, ...(snapshot && { snapshot }), stage, provider });
-      }
-      if (m.provider) {
-        const first = normalize(m.provider.split(/[\s(/,&]+/)[0] ?? '');
-        for (const k of new Set([provider, first])) if (k.length >= 3) add(this.makers, k, provider);
-      }
+  /** Adds a model to the lookups (the catalogue merge adds a feed's new models one at a time). */
+  add(m: CatalogModel): void {
+    this.ids.add(m.id);
+    add(this.exactKeys, normalize(m.id), m.id);
+    add(this.exactKeys, normalize(m.name), m.id);
+    const repo = hfRepo(m.model_repo);
+    const repoName = repo?.split('/')[1];
+    if (repo) add(this.repos, repo, m.id);
+    if (repoName) add(this.repoKeys, normalize(repoName), m.id);
+
+    const provider = normalize(m.provider ?? '');
+    const parses = [m.name, m.id, ...(repoName ? [repoName] : [])].map(parseName);
+    const snapshot = parses.find((p) => p.snapshot)?.snapshot;
+    const stage = [...new Set(parses.flatMap((p) => p.stage))];
+    this.own.set(m.id, { ...(snapshot && { snapshot }), stage });
+    for (const p of parses) {
+      // "Kimi K2 Thinking" and "qwen3-235b-a22b-thinking-2507" are models of their own, not
+      // thinking-mode runs of Kimi K2 or Qwen3 235B; they stay out of those families.
+      if (p.qualifiers.some((q) => q.kind === 'reasoning')) continue;
+      const key = normalize(p.core);
+      if (!key) continue;
+      let fam = this.families.get(key);
+      if (!fam) this.families.set(key, (fam = new Map()));
+      fam.set(m.id, { id: m.id, ...(snapshot && { snapshot }), stage, provider });
+    }
+    if (m.provider) {
+      const first = normalize(m.provider.split(/[\s(/,&]+/)[0] ?? '');
+      for (const k of new Set([provider, first])) if (k.length >= 3) add(this.makers, k, provider);
     }
   }
 
   has(id: string): boolean {
     return this.ids.has(id);
+  }
+
+  /**
+   * True when a catalogue model shares this name's core name, or its whole name, even if no single
+   * one is a match: "GPT-4o" where the catalogue has two GPT-4o snapshots.
+   */
+  knows(raw: string): boolean {
+    const p = parseName(raw);
+    const keys = [normalize(raw), normalize(p.core), ...(p.org ? [normalize(raw.slice(p.org.length + 1))] : [])];
+    return keys.some((k) => k && (this.exactKeys.has(k) || this.repoKeys.has(k) || this.families.has(k)));
   }
 
   /** A curation line for this name, or for the name without its organisation ("mistralai/..."). */

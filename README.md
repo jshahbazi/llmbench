@@ -5,10 +5,11 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0–3 are built and Phase 4 is under way: 29 sources, change history, checks on every update,
-a scheduled GitHub workflow that commits new data and deploys the site, the explorer with a chart
-mode, a page for every model, benchmark and source, model-name matching you can correct in one line,
-downloads, an in-browser SQL console, and a command that drafts a new source's entry.
+Phases 0–3 are built and Phase 4 is under way: 29 benchmark sources, a model catalogue merged from
+whatmodel.sh, models.dev, Epoch AI's models database and Hugging Face, change history, checks on
+every update, a scheduled GitHub workflow that commits new data and deploys the site, the explorer
+with a chart mode, a page for every model, benchmark and source, model-name matching you can correct
+in one line, downloads, an in-browser SQL console, and a command that drafts a new source's entry.
 
 ## The site
 
@@ -90,6 +91,16 @@ npm run preview   # serve site/dist at http://localhost:4321
 
 `npm test` runs the tests and `npm run typecheck` type-checks.
 
+## The model catalogue
+
+Each model's maker, release date, size, licence and context window come from catalogue feeds, merged
+in the order `sources.yaml` lists them: whatmodel.sh first, then models.dev and Epoch AI's models
+database, which add models released since, then Hugging Face, which only fills in parameter counts
+and licences for open-weights models. The first feed to describe a model wins; later feeds fill only
+what it left empty. A later feed's model is added only when nothing in the catalogue shares its core
+name, so a new feed never moves a name that already matched; the ones left out are listed in
+`data/reports/catalog-left-out.csv` (`scripts/lib/catalog.ts` has the rules).
+
 ## Fixing a model match
 
 Sources name models differently ("o1-2024-12-17_high", "o1 (high)"). The matcher sets aside
@@ -132,10 +143,11 @@ workflow from the Actions tab with `accept` set to the source id.
 | `curation/aliases.csv` | `source,raw_name,model_id` lines that fix model matching (`*` for any source, `-` to keep a name unmatched) | you |
 | `curation/models.yaml` | Models to add to the catalogue, or fields to correct | you |
 | `data/sources/<id>/` | Rows exactly as published, metrics, state, change history | the workflow |
-| `data/catalog/models.jsonl` | Canonical models, seeded from whatmodel.sh | the workflow |
+| `data/catalog/<id>.jsonl` | Each catalogue feed's models (whatmodel.sh, models.dev, Epoch AI, Hugging Face), merged in `sources.yaml` order | the workflow |
 | `data/resolved/aliases.csv` | How every model name was matched, and the qualifiers set aside | the workflow |
 | `data/resolved/unlisted.csv` | Models not in the catalogue, each gathering the names that agree | the workflow |
 | `data/reports/unmatched.csv` | Names not in the catalogue, most-used first, with near misses | the workflow |
+| `data/reports/catalog-left-out.csv` | Models a catalogue feed has that the merge left out, to add by hand where they are new | the workflow |
 | `scripts/` | Scraper, matching, source plugins | code |
 | `scripts/build.ts`, `scripts/site/` | Builds every page and data file into `site/dist` | code |
 | `site/src/` | The explorer (TypeScript, turned into browser modules at build time) | code |

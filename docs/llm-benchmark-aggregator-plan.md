@@ -20,11 +20,12 @@ standard Actions runners and Pages are free for public repositories, and `jshahb
 public. The site is served at **llmbench.site** (registered at Cloudflare; DNS-only A, AAAA and
 `www` CNAME records point at GitHub Pages, which issues the HTTPS certificate).
 
-**Status (2026-11-13):** Phases 0 to 3 are built and Phase 4 is under way — seven sources,
-field-mapping extractor, change history, guards, issue reporting, the update workflow, the explorer
-with a chart mode, a page for every model, benchmark column and source, name matching with curation
-files, CSV, Parquet and SQLite downloads, and `npm run add-source`. Section 12 lists what was learned
-in each.
+**Status (2026-11-13):** Phases 0 to 3 are built and Phase 4 is under way — 29 benchmark sources,
+a model catalogue merged from four feeds, field-mapping extractor, change history, guards, issue
+reporting, the update workflow, the explorer with a chart mode, a page for every model, benchmark
+column and source, name matching with curation files, CSV, Parquet and SQLite downloads, an
+in-browser SQL console, and `npm run add-source` (with `--ai`). Section 12 lists what was learned in
+each.
 
 ### 1.1 Goals
 
@@ -184,6 +185,7 @@ sources:
 | `unit`, `units` | no | `percent`, `fraction`, `elo` or a free-form unit, for all metrics or per metric. Default: `percent` when every value ends in `%`, else `score`. |
 | `headline` | no | Metrics shown in the default "most covered" column choice; the rest (sub-scores) need "All". Default: all. |
 | `every`, `rolling`, `min_rows` | no | Check interval; rating-style series (5.4); minimum rows before a run is trusted |
+| `catalog`, `min_models` | no | For a catalogue feed (a plugin that returns models, 6.2): `catalog: fill` when it only fills fields and never adds models; the fewest models before a run is trusted |
 | `duplicates` | no | `hold` (default) or `drop`. What to do when the source repeats a row with nothing to tell the entries apart. `drop` leaves those scores out and logs it. |
 | `round` | no | Decimals to keep for numeric scores. Only for computed values whose precision is noise (5.4). |
 | `run_by` | no | Who ran the evaluations (6.3) |
@@ -230,10 +232,11 @@ llmbench/
 │   │   ├── history.jsonl         # append-only log of every change
 │   │   ├── state.json            # upstream revision, etag, hash, row count, status
 │   │   └── raw.*                 # raw payload, only when small and not pinned upstream
-│   ├── catalog/models.jsonl      # canonical models, seeded from whatmodel
+│   ├── catalog/<id>.jsonl        # each catalogue feed's models, merged in sources.yaml order
 │   ├── resolved/aliases.csv      # every name: its model, how it matched, the qualifiers set aside
 │   ├── resolved/unlisted.csv     # models not in the catalogue, each gathering agreeing names
-│   └── reports/unmatched.csv     # names not in the catalogue, most-used first, with near misses
+│   ├── reports/unmatched.csv     # names not in the catalogue, most-used first, with near misses
+│   └── reports/catalog-left-out.csv  # feed models the merge left out (a core name already there)
 ├── scripts/
 │   ├── scrape.ts                 # fetch → extract → guard → diff
 │   ├── resolve.ts                # model matching and reports
@@ -343,6 +346,20 @@ Rows from different sources line up only when their model names are matched to o
 - **Catalogue.** Seeded from whatmodel's `models.json`: 2,310 models, 1,230 of them LLMs (890 of those
   with a Hugging Face repo link, 917 with parameter counts). `curation/models.yaml` adds or corrects
   entries.
+- **Catalogue feeds** (`scripts/lib/catalog.ts`, added in Phase 4). Sources whose plugin returns
+  models write them to `data/catalog/<id>.jsonl`, and the catalogue is their merge, in `sources.yaml`
+  order: whatmodel.sh, then models.dev (MIT, about 550 text models, updated most days, release dates
+  to the day) and Epoch AI's models database (CC BY 4.0, about 1,600 released language models with
+  developers and parameter counts), then the Hugging Face Hub (`catalog: fill`: parameter counts from
+  safetensors headers and licence tags, for catalogue models that link to a repository and lack them;
+  each repository is asked about once). The first feed to describe a model wins; a later feed fills
+  only empty fields of a model it names exactly (id, name or repository, by the matcher's rules). A
+  later feed's model whose core name is already there — a snapshot, a preview, a maker prefix, or the
+  same model in another run mode ("Grok 4 Fast Non-Reasoning") — is left out and listed in
+  `data/reports/catalog-left-out.csv`, because as a model of its own it would take names that already
+  match. Adding the feeds moved no existing match (checked name by name) and brought 123 names that
+  were outside the catalogue into it, among them Claude Fable 5.2, GPT-5.1 Codex Max and Inkling 2
+  Small, which until then had no maker, date or size.
 - **Matching**, in order (`scripts/lib/match.ts`): a line in `curation/aliases.csv`; a Hugging Face
   link on the row; an exact match on the normalised name against catalogue ids, names and repo names;
   the same after setting aside qualifiers; the same after a leading maker name that agrees with the
@@ -661,6 +678,10 @@ Checked and not added (2026-11-13):
   carries its results.
 - **Hugging Face eval results** (`.eval_results/*.yaml` in model repos): still to look at.
 
+Added in the sixth slice, as catalogue feeds rather than score sources (6.2): **models.dev** (MIT),
+**Epoch AI's models database** (CC BY 4.0) and the **Hugging Face Hub** model API. OpenRouter's and
+Respan's model lists were checked and are blocked by their terms (10.3).
+
 whatmodel already carries most of these at pinned revisions, so a direct entry is worth adding only
 where freshness or history matters.
 
@@ -678,6 +699,8 @@ access:
 | ARC Prize | Its terms forbid access "through automated or non-human means, whether through a bot, script or otherwise". |
 | Scale SEAL | Its terms forbid accessing the sites "in order to build a competitive product or service". Left out by the owner's decision. |
 | Artificial Analysis | whatmodel's ledger records its terms as personal, non-commercial use only and no building a similar service. |
+| OpenRouter | Its terms (section 7) forbid using "scripts, robots or any other means" "to scrape or copy any information on the Site or the Services". Its model list would only add what models.dev gives. Blocked by the owner's decision (2026-11-13). |
+| Respan (formerly Keywords AI) | Its terms forbid access "through automated or non-human means" and systematically retrieving data to compile a database. Its model pages repeat scores from Epoch AI, LiveBench, Vals AI, SimpleBench, Arena and model makers, which llmbench reads at the source. |
 
 Scale's benchmarks are still covered, from other places (checked against its leaderboard list,
 2026-11-13):
@@ -789,6 +812,14 @@ running it, and HTML tables) and three mapping options (`model_match`, `exclude`
 Matching learned OpenRouter's `:free`-style suffixes. 29 sources, about 111,000 scores.
 *Fifth slice, 2026-11-13:* `npm run add-source -- <location> --ai`, Claude's draft checked on every
 record (3.2).
+*Sixth slice, 2026-11-13:* the catalogue became a merge of feeds (6.2), because whatmodel alone had
+not updated since 2026-11-03 and the newest models (Claude Fable 5.2 in eight sources) showed as "not
+in the catalogue", with no maker, date or size, so the release-date filter and chart left them out.
+models.dev and Epoch's models database add 168 and 1,088 models and fill fields on 73; Hugging Face
+fills parameter counts or licences on 41. The merge leaves out any model whose core name is already
+in the catalogue; the first try did not, and three Grok 4 Fast runs moved to models.dev's
+"Grok 4 Fast Reasoning" entries until run-mode words were stripped before the check. OpenRouter and
+Respan are blocked by their terms.
 Still to do: `render: browser` (no source needs it yet) and history backfill.
 
 ---

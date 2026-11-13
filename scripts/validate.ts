@@ -6,7 +6,7 @@ try {
   const sources = await loadSources();
   const allowed = sources.filter((s) => s.terms === 'allowed').length;
   console.log(`sources.yaml OK: ${sources.length} sources (${allowed} allowed, ${sources.length - allowed} blocked)`);
-  const problems = await checkCuration(sources.map((s) => s.id));
+  const problems = await checkCuration(sources);
   if (problems.length) {
     for (const p of problems) console.error(p);
     process.exitCode = 1;

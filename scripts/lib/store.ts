@@ -8,7 +8,8 @@ export const CACHE_DIR = '.cache';
 export const RUN_CACHE = join(CACHE_DIR, 'last-run.json');
 
 export const sourceDir = (id: string): string => join(DATA_DIR, 'sources', id);
-export const CATALOG_PATH = join(DATA_DIR, 'catalog', 'models.jsonl');
+/** A catalogue feed's models (see lib/catalog.ts). */
+export const catalogPath = (id: string): string => join(DATA_DIR, 'catalog', `${id}.jsonl`);
 
 export function sha256(text: string): string {
   return createHash('sha256').update(text).digest('hex');
@@ -69,20 +70,23 @@ export interface WriteInput {
   metrics: Metric[];
   events: HistoryEvent[];
   upstreamSources?: UpstreamSource[];
+  /** A catalogue feed's models, written to data/catalog/<id>.jsonl. */
+  catalog?: CatalogModel[];
   revision?: string;
   revisionDate?: string;
 }
 
 /**
  * Writes a source's files and appends its history. On the first import nothing is appended: those
- * cells are the baseline. state.json changes only when the rows or metrics change, or when the
- * upstream revision moves (so the pin stays accurate).
+ * cells are the baseline. state.json changes only when the rows, metrics or catalogue change, or
+ * when the upstream revision moves (so the pin stays accurate).
  */
 export async function writeSource(id: string, data: WriteInput, now: string): Promise<{ changed: boolean; state: SourceState }> {
   const dir = sourceDir(id);
   const rowsText = toJsonl(data.rows, (r) => r.key);
   const metricsText = JSON.stringify([...data.metrics].sort((a, b) => a.id.localeCompare(b.id)), null, 1) + '\n';
-  const hash = sha256(rowsText + metricsText);
+  const catalogText = data.catalog ? toJsonl(data.catalog, (m) => m.id) : undefined;
+  const hash = sha256(rowsText + metricsText + (catalogText ?? ''));
   const previous = await readState(id);
 
   if (previous && previous.payload_hash === hash) {
@@ -96,6 +100,7 @@ export async function writeSource(id: string, data: WriteInput, now: string): Pr
 
   await writeText(join(dir, 'rows.jsonl'), rowsText);
   await writeText(join(dir, 'metrics.json'), metricsText);
+  if (catalogText !== undefined) await writeText(catalogPath(id), catalogText);
   if (data.upstreamSources) {
     await writeText(join(dir, 'upstream-sources.jsonl'), toJsonl(data.upstreamSources, (s) => s.id));
   }
@@ -112,10 +117,6 @@ export async function writeSource(id: string, data: WriteInput, now: string): Pr
   };
   await writeText(join(dir, 'state.json'), JSON.stringify(state, null, 2) + '\n');
   return { changed: true, state };
-}
-
-export async function writeCatalog(models: readonly CatalogModel[]): Promise<void> {
-  await writeText(CATALOG_PATH, toJsonl(models, (m) => m.id));
 }
 
 /** Per-run facts live outside data/ so an unchanged check does not create a commit. */

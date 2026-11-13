@@ -9,7 +9,8 @@ import { slugify } from '../../site/src/format.ts';
 import type { Candidate } from '../../site/src/select.ts';
 import type { CellsFile, CellTuple, HistoryEntry, SiteColumn, SiteIndex, SiteModel, SiteSource } from '../../site/src/types.ts';
 import { loadSources } from '../lib/config.ts';
-import { loadCatalog } from '../lib/curation.ts';
+import { fillsOnly } from '../lib/catalog.ts';
+import { loadCatalog, mergedFeeds } from '../lib/curation.ts';
 import { slugifyModel } from '../lib/match.ts';
 import { describeQualifier, qualifierFlags, readQualifiers } from '../lib/names.ts';
 import { parseDelimited, tableToRecords, type Rec } from '../lib/parse.ts';
@@ -95,7 +96,8 @@ async function resolvedNames(): Promise<{ aliases: Map<string, Resolved>; unlist
 
 export async function loadSiteData(): Promise<SiteData> {
   const config = await loadSources();
-  const catalog = await loadCatalog();
+  const { stats: feedStats } = await mergedFeeds(config);
+  const catalog = await loadCatalog({ sources: config });
   const byId = new Map(catalog.map((m) => [m.id, m]));
   const { aliases, unlisted } = await resolvedNames();
   const runs = await readRunCache();
@@ -121,6 +123,7 @@ export async function loadSiteData(): Promise<SiteData> {
             params_b: cat.params_b,
             active_b: cat.active_b,
             model_repo: cat.model_repo,
+            origin: cat.origin,
           }
         : { id, name: unlisted.get(id) ?? raw, unlisted: true };
       i = models.push(m) - 1;
@@ -165,6 +168,8 @@ export async function loadSiteData(): Promise<SiteData> {
       reasons: run?.outcome === 'held' || run?.outcome === 'failed' ? run.reasons : undefined,
       warnings: run?.warnings,
     };
+    const feed = feedStats.get(s.id);
+    if (feed) site.catalog = { ...feed, ...(fillsOnly(s) && { fill_only: true }) };
     sources.push(site);
     if (!state) continue;
 
