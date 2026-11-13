@@ -6,6 +6,8 @@
  *                          catalogue model. source "*" applies to every source; model_id "-" keeps
  *                          the name from being matched at all.
  *   curation/models.yaml   models to add to the catalogue, or fields to correct on one already in it.
+ *                          An entry with only the id of a model a catalogue feed left out (see
+ *                          data/reports/catalog-left-out.csv) takes that feed's entry for it.
  *
  * The catalogue they apply to is merged from the catalogue feeds (lib/catalog.ts).
  */
@@ -89,18 +91,41 @@ export async function mergedFeeds(
   return mergeCatalogs(await loadFeeds(sources ?? (await loadSources()), before));
 }
 
-/** The catalogue: every feed merged (data/catalog/), with curation/models.yaml applied. */
-export async function loadCatalog(opts: { sources?: readonly SourceConfig[]; before?: string } = {}): Promise<CatalogModel[]> {
-  const { catalog } = await mergedFeeds(opts.sources, opts.before);
+/**
+ * The catalogue (every feed merged, with curation/models.yaml applied), the feeds' merge counts, and
+ * the models the merge left out that curation did not take.
+ */
+export async function curatedCatalog(opts: { sources?: readonly SourceConfig[]; before?: string } = {}): Promise<ReturnType<typeof mergeCatalogs>> {
+  const merged = await mergedFeeds(opts.sources, opts.before);
   const { entries, problems } = parseModelsYaml(await readOptional(MODELS_PATH));
   if (problems.length) throw new Error(problems.join('\n'));
-  return applyModels(catalog, entries);
+  const catalog = applyModels(merged.catalog, entries, merged.leftOut);
+  const ids = new Set(catalog.map((m) => m.id));
+  const leftOut = new Map([...merged.leftOut].map(([source, models]) => [source, models.filter((m) => !ids.has(m.id))] as const));
+  for (const [source, st] of merged.stats) st.left_out = leftOut.get(source)?.length ?? 0;
+  return { catalog, stats: merged.stats, leftOut };
 }
 
-export function applyModels(base: readonly CatalogModel[], entries: ReadonlyArray<Partial<CatalogModel> & { id: string }>): CatalogModel[] {
+/** The catalogue: every feed merged (data/catalog/), with curation/models.yaml applied. */
+export async function loadCatalog(opts: { sources?: readonly SourceConfig[]; before?: string } = {}): Promise<CatalogModel[]> {
+  return (await curatedCatalog(opts)).catalog;
+}
+
+/**
+ * curation/models.yaml applied to a catalogue: an entry for a catalogue model corrects its fields; a
+ * new entry with a name adds a model; a new entry with only an id takes the model a feed left out
+ * under that id (its fields then correct the feed's).
+ */
+export function applyModels(
+  base: readonly CatalogModel[],
+  entries: ReadonlyArray<Partial<CatalogModel> & { id: string }>,
+  leftOut: ReadonlyMap<string, readonly CatalogModel[]> = new Map(),
+): CatalogModel[] {
   const byId = new Map(base.map((m) => [m.id, m]));
+  const fromFeeds = new Map<string, CatalogModel>();
+  for (const [source, models] of leftOut) for (const m of models) if (!fromFeeds.has(m.id)) fromFeeds.set(m.id, { ...m, origin: source });
   for (const e of entries) {
-    const existing = byId.get(e.id);
+    const existing = byId.get(e.id) ?? (e.name ? undefined : fromFeeds.get(e.id));
     if (existing) byId.set(e.id, { ...existing, ...e });
     else if (e.name) byId.set(e.id, { category: 'llm', origin: 'curation', ...e, name: e.name });
   }
@@ -119,18 +144,21 @@ export async function loadAliases(): Promise<Aliases> {
 /** Problems in the curation files: unknown sources or models, duplicates, new models without names. */
 export async function checkCuration(sources: readonly SourceConfig[]): Promise<string[]> {
   const sourceIds = sources.map((s) => s.id);
-  const { catalog: base } = await mergedFeeds(sources);
+  const { catalog: base, leftOut } = await mergedFeeds(sources);
   const { entries, problems } = parseModelsYaml(await readOptional(MODELS_PATH));
   const known = new Set(base.map((m) => m.id));
+  const leftOutIds = new Set([...leftOut.values()].flat().map((m) => m.id));
   const keys = new Map<string, string>();
   for (const m of base) for (const k of [normalize(m.id), normalize(m.name)]) keys.set(k, m.id);
   for (const e of entries) {
     if (known.has(e.id)) continue;
-    if (!e.name) problems.push(`${MODELS_PATH}: new model "${e.id}" needs a "name"`);
+    // Taking a model a feed left out is a decision that it is not the catalogue model it resembles.
+    if (!e.name && leftOutIds.has(e.id)) continue;
+    if (!e.name) problems.push(`${MODELS_PATH}: new model "${e.id}" needs a "name", or the id of a model in data/reports/catalog-left-out.csv`);
     const same = keys.get(normalize(e.id)) ?? (e.name ? keys.get(normalize(e.name)) : undefined);
     if (same) problems.push(`${MODELS_PATH}: new model "${e.id}" looks like catalogue model "${same}"; correct that one instead`);
   }
-  const ids = new Set(applyModels(base, entries).map((m) => m.id));
+  const ids = new Set(applyModels(base, entries, leftOut).map((m) => m.id));
   const sourceSet = new Set(sourceIds);
   const seen = new Set<string>();
   (await readAliasRows()).forEach((r, i) => {

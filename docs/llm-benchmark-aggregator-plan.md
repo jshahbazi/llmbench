@@ -357,7 +357,9 @@ Rows from different sources line up only when their model names are matched to o
   later feed's model whose core name is already there — a snapshot, a preview, a maker prefix, or the
   same model in another run mode ("Grok 4 Fast Non-Reasoning") — is left out and listed in
   `data/reports/catalog-left-out.csv`, because as a model of its own it would take names that already
-  match. Adding the feeds moved no existing match (checked name by name) and brought 123 names that
+  match; a line with just its id in `curation/models.yaml` takes it, after checking which names move
+  (the first pass took Codestral 25.08, Hy4, Hunyuan-Large and Seed-1.6-Thinking, of 161 left out;
+  most of the rest are other names for catalogue models). Adding the feeds moved no existing match (checked name by name) and brought 123 names that
   were outside the catalogue into it, among them Claude Fable 5.2, GPT-5.1 Codex Max and Inkling 2
   Small, which until then had no maker, date or size.
 - **Matching**, in order (`scripts/lib/match.ts`): a line in `curation/aliases.csv`; a Hugging Face

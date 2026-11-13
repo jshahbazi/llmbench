@@ -1,9 +1,10 @@
 # Models to add to the catalogue, or fields to correct on a model already in it (same id).
-# The catalogue itself comes from whatmodel.sh (data/catalog/models.jsonl); edits here apply on the
-# next build without re-reading any source. `npm run validate` checks this file.
+# The catalogue itself is merged from the catalogue feeds in sources.yaml (data/catalog/<feed>.jsonl);
+# edits here apply on the next build without re-reading any source. `npm run validate` checks this
+# file.
 #
-# Fields: id, name, provider, released (YYYY-MM), open_weights, license, params_b, active_b,
-# context_k, model_repo, note. A new model needs at least id and name. For example:
+# Fields: id, name, provider, released (YYYY-MM or YYYY-MM-DD), open_weights, license, params_b,
+# active_b, context_k, model_repo, note. A new model needs at least id and name. For example:
 #
 # - id: example-model-7b
 #   name: Example Model 7B
@@ -17,5 +18,23 @@
 #
 # - id: nova-pro
 #   context_k: 300
+#
+# To take a model a catalogue feed left out because the catalogue has one with the same core name
+# (data/reports/catalog-left-out.csv), give only its id: the feed's entry for it is used, and any
+# fields given here correct it. Take one only when it is a release of its own, not another name for
+# the catalogue model it resembles, and check `npm run resolve` for names that move to it.
 
-[]
+- id: codestral-2508
+  note: models.dev. Codestral 25.08, a later release than the catalogue's Codestral 25.01.
+
+- id: hy4
+  provider: Tencent
+  note: models.dev. The November 2026 release, after the catalogue's Hy4 preview of August.
+
+- id: hunyuan-large
+  note: >-
+    Epoch's models database. The open 389B model of November 2024, not the catalogue's
+    Hunyuan-Large (2025-02-10) API version.
+
+- id: seed-1-6-thinking
+  note: Epoch's models database. A model of its own, as models named "... Thinking" are.

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { licenseId, mergeCatalogs, withoutModes } from '../scripts/lib/catalog.ts';
+import { applyModels } from '../scripts/lib/curation.ts';
 import { checkCatalog } from '../scripts/lib/guards.ts';
 import { Matcher } from '../scripts/lib/match.ts';
 import { catalogFrom as epochCatalog, openWeights } from '../scripts/sources/epoch-models.ts';
@@ -181,4 +182,16 @@ test('a catalogue feed is held when its model count collapses', () => {
   assert.match(checkCatalog(551, 120, 300)[0]!, /fewer than the minimum of 300/);
   assert.match(checkCatalog(551, 250, 0)[0]!, /under half of the previous 551/);
   assert.deepEqual(checkCatalog(5, 0, 0), []);
+});
+
+test('curation takes a left-out model by its id, with its own corrections on top', () => {
+  const { catalog, leftOut } = mergeCatalogs([
+    { source: 'base', models: base },
+    { source: 'later', models: [model('claude-fable-5-1-preview', 'Claude Fable 5.1 Preview', { provider: 'anthropic', released: '2026-08' })] },
+  ]);
+  const out = applyModels(catalog, [{ id: 'claude-fable-5-1-preview', provider: 'Anthropic' }, { id: 'not-left-out' }], leftOut);
+  const taken = out.find((m) => m.id === 'claude-fable-5-1-preview')!;
+  assert.deepEqual(taken, { id: 'claude-fable-5-1-preview', name: 'Claude Fable 5.1 Preview', category: 'llm', origin: 'later', provider: 'Anthropic', released: '2026-08' });
+  assert.ok(!out.some((m) => m.id === 'not-left-out'), 'an id alone adds nothing unless a feed left that model out');
+  assert.equal(applyModels(catalog, [{ id: 'claude-fable-5-1-preview' }]).length, catalog.length, 'nothing to take without the left-out list');
 });

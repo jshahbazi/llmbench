@@ -10,7 +10,7 @@ import type { Candidate } from '../../site/src/select.ts';
 import type { CellsFile, CellTuple, HistoryEntry, SiteColumn, SiteIndex, SiteModel, SiteSource } from '../../site/src/types.ts';
 import { loadSources } from '../lib/config.ts';
 import { fillsOnly } from '../lib/catalog.ts';
-import { loadCatalog, mergedFeeds } from '../lib/curation.ts';
+import { curatedCatalog } from '../lib/curation.ts';
 import { slugifyModel } from '../lib/match.ts';
 import { describeQualifier, qualifierFlags, readQualifiers } from '../lib/names.ts';
 import { parseDelimited, tableToRecords, type Rec } from '../lib/parse.ts';
@@ -96,8 +96,7 @@ async function resolvedNames(): Promise<{ aliases: Map<string, Resolved>; unlist
 
 export async function loadSiteData(): Promise<SiteData> {
   const config = await loadSources();
-  const { stats: feedStats } = await mergedFeeds(config);
-  const catalog = await loadCatalog({ sources: config });
+  const { catalog, stats: feedStats } = await curatedCatalog({ sources: config });
   const byId = new Map(catalog.map((m) => [m.id, m]));
   const { aliases, unlisted } = await resolvedNames();
   const runs = await readRunCache();
