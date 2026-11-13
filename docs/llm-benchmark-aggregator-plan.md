@@ -335,9 +335,22 @@ workflow artifact and only their hash is committed.
 Every column is `<source>:<metric>`, for example `bfcl:Overall Acc` or `arena-text:overall`. This needs
 no curation and keeps unlike numbers apart.
 
-A source can label its metrics and assign a `family`, such as `gpqa-diamond`. Columns sharing a family
-are shown side by side on the benchmark page and can be added to the explorer together. whatmodel's
-1,311 benchmark ids arrive with names and are used as families from the start.
+A source can label its metrics and assign a `family`, such as `matharena-arxivmath`: a series of
+related columns, listed as "Related" on each benchmark page.
+
+Columns that measure the same benchmark are linked separately, in `curation/benchmarks.csv`
+(`column,benchmark,note`). whatmodel's metric ids are benchmark ids (`benchmark_ids: true` in
+`sources.yaml`), so a link to one puts a column next to whatmodel's. A benchmark page with links shows
+every model scored by two or more of them side by side, with the median difference between each pair
+over the models they share; the benchmarks page lists every linked benchmark with its largest median
+gap. Links are made by hand, not by name: name similarity paired MathArena's April ArXivMath set with
+whatmodel's February one within 1.4 points. Only the same measurement is linked (version, split,
+scoring and scale): Vals' easy and hard splits, one-try pass rates, cost and latency are not, nor are
+EQ-Bench 3 and Creative Writing v3, which whatmodel keeps on other scales. The first 69 links were
+each checked against the scores. whatmodel turned out to carry exact copies of Epoch's runs, Arena,
+Aider, BFCL, MathArena's monthly sets and MMLU-Pro (0.0 median difference), while the real gaps are
+between makers' reports and independent runs: CAIS's Humanity's Last Exam runs sit 4.9 points below
+the makers' figures, and Vals' Terminal-Bench 2.0 and 2.1 runs about 10 below.
 
 ### 6.2 Models
 
@@ -821,7 +834,11 @@ models.dev and Epoch's models database add 168 and 1,088 models and fill fields 
 fills parameter counts or licences on 41. The merge leaves out any model whose core name is already
 in the catalogue; the first try did not, and three Grok 4 Fast runs moved to models.dev's
 "Grok 4 Fast Reasoning" entries until run-mode words were stripped before the check. OpenRouter and
-Respan are blocked by their terms.
+Respan are blocked by their terms. Curation can take a model the merge left out by its id; the
+first pass took four of 161.
+*Seventh slice, 2026-11-13:* the same benchmark linked across sources (6.1). Only 6 families had
+spanned two sources, so a maker's number and an independent run of the same benchmark were never
+shown together. 69 hand-checked links in `curation/benchmarks.csv` join 61 benchmarks across sources.
 Still to do: `render: browser` (no source needs it yet) and history backfill.
 
 ---

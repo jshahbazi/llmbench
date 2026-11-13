@@ -1,0 +1,85 @@
+# Links a source's column to the benchmark it measures, so columns from different sources that
+# measure the same thing are shown side by side (each benchmark page, and "Benchmarks in several
+# sources" on the benchmarks page). One line per column:
+#
+#   column     <source>:<metric>, as in the column id on the site
+#   benchmark  a benchmark id. whatmodel.sh's metric ids are benchmark ids already (sources.yaml,
+#              benchmark_ids: true), so linking a column to one puts it next to whatmodel's column;
+#              any other id links the columns that name it.
+#   note       optional
+#
+# Link only the same measurement: same benchmark, version and split, the same scoring, on one
+# scale. A different harness or who ran it is fine; that is what side by side is for. Vals' easy and
+# hard splits, one-try pass rates, cost and latency columns are not the benchmark itself. Each link
+# below was checked against the scores: where two columns share models, the median difference is
+# shown on the benchmarks page, and a large one points at a wrong link.
+column,benchmark,note
+arena:text_style_control/overall,lmarena-text,whatmodel's Arena text column is the style-controlled board
+arena:vision/overall,lmarena-vision,
+arena:webdev/overall,lmarena-webdev,
+arena:document/overall,lmarena-document,
+arena:search/overall,lmarena-search,
+epoch:gpqa_diamond,gpqa-diamond,
+epoch:otis_mock_aime_2024_2025,otis-mock-aime,
+epoch:math_level_5,math-level-5,
+epoch:simpleqa_verified,simpleqa-verified,
+epoch:chess_puzzles,epoch-chess,
+epoch:frontiermath_tiers_1_3_v2,frontiermath,whatmodel's FrontierMath is tiers 1-3 v2
+epoch:frontiermath_tier_4_v2,frontiermath-tier-4-v2,
+epoch:mystery_game_puzzles,epoch-mystery-games,
+epoch:furniture_assembly,epoch-furniture,
+epoch:mirrorcode,epoch-mirrorcode,
+epoch:ebr_bench,epoch-ebr,
+matharena:aime--aime_2025/accuracy,aime-2025,
+matharena:aime--aime_2026/accuracy,aime-2026,
+matharena:hmmt--hmmt_feb_2025/accuracy,hmmt-feb-2025,
+matharena:hmmt--hmmt_feb_2026/accuracy,hmmt-feb-2026,
+matharena:hmmt--hmmt_nov_2025/accuracy,hmmt-nov-2025,
+matharena:usamo--usamo_2026/accuracy,usamo-2026,
+matharena:arxiv_false--april/accuracy,matharena-brokenarxiv-2026-04,same scores on 16 models
+matharena:arxiv_false--august/accuracy,matharena-brokenarxiv-2026-08,same scores on 6 models
+matharena:arxiv_false--february/accuracy,matharena-brokenarxiv-2026-02,same scores on 15 models
+matharena:arxiv_false--june/accuracy,matharena-brokenarxiv-2026-06,same scores on 15 models
+matharena:arxiv_false--march/accuracy,matharena-brokenarxiv-2026-03,same scores on 13 models
+matharena:arxiv_false--may/accuracy,matharena-brokenarxiv-2026-05,same scores on 8 models
+matharena:arxiv--april/accuracy,matharena-arxivmath-2026-04,same scores on 19 models
+matharena:arxiv--august/accuracy,matharena-arxivmath-2026-08,same scores on 6 models
+matharena:arxiv--december/accuracy,matharena-arxivmath-2025-12,same scores on 19 models
+matharena:arxiv--february/accuracy,matharena-arxivmath-2026-02,same scores on 23 models
+matharena:arxiv--january/accuracy,matharena-arxivmath-2026-01,same scores on 23 models
+matharena:arxiv--june/accuracy,matharena-arxivmath-2026-06,same scores on 20 models
+matharena:arxiv--march/accuracy,matharena-arxivmath-2026-03,same scores on 13 models
+matharena:arxiv--may/accuracy,matharena-arxivmath-2026-05,same scores on 17 models
+matharena:arxivlean--june/accuracy,matharena-arxivlean-2026-06,same scores on 10 models
+matharena:arxivlean--march/accuracy,matharena-arxivlean-2026-03,same scores on 6 models
+vals:gpqa/overall,gpqa-diamond,Vals averages zero-shot and few-shot chain of thought
+vals:mmlu_pro/overall,mmlu-pro,
+vals:aime/aime-2024,aime-2024,
+vals:aime/aime-2025,aime-2025,
+vals:math500/overall,math-500,
+vals:mmmu/overall,mmmu-pro,Vals names it MMMU Pro
+vals:terminal-bench-2/overall,terminal-bench-2,
+vals:terminal-bench-2-1/overall,terminal-bench-2.1,
+vals:terminal-bench-4/overall,terminal-bench-4,
+vals:swebench/overall,swe-bench-verified,
+vals:swebench-multimodal/overall,swe-bench-multimodal,
+vals:vibe-code/overall,vibe-code-bench-test,Vals made Vibe Code Bench; whatmodel carries the same scores
+vals:legal_research/overall,legal-research-bench-allpass,
+swe-bench:verified/agents,swe-bench-verified,
+swe-bench:verified/bash-only,swe-bench-verified,
+swe-bench:multimodal/agents,swe-bench-multimodal,
+swe-bench:multilingual/bash-only,swe-bench-multilingual,
+terminal-bench:2.0/accuracy,terminal-bench-2,
+terminal-bench:2.1/accuracy,terminal-bench-2.1,
+cais:hle,hle,CAIS's own runs; whatmodel's are mostly makers' reports
+aider-polyglot:pass_rate_2,aider-polyglot,whatmodel's Polyglot score is the two-try pass rate
+vectara-hhem:Factual Consistency Rate,vectara-hhem-factual-consistency,
+bfcl:Overall Acc,bfcl-v4,
+livebench:v1/2024-07-26/global,livebench-20240726,
+livebench:v1/2024-08-31/global,livebench-20240831,
+livebench:v1/2024-11-25/global,livebench-20241125,
+mmlu-pro:Overall,mmlu-pro,
+tau2-bench:airline/pass_1,tau3-airline,whatmodel calls the current τ²-bench leaderboard τ³-bench
+tau2-bench:retail/pass_1,tau3-retail,
+tau2-bench:telecom/pass_1,tau3-telecom,
+tau2-bench:banking_knowledge/pass_1,tau3-banking-v101,
