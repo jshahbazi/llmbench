@@ -18,7 +18,7 @@ import {
   parseGithubRef,
   parseHfRef,
 } from './http.ts';
-import type { Rec } from './parse.ts';
+import { detectFormat, parseRecords, type Format, type Rec } from './parse.ts';
 import type { PluginContext } from './types.ts';
 
 export interface FetchedFile {
@@ -130,4 +130,23 @@ export async function fetchSource(ctx: PluginContext): Promise<Fetched | 'unchan
   if (ref.startsWith('hf:')) return fromHf(ref, ctx);
   if (/^https:\/\//i.test(ref)) return fromUrl(ref, ctx);
   throw new Error(`unsupported fetch location "${ref}" (use github:, hf: or https://)`);
+}
+
+/**
+ * Every record in the fetched files, using the entry's `format` and `rows` (JSON, YAML) or `table`
+ * (Markdown) options. Columns a file adds, such as _file or _config, are added to its records.
+ */
+export async function recordsFrom(fetched: Fetched, options: Record<string, unknown>): Promise<Rec[]> {
+  const format = options['format'] as Format | undefined;
+  const selector = options['table'] ?? options['rows'];
+  const records: Rec[] = [];
+  for (const f of fetched.files) {
+    const fmt = format ?? detectFormat(f.path, f.contentType);
+    if (!fmt) {
+      const html = /html/i.test(f.contentType ?? '') || /\.html?$/i.test(f.path);
+      throw new Error(`cannot tell the format of ${f.path}; set "format"${html ? ' (HTML pages need a plugin for now)' : ''}`);
+    }
+    for (const r of await parseRecords(f.bytes, fmt, selector === undefined ? undefined : String(selector), f.path)) records.push(f.columns ? { ...r, ...f.columns } : r);
+  }
+  return records;
 }

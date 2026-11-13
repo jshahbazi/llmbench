@@ -2,6 +2,7 @@
  * The explorer: rows are models, columns are any metrics from any source, and each cell shows the
  * best score that passes the filters. Everything about the view lives in the URL.
  */
+import { renderChart, type ChartPoint } from './chart.ts';
 import { $, el, link } from './dom.ts';
 import { fmt, isPermissive, paramsLabel, RUN_BY_LABELS, safeUrl, unitSuffix } from './format.ts';
 import { FLAG_QUANTIZED, FLAG_SEARCH, pickBest, toCsv, type Candidate } from './select.ts';
@@ -301,6 +302,74 @@ function renderCompare() {
   $('viewstats').textContent = `Comparing ${ms.length} models on ${lines.length} benchmarks`;
 }
 
+/** Decimal year of a "YYYY-MM" release month. */
+const yearOf = (released?: string): number | undefined => {
+  const m = released && /^(\d{4})-(\d{2})/.exec(released);
+  return m ? Number(m[1]) + (Number(m[2]) - 1) / 12 : undefined;
+};
+
+function renderChartView() {
+  const { rows, cols, cell } = view;
+  const ySelect = $<HTMLSelectElement>('y-axis');
+  const xSelect = $<HTMLSelectElement>('x-axis');
+  const label = (ci: number) => `${index.columns[ci]!.label} (${sourceName.get(index.columns[ci]!.source) ?? index.columns[ci]!.source})`;
+  const sortCol = colById.get(state.sort);
+  const yi = colById.get(state.y) ?? (sortCol !== undefined && cols.includes(sortCol) ? sortCol : cols[0]);
+  const yCol = yi !== undefined && cols.includes(yi) ? yi : cols[0];
+  ySelect.replaceChildren(...cols.map((ci) => el('option', { value: index.columns[ci]!.id, selected: ci === yCol }, label(ci))));
+  xSelect.replaceChildren(
+    el('option', { value: 'released', selected: state.x === 'released' }, 'Release date'),
+    el('option', { value: 'params', selected: state.x === 'params' }, 'Total parameters'),
+    ...cols.filter((ci) => ci !== yCol).map((ci) => el('option', { value: index.columns[ci]!.id, selected: index.columns[ci]!.id === state.x }, label(ci))),
+  );
+  if (yCol === undefined) {
+    $('table-wrap').replaceChildren(el('p', { class: 'empty-note' }, 'Choose at least one column to chart.'));
+    $('viewstats').textContent = '';
+    return;
+  }
+  const y = index.columns[yCol]!;
+  const xc = colById.get(state.x);
+  const xCol = xc !== undefined && cols.includes(xc) && xc !== yCol ? index.columns[xc] : undefined;
+  const xKey = xCol ? xCol.id : state.x === 'params' ? 'params' : 'released';
+  const valueText = (c: SiteColumn, s: Shown) => `${c.label}: ${fmt(s.best.value, c.unit)}${unitSuffix(c.unit)}${s.best.context ? ` (${s.best.context})` : ''}`;
+  const points: ChartPoint[] = [];
+  const cmp = new Set(state.cmp);
+  for (const mi of rows) {
+    const m = index.models[mi]!;
+    const ys = cell.get(key(mi, yCol));
+    if (!ys) continue;
+    let x: number | undefined;
+    let xText = '';
+    if (xCol) {
+      const xs = cell.get(key(mi, xc!));
+      x = xs?.best.value;
+      if (xs) xText = valueText(xCol, xs);
+    } else if (xKey === 'params') {
+      x = m.params_b && m.params_b > 0 ? m.params_b : undefined;
+      xText = `${paramsLabel(m.params_b, m.active_b)} parameters`;
+    } else {
+      x = yearOf(m.released);
+      xText = `released ${m.released}`;
+    }
+    if (x === undefined) continue;
+    points.push({ id: m.id, name: m.name, href: modelHref(m), x, y: ys.best.value, ...(m.open_weights !== undefined && { open: m.open_weights }), xText, yText: valueText(y, ys), selected: cmp.has(m.id) });
+  }
+  const missing = rows.filter((mi) => cell.has(key(mi, yCol))).length - points.length;
+  if (points.length < 2) {
+    $('table-wrap').replaceChildren(el('p', { class: 'empty-note' }, 'Fewer than two models have both values. Try another axis, fewer filters, or a lower “fewer than” number.'));
+  } else {
+    renderChart($('table-wrap'), points, {
+      xLabel: xCol ? label(xc!) : xKey === 'params' ? 'Total parameters (billions, log scale)' : 'Release date',
+      yLabel: label(yCol),
+      xKind: xCol ? 'linear' : xKey === 'params' ? 'log' : 'time',
+      yDirection: y.direction,
+      xTick: (v) => (xCol ? fmt(v, xCol.unit) : xKey === 'params' ? `${v}B` : String(Math.round(v))),
+      yTick: (v) => fmt(v, y.unit),
+    });
+  }
+  $('viewstats').textContent = `${points.length} models${missing > 0 ? ` (${missing} more have no ${xKey === 'released' ? 'release date' : xKey === 'params' ? 'parameter count' : 'score on the x axis'})` : ''}`;
+}
+
 function renderToolbar() {
   const presets = $('presets');
   presets.replaceChildren(
@@ -321,12 +390,16 @@ function renderToolbar() {
   const cmp = $<HTMLButtonElement>('compare');
   cmp.disabled = state.cmp.length < 2 && state.view !== 'compare';
   cmp.textContent = state.view === 'compare' ? 'Back to the table' : `Compare${state.cmp.length ? ` (${state.cmp.length})` : ''}`;
+  $('chart').textContent = state.view === 'chart' ? 'Back to the table' : 'Chart';
+  $('chart').setAttribute('aria-pressed', String(state.view === 'chart'));
+  $('chart-axes').hidden = state.view !== 'chart';
 }
 
 function update() {
   view = compute();
   renderToolbar();
   if (state.view === 'compare' && state.cmp.length >= 2) renderCompare();
+  else if (state.view === 'chart') renderChartView();
   else renderTable();
   history.replaceState(null, '', location.pathname + serializeState(state));
 }
@@ -558,6 +631,24 @@ function wire() {
   on('compare', 'click', () => {
     state.view = state.view === 'compare' ? 'table' : 'compare';
     update();
+  });
+  on('chart', 'click', () => {
+    state.view = state.view === 'chart' ? 'table' : 'chart';
+    update();
+  });
+  on('y-axis', 'change', () => {
+    state.y = $<HTMLSelectElement>('y-axis').value;
+    if (state.x === state.y) state.x = 'released';
+    update();
+  });
+  on('x-axis', 'change', () => {
+    state.x = $<HTMLSelectElement>('x-axis').value;
+    update();
+  });
+  let resizeTimer = 0;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => state.view === 'chart' && update(), 150);
   });
   on('export', 'click', exportCsv);
   on('share', 'click', async () => {

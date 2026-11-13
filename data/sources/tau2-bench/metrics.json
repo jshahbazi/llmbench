@@ -1,0 +1,202 @@
+[
+ {
+  "id": "airline/cost",
+  "label": "τ²-bench Airline cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "airline/pass_1",
+  "label": "τ²-bench Airline pass^1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "airline/pass_2",
+  "label": "τ²-bench Airline pass^2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "airline/pass_3",
+  "label": "τ²-bench Airline pass^3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "airline/pass_4",
+  "label": "τ²-bench Airline pass^4",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "banking_knowledge/cost",
+  "label": "τ²-bench Banking knowledge cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "banking_knowledge/pass_1",
+  "label": "τ²-bench Banking knowledge pass^1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "banking_knowledge/pass_2",
+  "label": "τ²-bench Banking knowledge pass^2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "banking_knowledge/pass_3",
+  "label": "τ²-bench Banking knowledge pass^3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "banking_knowledge/pass_4",
+  "label": "τ²-bench Banking knowledge pass^4",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "retail/cost",
+  "label": "τ²-bench Retail cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "retail/pass_1",
+  "label": "τ²-bench Retail pass^1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "retail/pass_2",
+  "label": "τ²-bench Retail pass^2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "retail/pass_3",
+  "label": "τ²-bench Retail pass^3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "retail/pass_4",
+  "label": "τ²-bench Retail pass^4",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "telecom/cost",
+  "label": "τ²-bench Telecom cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "telecom/pass_1",
+  "label": "τ²-bench Telecom pass^1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "telecom/pass_2",
+  "label": "τ²-bench Telecom pass^2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "telecom/pass_3",
+  "label": "τ²-bench Telecom pass^3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "telecom/pass_4",
+  "label": "τ²-bench Telecom pass^4",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "agents"
+  ]
+ }
+]

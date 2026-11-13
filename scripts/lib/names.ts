@@ -135,8 +135,11 @@ const SUFFIXES: Array<{ re: RegExp; take: (m: RegExpExecArray) => Qualifier | un
   { re: /-(minimal|low|high|xhigh)$/i, take: (m) => ({ kind: 'effort', value: m[1]!.toLowerCase() }) },
   { re: new RegExp(`[-_ ](${QUANT_WORDS})$`, 'i'), take: (m) => ({ kind: 'quant', value: m[1]!.toUpperCase() }) },
   { re: /[-_ ](preview|beta|exp|experimental)$/i, take: (m) => ({ kind: 'stage', value: m[1]!.toLowerCase().replace('experimental', 'exp') }) },
-  // Snapshot dates: -2024-12-17, -20250514, -260428, preview-06-17, -0905 (after a word, not a number)
+  // A cloud provider's version tag: amazon.nova-pro-v1:0
+  { re: /-(v\d+:\d+)$/, take: (m) => ({ kind: 'other', value: m[1]! }) },
+  // Snapshot dates: -2024-12-17, -20250514, -260428, -2025-07, preview-06-17, -0905 (after a word, not a number)
   { re: /[-_ @]((?:19|20)\d{2}-?\d{2}-?\d{2}|2\d{5})$/, take: (m) => snap(m[1]!) },
+  { re: /[-_ ]((?:19|20)\d{2}-\d{2})$/, take: (m) => snap(m[1]!) },
   { re: /(?<=[A-Za-z])[-_ ](\d{2}-(?:\d{2}|(?:19|20)\d{2}))$/, take: (m) => snap(m[1]!) },
   { re: /(?<=[A-Za-z]\d*)[-_ ](\d{4})$/, take: (m) => snap(m[1]!) },
 ];
@@ -198,13 +201,15 @@ export function parseName(raw: string): ParsedName {
 /**
  * A matching key: lower case, punctuation removed, except that a separator between two numbers is
  * kept as "." so that "OPT-1.3B" and "OPT-13B", or "Qwen2.5-7B" and "Qwen2-57B", stay apart.
- * Full dates are written as YYYYMMDD first, so "2024-12-17" and "20241217" agree, and "+" reads
- * as "plus", so "Command R+" is "Command R Plus" and not "Command R".
+ * Full dates are written as YYYYMMDD first, so "2024-12-17" and "20241217" agree; "+" reads as
+ * "plus", so "Command R+" is "Command R Plus" and not "Command R"; and "4p7", a common way to write
+ * a version in an identifier, reads as "4.7".
  */
 export function normalize(s: string): string {
   const dated = s
     .toLowerCase()
     .replace(/\+/g, ' plus ')
+    .replace(/(\d)p(\d)/g, '$1.$2')
     .replace(/((?:19|20)\d{2})[-_. ](\d{2})[-_. ](\d{2})(?!\d)/g, '$1$2$3');
   const tokens = dated.split(/[^a-z0-9]+/).filter(Boolean);
   let out = '';

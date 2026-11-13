@@ -20,10 +20,11 @@ standard Actions runners and Pages are free for public repositories, and `jshahb
 public. The site is served at **llmbench.site** (registered at Cloudflare; DNS-only A, AAAA and
 `www` CNAME records point at GitHub Pages, which issues the HTTPS certificate).
 
-**Status (2026-11-13):** Phases 0 to 3 are built — five sources, field-mapping extractor, change
-history, guards, issue reporting, the update workflow, the explorer, a page for every model, benchmark
-column and source, name matching with curation files, and CSV, Parquet and SQLite downloads. Section
-12 lists what was learned in each.
+**Status (2026-11-13):** Phases 0 to 3 are built and Phase 4 is under way — seven sources,
+field-mapping extractor, change history, guards, issue reporting, the update workflow, the explorer
+with a chart mode, a page for every model, benchmark column and source, name matching with curation
+files, CSV, Parquet and SQLite downloads, and `npm run add-source`. Section 12 lists what was learned
+in each.
 
 ### 1.1 Goals
 
@@ -165,7 +166,7 @@ sources:
 | Field | Required | Meaning |
 | :-- | :-- | :-- |
 | `id`, `name`, `homepage` | yes | Identity and the link shown on the site |
-| `fetch` | yes, unless blocked | `github:owner/repo/path` (globs allowed; each file's path is available as `_file`), `hf:owner/dataset` with `config`/`configs` and `split` (each config's name is available as `_config`), or any `https://` URL to CSV, TSV, JSON, JSON Lines, YAML or Parquet. ZIP and HTML need a plugin for now. |
+| `fetch` | yes, unless blocked | `github:owner/repo/path` (globs allowed; each file's path is available as `_file`), `hf:owner/dataset` with `config`/`configs` and `split` (each config's name is available as `_config`), or any `https://` URL to CSV, TSV, JSON, JSON Lines, YAML, Parquet or Markdown (pipe tables, as in a README). ZIP and HTML need a plugin for now. |
 | `format`, `rows` | no | Override format detection; dot path to the row list inside JSON or YAML |
 | `model_label` | no | Column with the source's display name, when `model` is an identifier; used for matching |
 | `model` | yes, unless `plugin` | Column holding the model name |
@@ -174,7 +175,7 @@ sources:
 | `key` | no | Column or columns that make a row unique when the model name alone does not |
 | `context` | no | Columns describing how the model was run: quantization, reasoning effort, scaffold, edit format |
 | `date`, `model_url`, `ci` | no | Evaluation date, link to the model, confidence-interval columns |
-| `table` | no (Phase 4) | CSS selector or index of the table in an HTML page |
+| `table` | no | Which Markdown table to read: its position (0 is the first) or text from the heading above it. For HTML pages (later): a CSS selector. |
 | `render: browser` | no (Phase 4) | Load the page in headless Chromium first. Optional `capture:` URL pattern grabs the JSON the page loads. |
 | `plugin` | no | Name of a script in `scripts/sources/` for sources that need custom logic |
 | `ignore`, `lower_is_better`, `labels`, `family` | no | Columns to drop; direction; display names; grouping across sources (6.1) |
@@ -192,11 +193,16 @@ sources:
 
 ### 3.2 Adding a source
 
-1. `npm run add-source -- <url>` fetches the URL, detects the format and prints a draft entry with a
-   preview of the first rows. For awkward pages it can ask an LLM to propose the field mapping; the LLM
-   never touches the values.
+1. `npm run add-source -- <location>` fetches it, reads every record, lists the columns, and prints a
+   draft entry: the model column, scores, columns to ignore (ranks), lower-is-better columns (cost,
+   latency, error rates), a key when model names repeat, context columns, and the repository's licence
+   where GitHub or Hugging Face states one. The draft says `terms: blocked` until you have read the
+   source's terms. It also tries the draft and reports the rows and metrics it would give. *Built.*
+   Asking an LLM to propose the mapping for awkward tables is still to come; the LLM would never
+   touch the values.
 2. Paste the entry into `sources.yaml`, set `license` and `terms`.
-3. `npm run scrape -- --source <id> --dry-run` shows exactly what would be recorded.
+3. `npm run scrape -- --source <id> --dry-run` shows exactly what would be recorded and writes
+   nothing. *Built.*
 4. Commit. The next run ingests it and it appears on the site.
 
 Structured files usually need 8 to 12 lines and no code. Of the launch sources, two need a plugin.
@@ -225,7 +231,7 @@ llmbench/
 │   ├── scrape.ts                 # fetch → extract → guard → diff
 │   ├── resolve.ts                # model matching and reports
 │   ├── build.ts                  # data/ → site/dist: pages, data files, browser scripts
-│   ├── report-issues.ts, validate.ts   (add-source.ts, backfill.ts: Phase 4)
+│   ├── add-source.ts, report-issues.ts, validate.ts   (backfill.ts: Phase 4)
 │   ├── lib/                      # fetchers, extractor, guards, diff, matcher, tags
 │   ├── site/                     # page templates, data assembly, browser-code compiler
 │   └── sources/                  # plugins: whatmodel.ts, epoch.ts
@@ -397,7 +403,10 @@ explorer and the tests. The whole site (about 2,000 pages) builds in about a sec
 - **Presets** for common starting points: coding, agentic, math, arena, small models.
 - **Compare mode.** Pick two to five models and see every metric where at least two have a score. This
   is the view that works best on sparse data.
-- **Chart mode.** Any column against any other, or against release date or parameter count.
+- **Chart mode.** Any column against any other, or against release date or parameter count (log
+  scale). One dot per model, coloured by open or API-only weights, the leaders labelled, a readout on
+  hover or with the arrow keys, and the axes kept in the URL (`view=chart`, `x`, `y`). *Built in
+  Phase 4.*
 - **Provenance popover** on every cell: source link, the source's own model and metric text, date and
   where the date came from, who ran it, context, other scores, change history.
 - **The whole view is in the URL**, so any table a visitor builds can be shared or bookmarked.
@@ -591,18 +600,34 @@ are rows of their own, marked "not in the catalogue", and listed in `data/report
 
 ### 10.2 Next — live and openly licensed
 
-Terminal-Bench submissions (`harbor-framework/terminal-bench`, Apache-2.0), τ²-bench
-(`sierra-research/tau2-bench`, MIT), Vectara hallucination leaderboard (Apache-2.0), MathArena (CC BY-SA
-4.0), ARC Prize baseline outputs (MIT), EQ-Bench 3 (MIT), and Hugging Face's own eval results
-(`.eval_results/*.yaml` in model repos). whatmodel already carries most of these at pinned revisions, so
-a direct entry is worth adding only where freshness or history matters.
+Added in Phase 4:
+
+- **τ²-bench** (`sierra-research/tau2-bench`, MIT): one `submission.json` per leaderboard entry, and a
+  manifest of the ones the current text leaderboard shows. A plugin (`scripts/sources/tau2.ts`) reads
+  those, leaves out the voice and legacy boards, and never copies the contact details the files carry.
+  Runs by Sierra, the benchmark's authors, are "independent"; the rest are "submitted". 30 entries.
+- **Vectara hallucination leaderboard** (Apache-2.0): a Markdown table in the repository's README,
+  read with no code through the new Markdown format. 111 models.
+
+Checked and not added (2026-11-13):
+
+- **Terminal-Bench 4.0**: the results live in Harbor Hub (`hub.harborframework.com`), not in the
+  repository; the repository only holds run configurations. Needs that service's terms.
+- **MathArena** and **ARC Prize**: their leaderboards are served from their own websites; the
+  repositories hold code and model outputs, not leaderboard tables. Needs the sites' terms.
+- **EQ-Bench 3**: a 26 MB gzipped file, mostly judge transcripts, last updated 2026-05-31. whatmodel
+  carries its results.
+- **Hugging Face eval results** (`.eval_results/*.yaml` in model repos): still to look at.
+
+whatmodel already carries most of these at pinned revisions, so a direct entry is worth adding only
+where freshness or history matters.
 
 ### 10.3 Live, but check the terms first
 
 | Source | Location | Issue |
 | :-- | :-- | :-- |
-| SWE-bench (5 boards) | `SWE-bench/swe-bench.github.io`, `data/leaderboards.json`: one 4 MB file with `name`, `agent`, `date`, `resolved`, `reasoning_effort` and a stable `folder` key | The repo's licence is not a recognised one |
-| LiveBench | `LiveBench/livebench.github.io`, `public/table_<release>.csv` plus `categories_<release>.json` | No licence on the repo. Each release is a new question set, so each is its own source entry. Needs a plugin: category averages are computed in the browser. |
+| SWE-bench (5 boards) | `SWE-bench/swe-bench.github.io`, `data/leaderboards.json`: one 4 MB file with `name`, `agent`, `date`, `resolved`, `reasoning_effort` and a stable `folder` key | The repository's licence is CC BY-NC 4.0. The non-commercial condition cannot be carried into the CC BY-SA compilation, so it is listed as blocked in `sources.yaml`. It would need the maintainers' permission, or a separately licensed part of the site. |
+| LiveBench | `LiveBench/livebench.github.io`, `public/table_<release>.csv` plus `categories_<release>.json` | No licence on the repository, so it is listed as blocked. Each release is a new question set, so each would be its own source entry, with a plugin: category averages are computed in the browser. |
 
 ### 10.4 Not usable
 
@@ -679,6 +704,13 @@ the Parquet file is 0.9 MB, the CSV and SQLite files about 12 MB each. SQLite ne
 
 **Phase 4 — breadth (ongoing).** More sources. `render: browser` support. History backfill.
 `add-source` with LLM-assisted mapping. Chart mode. Optional SQL console.
+*First slice, 2026-11-13:* τ²-bench (plugin) and Vectara (Markdown table) added; SWE-bench (CC BY-NC)
+and LiveBench (no licence) recorded as blocked; Markdown pipe tables as a source format;
+`npm run add-source` without the LLM step; `scrape --dry-run`; chart mode; matching learned `4p7` as
+4.7, year-month snapshots (`-2025-07`), cloud version tags (`-v1:0`), and curation lines that cover
+`org/name`. Still to do: `render: browser` (no source needs it yet), history backfill (the git
+sources already carry dates, so it adds little so far), the LLM step in `add-source`, the SQL console,
+and the sources in 10.2 and 10.3 that need a terms check.
 
 ---
 

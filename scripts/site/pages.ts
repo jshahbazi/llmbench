@@ -359,6 +359,8 @@ function explorerPage(d: SiteData): string {
 <div class="viewbar">
   <p id="viewstats" class="stats" aria-live="polite"></p>
   <span class="actions">
+    <span id="chart-axes" class="chart-axes" hidden><label>Y <select id="y-axis"></select></label> <label>X <select id="x-axis"></select></label></span>
+    <button type="button" id="chart">Chart</button>
     <button type="button" id="compare" disabled>Compare</button>
     <button type="button" id="export">Download CSV</button>
     <button type="button" id="share">Copy link</button>

@@ -5,6 +5,8 @@
  *   npm run scrape -- --source <id>      one source, due or not
  *   npm run scrape -- --force            ignore "unchanged upstream" and "not due"
  *   npm run scrape -- --accept <id>      publish a held source's data despite its guards
+ *   npm run scrape -- --source <id> --dry-run   fetch and check one source, print what would be
+ *                                               recorded, and write nothing
  *
  * For each source: fetch → extract → diff against the last good rows → guards → write.
  * A held or failed source keeps its last good data. Outcomes go to .cache/last-run.json, which
@@ -14,9 +16,8 @@ import { parseArgs } from 'node:util';
 import { intervalMs, loadSources } from './lib/config.ts';
 import { diffRows, historyIndex } from './lib/diff.ts';
 import { extract, mappingFrom } from './lib/extract.ts';
-import { fetchSource } from './lib/fetchers.ts';
+import { fetchSource, recordsFrom } from './lib/fetchers.ts';
 import { checkGuards } from './lib/guards.ts';
-import { detectFormat, parseRecords, type Rec } from './lib/parse.ts';
 import {
   duplicateKeys,
   readHistory,
@@ -34,8 +35,10 @@ const { values } = parseArgs({
     source: { type: 'string' },
     force: { type: 'boolean', default: false },
     accept: { type: 'string' },
+    'dry-run': { type: 'boolean', default: false },
   },
 });
+const dryRun = values['dry-run'] ?? false;
 const only = values.source || process.env['ONLY_SOURCE'] || undefined;
 const accept = values.accept || process.env['ACCEPT_SOURCE'] || undefined;
 const force = values.force ?? false;
@@ -46,15 +49,7 @@ async function runMapping(ctx: PluginContext): Promise<ExtractResult | 'unchange
   const spec = mappingFrom(ctx.source.options, `source "${ctx.source.id}"`);
   const fetched = await fetchSource(ctx);
   if (fetched === 'unchanged') return 'unchanged';
-  const format = ctx.source.options['format'] as Parameters<typeof parseRecords>[1] | undefined;
-  const rowsPath = ctx.source.options['rows'] === undefined ? undefined : String(ctx.source.options['rows']);
-  const records: Rec[] = [];
-  for (const f of fetched.files) {
-    const fmt = format ?? detectFormat(f.path, f.contentType);
-    if (!fmt) throw new Error(`cannot tell the format of ${f.path}; set "format"`);
-    for (const r of await parseRecords(f.bytes, fmt, rowsPath, f.path)) records.push(f.columns ? { ...r, ...f.columns } : r);
-  }
-  const out = extract(records, spec);
+  const out = extract(await recordsFrom(fetched, ctx.source.options), spec);
   return { ...out, revision: fetched.revision, revisionDate: fetched.revisionDate, etag: fetched.etag, lastModified: fetched.lastModified };
 }
 
@@ -97,6 +92,11 @@ async function runSource(source: SourceConfig, cache: RunEntry | undefined): Pro
     minRows: Number(source.options['min_rows'] ?? 1),
     rolling,
   });
+  if (dryRun) {
+    console.log(`  ${summary}; ${result.metrics.length} metrics${reasons.length ? `; would be held: ${reasons.join('; ')}` : ''}`);
+    for (const r of result.rows.slice(0, 5)) console.log(`  ${JSON.stringify(r).slice(0, 240)}`);
+    return { ...base, outcome: reasons.length ? 'held' : 'unchanged', reasons: reasons.length ? reasons : undefined, summary: 'dry run', warnings };
+  }
   if (reasons.length && accept !== source.id) {
     // Validators are not saved, so the next run fetches again and re-checks.
     return { ...base, outcome: 'held', reasons, summary, warnings };
@@ -167,6 +167,7 @@ for (const source of sources) {
   }
 }
 
-await writeRunCache(next);
+if (dryRun) console.log('dry run: nothing was written');
+else await writeRunCache(next);
 // A failed source is reported through an issue; the run itself still succeeds so the rest publishes.
 if (failures && process.env['CI'] !== 'true') process.exitCode = 1;

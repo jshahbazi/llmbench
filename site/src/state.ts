@@ -28,7 +28,10 @@ export interface ViewState {
   dir: 'asc' | 'desc';
   /** Models picked for compare mode. */
   cmp: string[];
-  view: 'table' | 'compare';
+  view: 'table' | 'compare' | 'chart';
+  /** Chart axes: x is 'released', 'params' or a column id; y is a column id ('' for the sort column). */
+  x: string;
+  y: string;
 }
 
 export const DEFAULTS: ViewState = {
@@ -49,6 +52,8 @@ export const DEFAULTS: ViewState = {
   dir: 'desc',
   cmp: [],
   view: 'table',
+  x: 'released',
+  y: '',
 };
 
 const int = (v: string | null, fallback: number): number => {
@@ -80,7 +85,9 @@ export function parseState(search: string): ViewState {
     sort: p.get('sort') ?? '',
     dir: p.get('dir') === 'asc' ? 'asc' : 'desc',
     cmp: p.getAll('m').filter(Boolean).slice(0, 5),
-    view: p.get('view') === 'compare' ? 'compare' : 'table',
+    view: p.get('view') === 'compare' ? 'compare' : p.get('view') === 'chart' ? 'chart' : 'table',
+    x: p.get('x') || 'released',
+    y: p.get('y') ?? '',
   };
 }
 
@@ -103,7 +110,9 @@ export function serializeState(s: ViewState): string {
   if (s.sort) p.set('sort', s.sort);
   if (s.sort && s.dir !== 'desc') p.set('dir', s.dir);
   for (const m of s.cmp) p.append('m', m);
-  if (s.view === 'compare') p.set('view', 'compare');
+  if (s.view !== 'table') p.set('view', s.view);
+  if (s.view === 'chart' && s.x !== 'released') p.set('x', s.x);
+  if (s.view === 'chart' && s.y) p.set('y', s.y);
   const q = p.toString();
   return q ? `?${q}` : '';
 }
