@@ -9,11 +9,11 @@
   "scripts": {
     "scrape": "node scripts/scrape.ts",
     "resolve": "node scripts/resolve.ts",
-    "build": "node scripts/build-data.ts",
+    "build": "node --disable-warning=ExperimentalWarning scripts/build.ts",
     "report-issues": "node scripts/report-issues.ts",
     "validate": "node scripts/validate.ts",
     "typecheck": "tsc",
-    "test": "node --test \"tests/**/*.test.ts\"",
+    "test": "node --disable-warning=ExperimentalWarning --test \"tests/**/*.test.ts\"",
     "preview": "python3 -m http.server 4321 --directory site/dist"
   },
   "dependencies": {

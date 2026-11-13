@@ -12,7 +12,8 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
     "types": ["node"]
   },
-  "include": ["scripts", "tests"]
+  "include": ["scripts", "tests", "site/src"]
 }

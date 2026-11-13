@@ -1,0 +1,432 @@
+/**
+ * Static pages: one per model, per benchmark column and per source, plus directories, the method
+ * and data pages. Plain HTML that works without JavaScript; the explorer is the one interactive page.
+ */
+import { fmt, paramsLabel, RUN_BY_LABELS, safeUrl, unitSuffix, unitWords } from '../../site/src/format.ts';
+import { pickBest, ranks, type Candidate } from '../../site/src/select.ts';
+import type { SiteColumn, SiteModel, SiteSource } from '../../site/src/types.ts';
+import { html, raw, up, type Html } from './html.ts';
+import type { SiteData } from './data.ts';
+
+export const SITE_URL = (process.env['SITE_URL'] ?? 'https://llmbench.site').replace(/\/$/, '');
+const ALL_RUN_BY = new Set([0, 1, 2]);
+
+export interface Page {
+  path: string;
+  html: string;
+}
+
+const NAV: Array<[string, string, string]> = [
+  ['explorer', '', 'Explorer'],
+  ['benchmarks', 'benchmarks/', 'Benchmarks'],
+  ['sources', 'sources/', 'Sources'],
+  ['method', 'method/', 'Method'],
+  ['data', 'data/', 'Data'],
+];
+
+function layout(o: { title: string; description: string; depth: number; active: string; body: Html; path: string; script?: string }): string {
+  const u = up(o.depth);
+  const doc = html`<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${o.title}</title>
+<meta name="description" content="${o.description}">
+<link rel="canonical" href="${SITE_URL}/${o.path}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='9' width='3' height='6' fill='%231a5fb4'/%3E%3Crect x='6.5' y='5' width='3' height='10' fill='%231a5fb4'/%3E%3Crect x='12' y='1' width='3' height='14' fill='%231a5fb4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="${u}style.css">
+${o.script ? html`<script type="module" src="${u}${o.script}"></script>` : ''}
+</head>
+<body>
+<header class="site">
+<a class="brand" href="${u}">llmbench</a>
+<nav aria-label="Site">${NAV.map(([id, href, label]) => html`<a href="${u}${href}"${id === o.active ? raw(' aria-current="page"') : ''}>${label}</a>`)}</nav>
+</header>
+<main id="main">
+${o.body}
+</main>
+<footer class="site">
+<p>Every score links to where it came from. Data: CC BY-SA 4.0 with each source's own licence kept (<a href="${u}data/">details</a>). Code: MIT. <a href="https://github.com/jshahbazi/llmbench">Source on GitHub</a>.</p>
+</footer>
+</body>
+</html>
+`;
+  return doc.value;
+}
+
+const runByLabel = (code: number) => RUN_BY_LABELS[code] ?? 'unknown';
+const score = (c: Candidate, col: SiteColumn) => `${fmt(c.value, col.unit)}${unitSuffix(col.unit)}`;
+const colHref = (u: string, col: SiteColumn) => `${u}benchmarks/${col.source}/${col.slug}/`;
+const modelHref = (u: string, m: SiteModel) => (m.unmatched ? `${u}sources/${m.unmatched}/#names` : `${u}models/${m.id}/`);
+const explorerHref = (u: string, params: Record<string, string | string[]>) => {
+  const p = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) for (const x of Array.isArray(v) ? v : [v]) p.append(k, x);
+  return `${u}?${p}`;
+};
+
+function ext(url: string | null, label = '↗'): Html {
+  const safe = safeUrl(url);
+  return safe ? html`<a href="${safe}" rel="noopener" title="Open the original">${label}</a>` : html``;
+}
+
+/** Location of a source's data, as a link a person can open. */
+export function fetchUrl(fetch?: string): string | null {
+  if (!fetch) return null;
+  let m = /^github:([^/]+)\/([^/]+)\/(.+)$/.exec(fetch);
+  if (m) return `https://github.com/${m[1]}/${m[2]}/blob/HEAD/${m[3]!.replace(/\*.*$/, '')}`;
+  m = /^hf:(.+)$/.exec(fetch);
+  if (m) return `https://huggingface.co/datasets/${m[1]}`;
+  return safeUrl(fetch);
+}
+
+function modelMeta(m: SiteModel): string {
+  return [
+    m.provider,
+    m.released && `released ${m.released}`,
+    paramsLabel(m.params_b, m.active_b) && `${paramsLabel(m.params_b, m.active_b)} parameters`,
+    m.open_weights === true ? 'open weights' : m.open_weights === false ? 'API only' : '',
+    m.license && `licence ${m.license}`,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function statusText(s: SiteSource): string {
+  if (s.terms !== 'allowed') return 'not used';
+  if (s.outcome === 'held') return 'held';
+  if (s.outcome === 'failed') return 'last check failed';
+  if (!s.row_count) return 'pending';
+  return 'ok';
+}
+
+const day = (t?: string) => (t ? t.slice(0, 10) : '—');
+
+export function buildPages(d: SiteData): Page[] {
+  const { index } = d;
+  const pages: Page[] = [];
+  const sourceName = new Map(index.sources.map((s) => [s.id, s.name]));
+  const best = (mi: number, ci: number) => pickBest(d.byCell.get(`${mi}:${ci}`) ?? [], index.columns[ci]!.direction, ALL_RUN_BY);
+
+  // Ranks per column among matched models, by each model's best score.
+  const rankOf = new Map<string, number>();
+  for (const [ci, ms] of d.columnModels) {
+    const col = index.columns[ci]!;
+    const list = [...ms].filter((mi) => !index.models[mi]!.unmatched);
+    const vals = list.map((mi) => best(mi, ci)!.best.value);
+    ranks(vals, col.direction).forEach((r, i) => rankOf.set(`${list[i]}:${ci}`, r));
+  }
+
+  // ---- Explorer -------------------------------------------------------------------------------
+  pages.push({ path: '', html: explorerPage(d) });
+
+  // ---- Models ---------------------------------------------------------------------------------
+  const sourceOrder = new Map(index.sources.map((s, i) => [s.id, i]));
+  index.models.forEach((m, mi) => {
+    if (m.unmatched) return;
+    const u = up(2);
+    const cols = [...(d.modelColumns.get(mi) ?? [])].sort((a, b) => {
+      const ca = index.columns[a]!;
+      const cb = index.columns[b]!;
+      return (sourceOrder.get(ca.source) ?? 0) - (sourceOrder.get(cb.source) ?? 0) || cb.coverage - ca.coverage || ca.label.localeCompare(cb.label);
+    });
+    const bySource = new Map<string, number[]>();
+    for (const ci of cols) {
+      const s = index.columns[ci]!.source;
+      bySource.set(s, [...(bySource.get(s) ?? []), ci]);
+    }
+    const scoreRows = (cis: number[]) =>
+      cis.map((ci) => {
+        const col = index.columns[ci]!;
+        const list = [...(d.byCell.get(`${mi}:${ci}`) ?? [])].sort((a, b) => (col.direction === 'lower' ? a.value - b.value : b.value - a.value));
+        const rank = rankOf.get(`${mi}:${ci}`);
+        return list.map(
+          (c, k) => html`<tr${k ? raw(' class="sub"') : ''}>
+<td>${k ? '' : html`<a href="${colHref(u, col)}">${col.label}</a>`}</td>
+<td class="num">${score(c, col)}${c.interval ? html`<span class="ci">${c.interval}</span>` : ''}</td>
+<td class="num">${k || rank === undefined ? '' : html`${rank}<span class="of"> / ${col.coverage}</span>`}</td>
+<td class="date">${c.date || '—'}</td><td>${runByLabel(c.runBy)}</td><td>${c.context}</td><td>${ext(c.url)}</td></tr>`,
+        );
+      });
+    const scoreTable = (cis: number[]) => html`<div class="table-scroll"><table class="data">
+<thead><tr><th scope="col">Benchmark</th><th scope="col" class="num">Score</th><th scope="col" class="num">Rank</th><th scope="col">Date</th><th scope="col">Run by</th><th scope="col">Context</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
+<tbody>${scoreRows(cis)}</tbody></table></div>`;
+    const aliases = [...d.names].flatMap(([sid, list]) => list.filter((n) => n.model === mi).map((n) => ({ sid, ...n })));
+    const changes = [...d.history]
+      .flatMap(([sid, list]) => list.filter((e) => e.modelIndex === mi).map((e) => ({ ...e, sid })))
+      .sort((a, b) => (a.t < b.t ? 1 : -1))
+      .slice(0, 50);
+    const repo = safeUrl(m.model_repo);
+    const body = html`
+<p class="crumbs"><a href="${u}">Explorer</a> › Models</p>
+<h1>${m.name}</h1>
+<p class="meta">${modelMeta(m)}</p>
+<p class="links">${repo ? html`<a href="${repo}" rel="noopener">Model repository</a> · ` : ''}<a href="https://whatmodel.sh/model/${m.id}" rel="noopener">whatmodel.sh page</a> (memory needed, how to run it) · <a href="${explorerHref(u, { q: m.name, min: '1' })}">Show in the explorer</a> · <a href="${explorerHref(u, { m: m.id, view: 'compare' })}">Compare with other models</a></p>
+<p>${cols.length} benchmark scores from ${bySource.size} source${bySource.size === 1 ? '' : 's'}. Rank is among every model with a score in that column, using each model's best score.</p>
+${[...bySource].map(([sid, cis]) => {
+  const main = cis.filter((ci) => index.columns[ci]!.headline);
+  const subs = cis.filter((ci) => !index.columns[ci]!.headline);
+  return html`
+<h2>${sourceName.get(sid) ?? sid}</h2>
+${main.length ? scoreTable(main) : ''}
+${subs.length ? html`<details class="subscores"${main.length ? '' : raw(' open')}><summary>${subs.length} sub-score${subs.length === 1 ? '' : 's'}</summary>${scoreTable(subs)}</details>` : ''}`;
+})}
+<h2>Names in the sources</h2>
+<ul class="names">${aliases.map((a) => html`<li><a href="${u}sources/${a.sid}/">${sourceName.get(a.sid) ?? a.sid}</a>: “${a.raw}”${a.qualifiers ? html` <span class="muted">(context: ${a.qualifiers})</span>` : ''}</li>`)}</ul>
+${changes.length ? html`<h2>Recent changes</h2><ul class="history">${changes.map((e) => html`<li>${day(e.t)} · ${sourceName.get(e.sid) ?? e.sid} · ${e.column !== undefined ? index.columns[e.column]!.label : e.metric}: ${changeText(e.op, e.from, e.to)}</li>`)}</ul>` : ''}
+`;
+    pages.push({
+      path: `models/${m.id}/`,
+      html: layout({ title: `${m.name} — benchmark scores · llmbench`, description: `Every benchmark score for ${m.name}, from ${bySource.size} sources, with links to each original.`, depth: 2, active: 'explorer', body, path: `models/${m.id}/` }),
+    });
+  });
+
+  // ---- Benchmark columns ----------------------------------------------------------------------
+  index.columns.forEach((col, ci) => {
+    const u = up(3);
+    const entries = [...(d.columnModels.get(ci) ?? [])]
+      .map((mi) => ({ mi, b: best(mi, ci)!, all: d.byCell.get(`${mi}:${ci}`)!.length }))
+      .sort((a, b) => (col.direction === 'lower' ? a.b.best.value - b.b.best.value : b.b.best.value - a.b.best.value));
+    const siblings = col.family ? index.columns.filter((c) => c.family === col.family && c.id !== col.id) : [];
+    const href = safeUrl(col.url);
+    const body = html`
+<p class="crumbs"><a href="${u}benchmarks/">Benchmarks</a> › <a href="${u}sources/${col.source}/">${sourceName.get(col.source) ?? col.source}</a></p>
+<h1>${col.label}</h1>
+<p class="meta">From <a href="${u}sources/${col.source}/">${sourceName.get(col.source) ?? col.source}</a> · ${unitWords(col.unit)} · ${col.direction === 'lower' ? 'lower is better' : 'higher is better'} · ${col.coverage} models${col.tags?.length ? html` · ${col.tags.join(', ')}` : ''}</p>
+${col.description ? html`<p>${col.description}</p>` : ''}
+<p class="links">${href ? html`<a href="${href}" rel="noopener">About this benchmark</a> · ` : ''}<a href="${explorerHref(u, { c: col.id, sort: col.id, min: '1' })}">Open in the explorer</a>${col.metric !== col.label ? html` · source's name for it: “${col.metric}”` : ''}</p>
+${siblings.length ? html`<p>Same benchmark elsewhere: ${siblings.map((s, k) => html`${k ? ', ' : ''}<a href="${colHref(u, s)}">${s.label}</a> (${sourceName.get(s.source) ?? s.source})`)}</p>` : ''}
+<div class="table-scroll"><table class="data">
+<thead><tr><th scope="col" class="num">#</th><th scope="col">Model</th><th scope="col" class="num">Score</th><th scope="col">Date</th><th scope="col">Run by</th><th scope="col">Context</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
+<tbody>${entries.map(({ mi, b, all }) => {
+    const m = index.models[mi]!;
+    const rank = rankOf.get(`${mi}:${ci}`);
+    return html`<tr${m.unmatched ? raw(' class="unmatched"') : ''}><td class="num">${rank ?? ''}</td>
+<td><a href="${modelHref(u, m)}">${m.name}</a>${m.unmatched ? html` <span class="muted">(unmatched name)</span>` : ''}</td>
+<td class="num">${score(b.best, col)}${b.best.interval ? html`<span class="ci">${b.best.interval}</span>` : ''}${all > 1 ? html`<span class="muted" title="${all} scores for this model; best shown"> +${all - 1}</span>` : ''}</td>
+<td class="date">${b.best.date || '—'}</td><td>${runByLabel(b.best.runBy)}</td><td>${b.best.context}</td><td>${ext(b.best.url)}</td></tr>`;
+  })}</tbody></table></div>
+`;
+    pages.push({
+      path: `benchmarks/${col.source}/${col.slug}/`,
+      html: layout({ title: `${col.label} (${sourceName.get(col.source)}) — llmbench`, description: `${col.label} scores for ${col.coverage} models, from ${sourceName.get(col.source)}.`, depth: 3, active: 'benchmarks', body, path: `benchmarks/${col.source}/${col.slug}/` }),
+    });
+  });
+
+  // ---- Benchmarks directory -------------------------------------------------------------------
+  {
+    const u = up(1);
+    const body = html`
+<h1>Benchmarks</h1>
+<p>Every metric from every source: ${index.columns.length} columns. Each source's metrics stay separate, because the same benchmark run by two sources is not always the same measurement. Headline metrics are marked ★; the rest are sub-scores.</p>
+<p><label>Filter <input type="search" id="filter" placeholder="Name, source or tag" autocomplete="off"></label></p>
+${index.sources
+  .filter((s) => s.metric_count)
+  .map((s) => {
+    const cols = index.columns.filter((c) => c.source === s.id).sort((a, b) => Number(b.headline) - Number(a.headline) || b.coverage - a.coverage);
+    return html`<section class="bench-group"><h2><a href="${u}sources/${s.id}/">${s.name}</a> <span class="muted">${cols.length}</span></h2>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Metric</th><th scope="col" class="num">Models</th><th scope="col">Tags</th><th scope="col">Better</th></tr></thead><tbody>
+${cols.map((c) => html`<tr data-search="${`${c.label} ${c.metric} ${s.name} ${(c.tags ?? []).join(' ')}`.toLowerCase()}"><td>${c.headline ? '★ ' : ''}<a href="${colHref(u, c)}">${c.label}</a></td><td class="num">${c.coverage}</td><td>${(c.tags ?? []).join(', ')}</td><td>${c.direction === 'lower' ? 'lower' : 'higher'}</td></tr>`)}
+</tbody></table></div></section>`;
+  })}
+<script>
+const f = document.getElementById('filter');
+f.addEventListener('input', () => {
+  const q = f.value.trim().toLowerCase();
+  for (const tr of document.querySelectorAll('tr[data-search]')) tr.hidden = !!q && !tr.dataset.search.includes(q);
+  for (const g of document.querySelectorAll('.bench-group')) g.hidden = !!q && !g.querySelector('tr[data-search]:not([hidden])');
+});
+</script>
+`;
+    pages.push({ path: 'benchmarks/', html: layout({ title: 'Benchmarks — llmbench', description: `All ${index.columns.length} benchmark metrics from every source.`, depth: 1, active: 'benchmarks', body, path: 'benchmarks/' }) });
+  }
+
+  // ---- Sources ----------------------------------------------------------------------------------
+  {
+    const u = up(1);
+    const body = html`
+<h1>Sources</h1>
+<p>Everything llmbench pulls from, listed in <a href="https://github.com/jshahbazi/llmbench/blob/main/sources.yaml">sources.yaml</a>. Each source is checked on its own schedule. If new data fails a check, the last good data stays up and an issue is opened.</p>
+<div class="table-scroll"><table class="data">
+<thead><tr><th scope="col">Source</th><th scope="col">Status</th><th scope="col" class="num">Rows</th><th scope="col" class="num">Metrics</th><th scope="col" class="num">Names matched</th><th scope="col">Licence</th><th scope="col">Checked</th><th scope="col">Changed</th></tr></thead>
+<tbody>${index.sources.map(
+      (s) => html`<tr><td><a href="${u}sources/${s.id}/">${s.name}</a></td><td class="status-${statusText(s).split(' ')[0]}">${statusText(s)}</td><td class="num">${s.row_count || ''}</td><td class="num">${s.metric_count || ''}</td><td class="num">${s.names ? `${s.matched_names} / ${s.names}` : ''}</td><td>${s.license ?? ''}</td><td>${day(s.checked_at)}</td><td>${day(s.changed_at)}</td></tr>`,
+    )}</tbody></table></div>
+`;
+    pages.push({ path: 'sources/', html: layout({ title: 'Sources — llmbench', description: 'Every leaderboard and dataset llmbench pulls from, with status and licence.', depth: 1, active: 'sources', body, path: 'sources/' }) });
+  }
+
+  for (const s of index.sources) {
+    const u = up(2);
+    const cols = index.columns.filter((c) => c.source === s.id).sort((a, b) => Number(b.headline) - Number(a.headline) || b.coverage - a.coverage);
+    const names = d.names.get(s.id) ?? [];
+    const events = (d.history.get(s.id) ?? []).slice(-100).reverse();
+    const where = fetchUrl(s.fetch);
+    const headline = cols.filter((c) => c.headline).map((c) => c.id);
+    const body = html`
+<p class="crumbs"><a href="${u}sources/">Sources</a></p>
+<h1>${s.name}</h1>
+<p class="meta">Status: ${statusText(s)} · checked ${day(s.checked_at)} · last changed ${day(s.changed_at)}${s.every ? ` · checked every ${s.every}` : ''}</p>
+${s.reasons?.length ? html`<div class="notice"><p>${s.outcome === 'held' ? 'The latest data was held at the last good version:' : 'The latest check failed:'}</p><ul>${s.reasons.map((r) => html`<li>${r}</li>`)}</ul></div>` : ''}
+${s.warnings?.length ? html`<div class="notice soft"><ul>${s.warnings.map((w) => html`<li>${w}</li>`)}</ul></div>` : ''}
+<p class="links"><a href="${safeUrl(s.homepage) ?? '#'}" rel="noopener">Website</a>${where ? html` · <a href="${where}" rel="noopener">Data we read</a>` : ''}${s.upstream_revision ? html` · pinned to upstream commit <code>${s.upstream_revision.slice(0, 7)}</code>` : ''}${headline.length ? html` · <a href="${explorerHref(u, { c: headline, min: '1' })}">Open its headline metrics in the explorer</a>` : ''}</p>
+<p>Licence: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${s.attribution}` : ''}${s.terms_note ? html` <span class="muted">${s.terms_note}</span>` : ''}</p>
+${s.terms !== 'allowed' ? html`<p>This source is listed for the record and is not fetched.</p>` : html`
+<h2>Metrics <span class="muted">${cols.length}</span></h2>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Metric</th><th scope="col" class="num">Models</th><th scope="col">Tags</th></tr></thead><tbody>
+${cols.map((c) => html`<tr><td>${c.headline ? '★ ' : ''}<a href="${colHref(u, c)}">${c.label}</a>${c.label !== c.metric ? html` <span class="muted">${c.metric}</span>` : ''}</td><td class="num">${c.coverage}</td><td>${(c.tags ?? []).join(', ')}</td></tr>`)}
+</tbody></table></div>
+<h2 id="names">Model names <span class="muted">${s.matched_names} of ${s.names} matched</span></h2>
+<p>How each name in this source was matched to a model. Unmatched names are still shown in the explorer when “Show unmatched model names” is on. Fix a match by adding a line to <code>curation/aliases.csv</code>.</p>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col">Name in the source</th><th scope="col">Model</th><th scope="col" class="num">Scores</th><th scope="col">Context</th></tr></thead><tbody>
+${names.map((n) => {
+  const m = index.models[n.model]!;
+  return html`<tr${m.unmatched ? raw(' class="unmatched"') : ''}><td>${n.raw}</td><td>${m.unmatched ? html`<span class="muted">unmatched</span>` : html`<a href="${u}models/${m.id}/">${m.name}</a>`}</td><td class="num">${n.scores}</td><td>${n.qualifiers}</td></tr>`;
+})}
+</tbody></table></div>
+<h2>Recent changes</h2>
+${events.length ? html`<ul class="history">${events.map((e) => {
+  const m = e.modelIndex !== undefined ? index.models[e.modelIndex] : undefined;
+  return html`<li>${day(e.t)} · ${m && !m.unmatched ? html`<a href="${u}models/${m.id}/">${m.name}</a>` : e.model} · ${e.column !== undefined ? index.columns[e.column]!.label : e.metric}: ${changeText(e.op, e.from, e.to)}</li>`;
+})}</ul>` : html`<p class="muted">No changes recorded since this source was first imported on ${day(s.changed_at)}.</p>`}
+`}
+`;
+    pages.push({ path: `sources/${s.id}/`, html: layout({ title: `${s.name} — llmbench`, description: `${s.name}: status, metrics, model names and recent changes.`, depth: 2, active: 'sources', body, path: `sources/${s.id}/` }) });
+  }
+
+  pages.push({ path: 'method/', html: methodPage() });
+  pages.push({ path: 'data/', html: dataPage(d) });
+  pages.push({
+    path: '404.html',
+    html: layout({ title: 'Not found — llmbench', description: 'Page not found.', depth: 0, active: '', path: '404.html', body: html`<h1>Not found</h1><p>That page does not exist. Try the <a href="/">explorer</a> or the <a href="/benchmarks/">list of benchmarks</a>.</p>` }),
+  });
+  return pages;
+}
+
+function changeText(op: string, from: unknown, to: unknown): string {
+  const v = (x: unknown) => (x === undefined || x === null ? '' : String(x));
+  if (op === 'add') return `added ${v(to)}`;
+  if (op === 'remove') return `removed (was ${v(from)})`;
+  if (op === 'return') return `back, ${v(to)}`;
+  return `${v(from)} → ${v(to)}`;
+}
+
+function explorerPage(d: SiteData): string {
+  const makers = new Map<string, number>();
+  for (const m of d.index.models) if (!m.unmatched && m.provider) makers.set(m.provider, (makers.get(m.provider) ?? 0) + 1);
+  const body = html`
+<h1 class="sr">llmbench explorer</h1>
+<p class="lede">Benchmark results from every listed source, side by side. Pick any columns, sort by any of them, and click a score to see where it came from.</p>
+<p id="stats" class="stats">Loading…</p>
+
+<div class="toolbar" role="toolbar" aria-label="Columns">
+  <button type="button" id="pick" aria-haspopup="dialog">Choose columns</button>
+  <span class="presets" id="presets"></span>
+  <label class="auto-only">Show <select id="ncols"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> most covered</label>
+  <button type="button" id="reset-cols" class="link" hidden>Back to most covered</button>
+</div>
+
+<form id="filters" class="filters" onsubmit="return false">
+  <label class="search"><span>Model</span> <input id="q" type="search" placeholder="Name or maker" autocomplete="off"></label>
+  <label><span>Released</span> <select id="since"><option value="0">any time</option><option value="6">last 6 months</option><option value="12">last 12 months</option><option value="24">last 24 months</option><option value="36">last 36 months</option></select></label>
+  <label><span>Size</span> <select id="size"><option value="0">any</option><option value="4">≤ 4B</option><option value="14">≤ 14B</option><option value="36">≤ 36B</option><option value="80">≤ 80B</option><option value="250">≤ 250B</option><option value="-250">over 250B</option></select></label>
+  <label><span>Maker</span> <select id="maker"><option value="">any</option>${[...makers].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([p, n]) => html`<option value="${p}">${p} (${n})</option>`)}</select></label>
+  <label><input id="open" type="checkbox"> Open weights</label>
+  <label><input id="perm" type="checkbox"> Permissive licence</label>
+  <fieldset class="runby"><legend>Run by</legend>
+    <label><input type="checkbox" data-runby="0" checked> independent</label>
+    <label><input type="checkbox" data-runby="1" checked> submitted</label>
+    <label><input type="checkbox" data-runby="2" checked> lab</label>
+  </fieldset>
+  <label><input id="um" type="checkbox"> <span id="um-label">Unmatched names</span></label>
+  <label><span>Hide models with fewer than</span> <select id="min"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="10">10</option></select> <span>scores in view</span></label>
+</form>
+
+<div class="viewbar">
+  <p id="viewstats" class="stats" aria-live="polite"></p>
+  <span class="actions">
+    <button type="button" id="compare" disabled>Compare</button>
+    <button type="button" id="export">Download CSV</button>
+    <button type="button" id="share">Copy link</button>
+  </span>
+</div>
+
+<div id="table-wrap" class="table-wrap" tabindex="0" aria-label="Benchmark table"></div>
+
+<dialog id="picker" aria-labelledby="picker-title">
+  <form method="dialog" class="picker-head">
+    <h2 id="picker-title">Choose columns</h2>
+    <button type="submit" class="link">Done</button>
+  </form>
+  <p class="muted">Tick any metric from any source. Numbers are how many models have a score, given the current filters.</p>
+  <p><input id="picker-q" type="search" placeholder="Search metrics" autocomplete="off"> <label><input id="picker-sub" type="checkbox"> Include sub-scores</label></p>
+  <div id="picker-list"></div>
+</dialog>
+
+<div id="popover" class="popover" role="dialog" aria-modal="false" hidden></div>
+`;
+  return layout({
+    title: 'llmbench — LLM benchmark results from every leaderboard, side by side',
+    description: 'Compare language models across every benchmark leaderboard: pick any columns, filter by size, licence and maker, and see where every number came from.',
+    depth: 0,
+    active: 'explorer',
+    body,
+    path: '',
+    script: 'js/explorer.js',
+  });
+}
+
+function methodPage(): string {
+  const body = html`
+<h1>Method</h1>
+<p>llmbench collects published benchmark results. It does not run evaluations, and it does not combine scores into an overall ranking.</p>
+<h2>Where the numbers come from</h2>
+<p>Every source is listed in <a href="https://github.com/jshahbazi/llmbench/blob/main/sources.yaml">sources.yaml</a> with its licence. A source is only fetched after its terms have been checked. Every few hours a scheduled job reads each source, stores each score exactly as the source wrote it, and records anything that changed. Every score on the site links back to the page or file it came from.</p>
+<h2>One column per source</h2>
+<p>The same benchmark run by two sources is often not the same measurement: different prompts, settings, versions of the question set or scoring. So each source's metric is its own column, labelled with the source. Where two columns measure the same benchmark, the benchmark page links them.</p>
+<h2>Which score a cell shows</h2>
+<p>A model can have several scores in one column: re-runs, reasoning modes, agent set-ups, or several entries in the source. The cell shows the best one that passes your filters, labelled with how the model was run, and a small number when there are others. Click the cell to see all of them.</p>
+<h2>Who ran it</h2>
+<ul>
+<li><strong>Independent</strong>: someone other than the model's maker ran the evaluation (for example Epoch AI, or Arena's human votes).</li>
+<li><strong>Submitted</strong>: the score was submitted to a leaderboard by whoever built the model or agent, and who executed it is not established.</li>
+<li><strong>Lab</strong>: reported by the model's maker, for example in a model card or release post.</li>
+</ul>
+<h2>Matching model names</h2>
+<p>Sources name models differently. A name is matched to a model only on an exact match, after ignoring case and punctuation and setting aside qualifiers such as “(High)”, “(FC)” or a snapshot date, which are kept as context. There is no fuzzy matching: a wrong merge would mix two models' scores. Names that do not match are listed on each source's page and can be shown in the explorer.</p>
+<h2>Dates</h2>
+<p>A score's date is the date the source gives for the evaluation. When the source gives none, no date is shown; the site never substitutes the day it first saw a score.</p>
+<h2>When a source breaks</h2>
+<p>New data is checked before it is published: missing columns, far fewer rows than before, many scores changing at once, numbers turning into text, or repeated rows. If a check fails, the last good data stays up and an issue is opened on GitHub.</p>
+<h2>Sizes and licences</h2>
+<p>Size filters use total parameters, because that sets the memory a model needs. For mixture-of-experts models the active parameter count is shown too. “Permissive licence” means Apache, MIT, BSD and similar; custom model licences are not counted, even when they allow commercial use.</p>
+`;
+  return layout({ title: 'Method — llmbench', description: 'How llmbench collects, matches and shows benchmark results.', depth: 1, active: 'method', body, path: 'method/' });
+}
+
+function dataPage(d: SiteData): string {
+  const u = up(1);
+  const body = html`
+<h1>Data</h1>
+<p>All data is in the <a href="https://github.com/jshahbazi/llmbench/tree/main/data">data/ folder on GitHub</a> as plain text, updated by the scheduled job. Git history is the full record of every change.</p>
+<ul>
+<li><code>data/sources/&lt;source&gt;/rows.jsonl</code>: every row exactly as the source published it.</li>
+<li><code>data/sources/&lt;source&gt;/history.jsonl</code>: every score that was added, changed or removed after the first import.</li>
+<li><code>data/catalog/models.jsonl</code>: the model catalogue, seeded from whatmodel.sh.</li>
+<li><code>data/resolved/aliases.csv</code> and <code>data/reports/unmatched.csv</code>: how each source's model names were matched.</li>
+</ul>
+<p>The files this site loads are also public: <a href="${u}data/index.json">index.json</a> and one <code>data/cells/&lt;source&gt;.json</code> per source. Downloads in CSV, Parquet and SQLite are planned.</p>
+<h2>Licence</h2>
+<p>The compilation is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, because it builds on the whatmodel.sh compilation. Each source keeps its own licence:</p>
+<ul>${d.index.sources
+    .filter((s) => s.terms === 'allowed')
+    .map((s) => html`<li><a href="${u}sources/${s.id}/">${s.name}</a>: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${s.attribution}` : ''}</li>`)}</ul>
+<p>No source endorses this project.</p>
+`;
+  return layout({ title: 'Data — llmbench', description: 'Where llmbench data lives, and its licences.', depth: 1, active: 'data', body, path: 'data/' });
+}
+
+export function sitemap(pages: readonly Page[]): string {
+  const urls = pages.filter((p) => !p.path.endsWith('.html')).map((p) => `<url><loc>${SITE_URL}/${p.path}</loc></url>`);
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
+}
