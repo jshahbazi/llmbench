@@ -111,3 +111,18 @@ test('mapping errors are reported with the source', () => {
   assert.throws(() => mappingFrom({ model: 'm', ci: ['a'] }, 's'), /two columns/);
   assert.throws(() => mappingFrom({ model: 'm', duplicates: 'keep' }, 's'), /"hold" or "drop"/);
 });
+
+test('run_by_from reads who ran each row from a column', () => {
+  const spec = mappingFrom({ model: 'm', scores: ['s'], run_by_from: { column: 'src', values: { Lab: 'independent', 'Self-Reported': 'lab' } } }, 't');
+  const out = extract(
+    [
+      { m: 'a', s: '1', src: 'Lab' },
+      { m: 'b', s: '2', src: 'Self-Reported' },
+      { m: 'c', s: '3', src: 'Somebody' },
+    ],
+    spec,
+  );
+  assert.deepEqual(out.rows.map((r) => r.run_by), ['independent', 'lab', undefined]);
+  assert.equal(out.rows[0]!.extra, undefined, 'the column is used, not kept as extra');
+  assert.throws(() => mappingFrom({ model: 'm', run_by_from: { column: 'src', values: { x: 'maybe' } } }, 't'), /must map to one of/);
+});

@@ -3,6 +3,7 @@ import { test } from 'node:test';
 import { draftEntry } from '../scripts/lib/draft.ts';
 import { markdownRecords, markdownTables, parseRecords } from '../scripts/lib/parse.ts';
 import { metricList, submissionRow } from '../scripts/sources/tau2.ts';
+import { boardsFrom, entryRow as tbRow } from '../scripts/sources/terminalbench.ts';
 import { logTicks, niceTicks, yearTicks } from '../site/src/chart.ts';
 import { DEFAULTS, parseState, serializeState } from '../site/src/state.ts';
 
@@ -100,4 +101,28 @@ test('chart axes round-trip through the URL and are left out of other views', ()
   assert.deepEqual(parseState(serializeState(s)), s);
   assert.equal(serializeState({ ...DEFAULTS, x: 'params' }), '');
   assert.equal(parseState('?view=chart').x, 'released');
+});
+
+test('Markdown cells decode HTML entities', () => {
+  const recs = markdownRecords('| Model | &mu; | &sigma; &amp; more | &#956; |\n|---|---|---|---|\n| A | 1 | 2 | 3 |\n', 0, 't');
+  assert.deepEqual(Object.keys(recs[0]!), ['Model', 'μ', 'σ & more', 'μ (2)']);
+});
+
+test('Terminal-Bench: both row shapes, agent as context, Claude display names', () => {
+  const b = { package: 'p', name: 'n', version: '4.1' };
+  const v41 = tbRow(b, {
+    id: 'u1',
+    metadata: { date: '2026-09-22', agent_display: { label: 'Claude Code' }, model_display: { label: 'Opus 5.5', url: 'https://www.anthropic.com/claude-opus-5-5' }, model_org: { label: 'Anthropic' }, reasoning_effort: 'max' },
+    metrics: { accuracy: 65.76, accuracy_ci95_half_width: 3.11, total_cost_usd: 4718.65, n_trials: 330 },
+  }).row!;
+  assert.deepEqual([v41.model, v41.model_label, v41.context], ['Opus 5.5', 'Claude Opus 5.5', { agent: 'Claude Code', reasoning_effort: 'max effort' }]);
+  assert.deepEqual(v41.scores, { '4.1/accuracy': 65.76, '4.1/cost_per_trial': 14.2989 });
+  assert.deepEqual(v41.ci, { '4.1/accuracy': [62.65, 68.87] });
+  const b2 = { ...b, version: '2.0' };
+  const one = tbRow(b2, { id: 'u2', metadata: { agent_display: { label: 'Terminus 2' }, model_display: 'GPT-5.5', model_names: ['gpt-5.5'] }, metrics: { accuracy: 60 } }).row!;
+  assert.deepEqual([one.model, one.model_label], ['gpt-5.5', 'GPT-5.5']);
+  const many = tbRow(b2, { id: 'u3', metadata: { agent_display: { label: 'Warp' }, model_display: 'Multiple', model_names: ['gpt-5', 'claude-haiku-4-5'] }, metrics: { accuracy: 50 } }).row!;
+  assert.equal(many.model, 'Warp + gpt-5 + claude-haiku-4-5');
+  assert.match(tbRow(b2, { id: 'u4', metadata: {}, metrics: {} }).problem!, /no accuracy/);
+  assert.ok(boardsFrom({ boards: [{ package: 'p' }] }).problem);
 });

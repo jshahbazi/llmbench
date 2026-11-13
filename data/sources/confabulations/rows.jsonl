@@ -1,0 +1,66 @@
+{"key":"Amazon Nova Pro","model":"Amazon Nova Pro","scores":{"Weighted":"30.05","Confab %":"54.5","Non-Resp %":"5.6"}}
+{"key":"Baidu Ernie 4.5 300B A47B","model":"Baidu Ernie 4.5 300B A47B","scores":{"Weighted":"15.97","Confab %":"25.2","Non-Resp %":"6.7"}}
+{"key":"Claude 3 Haiku","model":"Claude 3 Haiku","scores":{"Weighted":"34.21","Confab %":"56.9","Non-Resp %":"11.5"}}
+{"key":"Claude 3 Opus","model":"Claude 3 Opus","scores":{"Weighted":"22.70","Confab %":"28.2","Non-Resp %":"17.2"}}
+{"key":"Claude 3.5 Haiku","model":"Claude 3.5 Haiku","scores":{"Weighted":"36.74","Confab %":"65.8","Non-Resp %":"7.6"}}
+{"key":"Claude 3.5 Sonnet 2024-10-22","model":"Claude 3.5 Sonnet 2024-10-22","scores":{"Weighted":"19.94","Confab %":"12.9","Non-Resp %":"27.0"}}
+{"key":"Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","scores":{"Weighted":"19.76","Confab %":"25.2","Non-Resp %":"14.3"}}
+{"key":"Claude 3.7 Sonnet Thinking 16K","model":"Claude 3.7 Sonnet Thinking 16K","scores":{"Weighted":"14.71","Confab %":"7.9","Non-Resp %":"21.5"}}
+{"key":"Claude Opus 4 (no reasoning)","model":"Claude Opus 4 (no reasoning)","scores":{"Weighted":"17.06","Confab %":"3.0","Non-Resp %":"31.2"}}
+{"key":"Claude Opus 4 Thinking 16K","model":"Claude Opus 4 Thinking 16K","scores":{"Weighted":"15.92","Confab %":"2.5","Non-Resp %":"29.4"}}
+{"key":"Claude Opus 4.1 (no reasoning)","model":"Claude Opus 4.1 (no reasoning)","scores":{"Weighted":"18.51","Confab %":"4.0","Non-Resp %":"33.1"}}
+{"key":"Claude Opus 4.1 Thinking 16K","model":"Claude Opus 4.1 Thinking 16K","scores":{"Weighted":"17.08","Confab %":"2.5","Non-Resp %":"31.7"}}
+{"key":"Claude Sonnet 4 (no reasoning)","model":"Claude Sonnet 4 (no reasoning)","scores":{"Weighted":"14.85","Confab %":"5.4","Non-Resp %":"24.2"}}
+{"key":"Claude Sonnet 4 Thinking 16K","model":"Claude Sonnet 4 Thinking 16K","scores":{"Weighted":"13.20","Confab %":"2.5","Non-Resp %":"23.9"}}
+{"key":"DeepSeek R1","model":"DeepSeek R1","scores":{"Weighted":"12.65","Confab %":"17.3","Non-Resp %":"8.0"}}
+{"key":"DeepSeek R1 05/28","model":"DeepSeek R1 05/28","scores":{"Weighted":"14.56","Confab %":"12.9","Non-Resp %":"16.2"}}
+{"key":"DeepSeek V3-0324","model":"DeepSeek V3-0324","scores":{"Weighted":"26.15","Confab %":"39.1","Non-Resp %":"13.2"}}
+{"key":"GLM-4.5","model":"GLM-4.5","scores":{"Weighted":"11.30","Confab %":"7.9","Non-Resp %":"14.7"}}
+{"key":"GPT-4 Turbo","model":"GPT-4 Turbo","scores":{"Weighted":"28.42","Confab %":"26.7","Non-Resp %":"30.1"}}
+{"key":"GPT-4.5 Preview","model":"GPT-4.5 Preview","scores":{"Weighted":"13.64","Confab %":"11.9","Non-Resp %":"15.4"}}
+{"key":"GPT-4o 2024-08-06","model":"GPT-4o 2024-08-06","scores":{"Weighted":"15.34","Confab %":"22.3","Non-Resp %":"8.4"}}
+{"key":"GPT-4o 2024-11-20","model":"GPT-4o 2024-11-20","scores":{"Weighted":"17.21","Confab %":"26.2","Non-Resp %":"8.2"}}
+{"key":"GPT-4o Feb 2025","model":"GPT-4o Feb 2025","scores":{"Weighted":"16.63","Confab %":"26.7","Non-Resp %":"6.5"}}
+{"key":"GPT-4o Mar 2025","model":"GPT-4o Mar 2025","scores":{"Weighted":"20.81","Confab %":"38.1","Non-Resp %":"3.5"}}
+{"key":"GPT-4o mini","model":"GPT-4o mini","scores":{"Weighted":"37.21","Confab %":"60.9","Non-Resp %":"13.5"}}
+{"key":"GPT-5 (medium reasoning)","model":"GPT-5 (medium reasoning)","scores":{"Weighted":"10.34","Confab %":"10.9","Non-Resp %":"9.8"}}
+{"key":"GPT-5 mini (medium reasoning)","model":"GPT-5 mini (medium reasoning)","scores":{"Weighted":"13.28","Confab %":"21.8","Non-Resp %":"4.8"}}
+{"key":"GPT-OSS-120B (medium reasoning)","model":"GPT-OSS-120B (medium reasoning)","scores":{"Weighted":"15.65","Confab %":"23.3","Non-Resp %":"8.0"}}
+{"key":"Gemini 1.5 Pro (Sept)","model":"Gemini 1.5 Pro (Sept)","scores":{"Weighted":"13.54","Confab %":"16.8","Non-Resp %":"10.2"}}
+{"key":"Gemini 2.0 Flash","model":"Gemini 2.0 Flash","scores":{"Weighted":"26.85","Confab %":"24.3","Non-Resp %":"29.4"}}
+{"key":"Gemini 2.0 Flash Think Exp 01-21","model":"Gemini 2.0 Flash Think Exp 01-21","scores":{"Weighted":"12.43","Confab %":"14.9","Non-Resp %":"10.0"}}
+{"key":"Gemini 2.0 Pro Exp 02-05","model":"Gemini 2.0 Pro Exp 02-05","scores":{"Weighted":"18.43","Confab %":"15.8","Non-Resp %":"21.0"}}
+{"key":"Gemini 2.5 Flash Preview 24K","model":"Gemini 2.5 Flash Preview 24K","scores":{"Weighted":"16.81","Confab %":"4.5","Non-Resp %":"29.2"}}
+{"key":"Gemini 2.5 Pro","model":"Gemini 2.5 Pro","scores":{"Weighted":"12.38","Confab %":"4.0","Non-Resp %":"20.8"}}
+{"key":"Gemini 2.5 Pro Exp 03-25","model":"Gemini 2.5 Pro Exp 03-25","scores":{"Weighted":"10.80","Confab %":"4.0","Non-Resp %":"17.6"}}
+{"key":"Gemini 2.5 Pro Preview 05-06","model":"Gemini 2.5 Pro Preview 05-06","scores":{"Weighted":"10.62","Confab %":"5.9","Non-Resp %":"15.3"}}
+{"key":"Gemma 2 27B","model":"Gemma 2 27B","scores":{"Weighted":"27.12","Confab %":"47.0","Non-Resp %":"7.2"}}
+{"key":"Gemma 3 27B","model":"Gemma 3 27B","scores":{"Weighted":"40.26","Confab %":"66.3","Non-Resp %":"14.2"}}
+{"key":"Grok 2 12-12","model":"Grok 2 12-12","scores":{"Weighted":"20.14","Confab %":"25.7","Non-Resp %":"14.5"}}
+{"key":"Grok 3 Beta (no reasoning)","model":"Grok 3 Beta (no reasoning)","scores":{"Weighted":"14.19","Confab %":"17.8","Non-Resp %":"10.6"}}
+{"key":"Grok 3 Mini Beta (high)","model":"Grok 3 Mini Beta (high)","scores":{"Weighted":"10.80","Confab %":"6.9","Non-Resp %":"14.7"}}
+{"key":"Grok 3 Mini Beta (low)","model":"Grok 3 Mini Beta (low)","scores":{"Weighted":"14.04","Confab %":"10.9","Non-Resp %":"17.2"}}
+{"key":"Grok 4","model":"Grok 4","scores":{"Weighted":"12.41","Confab %":"4.0","Non-Resp %":"20.9"}}
+{"key":"Kimi K2","model":"Kimi K2","scores":{"Weighted":"20.38","Confab %":"30.2","Non-Resp %":"10.6"}}
+{"key":"Llama 3.1 405B","model":"Llama 3.1 405B","scores":{"Weighted":"17.62","Confab %":"14.4","Non-Resp %":"20.9"}}
+{"key":"Llama 3.3 70B","model":"Llama 3.3 70B","scores":{"Weighted":"22.81","Confab %":"17.8","Non-Resp %":"27.8"}}
+{"key":"Llama 4 Maverick","model":"Llama 4 Maverick","scores":{"Weighted":"22.58","Confab %":"28.2","Non-Resp %":"16.9"}}
+{"key":"Microsoft Phi-4","model":"Microsoft Phi-4","scores":{"Weighted":"29.43","Confab %":"52.5","Non-Resp %":"6.4"}}
+{"key":"MiniMax-Text-01","model":"MiniMax-Text-01","scores":{"Weighted":"23.92","Confab %":"44.6","Non-Resp %":"3.3"}}
+{"key":"Mistral Large 2","model":"Mistral Large 2","scores":{"Weighted":"21.40","Confab %":"32.2","Non-Resp %":"10.6"}}
+{"key":"Mistral Medium 3","model":"Mistral Medium 3","scores":{"Weighted":"21.90","Confab %":"38.1","Non-Resp %":"5.7"}}
+{"key":"Mistral Small 3","model":"Mistral Small 3","scores":{"Weighted":"25.21","Confab %":"38.6","Non-Resp %":"11.8"}}
+{"key":"Qwen 2.5 72B","model":"Qwen 2.5 72B","scores":{"Weighted":"19.09","Confab %":"32.2","Non-Resp %":"6.0"}}
+{"key":"Qwen 2.5 Max","model":"Qwen 2.5 Max","scores":{"Weighted":"21.78","Confab %":"31.2","Non-Resp %":"12.4"}}
+{"key":"Qwen 3 235B A22B","model":"Qwen 3 235B A22B","scores":{"Weighted":"15.61","Confab %":"23.3","Non-Resp %":"8.0"}}
+{"key":"Qwen 3 235B A22B 25-07 Think","model":"Qwen 3 235B A22B 25-07 Think","scores":{"Weighted":"16.77","Confab %":"13.9","Non-Resp %":"19.7"}}
+{"key":"Qwen 3 30B A3B","model":"Qwen 3 30B A3B","scores":{"Weighted":"12.28","Confab %":"12.9","Non-Resp %":"11.7"}}
+{"key":"Qwen QwQ-32B 16K","model":"Qwen QwQ-32B 16K","scores":{"Weighted":"15.57","Confab %":"25.2","Non-Resp %":"5.9"}}
+{"key":"o1 (medium reasoning)","model":"o1 (medium reasoning)","scores":{"Weighted":"11.74","Confab %":"10.9","Non-Resp %":"12.6"}}
+{"key":"o1-mini","model":"o1-mini","scores":{"Weighted":"18.55","Confab %":"26.2","Non-Resp %":"10.9"}}
+{"key":"o1-preview","model":"o1-preview","scores":{"Weighted":"13.04","Confab %":"18.3","Non-Resp %":"7.8"}}
+{"key":"o3 (high reasoning)","model":"o3 (high reasoning)","scores":{"Weighted":"14.38","Confab %":"24.8","Non-Resp %":"4.0"}}
+{"key":"o3-mini (high reasoning)","model":"o3-mini (high reasoning)","scores":{"Weighted":"18.43","Confab %":"30.7","Non-Resp %":"6.2"}}
+{"key":"o3-mini (medium reasoning)","model":"o3-mini (medium reasoning)","scores":{"Weighted":"17.91","Confab %":"27.2","Non-Resp %":"8.6"}}
+{"key":"o3-pro (medium reasoning)","model":"o3-pro (medium reasoning)","scores":{"Weighted":"14.22","Confab %":"23.4","Non-Resp %":"5.1"}}
+{"key":"o4-mini (high reasoning)","model":"o4-mini (high reasoning)","scores":{"Weighted":"15.79","Confab %":"26.7","Non-Resp %":"4.8"}}

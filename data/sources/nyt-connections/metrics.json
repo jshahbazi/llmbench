@@ -1,0 +1,8 @@
+[
+ {
+  "id": "Score %",
+  "label": "NYT Connections score",
+  "direction": "higher",
+  "unit": "percent"
+ }
+]

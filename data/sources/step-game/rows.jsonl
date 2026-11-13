@@ -1,0 +1,75 @@
+{"key":"Claude 3.5 Haiku","model":"Claude 3.5 Haiku","scores":{"mu":"0.78"},"extra":{"sigma":"0.68","exposed":"0.78","games":"496","p-wins":"95.50","ratio":"0.19"}}
+{"key":"Claude 3.5 Sonnet 2024-10-22","model":"Claude 3.5 Sonnet 2024-10-22","scores":{"mu":"1.69"},"extra":{"sigma":"0.68","exposed":"1.69","games":"325","p-wins":"113.33","ratio":"0.35"}}
+{"key":"Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","scores":{"mu":"1.18"},"extra":{"sigma":"0.68","exposed":"1.18","games":"416","p-wins":"94.83","ratio":"0.23"}}
+{"key":"Claude 3.7 Sonnet Thinking 16K","model":"Claude 3.7 Sonnet Thinking 16K","scores":{"mu":"2.76"},"extra":{"sigma":"0.69","exposed":"2.76","games":"347","p-wins":"140.50","ratio":"0.40"}}
+{"key":"Claude Opus 4 (no reasoning)","model":"Claude Opus 4 (no reasoning)","scores":{"mu":"1.50"},"extra":{"sigma":"0.69","exposed":"1.50","games":"161","p-wins":"35.33","ratio":"0.22"}}
+{"key":"Claude Opus 4 Thinking 16K","model":"Claude Opus 4 Thinking 16K","scores":{"mu":"2.40"},"extra":{"sigma":"0.69","exposed":"2.40","games":"153","p-wins":"52.00","ratio":"0.34"}}
+{"key":"Claude Opus 4.1 (no reasoning)","model":"Claude Opus 4.1 (no reasoning)","scores":{"mu":"1.57"},"extra":{"sigma":"0.69","exposed":"1.57","games":"152","p-wins":"38.50","ratio":"0.25"}}
+{"key":"Claude Opus 4.1 Thinking 16K","model":"Claude Opus 4.1 Thinking 16K","scores":{"mu":"3.11"},"extra":{"sigma":"0.69","exposed":"3.11","games":"193","p-wins":"79.83","ratio":"0.41"}}
+{"key":"Claude Opus 4.5 (no reasoning)","model":"Claude Opus 4.5 (no reasoning)","scores":{"mu":"3.18"},"extra":{"sigma":"0.69","exposed":"3.18","games":"161","p-wins":"59.33","ratio":"0.37"}}
+{"key":"Claude Sonnet 4 (no reasoning)","model":"Claude Sonnet 4 (no reasoning)","scores":{"mu":"1.98"},"extra":{"sigma":"0.68","exposed":"1.98","games":"198","p-wins":"55.67","ratio":"0.28"}}
+{"key":"Claude Sonnet 4 Thinking 16K","model":"Claude Sonnet 4 Thinking 16K","scores":{"mu":"3.09"},"extra":{"sigma":"0.69","exposed":"3.09","games":"216","p-wins":"88.83","ratio":"0.41"}}
+{"key":"Claude Sonnet 4.5 Thinking 16K","model":"Claude Sonnet 4.5 Thinking 16K","scores":{"mu":"3.37"},"extra":{"sigma":"0.69","exposed":"3.37","games":"254","p-wins":"108.33","ratio":"0.43"}}
+{"key":"DeepSeek R1","model":"DeepSeek R1","scores":{"mu":"3.18"},"extra":{"sigma":"0.69","exposed":"3.18","games":"453","p-wins":"200.17","ratio":"0.44"}}
+{"key":"DeepSeek R1 05/28","model":"DeepSeek R1 05/28","scores":{"mu":"3.21"},"extra":{"sigma":"0.69","exposed":"3.21","games":"243","p-wins":"102.83","ratio":"0.42"}}
+{"key":"DeepSeek V3.1 Non-Think","model":"DeepSeek V3.1 Non-Think","scores":{"mu":"3.20"},"extra":{"sigma":"0.69","exposed":"3.20","games":"491","p-wins":"205.00","ratio":"0.42"}}
+{"key":"DeepSeek V3.1 Reasoner","model":"DeepSeek V3.1 Reasoner","scores":{"mu":"3.56"},"extra":{"sigma":"0.70","exposed":"3.56","games":"334","p-wins":"158.50","ratio":"0.47"}}
+{"key":"DeepSeek-V3","model":"DeepSeek-V3","scores":{"mu":"1.12"},"extra":{"sigma":"0.68","exposed":"1.12","games":"277","p-wins":"76.83","ratio":"0.28"}}
+{"key":"Deepseek V3.2 Exp","model":"Deepseek V3.2 Exp","scores":{"mu":"3.67"},"extra":{"sigma":"0.70","exposed":"3.67","games":"170","p-wins":"75.83","ratio":"0.45"}}
+{"key":"GLM-4.5","model":"GLM-4.5","scores":{"mu":"1.73"},"extra":{"sigma":"0.68","exposed":"1.73","games":"319","p-wins":"78.00","ratio":"0.24"}}
+{"key":"GLM-4.6","model":"GLM-4.6","scores":{"mu":"2.20"},"extra":{"sigma":"0.69","exposed":"2.20","games":"189","p-wins":"55.33","ratio":"0.29"}}
+{"key":"GPT-4.5 Preview","model":"GPT-4.5 Preview","scores":{"mu":"1.01"},"extra":{"sigma":"0.68","exposed":"1.01","games":"293","p-wins":"66.83","ratio":"0.23"}}
+{"key":"GPT-4o 2024-08-06","model":"GPT-4o 2024-08-06","scores":{"mu":"1.09"},"extra":{"sigma":"0.68","exposed":"1.09","games":"389","p-wins":"97.00","ratio":"0.25"}}
+{"key":"GPT-4o Feb 2025","model":"GPT-4o Feb 2025","scores":{"mu":"1.05"},"extra":{"sigma":"0.68","exposed":"1.05","games":"232","p-wins":"62.50","ratio":"0.27"}}
+{"key":"GPT-4o Mar 2025","model":"GPT-4o Mar 2025","scores":{"mu":"1.55"},"extra":{"sigma":"0.68","exposed":"1.55","games":"445","p-wins":"107.00","ratio":"0.24"}}
+{"key":"GPT-4o mini","model":"GPT-4o mini","scores":{"mu":"0.87"},"extra":{"sigma":"0.68","exposed":"0.87","games":"739","p-wins":"139.50","ratio":"0.19"}}
+{"key":"GPT-5 (medium reasoning)","model":"GPT-5 (medium reasoning)","scores":{"mu":"5.49"},"extra":{"sigma":"0.72","exposed":"5.49","games":"386","p-wins":"248.50","ratio":"0.64"}}
+{"key":"GPT-5 mini (medium reasoning)","model":"GPT-5 mini (medium reasoning)","scores":{"mu":"2.77"},"extra":{"sigma":"0.69","exposed":"2.77","games":"363","p-wins":"134.33","ratio":"0.37"}}
+{"key":"GPT-5.1 (medium reasoning)","model":"GPT-5.1 (medium reasoning)","scores":{"mu":"5.29"},"extra":{"sigma":"0.72","exposed":"5.29","games":"356","p-wins":"223.17","ratio":"0.63"}}
+{"key":"GPT-OSS-120B","model":"GPT-OSS-120B","scores":{"mu":"1.63"},"extra":{"sigma":"0.68","exposed":"1.63","games":"374","p-wins":"88.00","ratio":"0.24"}}
+{"key":"Gemini 1.5 Flash","model":"Gemini 1.5 Flash","scores":{"mu":"0.92"},"extra":{"sigma":"0.68","exposed":"0.92","games":"284","p-wins":"73.50","ratio":"0.26"}}
+{"key":"Gemini 1.5 Pro (Sept)","model":"Gemini 1.5 Pro (Sept)","scores":{"mu":"1.01"},"extra":{"sigma":"0.68","exposed":"1.01","games":"272","p-wins":"70.67","ratio":"0.26"}}
+{"key":"Gemini 2.0 Flash Exp","model":"Gemini 2.0 Flash Exp","scores":{"mu":"1.04"},"extra":{"sigma":"0.68","exposed":"1.04","games":"298","p-wins":"79.50","ratio":"0.27"}}
+{"key":"Gemini 2.0 Flash Think Exp 01-21","model":"Gemini 2.0 Flash Think Exp 01-21","scores":{"mu":"2.28"},"extra":{"sigma":"0.69","exposed":"2.28","games":"282","p-wins":"112.00","ratio":"0.40"}}
+{"key":"Gemini 2.0 Flash Think Exp Old","model":"Gemini 2.0 Flash Think Exp Old","scores":{"mu":"0.87"},"extra":{"sigma":"0.69","exposed":"0.87","games":"162","p-wins":"42.50","ratio":"0.26"}}
+{"key":"Gemini 2.0 Pro Exp 02-05","model":"Gemini 2.0 Pro Exp 02-05","scores":{"mu":"1.43"},"extra":{"sigma":"0.71","exposed":"1.43","games":"108","p-wins":"33.50","ratio":"0.31"}}
+{"key":"Gemini 2.5 Flash","model":"Gemini 2.5 Flash","scores":{"mu":"3.99"},"extra":{"sigma":"0.70","exposed":"3.99","games":"228","p-wins":"114.50","ratio":"0.50"}}
+{"key":"Gemini 2.5 Pro","model":"Gemini 2.5 Pro","scores":{"mu":"3.82"},"extra":{"sigma":"0.70","exposed":"3.82","games":"184","p-wins":"90.00","ratio":"0.49"}}
+{"key":"Gemini 2.5 Pro Exp 03-25","model":"Gemini 2.5 Pro Exp 03-25","scores":{"mu":"3.72"},"extra":{"sigma":"0.69","exposed":"3.72","games":"408","p-wins":"187.50","ratio":"0.46"}}
+{"key":"Gemini 3 Pro Preview","model":"Gemini 3 Pro Preview","scores":{"mu":"5.03"},"extra":{"sigma":"0.71","exposed":"5.03","games":"459","p-wins":"273.33","ratio":"0.60"}}
+{"key":"Gemma 2 27B","model":"Gemma 2 27B","scores":{"mu":"0.74"},"extra":{"sigma":"0.68","exposed":"0.74","games":"274","p-wins":"60.83","ratio":"0.22"}}
+{"key":"Grok 2 12-12","model":"Grok 2 12-12","scores":{"mu":"0.90"},"extra":{"sigma":"0.68","exposed":"0.90","games":"377","p-wins":"88.83","ratio":"0.24"}}
+{"key":"Grok 3 Beta (No reasoning)","model":"Grok 3 Beta (No reasoning)","scores":{"mu":"1.29"},"extra":{"sigma":"0.68","exposed":"1.29","games":"460","p-wins":"99.50","ratio":"0.22"}}
+{"key":"Grok 3 Mini Beta (High)","model":"Grok 3 Mini Beta (High)","scores":{"mu":"3.24"},"extra":{"sigma":"0.69","exposed":"3.24","games":"364","p-wins":"155.67","ratio":"0.43"}}
+{"key":"Grok 4","model":"Grok 4","scores":{"mu":"3.47"},"extra":{"sigma":"0.69","exposed":"3.47","games":"258","p-wins":"113.50","ratio":"0.44"}}
+{"key":"Grok 4.1 Fast Non-Reasoning","model":"Grok 4.1 Fast Non-Reasoning","scores":{"mu":"1.80"},"extra":{"sigma":"0.68","exposed":"1.80","games":"192","p-wins":"46.33","ratio":"0.24"}}
+{"key":"Grok 4.1 Fast Reasoning","model":"Grok 4.1 Fast Reasoning","scores":{"mu":"3.78"},"extra":{"sigma":"0.70","exposed":"3.78","games":"735","p-wins":"355.83","ratio":"0.48"}}
+{"key":"Kimi K2","model":"Kimi K2","scores":{"mu":"1.11"},"extra":{"sigma":"0.68","exposed":"1.11","games":"202","p-wins":"35.83","ratio":"0.18"}}
+{"key":"Kimi K2 Thinking 64K","model":"Kimi K2 Thinking 64K","scores":{"mu":"3.27"},"extra":{"sigma":"0.74","exposed":"3.27","games":"95","p-wins":"37.83","ratio":"0.40"}}
+{"key":"Llama 3.1 405B","model":"Llama 3.1 405B","scores":{"mu":"0.91"},"extra":{"sigma":"0.68","exposed":"0.91","games":"350","p-wins":"82.00","ratio":"0.23"}}
+{"key":"Llama 3.3 70B","model":"Llama 3.3 70B","scores":{"mu":"1.34"},"extra":{"sigma":"0.68","exposed":"1.34","games":"403","p-wins":"111.33","ratio":"0.28"}}
+{"key":"Llama 4 Maverick","model":"Llama 4 Maverick","scores":{"mu":"1.12"},"extra":{"sigma":"0.68","exposed":"1.12","games":"552","p-wins":"104.50","ratio":"0.19"}}
+{"key":"Mistral Large 2","model":"Mistral Large 2","scores":{"mu":"1.11"},"extra":{"sigma":"0.68","exposed":"1.11","games":"774","p-wins":"156.67","ratio":"0.20"}}
+{"key":"Mistral Large 3","model":"Mistral Large 3","scores":{"mu":"1.35"},"extra":{"sigma":"0.68","exposed":"1.35","games":"372","p-wins":"82.00","ratio":"0.22"}}
+{"key":"Mistral Medium 3.1","model":"Mistral Medium 3.1","scores":{"mu":"1.40"},"extra":{"sigma":"0.68","exposed":"1.40","games":"316","p-wins":"64.33","ratio":"0.20"}}
+{"key":"Qwen 2.5 72B","model":"Qwen 2.5 72B","scores":{"mu":"1.21"},"extra":{"sigma":"0.68","exposed":"1.21","games":"294","p-wins":"83.83","ratio":"0.29"}}
+{"key":"Qwen 2.5 Max","model":"Qwen 2.5 Max","scores":{"mu":"1.43"},"extra":{"sigma":"0.68","exposed":"1.43","games":"479","p-wins":"116.50","ratio":"0.24"}}
+{"key":"Qwen 3 235B A22B","model":"Qwen 3 235B A22B","scores":{"mu":"3.09"},"extra":{"sigma":"0.69","exposed":"3.09","games":"317","p-wins":"128.67","ratio":"0.41"}}
+{"key":"Qwen 3 235B A22B 25-07 Instruct","model":"Qwen 3 235B A22B 25-07 Instruct","scores":{"mu":"2.45"},"extra":{"sigma":"0.69","exposed":"2.45","games":"161","p-wins":"51.50","ratio":"0.32"}}
+{"key":"Qwen 3 30B A3B","model":"Qwen 3 30B A3B","scores":{"mu":"2.16"},"extra":{"sigma":"0.68","exposed":"2.16","games":"405","p-wins":"120.83","ratio":"0.30"}}
+{"key":"Qwen 3 Max Thinking","model":"Qwen 3 Max Thinking","scores":{"mu":"1.54"},"extra":{"sigma":"0.68","exposed":"1.54","games":"691","p-wins":"154.67","ratio":"0.22"}}
+{"key":"Qwen QwQ Preview","model":"Qwen QwQ Preview","scores":{"mu":"1.26"},"extra":{"sigma":"0.69","exposed":"1.26","games":"146","p-wins":"47.50","ratio":"0.33"}}
+{"key":"Qwen QwQ-32B 16K","model":"Qwen QwQ-32B 16K","scores":{"mu":"3.21"},"extra":{"sigma":"0.70","exposed":"3.21","games":"361","p-wins":"171.00","ratio":"0.47"}}
+{"key":"Silent Blocker","model":"Silent Blocker","scores":{"mu":"2.43"},"extra":{"sigma":"0.68","exposed":"2.43","games":"254","p-wins":"78.00","ratio":"0.31"}}
+{"key":"Silent Closer","model":"Silent Closer","scores":{"mu":"2.58"},"extra":{"sigma":"0.68","exposed":"2.58","games":"215","p-wins":"71.00","ratio":"0.33"}}
+{"key":"Silent Collision Tracker","model":"Silent Collision Tracker","scores":{"mu":"2.49"},"extra":{"sigma":"0.68","exposed":"2.49","games":"219","p-wins":"66.50","ratio":"0.30"}}
+{"key":"Silent EVMax","model":"Silent EVMax","scores":{"mu":"2.56"},"extra":{"sigma":"0.68","exposed":"2.56","games":"233","p-wins":"76.50","ratio":"0.33"}}
+{"key":"Silent Greedy","model":"Silent Greedy","scores":{"mu":"2.96"},"extra":{"sigma":"0.69","exposed":"2.96","games":"725","p-wins":"306.50","ratio":"0.42"}}
+{"key":"Silent Random","model":"Silent Random","scores":{"mu":"0.66"},"extra":{"sigma":"0.68","exposed":"0.66","games":"748","p-wins":"107.00","ratio":"0.14"}}
+{"key":"Silent UCB","model":"Silent UCB","scores":{"mu":"0.68"},"extra":{"sigma":"0.68","exposed":"0.68","games":"268","p-wins":"29.00","ratio":"0.11"}}
+{"key":"o1 (medium reasoning)","model":"o1 (medium reasoning)","scores":{"mu":"4.14"},"extra":{"sigma":"0.71","exposed":"4.14","games":"374","p-wins":"215.83","ratio":"0.58"}}
+{"key":"o1-mini","model":"o1-mini","scores":{"mu":"2.41"},"extra":{"sigma":"0.69","exposed":"2.41","games":"338","p-wins":"138.67","ratio":"0.41"}}
+{"key":"o3 (medium reasoning)","model":"o3 (medium reasoning)","scores":{"mu":"5.32"},"extra":{"sigma":"0.72","exposed":"5.32","games":"376","p-wins":"236.33","ratio":"0.63"}}
+{"key":"o3-mini (high reasoning)","model":"o3-mini (high reasoning)","scores":{"mu":"3.64"},"extra":{"sigma":"0.70","exposed":"3.64","games":"269","p-wins":"132.33","ratio":"0.49"}}
+{"key":"o3-mini (medium reasoning)","model":"o3-mini (medium reasoning)","scores":{"mu":"3.38"},"extra":{"sigma":"0.70","exposed":"3.38","games":"353","p-wins":"170.67","ratio":"0.48"}}
+{"key":"o4-mini (medium reasoning)","model":"o4-mini (medium reasoning)","scores":{"mu":"2.59"},"extra":{"sigma":"0.68","exposed":"2.59","games":"375","p-wins":"122.83","ratio":"0.33"}}

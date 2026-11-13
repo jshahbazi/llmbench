@@ -50,5 +50,21 @@ const PERMISSIVE = /(^|[^a-z])(apache|mit|bsd|isc|mpl|unlicense|cc-by-4)/i;
  * or Gemma's terms are not counted, even where they allow commercial use.
  */
 export function isPermissive(license?: string): boolean {
-  return !!license && PERMISSIVE.test(license) && !/(^|[^a-z])nc([^a-z]|$)|non-?commercial/i.test(license);
+  return !!license && PERMISSIVE.test(license) && !isNonCommercial(license);
 }
+
+const isNonCommercial = (license: string) => /(^|[^a-z])nc([^a-z]|$)|non-?commercial/i.test(license);
+
+/** How a source's data may be reused, from the licence sources.yaml records for it. */
+export type DataReuse = 'licensed' | 'noncommercial' | 'unstated';
+
+export function dataReuse(license?: string): DataReuse {
+  if (!license || /^(none|none stated|no licen[cs]e|not stated|unknown)$/i.test(license.trim())) return 'unstated';
+  return isNonCommercial(license) ? 'noncommercial' : 'licensed';
+}
+
+export const REUSE_TEXT: Record<DataReuse, string> = {
+  licensed: 'Reusable under its licence.',
+  noncommercial: 'Non-commercial: these scores may be reused only for non-commercial purposes, with credit.',
+  unstated: 'No licence stated: the scores are reproduced as factual results, with credit to the source.',
+};

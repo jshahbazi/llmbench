@@ -1,0 +1,30 @@
+[
+ {
+  "id": "%accuracy",
+  "label": "Kagi benchmark accuracy",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true
+ },
+ {
+  "id": "Cost($)",
+  "label": "Cost ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false
+ },
+ {
+  "id": "time/task",
+  "label": "Seconds per task",
+  "direction": "lower",
+  "unit": "s",
+  "headline": false
+ },
+ {
+  "id": "TPS",
+  "label": "Tokens per second",
+  "direction": "higher",
+  "unit": "score",
+  "headline": false
+ }
+]

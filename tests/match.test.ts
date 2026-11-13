@@ -24,6 +24,12 @@ const catalog = [
   cat('kimi-k2-0905', 'Kimi K2 Instruct (0905)'),
   cat('ministral-8b', 'Ministral 8B (2410)'),
   cat('gemini-3-pro-preview', 'Gemini 3 Pro (Preview)'),
+  cat('claude-sonnet-4-20250514', 'Claude Sonnet 4'),
+  cat('claude-3-5-sonnet-20240620', 'Claude 3.5 Sonnet (June 2024)'),
+  cat('qwen3-235b-a22b', 'Qwen3 235B-A22B'),
+  cat('qwen3-235b-a22b-thinking-2507', 'Qwen3 235B-A22B Thinking 2507'),
+  cat('nova-lite', 'Nova Lite', { provider: 'Amazon' }),
+  cat('o3', 'o3'),
 ];
 const m = new Matcher(
   catalog,
@@ -72,7 +78,23 @@ test('ambiguous and near names do not match', () => {
   assert.equal(match('o3 (high) + Claude Opus 4.5'), undefined, 'pairs never match');
 });
 
+test('run settings in hyphenated API names are set aside', () => {
+  assert.deepEqual(match('claude-opus-4-5-20251101-thinking-64k-high-effort'), ['claude-opus-4-5', 'variant', 'effort:high; budget:64K; snapshot:20251101']);
+  assert.deepEqual(match('o3-2025-04-16-medium'), ['o3', 'variant', 'effort:medium; snapshot:2025-04-16']);
+  assert.deepEqual(match('qwen3-235b-a22b-thinking'), ['qwen3-235b-a22b', 'variant', 'reasoning:thinking']);
+  assert.deepEqual(match('Qwen3-235B-A22B-Thinking (Jul 2025)'), ['qwen3-235b-a22b-thinking-2507', 'variant', ''], 'a model named "Thinking" comes first');
+  assert.deepEqual(match('Qwen3-235B-A22B (Non-Thinking)'), ['qwen3-235b-a22b', 'variant', 'reasoning:non-thinking']);
+  assert.equal(match('mistral-medium'), undefined, '"-medium" after a word is a model name');
+});
+
+test('Claude names in either order', () => {
+  assert.deepEqual(match('claude-4-sonnet-20250514'), ['claude-sonnet-4-20250514', 'exact', '']);
+  assert.deepEqual(match('Claude Sonnet 3.5 (2024-06-20)')?.[0], 'claude-3-5-sonnet-20240620');
+  assert.equal(match('Claude 4 Opus'), undefined, 'not in this catalogue');
+});
+
 test('a Hugging Face link on the row, and a maker prefix, can match', () => {
+  assert.deepEqual(match('amazon.nova-lite-v1:0'), ['nova-lite', 'maker', 'other:v1:0']);
   assert.deepEqual(match('xLAM-2-8b-fc-r (FC)', { url: 'https://huggingface.co/Salesforce/Llama-xLAM-2-8b-fc-r' }), ['llama-xlam-2-8b-fc-r', 'link', 'mode:FC']);
   assert.deepEqual(match('NVIDIA-Nemotron-3-Ultra (NVFP4)'), ['nemotron-3-ultra', 'maker', 'quant:NVFP4']);
   assert.equal(match('Google-Nemotron-3-Ultra'), undefined, 'maker must agree');

@@ -6,7 +6,7 @@
  * `value`, and are grouped back into one row per model.
  */
 import type { Rec } from './parse.ts';
-import type { Metric, Row, Value } from './types.ts';
+import { RUN_BY, type Metric, type Row, type RunBy, type Value } from './types.ts';
 
 export interface MappingSpec {
   model: string;
@@ -37,6 +37,11 @@ export interface MappingSpec {
    * computes to meaningless precision (fitted ratings); text values are never touched.
    */
   round?: number;
+  /**
+   * Who ran each row's evaluation, read from a column: { column: "Data Source", values:
+   * { TIGER-Lab: independent, Self-Reported: lab } }. Rows with other values keep the source's run_by.
+   */
+  run_by_from?: { column: string; values: Record<string, RunBy> };
 }
 
 const asList = (v: unknown): string[] | undefined =>
@@ -68,7 +73,21 @@ export function mappingFrom(options: Record<string, unknown>, where: string): Ma
   if (round !== undefined && !(Number.isInteger(round) && (round as number) >= 0 && (round as number) <= 10)) {
     throw new Error(`${where}: "round" must be a whole number of decimals from 0 to 10`);
   }
+  let runByFrom: MappingSpec['run_by_from'];
+  const rb = options['run_by_from'];
+  if (rb !== undefined) {
+    const o = rb && typeof rb === 'object' && !Array.isArray(rb) ? (rb as Record<string, unknown>) : undefined;
+    const values = o?.['values'];
+    if (typeof o?.['column'] !== 'string' || !values || typeof values !== 'object' || Array.isArray(values)) {
+      throw new Error(`${where}: "run_by_from" must be { column: <column>, values: { <value>: independent | submitted | lab } }`);
+    }
+    for (const [k, v] of Object.entries(values)) {
+      if (!RUN_BY.includes(v as RunBy)) throw new Error(`${where}: run_by_from value "${k}" must map to one of ${RUN_BY.join(', ')}`);
+    }
+    runByFrom = { column: o['column'], values: values as Record<string, RunBy> };
+  }
   return {
+    ...(runByFrom && { run_by_from: runByFrom }),
     model,
     model_label: options['model_label'] === undefined ? undefined : String(options['model_label']),
     model_url: options['model_url'] === undefined ? undefined : String(options['model_url']),
@@ -148,6 +167,7 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
     ...(spec.ci ?? []),
     ...(spec.scores ?? []),
     ...Object.keys(spec.filter ?? {}),
+    spec.run_by_from?.column,
   ].filter((c): c is string => !!c);
   if (records.length) {
     for (const c of new Set(named)) if (!seen.has(c)) problems.push(`missing column "${c}"`);
@@ -197,6 +217,8 @@ export function extract(records: Rec[], spec: MappingSpec): Extraction {
       if (Object.keys(context).length) row.context = context;
       const date = spec.date ? cellText(r[spec.date]).trim() : '';
       if (date && !isMissing(date)) row.date = date;
+      const by = spec.run_by_from?.values[cellText(r[spec.run_by_from.column]).trim()];
+      if (by) row.run_by = by;
       rowsById.set(id, row);
       order.push(id);
     } else if (!spec.metric) {

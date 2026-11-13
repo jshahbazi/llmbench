@@ -66,17 +66,20 @@ for (const s of sources) {
   perSource.push(`${s.id} ${hit}/${names.size}`);
 }
 
-// Names with no catalogue model: one model per core name and snapshot, across sources.
+// Names with no catalogue model: one model per core name and snapshot, across sources. A name that
+// says "thinking" keeps it, as catalogue names do ("Kimi K2 Thinking" is a model of its own).
+const coreOf = (p: ReturnType<typeof parseName>): string =>
+  p.qualifiers.some((q) => q.kind === 'reasoning' && q.value === 'thinking') ? `${p.core} Thinking` : p.core;
 const groupName = (raw: string): string => {
   const p = parseName(raw);
   if (p.pair) return raw;
-  return p.snapshot ? `${p.core} (${p.snapshot.text})` : p.core;
+  return p.snapshot ? `${coreOf(p)} (${p.snapshot.text})` : coreOf(p);
 };
 const groups = new Map<string, NameInfo[]>();
 for (const n of unmatched) {
   const p = parseName(n.raw);
   const d = p.snapshot;
-  const k = p.pair ? normalize(n.raw) : `${normalize(p.core)}@${d ? `${d.y ?? ''}-${d.m ?? ''}-${d.d ?? ''}-${d.four ?? ''}` : ''}`;
+  const k = p.pair ? normalize(n.raw) : `${normalize(coreOf(p))}@${d ? `${d.y ?? ''}-${d.m ?? ''}-${d.d ?? ''}-${d.four ?? ''}` : ''}`;
   groups.set(k, [...(groups.get(k) ?? []), n]);
 }
 const display = (list: NameInfo[]): string => {

@@ -1,0 +1,30 @@
+{"key":"Arcee Trinity Large Thinking","model":"Arcee Trinity Large Thinking","scores":{"Inverse-Rank Score":"41.6","Top-1 Accuracy":"66.1%"},"extra":{"Cases":"703"}}
+{"key":"Baidu Ernie 5.0","model":"Baidu Ernie 5.0","scores":{"Inverse-Rank Score":"41.7","Top-1 Accuracy":"65.3%"},"extra":{"Cases":"703"}}
+{"key":"ByteDance Seed2.0 Pro","model":"ByteDance Seed2.0 Pro","scores":{"Inverse-Rank Score":"57.1","Top-1 Accuracy":"77.0%"},"extra":{"Cases":"703"}}
+{"key":"Claude Opus 4.6 (high reasoning)","model":"Claude Opus 4.6 (high reasoning)","scores":{"Inverse-Rank Score":"80.6","Top-1 Accuracy":"90.0%"},"extra":{"Cases":"703"}}
+{"key":"Claude Opus 4.6 (no reasoning)","model":"Claude Opus 4.6 (no reasoning)","scores":{"Inverse-Rank Score":"68.8","Top-1 Accuracy":"84.1%"},"extra":{"Cases":"703"}}
+{"key":"Claude Opus 4.7 (high reasoning)","model":"Claude Opus 4.7 (high reasoning)","scores":{"Inverse-Rank Score":"72.8","Top-1 Accuracy":"86.8%"},"extra":{"Cases":"703"}}
+{"key":"Claude Opus 4.7 (no reasoning)","model":"Claude Opus 4.7 (no reasoning)","scores":{"Inverse-Rank Score":"52.6","Top-1 Accuracy":"71.6%"},"extra":{"Cases":"703"}}
+{"key":"Claude Sonnet 4.6 (high reasoning)","model":"Claude Sonnet 4.6 (high reasoning)","scores":{"Inverse-Rank Score":"76.3","Top-1 Accuracy":"88.5%"},"extra":{"Cases":"703"}}
+{"key":"Claude Sonnet 4.6 (no reasoning)","model":"Claude Sonnet 4.6 (no reasoning)","scores":{"Inverse-Rank Score":"68.5","Top-1 Accuracy":"82.5%"},"extra":{"Cases":"703"}}
+{"key":"DeepSeek V3.2","model":"DeepSeek V3.2","scores":{"Inverse-Rank Score":"65.0","Top-1 Accuracy":"81.8%"},"extra":{"Cases":"703"}}
+{"key":"GLM-5.1","model":"GLM-5.1","scores":{"Inverse-Rank Score":"69.8","Top-1 Accuracy":"85.9%"},"extra":{"Cases":"703"}}
+{"key":"GPT-5.4 (high reasoning)","model":"GPT-5.4 (high reasoning)","scores":{"Inverse-Rank Score":"77.4","Top-1 Accuracy":"88.5%"},"extra":{"Cases":"703"}}
+{"key":"GPT-5.4 (medium reasoning)","model":"GPT-5.4 (medium reasoning)","scores":{"Inverse-Rank Score":"75.2","Top-1 Accuracy":"88.3%"},"extra":{"Cases":"703"}}
+{"key":"GPT-5.4 (no reasoning)","model":"GPT-5.4 (no reasoning)","scores":{"Inverse-Rank Score":"27.1","Top-1 Accuracy":"44.0%"},"extra":{"Cases":"703"}}
+{"key":"GPT-5.4 (xhigh reasoning)","model":"GPT-5.4 (xhigh reasoning)","scores":{"Inverse-Rank Score":"80.0","Top-1 Accuracy":"90.9%"},"extra":{"Cases":"703"}}
+{"key":"GPT-5.4 Mini (xhigh reasoning)","model":"GPT-5.4 Mini (xhigh reasoning)","scores":{"Inverse-Rank Score":"61.7","Top-1 Accuracy":"80.8%"},"extra":{"Cases":"703"}}
+{"key":"Gemini 3.1 Flash-Lite Preview","model":"Gemini 3.1 Flash-Lite Preview","scores":{"Inverse-Rank Score":"63.3","Top-1 Accuracy":"82.1%"},"extra":{"Cases":"703"}}
+{"key":"Gemini 3.1 Pro Preview","model":"Gemini 3.1 Pro Preview","scores":{"Inverse-Rank Score":"79.4","Top-1 Accuracy":"91.5%"},"extra":{"Cases":"703"}}
+{"key":"Gemma 4 31B Reasoning","model":"Gemma 4 31B Reasoning","scores":{"Inverse-Rank Score":"53.0","Top-1 Accuracy":"76.1%"},"extra":{"Cases":"703"}}
+{"key":"Grok 4.20 0309 (Non-Reasoning)","model":"Grok 4.20 0309 (Non-Reasoning)","scores":{"Inverse-Rank Score":"22.0","Top-1 Accuracy":"33.4%"},"extra":{"Cases":"703"}}
+{"key":"Grok 4.20 0309 (Reasoning)","model":"Grok 4.20 0309 (Reasoning)","scores":{"Inverse-Rank Score":"63.8","Top-1 Accuracy":"81.5%"},"extra":{"Cases":"703"}}
+{"key":"Kimi K2.5 Thinking","model":"Kimi K2.5 Thinking","scores":{"Inverse-Rank Score":"69.4","Top-1 Accuracy":"84.8%"},"extra":{"Cases":"703"}}
+{"key":"MiniMax-M2.7","model":"MiniMax-M2.7","scores":{"Inverse-Rank Score":"39.3","Top-1 Accuracy":"63.4%"},"extra":{"Cases":"703"}}
+{"key":"Mistral Large 3","model":"Mistral Large 3","scores":{"Inverse-Rank Score":"23.0","Top-1 Accuracy":"34.0%"},"extra":{"Cases":"703"}}
+{"key":"Mistral Medium 3.1","model":"Mistral Medium 3.1","scores":{"Inverse-Rank Score":"20.3","Top-1 Accuracy":"32.3%"},"extra":{"Cases":"703"}}
+{"key":"Qwen 3.6 Plus","model":"Qwen 3.6 Plus","scores":{"Inverse-Rank Score":"59.5","Top-1 Accuracy":"81.5%"},"extra":{"Cases":"703"}}
+{"key":"Qwen3.5-122B-A10B","model":"Qwen3.5-122B-A10B","scores":{"Inverse-Rank Score":"51.2","Top-1 Accuracy":"76.5%"},"extra":{"Cases":"703"}}
+{"key":"Qwen3.5-27B","model":"Qwen3.5-27B","scores":{"Inverse-Rank Score":"45.5","Top-1 Accuracy":"71.3%"},"extra":{"Cases":"703"}}
+{"key":"Qwen3.5-397B-A17B","model":"Qwen3.5-397B-A17B","scores":{"Inverse-Rank Score":"65.1","Top-1 Accuracy":"82.4%"},"extra":{"Cases":"703"}}
+{"key":"Xiaomi MiMo V2 Pro","model":"Xiaomi MiMo V2 Pro","scores":{"Inverse-Rank Score":"45.9","Top-1 Accuracy":"68.8%"},"extra":{"Cases":"703"}}

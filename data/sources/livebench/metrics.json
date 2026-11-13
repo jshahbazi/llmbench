@@ -1,0 +1,3019 @@
+[
+ {
+  "id": "v1/2024-06-24/AMPS_Hard",
+  "label": "LiveBench 1.0 (2024-06-24) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-06-24/coding",
+  "label": "LiveBench 1.0 (2024-06-24) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of LCB_generation, coding_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/coding_completion",
+  "label": "LiveBench 1.0 (2024-06-24) coding_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-coding_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-06-24/connections",
+  "label": "LiveBench 1.0 (2024-06-24) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2024-06-24/cta",
+  "label": "LiveBench 1.0 (2024-06-24) cta",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-cta"
+ },
+ {
+  "id": "v1/2024-06-24/data_analysis",
+  "label": "LiveBench 1.0 (2024-06-24) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of cta, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/global",
+  "label": "LiveBench 1.0 (2024-06-24) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/instruction_following",
+  "label": "LiveBench 1.0 (2024-06-24) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/language",
+  "label": "LiveBench 1.0 (2024-06-24) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/LCB_generation",
+  "label": "LiveBench 1.0 (2024-06-24) LCB_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-LCB_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-06-24/math_comp",
+  "label": "LiveBench 1.0 (2024-06-24) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-06-24/mathematics",
+  "label": "LiveBench 1.0 (2024-06-24) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/olympiad",
+  "label": "LiveBench 1.0 (2024-06-24) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-06-24/paraphrase",
+  "label": "LiveBench 1.0 (2024-06-24) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2024-06-24/plot_unscrambling",
+  "label": "LiveBench 1.0 (2024-06-24) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2024-06-24/reasoning",
+  "label": "LiveBench 1.0 (2024-06-24) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v2, zebra_puzzle, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-06-24/simplify",
+  "label": "LiveBench 1.0 (2024-06-24) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2024-06-24/story_generation",
+  "label": "LiveBench 1.0 (2024-06-24) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2024-06-24/summarize",
+  "label": "LiveBench 1.0 (2024-06-24) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2024-06-24/tablejoin",
+  "label": "LiveBench 1.0 (2024-06-24) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2024-06-24/tablereformat",
+  "label": "LiveBench 1.0 (2024-06-24) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2024-06-24/typos",
+  "label": "LiveBench 1.0 (2024-06-24) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2024-06-24/web_of_lies_v2",
+  "label": "LiveBench 1.0 (2024-06-24) web_of_lies_v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v2"
+ },
+ {
+  "id": "v1/2024-06-24/zebra_puzzle",
+  "label": "LiveBench 1.0 (2024-06-24) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2024-07-26/AMPS_Hard",
+  "label": "LiveBench 1.0 (2024-07-26) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-07-26/coding",
+  "label": "LiveBench 1.0 (2024-07-26) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of LCB_generation, coding_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/coding_completion",
+  "label": "LiveBench 1.0 (2024-07-26) coding_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-coding_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-07-26/connections",
+  "label": "LiveBench 1.0 (2024-07-26) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2024-07-26/cta",
+  "label": "LiveBench 1.0 (2024-07-26) cta",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-cta"
+ },
+ {
+  "id": "v1/2024-07-26/data_analysis",
+  "label": "LiveBench 1.0 (2024-07-26) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of cta, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/global",
+  "label": "LiveBench 1.0 (2024-07-26) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/instruction_following",
+  "label": "LiveBench 1.0 (2024-07-26) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/language",
+  "label": "LiveBench 1.0 (2024-07-26) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/LCB_generation",
+  "label": "LiveBench 1.0 (2024-07-26) LCB_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-LCB_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-07-26/math_comp",
+  "label": "LiveBench 1.0 (2024-07-26) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-07-26/mathematics",
+  "label": "LiveBench 1.0 (2024-07-26) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/olympiad",
+  "label": "LiveBench 1.0 (2024-07-26) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-07-26/paraphrase",
+  "label": "LiveBench 1.0 (2024-07-26) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2024-07-26/plot_unscrambling",
+  "label": "LiveBench 1.0 (2024-07-26) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2024-07-26/reasoning",
+  "label": "LiveBench 1.0 (2024-07-26) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v2, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-07-26/simplify",
+  "label": "LiveBench 1.0 (2024-07-26) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2024-07-26/spatial",
+  "label": "LiveBench 1.0 (2024-07-26) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2024-07-26/story_generation",
+  "label": "LiveBench 1.0 (2024-07-26) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2024-07-26/summarize",
+  "label": "LiveBench 1.0 (2024-07-26) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2024-07-26/tablejoin",
+  "label": "LiveBench 1.0 (2024-07-26) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2024-07-26/tablereformat",
+  "label": "LiveBench 1.0 (2024-07-26) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2024-07-26/typos",
+  "label": "LiveBench 1.0 (2024-07-26) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2024-07-26/web_of_lies_v2",
+  "label": "LiveBench 1.0 (2024-07-26) web_of_lies_v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v2"
+ },
+ {
+  "id": "v1/2024-07-26/zebra_puzzle",
+  "label": "LiveBench 1.0 (2024-07-26) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2024-08-31/AMPS_Hard",
+  "label": "LiveBench 1.0 (2024-08-31) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-08-31/coding",
+  "label": "LiveBench 1.0 (2024-08-31) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of LCB_generation, coding_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/coding_completion",
+  "label": "LiveBench 1.0 (2024-08-31) coding_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-coding_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-08-31/connections",
+  "label": "LiveBench 1.0 (2024-08-31) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2024-08-31/cta",
+  "label": "LiveBench 1.0 (2024-08-31) cta",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-cta"
+ },
+ {
+  "id": "v1/2024-08-31/data_analysis",
+  "label": "LiveBench 1.0 (2024-08-31) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of cta, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/global",
+  "label": "LiveBench 1.0 (2024-08-31) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/instruction_following",
+  "label": "LiveBench 1.0 (2024-08-31) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/language",
+  "label": "LiveBench 1.0 (2024-08-31) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/LCB_generation",
+  "label": "LiveBench 1.0 (2024-08-31) LCB_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-LCB_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-08-31/math_comp",
+  "label": "LiveBench 1.0 (2024-08-31) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-08-31/mathematics",
+  "label": "LiveBench 1.0 (2024-08-31) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/olympiad",
+  "label": "LiveBench 1.0 (2024-08-31) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-08-31/paraphrase",
+  "label": "LiveBench 1.0 (2024-08-31) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2024-08-31/plot_unscrambling",
+  "label": "LiveBench 1.0 (2024-08-31) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2024-08-31/reasoning",
+  "label": "LiveBench 1.0 (2024-08-31) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v2, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-08-31/simplify",
+  "label": "LiveBench 1.0 (2024-08-31) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2024-08-31/spatial",
+  "label": "LiveBench 1.0 (2024-08-31) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2024-08-31/story_generation",
+  "label": "LiveBench 1.0 (2024-08-31) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2024-08-31/summarize",
+  "label": "LiveBench 1.0 (2024-08-31) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2024-08-31/tablejoin",
+  "label": "LiveBench 1.0 (2024-08-31) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2024-08-31/tablereformat",
+  "label": "LiveBench 1.0 (2024-08-31) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2024-08-31/typos",
+  "label": "LiveBench 1.0 (2024-08-31) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2024-08-31/web_of_lies_v2",
+  "label": "LiveBench 1.0 (2024-08-31) web_of_lies_v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v2"
+ },
+ {
+  "id": "v1/2024-08-31/zebra_puzzle",
+  "label": "LiveBench 1.0 (2024-08-31) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2024-11-25/AMPS_Hard",
+  "label": "LiveBench 1.0 (2024-11-25) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-11-25/coding",
+  "label": "LiveBench 1.0 (2024-11-25) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of LCB_generation, coding_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/coding_completion",
+  "label": "LiveBench 1.0 (2024-11-25) coding_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-coding_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-11-25/connections",
+  "label": "LiveBench 1.0 (2024-11-25) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2024-11-25/cta",
+  "label": "LiveBench 1.0 (2024-11-25) cta",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-cta"
+ },
+ {
+  "id": "v1/2024-11-25/data_analysis",
+  "label": "LiveBench 1.0 (2024-11-25) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of cta, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/global",
+  "label": "LiveBench 1.0 (2024-11-25) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/instruction_following",
+  "label": "LiveBench 1.0 (2024-11-25) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/language",
+  "label": "LiveBench 1.0 (2024-11-25) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/LCB_generation",
+  "label": "LiveBench 1.0 (2024-11-25) LCB_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-LCB_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2024-11-25/math_comp",
+  "label": "LiveBench 1.0 (2024-11-25) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-11-25/mathematics",
+  "label": "LiveBench 1.0 (2024-11-25) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/olympiad",
+  "label": "LiveBench 1.0 (2024-11-25) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2024-11-25/paraphrase",
+  "label": "LiveBench 1.0 (2024-11-25) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2024-11-25/plot_unscrambling",
+  "label": "LiveBench 1.0 (2024-11-25) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2024-11-25/reasoning",
+  "label": "LiveBench 1.0 (2024-11-25) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v2, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2024-11-25/simplify",
+  "label": "LiveBench 1.0 (2024-11-25) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2024-11-25/spatial",
+  "label": "LiveBench 1.0 (2024-11-25) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2024-11-25/story_generation",
+  "label": "LiveBench 1.0 (2024-11-25) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2024-11-25/summarize",
+  "label": "LiveBench 1.0 (2024-11-25) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2024-11-25/tablejoin",
+  "label": "LiveBench 1.0 (2024-11-25) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2024-11-25/tablereformat",
+  "label": "LiveBench 1.0 (2024-11-25) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2024-11-25/typos",
+  "label": "LiveBench 1.0 (2024-11-25) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2024-11-25/web_of_lies_v2",
+  "label": "LiveBench 1.0 (2024-11-25) web_of_lies_v2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v2"
+ },
+ {
+  "id": "v1/2024-11-25/zebra_puzzle",
+  "label": "LiveBench 1.0 (2024-11-25) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2025-04-02/AMPS_Hard",
+  "label": "LiveBench 1.0 (2025-04-02) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-04-02/coding",
+  "label": "LiveBench 1.0 (2025-04-02) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of LCB_generation, coding_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/coding_completion",
+  "label": "LiveBench 1.0 (2025-04-02) coding_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-coding_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-04-02/connections",
+  "label": "LiveBench 1.0 (2025-04-02) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2025-04-02/cta",
+  "label": "LiveBench 1.0 (2025-04-02) cta",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-cta"
+ },
+ {
+  "id": "v1/2025-04-02/data_analysis",
+  "label": "LiveBench 1.0 (2025-04-02) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of cta, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/global",
+  "label": "LiveBench 1.0 (2025-04-02) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/instruction_following",
+  "label": "LiveBench 1.0 (2025-04-02) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/language",
+  "label": "LiveBench 1.0 (2025-04-02) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/LCB_generation",
+  "label": "LiveBench 1.0 (2025-04-02) LCB_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-LCB_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-04-02/math_comp",
+  "label": "LiveBench 1.0 (2025-04-02) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-04-02/mathematics",
+  "label": "LiveBench 1.0 (2025-04-02) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/olympiad",
+  "label": "LiveBench 1.0 (2025-04-02) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-04-02/paraphrase",
+  "label": "LiveBench 1.0 (2025-04-02) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2025-04-02/plot_unscrambling",
+  "label": "LiveBench 1.0 (2025-04-02) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2025-04-02/reasoning",
+  "label": "LiveBench 1.0 (2025-04-02) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v3, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-02/simplify",
+  "label": "LiveBench 1.0 (2025-04-02) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2025-04-02/spatial",
+  "label": "LiveBench 1.0 (2025-04-02) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2025-04-02/story_generation",
+  "label": "LiveBench 1.0 (2025-04-02) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2025-04-02/summarize",
+  "label": "LiveBench 1.0 (2025-04-02) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2025-04-02/tablejoin",
+  "label": "LiveBench 1.0 (2025-04-02) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2025-04-02/tablereformat",
+  "label": "LiveBench 1.0 (2025-04-02) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2025-04-02/typos",
+  "label": "LiveBench 1.0 (2025-04-02) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2025-04-02/web_of_lies_v3",
+  "label": "LiveBench 1.0 (2025-04-02) web_of_lies_v3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v3"
+ },
+ {
+  "id": "v1/2025-04-02/zebra_puzzle",
+  "label": "LiveBench 1.0 (2025-04-02) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2025-04-25/AMPS_Hard",
+  "label": "LiveBench 1.0 (2025-04-25) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-04-25/code_completion",
+  "label": "LiveBench 1.0 (2025-04-25) code_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-04-25/code_generation",
+  "label": "LiveBench 1.0 (2025-04-25) code_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-04-25/coding",
+  "label": "LiveBench 1.0 (2025-04-25) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of code_generation, code_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/connections",
+  "label": "LiveBench 1.0 (2025-04-25) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2025-04-25/data_analysis",
+  "label": "LiveBench 1.0 (2025-04-25) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/global",
+  "label": "LiveBench 1.0 (2025-04-25) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/instruction_following",
+  "label": "LiveBench 1.0 (2025-04-25) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/language",
+  "label": "LiveBench 1.0 (2025-04-25) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/math_comp",
+  "label": "LiveBench 1.0 (2025-04-25) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-04-25/mathematics",
+  "label": "LiveBench 1.0 (2025-04-25) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/olympiad",
+  "label": "LiveBench 1.0 (2025-04-25) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-04-25/paraphrase",
+  "label": "LiveBench 1.0 (2025-04-25) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2025-04-25/plot_unscrambling",
+  "label": "LiveBench 1.0 (2025-04-25) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2025-04-25/reasoning",
+  "label": "LiveBench 1.0 (2025-04-25) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v3, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-04-25/simplify",
+  "label": "LiveBench 1.0 (2025-04-25) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2025-04-25/spatial",
+  "label": "LiveBench 1.0 (2025-04-25) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2025-04-25/story_generation",
+  "label": "LiveBench 1.0 (2025-04-25) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2025-04-25/summarize",
+  "label": "LiveBench 1.0 (2025-04-25) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2025-04-25/tablejoin",
+  "label": "LiveBench 1.0 (2025-04-25) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2025-04-25/tablereformat",
+  "label": "LiveBench 1.0 (2025-04-25) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2025-04-25/typos",
+  "label": "LiveBench 1.0 (2025-04-25) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2025-04-25/web_of_lies_v3",
+  "label": "LiveBench 1.0 (2025-04-25) web_of_lies_v3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v3"
+ },
+ {
+  "id": "v1/2025-04-25/zebra_puzzle",
+  "label": "LiveBench 1.0 (2025-04-25) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2025-05-30/agentic_coding",
+  "label": "LiveBench 1.0 (2025-05-30) Agentic Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-agentic_coding",
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "description": "The mean of javascript, typescript, python, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/AMPS_Hard",
+  "label": "LiveBench 1.0 (2025-05-30) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/code_completion",
+  "label": "LiveBench 1.0 (2025-05-30) code_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/code_generation",
+  "label": "LiveBench 1.0 (2025-05-30) code_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/coding",
+  "label": "LiveBench 1.0 (2025-05-30) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of code_generation, code_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/connections",
+  "label": "LiveBench 1.0 (2025-05-30) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2025-05-30/data_analysis",
+  "label": "LiveBench 1.0 (2025-05-30) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/global",
+  "label": "LiveBench 1.0 (2025-05-30) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/instruction_following",
+  "label": "LiveBench 1.0 (2025-05-30) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/javascript",
+  "label": "LiveBench 1.0 (2025-05-30) javascript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-javascript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/language",
+  "label": "LiveBench 1.0 (2025-05-30) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/math_comp",
+  "label": "LiveBench 1.0 (2025-05-30) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/mathematics",
+  "label": "LiveBench 1.0 (2025-05-30) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/olympiad",
+  "label": "LiveBench 1.0 (2025-05-30) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/paraphrase",
+  "label": "LiveBench 1.0 (2025-05-30) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2025-05-30/plot_unscrambling",
+  "label": "LiveBench 1.0 (2025-05-30) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2025-05-30/python",
+  "label": "LiveBench 1.0 (2025-05-30) python",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-python",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/reasoning",
+  "label": "LiveBench 1.0 (2025-05-30) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of web_of_lies_v3, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-05-30/simplify",
+  "label": "LiveBench 1.0 (2025-05-30) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2025-05-30/spatial",
+  "label": "LiveBench 1.0 (2025-05-30) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2025-05-30/story_generation",
+  "label": "LiveBench 1.0 (2025-05-30) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2025-05-30/summarize",
+  "label": "LiveBench 1.0 (2025-05-30) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2025-05-30/tablejoin",
+  "label": "LiveBench 1.0 (2025-05-30) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2025-05-30/tablereformat",
+  "label": "LiveBench 1.0 (2025-05-30) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2025-05-30/typescript",
+  "label": "LiveBench 1.0 (2025-05-30) typescript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typescript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-05-30/typos",
+  "label": "LiveBench 1.0 (2025-05-30) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2025-05-30/web_of_lies_v3",
+  "label": "LiveBench 1.0 (2025-05-30) web_of_lies_v3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-web_of_lies_v3"
+ },
+ {
+  "id": "v1/2025-05-30/zebra_puzzle",
+  "label": "LiveBench 1.0 (2025-05-30) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2025-11-25/agentic_coding",
+  "label": "LiveBench 1.0 (2025-11-25) Agentic Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-agentic_coding",
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "description": "The mean of javascript, typescript, python, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/AMPS_Hard",
+  "label": "LiveBench 1.0 (2025-11-25) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/code_completion",
+  "label": "LiveBench 1.0 (2025-11-25) code_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/code_generation",
+  "label": "LiveBench 1.0 (2025-11-25) code_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/coding",
+  "label": "LiveBench 1.0 (2025-11-25) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of code_generation, code_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/connections",
+  "label": "LiveBench 1.0 (2025-11-25) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2025-11-25/data_analysis",
+  "label": "LiveBench 1.0 (2025-11-25) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/global",
+  "label": "LiveBench 1.0 (2025-11-25) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/instruction_following",
+  "label": "LiveBench 1.0 (2025-11-25) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/javascript",
+  "label": "LiveBench 1.0 (2025-11-25) javascript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-javascript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/language",
+  "label": "LiveBench 1.0 (2025-11-25) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/math_comp",
+  "label": "LiveBench 1.0 (2025-11-25) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/mathematics",
+  "label": "LiveBench 1.0 (2025-11-25) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/olympiad",
+  "label": "LiveBench 1.0 (2025-11-25) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/paraphrase",
+  "label": "LiveBench 1.0 (2025-11-25) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2025-11-25/plot_unscrambling",
+  "label": "LiveBench 1.0 (2025-11-25) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2025-11-25/python",
+  "label": "LiveBench 1.0 (2025-11-25) python",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-python",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/reasoning",
+  "label": "LiveBench 1.0 (2025-11-25) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of theory_of_mind, zebra_puzzle, spatial, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-11-25/simplify",
+  "label": "LiveBench 1.0 (2025-11-25) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2025-11-25/spatial",
+  "label": "LiveBench 1.0 (2025-11-25) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2025-11-25/story_generation",
+  "label": "LiveBench 1.0 (2025-11-25) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2025-11-25/summarize",
+  "label": "LiveBench 1.0 (2025-11-25) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2025-11-25/tablejoin",
+  "label": "LiveBench 1.0 (2025-11-25) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2025-11-25/tablereformat",
+  "label": "LiveBench 1.0 (2025-11-25) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2025-11-25/theory_of_mind",
+  "label": "LiveBench 1.0 (2025-11-25) theory_of_mind",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-theory_of_mind"
+ },
+ {
+  "id": "v1/2025-11-25/typescript",
+  "label": "LiveBench 1.0 (2025-11-25) typescript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typescript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-11-25/typos",
+  "label": "LiveBench 1.0 (2025-11-25) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2025-11-25/zebra_puzzle",
+  "label": "LiveBench 1.0 (2025-11-25) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2025-12-23/agentic_coding",
+  "label": "LiveBench 1.0 (2025-12-23) Agentic Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-agentic_coding",
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "description": "The mean of javascript, typescript, python, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/AMPS_Hard",
+  "label": "LiveBench 1.0 (2025-12-23) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/code_completion",
+  "label": "LiveBench 1.0 (2025-12-23) code_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/code_generation",
+  "label": "LiveBench 1.0 (2025-12-23) code_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/coding",
+  "label": "LiveBench 1.0 (2025-12-23) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of code_generation, code_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/connections",
+  "label": "LiveBench 1.0 (2025-12-23) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2025-12-23/data_analysis",
+  "label": "LiveBench 1.0 (2025-12-23) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/global",
+  "label": "LiveBench 1.0 (2025-12-23) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/instruction_following",
+  "label": "LiveBench 1.0 (2025-12-23) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/javascript",
+  "label": "LiveBench 1.0 (2025-12-23) javascript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-javascript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/language",
+  "label": "LiveBench 1.0 (2025-12-23) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/logic_with_navigation",
+  "label": "LiveBench 1.0 (2025-12-23) logic_with_navigation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-logic_with_navigation"
+ },
+ {
+  "id": "v1/2025-12-23/math_comp",
+  "label": "LiveBench 1.0 (2025-12-23) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/mathematics",
+  "label": "LiveBench 1.0 (2025-12-23) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/olympiad",
+  "label": "LiveBench 1.0 (2025-12-23) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/paraphrase",
+  "label": "LiveBench 1.0 (2025-12-23) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2025-12-23/plot_unscrambling",
+  "label": "LiveBench 1.0 (2025-12-23) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2025-12-23/python",
+  "label": "LiveBench 1.0 (2025-12-23) python",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-python",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/reasoning",
+  "label": "LiveBench 1.0 (2025-12-23) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of theory_of_mind, zebra_puzzle, spatial, logic_with_navigation, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2025-12-23/simplify",
+  "label": "LiveBench 1.0 (2025-12-23) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2025-12-23/spatial",
+  "label": "LiveBench 1.0 (2025-12-23) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2025-12-23/story_generation",
+  "label": "LiveBench 1.0 (2025-12-23) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2025-12-23/summarize",
+  "label": "LiveBench 1.0 (2025-12-23) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2025-12-23/tablejoin",
+  "label": "LiveBench 1.0 (2025-12-23) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2025-12-23/tablereformat",
+  "label": "LiveBench 1.0 (2025-12-23) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2025-12-23/theory_of_mind",
+  "label": "LiveBench 1.0 (2025-12-23) theory_of_mind",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-theory_of_mind"
+ },
+ {
+  "id": "v1/2025-12-23/typescript",
+  "label": "LiveBench 1.0 (2025-12-23) typescript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typescript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2025-12-23/typos",
+  "label": "LiveBench 1.0 (2025-12-23) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2025-12-23/zebra_puzzle",
+  "label": "LiveBench 1.0 (2025-12-23) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2026-01-08/agentic_coding",
+  "label": "LiveBench 1.0 (2026-01-08) Agentic Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-agentic_coding",
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "description": "The mean of javascript, typescript, python, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/AMPS_Hard",
+  "label": "LiveBench 1.0 (2026-01-08) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/code_completion",
+  "label": "LiveBench 1.0 (2026-01-08) code_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/code_generation",
+  "label": "LiveBench 1.0 (2026-01-08) code_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/coding",
+  "label": "LiveBench 1.0 (2026-01-08) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of code_generation, code_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/connections",
+  "label": "LiveBench 1.0 (2026-01-08) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2026-01-08/consecutive_events",
+  "label": "LiveBench 1.0 (2026-01-08) consecutive_events",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-consecutive_events"
+ },
+ {
+  "id": "v1/2026-01-08/data_analysis",
+  "label": "LiveBench 1.0 (2026-01-08) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of consecutive_events, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/global",
+  "label": "LiveBench 1.0 (2026-01-08) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/instruction_following",
+  "label": "LiveBench 1.0 (2026-01-08) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/integrals_with_game",
+  "label": "LiveBench 1.0 (2026-01-08) integrals_with_game",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-integrals_with_game",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/javascript",
+  "label": "LiveBench 1.0 (2026-01-08) javascript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-javascript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/language",
+  "label": "LiveBench 1.0 (2026-01-08) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/logic_with_navigation",
+  "label": "LiveBench 1.0 (2026-01-08) logic_with_navigation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-logic_with_navigation"
+ },
+ {
+  "id": "v1/2026-01-08/math_comp",
+  "label": "LiveBench 1.0 (2026-01-08) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/mathematics",
+  "label": "LiveBench 1.0 (2026-01-08) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, integrals_with_game, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/olympiad",
+  "label": "LiveBench 1.0 (2026-01-08) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/paraphrase",
+  "label": "LiveBench 1.0 (2026-01-08) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2026-01-08/plot_unscrambling",
+  "label": "LiveBench 1.0 (2026-01-08) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2026-01-08/python",
+  "label": "LiveBench 1.0 (2026-01-08) python",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-python",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/reasoning",
+  "label": "LiveBench 1.0 (2026-01-08) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of theory_of_mind, zebra_puzzle, spatial, logic_with_navigation, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-01-08/simplify",
+  "label": "LiveBench 1.0 (2026-01-08) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2026-01-08/spatial",
+  "label": "LiveBench 1.0 (2026-01-08) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2026-01-08/story_generation",
+  "label": "LiveBench 1.0 (2026-01-08) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2026-01-08/summarize",
+  "label": "LiveBench 1.0 (2026-01-08) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2026-01-08/tablejoin",
+  "label": "LiveBench 1.0 (2026-01-08) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2026-01-08/tablereformat",
+  "label": "LiveBench 1.0 (2026-01-08) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2026-01-08/theory_of_mind",
+  "label": "LiveBench 1.0 (2026-01-08) theory_of_mind",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-theory_of_mind"
+ },
+ {
+  "id": "v1/2026-01-08/typescript",
+  "label": "LiveBench 1.0 (2026-01-08) typescript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typescript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2026-01-08/typos",
+  "label": "LiveBench 1.0 (2026-01-08) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2026-01-08/zebra_puzzle",
+  "label": "LiveBench 1.0 (2026-01-08) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v1/2026-06-25/agentic_coding",
+  "label": "LiveBench 1.0 (2026-06-25) Agentic Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-agentic_coding",
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "description": "The mean of javascript, typescript, python, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/AMPS_Hard",
+  "label": "LiveBench 1.0 (2026-06-25) AMPS_Hard",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-AMPS_Hard",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/code_completion",
+  "label": "LiveBench 1.0 (2026-06-25) code_completion",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_completion",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/code_generation",
+  "label": "LiveBench 1.0 (2026-06-25) code_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-code_generation",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/coding",
+  "label": "LiveBench 1.0 (2026-06-25) Coding average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-coding",
+  "tags": [
+   "coding"
+  ],
+  "description": "The mean of code_generation, code_completion, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/connections",
+  "label": "LiveBench 1.0 (2026-06-25) connections",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-connections"
+ },
+ {
+  "id": "v1/2026-06-25/consecutive_events",
+  "label": "LiveBench 1.0 (2026-06-25) consecutive_events",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-consecutive_events"
+ },
+ {
+  "id": "v1/2026-06-25/data_analysis",
+  "label": "LiveBench 1.0 (2026-06-25) Data Analysis average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-data_analysis",
+  "description": "The mean of consecutive_events, tablejoin, tablereformat, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/global",
+  "label": "LiveBench 1.0 (2026-06-25) global average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-overall",
+  "description": "The mean of the category averages, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/instruction_following",
+  "label": "LiveBench 1.0 (2026-06-25) IF average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-instruction_following",
+  "description": "The mean of paraphrase, simplify, story_generation, summarize, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/integrals_with_game",
+  "label": "LiveBench 1.0 (2026-06-25) integrals_with_game",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-integrals_with_game",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/javascript",
+  "label": "LiveBench 1.0 (2026-06-25) javascript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-javascript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/language",
+  "label": "LiveBench 1.0 (2026-06-25) Language average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-language",
+  "description": "The mean of connections, plot_unscrambling, typos, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/logic_with_navigation",
+  "label": "LiveBench 1.0 (2026-06-25) logic_with_navigation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-logic_with_navigation"
+ },
+ {
+  "id": "v1/2026-06-25/math_comp",
+  "label": "LiveBench 1.0 (2026-06-25) math_comp",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-math_comp",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/mathematics",
+  "label": "LiveBench 1.0 (2026-06-25) Mathematics average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-mathematics",
+  "tags": [
+   "math"
+  ],
+  "description": "The mean of AMPS_Hard, integrals_with_game, math_comp, olympiad, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/olympiad",
+  "label": "LiveBench 1.0 (2026-06-25) olympiad",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-olympiad",
+  "tags": [
+   "math"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/paraphrase",
+  "label": "LiveBench 1.0 (2026-06-25) paraphrase",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-paraphrase"
+ },
+ {
+  "id": "v1/2026-06-25/plot_unscrambling",
+  "label": "LiveBench 1.0 (2026-06-25) plot_unscrambling",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-plot_unscrambling"
+ },
+ {
+  "id": "v1/2026-06-25/python",
+  "label": "LiveBench 1.0 (2026-06-25) python",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-python",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/reasoning",
+  "label": "LiveBench 1.0 (2026-06-25) Reasoning average",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-reasoning",
+  "description": "The mean of theory_of_mind, zebra_puzzle, spatial, logic_with_navigation, computed as LiveBench's site does."
+ },
+ {
+  "id": "v1/2026-06-25/simplify",
+  "label": "LiveBench 1.0 (2026-06-25) simplify",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-simplify"
+ },
+ {
+  "id": "v1/2026-06-25/spatial",
+  "label": "LiveBench 1.0 (2026-06-25) spatial",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-spatial"
+ },
+ {
+  "id": "v1/2026-06-25/story_generation",
+  "label": "LiveBench 1.0 (2026-06-25) story_generation",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-story_generation"
+ },
+ {
+  "id": "v1/2026-06-25/summarize",
+  "label": "LiveBench 1.0 (2026-06-25) summarize",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-summarize"
+ },
+ {
+  "id": "v1/2026-06-25/tablejoin",
+  "label": "LiveBench 1.0 (2026-06-25) tablejoin",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablejoin"
+ },
+ {
+  "id": "v1/2026-06-25/tablereformat",
+  "label": "LiveBench 1.0 (2026-06-25) tablereformat",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-tablereformat"
+ },
+ {
+  "id": "v1/2026-06-25/theory_of_mind",
+  "label": "LiveBench 1.0 (2026-06-25) theory_of_mind",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-theory_of_mind"
+ },
+ {
+  "id": "v1/2026-06-25/typescript",
+  "label": "LiveBench 1.0 (2026-06-25) typescript",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typescript",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "v1/2026-06-25/typos",
+  "label": "LiveBench 1.0 (2026-06-25) typos",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-typos"
+ },
+ {
+  "id": "v1/2026-06-25/zebra_puzzle",
+  "label": "LiveBench 1.0 (2026-06-25) zebra_puzzle",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v1-task-zebra_puzzle"
+ },
+ {
+  "id": "v2/2026-10-14/browser",
+  "label": "LiveBench 2.0 (2026-10-14) Browser",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-browser",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "v2/2026-10-14/coding",
+  "label": "LiveBench 2.0 (2026-10-14) Coding",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-coding",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v2/2026-10-14/cost_per_task",
+  "label": "LiveBench 2.0 (2026-10-14) cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "family": "livebench-v2-cost",
+  "description": "Total cost over the total number of tasks across the suites, as LiveBench computes it. Its \"cost per successful task\" is this divided by Overall, times 100."
+ },
+ {
+  "id": "v2/2026-10-14/data_analysis",
+  "label": "LiveBench 2.0 (2026-10-14) Data Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-data_analysis"
+ },
+ {
+  "id": "v2/2026-10-14/design",
+  "label": "LiveBench 2.0 (2026-10-14) Design",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-design"
+ },
+ {
+  "id": "v2/2026-10-14/long_agentic",
+  "label": "LiveBench 2.0 (2026-10-14) Long Agentic",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-long_agentic",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "v2/2026-10-14/overall",
+  "label": "LiveBench 2.0 (2026-10-14) overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-overall",
+  "description": "The mean of the suite scores, computed as LiveBench's site does."
+ },
+ {
+  "id": "v2/2026-10-14/reasoning",
+  "label": "LiveBench 2.0 (2026-10-14) Reasoning",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-reasoning"
+ },
+ {
+  "id": "v2/2026-10-14/research",
+  "label": "LiveBench 2.0 (2026-10-14) Research",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-research",
+  "tags": [
+   "search"
+  ]
+ },
+ {
+  "id": "v2/2026-10-25/browser",
+  "label": "LiveBench 2.0 (2026-10-25) Browser",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-browser",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "v2/2026-10-25/coding",
+  "label": "LiveBench 2.0 (2026-10-25) Coding",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-coding",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v2/2026-10-25/cost_per_task",
+  "label": "LiveBench 2.0 (2026-10-25) cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "family": "livebench-v2-cost",
+  "description": "Total cost over the total number of tasks across the suites, as LiveBench computes it. Its \"cost per successful task\" is this divided by Overall, times 100."
+ },
+ {
+  "id": "v2/2026-10-25/data_analysis",
+  "label": "LiveBench 2.0 (2026-10-25) Data Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-data_analysis"
+ },
+ {
+  "id": "v2/2026-10-25/design",
+  "label": "LiveBench 2.0 (2026-10-25) Design",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-design"
+ },
+ {
+  "id": "v2/2026-10-25/long_agentic",
+  "label": "LiveBench 2.0 (2026-10-25) Long Agentic",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-long_agentic",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "v2/2026-10-25/overall",
+  "label": "LiveBench 2.0 (2026-10-25) overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-overall",
+  "description": "The mean of the suite scores, weighted Long Agentic ×2, Coding ×1.5, Design ×1.5, computed as LiveBench's site does."
+ },
+ {
+  "id": "v2/2026-10-25/reasoning",
+  "label": "LiveBench 2.0 (2026-10-25) Reasoning",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-reasoning"
+ },
+ {
+  "id": "v2/2026-10-25/research",
+  "label": "LiveBench 2.0 (2026-10-25) Research",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "family": "livebench-v2-research",
+  "tags": [
+   "search"
+  ]
+ },
+ {
+  "id": "v2/2026-11-06/browser",
+  "label": "LiveBench 2.0 (2026-11-06) Browser",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-browser",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "v2/2026-11-06/coding",
+  "label": "LiveBench 2.0 (2026-11-06) Coding",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-coding",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "v2/2026-11-06/cost_per_task",
+  "label": "LiveBench 2.0 (2026-11-06) cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "family": "livebench-v2-cost",
+  "description": "Total cost over the total number of tasks across the suites, as LiveBench computes it. Its \"cost per successful task\" is this divided by Overall, times 100."
+ },
+ {
+  "id": "v2/2026-11-06/data_analysis",
+  "label": "LiveBench 2.0 (2026-11-06) Data Analysis",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-data_analysis"
+ },
+ {
+  "id": "v2/2026-11-06/design",
+  "label": "LiveBench 2.0 (2026-11-06) Design",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-design"
+ },
+ {
+  "id": "v2/2026-11-06/long_agentic",
+  "label": "LiveBench 2.0 (2026-11-06) Long Agentic",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-long_agentic",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "v2/2026-11-06/overall",
+  "label": "LiveBench 2.0 (2026-11-06) overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-overall",
+  "description": "The mean of the suite scores, weighted Long Agentic ×2, Coding ×1.5, Design ×1.5, computed as LiveBench's site does."
+ },
+ {
+  "id": "v2/2026-11-06/reasoning",
+  "label": "LiveBench 2.0 (2026-11-06) Reasoning",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-reasoning"
+ },
+ {
+  "id": "v2/2026-11-06/research",
+  "label": "LiveBench 2.0 (2026-11-06) Research",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "family": "livebench-v2-research",
+  "tags": [
+   "search"
+  ]
+ }
+]

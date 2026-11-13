@@ -1,0 +1,16 @@
+[
+ {
+  "id": "Avg Points",
+  "label": "Average points",
+  "direction": "higher",
+  "unit": "score",
+  "headline": false
+ },
+ {
+  "id": "μ",
+  "label": "TrueSkill μ",
+  "direction": "higher",
+  "unit": "score",
+  "headline": true
+ }
+]

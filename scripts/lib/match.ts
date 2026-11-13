@@ -88,6 +88,9 @@ export class Matcher {
       const stage = [...new Set(parses.flatMap((p) => p.stage))];
       this.own.set(m.id, { ...(snapshot && { snapshot }), stage });
       for (const p of parses) {
+        // "Kimi K2 Thinking" and "qwen3-235b-a22b-thinking-2507" are models of their own, not
+        // thinking-mode runs of Kimi K2 or Qwen3 235B; they stay out of those families.
+        if (p.qualifiers.some((q) => q.kind === 'reasoning')) continue;
         const key = normalize(p.core);
         if (!key) continue;
         let fam = this.families.get(key);
@@ -198,12 +201,21 @@ export class Matcher {
 
     const parses = [parsed, ...(hints.label ? [parseName(hints.label)] : [])].filter((p) => !p.pair);
     for (const p of parses) {
+      // A model literally named "<core> Thinking" (Kimi K2 Thinking, Qwen3 235B-A22B Thinking 2507)
+      // comes before the base model run in thinking mode, unless it is a dated release and the name
+      // states no date: LiveBench lists "qwen3-235b-a22b-thinking" (the original model in thinking
+      // mode) next to "qwen3-235b-a22b-thinking-2507".
+      const thinking = p.qualifiers.find((q) => q.kind === 'reasoning' && /thinking/.test(q.value) && !/^non/.test(q.value));
+      if (thinking) {
+        const id = this.pick(p, normalize(`${p.core} thinking`));
+        if (id && (p.snapshot || !this.own.get(id)?.snapshot)) return { modelId: id, method: 'variant', qualifiers: p.qualifiers.filter((q) => q !== thinking) };
+      }
       const id = this.pick(p, normalize(p.core));
       if (id) return { modelId: id, method: 'variant', qualifiers: p.qualifiers };
     }
 
     for (const p of parses) {
-      const words = p.core.split(/[-_ ]+/).filter(Boolean);
+      const words = p.core.split(/[-_ ]+|(?<=[a-z])\.(?=[a-z])/i).filter(Boolean);
       for (let i = 1; i <= 2 && i < words.length; i++) {
         const providers = this.makers.get(normalize(words.slice(0, i).join(' ')));
         if (!providers) continue;

@@ -1,0 +1,102 @@
+[
+ {
+  "id": "lite/agents",
+  "label": "SWE-bench Lite (agent submissions)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-lite",
+  "description": "Share of issues resolved by systems their builders submitted, each with its own agent; the agent is shown with each score."
+ },
+ {
+  "id": "multilingual/bash-only",
+  "label": "SWE-bench Multilingual (bash only, same agent for every model)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-multilingual",
+  "description": "Share of issues resolved. Every model run by the SWE-bench team in the same minimal agent (mini-SWE-agent), so models are compared on equal terms."
+ },
+ {
+  "id": "multilingual/bash-only-cost",
+  "label": "SWE-bench Multilingual (bash only, same agent for every model) cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "multimodal/agents",
+  "label": "SWE-bench Multimodal (agent submissions)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-multimodal",
+  "description": "Share of issues resolved by systems their builders submitted, each with its own agent; the agent is shown with each score."
+ },
+ {
+  "id": "test/agents",
+  "label": "SWE-bench Test (agent submissions)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-test",
+  "description": "Share of issues resolved by systems their builders submitted, each with its own agent; the agent is shown with each score."
+ },
+ {
+  "id": "verified/agents",
+  "label": "SWE-bench Verified (agent submissions)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-verified",
+  "description": "Share of issues resolved by systems their builders submitted, each with its own agent; the agent is shown with each score."
+ },
+ {
+  "id": "verified/bash-only",
+  "label": "SWE-bench Verified (bash only, same agent for every model)",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "swe-bench-verified",
+  "description": "Share of issues resolved. Every model run by the SWE-bench team in the same minimal agent (mini-SWE-agent), so models are compared on equal terms."
+ },
+ {
+  "id": "verified/bash-only-cost",
+  "label": "SWE-bench Verified (bash only, same agent for every model) cost per task ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ }
+]

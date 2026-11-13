@@ -1,105 +1,446 @@
 model_id,name,sources,scores
+28,28,elimination-game step-game confabulations,6
+abacus-ai-desktop-plus-claude-haiku-4-5-plus-gemini-3-pro-preview,Abacus AI Desktop + claude-haiku-4-5 + gemini-3-pro-preview,terminal-bench,1
+acoder,ACoder,swe-bench,1
+agents-a1,agents-a1,llm-chess,4
+aider-plus-gpt-4o-claude-3-opus,Aider + GPT 4o & Claude 3 Opus,swe-bench,1
+aigcode-infant-coder-2024-08-30,AIGCode Infant-Coder (2024-08-30),swe-bench,1
+alibaba-lingma-agent,Alibaba Lingma Agent,swe-bench,1
+amazon-nova-lite-v1,amazon.nova-lite-v1,llm-chess,3
+amazon-nova-pro-v1,amazon.nova-pro-v1,llm-chess,3
+amazon-q-developer-agent,Amazon Q Developer Agent,swe-bench,10
+anubis-70b-v1-1,anubis-70b-v1.1,kagi,4
+appmap-navie-v2,AppMap Navie v2,swe-bench,2
+arcee-trinity-large-thinking,Arcee Trinity Large Thinking,nyt-connections lechmazur-generalization lechmazur-sycophancy,5
+artemis-agent-v1-2024-11-20,Artemis Agent v1 (2024-11-20),swe-bench,1
+atlassian-rovo-dev-2025-06-05,Atlassian Rovo Dev (2025-06-05),swe-bench,1
+atlassian-rovo-dev-2025-09-02,Atlassian Rovo Dev (2025-09-02),swe-bench,1
+augment-agent-v0,Augment Agent v0,swe-bench,1
+augment-agent-v1,Augment Agent v1,swe-bench,1
+azerogpt,azerogpt,livebench mmlu-pro,65
 baichuan-2-7b,Baichuan 2-7B,epoch,1
 baichuan2-13b,Baichuan2-13B,epoch,1
-beam-1-0,Beam 1.0,epoch,1
+blackbox-ai-agent,Blackbox AI Agent,swe-bench,2
+bracket-sh,Bracket.sh,swe-bench,1
+bytedance-marscode-agent,Bytedance MarsCode Agent,swe-bench,2
+bytedance-seed2-0-pro,ByteDance Seed2.0 Pro,nyt-connections lechmazur-writing lechmazur-debate lechmazur-generalization,6
 cerebras-gpt-13b,Cerebras-GPT-13B,epoch,1
+chat-bison-32k-002,chat-bison-32k@002,llm-chess,3
 chatgpt-4o-latest-2025-02-15,chatgpt-4o-latest (2025-02-15),aider-polyglot,3
 chatgpt-4o-latest-2025-03-29,chatgpt-4o-latest (2025-03-29),aider-polyglot,3
-claude-3-5-sonnet,Claude 3.5 Sonnet,epoch,1
-claude-fable-5-2,Claude Fable 5.2,epoch arena,15
+claude-2,claude-2,llm-chess,3
+claude-3-5-sonnet,Claude 3.5 Sonnet,epoch llm-chess,5
+claude-3-5-sonnet-v2,claude-3-5-sonnet-v2,llm-chess,4
+claude-3-7-sonnet-thinking-10000,claude-3-7-sonnet_thinking_10000,llm-chess,4
+claude-3-7-sonnet-thinking-1024,claude-3-7-sonnet_thinking (1024),llm-chess,4
+claude-3-7-sonnet-thinking-16k,Claude 3.7 Sonnet Thinking 16K,elimination-game step-game confabulations,6
+claude-3-7-sonnet-thinking-2048,claude-3-7-sonnet_thinking_2048,llm-chess,4
+claude-3-7-sonnet-thinking-5000,claude-3-7-sonnet_thinking_5000,llm-chess,4
+claude-4-haiku,claude-4-haiku,kagi,4
+claude-4-haiku-thinking,claude-4-haiku Thinking,kagi,4
+claude-fable-5-2,Claude Fable 5.2,epoch arena livebench nyt-connections,25
+claude-fable-5-high,Claude Fable 5 (high)§,lechmazur-writing,2
+claude-haiku-4-5-thinking-16000,claude-haiku-4-5_thinking_16000,llm-chess,4
 claude-instant,Claude Instant,epoch,1
+claude-opus-4-1-thinking-16k,Claude Opus 4.1 Thinking 16K,step-game confabulations,4
+claude-opus-4-5-thinking-16000,claude-opus-4-5-thinking_16000,llm-chess,4
+claude-opus-4-5-thinking-16k,Claude Opus 4.5 Thinking 16K,nyt-connections elimination-game,3
+claude-opus-4-6-thinking-16k,Claude Opus 4.6 Thinking 16K,nyt-connections lechmazur-writing,3
+claude-opus-4-7-high,Claude Opus 4.7 (high)†,lechmazur-writing,2
+claude-opus-4-8-high,Claude Opus 4.8 (high)‡,lechmazur-writing,2
+claude-opus-4-thinking-16000,claude-opus-4_thinking_16000,llm-chess,4
+claude-opus-4-thinking-16k,Claude Opus 4 Thinking 16K,elimination-game step-game confabulations,6
+claude-opus-5-adaptive-thinking,claude-opus-5_adaptive Thinking,llm-chess,4
+claude-sonnet-4-5-thinking-16000,claude-sonnet-4-5_thinking_16000,llm-chess,4
+claude-sonnet-4-5-thinking-16k,Claude Sonnet 4.5 Thinking 16K,nyt-connections elimination-game step-game,4
+claude-sonnet-4-6-thinking,claude-sonnet-4-6_thinking,llm-chess,4
+claude-sonnet-4-6-thinking-16k,Claude Sonnet 4.6 Thinking 16K,nyt-connections lechmazur-writing,3
+claude-sonnet-4-6-thinking-32k,Claude Sonnet 4.6 Thinking 32K,nyt-connections,1
+claude-sonnet-4-thinking-16000,claude-sonnet-4_thinking_16000,llm-chess,4
+claude-sonnet-4-thinking-16k,Claude Sonnet 4 Thinking 16K,elimination-game step-game confabulations,6
+codart-ai,Codart AI,swe-bench,1
+codefuse-aais,CodeFuse-AAIS,swe-bench,1
+codefuse-cgm,CodeFuse-CGM,swe-bench,1
+codestory-aide-plus-mixed-models,CodeStory Aide + Mixed Models,swe-bench,1
+codestral-2508,codestral (2508),kagi,4
+codev,Codev,swe-bench,1
+cogito-v2-preview-deepseek-671b,cogito-v2-preview-deepseek-671b,kagi,4
+cogito-v2-preview-llama-4-scout,cogito-v2-preview-llama-4-scout,kagi,4
+cogito-v2-preview-llama-405b,cogito-v2-preview-llama-405b,kagi,4
+cohere-aya-vision,Cohere-Aya-Vision,mmlu-pro,1
 command-a-03-2025-quality,command-a-03-2025-quality,aider-polyglot,3
+composio-swe-kit-2024-10-25,Composio SWE-Kit (2024-10-25),swe-bench,1
+composio-swe-kit-2024-10-30,Composio SWE-Kit (2024-10-30),swe-bench,1
+composio-swekit-plus-claude-3-5-sonnet-2024-10-16,Composio SWEkit + Claude 3.5 Sonnet (2024-10-16),swe-bench,1
+cursor-cli-composer-1,cursor_cli_composer_1,llm-chess,4
+cursor-cli-composer-1-5,cursor_cli_composer_1.5,llm-chess,4
+cursor-cli-composer-2,cursor_cli_composer_2,llm-chess,4
+dars-agent,DARS Agent,swe-bench,1
+deephermes-3-llama-3-8b,deephermes-3-llama-3-8b,llm-chess,3
 deepseek-chat,deepseek-chat,epoch,2
-deepseek-chat-v2-5,DeepSeek Chat V2.5,aider-polyglot,3
-deepseek-chat-v3,DeepSeek Chat V3,aider-polyglot,3
+deepseek-chat-v2-5,DeepSeek Chat V2.5,aider-polyglot mmlu-pro,18
+deepseek-chat-v3,DeepSeek Chat V3,aider-polyglot kagi,7
+deepseek-chat-v3-1,deepseek chat v3.1,kagi,4
 deepseek-coder-33b,DeepSeek Coder 33B,epoch,1
 deepseek-coder-6-7b,DeepSeek Coder 6.7B,epoch,1
-deepseek-coder-v2-lite-base,DeepSeek-Coder-V2-Lite-Base,epoch,1
+deepseek-coder-v2-lite-base,DeepSeek-Coder-V2-Lite-Base,epoch mmlu-pro,16
+deepseek-r1-distill-qwen-32b-q4-k-m-isol-temp06,deepseek-r1-distill-qwen-32b@q4_k_m|isol_temp06,llm-chess,3
 deepseek-r1-plus-claude-3-5-sonnet-20241022,DeepSeek R1 + claude-3-5-sonnet-20241022,aider-polyglot,3
 deepseek-v2-may-2024,DeepSeek-V2 (May 2024),epoch,1
+deepseek-v3-1-non-think,DeepSeek V3.1 Non-Think,step-game,1
+deepseek-v3-1-reasoner,DeepSeek V3.1 Reasoner,step-game,1
+deepseek-v3-2-non-reasoning,deepseek-V3.2_non-reasoning,llm-chess,4
+deepseekmath-7b-instruct,DeepseekMath-7B-Instruct,mmlu-pro,15
+deepswe,DeepSWE,swe-bench,2
+devlo,devlo,swe-bench,2
+devstral-small,devstral-small,kagi,4
+devstral-small-2505,Devstral-Small (2505),swe-bench kagi,5
+devstral-small-2507,devstral-small (2507),swe-bench,1
 diffbot-small-xl,Diffbot-Small-XL,arena,1
 distyl-buttonagent,Distyl ButtonAgent,tau2-bench,4
 dolly-2-0-12b,Dolly 2.0 12B,epoch arena,37
+doubao-1-5-pro,Doubao-1.5-Pro,mmlu-pro,1
 doubao-seed-2-0-lite-260428,doubao-seed-2.0-lite (260428),epoch,4
 doubao-seed-2-0-pro-260215,doubao-seed-2.0-pro (260215),epoch,4
 doubao-seed-2-1-pro-260628,doubao-seed-2.1-pro (260628),epoch,4
 doubao-seed-2-1-turbo-260628,doubao-seed-2.1-turbo (260628),epoch,4
 doubao-seed-evolving,doubao-seed-evolving,epoch,4
+dracarys-72b-instruct,dracarys-72b-instruct,livebench,49
+dracarys-llama-3-1-70b-instruct,dracarys-llama-3.1-70b-instruct,livebench,49
+dracarys2-llama-3-1-70b-instruct,dracarys2-llama-3.1-70b-instruct,livebench,99
+echo-ego-v2-14b,ECHO_Ego_v2_14B,mmlu-pro,15
+elephant-alpha,elephant-alpha,livebench,31
+emergent-e1,Emergent E1,swe-bench,2
+ernie-4-5-21b-a3b-base,ERNIE-4.5-21B-A3B-Base,mmlu-pro,1
+ernie-4-5-300b-a47b-base,ERNIE-4.5-300B-A47B-Base,mmlu-pro,1
+experepair-v1-0,ExpeRepair-v1.0,swe-bench,1
+experepair-v1-0-plus-claude-4-sonnet,ExpeRepair-v1.0 + Claude 4 Sonnet,swe-bench,1
+fable-5-2,Fable 5.2,terminal-bench,2
+factory-code-droid,Factory Code Droid,swe-bench,3
 falcon-180b,Falcon-180B,epoch,1
 finixs132b,finixs132b,vectara-hhem,3
+frogboss-32b-2510,FrogBoss-32B (2510),swe-bench,1
+frogmini-14b-2510,FrogMini-14B (2510),swe-bench,1
 gdm-ai-co-mathematician,gdm-ai-co-mathematician,epoch,2
+gemini-1-5-flash,Gemini 1.5 Flash,step-game mmlu-pro,16
 gemini-1-5-flash-may-2024,Gemini 1.5 Flash (May 2024),epoch,1
 gemini-1-5-flash-sep-2024,Gemini 1.5 Flash (Sep 2024),epoch,1
+gemini-1-5-pro,Gemini 1.5 Pro,step-game confabulations llm-chess mmlu-pro,23
 gemini-1-5-pro-may-2024,Gemini 1.5 Pro (May 2024),epoch,1
 gemini-1-5-pro-sept-2024,Gemini 1.5 Pro (Sept 2024),epoch,1
+gemini-2-0-flash-think-01-21,Gemini 2.0 Flash Think (01-21),elimination-game step-game confabulations,6
+gemini-2-0-flash-think-exp-old,Gemini 2.0 Flash Think Exp Old,step-game,1
 gemini-2-5-deep-think-2025-08-01-webapp,gemini-2.5-deep-think-2025-08-01-webapp,epoch,2
-gemini-2-5-flash-lite-preview-06-17-thinking,gemini-2.5-flash-lite-preview-06-17-thinking,arena,1
-gemini-2-5-flash-lite-preview-09-2025-no-thinking,gemini-2.5-flash-lite-preview-09-2025-no-thinking,arena,1
+gemini-2-5-flash-preview-24k,Gemini 2.5 Flash Preview 24K,confabulations,3
+gemini-3-5-flash-medium,gemini-3.5-flash-medium,llm-chess,4
+gemini-3-6-flash-medium,gemini-3.6-flash-medium,llm-chess,4
+gemini-3-8-flash-medium,gemini-3.8-flash-medium,llm-chess,4
+gemini-4-hydrogen,gemini-4-hydrogen,livebench,9
 gemini-advanced-0514,Gemini Advanced (0514),arena,56
+gemini-flash-2-0,gemini-flash 2.0,kagi,4
 gemini-pro,Gemini Pro,arena,94
-gemma-2b-unlisted,Gemma 2B,epoch,1
-gemma-7b-unlisted,Gemma 7B,epoch,1
+gemma-2b-unlisted,Gemma 2B,epoch mmlu-pro,16
+gemma-3-27b-it-fast,gemma-3-27b-it-fast,kagi,4
+gemma-3-4b-it-iq4-qs,gemma-3-4b-it@iq4_qs,llm-chess,3
+gemma-3-4b-it-iq4-qs-pgn,gemma-3-4b-it@iq4_qs@PGN,llm-chess,3
+gemma-4-31b-reasoning,Gemma 4 31B Reasoning,nyt-connections lechmazur-writing lechmazur-generalization lechmazur-sycophancy,7
+gemma-7b-unlisted,Gemma 7B,epoch mmlu-pro,16
+general-reasoner-14b,General-Reasoner-14B,mmlu-pro,1
+general-reasoner-7b,General-Reasoner-7B,mmlu-pro,1
+glm-4-32b,glm-4-32b,kagi,4
+glm-4-6-exacto,glm-4.6:exacto,kagi,4
+glm-4-9b,GLM-4-9B,mmlu-pro,15
+globant-code-fixer-agent,Globant Code Fixer Agent,swe-bench,2
+google-gemma-3-12b-it-iq4-xs,google_gemma-3-12b-it@iq4_xs,llm-chess,3
+google-gemma-3-27b-it-iq4-xs,google_gemma-3-27b-it@iq4_xs,llm-chess,3
+google-jules-plus-gemini-2-0-flash-v20241212-experimental,Google Jules + Gemini 2.0 Flash (v20241212-experimental),swe-bench,1
+gpt-35-turbo-0125,gpt-35-turbo (0125),llm-chess,3
+gpt-35-turbo-0301,gpt-35-turbo (0301),llm-chess,3
+gpt-35-turbo-0613,gpt-35-turbo (0613),llm-chess,3
+gpt-35-turbo-1106,gpt-35-turbo (1106),llm-chess,3
+gpt-4,gpt-4,llm-chess,4
+gpt-4-32k,gpt-4-32k,llm-chess,4
+gpt-4-mini,GPT-4-mini,mmlu-pro,1
 gpt-4o,GPT-4o,arena,1
+gpt-4o-feb-2025,GPT-4o Feb 2025,elimination-game step-game confabulations,6
+gpt-4o-mar-2025,GPT-4o Mar 2025,elimination-game step-game confabulations,6
+gpt-5-1-chat,gpt-5.1-chat,llm-chess,4
+gpt-5-1-codex-max,gpt-5.1-codex-max,terminal-bench livebench,234
+gpt-5-3-codex-medium,gpt-5.3-codex-medium,llm-chess,4
+gpt-5-3-instant,gpt-5.3-instant,livebench,31
+gpt-5-6-luna-medium,gpt-5.6-luna-medium,llm-chess,4
+gpt-5-6-sol-medium,gpt-5.6-sol-medium,llm-chess,4
+gpt-5-6-terra-medium,gpt-5.6-terra-medium,llm-chess,4
+gpt-6-luna-max,gpt-6-luna-max,llm-chess,4
+gpt-o1,GPT-o1,mmlu-pro,1
+gpt-o1-mini,GPT-o1-mini,mmlu-pro,1
+gpt-o3,GPT-o3,mmlu-pro,1
+gpt-o3-mini,GPT-o3-mini,mmlu-pro,1
+gpt-oss-120b-medium,gpt-oss-120b-medium,llm-chess,4
+gpt-oss-20b-medium,gpt-oss-20b-medium,llm-chess,4
+gpt-oss-20b-rl,gpt-oss-20b-rl,terminal-bench,1
+granite-3-0-2b-base,Granite-3.0-2B-Base,mmlu-pro,15
+granite-3-0-8b-base,Granite-3.0-8B-Base,mmlu-pro,15
+granite-3-1-1b-a400m-base,Granite-3.1-1B-A400M-Base,mmlu-pro,15
+granite-3-1-2b-base,Granite-3.1-2B-Base,mmlu-pro,15
+granite-3-1-3b-a800m-base,Granite-3.1-3B-A800M-Base,mmlu-pro,15
+granite-3-1-8b-base,Granite-3.1-8B-Base,mmlu-pro,15
+grok,grok,livebench,25
+grok-2,Grok-2,livebench llm-chess mmlu-pro,44
+grok-2-12-12,Grok 2 12-12,elimination-game step-game confabulations,6
 grok-4-1-fast,Grok 4.1 fast,arena tau2-bench,5
 grok-4-2,Grok 4.2,tau2-bench,4
+grok-4-20-0309,Grok 4.20 0309,nyt-connections lechmazur-debate lechmazur-generalization,4
 grok-4-20-beta-1,Grok 4.20 Beta 1,arena,59
-grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,vectara-hhem,3
-grok-4-fast-reasoning,grok-4-fast-reasoning,vectara-hhem,3
+grok-4-20-multi-agent-0304,Grok 4.20 Multi-Agent (0304),nyt-connections,1
+grok-4-20-non-reasoning,grok-4-20-non-reasoning,llm-chess,4
+grok-4-20-non-reasoning-0304,Grok 4.20 Non-Reasoning (0304),nyt-connections,1
+grok-4-20-reasoning,grok-4-20-reasoning,llm-chess,4
+grok-4-20-reasoning-0304,Grok 4.20 Reasoning (0304),nyt-connections,1
+grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,vectara-hhem llm-chess,7
+grok-4-fast-reasoning,grok-4-fast-reasoning,vectara-hhem llm-chess,7
 grok-4-heavy-web-app,grok-4-heavy-web-app,epoch,1
+gru-2024-08-11,Gru (2024-08-11),swe-bench,1
+gru-2024-08-24,Gru (2024-08-24),swe-bench,1
+gru-2024-12-08,Gru (2024-12-08),swe-bench,2
+hermes-4-405b,hermes-4-405b,kagi,4
+hermes-4-405b-thinking,hermes-4-405b Thinking,kagi,4
+higgs-llama-3-70b,Higgs-Llama-3-70B,mmlu-pro,15
+honeycomb,Honeycomb,swe-bench,3
+hunyuan-a13b,Hunyuan-A13B,mmlu-pro,1
+hunyuan-turbos-20250313,hunyuan-turbos (20250313),livebench,74
+hunyuanturbos,HunyuanTurboS,mmlu-pro,1
+ibm-ai-agent-swe-1-0,IBM AI Agent SWE-1.0,swe-bench,1
+ibm-research-agent-101,IBM Research Agent-101,swe-bench,1
+inception-mercury-3,inception-mercury-3,llm-chess,4
 inkling-2-small,Inkling 2 Small,arena,40
+inkling-small-2,Inkling Small 2,terminal-bench,2
 intellect-1,INTELLECT-1,epoch,1
+intern-s1,Intern-S1,mmlu-pro,1
 internlm-20b,internlm-20b,epoch,1
 internlm-7b,internlm-7b,epoch,1
+internmath-20b-plus,InternMath-20B-Plus,mmlu-pro,15
+internmath-7b-plus,InternMath-7B-Plus,mmlu-pro,15
+isoform,Isoform,swe-bench,2
+joycode-plus-claude-4-sonnet-plus-gpt-4-1,JoyCode + Claude 4 Sonnet + GPT-4.1,swe-bench,1
+junie-cli-plus-claude-opus-4-6-plus-gemini-3-flash-preview-plus-gemini-3-1-pro-preview-plus-gpt-5-3-codex,Junie CLI + claude-opus-4-6 + gemini-3-flash-preview + gemini-3.1-pro-preview + gpt-5.3-codex,terminal-bench,1
+k2-5-1t-a32b,K2.5-1T-A32B,mmlu-pro,1
+k2-think-iq4-xs,k2-think@iq4_xs,llm-chess,4
+kimi-k2-5-thinking,Kimi K2.5 Thinking,nyt-connections lechmazur-writing lechmazur-debate lechmazur-generalization,6
+kimi-k2-thinking-64k,Kimi K2 Thinking 64K,elimination-game step-game,3
 kimi-k2-thinking-turbo,Kimi K2 Thinking Turbo,epoch arena,64
+learnlm-1-5-pro,learnlm-1.5-pro,livebench,74
+learnlm-2-0-flash,learnlm-2.0-flash,livebench,24
+lemonharness-plus-gemini-3-1-pro-preview-plus-gpt-3-5-codex,LemonHarness + gemini-3.1-pro-preview + gpt-3.5-codex,terminal-bench,1
+lemonharness-plus-gemini-3-1-pro-preview-plus-gpt-5-3-codex,LemonHarness + gemini-3.1-pro-preview + gpt-5.3-codex,terminal-bench,1
+ling-1t,ling-1t,kagi,4
+ling-2-6-1t,Ling 2.6 1T,nyt-connections,1
+lingma-agent-plus-lingma-swe-gpt-72b-v0918,Lingma Agent + Lingma SWE-GPT 72b (v0918),swe-bench,1
+lingma-agent-plus-lingma-swe-gpt-72b-v0925,Lingma Agent + Lingma SWE-GPT 72b (v0925),swe-bench,1
+lingma-agent-plus-lingma-swe-gpt-7b-v0918,Lingma Agent + Lingma SWE-GPT 7b (v0918),swe-bench,1
+lingma-agent-plus-lingma-swe-gpt-7b-v0925,Lingma Agent + Lingma SWE-GPT 7b (v0925),swe-bench,1
 llama-2-34b,Llama 2-34B,epoch,1
-llama-3-1-8b-unlisted,Llama 3.1-8B,epoch,1
+llama-3-1-8b-unlisted,Llama 3.1-8B,epoch llm-chess mmlu-pro,20
 llama-3-2-90b,Llama 3.2 90B,epoch,1
-llama-3-3-70b-instruct-turbo,Llama-3.3-70B-Instruct-Turbo,vectara-hhem,3
+llama-3-405b,llama-3-405b,kagi,4
+llama3-8b-8192,llama3-8b-8192,llm-chess,3
+llama3-smaug-8b,Llama3-Smaug-8B,mmlu-pro,15
+llama3-swe-rl-70b,Llama3-SWE-RL-70B,swe-bench,1
+llama4-behemoth,Llama4-Behemoth,mmlu-pro,1
 llava-1-6-34b,LLaVA 1.6 34B,arena,3
+llemma-7b,Llemma-7B,mmlu-pro,15
+maestro-reasoning,maestro-reasoning,kagi,4
+magistral-medium,magistral-medium,kagi,4
+magistral-small,magistral-small,kagi llm-chess,7
+magnum-72b-v1,magnum-72b-v1,mmlu-pro,15
+mammoth2-7b-plus,MAmmoTH2-7B-Plus,mmlu-pro,15
+mammoth2-8b-plus,MAmmoTH2-8B-Plus,mmlu-pro,15
+mammoth2-8x7b-plus,MAmmoTH2-8x7B-Plus,mmlu-pro,15
+mcts-refine-7b,MCTS-Refine-7B,swe-bench,2
+mercury-coder,mercury-coder,kagi,4
+mercury-coder-small,mercury-coder-small,llm-chess,3
+meta-llama4-scout-17b-instruct,meta.llama4-scout-17b-instruct,llm-chess,4
+mimo-7b-base,Mimo-7B-base,mmlu-pro,1
+mimo-7b-rl,Mimo-7B-RL,mmlu-pro,1
+minimax-m2-7-highspeed,MiniMax-M2.7-highspeed,terminal-bench,1
+minimax-text-01,MiniMax-Text-01,elimination-game confabulations mmlu-pro,6
+mistral-3-1-small,Mistral-3.1-Small,mmlu-pro,1
 mistral-7b-instruct,Mistral 7B Instruct,arena,50
+mistral-7b-v0-2,Mistral-7B-v0.2,mmlu-pro,15
 mistral-large,Mistral Large,epoch,1
+mistral-medium,mistral-medium,kagi,4
+mistral-nemo-12b-instruct,mistral-nemo-12b-instruct,llm-chess,3
+mistral-nemo-base-2407,Mistral-Nemo-Base (2407),mmlu-pro,15
+mistral-small,mistral-small,kagi,4
+mistral-small-3-2-24b-it,mistral-small-3.2-24b-it,kagi,4
+mistral-small-base,Mistral-Small-base,mmlu-pro,1
 mixtral-8x22b,Mixtral 8x22B,epoch,1
 mixtral-8x7b,Mixtral 8x7B,epoch,1
 mpt-30b,MPT-30B,epoch,1
-muse-ember,Muse Ember,arena,4
+muse-ember,Muse Ember,arena llm-chess,8
+muse-ember-max,muse-ember-max,llm-chess,4
 muse-glimmer,Muse Glimmer,arena,50
-nanbeige3-5-pro-thinking,Nanbeige3.5-Pro-Thinking,bfcl,29
+muse-wonder-1-0,Muse Wonder 1.0,nyt-connections lechmazur-debate,2
+nanbeige3-5-pro-thinking,Nanbeige3.5-Pro Thinking,bfcl,29
+nebius-ai-qwen-2-5-72b-generator-plus-llama-3-1-70b-critic,Nebius AI Qwen 2.5 72B Generator + LLama 3.1 70B Critic,swe-bench,1
+nemotron-3-nano,nemotron-3-nano,llm-chess,4
+nemotron-3-nano-30b-a3b-base,Nemotron-3-Nano-30B-A3B-Base,mmlu-pro,1
+nemotron-3-super,Nemotron 3 Super,nyt-connections,1
 nemotron-3-ultra,Nemotron 3 Ultra,epoch,4
 nemotron-4-15b,Nemotron-4 15B,epoch,1
+nemotron-cortexa,Nemotron-CORTEXA,swe-bench,2
+nemotron-h-56b-base,Nemotron-H-56B-Base,mmlu-pro,1
+nemotron-h-8b-base,Nemotron-H-8B-Base,mmlu-pro,1
+nemotron-nano-12b-v2-vl,nemotron-nano-12b-v2-vl,kagi,4
+neo-7b,Neo-7B,mmlu-pro,15
+neo-7b-instruct,Neo-7B-Instruct,mmlu-pro,15
+nfactorial-2024-10-01,nFactorial (2024-10-01),swe-bench,1
+nfactorial-2024-10-07,nFactorial (2024-10-07),swe-bench,1
+nfactorial-2024-10-30,nFactorial (2024-10-30),swe-bench,1
+nfactorial-2024-11-05,nFactorial (2024-11-05),swe-bench,1
+non-deepseek-r1-t03-mini41-t10-mini41-t03,non-deepseek-r1-t03_mini41-t10_mini41-t03,llm-chess,4
+non-gemini-25pro-t03-mini41-t00-mini41-t03,non-gemini-25pro-t03_mini41-t00_mini41-t03,llm-chess,4
+nova-premier-v1,nova-premier-v1,kagi,4
 nvila-internal-15b-v1,nvila-internal-15b-v1,arena,2
 o3-high-plus-gpt-4-1,o3 (high) + gpt-4.1,aider-polyglot,3
+o4-mini-low-pgn,o4-mini-low@PGN,llm-chess,4
 open-llama-7b,open_llama_7b,epoch,1
 open-mistral-7b,open-mistral-7b,epoch,2
 open-mixtral-8x22b,open-mixtral-8x22b,epoch,2
 open-mixtral-8x7b,open-mixtral-8x7b,epoch,2
 openassistant-pythia-12b,OpenAssistant Pythia 12B,arena,40
+openchat-3-5-8b,OpenChat-3.5-8B,mmlu-pro,15
+openhands,OpenHands,swe-bench,1
+openhands-plus-4x-scaled-2024-02-03,OpenHands + 4x Scaled (2024-02-03),swe-bench,1
+openhands-plus-codeact-v2-1-claude-3-5-sonnet-20241022,OpenHands + CodeAct v2.1 (claude-3-5-sonnet-20241022),swe-bench,2
 optimus-alpha,Optimus Alpha,aider-polyglot,3
+ox-alpha-max,ox-alpha-max,livebench,31
 palm-2-l,PaLM 2-L,epoch,1
 palm-2-m,PaLM 2-M,epoch,1
 palm-2-s,PaLM 2-S,epoch,1
+patchpilot-plus-co-patcher,PatchPilot + Co-PatcheR,swe-bench,1
+perplexity-sonar,perplexity-sonar,livebench,25
 phi-3-medium-14b,phi-3-medium 14B,epoch,1
 phi-3-mini-3-8b,phi-3-mini 3.8B,epoch,1
+phi-3-small-128k-instruct,phi-3-small-128k-instruct,livebench,74
 phi-3-small-7-4b,phi-3-small 7.4B,epoch,1
+phi-4-multimodal-instruct,phi-4-multimodal-instruct,kagi,4
+phi3-medium-128k,Phi3-medium-128k,mmlu-pro,15
+phi3-medium-4k,Phi3-medium-4k,mmlu-pro,15
+phi3-mini-128k,Phi3-mini-128k,mmlu-pro,15
+phi3-mini-4k,Phi3-mini-4k,mmlu-pro,15
+phi4-sft,Phi4-sft,mmlu-pro,1
+polaris-plus-claude-opus-4-7-plus-gemini-3-1-pro-preview-plus-gpt-5-5,Polaris + claude-opus-4-7 + gemini-3.1-pro-preview + gpt-5.5,terminal-bench,1
 principledmachines-cortex-0-1,PrincipledMachines Cortex 0.1,tau2-bench,2
+qodo-command,Qodo Command,swe-bench,1
 quasar-alpha,Quasar Alpha,aider-polyglot,3
 qwen-1-8b,Qwen-1_8B,epoch,1
 qwen-14b,Qwen-14B,epoch,1
+qwen-2-5,Qwen 2.5,swe-bench,5
+qwen-3-235b-a22b-25-07-instruct,Qwen 3 235B A22B 25-07 Instruct,elimination-game step-game,3
+qwen-3-235b-a22b-25-07-think,Qwen 3 235B A22B 25-07 Think,confabulations,3
+qwen-3-5-397b,qwen-3-5-397b,kagi,4
+qwen-3-coder,qwen-3-coder,kagi,4
+qwen-3-max-thinking,Qwen 3 Max Thinking,nyt-connections elimination-game step-game mmlu-pro,5
+qwen-max,qwen-max,llm-chess,4
+qwen-plus,qwen-plus,llm-chess,4
 qwen-plus-2025-04-28,qwen-plus (2025-04-28),epoch,1
+qwen-plus-2025-07-28,qwen-plus (2025-07-28),kagi,4
+qwen-qwq,Qwen QwQ,step-game,1
+qwen-qwq-32b-16k,Qwen QwQ-32B 16K,elimination-game step-game confabulations,6
+qwen1-5-110b,Qwen1.5-110B,mmlu-pro,15
+qwen2-5-14b-instruct-1m,qwen2.5-14b-instruct-1m,llm-chess,3
+qwen2-5-7b-chess-mmxl-f16,qwen2.5-7b-chess-mmxl@f16,llm-chess,3
+qwen2-5-7b-instruct-1m,qwen2.5-7b-instruct-1m,llm-chess,3
 qwen2-5-plus-1127,Qwen2.5-Plus (1127),arena,50
+qwen2-5-turbo,Qwen2.5-Turbo,mmlu-pro,1
+qwen2-72b-32k,Qwen2-72B-32k,mmlu-pro,15
+qwen2-72b-chat,Qwen2-72B-Chat,mmlu-pro,15
+qwen3-14b-iq4-xs-thinking,qwen3-14b@iq4_xs Thinking,llm-chess,3
 qwen3-235b-a22b-diff-no-think-alibaba-api,"Qwen3 235B A22B diff, no think, Alibaba API",aider-polyglot,3
-qwen3-max,Qwen3-Max,epoch,1
+qwen3-30b-a3b-base,Qwen3-30B-A3B-Base,mmlu-pro,1
+qwen3-32b-fast-thinking,Qwen3-32B-fast Thinking,kagi,4
+qwen3-8-27b-q2-k-xl,qwen3.8-27b@q2_k_xl,llm-chess,4
+qwen3-max,Qwen3-Max,epoch kagi,9
+qwen3-next-80b-a3b,qwen3-next-80b-a3b,llm-chess,4
 qwq-32b-plus-qwen-2-5-coder-instruct,QwQ-32B + Qwen 2.5 Coder Instruct,aider-polyglot,3
 raft-30b-a3b,RAFT-30B-A3B,tau2-bench,5
+rag-plus-chatgpt-3-5,RAG + ChatGPT 3.5,swe-bench,3
+rag-plus-swe-llama-13b,RAG + SWE-Llama 13B,swe-bench,3
+refact-ai-agent,Refact.ai Agent,swe-bench,2
+refact-ai-agent-plus-claude-4-sonnet-plus-o4-mini,Refact.ai Agent + Claude 4 Sonnet + o4-mini,swe-bench,1
+reflection-llama-3-1-70b,Reflection-Llama-3.1-70B,mmlu-pro,15
+reka-3,Reka 3,mmlu-pro,1
+ring-1t,ring-1t,kagi,4
+ring-mini-2-0,ring-mini-2.0,llm-chess,3
+rrd2-5-9b,RRD2.5-9B,mmlu-pro,15
+salesforce-ai-research-sage,Salesforce AI Research SAGE,swe-bench,3
 seed-1-6,seed-1.6,epoch,4
+seed-oss-36b-base,Seed-OSS-36B-Base,mmlu-pro,2
+seed-thinking-v1-5,Seed-Thinking-v1.5,mmlu-pro,1
+seed1-6-ada-thinking,Seed1.6-Ada Thinking,mmlu-pro,1
+seed1-6-base,Seed1.6-Base,mmlu-pro,1
+seed1-6-thinking,Seed1.6 Thinking,mmlu-pro,1
+seed2-0-mini,Seed2.0-Mini,mmlu-pro,1
+seed2-0-pro,Seed2.0-Pro,mmlu-pro,1
+semagent-multi-v1-0,SemAgent_Multi-v1.0,swe-bench,1
+silent-blocker,Silent Blocker,step-game,1
+silent-closer,Silent Closer,step-game,1
+silent-collision-tracker,Silent Collision Tracker,step-game,1
+silent-evmax,Silent EVMax,step-game,1
+silent-greedy,Silent Greedy,step-game,1
+silent-random,Silent Random,step-game,1
+silent-ucb,Silent UCB,step-game,1
+skythought-t1,SkyThought-T1,mmlu-pro,1
+smaug-agentic,smaug-agentic,livebench,31
+smaug-flash,smaug-flash,livebench,31
+smaug-mini,smaug-mini,livebench,31
+smaug-nemotron-3-5,smaug-nemotron-3.5,livebench,27
+smaug-qwen2-72b-instruct,smaug-qwen2-72b-instruct,livebench,49
+smollm-1-7b,SmolLM-1.7B,mmlu-pro,15
+smollm-135m,SmolLM-135M,mmlu-pro,15
+smollm-360m,SmolLM-360M,mmlu-pro,15
+solver-2024-09-12,Solver (2024-09-12),swe-bench,2
+solver-2024-10-28,Solver (2024-10-28),swe-bench,1
 spark-x2-6,Spark-X2.6,arena,4
+spotlight,spotlight,kagi,4
 stable-beluga-2,Stable Beluga 2,epoch,1
+staring-7b,Staring-7B,mmlu-pro,15
+supercoder2-0,SuperCoder2.0,swe-bench,1
+swe-agent-javascript-plus-claude-sonnet-3-5,SWE-agent JavaScript + Claude Sonnet 3.5,swe-bench,1
+swe-agent-javascript-plus-gpt-4o-2024-08-06,SWE-agent JavaScript + GPT 4o (2024-08-06),swe-bench,1
+swe-agent-multimodal-plus-gpt-4o-2024-08-06,SWE-agent Multimodal + GPT 4o (2024-08-06),swe-bench,1
+swe-agent-plus-claude-3-opus,SWE-agent + Claude 3 Opus,swe-bench,1
+swe-agent-plus-claude-sonnet-3-5,SWE-agent + Claude Sonnet 3.5,swe-bench,1
+swe-agent-plus-gpt-4o-2024-08-06,SWE-agent + GPT 4o (2024-08-06),swe-bench,1
+swe-llama,SWE-Llama,swe-bench,3
+swe-rizzo,SWE-Rizzo,swe-bench,1
+termigen-32b,TermiGen-32B,terminal-bench,1
+ternary-bonsai-2-27b-gguf-tq1-0,Ternary-Bonsai-2-27B-gguf:TQ1_0,llm-chess,4
 toolace-2-8b,ToolACE-2-8B,bfcl,31
+tools-plus-claude-3-5-sonnet-2024-10-22,Tools + Claude 3.5 Sonnet (2024-10-22),swe-bench,1
+tools-plus-claude-3-7-sonnet-2025-02-24,Tools + Claude 3.7 Sonnet (2025-02-24),swe-bench,1
+trae,TRAE,swe-bench,1
+trae-plus-claude-sonnet-4-plus-opus-4-plus-sonnet-3-7-plus-gemini-2-5-pro,TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro,swe-bench,1
+trae-plus-doubao-seed-code,TRAE + Doubao-Seed-Code,swe-bench,1
 u2-flash,U2 Flash,arena,4
+ugaiforge,ugaiforge,swe-bench,1
+ui-tars-1-5-7b,ui-tars-1.5-7b,kagi,4
+valkyrie-49b-v1,valkyrie-49b-v1,kagi,4
 vicuna-13b,Vicuna 13B,arena,54
 vicuna-33b,Vicuna 33B,arena,54
 vicuna-7b,Vicuna 7B,arena,42
+virtuoso-large,virtuoso-large,kagi,4
+warp,Warp,swe-bench,2
+warp-plus-claude-haiku-4-5-20251001-plus-claude-sonnet-4-5-20250929-plus-gpt-5-nano,Warp + claude-haiku-4-5-20251001 + claude-sonnet-4-5-20250929 + gpt-5-nano,terminal-bench,1
+warp-plus-claude-haiku-4-5-20251001-plus-gemini-3-pro-preview-plus-gpt-5-nano,Warp + claude-haiku-4-5-20251001 + gemini-3-pro-preview + gpt-5-nano,terminal-bench,1
+warp-plus-claude-haiku-4-5-plus-gpt-5-2,Warp + claude-haiku-4-5 + gpt-5.2,terminal-bench,1
 wizardlm-13b,WizardLM 13B,arena,42
 wizardlm-70b,WizardLM 70B,arena,46
 xgen-7b,XGen-7B,epoch,1
-yi-6b,Yi 6B,epoch,1
+xiaomi-mimo-v2-6-pro-thinking,Xiaomi MiMo V2.6 Pro (thinking)※,lechmazur-writing,2
+yi-34b,Yi-34B,mmlu-pro,15
+yi-6b,Yi 6B,epoch mmlu-pro,16
 yi-9b,Yi-9B,epoch,1
+zencoder-2025-03-10,Zencoder (2025-03-10),swe-bench,1
+zencoder-2025-04-30,Zencoder (2025-04-30),swe-bench,1
