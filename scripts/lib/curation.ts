@@ -6,15 +6,18 @@
  *                          catalogue model. source "*" applies to every source; model_id "-" keeps
  *                          the name from being matched at all.
  *   curation/models.yaml   models to add to the catalogue, or fields to correct on one already in it.
+ *
+ * The catalogue they apply to is merged from the catalogue feeds (lib/catalog.ts).
  */
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { parse } from 'yaml';
+import { loadFeeds, mergeCatalogs } from './catalog.ts';
+import { loadSources } from './config.ts';
 import { aliasMap, NO_MATCH, type Aliases } from './match.ts';
 import { normalize } from './names.ts';
 import { parseDelimited, tableToRecords, type Rec } from './parse.ts';
-import { CATALOG_PATH, readJsonl } from './store.ts';
-import type { CatalogModel } from './types.ts';
+import type { CatalogModel, SourceConfig } from './types.ts';
 
 export const ALIASES_PATH = join('curation', 'aliases.csv');
 export const MODELS_PATH = join('curation', 'models.yaml');
@@ -78,12 +81,20 @@ export function parseModelsYaml(text: string | undefined): { entries: Array<Part
   return { entries, problems };
 }
 
-/** The catalogue from data/catalog/models.jsonl with curation/models.yaml applied. */
-export async function loadCatalog(): Promise<CatalogModel[]> {
-  const base = await readJsonl<CatalogModel>(CATALOG_PATH);
+/** The catalogue feeds merged, before curation/models.yaml; `before` as in loadFeeds. */
+export async function mergedFeeds(
+  sources?: readonly SourceConfig[],
+  before?: string,
+): Promise<ReturnType<typeof mergeCatalogs>> {
+  return mergeCatalogs(await loadFeeds(sources ?? (await loadSources()), before));
+}
+
+/** The catalogue: every feed merged (data/catalog/), with curation/models.yaml applied. */
+export async function loadCatalog(opts: { sources?: readonly SourceConfig[]; before?: string } = {}): Promise<CatalogModel[]> {
+  const { catalog } = await mergedFeeds(opts.sources, opts.before);
   const { entries, problems } = parseModelsYaml(await readOptional(MODELS_PATH));
   if (problems.length) throw new Error(problems.join('\n'));
-  return applyModels(base, entries);
+  return applyModels(catalog, entries);
 }
 
 export function applyModels(base: readonly CatalogModel[], entries: ReadonlyArray<Partial<CatalogModel> & { id: string }>): CatalogModel[] {
@@ -106,8 +117,9 @@ export async function loadAliases(): Promise<Aliases> {
 }
 
 /** Problems in the curation files: unknown sources or models, duplicates, new models without names. */
-export async function checkCuration(sourceIds: readonly string[]): Promise<string[]> {
-  const base = await readJsonl<CatalogModel>(CATALOG_PATH);
+export async function checkCuration(sources: readonly SourceConfig[]): Promise<string[]> {
+  const sourceIds = sources.map((s) => s.id);
+  const { catalog: base } = await mergedFeeds(sources);
   const { entries, problems } = parseModelsYaml(await readOptional(MODELS_PATH));
   const known = new Set(base.map((m) => m.id));
   const keys = new Map<string, string>();
@@ -119,7 +131,7 @@ export async function checkCuration(sourceIds: readonly string[]): Promise<strin
     if (same) problems.push(`${MODELS_PATH}: new model "${e.id}" looks like catalogue model "${same}"; correct that one instead`);
   }
   const ids = new Set(applyModels(base, entries).map((m) => m.id));
-  const sources = new Set(sourceIds);
+  const sourceSet = new Set(sourceIds);
   const seen = new Set<string>();
   (await readAliasRows()).forEach((r, i) => {
     const where = `${ALIASES_PATH} line ${i + 2}`;
@@ -127,7 +139,7 @@ export async function checkCuration(sourceIds: readonly string[]): Promise<strin
     const raw = String(r['raw_name'] ?? '');
     const id = String(r['model_id'] ?? '').trim();
     if (!source || !raw || !id) return problems.push(`${where}: needs source, raw_name and model_id`);
-    if (source !== '*' && !sources.has(source)) problems.push(`${where}: no source "${source}" in sources.yaml`);
+    if (source !== '*' && !sourceSet.has(source)) problems.push(`${where}: no source "${source}" in sources.yaml`);
     if (id !== NO_MATCH && !ids.has(id)) problems.push(`${where}: no model "${id}" in the catalogue or ${MODELS_PATH}`);
     const k = `${source}\u0000${raw}`;
     if (seen.has(k)) problems.push(`${where}: "${raw}" is listed twice for ${source}`);

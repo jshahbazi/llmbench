@@ -20,5 +20,10 @@ the files the site builds from it, are a different matter.
 - **Sources with no licence.** Some sources state no licence (`none stated`). Their scores are
   reproduced as factual results, with credit to the source. A source is left out only when its terms
   forbid reuse or automated access.
+- **The model catalogue** (makers, release dates, sizes, licences, context windows) is merged from
+  whatmodel.sh (CC BY-SA 4.0), [models.dev](https://models.dev) (MIT), Epoch AI's
+  [Data on AI Models](https://epoch.ai/data/ai-models) (CC BY 4.0) and the Hugging Face Hub's model
+  API (parameter counts and each repository's own licence tag). The `catalogue_source` column of the
+  models download says which feed each model's entry came from.
 - **Removal.** If you run a source and want it credited differently or removed, open an issue.
 - No source endorses this project. Data is provided as-is, without warranty.

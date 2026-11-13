@@ -17,18 +17,19 @@ import { intervalMs, loadSources } from './lib/config.ts';
 import { diffRows, historyIndex } from './lib/diff.ts';
 import { extract, mappingFrom } from './lib/extract.ts';
 import { fetchSource, recordsFrom } from './lib/fetchers.ts';
-import { checkGuards } from './lib/guards.ts';
+import { checkCatalog, checkGuards } from './lib/guards.ts';
 import {
+  catalogPath,
   duplicateKeys,
+  readJsonl,
   readHistory,
   readRows,
   readRunCache,
   readState,
-  writeCatalog,
   writeRunCache,
   writeSource,
 } from './lib/store.ts';
-import type { ExtractResult, Plugin, PluginContext, RunEntry, SourceConfig } from './lib/types.ts';
+import type { CatalogModel, ExtractResult, Plugin, PluginContext, RunEntry, SourceConfig } from './lib/types.ts';
 
 const { values } = parseArgs({
   options: {
@@ -78,10 +79,14 @@ async function runSource(source: SourceConfig, cache: RunEntry | undefined): Pro
     rollingDays: rolling ? 7 : undefined,
     baselineAt: previous?.baseline_at ?? previous?.changed_at,
   });
-  const summary = previous
-    ? `${result.rows.length} rows; ${stats.added} added, ${stats.changed} changed, ${stats.removed} removed` +
-      (stats.returned ? `, ${stats.returned} returned` : '')
-    : `baseline: ${result.rows.length} rows, ${stats.added} scores`;
+  const prevCatalog = result.catalog ? await readJsonl<CatalogModel>(catalogPath(source.id)) : [];
+  const delta = (result.catalog?.length ?? 0) - prevCatalog.length;
+  const models = result.catalog ? `; ${result.catalog.length} catalogue models (${delta >= 0 ? '+' : ''}${delta})` : '';
+  const summary =
+    (previous
+      ? `${result.rows.length} rows; ${stats.added} added, ${stats.changed} changed, ${stats.removed} removed` +
+        (stats.returned ? `, ${stats.returned} returned` : '')
+      : `baseline: ${result.rows.length} rows, ${stats.added} scores`) + models;
   const warnings = result.warnings?.length ? result.warnings : undefined;
 
   const reasons = checkGuards({
@@ -92,9 +97,11 @@ async function runSource(source: SourceConfig, cache: RunEntry | undefined): Pro
     minRows: Number(source.options['min_rows'] ?? 1),
     rolling,
   });
+  if (result.catalog) reasons.push(...checkCatalog(prevCatalog.length, result.catalog.length, Number(source.options['min_models'] ?? 1)));
   if (dryRun) {
     console.log(`  ${summary}; ${result.metrics.length} metrics${reasons.length ? `; would be held: ${reasons.join('; ')}` : ''}`);
     for (const r of result.rows.slice(0, 5)) console.log(`  ${JSON.stringify(r).slice(0, 240)}`);
+    for (const m of (result.catalog ?? []).slice(0, result.rows.length ? 0 : 5)) console.log(`  ${JSON.stringify(m).slice(0, 240)}`);
     return { ...base, outcome: reasons.length ? 'held' : 'unchanged', reasons: reasons.length ? reasons : undefined, summary: 'dry run', warnings };
   }
   if (reasons.length && accept !== source.id) {
@@ -104,10 +111,17 @@ async function runSource(source: SourceConfig, cache: RunEntry | undefined): Pro
 
   const written = await writeSource(
     source.id,
-    { rows: result.rows, metrics: result.metrics, events, upstreamSources: result.upstreamSources, revision: result.revision, revisionDate: result.revisionDate },
+    {
+      rows: result.rows,
+      metrics: result.metrics,
+      events,
+      upstreamSources: result.upstreamSources,
+      catalog: result.catalog,
+      revision: result.revision,
+      revisionDate: result.revisionDate,
+    },
     now,
   );
-  if (result.catalog) await writeCatalog(result.catalog);
   return {
     ...base,
     ...validators,

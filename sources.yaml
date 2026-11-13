@@ -29,6 +29,12 @@
 #   round       decimals to keep for numeric scores, only where extra precision is noise
 #   every       how often to check (30m, 6h, 1d)
 #
+# Catalogue feeds: sources whose plugin returns models (name, maker, release date, open weights,
+# licence, size) instead of, or as well as, scores. They are merged in the order they appear here;
+# the first to describe a model wins, later ones fill only the fields it left empty (see
+# scripts/lib/catalog.ts). catalog: fill marks a feed that only fills fields and never adds models.
+# min_models holds a feed's run when it returns fewer models.
+#
 # To draft an entry for a new file: npm run add-source -- <location>   (add --ai to have Claude draft it)
 # To try an entry without writing anything: npm run scrape -- --source <id> --dry-run
 
@@ -38,7 +44,7 @@ defaults:
 
 sources:
   # Open compilation of published results, each with its own source URL and licence.
-  # Seeds the model catalogue. Rows are long-form: one result per row.
+  # The first catalogue feed. Rows are long-form: one result per row.
   - id: whatmodel
     name: whatmodel.sh
     homepage: https://whatmodel.sh
@@ -59,6 +65,49 @@ sources:
     attribution: >-
       whatmodel.sh by Merlinsbeard Pty Ltd, CC BY-SA 4.0. The underlying sources keep their own
       licences; see data/sources/whatmodel/upstream-sources.jsonl.
+    terms: allowed
+
+  # Catalogue feeds that follow whatmodel (no scores). models.dev covers the newest API and open
+  # models within days of release; Epoch's models database adds developers, dates and parameter
+  # counts for notable language models; Hugging Face fills parameter counts and licences for
+  # open-weights models that link to a repository there.
+  - id: models-dev
+    name: models.dev
+    homepage: https://models.dev
+    fetch: https://models.dev/models.json
+    plugin: models-dev
+    every: 1d
+    min_rows: 0
+    min_models: 300
+    license: MIT
+    attribution: models.dev (github.com/anomalyco/models.dev), MIT
+    terms: allowed
+
+  - id: epoch-models
+    name: Epoch AI models database
+    homepage: https://epoch.ai/data/ai-models
+    fetch: https://epoch.ai/data/all_ai_models.csv
+    plugin: epoch-models
+    every: 1d
+    min_rows: 0
+    min_models: 1000
+    license: CC BY 4.0
+    attribution: Epoch AI, 'Data on AI Models', https://epoch.ai/data/ai-models, CC BY 4.0
+    terms: allowed
+
+  - id: huggingface
+    name: Hugging Face Hub
+    homepage: https://huggingface.co/models
+    fetch: https://huggingface.co/api/models
+    plugin: huggingface
+    catalog: fill
+    every: 1d
+    min_rows: 0
+    min_models: 0
+    license: each repository's own
+    attribution: >-
+      Parameter counts and licence tags from the Hugging Face Hub's model API; each model's
+      licence is the one its repository states.
     terms: allowed
 
   # Epoch's own evaluation runs, one CSV per benchmark, plus the Epoch Capabilities Index.
@@ -232,6 +281,26 @@ sources:
       benchmarks come from elsewhere: Humanity's Last Exam, EnigmaEval, MASK and the Remote Labor
       Index from the CAIS dashboard (cais), and SWE-bench Pro, MCP Atlas, MultiChallenge and SWE
       Atlas from model makers' own reports (whatmodel).
+
+  - id: openrouter
+    name: OpenRouter
+    homepage: https://openrouter.ai/models
+    terms: blocked
+    terms_note: >-
+      Its terms (openrouter.ai/terms, section 7, checked 2026-11-13) forbid using "scripts,
+      robots or any other means or processes" "to scrape or copy any information on the Site or
+      the Services". Its model list (api/v1/models) would add names, makers and context lengths,
+      which models.dev already gives.
+
+  - id: respan
+    name: Respan (formerly Keywords AI)
+    homepage: https://www.respan.ai/models
+    terms: blocked
+    terms_note: >-
+      Its terms (respan.ai/legal/terms-of-use, checked 2026-11-13) forbid accessing the services
+      "through automated or non-human means" and retrieving data systematically "to create or
+      compile" a collection or database. Its model pages repeat scores from Epoch AI, LiveBench,
+      Vals AI, SimpleBench, LMArena and model makers, which llmbench reads at the source.
 
   # SWE-bench: agents fixing real GitHub issues, five boards in one file. A plugin keeps runs where
   # the SWE-bench team put every model in the same minimal agent ("bash only") apart from systems

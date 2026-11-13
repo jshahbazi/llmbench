@@ -101,7 +101,7 @@ function statusText(s: SiteSource): string {
   if (s.terms !== 'allowed') return 'not used';
   if (s.outcome === 'held') return 'held';
   if (s.outcome === 'failed') return 'last check failed';
-  if (!s.row_count) return 'pending';
+  if (!s.row_count && !s.catalog) return 'pending';
   return 'ok';
 }
 
@@ -167,7 +167,7 @@ export function buildPages(d: SiteData, downloads: readonly Download[] = []): Pa
 ${m.unlisted
   ? html`<div class="notice soft"><p>Not in the model catalogue yet, so its maker, release date and size are unknown. These are names from the sources that agree with each other. If this is a catalogue model under another name, one line in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/aliases.csv">curation/aliases.csv</a> moves its scores there; to add it, use <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/models.yaml">curation/models.yaml</a>.</p></div>`
   : html`<p class="meta">${modelMeta(m)}</p>`}
-<p class="links">${repo ? html`<a href="${repo}" rel="noopener">Model repository</a> · ` : ''}${m.unlisted ? '' : html`<a href="https://whatmodel.sh/model/${m.id}" rel="noopener">whatmodel.sh page</a> (memory needed, how to run it) · `}<a href="${explorerHref(u, { q: m.name, min: '1' })}">Show in the explorer</a> · <a href="${explorerHref(u, { m: m.id, view: 'compare' })}">Compare with other models</a></p>
+<p class="links">${repo ? html`<a href="${repo}" rel="noopener">Model repository</a> · ` : ''}${m.origin === 'whatmodel' ? html`<a href="https://whatmodel.sh/model/${m.id}" rel="noopener">whatmodel.sh page</a> (memory needed, how to run it) · ` : m.origin && sourceName.has(m.origin) ? html`Model details from <a href="${u}sources/${m.origin}/">${sourceName.get(m.origin)!}</a> · ` : ''}<a href="${explorerHref(u, { q: m.name, min: '1' })}">Show in the explorer</a> · <a href="${explorerHref(u, { m: m.id, view: 'compare' })}">Compare with other models</a></p>
 <p>${cols.length} benchmark scores from ${bySource.size} source${bySource.size === 1 ? '' : 's'}. Rank is among every model with a score in that column, using each model's best score.</p>
 ${[...bySource].map(([sid, cis]) => {
   const main = cis.filter((ci) => index.columns[ci]!.headline);
@@ -256,12 +256,13 @@ f.addEventListener('input', () => {
 <div class="table-scroll"><table class="data">
 <thead><tr><th scope="col">Source</th><th scope="col">Status</th><th scope="col" class="num">Rows</th><th scope="col" class="num">Metrics</th><th scope="col" class="num">Names matched</th><th scope="col">Licence</th><th scope="col">Checked</th><th scope="col">Changed</th></tr></thead>
 <tbody>${index.sources.map(
-      (s) => html`<tr><td><a href="${u}sources/${s.id}/">${s.name}</a></td><td class="status-${statusText(s).split(' ')[0]}">${statusText(s)}</td><td class="num">${s.row_count || ''}</td><td class="num">${s.metric_count || ''}</td><td class="num">${s.names ? `${s.matched_names} / ${s.names}` : ''}</td><td>${s.license ?? ''}${s.terms === 'allowed' && dataReuse(s.license) === 'noncommercial' ? html` <span class="muted">(non-commercial)</span>` : ''}</td><td>${day(s.checked_at)}</td><td>${day(s.changed_at)}</td></tr>`,
+      (s) => html`<tr><td><a href="${u}sources/${s.id}/">${s.name}</a></td><td class="status-${statusText(s).split(' ')[0]}">${statusText(s)}</td><td class="num">${s.row_count || (s.catalog ? html`<span class="muted">${s.catalog.models} models</span>` : '')}</td><td class="num">${s.metric_count || ''}</td><td class="num">${s.names ? `${s.matched_names} / ${s.names}` : ''}</td><td>${s.license ?? ''}${s.terms === 'allowed' && dataReuse(s.license) === 'noncommercial' ? html` <span class="muted">(non-commercial)</span>` : ''}</td><td>${day(s.checked_at)}</td><td>${day(s.changed_at)}</td></tr>`,
     )}</tbody></table></div>
 `;
     pages.push({ path: 'sources/', html: layout({ title: 'Sources — llmbench', description: 'Every leaderboard and dataset llmbench pulls from, with status and licence.', depth: 1, active: 'sources', body, path: 'sources/' }) });
   }
 
+  const firstFeed = index.sources.find((x) => x.catalog && !x.catalog.fill_only)?.id;
   for (const s of index.sources) {
     const u = up(2);
     const cols = index.columns.filter((c) => c.source === s.id).sort((a, b) => Number(b.headline) - Number(a.headline) || b.coverage - a.coverage);
@@ -277,7 +278,8 @@ ${s.reasons?.length ? html`<div class="notice"><p>${s.outcome === 'held' ? 'The 
 ${s.warnings?.length ? html`<div class="notice soft"><ul>${s.warnings.map((w) => html`<li>${w}</li>`)}</ul></div>` : ''}
 <p class="links"><a href="${safeUrl(s.homepage) ?? '#'}" rel="noopener">Website</a>${where ? html` · <a href="${where}" rel="noopener">Data we read</a>` : ''}${s.upstream_revision && /^[0-9a-f]{40}$/.test(s.upstream_revision) ? html` · pinned to upstream commit <code>${s.upstream_revision.slice(0, 7)}</code>` : ''}${headline.length ? html` · <a href="${explorerHref(u, { c: headline, min: '1' })}">Open its headline metrics in the explorer</a>` : ''}</p>
 <p>Licence: ${s.license ?? 'not recorded'}.${s.attribution ? html` ${sentence(s.attribution)}` : ''}${s.terms !== 'allowed' ? '' : dataReuse(s.license) === 'licensed' ? '' : html` <strong>${REUSE_TEXT[dataReuse(s.license)]}</strong>`}${s.terms_note ? html` <span class="muted">${s.terms_note}</span>` : ''}</p>
-${s.terms !== 'allowed' ? html`<p>This source is listed for the record and is not fetched.</p>` : html`
+${s.catalog ? catalogSection(s, s.id === firstFeed, u) : ''}
+${s.terms !== 'allowed' ? html`<p>This source is listed for the record and is not fetched.</p>` : !s.row_count && s.catalog ? '' : html`
 <h2>Metrics <span class="muted">${cols.length}</span></h2>
 <div class="table-scroll"><table class="data"><thead><tr><th scope="col">Metric</th><th scope="col" class="num">Models</th><th scope="col">Tags</th></tr></thead><tbody>
 ${cols.map((c) => html`<tr><td>${c.headline ? '★ ' : ''}<a href="${colHref(u, c)}">${c.label}</a>${c.label !== c.metric ? html` <span class="muted">${c.metric}</span>` : ''}</td><td class="num">${c.coverage}</td><td>${(c.tags ?? []).join(', ')}</td></tr>`)}
@@ -308,6 +310,19 @@ ${events.length ? html`<ul class="history">${events.map((e) => {
     html: layout({ title: 'Not found — llmbench', description: 'Page not found.', depth: 0, active: '', path: '404.html', body: html`<h1>Not found</h1><p>That page does not exist. Try the <a href="/">explorer</a> or the <a href="/benchmarks/">list of benchmarks</a>.</p>` }),
   });
   return pages;
+}
+
+/** What a catalogue feed gave the catalogue, on its source page. */
+function catalogSection(s: SiteSource, first: boolean, u: string): Html {
+  const c = s.catalog!;
+  const file = `https://github.com/jshahbazi/llmbench/blob/main/data/catalog/${s.id}.jsonl`;
+  const what = c.fill_only
+    ? html`It only fills in details for models already in the catalogue, and never adds one: it gave ${c.filled} catalogue models at least one detail they lacked.`
+    : first
+      ? html`This is the first catalogue feed: its ${c.models} models are the base of the catalogue, and the other feeds only fill in details it leaves empty.`
+      : html`Of its ${c.models} models, ${c.added} were added to the catalogue and ${c.filled} catalogue models got details from it that earlier feeds lacked (release date, open weights, licence, size, context window, repository). ${c.left_out ? html`${c.left_out} were left out because a model already in the catalogue shares their core name; they are listed in <a href="https://github.com/jshahbazi/llmbench/blob/main/data/reports/catalog-left-out.csv">data/reports/catalog-left-out.csv</a>.` : ''}`;
+  return html`<h2 id="catalogue">Model catalogue <span class="muted">${c.models} models</span></h2>
+<p>${s.row_count ? '' : 'This source describes models and has no scores. '}${what} How the feeds are merged is on the <a href="${u}method/#catalogue">method page</a>; this feed's models are in <a href="${file}">data/catalog/${s.id}.jsonl</a>.</p>`;
 }
 
 const METHODS: Record<string, string> = {
@@ -413,8 +428,10 @@ function methodPage(): string {
 <li><strong>Submitted</strong>: the score was submitted to a leaderboard by whoever built the model or agent, and who executed it is not established.</li>
 <li><strong>Lab</strong>: reported by the model's maker, for example in a model card or release post.</li>
 </ul>
+<h2 id="catalogue">The model catalogue</h2>
+<p>Each model's maker, release date, size, licence and context window come from the catalogue, which is merged from several feeds in order: <a href="https://whatmodel.sh">whatmodel.sh</a> first, then <a href="https://models.dev">models.dev</a> and <a href="https://epoch.ai/data/ai-models">Epoch AI's models database</a>, which add models released since, then the <a href="https://huggingface.co/models">Hugging Face Hub</a>, which only fills in parameter counts and licences for open-weights models. The first feed to describe a model wins; a later feed only fills details the earlier ones left empty. A later feed's model is added only when nothing in the catalogue shares its core name: “GPT-4o (Aug 2024)” or “Grok 4 Fast Non-Reasoning” from a later feed is left out where the catalogue already has GPT-4o or Grok 4 Fast, so adding a feed never moves a name that already matched. Left-out models are listed in <a href="https://github.com/jshahbazi/llmbench/blob/main/data/reports/catalog-left-out.csv">data/reports/catalog-left-out.csv</a> for adding by hand.</p>
 <h2 id="matching">Matching model names</h2>
-<p>Sources name the same model differently: “o1-2024-12-17_high”, “o1 (high)” and “o1 (2024-12-17)” are one model. Each name is matched to a model in the catalogue, which is seeded from <a href="https://whatmodel.sh">whatmodel.sh</a>, and only on exact agreement, tried in this order:</p>
+<p>Sources name the same model differently: “o1-2024-12-17_high”, “o1 (high)” and “o1 (2024-12-17)” are one model. Each name is matched to a model in the catalogue, and only on exact agreement, tried in this order:</p>
 <ol>
 <li><strong>Curation file.</strong> A line in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/aliases.csv">curation/aliases.csv</a> decides. It can also keep a name from being matched.</li>
 <li><strong>Repository link.</strong> The source links to the model's Hugging Face repository, and the catalogue knows that repository.</li>
@@ -514,9 +531,9 @@ GROUP BY ALL ORDER BY best DESC LIMIT 10;</code></pre>`
 <ul>
 <li><code>data/sources/&lt;source&gt;/rows.jsonl</code>: every row exactly as the source published it.</li>
 <li><code>data/sources/&lt;source&gt;/history.jsonl</code>: every score that was added, changed or removed after the first import.</li>
-<li><code>data/catalog/models.jsonl</code>: the model catalogue, seeded from whatmodel.sh. <code>curation/models.yaml</code> adds to it and corrects it.</li>
+<li><code>data/catalog/&lt;source&gt;.jsonl</code>: the models each catalogue feed describes (whatmodel.sh, models.dev, Epoch AI's models database, Hugging Face), merged into one catalogue in that order. <code>curation/models.yaml</code> adds to it and corrects it.</li>
 <li><code>data/resolved/aliases.csv</code>: every name in every source, the model it was matched to, how, and the qualifiers set aside. <code>data/resolved/unlisted.csv</code>: the models not in the catalogue.</li>
-<li><code>data/reports/unmatched.csv</code>: names not in the catalogue, most used first, with near misses to check.</li>
+<li><code>data/reports/unmatched.csv</code>: names not in the catalogue, most used first, with near misses to check. <code>data/reports/catalog-left-out.csv</code>: models a feed has that the merge left out, to add by hand where they are new.</li>
 </ul>
 <p>The files this site loads are also public: <a href="${u}data/index.json">index.json</a> and one <code>data/cells/&lt;source&gt;.json</code> per source.</p>
 <h2>Licence</h2>

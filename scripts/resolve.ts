@@ -4,6 +4,8 @@
  *   data/resolved/aliases.csv    every name: source, raw name, model, how it matched, qualifiers
  *   data/resolved/unlisted.csv   models not in the catalogue, each gathering the names that agree
  *   data/reports/unmatched.csv   names not in the catalogue, most-used first, with near misses
+ *   data/reports/catalog-left-out.csv   models a catalogue feed has that the merge left out, because
+ *                                one already in the catalogue shares their core name (lib/catalog.ts)
  *
  * A name that matches no catalogue model still gets a model: names from any source whose core name
  * agrees exactly ("Gemini 3 Pro", "gemini-3-pro", "Gemini 3 Pro (Grounding)") share one, so they
@@ -12,7 +14,7 @@
  */
 import { join } from 'node:path';
 import { loadSources } from './lib/config.ts';
-import { loadAliases, loadCatalog } from './lib/curation.ts';
+import { loadAliases, loadCatalog, mergedFeeds } from './lib/curation.ts';
 import { Matcher, slugifyModel, toCsv } from './lib/match.ts';
 import { formatQualifiers, normalize, parseName } from './lib/names.ts';
 import { DATA_DIR, readRows, writeText } from './lib/store.ts';
@@ -20,6 +22,7 @@ import { DATA_DIR, readRows, writeText } from './lib/store.ts';
 export const RESOLVED_PATH = join(DATA_DIR, 'resolved', 'aliases.csv');
 export const UNLISTED_PATH = join(DATA_DIR, 'resolved', 'unlisted.csv');
 export const UNMATCHED_PATH = join(DATA_DIR, 'reports', 'unmatched.csv');
+export const LEFT_OUT_PATH = join(DATA_DIR, 'reports', 'catalog-left-out.csv');
 
 interface NameInfo {
   source: string;
@@ -31,7 +34,8 @@ interface NameInfo {
 }
 
 const sources = await loadSources();
-const catalog = await loadCatalog();
+const merged = await mergedFeeds(sources);
+const catalog = await loadCatalog({ sources });
 const catalogIds = new Set(catalog.map((m) => m.id));
 const matcher = new Matcher(catalog, await loadAliases());
 
@@ -123,7 +127,13 @@ const report = unmatched
 await writeText(RESOLVED_PATH, toCsv(['source', 'raw_name', 'model_id', 'method', 'qualifiers'], resolved));
 await writeText(UNLISTED_PATH, toCsv(['model_id', 'name', 'sources', 'scores'], unlisted));
 await writeText(UNMATCHED_PATH, toCsv(['source', 'raw_name', 'unlisted_as', 'rows', 'scores', 'suggestions'], report));
+const leftOut = [...merged.leftOut].flatMap(([source, models]) =>
+  models.map((m) => [source, m.id, m.name, m.provider ?? '', m.released ?? '', matcher.suggest(m.name, undefined).join(' ')]),
+);
+await writeText(LEFT_OUT_PATH, toCsv(['source', 'model_id', 'name', 'provider', 'released', 'catalogue_models_like_it'], leftOut));
 
 const shared = unlisted.filter((u) => u[2]!.includes(' ')).length;
+const feeds = [...merged.stats].map(([id, st]) => `${id} ${st.models} (${st.added} added, ${st.filled} filled${st.left_out ? `, ${st.left_out} left out` : ''})`);
+console.log(`catalogue: ${catalog.length} models from ${feeds.join(', ')}`);
 console.log(`matched model names: ${perSource.join(', ')}`);
 console.log(`${unmatched.length} names not in the catalogue, as ${unlisted.length} unlisted models (${shared} named by more than one source)`);
