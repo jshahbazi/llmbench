@@ -105,8 +105,14 @@ export class Matcher {
     return this.ids.has(id);
   }
 
+  /** A curation line for this name, or for the name without its organisation ("mistralai/..."). */
   private aliasFor(source: string, raw: string): string | undefined {
-    return this.aliases.get(source)?.get(raw) ?? this.aliases.get('*')?.get(raw);
+    const bare = raw.includes('/') ? raw.slice(raw.lastIndexOf('/') + 1) : undefined;
+    for (const name of bare ? [raw, bare] : [raw]) {
+      const hit = this.aliases.get(source)?.get(name) ?? this.aliases.get('*')?.get(name);
+      if (hit) return hit;
+    }
+    return undefined;
   }
 
   /** True when curation says this name must not be matched. */

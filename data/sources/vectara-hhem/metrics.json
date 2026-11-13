@@ -1,0 +1,23 @@
+[
+ {
+  "id": "Answer Rate",
+  "label": "Answer Rate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Factual Consistency Rate",
+  "label": "Factual Consistency Rate",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false
+ },
+ {
+  "id": "Hallucination Rate",
+  "label": "Hallucination Rate",
+  "direction": "lower",
+  "unit": "percent",
+  "headline": true
+ }
+]

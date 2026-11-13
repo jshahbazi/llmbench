@@ -28,3 +28,7 @@ arena,Amazon Nova Pro 1.0,nova-pro,
 bfcl,Amazon-Nova-Micro-v1:0 (FC),nova-micro,
 bfcl,Amazon-Nova-Pro-v1:0 (FC),nova-pro,
 bfcl,Amazon-Nova-2-Lite-v1:0 (FC),nova-2-lite,
+*,c4ai-aya-expanse-32b,aya-expanse-32b,Cohere For AI's earlier name for the same repository
+*,c4ai-aya-expanse-8b,aya-expanse-8b,Cohere For AI's earlier name for the same repository
+*,mistral-3-large-2512,mistral-large-3,Mistral Large 3 was released in December 2025
+*,jamba-mini-2,jamba2-mini,

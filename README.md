@@ -5,17 +5,18 @@ LLM benchmark results from every listed leaderboard, side by side, at
 columns to compare.
 
 The design and roadmap are in [docs/llm-benchmark-aggregator-plan.md](docs/llm-benchmark-aggregator-plan.md).
-Phases 0–3 are built: five sources, change history, checks on every update, a scheduled GitHub
-workflow that commits new data and deploys the site, the explorer, a page for every model, benchmark
-and source, model-name matching you can correct in one line, and downloads.
+Phases 0–3 are built and Phase 4 is under way: seven sources, change history, checks on every update,
+a scheduled GitHub workflow that commits new data and deploys the site, the explorer with a chart
+mode, a page for every model, benchmark and source, model-name matching you can correct in one line,
+downloads, and a command that drafts a new source's entry.
 
 ## The site
 
 - **Explorer** (home): pick any columns from any source, or start from a preset such as Coding or
   Math. Filter by release date, size, maker, licence and who ran the evaluation. Sort by any column,
   click a score to see every score behind it and where each came from, and compare up to five models
-  side by side. The whole view is in the URL, so "Copy link" shares exactly what you see, and
-  "Download CSV" exports it.
+  side by side, or switch to a chart of any column against release date, size or another column. The
+  whole view is in the URL, so "Copy link" shares exactly what you see, and "Download CSV" exports it.
 - **Model pages** (`/models/<id>/`): every score for one model, with its rank in each column.
 - **Benchmark pages** (`/benchmarks/<source>/<metric>/`): the full leaderboard for one column.
 - **Source pages** (`/sources/<id>/`): status, licence, metrics, how each model name was matched, and
@@ -34,7 +35,16 @@ and source, model-name matching you can correct in one line, and downloads.
 
 ## Adding a source
 
-Most sources need no code. For a CSV, JSON, YAML or Parquet file, add an entry to `sources.yaml`:
+Most sources need no code. For a CSV, JSON, YAML, Parquet file or a Markdown table (such as a
+leaderboard in a README), let the tool draft the entry:
+
+```sh
+npm run add-source -- https://example.org/leaderboard.csv
+npm run add-source -- github:owner/repo/README.md --table 0
+```
+
+It reads the file, lists its columns, and prints an entry to check and paste into `sources.yaml`,
+with `terms: blocked` until you have read the source's terms. A finished entry looks like this:
 
 ```yaml
   - id: my-board
@@ -55,7 +65,7 @@ Check a new entry locally before committing:
 
 ```sh
 npm run validate
-npm run scrape -- --source my-board
+npm run scrape -- --source my-board --dry-run   # shows what would be recorded, writes nothing
 ```
 
 ## Run it locally

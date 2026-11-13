@@ -8,6 +8,7 @@
   },
   "scripts": {
     "scrape": "node scripts/scrape.ts",
+    "add-source": "node scripts/add-source.ts",
     "resolve": "node scripts/resolve.ts",
     "build": "node --disable-warning=ExperimentalWarning scripts/build.ts",
     "report-issues": "node scripts/report-issues.ts",

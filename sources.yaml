@@ -6,6 +6,8 @@
 #
 # Quick reference for a source without a plugin:
 #   fetch       github:owner/repo/path (globs allowed) | hf:owner/dataset | https://...
+#               CSV, TSV, JSON, JSON Lines, YAML, Parquet or a Markdown table (README.md)
+#   table       for Markdown: which table, by position (0 = first) or heading text
 #   model       column with the model name                 (required)
 #   scores      score columns; omit to take every numeric column
 #   metric/value  for long tables: column(s) naming the metric, column holding the number
@@ -19,6 +21,9 @@
 #   duplicates  hold (default) | drop: what to do when the source repeats a row ambiguously
 #   round       decimals to keep for numeric scores, only where extra precision is noise
 #   every       how often to check (30m, 6h, 1d)
+#
+# To draft an entry for a new file: npm run add-source -- <location>
+# To try an entry without writing anything: npm run scrape -- --source <id> --dry-run
 
 defaults:
   every: 6h
@@ -163,6 +168,36 @@ sources:
     license: Apache-2.0
     terms: allowed
 
+  # Customer-service agents with a simulated user, in four domains. One submission.json per
+  # leaderboard entry; the plugin reads the manifest of the current text leaderboard.
+  - id: tau2-bench
+    name: τ²-bench
+    homepage: https://www.taubench.com
+    fetch: github:sierra-research/tau2-bench/web/leaderboard/public/submissions
+    plugin: tau2
+    every: 1d
+    min_rows: 10
+    license: MIT
+    attribution: τ²-bench leaderboard by Sierra Research (github.com/sierra-research/tau2-bench), MIT
+    terms: allowed
+
+  # Hallucination rate when summarising documents, judged by Vectara's HHEM model. The leaderboard
+  # is a Markdown table in the repository's README, updated every few weeks.
+  - id: vectara-hhem
+    name: Vectara Hallucination Leaderboard
+    homepage: https://github.com/vectara/hallucination-leaderboard
+    fetch: github:vectara/hallucination-leaderboard/README.md
+    table: 0                    # the first table in the README
+    model: Model
+    scores: [Hallucination Rate, Factual Consistency Rate, Answer Rate]
+    lower_is_better: [Hallucination Rate]
+    headline: [Hallucination Rate]
+    every: 1d
+    min_rows: 50
+    license: Apache-2.0
+    attribution: Vectara Hallucination Leaderboard (github.com/vectara/hallucination-leaderboard), Apache-2.0
+    terms: allowed
+
   - id: artificial-analysis
     name: Artificial Analysis
     homepage: https://artificialanalysis.ai
@@ -170,3 +205,18 @@ sources:
     terms_note: >-
       Per whatmodel's licence ledger, the site terms allow personal non-commercial use only
       and forbid building a similar or competing service.
+
+  - id: swe-bench
+    name: SWE-bench leaderboards
+    homepage: https://www.swebench.com
+    terms: blocked
+    terms_note: >-
+      The leaderboard data (SWE-bench/swe-bench.github.io, data/leaderboards.json) is licensed
+      CC BY-NC 4.0, and the non-commercial condition cannot be carried into this site's
+      CC BY-SA 4.0 compilation. whatmodel carries some SWE-bench results under their own licences.
+
+  - id: livebench
+    name: LiveBench
+    homepage: https://livebench.ai
+    terms: blocked
+    terms_note: The site repository (LiveBench/livebench.github.io) has no licence, so its data cannot be reused.
