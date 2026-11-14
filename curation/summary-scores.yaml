@@ -1,0 +1,116 @@
+# The summary scores: one number per model for coding and one for everything else.
+#
+# Each score averages a fixed basket of benchmarks. The basket is split into areas, every area
+# counts equally, and every benchmark counts equally within its area. So the layout is
+#
+#   <score id>:
+#     label, description
+#     min_benchmarks   a model needs this many of the basket's benchmarks measured ...
+#     min_areas        ... across this many areas, or it gets no score
+#     areas:
+#       <area name>:
+#         <benchmark name>: [<source>:<metric>, ...]
+#
+# A benchmark lists every column that measures it, the same ids as in curation/benchmarks.csv and
+# the explorer's links. For each model the build takes an independent run where one exists, then a
+# submitted one, then the maker's own report, and the best score within that. Columns must be
+# higher-is-better percentages, fractions or Elo ratings; all the columns of one benchmark must be
+# on one scale. Where a model has no result on a benchmark, the build estimates it from how the
+# model did on the rest of the basket (scripts/lib/summary.ts; the site's summary page explains it).
+#
+# What belongs where: a benchmark is coding when the model's output is code or changes to a software
+# system and it is graded by running it. Everything else is non-coding.
+#
+# When to take a benchmark out: the summary page shows, for each one, how far apart its ten best
+# models are. Under about 5 points it no longer separates the leaders, and it only dilutes the
+# average. Taken out for that reason on 2026-11-14: LiveCodeBench (Vals run), Vibe Code Bench v1.1,
+# GPQA Diamond, MMLU-Pro, OTIS Mock AIME, AIME 2026, LiveBench 2.0 Reasoning, LegalBench, TaxEval v2,
+# MedScribe, Longform writing, IFBench, LiveCodeBench v6, HMMT February 2026 and τ²-bench Telecom.
+# Kept although near the line: SWE-bench Verified (the most covered coding benchmark), EMB and
+# CorpFin v2.
+#
+# Left out of both scores on purpose:
+#   - composites (Epoch Capabilities Index, Vals Index, LiveBench overall, MathArena overall):
+#     they would count their parts twice
+#   - hallucination, sycophancy, refusal and honesty rates: they measure behaviour, not capability
+#   - security benchmarks (CyberBench, CyberGym, ExploitGym, SEC-Bench Pro, SRE Bench): scores
+#     partly reflect what a model refuses to do
+#   - vision benchmarks: a text-only model cannot be given an estimate
+#   - games against other models (Elimination Game, Step Game, debate, poker, chess Elo)
+#   - benchmarks with almost no current models (Aider Polyglot, ARC-AGI-2 public set) or where most
+#     models score zero (ProgramBench)
+#   - whatmodel's EQ-Bench 3 column: it is on a different Elo scale from EQ-Bench's own
+
+coding:
+  label: Coding score
+  description: >-
+    Writing and changing software: fixing real repositories, long agentic engineering tasks,
+    algorithmic problems and building apps.
+  min_benchmarks: 5
+  min_areas: 2
+  areas:
+    Fixing real repositories:
+      SWE-bench Verified: [whatmodel:swe-bench-verified, vals:swebench/overall, swe-bench:verified/bash-only, models-dev:swe-bench-verified]
+      SWE-bench Pro: [whatmodel:swe-bench-pro, whatmodel:swe-bench-pro-split-unspecified, models-dev:swe-bench-pro]
+      SWE-bench Multilingual: [whatmodel:swe-bench-multilingual, swe-bench:multilingual/bash-only, models-dev:swe-bench-multilingual]
+      DeepSWE v1.1: [whatmodel:deepswe-v1-1, models-dev:deepswe/v1.1]
+    Long agentic engineering:
+      Terminal-Bench 4.0: [whatmodel:terminal-bench-4, vals:terminal-bench-4/overall, models-dev:terminal-bench/v4]
+      Terminal-Bench 4.1: [terminal-bench:4.1/accuracy]
+      Terminal-Bench 2.1: [whatmodel:terminal-bench-2.1, vals:terminal-bench-2-1/overall, terminal-bench:2.1/accuracy, models-dev:terminal-bench/v2.1]
+      Code Migration: [vals:code-migration/overall]
+      MirrorCode: [epoch:mirrorcode, whatmodel:epoch-mirrorcode]
+      NL2Repo: [whatmodel:nl2repo, models-dev:nl2repo]
+    Algorithmic problems:
+      IOI: [vals:ioi/overall]
+      LiveBench 2.0 Coding: [livebench:v2/2026-11-06/coding]
+      SciCode: [whatmodel:scicode-unspecified, models-dev:scicode]
+    Building apps:
+      Arena WebDev: [arena:webdev/overall, whatmodel:lmarena-webdev]
+      Vibe Code Bench 1-100: [vals:vcb-1-100/overall]
+
+noncoding:
+  label: Non-coding score
+  description: >-
+    Everything that is not writing software: knowledge and science, math, reasoning puzzles,
+    professional work, using tools and computers, and writing and conversation.
+  min_benchmarks: 8
+  min_areas: 3
+  areas:
+    Knowledge & science:
+      Humanity's Last Exam: [whatmodel:hle, cais:hle, models-dev:humanitys-last-exam]
+      HLE Diamond: [cais:hle_diamond]
+      SimpleQA Verified: [epoch:simpleqa_verified, whatmodel:simpleqa-verified]
+    Math:
+      FrontierMath tiers 1-3: [epoch:frontiermath_tiers_1_3_v2, whatmodel:frontiermath, models-dev:frontiermath/v2/tier-1-3]
+      FrontierMath tier 4: [epoch:frontiermath_tier_4_v2, whatmodel:frontiermath-tier-4-v2, models-dev:frontiermath/v2/tier-4]
+      IMO-AnswerBench: [whatmodel:imo-answerbench]
+      ProofBench v1.1: [vals:proof_bench/overall]
+    Reasoning & puzzles:
+      SimpleBench: [simplebench:score]
+      NYT Connections: ["nyt-connections:Score %"]
+      Chess puzzles (Epoch): [epoch:chess_puzzles, whatmodel:epoch-chess]
+      Mystery game puzzles (Epoch): [epoch:mystery_game_puzzles, whatmodel:epoch-mystery-games]
+    Professional work:
+      Legal Research Bench: [vals:legal_research/overall, whatmodel:legal-research-bench-allpass]
+      Tax Agent Bench: [vals:tax_agent_bench/overall]
+      Finance Agent v2: [vals:fabv2/overall]
+      CorpFin v2: [vals:corp_fin_v2/overall]
+      EMB (Excel financial modelling): [vals:emb/overall]
+      MedCode: [vals:medcode/overall]
+    Tools, browsing & computer use:
+      τ³-bench: [whatmodel:tau3-bench]
+      BFCL v4: [whatmodel:bfcl-v4, "bfcl:Overall Acc"]
+      MCP-Atlas: [whatmodel:mcp-atlas, models-dev:mcp-atlas]
+      Toolathlon: [whatmodel:toolathlon, models-dev:toolathlon]
+      OSWorld-Verified: [whatmodel:osworld-verified, models-dev:osworld-verified]
+      BrowseComp: [whatmodel:browsecomp, models-dev:browsecomp]
+      Humanity's Last Exam with tools: [whatmodel:hle-with-tools, models-dev:humanitys-last-exam/with-tools]
+      TextQuests: [cais:textquests]
+      LiveBench 2.0 Browser: [livebench:v2/2026-11-06/browser]
+      LiveBench 2.0 Research: [livebench:v2/2026-11-06/research]
+    Writing & conversation:
+      Arena text (style control): [arena:text_style_control/overall, whatmodel:lmarena-text]
+      Creative Writing v3: [creative-writing-v3:elo_score]
+      EQ-Bench 3: [eqbench3:elo_norm]
+      EQ-Bench 4: [eqbench4:elo]

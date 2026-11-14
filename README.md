@@ -9,7 +9,8 @@ Phases 0–3 are built and Phase 4 is under way: 30 benchmark sources, a model c
 whatmodel.sh, models.dev, Epoch AI's models database and Hugging Face, change history, checks on
 every update, a scheduled GitHub workflow that commits new data and deploys the site, the explorer
 with a chart mode, a page for every model, benchmark and source, model-name matching you can correct
-in one line, downloads, an in-browser SQL console, and a command that drafts a new source's entry.
+in one line, downloads, an in-browser SQL console, a command that drafts a new source's entry, and
+two summary scores per model, one for coding and one for everything else.
 
 ## The site
 
@@ -18,7 +19,11 @@ in one line, downloads, an in-browser SQL console, and a command that drafts a n
   click a score to see every score behind it and where each came from, and compare up to five models
   side by side, or switch to a chart of any column against release date, size or another column. The
   whole view is in the URL, so "Copy link" shares exactly what you see, and "Download CSV" exports it.
-- **Model pages** (`/models/<id>/`): every score for one model, with its rank in each column.
+- **Summary scores** (`/summary/`): llmbench's own coding score and non-coding score for each model,
+  the benchmarks behind each, the ranking, and how they are built. They also lead the explorer's
+  columns. Every other number on the site is a score as its source published it.
+- **Model pages** (`/models/<id>/`): every score for one model, with its rank in each column, and
+  its summary scores with every value behind them.
 - **Benchmark pages** (`/benchmarks/<source>/<metric>/`): the full leaderboard for one column, and
   where other sources have the same benchmark, every model's score from each of them side by side.
   The benchmarks page lists those benchmarks, each with its largest median gap between sources.
@@ -112,6 +117,35 @@ ids are benchmark ids already, so `epoch:gpqa_diamond,gpqa-diamond` puts Epoch's
 next to whatmodel's column. Link only the same measurement: the same benchmark, version, split and
 scale. The benchmarks page shows each link's median gap, and a large one points at a wrong link.
 
+## The summary scores
+
+The site shows two numbers it works out itself: a coding score and a non-coding score. Each is the
+average over a fixed set of benchmarks, listed in
+[`curation/summary-scores.yaml`](curation/summary-scores.yaml) as score → area → benchmark → the
+columns that measure it:
+
+```yaml
+coding:
+  label: Coding score
+  min_benchmarks: 5        # a model needs this many of the benchmarks measured ...
+  min_areas: 2             # ... across this many areas, or it gets no score
+  areas:
+    Fixing real repositories:
+      SWE-bench Verified: [whatmodel:swe-bench-verified, vals:swebench/overall]
+```
+
+Areas count equally, and benchmarks count equally within an area. For each benchmark a model gets
+one value: an independent run where there is one, then a submitted score, then the maker's own
+report. A benchmark the model has no result on is estimated from its results on the rest, so being
+tested only on easy benchmarks does not help; `scripts/lib/summary.ts` has the method and the
+site's summary page explains it. Columns must be higher-is-better percentages, fractions or Elo
+ratings, and all the columns of one benchmark must be on one scale.
+
+To add or drop a benchmark, edit the file and rebuild. The summary page shows how far apart each
+benchmark's ten best models are; under about 5 points it no longer separates the leaders. The build
+prints a warning when a listed column is missing, when a benchmark has fewer than 10 models, or when
+two columns of one benchmark disagree widely.
+
 ## Fixing a model match
 
 Sources name models differently ("o1-2024-12-17_high", "o1 (high)"). The matcher sets aside
@@ -154,6 +188,7 @@ workflow from the Actions tab with `accept` set to the source id.
 | `curation/aliases.csv` | `source,raw_name,model_id` lines that fix model matching (`*` for any source, `-` to keep a name unmatched) | you |
 | `curation/models.yaml` | Models to add to the catalogue, or fields to correct | you |
 | `curation/benchmarks.csv` | `column,benchmark` lines linking columns that measure the same benchmark | you |
+| `curation/summary-scores.yaml` | The benchmarks behind the coding and non-coding scores, grouped into areas | you |
 | `data/sources/<id>/` | Rows exactly as published, metrics, state, change history | the workflow |
 | `data/catalog/<id>.jsonl` | Each catalogue feed's models (whatmodel.sh, models.dev, Epoch AI, Hugging Face), merged in `sources.yaml` order | the workflow |
 | `data/resolved/aliases.csv` | How every model name was matched, and the qualifiers set aside | the workflow |

@@ -100,6 +100,7 @@ test('linked columns sit side by side, with the median gap on both scales', () =
     names: new Map(),
     history: new Map(),
     scores: [],
+    summaries: [],
     config: [],
   };
   const pages = buildPages(d);

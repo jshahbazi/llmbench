@@ -33,13 +33,17 @@ each.
 - **Show everything.** A source is visible in full the moment it is ingested, with no curation step in
   the way. Cross-source merging is layered on top and never hides data.
 - **Let the visitor decide.** Any metric from any source can be a column. Sort and filter by anything.
-  There is no built-in overall score.
+  There is no single overall score. The two summary scores (coding and non-coding, added 2026-11-14)
+  are a starting point shown beside the source columns, never in place of them.
 - **Every number is traceable** to its source page, stored verbatim, with its change history.
 - **A broken source never corrupts published data.** It is held and an issue is opened.
 
 ### 1.2 Non-goals
 
-- No composite score. [whatmodel.sh](https://whatmodel.sh) does that, with a published method.
+- No single overall score; [whatmodel.sh](https://whatmodel.sh) does that, with a published method.
+  The site does compute two summary scores, coding and non-coding, each the average over a fixed set
+  of benchmarks listed in `curation/summary-scores.yaml`, and each opening into the published results
+  behind it (`scripts/lib/summary.ts`, and the site's summary page).
 - No running evaluations ourselves.
 - No fetching from sites whose terms forbid it, and no working around bot challenges or logins.
 - No reading numbers out of images or charts.

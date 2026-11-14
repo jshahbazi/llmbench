@@ -8,6 +8,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { parquetWriteBuffer } from 'hyparquet-writer';
 import { dataReuse } from '../../site/src/format.ts';
 import { toCsv } from '../../site/src/select.ts';
+import { BASIS_LABELS } from '../lib/summary.ts';
 import type { SiteData } from './data.ts';
 
 export interface Download {
@@ -69,6 +70,8 @@ export const SQLITE_SCHEMA = `
   CREATE TABLE benchmarks (id TEXT PRIMARY KEY, source TEXT NOT NULL REFERENCES sources(id), metric TEXT NOT NULL, label TEXT NOT NULL, unit TEXT, higher_is_better INTEGER NOT NULL, headline INTEGER NOT NULL, family TEXT, tags TEXT, models INTEGER, url TEXT, same_benchmark TEXT);
   CREATE TABLE names (source TEXT NOT NULL REFERENCES sources(id), source_model_name TEXT NOT NULL, model_id TEXT NOT NULL REFERENCES models(id), method TEXT, qualifiers TEXT, scores INTEGER, PRIMARY KEY (source, source_model_name));
   CREATE TABLE scores (model_id TEXT NOT NULL REFERENCES models(id), benchmark_id TEXT NOT NULL REFERENCES benchmarks(id), value REAL NOT NULL, raw_value TEXT, run_by TEXT, date TEXT, context TEXT, source_model_name TEXT, ci_low REAL, ci_high REAL, url TEXT);
+  CREATE TABLE summary_scores (model_id TEXT NOT NULL REFERENCES models(id), score TEXT NOT NULL, value REAL NOT NULL, rank INTEGER NOT NULL, benchmarks_measured INTEGER NOT NULL, benchmarks_total INTEGER NOT NULL, areas_measured INTEGER NOT NULL, areas_total INTEGER NOT NULL, PRIMARY KEY (model_id, score));
+  CREATE TABLE summary_parts (model_id TEXT NOT NULL REFERENCES models(id), score TEXT NOT NULL, area TEXT NOT NULL, benchmark TEXT NOT NULL, value REAL NOT NULL, basis TEXT NOT NULL, benchmark_id TEXT REFERENCES benchmarks(id), rating REAL);
   CREATE INDEX scores_model ON scores (model_id);
   CREATE INDEX scores_benchmark ON scores (benchmark_id);
   CREATE VIEW scores_named AS
@@ -103,6 +106,44 @@ export async function writeDownloads(d: SiteData, dir: string): Promise<Download
     .filter((s) => s.terms === 'allowed')
     .map((s) => [s.id, s.name, s.homepage, s.license, dataReuse(s.license), s.attribution, s.row_count, s.changed_at, s.checked_at]);
   await csv('llmbench-sources.csv', 'Every source with its licence, whether its data is non-commercial, and attribution.', ['id', 'name', 'homepage', 'license', 'reuse', 'attribution', 'rows', 'changed_at', 'checked_at'], sourceRows);
+
+  // The summary scores: llmbench's own numbers, kept apart from the scores the sources published.
+  const r2 = (v: number) => Math.round(v * 100) / 100;
+  const summaryRows = d.summaries.flatMap((s) =>
+    s.models
+      .filter((m) => m.value !== undefined)
+      .map((m) => [index.models[m.model]!.id, s.spec.id, r2(m.value!), m.rank!, m.measured, s.benchmarks.length, m.areasMeasured, s.areas.length]),
+  );
+  const partRows = d.summaries.flatMap((s) =>
+    s.models
+      .filter((m) => m.value !== undefined)
+      .flatMap((m) =>
+        m.parts.map((p, i) => [
+          index.models[m.model]!.id,
+          s.spec.id,
+          s.areas[s.benchmarks[i]!.area]!,
+          s.benchmarks[i]!.name,
+          r2(p!.value),
+          BASIS_LABELS[p!.basis]!,
+          p!.column === undefined ? null : index.columns[p!.column]!.id,
+          p!.rating === undefined ? null : r2(p!.rating),
+        ]),
+      ),
+  );
+  if (summaryRows.length) {
+    await csv(
+      'llmbench-summary-scores.csv',
+      "llmbench's own coding and non-coding scores: one row per model and score, with its rank and how many of the benchmarks behind it were measured.",
+      ['model_id', 'score', 'value', 'rank', 'benchmarks_measured', 'benchmarks_total', 'areas_measured', 'areas_total'],
+      summaryRows,
+    );
+    await csv(
+      'llmbench-summary-parts.csv',
+      'What each summary score averages: every benchmark value on a 0-100 scale, whether it was measured (and by whom) or estimated, and the column it came from.',
+      ['model_id', 'score', 'area', 'benchmark', 'value', 'basis', 'benchmark_id', 'rating'],
+      partRows,
+    );
+  }
 
   // ---- Parquet: the score table, typed.
   const types: Record<string, 'STRING' | 'DOUBLE' | 'BOOLEAN'> = { value: 'DOUBLE', ci_low: 'DOUBLE', ci_high: 'DOUBLE', in_catalogue: 'BOOLEAN', higher_is_better: 'BOOLEAN' };
@@ -139,6 +180,7 @@ ${SQLITE_SCHEMA}`);
       ['site', 'https://llmbench.site'],
       ['reuse', 'sources.reuse is licensed, noncommercial or unstated. Leave out noncommercial sources for commercial reuse.'],
       ['note', 'Values are as the source scaled them: unit "fraction" is 0-1, "percent" is 0-100. Several scores can exist per model and benchmark (re-runs, settings); context says how each was run.'],
+      ['summary', 'summary_scores and summary_parts are computed by llmbench, not published by any source: see https://llmbench.site/summary/. In summary_parts, basis "estimated" marks a value llmbench filled in.'],
     ]);
     insert('INSERT INTO sources VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', sourceRows);
     insert('INSERT INTO models VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', modelRows);
@@ -148,11 +190,13 @@ ${SQLITE_SCHEMA}`);
       'INSERT INTO scores VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
       scores.map((s) => [s.model_id, s.column_id, s.value, s.raw_value, s.run_by, orNull(s.date), orNull(s.context), s.source_model_name, s.ci_low, s.ci_high, orNull(s.url)]),
     );
+    insert('INSERT INTO summary_scores VALUES (?, ?, ?, ?, ?, ?, ?, ?)', summaryRows);
+    insert('INSERT INTO summary_parts VALUES (?, ?, ?, ?, ?, ?, ?, ?)', partRows);
     db.exec('COMMIT');
     db.exec('VACUUM');
   } finally {
     db.close();
   }
-  out.push({ file: 'llmbench.sqlite', format: 'SQLite', description: 'Sources, models, benchmarks, names and scores as joined tables, with a scores_named view.', rows: scores.length, bytes: await sizeOf('llmbench.sqlite') });
+  out.push({ file: 'llmbench.sqlite', format: 'SQLite', description: 'Sources, models, benchmarks, names, scores and the summary scores as joined tables, with a scores_named view.', rows: scores.length, bytes: await sizeOf('llmbench.sqlite') });
   return out;
 }

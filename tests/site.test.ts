@@ -147,6 +147,7 @@ test('pages escape scraped text and link every model and column', () => {
     names: new Map([['src', [{ raw: 'Model One', model: 0, method: 'exact', qualifiers: '', rows: 1, scores: 1 }, { raw: evil, model: 1, method: 'unlisted', qualifiers: evil, rows: 1, scores: 1 }]]]),
     history: new Map(),
     scores: [],
+    summaries: [],
     config: [],
   };
   const pages = buildPages(d);
@@ -203,6 +204,7 @@ test('downloads: CSV, Parquet and SQLite hold the same scores', async () => {
       { model: 0, column: 0, value: 71.5, raw: '71.5%', runBy: 'independent', date: '2026-01-02', context: 'high effort', rawName: 'm-one_high', url: 'https://src.example/1', ciLow: '70', ciHigh: '73', rowKey: 'a' },
       { model: 1, column: 0, value: 60, raw: '60', runBy: 'submitted', date: '', context: '', rawName: 'Name, with "quotes"', url: '', ciLow: '', ciHigh: '', rowKey: 'b' },
     ],
+    summaries: [],
     config: [],
   };
   const dir = await mkdtemp(join(tmpdir(), 'llmbench-'));

@@ -2,7 +2,7 @@
  * Builds the site into site/dist from data/:
  *
  *   index.html, models/, benchmarks/, sources/, method/, data/   static pages
- *   data/index.json, data/cells/<source>.json                    what the explorer loads
+ *   data/index.json, data/cells/<source>.json, data/summary.json  what the explorer loads
  *   downloads/                                                   CSV, Parquet and SQLite
  *   js/*.js                                                      the explorer and SQL console, from site/src
  *   vendor/sql.js/                                               SQLite in WebAssembly for the SQL console
@@ -13,7 +13,7 @@
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { compileClient } from './site/client.ts';
-import { loadSiteData } from './site/data.ts';
+import { loadSiteData, summaryFile } from './site/data.ts';
 import { writeDownloads } from './site/exports.ts';
 import { buildPages, SITE_URL, sitemap } from './site/pages.ts';
 
@@ -27,6 +27,8 @@ await mkdir(join(OUT, 'downloads'), { recursive: true });
 
 await writeFile(join(OUT, 'data', 'index.json'), JSON.stringify(d.index));
 for (const f of d.cells) await writeFile(join(OUT, 'data', 'cells', `${f.source}.json`), JSON.stringify(f));
+await writeFile(join(OUT, 'data', 'summary.json'), JSON.stringify(summaryFile(d)));
+for (const w of d.summaries.flatMap((s) => s.warnings)) console.warn(`summary scores: ${w}`);
 
 const downloads = await writeDownloads(d, join(OUT, 'downloads'));
 const pages = buildPages(d, downloads);
@@ -55,6 +57,7 @@ const { index } = d;
 const scores = d.cells.reduce((n, f) => n + f.cells.length, 0);
 console.log(
   `site/dist: ${pages.length} pages, ${scripts.length} scripts; ${scores} scores, ${index.columns.length} columns, ` +
-    `${index.models.length} models (${index.stats.unlisted_models} not in the catalogue), ${downloads.length} downloads ` +
+    `${index.models.length} models (${index.stats.unlisted_models} not in the catalogue), ` +
+    `${d.summaries.map((s) => `${s.scored} with a ${s.spec.label.toLowerCase()}`).join(', ') || 'no summary scores'}, ${downloads.length} downloads ` +
     `(${((Date.now() - started) / 1000).toFixed(1)}s)`,
 );

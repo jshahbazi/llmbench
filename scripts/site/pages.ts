@@ -9,6 +9,7 @@ import { html, raw, up, type Html } from './html.ts';
 
 /** Text ending in a full stop, for attributions followed by more text. */
 const sentence = (t: string) => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`);
+import { BASIS_ESTIMATED, BASIS_INDEPENDENT, BASIS_LABELS, type SummaryModel, type SummaryResult } from '../lib/summary.ts';
 import type { SiteData } from './data.ts';
 import { SQLITE_SCHEMA, type Download } from './exports.ts';
 
@@ -22,6 +23,7 @@ export interface Page {
 
 const NAV: Array<[string, string, string]> = [
   ['explorer', '', 'Explorer'],
+  ['summary', 'summary/', 'Summary scores'],
   ['benchmarks', 'benchmarks/', 'Benchmarks'],
   ['sources', 'sources/', 'Sources'],
   ['method', 'method/', 'Method'],
@@ -233,6 +235,43 @@ ${rows.length ? html`<div class="table-scroll"><table class="data">
   pages.push({ path: '', html: explorerPage(d) });
 
   // ---- Models ---------------------------------------------------------------------------------
+  const summaryOf = d.summaries.map((s) => new Map(s.models.map((e) => [e.model, e])));
+  /** A model's summary scores, each opening into the benchmark values it averages. */
+  const summarySection = (mi: number, u: string): Html => {
+    const entries = d.summaries.flatMap((s, k) => {
+      const e = summaryOf[k]!.get(mi);
+      return e ? [{ s, e }] : [];
+    });
+    if (!entries.length) return html``;
+    const lower = (s: SummaryResult) => s.spec.label.toLowerCase();
+    const short = ({ s, e }: { s: SummaryResult; e: SummaryModel }) =>
+      `${e.measured} of the ${s.benchmarks.length} benchmarks behind the ${lower(s)} (it takes ${s.spec.minBenchmarks} across ${s.spec.minAreas} area${s.spec.minAreas === 1 ? '' : 's'})`;
+    if (entries.every(({ e }) => e.value === undefined)) {
+      return html`<p class="muted" id="summary">No <a href="${u}summary/">summary score</a>: it has results on ${entries.map(short).join(' and ')}.</p>`;
+    }
+    return html`<h2 id="summary">Summary scores</h2>
+<p>llmbench's own numbers for a model: each is the average over a fixed set of benchmarks, with the ones the model has no result on estimated. <a href="${u}summary/#method">How they are built</a>.</p>
+${entries.map(({ s, e }) => {
+  if (e.value === undefined) return html`<p><strong>No ${lower(s)}.</strong> It has results on ${e.measured} of the ${s.benchmarks.length} benchmarks behind it, and a score takes ${s.spec.minBenchmarks} across ${s.spec.minAreas} area${s.spec.minAreas === 1 ? '' : 's'}.</p>`;
+  const estimated = e.parts.filter((p) => p!.basis === BASIS_ESTIMATED).length;
+  const own = e.parts.filter((p) => p!.basis > BASIS_INDEPENDENT).length;
+  return html`<h3 id="summary-${s.spec.id}">${s.spec.label}: ${e.value.toFixed(1)} <span class="muted">rank ${e.rank} of ${s.scored}</span></h3>
+<p>Measured on ${e.measured} of its ${s.benchmarks.length} benchmarks${estimated ? `; the other ${estimated} ${estimated === 1 ? 'is' : 'are'} estimated from this model's results on the rest` : ''}.${own ? ` ${own} of the measured results ${own === 1 ? 'is' : 'are'} not from an independent run.` : ''}</p>
+<details class="subscores"><summary>The ${s.benchmarks.length} values it averages</summary>
+<div class="table-scroll"><table class="data summary-parts">
+<thead><tr><th scope="col">Area</th><th scope="col">Benchmark</th><th scope="col" class="num">Value</th><th scope="col">From</th></tr></thead>
+<tbody>${s.benchmarks.map((b, i) => {
+    const p = e.parts[i]!;
+    const first = i === 0 || s.benchmarks[i - 1]!.area !== b.area;
+    const col = index.columns[p.column ?? b.columns[0]!]!;
+    return html`<tr${p.basis === BASIS_ESTIMATED ? raw(' class="est"') : ''}><td>${first ? html`${s.areas[b.area]!} <span class="of">${e.areaValues![b.area]!.toFixed(1)}</span>` : ''}</td>
+<td><a href="${colHref(u, col)}">${b.name}</a></td>
+<td class="num">${p.value.toFixed(1)}${p.rating !== undefined ? html`<span class="of"> Elo ${Math.round(p.rating)}</span>` : ''}</td>
+<td>${p.basis === BASIS_ESTIMATED ? 'estimated' : html`${BASIS_LABELS[p.basis]!}, <a href="${u}sources/${col.source}/">${sourceName.get(col.source) ?? col.source}</a>`}</td></tr>`;
+  })}</tbody></table></div></details>`;
+})}`;
+  };
+
   const sourceOrder = new Map(index.sources.map((s, i) => [s.id, i]));
   index.models.forEach((m, mi) => {
     const u = up(2);
@@ -275,6 +314,7 @@ ${m.unlisted
   ? html`<div class="notice soft"><p>Not in the model catalogue yet, so its maker, release date and size are unknown. These are names from the sources that agree with each other. If this is a catalogue model under another name, one line in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/aliases.csv">curation/aliases.csv</a> moves its scores there; to add it, use <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/models.yaml">curation/models.yaml</a>.</p></div>`
   : html`<p class="meta">${modelMeta(m)}</p>`}
 <p class="links">${repo ? html`<a href="${repo}" rel="noopener">Model repository</a> · ` : ''}${m.origin === 'whatmodel' ? html`<a href="https://whatmodel.sh/model/${m.id}" rel="noopener">whatmodel.sh page</a> (memory needed, how to run it) · ` : m.origin && sourceName.has(m.origin) ? html`Model details from <a href="${u}sources/${m.origin}/">${sourceName.get(m.origin)!}</a> · ` : ''}<a href="${explorerHref(u, { q: m.name, min: '1' })}">Show in the explorer</a> · <a href="${explorerHref(u, { m: m.id, view: 'compare' })}">Compare with other models</a></p>
+${summarySection(mi, u)}
 <p>${cols.length} benchmark scores from ${bySource.size} source${bySource.size === 1 ? '' : 's'}. Rank is among every model with a score in that column, using each model's best score.</p>
 ${[...bySource].map(([sid, cis]) => {
   const main = cis.filter((ci) => index.columns[ci]!.headline);
@@ -415,6 +455,7 @@ ${events.length ? html`<ul class="history">${events.map((e) => {
     pages.push({ path: `sources/${s.id}/`, html: layout({ title: `${s.name} — llmbench`, description: `${s.name}: status, metrics, model names and recent changes.`, depth: 2, active: 'sources', body, path: `sources/${s.id}/` }) });
   }
 
+  pages.push({ path: 'summary/', html: summaryPage(d) });
   pages.push({ path: 'method/', html: methodPage() });
   pages.push({ path: 'data/', html: dataPage(d, downloads) });
   pages.push({ path: 'sql/', html: sqlPage(d, downloads) });
@@ -462,7 +503,7 @@ function explorerPage(d: SiteData): string {
   for (const m of d.index.models) if (m.provider) makers.set(m.provider, (makers.get(m.provider) ?? 0) + 1);
   const body = html`
 <h1 class="sr">llmbench explorer</h1>
-<p class="lede">Benchmark results from every listed source, side by side. Pick any columns, sort by any of them, and click a score to see where it came from.</p>
+<p class="lede">Benchmark results from every listed source, side by side. Pick any columns, sort by any of them, and click a score to see where it came from.${d.summaries.some((s) => s.scored) ? html` The first columns are llmbench's own <a href="summary/">summary scores</a>; every other number is as its source published it.` : ''}</p>
 <p id="stats" class="stats">Loading…</p>
 
 <div class="toolbar" role="toolbar" aria-label="Columns">
@@ -525,10 +566,119 @@ function explorerPage(d: SiteData): string {
   });
 }
 
+const pearson = (xs: readonly number[], ys: readonly number[]): number => {
+  const n = xs.length;
+  const mx = xs.reduce((s, x) => s + x, 0) / n;
+  const my = ys.reduce((s, y) => s + y, 0) / n;
+  let sxy = 0;
+  let sxx = 0;
+  let syy = 0;
+  for (let i = 0; i < n; i++) {
+    sxy += (xs[i]! - mx) * (ys[i]! - my);
+    sxx += (xs[i]! - mx) ** 2;
+    syy += (ys[i]! - my) ** 2;
+  }
+  return sxy / Math.sqrt(sxx * syy);
+};
+
+/** Under this many points between its ten best models, a benchmark no longer separates the leaders. */
+const SATURATED_SPREAD = 5;
+
+function summaryPage(d: SiteData): string {
+  const u = up(1);
+  const { index } = d;
+  const sourceName = new Map(index.sources.map((s) => [s.id, s.name]));
+  const file = 'https://github.com/jshahbazi/llmbench/blob/main/curation/summary-scores.yaml';
+  const lower = (s: SummaryResult) => s.spec.label.toLowerCase();
+  const list = (xs: readonly string[]) => (xs.length <= 1 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs.at(-1)}`);
+  /** A column by its source's name, or by its own label where the benchmark uses two from one source. */
+  const columnName = (ci: number, group: readonly number[]) => {
+    const c = index.columns[ci]!;
+    const name = sourceName.get(c.source) ?? c.source;
+    return group.filter((k) => index.columns[k]!.source === c.source).length > 1 ? `${name}: ${c.label}` : name;
+  };
+
+  // How closely the first two scores agree, over the models that have both.
+  const [a, b] = d.summaries;
+  let agreement: Html = html``;
+  if (a && b) {
+    const other = new Map(b.models.filter((m) => m.value !== undefined).map((m) => [m.model, m.value!]));
+    const both = a.models.filter((m) => m.value !== undefined && other.has(m.model));
+    if (both.length >= 10) {
+      const r = pearson(both.map((m) => m.value!), both.map((m) => other.get(m.model)!));
+      agreement = html`<li><strong>The two scores mostly agree.</strong> Across the ${both.length} models that have both, they correlate ${r.toFixed(2)}: a model strong at one is usually strong at the other. The difference shows in the order of models that are otherwise close.</li>`;
+    }
+  }
+
+  const section = (s: SummaryResult): Html => {
+    const scored = s.models.filter((m) => m.value !== undefined);
+    const flagged = s.benchmarks.filter((x) => !x.elo && x.topTenSpread !== undefined && x.topTenSpread < SATURATED_SPREAD);
+    return html`
+<h2 id="${s.spec.id}">${s.spec.label} <span class="muted">${s.scored} models</span></h2>
+<p>${s.spec.description} It averages ${s.benchmarks.length} benchmarks in ${s.areas.length} areas, and a model needs results on at least ${s.spec.minBenchmarks} of them across at least ${s.spec.minAreas} area${s.spec.minAreas === 1 ? '' : 's'}. <a href="${explorerHref(u, { c: d.summaries.map((x) => `summary:${x.spec.id}`), sort: `summary:${s.spec.id}`, min: '1' })}">Open the ranking in the explorer</a>.</p>
+<h3>What it averages</h3>
+<div class="table-scroll"><table class="data">
+<thead><tr><th scope="col">Area</th><th scope="col">Benchmark</th><th scope="col">Columns used</th><th scope="col" class="num">Models</th><th scope="col" class="num">Independent runs</th><th scope="col" class="num">Ten best within</th></tr></thead>
+<tbody>${s.benchmarks.map((x, i) => {
+      const first = i === 0 || s.benchmarks[i - 1]!.area !== x.area;
+      const spread = x.topTenSpread === undefined ? html`<span class="muted">—</span>` : x.elo ? html`${Math.round(x.topTenSpread)} Elo` : html`${x.topTenSpread.toFixed(1)} points`;
+      return html`<tr><td>${first ? s.areas[x.area]! : ''}</td><td>${x.name}</td>
+<td>${x.columns.map((ci, k) => html`${k ? ', ' : ''}<a href="${colHref(u, index.columns[ci]!)}">${columnName(ci, x.columns)}</a>`)}</td>
+<td class="num">${x.models}</td><td class="num">${x.independent}</td>
+<td class="num">${flagged.includes(x) ? html`<span class="status-held" title="Its ten best models are within ${SATURATED_SPREAD} points, so it no longer separates the leaders">${spread}</span>` : spread}</td></tr>`;
+    })}</tbody></table></div>
+<p class="muted">Models: how many have a result. Independent runs: how many of those come from someone other than the model's maker. Ten best within: the gap between the best and the tenth best result.${flagged.length ? ` ${list(flagged.map((x) => x.name))} ${flagged.length === 1 ? 'is' : 'are'} marked because the ten best are within ${SATURATED_SPREAD} points: ${flagged.length === 1 ? 'it still places' : 'they still place'} the rest of the field, but no longer separate${flagged.length === 1 ? 's' : ''} the leaders.` : ''}</p>
+${s.warnings.length ? html`<div class="notice soft"><ul>${s.warnings.map((w) => html`<li>${w}</li>`)}</ul></div>` : ''}
+<h3>Ranking</h3>
+<div class="table-scroll"><table class="data">
+<thead><tr><th scope="col" class="num">#</th><th scope="col">Model</th><th scope="col" class="num">${s.spec.label}</th><th scope="col" class="num">Measured</th>${s.areas.map((x) => html`<th scope="col" class="num">${x}</th>`)}</tr></thead>
+<tbody>${scored.map((m) => {
+      const model = index.models[m.model]!;
+      return html`<tr${model.unlisted ? raw(' class="unlisted"') : ''}><td class="num">${m.rank}</td><td><a href="${modelHref(u, model)}#summary">${model.name}</a></td><td class="num"><strong>${m.value!.toFixed(1)}</strong></td><td class="num">${m.measured}<span class="of"> / ${s.benchmarks.length}</span></td>${m.areaValues!.map((v) => html`<td class="num">${v.toFixed(1)}</td>`)}</tr>`;
+    })}</tbody></table></div>
+<p class="muted">Measured: how many of the ${s.benchmarks.length} benchmarks the model has a result on; the rest are estimated. Each area's number is the average of its benchmarks, and the ${lower(s)} is the average of the areas.</p>`;
+  };
+
+  const body = html`
+<h1>Summary scores</h1>
+<p>Two numbers per model that llmbench works out from the results it collects: ${list(d.summaries.map((s) => `a ${lower(s)}`))}. Every other number on this site is a score exactly as its source published it; these are the only ones llmbench computes. They give a fair first comparison between models, and each one opens up into the benchmark results behind it.</p>
+<p class="links">${d.summaries.map((s) => html`<a href="#${s.spec.id}">${s.spec.label}</a> · `)}<a href="#method">How they are built</a> · <a href="#limits">What to keep in mind</a></p>
+${d.summaries.length ? d.summaries.map(section) : html`<p class="muted">No summary score is defined in <a href="${file}">curation/summary-scores.yaml</a>.</p>`}
+
+<h2 id="method">How they are built</h2>
+<ol>
+<li><strong>A fixed set of benchmarks.</strong> Each score averages the benchmarks listed above, which are chosen in <a href="${file}">curation/summary-scores.yaml</a>. A benchmark is coding when the model's output is code or changes to a software system and it is graded by running it. Everything else is non-coding.</li>
+<li><strong>One benchmark, one vote.</strong> Where several sources carry the same benchmark, a model gets one value for it: an independent run where there is one, otherwise a score submitted to a leaderboard, otherwise the maker's own report, and the best score within that. Scores from quantized models and from runs with web search are not used.</li>
+<li><strong>One scale.</strong> Percentages are used as they are. An Elo rating becomes the share of head-to-head votes the model would be expected to win against that benchmark's median model.</li>
+<li><strong>Areas count equally.</strong> The benchmarks are grouped into areas. Every area counts the same, and every benchmark counts the same within its area, so a family of similar benchmarks cannot dominate.</li>
+<li><strong>Gaps are estimated, not skipped.</strong> Few models have a result on every benchmark, and averaging only what exists rewards a model that was tested only on the easy ones. Where a model has no result, llmbench estimates one from how the model did on the rest of the set compared with other models, and the score is the average over the whole set. An estimate never replaces a measured score, and never goes above the best or below the worst score any model has on that benchmark.</li>
+<li><strong>Enough evidence.</strong> A model gets a score only with results on enough benchmarks across enough areas (the numbers are given with each score above). Beside every score is how many of its benchmarks were measured.</li>
+</ol>
+<p>The estimate comes from a one-factor fit over each set: on the logit scale, a model's value on a benchmark is modelled as the benchmark's intercept plus its slope times the model's ability, fitted by alternating least squares over the values that exist. Every area is given the same weight, and a value near 0 or 100 counts for less, because past a benchmark's ceiling every able model looks the same. The code is <a href="https://github.com/jshahbazi/llmbench/blob/main/scripts/lib/summary.ts">scripts/lib/summary.ts</a>, and every value behind every score is in the <a href="${u}data/#downloads">downloads</a>.</p>
+
+<h2 id="limits">What to keep in mind</h2>
+<ul>
+<li><strong>A score with few measured benchmarks leans on estimates.</strong> Newly released models usually have the fewest results, so their scores move the most as results arrive.</li>
+${agreement}
+<li><strong>Makers' own numbers run higher on some benchmarks.</strong> The <a href="${u}benchmarks/#shared">benchmarks page</a> shows the gap for each benchmark that has both. A maker's number is used only where no independent run exists, and a model's page marks each one.</li>
+<li><strong>Some things are left out on purpose.</strong> Composite indexes, which would count their parts twice; rates of hallucination, sycophancy and refusal, which measure behaviour rather than capability; security benchmarks, where scores partly reflect what a model refuses to do; vision benchmarks, because a text-only model cannot be given an estimate; and games played against other models.</li>
+<li><strong>The scores change.</strong> They are recomputed on every update, and they shift when a benchmark is added to a set or taken out of it.</li>
+</ul>
+`;
+  return layout({
+    title: 'Summary scores: coding and non-coding — llmbench',
+    description: "llmbench's coding and non-coding scores for each model: the benchmarks behind them, the ranking, and how they are built.",
+    depth: 1,
+    active: 'summary',
+    body,
+    path: 'summary/',
+  });
+}
+
 function methodPage(): string {
   const body = html`
 <h1>Method</h1>
-<p>llmbench collects published benchmark results. It does not run evaluations, and it does not combine scores into an overall ranking.</p>
+<p>llmbench collects published benchmark results. It does not run evaluations. The only numbers it works out itself are the two <a href="../summary/">summary scores</a>, one for coding and one for everything else; every other number is a score as its source published it.</p>
 <h2>Where the numbers come from</h2>
 <p>Every source is listed in <a href="https://github.com/jshahbazi/llmbench/blob/main/sources.yaml">sources.yaml</a> with its licence. A source is only fetched after its terms have been checked. Every few hours a scheduled job reads each source, stores each score exactly as the source wrote it, and records anything that changed. Every score on the site links back to the page or file it came from.</p>
 <h2>One column per source</h2>
@@ -556,6 +706,8 @@ function methodPage(): string {
 </ol>
 <p>Qualifiers that were set aside stay with each score as its context, so a high-effort and a low-effort run of one model remain distinguishable in the same cell. There is no fuzzy matching. When a name could be two models, such as “GPT-4o” with three dated releases in the catalogue, it is not matched at all, because a wrong merge would silently mix two models' scores.</p>
 <p>A name that matches no catalogue model still gets a row of its own, shared with the same name from other sources, and is marked “not in the catalogue”. Each source's page lists every name, the model it went to and how. Fixing a match is one line in curation/aliases.csv, and adding or correcting a model is a few lines in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/models.yaml">curation/models.yaml</a>. Names not in the catalogue, with near misses to check, are in <a href="https://github.com/jshahbazi/llmbench/blob/main/data/reports/unmatched.csv">data/reports/unmatched.csv</a>.</p>
+<h2 id="summary">Summary scores</h2>
+<p>The coding score and the non-coding score are each the average over a fixed set of benchmarks, grouped into areas that count equally. A model's value on each benchmark is an independent run where one exists, otherwise a submitted score, otherwise the maker's own report. A benchmark the model has no result on is estimated from its results on the rest, and a model with too few measured benchmarks gets no score. The <a href="../summary/">summary scores page</a> lists the benchmarks, the ranking and the method in full; the benchmarks are chosen in <a href="https://github.com/jshahbazi/llmbench/blob/main/curation/summary-scores.yaml">curation/summary-scores.yaml</a>.</p>
 <h2>Dates</h2>
 <p>A score's date is the date the source gives for the evaluation. When the source gives none, no date is shown; the site never substitutes the day it first saw a score.</p>
 <h2>When a source breaks</h2>
@@ -591,6 +743,7 @@ export const SQL_EXAMPLES: Array<[string, string]> = [
   ['Best score per model on one benchmark', `SELECT m.name AS model, max(s.value) AS best, count(*) AS runs\nFROM scores s JOIN models m ON m.id = s.model_id\nWHERE s.benchmark_id = 'cais:hle'\nGROUP BY m.id\nORDER BY best DESC\nLIMIT 20;`],
   ["One model's scores everywhere", `SELECT source, benchmark, value, unit, run_by, context\nFROM scores_named\nWHERE model = 'Claude Opus 5.5'\nORDER BY source, benchmark;`],
   ['Makers\' own numbers next to an independent run', `-- Humanity's Last Exam: model makers' reports (via whatmodel, 0-1) against CAIS's runs (0-100)\nSELECT m.name AS model,\n  round(max(CASE WHEN s.benchmark_id = 'whatmodel:hle' THEN s.value * 100 END), 1) AS reported,\n  round(max(CASE WHEN s.benchmark_id = 'cais:hle' THEN s.value END), 1) AS cais\nFROM scores s JOIN models m ON m.id = s.model_id\nWHERE s.benchmark_id IN ('whatmodel:hle', 'cais:hle')\nGROUP BY m.id\nHAVING reported IS NOT NULL AND cais IS NOT NULL\nORDER BY cais DESC;`],
+  ['Coding and non-coding scores side by side', `SELECT m.name AS model,\n  max(CASE WHEN s.score = 'coding' THEN s.value END) AS coding,\n  max(CASE WHEN s.score = 'noncoding' THEN s.value END) AS non_coding\nFROM summary_scores s JOIN models m ON m.id = s.model_id\nGROUP BY m.id\nORDER BY coding DESC\nLIMIT 20;`],
   ['Models with the most benchmarks', `SELECT m.name, m.provider, count(DISTINCT s.benchmark_id) AS benchmarks\nFROM scores s JOIN models m ON m.id = s.model_id\nGROUP BY m.id\nORDER BY benchmarks DESC\nLIMIT 20;`],
   ['Sources and how their data may be reused', `SELECT id, name, license, reuse, rows\nFROM sources\nORDER BY rows DESC;`],
 ];
@@ -635,6 +788,7 @@ ${downloads.length
 ${downloads.map((f) => html`<tr><td><a href="${u}downloads/${f.file}" download>${f.file}</a></td><td>${f.format}</td><td class="num">${f.rows.toLocaleString('en')}</td><td class="num">${size(f.bytes)}</td><td>${f.description}</td></tr>`)}
 </tbody></table></div>
 <p>Values are on each source's own scale: unit “fraction” runs from 0 to 1, “percent” from 0 to 100, and “elo” is a rating. A model can have several scores for one benchmark (re-runs, reasoning efforts, agent set-ups); <code>context</code> says how each was run. Models not in the catalogue have <code>in_catalogue</code> false and no maker, date or size.</p>
+<p>The summary files are different in kind: they hold llmbench's own <a href="${u}summary/">coding and non-coding scores</a> and the values behind them, some of which are estimates (<code>basis</code> says which). No source published those numbers.</p>
 <p>To query everything in your browser, use the <a href="${u}sql/">SQL console</a>. Or, for example, with <a href="https://duckdb.org">DuckDB</a>:</p>
 <pre><code>SELECT model, benchmark, max(value) AS best
 FROM 'https://llmbench.site/downloads/llmbench-scores.parquet'
