@@ -2997,6 +2997,7 @@ matharena,Claude-Fable-5 (max),claude-fable-5,variant,effort:max
 matharena,Claude-Fable-5.1 (high),claude-fable-5-1,variant,effort:high
 matharena,Claude-Fable-5.1 (low),claude-fable-5-1,variant,effort:low
 matharena,Claude-Fable-5.1 (max),claude-fable-5-1,variant,effort:max
+matharena,Claude-Fable-5.2 (max),claude-fable-5-2,variant,effort:max
 matharena,Claude-Opus-4.0 (Think),claude-opus-4-20250514,alias,reasoning:thinking
 matharena,Claude-Opus-4.6 (high),claude-opus-4-6,variant,effort:high
 matharena,Claude-Opus-4.7 (high),claude-opus-4-7,variant,effort:high
@@ -3067,6 +3068,7 @@ matharena,Gemini 3.6 Flash,gemini-3-6-flash,exact,
 matharena,Gemini 3.7 Flash (high),gemini-3-7-flash,variant,effort:high
 matharena,Gemini 3.8 Flash (high),gemini-3-8-flash,variant,effort:high
 matharena,Gemini 4 Argon (high),gemini-4-argon,variant,effort:high
+matharena,Gemini 4 Carbon (high),gemini-4-carbon,variant,effort:high
 matharena,Gemini Deep Think 3 (12/25),gemini-deep-think-3,unlisted,other:12/25
 matharena,Gemini IMO Deep Think,gemini-imo-deep-think,unlisted,
 matharena,Grok 3 (Think),grok-3-beta,variant,reasoning:thinking
@@ -4033,6 +4035,9 @@ terminal-bench,Gemini 3 Pro,gemini-3-pro-preview,variant,
 terminal-bench,Gemini 3.1 Pro,gemini-3-1-pro,exact,
 terminal-bench,Gemini 3.7 Flash,gemini-3-7-flash,exact,
 terminal-bench,Gemini 3.8 Flash,gemini-3-8-flash,exact,
+terminal-bench,Gemini 4 Argon,gemini-4-argon,exact,
+terminal-bench,Gemini 4 Carbon,gemini-4-carbon,exact,
+terminal-bench,Gemini 4 Hydrogen,gemini-4-hydrogen,exact,
 terminal-bench,Grok 4.5,grok-4-5,exact,
 terminal-bench,Grok 4.6,grok-4-6,exact,
 terminal-bench,Grok 4.7,grok-4-7,exact,
@@ -4054,6 +4059,7 @@ terminal-bench,Mistral Large 4,mistral-large-4,exact,
 terminal-bench,Muse Ember,muse-ember-1-0,exact,
 terminal-bench,Muse Spark 1.1,muse-spark-1-1,exact,
 terminal-bench,Muse Spark 1.3,muse-spark-1-3,exact,
+terminal-bench,Muse Wonder,muse-wonder,exact,
 terminal-bench,Nemotron 3.5 Super VL,nemotron-3-5-super-vl-120b-a12b,alias,
 terminal-bench,Opus 4.7,claude-opus-4-7,exact,
 terminal-bench,Opus 4.8,claude-opus-4-8,exact,
