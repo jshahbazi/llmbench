@@ -5,6 +5,8 @@
 {"id":"allam-2-7b","name":"ALLaM-2-7b","category":"llm","origin":"models-dev","provider":"sdaia","released":"2025-01-23","open_weights":true,"context_k":4.096,"model_repo":"https://huggingface.co/ALLaM-AI/ALLaM-2.0-7B-Instruct"}
 {"id":"apertus-70b","name":"Apertus 70B","category":"llm","origin":"models-dev","provider":"swiss-ai","released":"2025-09-02","open_weights":true,"license":"apache-2.0","context_k":65.536,"model_repo":"https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509"}
 {"id":"apertus-8b","name":"Apertus 8B","category":"llm","origin":"models-dev","provider":"swiss-ai","released":"2025-09-02","open_weights":true,"license":"apache-2.0","context_k":65.536,"model_repo":"https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509"}
+{"id":"apertus-v1-5-70b","name":"Apertus 1.5 70B","category":"llm","origin":"models-dev","provider":"swiss-ai","released":"2026-07-24","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/swiss-ai/Apertus-v1.5-70B"}
+{"id":"apertus-v1-5-8b","name":"Apertus v1.5 8B","category":"llm","origin":"models-dev","provider":"swiss-ai","released":"2026-10-15","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/swiss-ai/Apertus-v1.5-8B"}
 {"id":"apodex-1-1-mini","name":"Apodex 1.1 Mini","category":"llm","origin":"models-dev","provider":"apodex","released":"2026-08-24","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/apodex/Apodex-1.1-mini"}
 {"id":"arrow-2","name":"Arrow 2","category":"llm","origin":"models-dev","provider":"quiverai","released":"2026-09-16","open_weights":false,"context_k":131.072}
 {"id":"arrow-2-telos","name":"Arrow 2 Telos","category":"llm","origin":"models-dev","provider":"quiverai","released":"2026-09-16","open_weights":false,"context_k":1050}
@@ -203,6 +205,7 @@
 {"id":"gpt-6-1-terra","name":"GPT-6.1 Terra","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-10-26","open_weights":false,"context_k":1050}
 {"id":"gpt-6-astra","name":"GPT-6 Astra","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-04","open_weights":false,"context_k":1050}
 {"id":"gpt-6-astra-fast","name":"GPT-6 Astra (Fast)","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-04","open_weights":false,"context_k":1050}
+{"id":"gpt-6-cyber","name":"GPT-6 Cyber","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-11-05","open_weights":false,"context_k":1050}
 {"id":"gpt-6-luna","name":"GPT-6 Luna","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-22","open_weights":false,"context_k":1050}
 {"id":"gpt-6-sol","name":"GPT-6 Sol","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-22","open_weights":false,"context_k":1050}
 {"id":"gpt-oss-120b","name":"GPT OSS 120B","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2025-08-05","open_weights":true,"context_k":131.072,"model_repo":"https://huggingface.co/openai/gpt-oss-120b"}
@@ -236,7 +239,7 @@
 {"id":"hy4","name":"Hy4","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-11-04","open_weights":false,"context_k":1048.576}
 {"id":"hy4-preview","name":"Hy4 preview","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-08-28","open_weights":true,"context_k":1024}
 {"id":"inkling","name":"Inkling","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-07-15","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling"}
-{"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-11-05","open_weights":false,"license":"proprietary","context_k":1048.576}
+{"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-11-05","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Small"}
 {"id":"inkling-small","name":"Inkling Small","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-07-30","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling-Small"}
 {"id":"jamba-large","name":"Jamba Large","category":"llm","origin":"models-dev","provider":"AI21 Labs","released":"2025-07-03","open_weights":true,"context_k":256,"model_repo":"https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7"}
 {"id":"jamba-mini","name":"Jamba Mini","category":"llm","origin":"models-dev","provider":"AI21 Labs","released":"2026-01-08","open_weights":true,"context_k":256,"model_repo":"https://huggingface.co/ai21labs/AI21-Jamba2-Mini"}
@@ -251,7 +254,7 @@
 {"id":"kimi-k2-thinking","name":"Kimi K2 Thinking","category":"llm","origin":"models-dev","provider":"Moonshot AI","released":"2025-11-06","open_weights":true,"context_k":262.144,"model_repo":"https://huggingface.co/moonshotai/Kimi-K2-Thinking"}
 {"id":"kimi-k2-thinking-turbo","name":"Kimi K2 Thinking Turbo","category":"llm","origin":"models-dev","provider":"Moonshot AI","released":"2025-11-06","open_weights":true,"context_k":262.144,"model_repo":"https://huggingface.co/moonshotai/Kimi-K2-Thinking"}
 {"id":"kimi-k3","name":"Kimi K3","category":"llm","origin":"models-dev","provider":"Moonshot AI","released":"2026-07-16","open_weights":true,"context_k":1048.576}
-{"id":"kimi-k3-1-pro","name":"Kimi K3.1 Pro","category":"llm","origin":"models-dev","provider":"Moonshot AI","released":"2026-10-23","open_weights":true,"context_k":1048.576}
+{"id":"kimi-k3-1-pro","name":"Kimi K3.1 Pro","category":"llm","origin":"models-dev","provider":"Moonshot AI","released":"2026-10-23","open_weights":true,"context_k":1048.576,"model_repo":"https://huggingface.co/moonshotai/Kimi-K3.1-Pro"}
 {"id":"kolibri-1","name":"Kolibri 1","category":"llm","origin":"models-dev","provider":"aleph-alpha","released":"2026-10-03","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/Aleph-Alpha/Kolibri-1"}
 {"id":"l3-1-euryale-70b","name":"Llama 3.1 Euryale 70B v2.2","category":"llm","origin":"models-dev","provider":"sao10k","released":"2024-08-28","open_weights":true,"context_k":131.072}
 {"id":"l3-3-euryale-70b","name":"Llama 3.3 Euryale 70B","category":"llm","origin":"models-dev","provider":"sao10k","released":"2024-12-18","open_weights":true,"context_k":131.072}
@@ -261,12 +264,15 @@
 {"id":"laguna-xs-2","name":"Laguna XS.2","category":"llm","origin":"models-dev","provider":"Poolside","released":"2026-04-28","open_weights":true,"context_k":262.144}
 {"id":"laguna-xs-2-1","name":"Laguna XS 2.1","category":"llm","origin":"models-dev","provider":"Poolside","released":"2026-07-02","open_weights":true,"context_k":262.144}
 {"id":"lfm2-24b-a2b","name":"LFM2 24B A2B","category":"llm","origin":"models-dev","provider":"Liquid Inference","released":"2026-02-24","open_weights":true,"license":"LFM Open License v1.0","context_k":32.768,"model_repo":"https://huggingface.co/LiquidAI/LFM2-24B-A2B"}
+{"id":"lightonocr-2-1b","name":"LightOnOCR 2 1B","category":"llm","origin":"models-dev","provider":"lightonai","released":"2026-01-16","open_weights":true,"license":"apache-2.0","context_k":16.384,"model_repo":"https://huggingface.co/lightonai/LightOnOCR-2-1B"}
 {"id":"lightonocr-3-0-8b","name":"LightOnOCR-3 0.8B","category":"llm","origin":"models-dev","provider":"lightonai","released":"2026-10-08","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/lightonai/LightOnOCR-3-0.8B"}
 {"id":"ling-3-0-flash","name":"Ling 3.0 Flash","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-07-23","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash"}
 {"id":"ling-3-0-flash-fin","name":"Ling 3.0 Flash Fin","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-08-27","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin"}
 {"id":"ling-3-0-flash-sante","name":"Ling 3.0 Flash Sante","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-09-04","open_weights":false,"context_k":262.144}
 {"id":"ling-3-0-flash-vl","name":"Ling 3.0 Flash VL","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-09-10","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-VL"}
+{"id":"ling-3-0-tiny","name":"Ling 3.0 Tiny","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-08-07","open_weights":true,"license":"mit","context_k":131.072,"model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-tiny"}
 {"id":"ling-3-1-flash","name":"Ling 3.1 Flash","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-09-29","open_weights":true,"context_k":262.144}
+{"id":"ling-3-2-flash","name":"Ling 3.2 Flash","category":"llm","origin":"models-dev","provider":"inclusionai","released":"2026-11-05","open_weights":false,"context_k":1000}
 {"id":"llama-3-1-70b-instruct","name":"Llama-3.1-70B-Instruct","category":"llm","origin":"models-dev","provider":"Meta","released":"2024-07-23","open_weights":true,"context_k":128,"model_repo":"https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct"}
 {"id":"llama-3-1-8b-instruct","name":"Llama-3.1-8B-Instruct","category":"llm","origin":"models-dev","provider":"Meta","released":"2024-07-23","open_weights":true,"context_k":128,"model_repo":"https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"}
 {"id":"llama-3-1-nemotron-70b-instruct","name":"Llama 3.1 Nemotron 70B Instruct","category":"llm","origin":"models-dev","provider":"Nvidia","released":"2025-04-15","open_weights":true,"context_k":128}
@@ -313,6 +319,7 @@
 {"id":"mimo-v2-flash","name":"MiMo-V2-Flash","category":"llm","origin":"models-dev","provider":"Xiaomi","released":"2025-12-16","open_weights":true,"context_k":262.144,"model_repo":"https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash"}
 {"id":"mimo-v2-omni","name":"MiMo-V2-Omni","category":"llm","origin":"models-dev","provider":"Xiaomi","released":"2026-03-18","open_weights":false,"context_k":262.144}
 {"id":"mimo-v2-pro","name":"MiMo-V2-Pro","category":"llm","origin":"models-dev","provider":"Xiaomi","released":"2026-03-18","open_weights":false,"context_k":1048.576}
+{"id":"mineru2-5-2509-1-2b","name":"MinerU2.5 2509 1.2B","category":"llm","origin":"models-dev","provider":"opendatalab","released":"2025-09-17","open_weights":true,"license":"AGPL-3.0","context_k":16.384,"model_repo":"https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B"}
 {"id":"minicpm-v-4-7-1b","name":"MiniCPM-V 4.7 1B","category":"llm","origin":"models-dev","provider":"openbmb","released":"2026-10-06","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-1B"}
 {"id":"minicpm-v-4-7-35b-a3b","name":"MiniCPM-V 4.7 35B-A3B","category":"llm","origin":"models-dev","provider":"openbmb","released":"2026-10-07","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"}
 {"id":"minicpm5-1b","name":"MiniCPM5-1B","category":"llm","origin":"models-dev","provider":"openbmb","released":"2026-05-19","open_weights":true,"license":"apache-2.0","context_k":131.072,"model_repo":"https://huggingface.co/openbmb/MiniCPM5-1B"}
@@ -326,7 +333,7 @@
 {"id":"minimax-m2-7-highspeed","name":"MiniMax-M2.7-highspeed","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2026-03-18","open_weights":true,"context_k":204.8,"model_repo":"https://huggingface.co/MiniMaxAI/MiniMax-M2.7"}
 {"id":"minimax-m2-her","name":"MiniMax-M2 Her","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2026-01-23","open_weights":false,"context_k":65.536}
 {"id":"minimax-m3","name":"MiniMax-M3","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2026-06-01","open_weights":true,"context_k":1048.576,"model_repo":"https://huggingface.co/MiniMaxAI/MiniMax-M3"}
-{"id":"minimax-m3-1-flash","name":"MiniMax-M3.1-Flash","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2026-10-19","open_weights":true,"context_k":1000}
+{"id":"minimax-m3-1-flash","name":"MiniMax-M3.1-Flash","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2026-10-19","open_weights":true,"context_k":1000,"model_repo":"https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"}
 {"id":"minimax-m3-1-flash-preview","name":"MiniMax-M3.1-Flash-Preview","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2026-09-27","open_weights":false,"context_k":1000}
 {"id":"minimax-text-01","name":"MiniMax Text 01 (MiniMax)","category":"llm","origin":"models-dev","provider":"MiniMax (minimax.io)","released":"2025-01-15","open_weights":false,"context_k":1000}
 {"id":"ministral-14b","name":"Ministral 14B","category":"llm","origin":"models-dev","provider":"Mistral","released":"2025-12-02","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512"}
@@ -410,15 +417,20 @@
 {"id":"o3-pro","name":"o3-pro","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2025-06-10","open_weights":false,"context_k":200}
 {"id":"o4-mini","name":"o4-mini","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2025-04-16","open_weights":false,"context_k":200}
 {"id":"o4-mini-deep-research","name":"o4-mini-deep-research","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2025-06-26","open_weights":false,"context_k":200}
+{"id":"olmocr-2-7b","name":"olmOCR 2 7B","category":"llm","origin":"models-dev","provider":"allenai","released":"2025-10-22","open_weights":true,"license":"apache-2.0","context_k":16.384,"model_repo":"https://huggingface.co/allenai/olmOCR-2-7B-1025"}
+{"id":"openpangu-2-0-flash","name":"openPangu 2.0 Flash","category":"llm","origin":"models-dev","provider":"huawei","released":"2026-06-30","open_weights":true,"context_k":524.288,"model_repo":"https://huggingface.co/openpangu/openPangu-2.0-Flash"}
+{"id":"openpangu-2-0-pro","name":"openPangu 2.0 Pro","category":"llm","origin":"models-dev","provider":"huawei","released":"2026-07-31","open_weights":true,"context_k":524.288,"model_repo":"https://huggingface.co/openpangu/openPangu-2.0-Pro"}
 {"id":"ornith-1-0-31b","name":"Ornith 1.0 31B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-06-25","open_weights":true,"license":"mit","context_k":262.144}
 {"id":"ornith-1-0-35b","name":"Ornith 1.0 35B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-06-25","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B"}
 {"id":"ornith-1-0-397b","name":"Ornith 1.0 397B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-06-25","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B"}
 {"id":"ornith-1-0-9b","name":"Ornith 1.0 9B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-06-25","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B"}
+{"id":"ornith-1-5-122b","name":"Ornith 1.5 122B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-10-20","open_weights":true,"license":"mit","context_k":262.144}
 {"id":"ornith-1-5-35b-a3b","name":"Ornith 1.5 35B A3B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-08-18","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B"}
 {"id":"paddleocr-vl","name":"PaddleOCR VL","category":"llm","origin":"models-dev","provider":"paddlepaddle","released":"2025-10-16","open_weights":true,"license":"apache-2.0","context_k":131.072,"model_repo":"https://huggingface.co/PaddlePaddle/PaddleOCR-VL"}
 {"id":"palmyra-x4","name":"Palmyra X4","category":"llm","origin":"models-dev","provider":"writer","released":"2024-10-09","open_weights":false,"context_k":128}
 {"id":"palmyra-x5","name":"Palmyra X5","category":"llm","origin":"models-dev","provider":"writer","released":"2025-04-28","open_weights":false,"context_k":1000}
-{"id":"pareto","name":"Pareto","category":"llm","origin":"models-dev","provider":"unbiased","released":"2026-09-17","open_weights":false,"context_k":262.144}
+{"id":"pareto","name":"Pareto","category":"llm","origin":"models-dev","provider":"Pareto by Unbiased","released":"2026-09-17","open_weights":false,"context_k":262.144}
+{"id":"pareto-26-10","name":"Pareto 26.10","category":"llm","origin":"models-dev","provider":"Pareto by Unbiased","released":"2026-10-15","open_weights":false,"context_k":1048.576}
 {"id":"perceptron-mk1","name":"Perceptron Mk1","category":"llm","origin":"models-dev","provider":"perceptron","released":"2026-05-12","open_weights":false,"context_k":32.768}
 {"id":"perceptron-mk1-5","name":"Perceptron Mk1.5","category":"llm","origin":"models-dev","provider":"perceptron","released":"2026-09-25","open_weights":false,"context_k":36.864}
 {"id":"phi-4-mini","name":"Phi-4-mini","category":"llm","origin":"models-dev","provider":"microsoft","released":"2025-02-26","open_weights":true,"context_k":128}
@@ -496,6 +508,7 @@
 {"id":"relace-apply-3","name":"Relace Apply 3","category":"llm","origin":"models-dev","provider":"relace","released":"2025-09-26","open_weights":false,"context_k":256}
 {"id":"relace-search","name":"Relace Search","category":"llm","origin":"models-dev","provider":"relace","released":"2025-12-08","open_weights":false,"context_k":256}
 {"id":"remm-slerp-l2-13b","name":"ReMM SLERP 13B","category":"llm","origin":"models-dev","provider":"undi95","released":"2023-07-22","open_weights":true,"context_k":6.144}
+{"id":"restyler-1","name":"Restyler 1","category":"llm","origin":"models-dev","provider":"meraGPT","released":"2026-09-02","open_weights":false,"context_k":4.096}
 {"id":"rnj-1-instruct","name":"Rnj-1 Instruct","category":"llm","origin":"models-dev","provider":"essentialai","released":"2025-12-04","open_weights":true,"license":"apache-2.0","context_k":32.768,"model_repo":"https://huggingface.co/EssentialAI/rnj-1-instruct"}
 {"id":"sakana-namazu","name":"Sakana Namazu","category":"llm","origin":"models-dev","provider":"Sakana AI","released":"2026-08-03","open_weights":false,"context_k":262.144}
 {"id":"sarvam-105b","name":"Sarvam 105B","category":"llm","origin":"models-dev","provider":"Sarvam AI","released":"2026-02-18","open_weights":true,"context_k":131.072}
@@ -511,10 +524,11 @@
 {"id":"seed-2-0-lite","name":"Seed 2.0 Lite","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-02-14","open_weights":false,"context_k":256}
 {"id":"seed-2-0-mini","name":"Seed 2.0 Mini","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-02-14","open_weights":false,"context_k":256}
 {"id":"seed-2-0-pro","name":"Seed 2.0 Pro","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-02-14","open_weights":false,"context_k":256}
-{"id":"seed-2-1-pro","name":"Seed 2.1 Pro","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-06-23","open_weights":false,"context_k":256}
+{"id":"seed-2-1-lite","name":"Seed 2.1 Lite","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-09-15","open_weights":false,"context_k":1024}
+{"id":"seed-2-1-pro","name":"Seed 2.1 Pro","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-06-23","open_weights":false,"context_k":1024}
 {"id":"seed-2-1-turbo","name":"Seed 2.1 Turbo","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-06-23","open_weights":false,"context_k":256}
 {"id":"seed-character","name":"Seed Character","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-06-23","open_weights":false,"context_k":256}
-{"id":"seed-evolving","name":"Seed Evolving","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-06-23","open_weights":false,"context_k":256}
+{"id":"seed-evolving","name":"Seed Evolving","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2026-06-23","open_weights":false,"context_k":1024}
 {"id":"seed-oss-36b-instruct","name":"Seed-OSS-36B-Instruct","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2025-08-20","open_weights":true,"license":"apache-2.0","context_k":524.288,"model_repo":"https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"}
 {"id":"skyfall-36b-v2","name":"Skyfall 36B V2","category":"llm","origin":"models-dev","provider":"thedrummer","released":"2025-03-10","open_weights":true,"context_k":32.768}
 {"id":"solar-10-7b-instruct-v1-0","name":"SOLAR 10.7B Instruct v1.0","category":"llm","origin":"models-dev","provider":"Upstage","released":"2023-12-12","open_weights":true,"license":"cc-by-nc-4.0","context_k":4.096,"model_repo":"https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0"}

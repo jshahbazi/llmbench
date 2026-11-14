@@ -17,7 +17,7 @@ models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra
 models-dev,grok-4-20-0309-non-reasoning,Grok 4.20 (Non-Reasoning),xAI,2026-03-09,grok-4-20 grok-4-0709 grok-4-20-multi-agent-0309
 models-dev,grok-4-fast-non-reasoning,Grok-4-Fast-Non-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
 models-dev,grok-4-fast-reasoning,Grok-4-Fast-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
-models-dev,ling-3-1-flash,Ling 3.1 Flash,inclusionai,2026-09-29,ling-3-1-flash-1019 ling-3-0-flash ling-2-6-flash
+models-dev,ling-3-1-flash,Ling 3.1 Flash,inclusionai,2026-09-29,ling-3-1-flash-1019 ling-3-0-flash ling-3-2-flash
 models-dev,longcat-2-5-preview,LongCat-2.5-Preview,meituan,2026-09-25,longcat-2-5 longcat-2-0
 models-dev,magistral-medium-latest,Magistral Medium (latest),Mistral,2025-03-17,magistral-medium-2506 magistral-medium-2507 magistral-medium-2509
 models-dev,minimax-m3-1-flash-preview,MiniMax-M3.1-Flash-Preview,MiniMax (minimax.io),2026-09-27,minimax-m3-1-flash minimax-m3
