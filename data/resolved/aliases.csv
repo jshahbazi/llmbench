@@ -1514,7 +1514,9 @@ epoch,claude-3-opus-20240229,claude-3-opus-20240229,exact,
 epoch,claude-3-sonnet-20240229,claude-3-sonnet-20240229,exact,
 epoch,claude-fable-5-1_high,claude-fable-5-1,variant,effort:high
 epoch,claude-fable-5-1_max,claude-fable-5-1,variant,effort:max
+epoch,claude-fable-5-2-fallback_max,claude-fable-5-2,variant,effort:max; other:with fallback
 epoch,claude-fable-5-2_max,claude-fable-5-2,variant,effort:max
+epoch,claude-fable-5-fallback_max,claude-fable-5,variant,effort:max; other:with fallback
 epoch,claude-fable-5_high,claude-fable-5,variant,effort:high
 epoch,claude-fable-5_low,claude-fable-5,variant,effort:low
 epoch,claude-fable-5_max,claude-fable-5,variant,effort:max
@@ -1556,6 +1558,7 @@ epoch,claude-opus-4-8_max,claude-opus-4-8,exact,
 epoch,claude-opus-4-8_none,claude-opus-4-8,exact,
 epoch,claude-opus-4-8_xhigh,claude-opus-4-8,exact,
 epoch,claude-opus-5,claude-opus-5,exact,
+epoch,claude-opus-5-5-fallback_max,claude-opus-5-5,variant,effort:max; other:with fallback
 epoch,claude-opus-5-5_high,claude-opus-5-5,variant,effort:high
 epoch,claude-opus-5-5_max,claude-opus-5-5,variant,effort:max
 epoch,claude-opus-5_low,claude-opus-5,variant,effort:low
