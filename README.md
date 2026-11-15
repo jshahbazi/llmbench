@@ -127,7 +127,7 @@ columns that measure it:
 ```yaml
 coding:
   label: Coding score
-  min_benchmarks: 5        # a model needs this many of the benchmarks measured ...
+  min_benchmarks: 3        # a model needs this many of the benchmarks measured ...
   min_areas: 2             # ... across this many areas, or it gets no score
   areas:
     Fixing real repositories:

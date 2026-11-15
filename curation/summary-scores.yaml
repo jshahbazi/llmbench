@@ -46,7 +46,7 @@ coding:
   description: >-
     Writing and changing software: fixing real repositories, long agentic engineering tasks,
     algorithmic problems and building apps.
-  min_benchmarks: 5
+  min_benchmarks: 3
   min_areas: 2
   areas:
     Fixing real repositories:

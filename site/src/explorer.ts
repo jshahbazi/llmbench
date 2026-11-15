@@ -7,6 +7,7 @@ import { $, el, link } from './dom.ts';
 import { fmt, isPermissive, paramsLabel, RUN_BY_LABELS, safeUrl, unitSuffix } from './format.ts';
 import { FLAG_QUANTIZED, FLAG_SEARCH, pickBest, toCsv, type Candidate } from './select.ts';
 import { parseState, serializeState, type ViewState } from './state.ts';
+import { matchesModelSearch } from './search.ts';
 import type { CellsFile, SiteColumn, SiteIndex, SiteModel, SiteSummary, SummaryFile } from './types.ts';
 
 let index: SiteIndex;
@@ -69,10 +70,7 @@ function modelPasses(m: SiteModel): boolean {
   if (s.size < 0 && !(m.params_b !== undefined && m.params_b > -s.size)) return false;
   const since = sinceMonth(s.since);
   if (since && !((m.released ?? '') >= since)) return false;
-  if (s.q) {
-    const q = s.q.toLowerCase();
-    if (!m.name.toLowerCase().includes(q) && !(m.provider ?? '').toLowerCase().includes(q) && !m.id.includes(q)) return false;
-  }
+  if (s.q && !matchesModelSearch(m, s.q)) return false;
   return true;
 }
 
