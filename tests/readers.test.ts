@@ -189,7 +189,7 @@ test('MathArena: competitions from the home page, measured scores only, flags ke
 
 test('SQL page: tables and columns from the download schema; examples name real tables', () => {
   const t = schemaTables(SQLITE_SCHEMA);
-  assert.deepEqual(t.map((x) => `${x.kind}:${x.name}`), ['table:about', 'table:sources', 'table:models', 'table:benchmarks', 'table:names', 'table:scores', 'view:scores_named']);
+  assert.deepEqual(t.map((x) => `${x.kind}:${x.name}`), ['table:about', 'table:sources', 'table:models', 'table:benchmarks', 'table:names', 'table:scores', 'table:summary_scores', 'table:summary_parts', 'view:scores_named']);
   assert.deepEqual(t.find((x) => x.name === 'names')!.columns, ['source', 'source_model_name', 'model_id', 'method', 'qualifiers', 'scores']);
   assert.deepEqual(t.at(-1)!.columns, ['model', 'benchmark', 'source', 'value', 'unit', 'higher_is_better', 'run_by', 'date', 'context', 'url', 'source_license']);
   const names = new Set(t.map((x) => x.name));

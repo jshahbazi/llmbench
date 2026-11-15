@@ -7,7 +7,7 @@ import { $, el, link } from './dom.ts';
 import { fmt, isPermissive, paramsLabel, RUN_BY_LABELS, safeUrl, unitSuffix } from './format.ts';
 import { FLAG_QUANTIZED, FLAG_SEARCH, pickBest, toCsv, type Candidate } from './select.ts';
 import { parseState, serializeState, type ViewState } from './state.ts';
-import type { CellsFile, SiteColumn, SiteIndex, SiteModel } from './types.ts';
+import type { CellsFile, SiteColumn, SiteIndex, SiteModel, SiteSummary, SummaryFile } from './types.ts';
 
 let index: SiteIndex;
 let state: ViewState;
@@ -31,8 +31,22 @@ interface View {
 }
 let view: View;
 
+/**
+ * The summary scores are shown as columns of their own, so sorting, charts, compare and exports
+ * treat them like any other column. They belong to no source: llmbench computes them.
+ */
+const SUMMARY_SOURCE = 'llmbench';
+/** Run-by code of a summary score. The Run by filter never hides it. */
+const RUN_BY_COMPUTED = 3;
+/** Column index -> the summary score it shows. */
+const summaries = new Map<number, SiteSummary>();
+/** `${model}:${column}` -> that model's row in the summary score. */
+const summaryRows = new Map<string, SiteSummary['rows'][number]>();
+const BASIS_NOTES = ['estimated', '', 'submitted', "maker's own"];
+
 const key = (mi: number, ci: number) => `${mi}:${ci}`;
-const colHref = (c: SiteColumn) => `benchmarks/${c.source}/${c.slug}/`;
+const colHref = (c: SiteColumn) => (c.source === SUMMARY_SOURCE ? `summary/#${c.metric}` : `benchmarks/${c.source}/${c.slug}/`);
+const includedRunBy = () => new Set([...state.runBy, RUN_BY_COMPUTED]);
 const modelHref = (m: SiteModel) => `models/${m.id}/`;
 /** Flags whose runs the "plain runs only" filter leaves out. */
 const hidden = () => (state.plain ? FLAG_QUANTIZED | FLAG_SEARCH : 0);
@@ -63,7 +77,7 @@ function modelPasses(m: SiteModel): boolean {
 }
 
 function compute(): View {
-  const runBy = new Set(state.runBy);
+  const runBy = includedRunBy();
   const hide = hidden();
   const ok = index.models.map(modelPasses);
   const cell = new Map<string, Shown>();
@@ -84,14 +98,19 @@ function compute(): View {
   if (state.cols) {
     cols = state.cols.map((id) => colById.get(id)).filter((ci): ci is number => ci !== undefined);
   } else {
-    cols = index.columns
-      .map((_, i) => i)
-      .filter((i) => {
-        const c = index.columns[i]!;
-        return coverage[i]! > 0 && c.headline && (!state.tag || (c.tags ?? []).includes(state.tag));
-      })
-      .sort((a, b) => coverage[b]! - coverage[a]! || index.columns[a]!.label.localeCompare(index.columns[b]!.label))
-      .slice(0, state.n);
+    const fits = (i: number) => {
+      const c = index.columns[i]!;
+      return coverage[i]! > 0 && c.headline && (!state.tag || (c.tags ?? []).includes(state.tag));
+    };
+    // The summary scores lead, then the most covered columns.
+    cols = [
+      ...[...summaries.keys()].filter(fits),
+      ...index.columns
+        .map((_, i) => i)
+        .filter((i) => !summaries.has(i) && fits(i))
+        .sort((a, b) => coverage[b]! - coverage[a]! || index.columns[a]!.label.localeCompare(index.columns[b]!.label))
+        .slice(0, state.n),
+    ];
   }
 
   const min = Math.min(state.min, cols.length);
@@ -233,6 +252,7 @@ function renderTable() {
         },
         fmt(shown.best.value, col.unit),
         shown.n > 1 ? el('span', { class: 'n', 'aria-label': `${shown.n} scores` }, String(shown.n)) : null,
+        measuredNote(mi, ci),
       );
       first = false;
       tr.append(td);
@@ -252,8 +272,15 @@ function renderTable() {
   $('viewstats').textContent = `${rows.length} models × ${cols.length} columns · ${shownCount.toLocaleString()} scores · ${fill}% of cells filled`;
 }
 
+/** For a summary score: "12/16", how many of its benchmarks the model has a result on. */
+function measuredNote(mi: number, ci: number): HTMLElement | null {
+  const row = summaryRows.get(key(mi, ci));
+  const total = summaries.get(ci)?.benchmarks.length;
+  return row && total ? el('span', { class: 'measured', 'aria-label': `${row[2]} of ${total} benchmarks measured` }, `${row[2]}/${total}`) : null;
+}
+
 function renderCompare() {
-  const runBy = new Set(state.runBy);
+  const runBy = includedRunBy();
   const ms = state.cmp.map((id) => modelById.get(id)).filter((mi): mi is number => mi !== undefined);
   const lines: Array<{ ci: number; vals: Array<Candidate | null> }> = [];
   index.columns.forEach((col, ci) => {
@@ -261,7 +288,13 @@ function renderCompare() {
     const k = vals.filter(Boolean).length;
     if (k >= Math.min(2, ms.length)) lines.push({ ci, vals });
   });
-  lines.sort((a, b) => b.vals.filter(Boolean).length - a.vals.filter(Boolean).length || index.columns[b.ci]!.coverage - index.columns[a.ci]!.coverage);
+  lines.sort(
+    (a, b) =>
+      Number(summaries.has(b.ci)) - Number(summaries.has(a.ci)) ||
+      (summaries.has(a.ci) ? a.ci - b.ci : 0) ||
+      b.vals.filter(Boolean).length - a.vals.filter(Boolean).length ||
+      index.columns[b.ci]!.coverage - index.columns[a.ci]!.coverage,
+  );
 
   const head = el('tr', {}, el('th', { scope: 'col' }, 'Benchmark'));
   for (const mi of ms) {
@@ -290,6 +323,7 @@ function renderCompare() {
         'td',
         { class: `score${v.value === top && present.length > 1 ? ' best' : ''}`, tabindex: -1, 'data-m': ms[k]!, 'data-c': ci },
         fmt(v.value, col.unit),
+        measuredNote(ms[k]!, ci),
       );
       tr.append(td);
     });
@@ -416,16 +450,81 @@ function closePopover() {
   popoverFrom = null;
 }
 
+/** What a summary score is made of: each area's value, opening into its benchmarks. */
+function summaryDetails(mi: number, ci: number, summary: SiteSummary): Node[] {
+  const m = index.models[mi]!;
+  const col = index.columns[ci]!;
+  const row = summaryRows.get(key(mi, ci))!;
+  const [, value, measured, areaValues, values, basis] = row;
+  const total = summary.benchmarks.length;
+  const estimated = total - measured;
+  const areas = summary.areas.map((name, a) =>
+    el(
+      'details',
+      {},
+      el('summary', {}, `${name} `, el('strong', {}, areaValues[a]!.toFixed(1))),
+      el(
+        'ul',
+        {},
+        ...summary.benchmarks.flatMap(([benchmark, area], i) =>
+          area === a
+            ? [
+                el(
+                  'li',
+                  { class: basis[i] === 0 ? 'est' : null },
+                  `${benchmark} `,
+                  el('strong', {}, values[i]!.toFixed(1)),
+                  BASIS_NOTES[basis[i]!] ? el('span', { class: 'muted' }, ` ${BASIS_NOTES[basis[i]!]}`) : null,
+                ),
+              ]
+            : [],
+        ),
+      ),
+    ),
+  );
+  return [
+    el('h2', {}, m.name),
+    el('p', { class: 'muted' }, el('a', { href: colHref(col) }, col.label), ' · computed by llmbench'),
+    el(
+      'p',
+      {},
+      el('strong', {}, value.toFixed(1)),
+      ` · ${measured} of ${total} benchmarks measured${estimated ? `; the other ${estimated} ${estimated === 1 ? 'is' : 'are'} estimated from this model's results on the rest` : ''}.`,
+    ),
+    el('div', { class: 'parts' }, ...areas),
+    el('p', { class: 'links' }, el('a', { href: 'summary/#method' }, 'How this score is built'), ' · ', el('a', { href: `${modelHref(m)}#summary` }, 'Every value behind it')),
+  ];
+}
+
 function openPopover(td: HTMLElement) {
   const mi = Number(td.dataset['m']);
   const ci = Number(td.dataset['c']);
-  const m = index.models[mi]!;
-  const col = index.columns[ci]!;
-  const runBy = new Set(state.runBy);
-  const hide = hidden();
-  const list = [...(candidates.get(key(mi, ci)) ?? [])].sort((a, b) => (col.direction === 'lower' ? a.value - b.value : b.value - a.value));
+  const summary = summaries.get(ci);
   const close = el('button', { type: 'button', class: 'icon close', 'aria-label': 'Close' }, '×');
   close.addEventListener('click', closePopover);
+  const p = $('popover');
+  p.replaceChildren(close, ...(summary ? summaryDetails(mi, ci, summary) : cellDetails(mi, ci)));
+  p.hidden = false;
+  const r = td.getBoundingClientRect();
+  const w = Math.min(360, window.innerWidth - 24);
+  p.style.width = `${w}px`;
+  const left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), window.innerWidth - w - 12);
+  const below = r.bottom + 6;
+  const height = p.offsetHeight;
+  const top = below + height > window.innerHeight - 8 ? Math.max(8, r.top - height - 6) : below;
+  p.style.left = `${left}px`;
+  p.style.top = `${top}px`;
+  popoverFrom = td;
+  close.focus();
+}
+
+/** Every score behind a cell, each with who ran it and where it came from. */
+function cellDetails(mi: number, ci: number): Node[] {
+  const m = index.models[mi]!;
+  const col = index.columns[ci]!;
+  const runBy = includedRunBy();
+  const hide = hidden();
+  const list = [...(candidates.get(key(mi, ci)) ?? [])].sort((a, b) => (col.direction === 'lower' ? a.value - b.value : b.value - a.value));
   const items = list.map((c) => {
     const url = safeUrl(c.url);
     const why = !runBy.has(c.runBy) ? 'the Run by filter' : c.flags & hide ? 'the plain-runs filter' : '';
@@ -452,26 +551,12 @@ function openPopover(td: HTMLElement) {
       why ? el('span', { class: 'muted' }, ` (hidden by ${why})`) : null,
     );
   });
-  const p = $('popover');
-  p.replaceChildren(
-    close,
+  return [
     el('h2', {}, m.name),
     el('p', { class: 'muted' }, el('a', { href: colHref(col) }, col.label), ` · ${sourceName.get(col.source) ?? col.source}`),
     el('ul', { class: 'cands' }, ...items),
     el('p', { class: 'links' }, el('a', { href: modelHref(m) }, 'All scores for this model'), ' · ', el('a', { href: colHref(col) }, 'Full leaderboard')),
-  );
-  p.hidden = false;
-  const r = td.getBoundingClientRect();
-  const w = Math.min(360, window.innerWidth - 24);
-  p.style.width = `${w}px`;
-  const left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), window.innerWidth - w - 12);
-  const below = r.bottom + 6;
-  const height = p.offsetHeight;
-  const top = below + height > window.innerHeight - 8 ? Math.max(8, r.top - height - 6) : below;
-  p.style.left = `${left}px`;
-  p.style.top = `${top}px`;
-  popoverFrom = td;
-  close.focus();
+  ];
 }
 
 // ---- Column picker ------------------------------------------------------------------------------
@@ -480,7 +565,7 @@ function renderPicker() {
   const q = $<HTMLInputElement>('picker-q').value.trim().toLowerCase();
   const subs = $<HTMLInputElement>('picker-sub').checked;
   const selected = new Set(view.cols);
-  const groups = index.sources
+  const groups = [{ id: SUMMARY_SOURCE, name: 'Summary scores' }, ...index.sources]
     .filter((s) => index.columns.some((c) => c.source === s.id))
     .map((s) => {
       const cols = index.columns
@@ -531,7 +616,7 @@ function exportCsv() {
   const rows: Array<Array<string | number>> = [];
   if (state.view === 'compare' && state.cmp.length >= 2) {
     const ms = state.cmp.map((id) => modelById.get(id)).filter((mi): mi is number => mi !== undefined);
-    const runBy = new Set(state.runBy);
+    const runBy = includedRunBy();
     rows.push(['Benchmark', 'Source', 'Unit', ...ms.map((mi) => index.models[mi]!.name)]);
     index.columns.forEach((col, ci) => {
       const vals = ms.map((mi) => pickBest(candidates.get(key(mi, ci)) ?? [], col.direction, runBy, hidden())?.best.value);
@@ -713,15 +798,52 @@ function wire() {
   $('table-wrap').addEventListener('scroll', closePopover, { passive: true });
 }
 
+/** Adds each summary score as a column, with one score per model that has it. */
+function addSummaries(file: SummaryFile) {
+  sourceName.set(SUMMARY_SOURCE, 'llmbench');
+  for (const s of file.scores) {
+    if (!s.rows.length) continue;
+    const ci = index.columns.length;
+    const total = s.benchmarks.length;
+    index.columns.push({
+      id: `summary:${s.id}`,
+      source: SUMMARY_SOURCE,
+      metric: s.id,
+      label: s.label,
+      direction: 'higher',
+      unit: 'percent',
+      headline: true,
+      slug: s.id,
+      coverage: s.rows.length,
+      // A score named after a preset (coding) leads that preset too.
+      ...(index.tags.some((t) => t.id === s.id) && { tags: [s.id] }),
+      description: `${s.description}\nComputed by llmbench: the average over ${total} benchmarks in ${s.areas.length} areas, with the ones a model has no result on estimated.`,
+    });
+    colById.set(`summary:${s.id}`, ci);
+    summaries.set(ci, s);
+    for (const row of s.rows) {
+      const k = key(row[0], ci);
+      summaryRows.set(k, row);
+      candidates.set(k, [
+        { value: row[1], runBy: RUN_BY_COMPUTED, date: '', context: `${row[2]} of ${total} benchmarks measured`, url: null, interval: '', rawName: '', source: SUMMARY_SOURCE, history: null, flags: 0 },
+      ]);
+    }
+  }
+}
+
 async function main() {
   index = (await (await fetch('data/index.json')).json()) as SiteIndex;
   index.columns.forEach((c, i) => colById.set(c.id, i));
   index.models.forEach((m, i) => modelById.set(m.id, i));
   for (const s of index.sources) sourceName.set(s.id, s.name);
 
-  const files = await Promise.all(
-    index.sources.filter((s) => s.row_count > 0).map(async (s) => (await (await fetch(`data/cells/${s.id}.json`)).json()) as CellsFile),
-  );
+  const [summaryFile, ...files] = await Promise.all([
+    // The summary scores are an extra: the explorer works without them.
+    fetch('data/summary.json')
+      .then((r) => (r.ok ? (r.json() as Promise<SummaryFile>) : null))
+      .catch(() => null),
+    ...index.sources.filter((s) => s.row_count > 0).map(async (s) => (await (await fetch(`data/cells/${s.id}.json`)).json()) as CellsFile),
+  ]);
   let total = 0;
   for (const f of files) {
     for (const [mi, ci, value, runBy, date, context, ui, interval, ni, hi, flags] of f.cells) {
@@ -748,6 +870,7 @@ async function main() {
     `${files.length} sources · ${total.toLocaleString()} scores · ${index.models.length.toLocaleString()} models · ` +
     `${index.columns.length.toLocaleString()} metrics · updated ${index.generated_at.slice(0, 10)}`;
   $('um-label').textContent = `Models not in the catalogue (${index.stats.unlisted_models})`;
+  if (summaryFile) addSummaries(summaryFile);
 
   state = parseState(location.search);
   syncControls();

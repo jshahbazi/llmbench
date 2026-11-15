@@ -7,7 +7,7 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { slugify } from '../../site/src/format.ts';
 import type { Candidate } from '../../site/src/select.ts';
-import type { CellsFile, CellTuple, HistoryEntry, SiteColumn, SiteIndex, SiteModel, SiteSource } from '../../site/src/types.ts';
+import type { CellsFile, CellTuple, HistoryEntry, SiteColumn, SiteIndex, SiteModel, SiteSource, SummaryFile } from '../../site/src/types.ts';
 import { loadSources } from '../lib/config.ts';
 import { fillsOnly } from '../lib/catalog.ts';
 import { benchmarkOf, curatedCatalog, loadBenchmarkLinks } from '../lib/curation.ts';
@@ -16,6 +16,7 @@ import { describeQualifier, qualifierFlags, readQualifiers } from '../lib/names.
 import { parseDelimited, tableToRecords, type Rec } from '../lib/parse.ts';
 import { parseScore } from '../lib/scores.ts';
 import { readHistory, readJson, readRows, readRunCache, readState, sourceDir } from '../lib/store.ts';
+import { computeSummary, loadSummarySpecs, type SummaryResult } from '../lib/summary.ts';
 import { presentMetrics, TAGS } from '../lib/tags.ts';
 import type { HistoryEvent, Metric, RunBy, SourceConfig } from '../lib/types.ts';
 
@@ -60,7 +61,28 @@ export interface SiteData {
   names: Map<string, NameEntry[]>;
   history: Map<string, Array<HistoryEvent & { column?: number; modelIndex?: number }>>;
   scores: ScoreRecord[];
+  /** The summary scores (curation/summary-scores.yaml), computed from the scores above. */
+  summaries: SummaryResult[];
   config: SourceConfig[];
+}
+
+/** What the explorer loads to show the summary scores: every model that has one, with its parts. */
+export function summaryFile(d: Pick<SiteData, 'summaries'>): SummaryFile {
+  const r1 = (v: number) => Math.round(v * 10) / 10;
+  return {
+    scores: d.summaries.map((s) => ({
+      id: s.spec.id,
+      label: s.spec.label,
+      description: s.spec.description,
+      min_benchmarks: s.spec.minBenchmarks,
+      min_areas: s.spec.minAreas,
+      areas: s.areas,
+      benchmarks: s.benchmarks.map((b) => [b.name, b.area] as [string, number]),
+      rows: s.models
+        .filter((m) => m.value !== undefined)
+        .map((m) => [m.model, r1(m.value!), m.measured, m.areaValues!.map(r1), m.parts.map((p) => r1(p!.value)), m.parts.map((p) => p!.basis)] as SummaryFile['scores'][number]['rows'][number]),
+    })),
+  };
 }
 
 async function readCsv(path: string): Promise<Rec[] | undefined> {
@@ -318,6 +340,11 @@ export async function loadSiteData(): Promise<SiteData> {
     if (b) c.benchmark = b;
   }
 
+  const specs = await loadSummarySpecs();
+  const summaries = specs.map((spec) =>
+    computeSummary(spec, columns, (ci) => [...(columnModels.get(ci) ?? [])].map((mi) => [mi, byCell.get(`${mi}:${ci}`) ?? []] as const)),
+  );
+
   const index: SiteIndex = {
     generated_at: new Date().toISOString().replace(/\.\d+Z$/, 'Z'),
     sources,
@@ -326,5 +353,5 @@ export async function loadSiteData(): Promise<SiteData> {
     tags: [...TAGS],
     stats: { invalid_excluded: invalidExcluded, unparsable, unlisted_models: models.filter((m) => m.unlisted).length },
   };
-  return { index, cells: cellsFiles, byCell, modelColumns, columnModels, names, history, scores, config };
+  return { index, cells: cellsFiles, byCell, modelColumns, columnModels, names, history, scores, summaries, config };
 }

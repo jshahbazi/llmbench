@@ -93,3 +93,29 @@ export interface CellsFile {
   history: HistoryEntry[][];
   cells: CellTuple[];
 }
+
+/**
+ * One summary score (curation/summary-scores.yaml): llmbench's own number per model, the average
+ * over a fixed basket of benchmarks grouped into areas that count equally.
+ */
+export interface SiteSummary {
+  id: string;
+  label: string;
+  description: string;
+  min_benchmarks: number;
+  min_areas: number;
+  areas: string[];
+  /** [name, area index] */
+  benchmarks: Array<[string, number]>;
+  /**
+   * One row per model with a score, best first: [model index, score, benchmarks measured, the value
+   * for each area, the value for each benchmark, and how each benchmark's value was obtained
+   * (0 estimated, 1 independent, 2 submitted, 3 lab-reported)].
+   */
+  rows: Array<[number, number, number, number[], number[], number[]]>;
+}
+
+/** data/summary.json */
+export interface SummaryFile {
+  scores: SiteSummary[];
+}

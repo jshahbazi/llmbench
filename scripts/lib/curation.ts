@@ -11,6 +11,8 @@
  *   curation/models.yaml   models to add to the catalogue, or fields to correct on one already in it.
  *                          An entry with only the id of a model a catalogue feed left out (see
  *                          data/reports/catalog-left-out.csv) takes that feed's entry for it.
+ *   curation/summary-scores.yaml  the benchmarks behind the coding and non-coding scores, grouped
+ *                          into areas (lib/summary.ts reads it and computes the scores).
  *
  * The catalogue they apply to is merged from the catalogue feeds (lib/catalog.ts).
  */
@@ -23,6 +25,7 @@ import { aliasMap, NO_MATCH, type Aliases } from './match.ts';
 import { normalize } from './names.ts';
 import { parseDelimited, tableToRecords, type Rec } from './parse.ts';
 import { readJson, sourceDir } from './store.ts';
+import { parseSummaryYaml, SUMMARY_PATH, SUMMARY_UNITS } from './summary.ts';
 import type { CatalogModel, Metric, SourceConfig } from './types.ts';
 
 export const ALIASES_PATH = join('curation', 'aliases.csv');
@@ -233,21 +236,46 @@ export async function checkCuration(sources: readonly SourceConfig[]): Promise<s
   });
   const bench = parseBenchmarkLinks(await readOptional(BENCHMARKS_PATH));
   problems.push(...bench.problems);
-  const metricIds = new Map<string, Set<string> | undefined>();
-  for (const column of bench.links.keys()) {
+  const metricsOf = new Map<string, Map<string, Metric> | undefined>();
+  /**
+   * A column's metric, 'unknown' when its source has no such metric, or undefined when the source
+   * has no metrics yet (not fetched, or a change that adds its first columns): nothing to check
+   * against. A source missing from sources.yaml is reported.
+   */
+  const metricFor = async (file: string, column: string): Promise<Metric | 'unknown' | undefined> => {
     const source = column.slice(0, column.indexOf(':'));
     if (!sourceSet.has(source)) {
-      problems.push(`${BENCHMARKS_PATH}: ${column}: no source "${source}" in sources.yaml`);
-      continue;
+      problems.push(`${file}: ${column}: no source "${source}" in sources.yaml`);
+      return undefined;
     }
-    if (!metricIds.has(source)) {
+    if (!metricsOf.has(source)) {
       const metrics = await readJson<Metric[]>(join(sourceDir(source), 'metrics.json'));
-      metricIds.set(source, metrics?.length ? new Set(metrics.map((m) => m.id)) : undefined);
+      metricsOf.set(source, metrics?.length ? new Map(metrics.map((m) => [m.id, m])) : undefined);
     }
-    // A source with no metrics yet (not fetched, or a change that adds its first columns) has
-    // nothing to check against.
-    const known = metricIds.get(source);
-    if (known && !known.has(column.slice(source.length + 1))) problems.push(`${BENCHMARKS_PATH}: ${column}: ${source} has no such metric`);
+    const known = metricsOf.get(source);
+    if (!known) return undefined;
+    const metric = known.get(column.slice(source.length + 1));
+    if (!metric) problems.push(`${file}: ${column}: ${source} has no such metric`);
+    return metric ?? 'unknown';
+  };
+  for (const column of bench.links.keys()) await metricFor(BENCHMARKS_PATH, column);
+
+  const summary = parseSummaryYaml(await readOptional(SUMMARY_PATH));
+  problems.push(...summary.problems);
+  for (const spec of summary.specs) {
+    for (const b of spec.areas.flatMap((a) => a.benchmarks)) {
+      const where = `${SUMMARY_PATH}: ${spec.id}: "${b.name}"`;
+      const units = new Set<string>();
+      for (const column of b.columns) {
+        if (!/^[a-z0-9][a-z0-9-]*:./.test(column)) continue;
+        const metric = await metricFor(SUMMARY_PATH, column);
+        if (!metric || metric === 'unknown') continue;
+        if (metric.direction !== 'higher') problems.push(`${where}: ${column} is lower-is-better; a summary score averages higher-is-better columns`);
+        else if (!SUMMARY_UNITS.has(metric.unit)) problems.push(`${where}: ${column} has unit "${metric.unit}"; a summary score averages percentages, fractions and Elo ratings`);
+        else units.add(metric.unit === 'elo' ? 'elo' : 'percent');
+      }
+      if (units.size > 1) problems.push(`${where}: mixes Elo ratings with percentages; one benchmark's columns must be on one scale`);
+    }
   }
   return problems;
 }
