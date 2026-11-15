@@ -4,3 +4,4 @@
 {"t":"2026-11-14T06:38:43Z","key":"mirrorcode|mistral-large-4-0_high","model":"mistral-large-4-0_high","metric":"mirrorcode","op":"change","from":"0.2777777777777778","to":"0.4"}
 {"t":"2026-11-14T06:38:43Z","key":"mirrorcode|claude-opus-4-7_max","model":"claude-opus-4-7_max","metric":"mirrorcode","op":"add","to":"0.43333333333333335"}
 {"t":"2026-11-14T06:38:43Z","key":"spireclimb|claude-fable-5-2_max","model":"claude-fable-5-2_max","metric":"spireclimb","op":"change","from":"0.19617117117117117","to":"0.1545045045045045"}
+{"t":"2026-11-15T06:45:46Z","key":"spireclimb|claude-fable-5-2_max","model":"claude-fable-5-2_max","metric":"spireclimb","op":"change","from":"0.1545045045045045","to":"0.15333333333333332"}
