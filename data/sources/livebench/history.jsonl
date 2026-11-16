@@ -1,0 +1,9 @@
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/long_agentic","op":"add","to":47.5,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/reasoning","op":"add","to":92.2,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/coding","op":"add","to":69.8,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/browser","op":"add","to":80.7,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/data_analysis","op":"add","to":83.4,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/research","op":"add","to":84.7,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/design","op":"add","to":79.1,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/overall","op":"add","to":73.261,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
+{"t":"2026-11-16T22:15:37Z","key":"v2/2026-11-06/qwen4-max","model":"qwen4-max","metric":"v2/2026-11-06/cost_per_task","op":"add","to":0.5169,"rev":"static/js/main.ccb4d798.js?v=1794867099"}
