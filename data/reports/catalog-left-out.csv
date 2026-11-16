@@ -38,6 +38,7 @@ models-dev,qwen-vl-max,Qwen-VL Max,Alibaba,2024-04-08,qwen-vl-max-2024-11-19 qwe
 models-dev,qwen3-8-max,Qwen3.8 Max,Alibaba,2026-08-03,qwen3-8-2-4t-a95b qwen3-8-max-0902 qwen3-8-max-prime
 models-dev,qwen3-8-max-preview,Qwen3.8 Max Preview,Alibaba,2026-07-19,qwen3-8-2-4t-a95b qwen3-8-max-0902 qwen3-8-max-prime
 models-dev,qwen3-max,Qwen3 Max,Alibaba,2025-09-23,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+models-dev,qwen4-max,Qwen4 Max,Alibaba,2026-11-16,qwen4-max-preview qwen-max-2024-09-19 qwen-max-2025-01-25
 models-dev,seed-2-1-pro,Seed 2.1 Pro,bytedance-seed,2026-06-23,seed-2-1-pro-preview seed-2-0-pro
 epoch-models,amazon-nova-lite,Amazon Nova Lite,Amazon,2024-12,
 epoch-models,amazon-nova-micro,Amazon Nova Micro,Amazon,2024-12,
@@ -59,7 +60,11 @@ epoch-models,deepseek-v3-mar-2025,DeepSeek-V3 (Mar 2025),DeepSeek,2025-03,deepse
 epoch-models,devstral-2-123b,Devstral 2 (123B),Mistral AI,2025-12,devstral-2
 epoch-models,devstral-2-24b,Devstral 2 (24B),Mistral AI,2025-12,devstral-2
 epoch-models,devstral-medium,Devstral Medium,Mistral AI,2025-06,devstral-medium-2507
-epoch-models,doubao-seed-2-0-lite-apr-2026,Doubao Seed 2.0 Lite (Apr 2026),ByteDance,2026-04,doubao-seed-2-0-lite dou-bao
+epoch-models,doubao-seed-2-0-lite,Doubao Seed 2.0 Lite,ByteDance,2026-02,doubao-seed-2-0-lite-260428 dou-bao
+epoch-models,doubao-seed-2-0-lite-apr-2026,Doubao Seed 2.0 Lite (Apr 2026),ByteDance,2026-04,doubao-seed-2-0-lite-260428 dou-bao
+epoch-models,doubao-seed-2-0-pro,Doubao-Seed-2.0 Pro,ByteDance,2026-02,doubao-seed-2-0-pro-260215 dou-bao doubao-seed-2-1-pro-260628
+epoch-models,doubao-seed-2-1-pro,Doubao Seed 2.1 Pro,ByteDance,2026-06,doubao-seed-2-1-pro-260628 dou-bao doubao-seed-2-0-pro-260215
+epoch-models,doubao-seed-2-1-turbo,Doubao Seed 2.1 Turbo,ByteDance,2026-06,doubao-seed-2-1-turbo-260628 dou-bao
 epoch-models,ensemble-awd-lstm-doc-fin-5-wt2,(ensemble): AWD-LSTM-DOC (fin) × 5 (WT2),NTT Communication Science Laboratories,2018-08,ensemble-awd-lstm-doc-fin-5-ptb
 epoch-models,ernie-4-5-vl-424b-a47b-4-5,ERNIE-4.5-VL-424B-A47B (文心大模型4.5),Baidu,2025-03,ernie-4-5-vl-424b-a47b
 epoch-models,gemini-1-0-pro,Gemini 1.0 Pro,Google DeepMind,2023-12,gemini-1-0-pro-001 gemini-1-0-pro-vision gemini-exp-1114

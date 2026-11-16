@@ -460,7 +460,6 @@ tools-plus-claude-3-7-sonnet-2025-02-24,Tools + Claude 3.7 Sonnet (2025-02-24),s
 trae,TRAE,swe-bench,1
 trae-plus-claude-sonnet-4-plus-opus-4-plus-sonnet-3-7-plus-gemini-2-5-pro,TRAE + Claude Sonnet 4 + Opus 4 + Sonnet 3.7 + Gemini 2.5 Pro,swe-bench,1
 trae-plus-doubao-seed-code,TRAE + Doubao-Seed-Code,swe-bench,1
-u2-flash,U2 Flash,arena,4
 ugaiforge,ugaiforge,swe-bench,1
 ui-tars-1-5-7b,ui-tars-1.5-7b,kagi,4
 universal-3-5-pro,universal-3-5-pro,vals,5

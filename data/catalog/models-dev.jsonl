@@ -501,6 +501,7 @@
 {"id":"qwen3-vl-30b-a3b-instruct","name":"Qwen3 VL 30B A3B Instruct","category":"llm","origin":"models-dev","provider":"Alibaba","released":"2025-10-04","open_weights":true,"license":"apache-2.0","context_k":262.144,"model_repo":"https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct"}
 {"id":"qwen3-vl-flash","name":"Qwen3 VL Flash (Alibaba Cloud)","category":"llm","origin":"models-dev","provider":"Alibaba","released":"2025-10-15","open_weights":false,"context_k":262.144}
 {"id":"qwen3-vl-plus","name":"Qwen3-VL Plus","category":"llm","origin":"models-dev","provider":"Alibaba","released":"2025-09-23","open_weights":false,"context_k":262.144}
+{"id":"qwen4-max","name":"Qwen4 Max","category":"llm","origin":"models-dev","provider":"Alibaba","released":"2026-11-16","open_weights":false,"context_k":1000}
 {"id":"qwq-32b","name":"QwQ 32B","category":"llm","origin":"models-dev","provider":"Alibaba","released":"2025-03-05","open_weights":true,"context_k":131.072,"model_repo":"https://huggingface.co/Qwen/QwQ-32B"}
 {"id":"qwq-plus","name":"QwQ Plus","category":"llm","origin":"models-dev","provider":"Alibaba","released":"2025-03-05","open_weights":false,"context_k":131.072}
 {"id":"reka-edge","name":"Reka Edge","category":"llm","origin":"models-dev","provider":"rekaai","released":"2026-03-11","open_weights":true,"context_k":16.384}

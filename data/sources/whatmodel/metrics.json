@@ -5671,6 +5671,18 @@
   ]
  },
  {
+  "id": "terminal-bench-4-1",
+  "label": "Terminal-Bench 4.1",
+  "direction": "higher",
+  "unit": "fraction",
+  "category": "llm",
+  "url": "https://github.com/harbor-framework/terminal-bench/releases/tag/v4.1.0",
+  "description": "Terminal-Bench version 4.1 (dataset terminal-bench/terminal-bench@4.1.0, released 2026-11-03): the same 66 tasks as 4.0 with verifier fixes, reproducibility improvements and hardening against reward hacking. Share of trials that succeed on the official 4-1-0 leaderboard, at least 5 trials per task; harness per note. Distinct from 4.0: the maintainers do not regrade 4.0 trials.",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
   "id": "terminal-bench-pre-2",
   "label": "Terminal-Bench (pre-2.0 release)",
   "direction": "higher",

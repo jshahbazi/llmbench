@@ -145,7 +145,6 @@ vals,openai/gpt-5.6-sol-keenable,gpt-5-6-sol-keenable,1,5,gpt-5-6-sol gpt-5
 vals,openai/gpt-live-transcribe,gpt-live-transcribe,1,5,
 vals,reson8/resonant-1,resonant-1,1,5,
 arena,Spark-X2.6,spark-x2-6,1,4,spark-x2-6-4b spark spark-x2-6-1-7b
-arena,U2 Flash,u2-flash,1,4,
 creative-writing-v3,AlexWortega/Qwen3.8-27B-antislop,qwen3-8-27b-antislop,1,4,qwen3-8-27b
 creative-writing-v3,Altworld/Hemmingway-1,hemmingway-1,1,4,
 creative-writing-v3,ToastyPigeon/Gemma-3-Starshine-12B,gemma-3-starshine-12b,1,4,
@@ -237,7 +236,7 @@ llm-chess,grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,1,4,grok-4-fast gr
 llm-chess,k2-think@iq4_xs,k2-think-iq4-xs,1,4,k2-think
 llm-chess,llama3.1-8b,llama-3-1-8b-unlisted,1,4,llama-3-1-8b llama-3-1-8b-base llama-3-1-8b-ultramedical
 llm-chess,meta.llama4-scout-17b-instruct-v1:0,meta-llama4-scout-17b-instruct,1,4,
-llm-chess,muse-ember-max,muse-ember-max,1,4,muse-ember-1-0
+llm-chess,muse-ember-max,muse-ember-max,1,4,muse-ember
 llm-chess,nemotron-3-nano@q3_k_l,nemotron-3-nano,1,4,nemotron-3-nano-4b nemotron-3-nano-30b-a3b nemotron-3-nano-omni-30b-a3b-reasoning
 llm-chess,non-deepseek-r1-t03_mini41-t10_mini41-t03,non-deepseek-r1-t03-mini41-t10-mini41-t03,1,4,
 llm-chess,non-gemini-25pro-t03_mini41-t00_mini41-t03,non-gemini-25pro-t03-mini41-t00-mini41-t03,1,4,
