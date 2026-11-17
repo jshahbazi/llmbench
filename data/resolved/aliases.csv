@@ -4384,7 +4384,7 @@ vals,openai/o3-mini-2025-01-31,o3-mini,variant,snapshot:2025-01-31
 vals,openai/o4-mini-2025-04-16,o4-mini,variant,snapshot:2025-04-16
 vals,poolside/laguna-m.1,laguna-m-1,exact,
 vals,poolside/laguna-xs.2,laguna-xs-2,exact,
-vals,reflection/Beam-1.0,beam-1-0,unlisted,
+vals,reflection/Beam-1.0,beam-1-0,exact,
 vals,reson8/resonant-1,resonant-1,unlisted,
 vals,stepfun/step-5-preview,step-5-preview,exact,
 vals,tencent/hy4,hy4,exact,

@@ -281,7 +281,7 @@
  },
  {
   "id": "claw-eval",
-  "label": "Claw-eval",
+  "label": "Claw-Eval",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1030,7 +1030,7 @@
  },
  {
   "id": "mmmu-pro",
-  "label": "MMMU Pro",
+  "label": "MMMU-Pro",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1464,7 +1464,7 @@
  },
  {
   "id": "swe-marathon",
-  "label": "SWE-Marathon",
+  "label": "SWE Marathon",
   "direction": "higher",
   "unit": "percent",
   "headline": true

@@ -237,6 +237,7 @@
 {"id":"hy3","name":"Hy3","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-07-06","open_weights":true,"context_k":256,"model_repo":"https://huggingface.co/tencent/Hy3"}
 {"id":"hy3-preview","name":"Hy3 preview","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-04-20","open_weights":true,"context_k":256,"model_repo":"https://huggingface.co/tencent/Hy3-preview"}
 {"id":"hy4","name":"Hy4","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-11-04","open_weights":false,"context_k":1048.576}
+{"id":"hy4-flash","name":"Hy4 flash","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-11-16","open_weights":false,"context_k":1048.576}
 {"id":"hy4-preview","name":"Hy4 preview","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-08-28","open_weights":true,"context_k":1024}
 {"id":"inkling","name":"Inkling","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-07-15","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling"}
 {"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-11-05","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Small"}
@@ -431,6 +432,7 @@
 {"id":"palmyra-x5","name":"Palmyra X5","category":"llm","origin":"models-dev","provider":"writer","released":"2025-04-28","open_weights":false,"context_k":1000}
 {"id":"pareto","name":"Pareto","category":"llm","origin":"models-dev","provider":"Pareto by Unbiased","released":"2026-09-17","open_weights":false,"context_k":262.144}
 {"id":"pareto-26-10","name":"Pareto 26.10","category":"llm","origin":"models-dev","provider":"Pareto by Unbiased","released":"2026-10-15","open_weights":false,"context_k":1048.576}
+{"id":"particle-1","name":"Particle-1","category":"llm","origin":"models-dev","provider":"particle-ai","released":"2026-10-28","open_weights":false,"context_k":1048.576}
 {"id":"perceptron-mk1","name":"Perceptron Mk1","category":"llm","origin":"models-dev","provider":"perceptron","released":"2026-05-12","open_weights":false,"context_k":32.768}
 {"id":"perceptron-mk1-5","name":"Perceptron Mk1.5","category":"llm","origin":"models-dev","provider":"perceptron","released":"2026-09-25","open_weights":false,"context_k":36.864}
 {"id":"phi-4-mini","name":"Phi-4-mini","category":"llm","origin":"models-dev","provider":"microsoft","released":"2025-02-26","open_weights":true,"context_k":128}

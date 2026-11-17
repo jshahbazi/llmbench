@@ -18,7 +18,6 @@ augment-agent-v0,Augment Agent v0,swe-bench,1
 augment-agent-v1,Augment Agent v1,swe-bench,1
 aurora-alpha,aurora-alpha,creative-writing-longform,3
 azerogpt,azerogpt,livebench mmlu-pro,65
-beam-1-0,Beam-1.0,vals,177
 bert-nebulon-alpha,bert-nebulon-alpha,creative-writing-longform,3
 blackbox-ai-agent,Blackbox AI Agent,swe-bench,2
 bracket-sh,Bracket.sh,swe-bench,1

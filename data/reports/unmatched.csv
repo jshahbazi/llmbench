@@ -1,6 +1,5 @@
 source,raw_name,unlisted_as,rows,scores,suggestions
 vals,alibaba/qwen3.8-max-internal,qwen3-8-max-internal,14,191,qwen3-8-2-4t-a95b qwen3-8-max-0902
-vals,reflection/Beam-1.0,beam-1-0,17,177,beam-1-0-501b-a23b
 vals,mistralai/mistral-large-4-oss,mistral-large-4-oss,10,157,mistral-large-4 mistral-large-4-2610 mistral-large-2402
 vals,fireworks/nemotron-lightning-3p5-30b-a3b,nemotron-lightning-3p5-30b-a3b,14,156,
 vals,ant/ling-3.0-flash-af-rc3,ling-3-0-flash-af-rc3,12,144,ling-3-0-flash
