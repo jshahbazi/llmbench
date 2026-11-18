@@ -123,6 +123,7 @@
 {"id":"blueocean-llm-2-0","name":"BlueOcean LLM 2.0 (萤石蓝海)","category":"llm","origin":"epoch-models","provider":"Hangzhou EZVIZ Software Co.","released":"2025-06","open_weights":false}
 {"id":"bluumi","name":"BLUUMI","category":"llm","origin":"epoch-models","provider":"University of Turku","released":"2023-11","open_weights":true,"params_b":176}
 {"id":"boba","name":"Boba","category":"llm","origin":"epoch-models","provider":"Humans& (Humans and)","released":"2026-10","open_weights":false}
+{"id":"bonsai-2-9b","name":"Bonsai 2 9B","category":"llm","origin":"epoch-models","provider":"PrismML","released":"2026-10","open_weights":true,"params_b":9.41}
 {"id":"bpe","name":"BPE","category":"llm","origin":"epoch-models","provider":"University of Edinburgh","released":"2015-08"}
 {"id":"btlm-3b","name":"BTLM-3B","category":"llm","origin":"epoch-models","provider":"Cerebras Systems","released":"2023-09","open_weights":true,"params_b":2.6}
 {"id":"byt5-xxl","name":"ByT5-XXL","category":"llm","origin":"epoch-models","provider":"Google","released":"2021-05","open_weights":true,"params_b":12.9}
@@ -463,7 +464,7 @@
 {"id":"gemma-4-26b-a4b","name":"Gemma 4 26B A4B","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2026-04","open_weights":true,"params_b":25.2}
 {"id":"gemma-4-31b-it","name":"Gemma 4 31B IT","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2026-04","open_weights":true,"params_b":31}
 {"id":"gemma-4-e2b","name":"Gemma 4 E2B","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2026-07","open_weights":true,"params_b":1.95}
-{"id":"gemma-4-e4b","name":"Gemma 4 E4B","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2026-07","open_weights":true,"params_b":4.02}
+{"id":"gemma-4-e4b","name":"Gemma 4 E4B","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2026-07","open_weights":true,"params_b":8}
 {"id":"gemma-7b","name":"Gemma 7B","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2024-02","open_weights":true,"params_b":8.54}
 {"id":"gemma-sea-lion-v4-27b-it","name":"Gemma-SEA-LION-v4-27B-IT","category":"llm","origin":"epoch-models","provider":"AI Singapore","released":"2025-08","open_weights":true,"params_b":27}
 {"id":"gemma2-9b-cpt-sahabat-ai","name":"Gemma2 9B CPT Sahabat-AI","category":"llm","origin":"epoch-models","provider":"Indosat","released":"2024-11","open_weights":true,"params_b":9}
@@ -573,6 +574,8 @@
 {"id":"gpt-5-pro","name":"GPT-5 Pro","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2025-10","open_weights":false}
 {"id":"gpt-6-1-sol","name":"GPT-6.1 Sol","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-09","open_weights":false}
 {"id":"gpt-6-1-terra","name":"GPT-6.1 Terra","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-10","open_weights":false}
+{"id":"gpt-6-2-astra","name":"GPT-6.2 Astra","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-11","open_weights":false}
+{"id":"gpt-6-2-sol","name":"GPT-6.2 Sol","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-11","open_weights":false}
 {"id":"gpt-6-astra","name":"GPT-6 Astra","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-09","open_weights":false}
 {"id":"gpt-6-luna","name":"GPT-6 Luna","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-09","open_weights":false}
 {"id":"gpt-6-luna-decisions","name":"GPT-6 Luna Decisions","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2026-09","open_weights":false}
@@ -681,6 +684,7 @@
 {"id":"inflection-2","name":"Inflection-2","category":"llm","origin":"epoch-models","provider":"Inflection AI","released":"2023-11","open_weights":false}
 {"id":"inflection-2-5","name":"Inflection-2.5","category":"llm","origin":"epoch-models","provider":"Inflection AI","released":"2024-03","open_weights":false}
 {"id":"inkling","name":"Inkling","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-07","open_weights":true,"params_b":975}
+{"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-11","open_weights":true,"params_b":594}
 {"id":"inkling-small","name":"Inkling-Small","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-07","open_weights":true,"params_b":276}
 {"id":"instructblip","name":"InstructBLIP","category":"llm","origin":"epoch-models","provider":"Salesforce Research","released":"2023-05","open_weights":true,"params_b":13}
 {"id":"instructgpt-1-3b","name":"InstructGPT 1.3B","category":"llm","origin":"epoch-models","provider":"OpenAI","released":"2022-01","open_weights":false,"params_b":1.3}
@@ -850,7 +854,7 @@
 {"id":"m6-10b","name":"M6-10B","category":"llm","origin":"epoch-models","provider":"Tsinghua University","released":"2021-03","params_b":10}
 {"id":"madlad-400-10b","name":"MADLAD-400 10B","category":"llm","origin":"epoch-models","provider":"Google DeepMind","released":"2023-09","open_weights":true,"params_b":10.7}
 {"id":"magic-llm","name":"Magic LLM (魔法大模型)","category":"llm","origin":"epoch-models","provider":"Shenzhen Honor Software Technology","released":"2024-01","params_b":7}
-{"id":"magistral-medium-1-1","name":"Magistral Medium 1.1","category":"llm","origin":"epoch-models","provider":"Mistral AI","released":"2025-06","open_weights":false}
+{"id":"magistral-medium-1-1","name":"Magistral Medium 1.1","category":"llm","origin":"epoch-models","provider":"Mistral AI","released":"2025-07","open_weights":false}
 {"id":"magistral-medium-1-2","name":"Magistral Medium 1.2","category":"llm","origin":"epoch-models","provider":"Mistral AI","released":"2025-09","open_weights":false}
 {"id":"magistral-small-1-0","name":"Magistral Small 1.0","category":"llm","origin":"epoch-models","provider":"Mistral AI","released":"2025-06","open_weights":true,"params_b":24}
 {"id":"magistral-small-1-1","name":"Magistral Small 1.1","category":"llm","origin":"epoch-models","provider":"Mistral AI","released":"2025-07","open_weights":true,"params_b":24}
@@ -993,6 +997,7 @@
 {"id":"multi-token-prediction-7b","name":"Multi-Token Prediction 7B","category":"llm","origin":"epoch-models","provider":"Facebook AI Research","released":"2024-04","open_weights":true,"params_b":6.7}
 {"id":"multilingual-e5-large","name":"Multilingual-E5-large","category":"llm","origin":"epoch-models","provider":"Microsoft","released":"2023-06","open_weights":true,"params_b":0.56}
 {"id":"multiverse-70b","name":"MultiVerse 70B","category":"llm","origin":"epoch-models","provider":"MTS","released":"2024-03","open_weights":true,"params_b":72}
+{"id":"muse-ember","name":"Muse Ember","category":"llm","origin":"epoch-models","provider":"Meta AI","released":"2026-11","open_weights":false}
 {"id":"muse-glimmer","name":"Muse Glimmer","category":"llm","origin":"epoch-models","provider":"Meta AI","released":"2026-08","open_weights":true,"params_b":30}
 {"id":"muse-spark","name":"Muse Spark","category":"llm","origin":"epoch-models","provider":"Meta AI","released":"2026-04","open_weights":false}
 {"id":"muse-spark-1-1","name":"Muse Spark 1.1","category":"llm","origin":"epoch-models","provider":"Meta AI","released":"2026-07","open_weights":false}
@@ -1012,6 +1017,7 @@
 {"id":"nec-llm-13b","name":"NEC LLM 13B","category":"llm","origin":"epoch-models","provider":"NEC Laboratories","released":"2023-07","params_b":13}
 {"id":"nekomata-14b","name":"nekomata-14b","category":"llm","origin":"epoch-models","provider":"rinna","released":"2023-12","open_weights":true,"params_b":14.2}
 {"id":"nemo-megatron-gpt-20b","name":"NeMO Megatron GPT 20B","category":"llm","origin":"epoch-models","provider":"Nvidia","released":"2022-09","open_weights":true,"params_b":20}
+{"id":"nemotron-3-5-bolt-e4b","name":"Nemotron 3.5 Bolt E4B","category":"llm","origin":"epoch-models","provider":"Nvidia","released":"2026-09","params_b":8}
 {"id":"nemotron-3-5-lightning","name":"Nemotron 3.5 Lightning","category":"llm","origin":"epoch-models","provider":"Nvidia","released":"2026-08","open_weights":true,"params_b":30}
 {"id":"nemotron-3-8b","name":"Nemotron-3-8B","category":"llm","origin":"epoch-models","provider":"Nvidia","released":"2023-11","open_weights":true,"params_b":8}
 {"id":"nemotron-3-nano-30b-a3b","name":"Nemotron 3-Nano-30B-A3B","category":"llm","origin":"epoch-models","provider":"Nvidia","released":"2025-12","open_weights":true,"params_b":31.6}
@@ -1316,6 +1322,7 @@
 {"id":"ring-flash-linear-2-0","name":"Ring-flash-linear-2.0","category":"llm","origin":"epoch-models","provider":"Ant Group","released":"2025-10","open_weights":true,"params_b":104.2}
 {"id":"ring-mini-linear-2-0","name":"Ring-mini-linear-2.0","category":"llm","origin":"epoch-models","provider":"Ant Group","released":"2025-10","open_weights":true,"params_b":16.4}
 {"id":"rio","name":"RIO","category":"llm","origin":"epoch-models","provider":"West Lake Xinchen / Xinchen AI / 西湖心辰（杭州）科技有限公司","released":"2023-03","params_b":100}
+{"id":"ripple-65b-preview","name":"Ripple-65B Preview","category":"llm","origin":"epoch-models","provider":"Ricursive Intelligence","released":"2026-11","open_weights":true,"params_b":65}
 {"id":"rl-mapping-instructions-games","name":"RL mapping instructions (games)","category":"llm","origin":"epoch-models","provider":"Massachusetts Institute of Technology (MIT)","released":"2009-08","params_b":0}
 {"id":"rl-mapping-instructions-troubleshooting","name":"RL mapping instructions (troubleshooting)","category":"llm","origin":"epoch-models","provider":"Massachusetts Institute of Technology (MIT)","released":"2009-08","params_b":0}
 {"id":"rnn-for-1b-words","name":"RNN for 1B words","category":"llm","origin":"epoch-models","provider":"Google","released":"2013-12","params_b":20}
@@ -1439,6 +1446,7 @@
 {"id":"swe-1-6","name":"SWE-1.6","category":"llm","origin":"epoch-models","provider":"Cognition","released":"2026-04","open_weights":false}
 {"id":"swe-1-7","name":"SWE-1.7","category":"llm","origin":"epoch-models","provider":"Cognition","released":"2026-07"}
 {"id":"swe-2","name":"SWE-2","category":"llm","origin":"epoch-models","provider":"Cognition","released":"2026-09","open_weights":false,"params_b":2800}
+{"id":"swe-2-flash","name":"SWE-2 Flash","category":"llm","origin":"epoch-models","provider":"Cognition","released":"2026-11","open_weights":false,"params_b":276}
 {"id":"switch","name":"Switch","category":"llm","origin":"epoch-models","provider":"Google","released":"2021-01","open_weights":true,"params_b":1571}
 {"id":"t-lite","name":"T-Lite","category":"llm","origin":"epoch-models","provider":"T-Bank","released":"2024-12","open_weights":true,"params_b":7}
 {"id":"t-pro","name":"T-Pro","category":"llm","origin":"epoch-models","provider":"T-Bank","released":"2024-12","open_weights":true,"params_b":32}

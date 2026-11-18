@@ -783,8 +783,8 @@ cais,gpt-5.6-sol-high,gpt-5-6-sol,exact,
 cais,gpt-5.6-terra-high,gpt-5-6-terra,exact,
 cais,gpt-6-astra-high,gpt-6-astra,exact,
 cais,gpt-6.1-sol-high,gpt-6-1-sol,exact,
-cais,gpt-6.2-astra-high,gpt-6-2-astra,unlisted,effort:high
-cais,gpt-6.2-sol-high,gpt-6-2-sol,unlisted,effort:high
+cais,gpt-6.2-astra-high,gpt-6-2-astra,exact,
+cais,gpt-6.2-sol-high,gpt-6-2-sol,exact,
 cais,grok-4,grok-4-0709,variant,
 cais,grok-4-2,grok-4-20,alias,
 cais,grok-4-3,grok-4-3,exact,
@@ -1332,6 +1332,7 @@ epoch,GPT-6 Luna,gpt-6-luna,exact,
 epoch,GPT-6 Sol,gpt-6-sol,exact,
 epoch,GPT-6.1 Sol,gpt-6-1-sol,exact,
 epoch,GPT-6.1 Terra,gpt-6-1-terra,exact,
+epoch,GPT-6.2 Astra,gpt-6-2-astra,exact,
 epoch,Gemini 1.5 Flash (May 2024),gemini-1-5-flash-may-2024,unlisted,snapshot:May 2024
 epoch,Gemini 1.5 Flash (Sep 2024),gemini-1-5-flash-sep-2024,unlisted,snapshot:Sep 2024
 epoch,Gemini 1.5 Pro (May 2024),gemini-1-5-pro-may-2024,unlisted,snapshot:May 2024
@@ -1648,6 +1649,7 @@ epoch,gemini-3.7-flash_high,gemini-3-7-flash,variant,effort:high
 epoch,gemini-3.8-flash_high,gemini-3-8-flash,variant,effort:high
 epoch,gemini-4-argon_high,gemini-4-argon,variant,effort:high
 epoch,gemini-4-carbon_high,gemini-4-carbon,variant,effort:high
+epoch,gemini-4-hydrogen_xhigh,gemini-4-hydrogen,variant,effort:xhigh
 epoch,gemma-2-27b-it,gemma-2-27b,exact,
 epoch,gemma-2-9b-it,gemma-2-9b,exact,
 epoch,gemma-3-12b-it,gemma-3-12b,exact,
@@ -1759,6 +1761,7 @@ epoch,gpt-6-luna_max,gpt-6-luna,variant,effort:max
 epoch,gpt-6-sol_max,gpt-6-sol,variant,effort:max
 epoch,gpt-6.1-sol_max,gpt-6-1-sol,variant,effort:max
 epoch,gpt-6.1-terra_max,gpt-6-1-terra,variant,effort:max
+epoch,gpt-6.2-astra_max,gpt-6-2-astra,variant,effort:max
 epoch,gpt-oss-120b,gpt-oss-120b,exact,
 epoch,gpt-oss-120b_high,gpt-oss-120b,variant,effort:high
 epoch,gpt-oss-120b_medium,gpt-oss-120b,variant,effort:medium
@@ -2100,7 +2103,7 @@ kagi,gpt-5-codex,gpt-5-codex,exact,
 kagi,gpt-5-mini,gpt-5-mini,exact,
 kagi,gpt-5-nano,gpt-5-nano,exact,
 kagi,gpt-5-pro,gpt-5-pro,exact,
-kagi,gpt-6-2-sol,gpt-6-2-sol,unlisted,
+kagi,gpt-6-2-sol,gpt-6-2-sol,exact,
 kagi,gpt-oss-120b,gpt-oss-120b,exact,
 kagi,gpt-oss-20b,gpt-oss-20b,exact,
 kagi,grok-3,grok-3-beta,variant,
@@ -2593,8 +2596,8 @@ livebench,gpt-6.1-sol,gpt-6-1-sol,exact,
 livebench,gpt-6.1-sol-max,gpt-6-1-sol,variant,effort:max
 livebench,gpt-6.1-sol-xhigh,gpt-6-1-sol,variant,effort:xhigh
 livebench,gpt-6.1-terra,gpt-6-1-terra,exact,
-livebench,gpt-6.2-astra,gpt-6-2-astra,unlisted,
-livebench,gpt-6.2-sol,gpt-6-2-sol,unlisted,
+livebench,gpt-6.2-astra,gpt-6-2-astra,exact,
+livebench,gpt-6.2-sol,gpt-6-2-sol,exact,
 livebench,gpt-oss-120b,gpt-oss-120b,link,
 livebench,grok-2,grok-2,unlisted,
 livebench,grok-2-1212,grok-2-1212,exact,
@@ -3557,8 +3560,8 @@ nyt-connections,GPT-6 Sol (high reasoning),gpt-6-sol,variant,effort:high
 nyt-connections,GPT-6.1 Sol (high reasoning),gpt-6-1-sol,variant,effort:high
 nyt-connections,GPT-6.1 Sol (max reasoning),gpt-6-1-sol,variant,effort:max
 nyt-connections,GPT-6.1 Terra (high reasoning),gpt-6-1-terra,variant,effort:high
-nyt-connections,GPT-6.2 Astra (high reasoning),gpt-6-2-astra,unlisted,effort:high
-nyt-connections,GPT-6.2 Sol (high reasoning),gpt-6-2-sol,unlisted,effort:high
+nyt-connections,GPT-6.2 Astra (high reasoning),gpt-6-2-astra,variant,effort:high
+nyt-connections,GPT-6.2 Sol (high reasoning),gpt-6-2-sol,variant,effort:high
 nyt-connections,Gemini 3 Flash Preview,gemini-3-flash-preview,exact,
 nyt-connections,Gemini 3 Pro Preview,gemini-3-pro-preview,exact,
 nyt-connections,Gemini 3.1 Flash-Lite Preview,gemini-3-1-flash-lite,variant,stage:preview
@@ -4042,8 +4045,8 @@ terminal-bench,GPT-6 Luna,gpt-6-luna,exact,
 terminal-bench,GPT-6 Sol,gpt-6-sol,exact,
 terminal-bench,GPT-6.1 Sol,gpt-6-1-sol,exact,
 terminal-bench,GPT-6.1 Terra,gpt-6-1-terra,exact,
-terminal-bench,GPT-6.2 Astra,gpt-6-2-astra,unlisted,
-terminal-bench,GPT-6.2 Sol,gpt-6-2-sol,unlisted,
+terminal-bench,GPT-6.2 Astra,gpt-6-2-astra,exact,
+terminal-bench,GPT-6.2 Sol,gpt-6-2-sol,exact,
 terminal-bench,Gemini 3 Pro,gemini-3-pro-preview,variant,
 terminal-bench,Gemini 3.1 Pro,gemini-3-1-pro,exact,
 terminal-bench,Gemini 3.7 Flash,gemini-3-7-flash,exact,
@@ -4393,9 +4396,9 @@ vals,openai/gpt-6-luna,gpt-6-luna,exact,
 vals,openai/gpt-6-sol,gpt-6-sol,exact,
 vals,openai/gpt-6.1-sol,gpt-6-1-sol,exact,
 vals,openai/gpt-6.1-terra,gpt-6-1-terra,exact,
-vals,openai/gpt-6.2-astra,gpt-6-2-astra,unlisted,
+vals,openai/gpt-6.2-astra,gpt-6-2-astra,exact,
 vals,openai/gpt-6.2-astra-law,gpt-6-2-astra-law,unlisted,
-vals,openai/gpt-6.2-sol,gpt-6-2-sol,unlisted,
+vals,openai/gpt-6.2-sol,gpt-6-2-sol,exact,
 vals,openai/gpt-daybreak-blue,gpt-daybreak-blue,unlisted,
 vals,openai/gpt-live-transcribe,gpt-live-transcribe,unlisted,
 vals,openai/o1-2024-12-17,o1-2024-12-17,exact,

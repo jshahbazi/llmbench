@@ -203,6 +203,8 @@
 {"id":"gpt-5-pro","name":"GPT-5 Pro","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2025-10-06","open_weights":false,"context_k":400}
 {"id":"gpt-6-1-sol","name":"GPT-6.1 Sol","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-29","open_weights":false,"context_k":1050}
 {"id":"gpt-6-1-terra","name":"GPT-6.1 Terra","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-10-26","open_weights":false,"context_k":1050}
+{"id":"gpt-6-2-astra","name":"GPT-6.2 Astra","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-11-17","open_weights":false,"context_k":1050}
+{"id":"gpt-6-2-sol","name":"GPT-6.2 Sol","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-11-17","open_weights":false,"context_k":1050}
 {"id":"gpt-6-astra","name":"GPT-6 Astra","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-04","open_weights":false,"context_k":1050}
 {"id":"gpt-6-astra-fast","name":"GPT-6 Astra (Fast)","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-09-04","open_weights":false,"context_k":1050}
 {"id":"gpt-6-cyber","name":"GPT-6 Cyber","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2026-11-05","open_weights":false,"context_k":1050}

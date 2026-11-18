@@ -281,7 +281,7 @@
  },
  {
   "id": "claw-eval",
-  "label": "Claw-Eval",
+  "label": "Claw-eval",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1030,7 +1030,7 @@
  },
  {
   "id": "mmmu-pro",
-  "label": "MMMU-Pro",
+  "label": "MMMU Pro",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1513,7 +1513,7 @@
  },
  {
   "id": "terminal-bench-science/v0.1",
-  "label": "Terminal-Bench-Science 0.1",
+  "label": "Terminal-Bench Science 0.1",
   "direction": "higher",
   "unit": "percent",
   "headline": true

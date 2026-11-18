@@ -202,9 +202,7 @@ gpt-5-6-sol-pro,GPT-5.6 Sol Pro,simplebench,1
 gpt-5-6-terra-medium,gpt-5.6-terra-medium,llm-chess,4
 gpt-5-chat-latest-2025-08-07,gpt-5-chat-latest (2025-08-07),eqbench3 creative-writing-longform,5
 gpt-5-high-agent,GPT-5 (High) Agent,matharena,2
-gpt-6-2-astra,GPT-6.2 Astra,terminal-bench livebench cais vals nyt-connections,197
 gpt-6-2-astra-law,gpt-6.2-astra-law,vals,20
-gpt-6-2-sol,GPT-6.2 Sol,terminal-bench livebench cais vals nyt-connections kagi,201
 gpt-6-astra-pro,GPT-6 Astra Pro,simplebench,1
 gpt-6-luna-max,gpt-6-luna-max,llm-chess,4
 gpt-daybreak-blue,gpt-daybreak-blue,vals,10

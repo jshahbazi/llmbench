@@ -13,7 +13,7 @@ models-dev,gpt-4o-mini,GPT-4o mini,OpenAI,2024-07-18,gpt-4o-mini-2024-07-18 gpt-
 models-dev,gpt-5-2-chat-latest,GPT-5.2 Chat,OpenAI,2025-12-11,gpt-5-2-chat-latest-20260210 gpt-5-2 gpt-5
 models-dev,gpt-5-3-chat-latest,GPT-5.3 Chat (latest),OpenAI,2026-03-03,gpt-5-3-chat-latest-20261002 gpt-5 gpt-5-1-chat-latest
 models-dev,gpt-5-chat-latest,GPT-5 Chat (latest),OpenAI,2025-08-07,gpt-5-chat-20261002 gpt-5 gpt-5-1-chat-latest
-models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra
+models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra gpt-6-2-astra
 models-dev,grok-4-20-0309-non-reasoning,Grok 4.20 (Non-Reasoning),xAI,2026-03-09,grok-4-20 grok-4-0709 grok-4-20-multi-agent-0309
 models-dev,grok-4-fast-non-reasoning,Grok-4-Fast-Non-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
 models-dev,grok-4-fast-reasoning,Grok-4-Fast-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
@@ -116,7 +116,7 @@ epoch-models,k-exaone,K-EXAONE,LG AI Research,2025-12,k-exaone-236b-a23b k-exaon
 epoch-models,ling-lite-1-5-bailing,"Ling-lite-1.5 (""Bailing"")",Ant Group,2025-03,ling-lite-1-5
 epoch-models,llama-7b-protein-oriented-instruction-tuned,LLaMA-7B (protein-oriented instruction-tuned),Zhejiang University (ZJU),2023-10,llama-7b allam-7b llama-13b
 epoch-models,lstm-2018,LSTM (2018),Intel Labs,2018-03,lstm lstm-lm lstm-with-forget-gates
-epoch-models,magistral-medium-1-1,Magistral Medium 1.1,Mistral AI,2025-06,magistral-medium-2507 magistral-medium-2506 magistral-medium-2509
+epoch-models,magistral-medium-1-1,Magistral Medium 1.1,Mistral AI,2025-07,magistral-medium-2507 magistral-medium-2506 magistral-medium-2509
 epoch-models,magistral-medium-1-2,Magistral Medium 1.2,Mistral AI,2025-09,magistral-medium-2509 magistral-medium-2506 magistral-medium-2507
 epoch-models,magistral-small-1-0,Magistral Small 1.0,Mistral AI,2025-06,magistral-small-2506 magistral-small-2507 magistral-small-2509
 epoch-models,magistral-small-1-1,Magistral Small 1.1,Mistral AI,2025-07,magistral-small-2507 magistral-small-2506 magistral-small-2509
