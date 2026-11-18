@@ -12,3 +12,13 @@
 {"t":"2026-11-14T18:14:20Z","key":"4.1/a3b41a3f-e450-4c47-8625-653808b4ca3a","model":"Muse Wonder","metric":"4.1/cost_per_trial","op":"add","to":7.4312,"rev":"2026-11-14T06:10:26.015148+00:00"}
 {"t":"2026-11-16T22:15:37Z","key":"4.1/ec8b091e-87b3-4ae4-8dc4-03576978579a","model":"Hy4 Preview","metric":"4.1/accuracy","op":"add","to":19.09,"rev":"2026-11-16T22:04:48.128572+00:00"}
 {"t":"2026-11-16T22:15:37Z","key":"4.1/ec8b091e-87b3-4ae4-8dc4-03576978579a","model":"Hy4 Preview","metric":"4.1/cost_per_trial","op":"add","to":1.9942,"rev":"2026-11-16T22:04:48.128572+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/9ab09ca7-525a-4724-8d34-ba3510f13591","model":"Copilot Fusion","metric":"4.1/accuracy","op":"add","to":71.21,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/9ab09ca7-525a-4724-8d34-ba3510f13591","model":"Copilot Fusion","metric":"4.1/cost_per_trial","op":"add","to":6.0222,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/2ee86a5a-01da-47d9-8d54-4e2a6829915a","model":"GPT-6.2 Astra","metric":"4.1/accuracy","op":"add","to":62.12,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/2ee86a5a-01da-47d9-8d54-4e2a6829915a","model":"GPT-6.2 Astra","metric":"4.1/cost_per_trial","op":"add","to":4.2701,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/ecdbb97b-0d45-46b9-846c-59abf8d902a5","model":"GPT-6.2 Sol","metric":"4.1/accuracy","op":"add","to":61.52,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/ecdbb97b-0d45-46b9-846c-59abf8d902a5","model":"GPT-6.2 Sol","metric":"4.1/cost_per_trial","op":"add","to":1.0581,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/b5ad018e-a9df-4306-8a01-3ea91b3ef5dd","model":"Ember-1","metric":"4.1/accuracy","op":"add","to":21.82,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/b5ad018e-a9df-4306-8a01-3ea91b3ef5dd","model":"Ember-1","metric":"4.1/cost_per_trial","op":"add","to":14.2985,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/ac317001-3cc5-4105-90b0-0437b3893ce1","model":"Gemini 3.1 Pro","metric":"4.1/accuracy","op":"add","to":2.73,"rev":"2026-11-18T02:01:04.392897+00:00"}
+{"t":"2026-11-18T07:39:49Z","key":"4.1/ac317001-3cc5-4105-90b0-0437b3893ce1","model":"Gemini 3.1 Pro","metric":"4.1/cost_per_trial","op":"add","to":11.0641,"rev":"2026-11-18T02:01:04.392897+00:00"}

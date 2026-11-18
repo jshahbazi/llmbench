@@ -2,6 +2,7 @@
 {"key":"Baidu Ernie 5.0","model":"Baidu Ernie 5.0","scores":{"Score %":"10.3"},"extra":{"#Puzzles":"940"}}
 {"key":"Baidu Ernie 5.1","model":"Baidu Ernie 5.1","scores":{"Score %":"23.4"},"extra":{"#Puzzles":"940"}}
 {"key":"ByteDance Seed2.0 Pro","model":"ByteDance Seed2.0 Pro","scores":{"Score %":"28.4"},"extra":{"#Puzzles":"940"}}
+{"key":"ByteDance Seed2.1 Pro","model":"ByteDance Seed2.1 Pro","scores":{"Score %":"77.5"},"extra":{"#Puzzles":"940"}}
 {"key":"Claude 4.5 Haiku","model":"Claude 4.5 Haiku","scores":{"Score %":"14.3"},"extra":{"#Puzzles":"940"}}
 {"key":"Claude Fable 5 (high reasoning)","model":"Claude Fable 5 (high reasoning)","scores":{"Score %":"92.7"},"extra":{"#Puzzles":"940"}}
 {"key":"Claude Fable 5.1 (high reasoning)","model":"Claude Fable 5.1 (high reasoning)","scores":{"Score %":"90.0"},"extra":{"#Puzzles":"940"}}
@@ -66,6 +67,8 @@
 {"key":"GPT-6.1 Sol (high reasoning)","model":"GPT-6.1 Sol (high reasoning)","scores":{"Score %":"95.5"},"extra":{"#Puzzles":"940"}}
 {"key":"GPT-6.1 Sol (max reasoning)","model":"GPT-6.1 Sol (max reasoning)","scores":{"Score %":"97.8"},"extra":{"#Puzzles":"940"}}
 {"key":"GPT-6.1 Terra (high reasoning)","model":"GPT-6.1 Terra (high reasoning)","scores":{"Score %":"86.8"},"extra":{"#Puzzles":"940"}}
+{"key":"GPT-6.2 Astra (high reasoning)","model":"GPT-6.2 Astra (high reasoning)","scores":{"Score %":"98.2"},"extra":{"#Puzzles":"940"}}
+{"key":"GPT-6.2 Sol (high reasoning)","model":"GPT-6.2 Sol (high reasoning)","scores":{"Score %":"94.1"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemini 3 Flash Preview","model":"Gemini 3 Flash Preview","scores":{"Score %":"83.1"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemini 3 Pro Preview","model":"Gemini 3 Pro Preview","scores":{"Score %":"94.4"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemini 3.1 Flash-Lite Preview","model":"Gemini 3.1 Flash-Lite Preview","scores":{"Score %":"8.2"},"extra":{"#Puzzles":"940"}}

@@ -1,0 +1,8 @@
+{"t":"2026-11-18T07:39:49Z","key":"gpt-6-2-sol|kagi (ult)","model":"gpt-6-2-sol","metric":"%accuracy","op":"add","to":"67.0","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-6-2-sol|kagi (ult)","model":"gpt-6-2-sol","metric":"Cost($)","op":"add","to":"2.7","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-6-2-sol|kagi (ult)","model":"gpt-6-2-sol","metric":"time/task","op":"add","to":"3.4","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-6-2-sol|kagi (ult)","model":"gpt-6-2-sol","metric":"TPS","op":"add","to":"10.4","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-5-6-sol|kagi (ult)","model":"gpt-5-6-sol","metric":"%accuracy","op":"remove","from":"67.0","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-5-6-sol|kagi (ult)","model":"gpt-5-6-sol","metric":"Cost($)","op":"remove","from":"2.7","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-5-6-sol|kagi (ult)","model":"gpt-5-6-sol","metric":"time/task","op":"remove","from":"3.4","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}
+{"t":"2026-11-18T07:39:49Z","key":"gpt-5-6-sol|kagi (ult)","model":"gpt-5-6-sol","metric":"TPS","op":"remove","from":"10.4","rev":"3df6a7c45c4940b1729f2b3092b756e3c624c6d6"}

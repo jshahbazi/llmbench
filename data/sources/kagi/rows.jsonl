@@ -69,13 +69,13 @@
 {"key":"gpt-5-4|kagi (ult)","model":"gpt-5-4","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"63.8","Cost($)":"0.3","time/task":"3.4","TPS":"11.9"},"extra":{"tokens":"14170"}}
 {"key":"gpt-5-5|kagi (ult)","model":"gpt-5-5","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"88.8","Cost($)":"2.2","time/task":"12.0","TPS":"24.5"},"extra":{"tokens":"69488"}}
 {"key":"gpt-5-6-luna|kagi (ult)","model":"gpt-5-6-luna","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"49.1","Cost($)":"1.0","time/task":"2.9","TPS":"11.9"},"extra":{"tokens":"7976"}}
-{"key":"gpt-5-6-sol|kagi (ult)","model":"gpt-5-6-sol","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"67.0","Cost($)":"2.7","time/task":"3.4","TPS":"10.4"},"extra":{"tokens":"8294"}}
 {"key":"gpt-5-6-terra|kagi (ult)","model":"gpt-5-6-terra","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"51.3","Cost($)":"2.5","time/task":"3.2","TPS":"10.8"},"extra":{"tokens":"7992"}}
 {"key":"gpt-5-codex|kagi","model":"gpt-5-codex","context":{"provider":"kagi"},"scores":{"%accuracy":"70.3","Cost($)":"4.6","time/task":"20.7","TPS":"94.7"},"extra":{"tokens":"14993"}}
 {"key":"gpt-5-mini|kagi","model":"gpt-5-mini","context":{"provider":"kagi"},"scores":{"%accuracy":"70.3","Cost($)":"4.9","time/task":"26.7","TPS":"3.3"},"extra":{"tokens":"10113"}}
 {"key":"gpt-5-nano|kagi","model":"gpt-5-nano","context":{"provider":"kagi"},"scores":{"%accuracy":"62.2","Cost($)":"0.4","time/task":"20.5","TPS":"3.9"},"extra":{"tokens":"9587"}}
 {"key":"gpt-5-pro|kagi (ult)","model":"gpt-5-pro","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"76.8","Cost($)":"31.8","time/task":"193.2","TPS":"5.2"},"extra":{"tokens":"330943"}}
 {"key":"gpt-5|kagi (ult)","model":"gpt-5","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"72.7","Cost($)":"7.1","time/task":"32.8","TPS":"1.6"},"extra":{"tokens":"6282"}}
+{"key":"gpt-6-2-sol|kagi (ult)","model":"gpt-6-2-sol","context":{"provider":"kagi (ult)"},"scores":{"%accuracy":"67.0","Cost($)":"2.7","time/task":"3.4","TPS":"10.4"},"extra":{"tokens":"8294"}}
 {"key":"gpt-oss-120b|kagi","model":"gpt-oss-120b","context":{"provider":"kagi"},"scores":{"%accuracy":"58.6","Cost($)":"0.4","time/task":"2.3","TPS":"54.8"},"extra":{"tokens":"14764"}}
 {"key":"gpt-oss-20b|kagi","model":"gpt-oss-20b","context":{"provider":"kagi"},"scores":{"%accuracy":"53.2","Cost($)":"0.5","time/task":"3.3","TPS":"96.0"},"extra":{"tokens":"38619"}}
 {"key":"grok-3-mini|kagi","model":"grok-3-mini","context":{"provider":"kagi"},"scores":{"%accuracy":"61.3","Cost($)":"0.3","time/task":"7.6","TPS":"9.5"},"extra":{"tokens":"8661"}}

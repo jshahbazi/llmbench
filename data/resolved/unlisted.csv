@@ -83,17 +83,22 @@ command-r-plus,Command R+,vals simplebench,41
 composio-swe-kit-2024-10-25,Composio SWE-Kit (2024-10-25),swe-bench,1
 composio-swe-kit-2024-10-30,Composio SWE-Kit (2024-10-30),swe-bench,1
 composio-swekit-plus-claude-3-5-sonnet-2024-10-16,Composio SWEkit + Claude 3.5 Sonnet (2024-10-16),swe-bench,1
+copilot-fusion,Copilot Fusion,terminal-bench,2
 cursor-cli-composer-1,cursor_cli_composer_1,llm-chess,4
 cursor-cli-composer-1-5,cursor_cli_composer_1.5,llm-chess,4
 cursor-cli-composer-2,cursor_cli_composer_2,llm-chess,4
 cypher-alpha,cypher-alpha,creative-writing-v3,4
 d1,d1,vals,8
+d1-2,d1.2,vals,8
+d1-2-ultra,d1.2-ultra,vals,8
 d1-ultra,d1-ultra,vals,8
 darkest-muse-v1,Darkest-muse-v1,creative-writing-v3,4
 dars-agent,DARS Agent,swe-bench,1
 decider-flash-v1-2,decider-flash-v1.2,vals,8
+decider-flash-v1-3,decider-flash-v1.3,vals,8
 decider-v1-1-27b,decider-v1.1-27b,vals,8
 decider-v1-2,decider-v1.2,vals,8
+decider-v1-3,decider-v1.3,vals,8
 deepseek-chat,deepseek-chat,epoch,2
 deepseek-chat-v2-5,DeepSeek Chat V2.5,aider-polyglot mmlu-pro,18
 deepseek-chat-v3,DeepSeek Chat V3,aider-polyglot kagi,7
@@ -118,6 +123,7 @@ drex-max,drex-max,vals,8
 drex-v1-5,drex-v1.5,vals,8
 drex-v2-0,drex-v2.0,vals,8
 echo-ego-v2-14b,ECHO_Ego_v2_14B,mmlu-pro,15
+elephant-1,elephant-1,vals,8
 elephant-alpha,elephant-alpha,livebench,31
 emergent-e1,Emergent E1,swe-bench,2
 ernie-4-5-21b-a3b-base,ERNIE-4.5-21B-A3B-Base,mmlu-pro,1
@@ -148,6 +154,7 @@ gemini-3-5-flash-medium,gemini-3.5-flash-medium,llm-chess,4
 gemini-3-6-flash-medium,gemini-3.6-flash-medium,llm-chess,4
 gemini-3-8-flash-medium,gemini-3.8-flash-medium,llm-chess,4
 gemini-advanced-0514,Gemini Advanced (0514),arena,56
+gemini-decision-1,gemini-decision-1,vals,8
 gemini-deep-think-3,Gemini Deep Think 3,matharena,2
 gemini-flash-2-0,gemini-flash 2.0,kagi,4
 gemini-imo-deep-think,Gemini IMO Deep Think,matharena,1
@@ -195,6 +202,9 @@ gpt-5-6-sol-pro,GPT-5.6 Sol Pro,simplebench,1
 gpt-5-6-terra-medium,gpt-5.6-terra-medium,llm-chess,4
 gpt-5-chat-latest-2025-08-07,gpt-5-chat-latest (2025-08-07),eqbench3 creative-writing-longform,5
 gpt-5-high-agent,GPT-5 (High) Agent,matharena,2
+gpt-6-2-astra,GPT-6.2 Astra,terminal-bench livebench cais vals nyt-connections,197
+gpt-6-2-astra-law,gpt-6.2-astra-law,vals,20
+gpt-6-2-sol,GPT-6.2 Sol,terminal-bench livebench cais vals nyt-connections kagi,201
 gpt-6-astra-pro,GPT-6 Astra Pro,simplebench,1
 gpt-6-luna-max,gpt-6-luna-max,llm-chess,4
 gpt-daybreak-blue,gpt-daybreak-blue,vals,10
@@ -258,6 +268,7 @@ jamba-large-1-6,jamba-large-1.6,vals,68
 jamba-mini-1-6,jamba-mini-1.6,vals,68
 jev-1-13-0,jev-1.13.0,vals,8
 jev-1-14,jev-1.14,vals,8
+joey-1,joey-1,vals,8
 joycode-plus-claude-4-sonnet-plus-gpt-4-1,JoyCode + Claude 4 Sonnet + GPT-4.1,swe-bench,1
 junie-cli-plus-claude-opus-4-6-plus-gemini-3-flash-preview-plus-gemini-3-1-pro-preview-plus-gpt-5-3-codex,Junie CLI + claude-opus-4-6 + gemini-3-flash-preview + gemini-3.1-pro-preview + gpt-5.3-codex,terminal-bench,1
 k2-5-1t-a32b,K2.5-1T-A32B,mmlu-pro,1
@@ -293,6 +304,7 @@ maestro-reasoning,maestro-reasoning,kagi,4
 magistral-medium,magistral-medium,kagi,4
 magistral-small,magistral-small,kagi llm-chess,7
 magnum-72b-v1,magnum-72b-v1,mmlu-pro,15
+mammoth-1,mammoth-1,vals,8
 mammoth2-7b-plus,MAmmoTH2-7B-Plus,mmlu-pro,15
 mammoth2-8b-plus,MAmmoTH2-8B-Plus,mmlu-pro,15
 mammoth2-8x7b-plus,MAmmoTH2-8x7B-Plus,mmlu-pro,15
