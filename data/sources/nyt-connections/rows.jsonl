@@ -80,6 +80,7 @@
 {"key":"Gemini 3.8 Flash (high reasoning)","model":"Gemini 3.8 Flash (high reasoning)","scores":{"Score %":"97.4"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemini 4 Argon (high reasoning)","model":"Gemini 4 Argon (high reasoning)","scores":{"Score %":"98.6"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemini 4 Carbon (high reasoning)","model":"Gemini 4 Carbon (high reasoning)","scores":{"Score %":"99.3"},"extra":{"#Puzzles":"940"}}
+{"key":"Gemini 4 Neon (high reasoning)","model":"Gemini 4 Neon (high reasoning)","scores":{"Score %":"99.1"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemma 4 31B IT","model":"Gemma 4 31B IT","scores":{"Score %":"15.7"},"extra":{"#Puzzles":"940"}}
 {"key":"Gemma 4 31B Reasoning","model":"Gemma 4 31B Reasoning","scores":{"Score %":"70.6"},"extra":{"#Puzzles":"940"}}
 {"key":"Grok 4.1 Fast Non-Reasoning","model":"Grok 4.1 Fast Non-Reasoning","scores":{"Score %":"12.3"},"extra":{"#Puzzles":"940"}}

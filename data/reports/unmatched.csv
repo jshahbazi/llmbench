@@ -1,5 +1,6 @@
 source,raw_name,unlisted_as,rows,scores,suggestions
 vals,alibaba/qwen3.8-max-internal,qwen3-8-max-internal,14,191,qwen3-8-2-4t-a95b qwen3-8-max-0902
+vals,google/cobalt-c-high-1p00,cobalt-c-high-1p00,14,179,
 vals,mistralai/mistral-large-4-oss,mistral-large-4-oss,10,157,mistral-large-4 mistral-large-4-2610 mistral-large-2402
 vals,fireworks/nemotron-lightning-3p5-30b-a3b,nemotron-lightning-3p5-30b-a3b,14,156,
 vals,ant/ling-3.0-flash-af-rc3,ling-3-0-flash-af-rc3,12,144,ling-3-0-flash
@@ -457,6 +458,7 @@ nyt-connections,Claude Opus 4.6 Thinking 16K,claude-opus-4-6-thinking-16k,1,1,cl
 nyt-connections,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,1,1,claude-sonnet-4-5 claude-sonnet-4-20250514 claude
 nyt-connections,Claude Sonnet 4.6 Thinking 16K,claude-sonnet-4-6-thinking-16k,1,1,claude-sonnet-4-6 claude-sonnet-4-20250514 claude
 nyt-connections,Claude Sonnet 4.6 Thinking 32K,claude-sonnet-4-6-thinking-32k,1,1,claude-sonnet-4-6 claude-sonnet-4-20250514 claude
+nyt-connections,Gemini 4 Neon (high reasoning),gemini-4-neon,1,1,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
 nyt-connections,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,1,1,gemma-4-31b
 nyt-connections,Grok 4.20 0309 (Non-Reasoning),grok-4-20-0309,1,1,grok-4-20 grok-4-0709
 nyt-connections,Grok 4.20 Multi-Agent Exp Beta 0304,grok-4-20-multi-agent-0304,1,1,grok-4-20-multi-agent-0309 grok-4-20 grok-4-0709
@@ -471,6 +473,7 @@ simplebench,Command R+,command-r-plus,1,1,command-r-plus-04-2024 command-r-plus-
 simplebench,GPT-3.5 Turbo,gpt-3-5-turbo,1,1,gpt-3-5-turbo-0125 gpt-3-5-turbo-0301 gpt-3-5-turbo-0613
 simplebench,GPT-5.6 Sol Pro (xhigh),gpt-5-6-sol-pro,1,1,gpt-5-6-sol gpt-5
 simplebench,GPT-6 Astra Pro,gpt-6-astra-pro,1,1,gpt-6-astra
+simplebench,GPT-6.2 Astra Pro,gpt-6-2-astra-pro,1,1,gpt-6-2-astra
 simplebench,Gemini 2.5 Pro (03-25),gemini-2-5-pro-03-25,1,1,gemini-2-5-pro gemini-2-5-pro-exp-03-25 gemini-2-5-pro-preview-03-25
 simplebench,Grok 2,grok-2,1,1,grok-2-0813 grok-2-1212 grok-2-mini-0813
 simplebench,Ox Alpha,ox-alpha,1,1,

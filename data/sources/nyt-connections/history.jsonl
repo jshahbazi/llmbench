@@ -2,3 +2,4 @@
 {"t":"2026-11-18T07:39:49Z","key":"GPT-6.2 Astra (high reasoning)","model":"GPT-6.2 Astra (high reasoning)","metric":"Score %","op":"add","to":"98.2","rev":"586f89fd6a6d00002789a9aed1425fc3d49c39a7"}
 {"t":"2026-11-18T07:39:49Z","key":"GPT-6.2 Sol (high reasoning)","model":"GPT-6.2 Sol (high reasoning)","metric":"Score %","op":"add","to":"94.1","rev":"586f89fd6a6d00002789a9aed1425fc3d49c39a7"}
 {"t":"2026-11-18T07:39:49Z","key":"ByteDance Seed2.1 Pro","model":"ByteDance Seed2.1 Pro","metric":"Score %","op":"add","to":"77.5","rev":"586f89fd6a6d00002789a9aed1425fc3d49c39a7"}
+{"t":"2026-11-19T07:35:47Z","key":"Gemini 4 Neon (high reasoning)","model":"Gemini 4 Neon (high reasoning)","metric":"Score %","op":"add","to":"99.1","rev":"6404068e6dcae48dbf26f69cf57e270718d9f99d"}

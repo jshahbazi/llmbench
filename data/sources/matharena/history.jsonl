@@ -24,3 +24,15 @@
 {"t":"2026-11-14T18:14:20Z","key":"arxiv--october/gemini/gemini-4-carbon","model":"Gemini 4 Carbon (high)","metric":"arxiv--october/cost","op":"add","to":5.29,"rev":"matharena:1794582334000000000:49"}
 {"t":"2026-11-14T18:14:20Z","key":"arxiv--october/anthropic/fable_52_max","model":"Claude-Fable-5.2 (max)","metric":"arxiv--october/accuracy","op":"add","to":93.62,"rev":"matharena:1794582334000000000:49"}
 {"t":"2026-11-14T18:14:20Z","key":"arxiv--october/anthropic/fable_52_max","model":"Claude-Fable-5.2 (max)","metric":"arxiv--october/cost","op":"add","to":22.28,"rev":"matharena:1794582334000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxivlean--september/openai/gpt-62-astra","model":"GPT-6.2 Astra (max)","metric":"arxivlean--september/accuracy","op":"add","to":79.25,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxivlean--september/openai/gpt-62-astra","model":"GPT-6.2 Astra (max)","metric":"arxivlean--september/cost","op":"add","to":5.1,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxivlean--september/openai/gpt-62-sol","model":"GPT-6.2 Sol (max)","metric":"arxivlean--september/accuracy","op":"add","to":71.7,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxivlean--september/openai/gpt-62-sol","model":"GPT-6.2 Sol (max)","metric":"arxivlean--september/cost","op":"add","to":2.02,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv_false--october/openai/gpt-62-astra","model":"GPT-6.2 Astra (max)","metric":"arxiv_false--october/accuracy","op":"add","to":93.83,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv_false--october/openai/gpt-62-astra","model":"GPT-6.2 Astra (max)","metric":"arxiv_false--october/cost","op":"add","to":2.43,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv_false--october/openai/gpt-62-sol","model":"GPT-6.2 Sol (max)","metric":"arxiv_false--october/accuracy","op":"add","to":88.89,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv_false--october/openai/gpt-62-sol","model":"GPT-6.2 Sol (max)","metric":"arxiv_false--october/cost","op":"add","to":0.98,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv--october/openai/gpt-62-sol","model":"GPT-6.2 Sol (max)","metric":"arxiv--october/accuracy","op":"add","to":95.74,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv--october/openai/gpt-62-sol","model":"GPT-6.2 Sol (max)","metric":"arxiv--october/cost","op":"add","to":0.6,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv--october/openai/gpt-62-astra","model":"GPT-6.2 Astra (max)","metric":"arxiv--october/accuracy","op":"add","to":95.74,"rev":"matharena:1795010838000000000:49"}
+{"t":"2026-11-19T07:35:47Z","key":"arxiv--october/openai/gpt-62-astra","model":"GPT-6.2 Astra (max)","metric":"arxiv--october/cost","op":"add","to":2.31,"rev":"matharena:1795010838000000000:49"}
