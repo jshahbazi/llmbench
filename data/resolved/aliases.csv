@@ -3575,7 +3575,7 @@ nyt-connections,Gemini 3.7 Flash,gemini-3-7-flash,exact,
 nyt-connections,Gemini 3.8 Flash (high reasoning),gemini-3-8-flash,variant,effort:high
 nyt-connections,Gemini 4 Argon (high reasoning),gemini-4-argon,variant,effort:high
 nyt-connections,Gemini 4 Carbon (high reasoning),gemini-4-carbon,variant,effort:high
-nyt-connections,Gemini 4 Neon (high reasoning),gemini-4-neon,unlisted,effort:high
+nyt-connections,Gemini 4 Neon (high reasoning),gemini-4-neon,variant,effort:high
 nyt-connections,Gemma 4 31B IT,gemma-4-31b,exact,
 nyt-connections,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,unlisted,
 nyt-connections,Grok 4.1 Fast Non-Reasoning,grok-4-1-fast-non-reasoning,exact,

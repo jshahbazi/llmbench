@@ -458,7 +458,6 @@ nyt-connections,Claude Opus 4.6 Thinking 16K,claude-opus-4-6-thinking-16k,1,1,cl
 nyt-connections,Claude Sonnet 4.5 Thinking 16K,claude-sonnet-4-5-thinking-16k,1,1,claude-sonnet-4-5 claude-sonnet-4-20250514 claude
 nyt-connections,Claude Sonnet 4.6 Thinking 16K,claude-sonnet-4-6-thinking-16k,1,1,claude-sonnet-4-6 claude-sonnet-4-20250514 claude
 nyt-connections,Claude Sonnet 4.6 Thinking 32K,claude-sonnet-4-6-thinking-32k,1,1,claude-sonnet-4-6 claude-sonnet-4-20250514 claude
-nyt-connections,Gemini 4 Neon (high reasoning),gemini-4-neon,1,1,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
 nyt-connections,Gemma 4 31B Reasoning,gemma-4-31b-reasoning,1,1,gemma-4-31b
 nyt-connections,Grok 4.20 0309 (Non-Reasoning),grok-4-20-0309,1,1,grok-4-20 grok-4-0709
 nyt-connections,Grok 4.20 Multi-Agent Exp Beta 0304,grok-4-20-multi-agent-0304,1,1,grok-4-20-multi-agent-0309 grok-4-20 grok-4-0709

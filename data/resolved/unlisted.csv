@@ -154,7 +154,6 @@ gemini-3-5-flash-exa,gemini-3.5-flash-exa,vals,5
 gemini-3-5-flash-medium,gemini-3.5-flash-medium,llm-chess,4
 gemini-3-6-flash-medium,gemini-3.6-flash-medium,llm-chess,4
 gemini-3-8-flash-medium,gemini-3.8-flash-medium,llm-chess,4
-gemini-4-neon,Gemini 4 Neon,nyt-connections,1
 gemini-advanced-0514,Gemini Advanced (0514),arena,56
 gemini-decision-1,gemini-decision-1,vals,8
 gemini-deep-think-3,Gemini Deep Think 3,matharena,2

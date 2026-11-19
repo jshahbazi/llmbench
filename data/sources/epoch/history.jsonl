@@ -266,3 +266,7 @@
 {"t":"2026-11-18T20:39:23Z","key":"eci|RedPajama-INCITE-7B-Base","model":"RedPajama-INCITE-7B-Base","metric":"eci","op":"change","from":"58.01","to":"57.17"}
 {"t":"2026-11-18T20:39:23Z","key":"eci|Dolly 2.0-12b","model":"Dolly 2.0-12b","metric":"eci","op":"change","from":"55.82","to":"55.1"}
 {"t":"2026-11-18T20:39:23Z","key":"eci|Cerebras-GPT-13B","model":"Cerebras-GPT-13B","metric":"eci","op":"change","from":"49.33","to":"48.59"}
+{"t":"2026-11-19T20:45:44Z","key":"ebr_bench|kimi-k3.1-pro-together_max","model":"kimi-k3.1-pro-together_max","metric":"ebr_bench","op":"add","to":"0.37142857142857144"}
+{"t":"2026-11-19T20:45:44Z","key":"mirrorcode|kimi-k3.1-pro-together_max","model":"kimi-k3.1-pro-together_max","metric":"mirrorcode","op":"add","to":"0.43333333333333335"}
+{"t":"2026-11-19T20:45:44Z","key":"spireclimb|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","metric":"spireclimb","op":"add","to":"0.07666666666666667"}
+{"t":"2026-11-19T20:45:44Z","key":"spireclimb|kimi-k3.1-pro-together_max","model":"kimi-k3.1-pro-together_max","metric":"spireclimb","op":"add","to":"0.0"}
