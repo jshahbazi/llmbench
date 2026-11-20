@@ -72,6 +72,7 @@ arena,Amazon Nova 2 Lite,nova-2-lite,maker,
 arena,Amazon Nova Lite 1.0,nova-lite,alias,
 arena,Amazon Nova Micro 1.0,nova-micro,alias,
 arena,Amazon Nova Pro 1.0,nova-pro,alias,
+arena,Amazon-Web-Search-Agent,amazon-web-search-agent,unlisted,
 arena,Athene 70B (0725),athene-70b,variant,snapshot:0725
 arena,Athene V2 Chat,athene-v2-chat,exact,
 arena,Aya Expanse 32B,aya-expanse-32b,exact,
@@ -93,6 +94,7 @@ arena,"Claude 3.7 Sonnet (Thinking 32K, 20250219)",claude-3-7-sonnet-20250219,va
 arena,Claude Fable 5 (High),claude-fable-5,variant,effort:high
 arena,Claude Fable 5.1 (High),claude-fable-5-1,variant,effort:high
 arena,Claude Fable 5.1 (Max),claude-fable-5-1,variant,effort:max
+arena,Claude Fable 5.2 (Max),claude-fable-5-2,variant,effort:max
 arena,Claude Fable 5.2 (xHigh),claude-fable-5-2,variant,effort:xhigh
 arena,Claude Haiku 4.5 (20251001),claude-haiku-4-5,variant,snapshot:20251001
 arena,Claude Haiku 5.5 (High),claude-haiku-5-5,variant,effort:high
@@ -250,6 +252,8 @@ arena,GPT-6 Luna (Max),gpt-6-luna,variant,effort:max
 arena,GPT-6 Sol (Max),gpt-6-sol,variant,effort:max
 arena,GPT-6.1 Sol (Max),gpt-6-1-sol,variant,effort:max
 arena,GPT-6.1 Terra (Max),gpt-6-1-terra,variant,effort:max
+arena,GPT-6.2 Astra (Max),gpt-6-2-astra,variant,effort:max
+arena,GPT-6.2 Sol (Max),gpt-6-2-sol,variant,effort:max
 arena,GPT4All 13B Snoozy,gpt4all-13b-snoozy,exact,
 arena,Gemini 1.5 Flash (001),gemini-1-5-flash-001,exact,
 arena,Gemini 1.5 Flash (002),gemini-1-5-flash-002,exact,
@@ -280,6 +284,8 @@ arena,Gemini 3.7 Flash (High),gemini-3-7-flash,variant,effort:high
 arena,Gemini 3.8 Flash (High),gemini-3-8-flash,variant,effort:high
 arena,Gemini 4 Argon (High),gemini-4-argon,variant,effort:high
 arena,Gemini 4 Carbon (High),gemini-4-carbon,variant,effort:high
+arena,Gemini 4 Hydrogen (High),gemini-4-hydrogen,variant,effort:high
+arena,Gemini 4 Neon (High),gemini-4-neon,variant,effort:high
 arena,Gemini Advanced (0514),gemini-advanced-0514,unlisted,snapshot:0514
 arena,Gemini Pro,gemini-pro,unlisted,
 arena,Gemini Pro (Dev API),gemini-pro,unlisted,other:Dev API
@@ -341,6 +347,7 @@ arena,Hunyuan TurboS (20250416),hunyuan-turbos-20250416,exact,
 arena,Hunyuan Vision 1.5 Thinking,hunyuan-vision-1-5-thinking,exact,
 arena,Hy3,hy3,exact,
 arena,Hy3 preview,hy3-preview,exact,
+arena,Hy4,hy4,exact,
 arena,Hy4 preview,hy4-preview,exact,
 arena,INTELLECT-3,intellect-3,exact,
 arena,Inkling,inkling,exact,
@@ -523,6 +530,7 @@ arena,Qwen3.8-27B,qwen3-8-27b,exact,
 arena,Qwen3.8-Flash-Next,qwen3-8-flash-next,exact,
 arena,Qwen3.8-Max,qwen3-8-2-4t-a95b,variant,
 arena,Qwen3.8-Max (0902),qwen3-8-max-0902,exact,
+arena,Qwen4-Max (xHigh),qwen4-max-preview,variant,effort:xhigh
 arena,RWKV-4 Raven 14B,rwkv-4-raven-14b,exact,
 arena,Reka Core (20240904),reka-core-20240904,exact,
 arena,Reka Flash (20240904),reka-flash-20240904,exact,

@@ -8,6 +8,7 @@ aion-3-5,aion-3.5,creative-writing-v3 creative-writing-longform,7
 alephprover,AlephProver,vals matharena,7
 alibaba-lingma-agent,Alibaba Lingma Agent,swe-bench,1
 amazon-q-developer-agent,Amazon Q Developer Agent,swe-bench,10
+amazon-web-search-agent,Amazon-Web-Search-Agent,arena,1
 anubis-70b-v1-1,anubis-70b-v1.1,kagi,4
 appmap-navie-v2,AppMap Navie v2,swe-bench,2
 arcee-trinity-large-thinking,Arcee Trinity Large Thinking,nyt-connections lechmazur-generalization lechmazur-sycophancy,5

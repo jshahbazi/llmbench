@@ -390,6 +390,7 @@ tau2-bench,PrincipledMachines Cortex 0.1,principledmachines-cortex-0-1,1,2,
 terminal-bench,Copilot Fusion,copilot-fusion,1,2,
 terminal-bench,Inkling Small 2,inkling-small-2,1,2,inkling-small inkling inkling-2-small
 vals,devin/swe-1-6-fast,swe-1-6-fast,1,2,swe-1-6
+arena,Amazon-Web-Search-Agent,amazon-web-search-agent,1,1,
 arena,Diffbot-Small-XL,diffbot-small-xl,1,1,
 arena,GPT-4o (Search),gpt-4o,1,1,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 cais,Manus 1.5,manus-1-5,1,1,
