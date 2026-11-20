@@ -1,7 +1,7 @@
 {
-  "upstream_revision": "2026-11-18T02:01:04.392897+00:00",
-  "payload_hash": "52c717ad042c3a9c11bf6e3328324702c105a522a56e64480b7fc9df50e18f75",
-  "row_count": 229,
+  "upstream_revision": "2026-11-20T16:07:10.159846+00:00",
+  "payload_hash": "360a56aefe23dbf8193b0c85c69f7b4df06f35d6785c574609948dabe0c6a6fe",
+  "row_count": 231,
   "baseline_at": "2026-11-13T06:09:31Z",
-  "changed_at": "2026-11-18T07:39:49Z"
+  "changed_at": "2026-11-20T20:29:19Z"
 }

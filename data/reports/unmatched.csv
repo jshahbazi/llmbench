@@ -1,6 +1,7 @@
 source,raw_name,unlisted_as,rows,scores,suggestions
+vals,thinkingmachines/inkling-mini-1117,inkling-mini-1117,25,239,inkling
 vals,alibaba/qwen3.8-max-internal,qwen3-8-max-internal,14,191,qwen3-8-2-4t-a95b qwen3-8-max-0902
-vals,google/cobalt-c-high-1p00,cobalt-c-high-1p00,14,179,
+vals,google/cobalt-c-high-1p00,cobalt-c-high-1p00,15,182,
 vals,mistralai/mistral-large-4-oss,mistral-large-4-oss,10,157,mistral-large-4 mistral-large-4-2610 mistral-large-2402
 vals,fireworks/nemotron-lightning-3p5-30b-a3b,nemotron-lightning-3p5-30b-a3b,14,156,
 vals,ant/ling-3.0-flash-af-rc3,ling-3-0-flash-af-rc3,12,144,ling-3-0-flash
@@ -95,6 +96,14 @@ mmlu-pro,Staring-7B,staring-7b,1,15,
 mmlu-pro,azerogpt,azerogpt,1,15,
 mmlu-pro,magnum-72b-v1,magnum-72b-v1,1,15,
 vals,mistralai/mistral-small-2603,mistral-small-2603,3,15,mistral-small-2402 mistral-small-2409 mistral-small-3
+vals,decision/decider-flash-v1.2,decider-flash-v1-2,2,11,
+vals,decision/decider-flash-v1.3,decider-flash-v1-3,2,11,
+vals,decision/decider-v1.2,decider-v1-2,2,11,
+vals,decision/decider-v1.3,decider-v1-3,2,11,
+vals,decision/drex-max,drex-max,2,11,
+vals,decision/gemini-decision-1,gemini-decision-1,2,11,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
+vals,decision/jev-1.13.0,jev-1-13-0,2,11,
+vals,decision/jev-1.14,jev-1-14,2,11,
 vals,anthropic/claude-opus-5-5-range,claude-opus-5-5-range,2,10,claude-opus-5-5 claude-opus-5 claude
 vals,openai/gpt-daybreak-blue,gpt-daybreak-blue,2,10,
 vals,decision/classify-1,classify-1,1,8,
@@ -105,18 +114,10 @@ vals,decision/d1,d1,1,8,
 vals,decision/d1-ultra,d1-ultra,1,8,
 vals,decision/d1.2,d1-2,1,8,
 vals,decision/d1.2-ultra,d1-2-ultra,1,8,
-vals,decision/decider-flash-v1.2,decider-flash-v1-2,1,8,
-vals,decision/decider-flash-v1.3,decider-flash-v1-3,1,8,
 vals,decision/decider-v1.1-27b,decider-v1-1-27b,1,8,
-vals,decision/decider-v1.2,decider-v1-2,1,8,
-vals,decision/decider-v1.3,decider-v1-3,1,8,
-vals,decision/drex-max,drex-max,1,8,
 vals,decision/drex-v1.5,drex-v1-5,1,8,
 vals,decision/drex-v2.0,drex-v2-0,1,8,
 vals,decision/elephant-1,elephant-1,1,8,
-vals,decision/gemini-decision-1,gemini-decision-1,1,8,gemini-exp-1114 gemini-exp-1121 gemini-exp-1206
-vals,decision/jev-1.13.0,jev-1-13-0,1,8,
-vals,decision/jev-1.14,jev-1-14,1,8,
 vals,decision/joey-1,joey-1,1,8,
 vals,decision/mammoth-1,mammoth-1,1,8,
 vals,decision/microsoft-decision-1,microsoft-decision-1,1,8,
@@ -151,6 +152,8 @@ vals,openai/gpt-4o-mini-transcribe-streaming-response,gpt-4o-mini-transcribe-str
 vals,openai/gpt-4o-transcribe,gpt-4o-transcribe,1,5,gpt-4o-2024-05-13 gpt-4o-2024-08-06 gpt-4o-2024-11-20
 vals,openai/gpt-5.6-sol-exa,gpt-5-6-sol-exa,1,5,gpt-5-6-sol gpt-5
 vals,openai/gpt-5.6-sol-keenable,gpt-5-6-sol-keenable,1,5,gpt-5-6-sol gpt-5
+vals,openai/gpt-5.6-sol-parallel-advanced,gpt-5-6-sol-parallel-advanced,1,5,gpt-5-6-sol gpt-5
+vals,openai/gpt-5.6-sol-parallel-fast,gpt-5-6-sol-parallel-fast,1,5,gpt-5-6-sol gpt-5
 vals,openai/gpt-live-transcribe,gpt-live-transcribe,1,5,
 vals,reson8/resonant-1,resonant-1,1,5,
 arena,Spark-X2.6,spark-x2-6,1,4,spark-x2-6-4b spark spark-x2-6-1-7b

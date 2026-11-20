@@ -3999,6 +3999,43 @@
   "description": "Can AI help people navigate SNAP benefits?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
  },
  {
+  "id": "rctbench/cost_per_test",
+  "label": "RollerCoasterTycoonBench cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/rctbench",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "rctbench/latency",
+  "label": "RollerCoasterTycoonBench time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/rctbench",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "rctbench/overall",
+  "label": "RollerCoasterTycoonBench",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "agents"
+  ],
+  "family": "vals-rctbench",
+  "url": "https://www.vals.ai/benchmarks/rctbench",
+  "description": "Can a decision model run a theme park? Nine models manage a RollerCoaster Tycoon 2 park for three in-game years. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
   "id": "robo_bench/arm",
   "label": "Robo-bench: Arm (13 tasks)",
   "direction": "higher",

@@ -1,2 +1,5 @@
 {"t":"2026-11-19T07:35:47Z","key":"GPT-6.2 Astra Pro","model":"GPT-6.2 Astra Pro","metric":"score","op":"add","to":"79.2%"}
 {"t":"2026-11-19T07:35:47Z","key":"GPT-6.2 Astra","model":"GPT-6.2 Astra","metric":"score","op":"add","to":"77.3%"}
+{"t":"2026-11-20T20:29:19Z","key":"Gemini 4 Neon","model":"Gemini 4 Neon","metric":"score","op":"add","to":"94.4%"}
+{"t":"2026-11-20T20:29:19Z","key":"Gemini 4 Hydrogen","model":"Gemini 4 Hydrogen","metric":"score","op":"add","to":"91.7%"}
+{"t":"2026-11-20T20:29:19Z","key":"GPT-6.2 Sol","model":"GPT-6.2 Sol","metric":"score","op":"add","to":"69.9%"}

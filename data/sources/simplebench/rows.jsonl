@@ -59,6 +59,7 @@
 {"key":"GPT-6.1 Terra","model":"GPT-6.1 Terra","date":"2026-11-10","scores":{"score":"72.2%"},"extra":{"organization":"OpenAI"}}
 {"key":"GPT-6.2 Astra","model":"GPT-6.2 Astra","date":"2026-11-18","scores":{"score":"77.3%"},"extra":{"organization":"OpenAI"}}
 {"key":"GPT-6.2 Astra Pro","model":"GPT-6.2 Astra Pro","date":"2026-11-18","scores":{"score":"79.2%"},"extra":{"organization":"OpenAI"}}
+{"key":"GPT-6.2 Sol","model":"GPT-6.2 Sol","date":"2026-11-18","scores":{"score":"69.9%"},"extra":{"organization":"OpenAI"}}
 {"key":"GPT-OSS 120B","model":"GPT-OSS 120B","scores":{"score":"22.1%"},"extra":{"organization":"OpenAI"}}
 {"key":"Gemini 1.5 Pro 002","model":"Gemini 1.5 Pro 002","scores":{"score":"27.1%"},"extra":{"organization":"Google"}}
 {"key":"Gemini 2.0 Flash Exp","model":"Gemini 2.0 Flash Exp","scores":{"score":"18.9%"},"extra":{"organization":"Google"}}
@@ -73,6 +74,8 @@
 {"key":"Gemini 3.8 Flash","model":"Gemini 3.8 Flash","date":"2026-09-03","scores":{"score":"82.4%"},"extra":{"organization":"Google"}}
 {"key":"Gemini 4 Argon","model":"Gemini 4 Argon","date":"2026-11-10","scores":{"score":"91.7%"},"extra":{"organization":"Google"}}
 {"key":"Gemini 4 Carbon","model":"Gemini 4 Carbon","date":"2026-11-10","scores":{"score":"92.6%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 4 Hydrogen","model":"Gemini 4 Hydrogen","date":"2026-11-19","scores":{"score":"91.7%"},"extra":{"organization":"Google"}}
+{"key":"Gemini 4 Neon","model":"Gemini 4 Neon","date":"2026-11-19","scores":{"score":"94.4%"},"extra":{"organization":"Google"}}
 {"key":"Gemini-exp-1206","model":"Gemini-exp-1206","scores":{"score":"31.1%"},"extra":{"organization":"Google"}}
 {"key":"Grok 2","model":"Grok 2","scores":{"score":"22.7%"},"extra":{"organization":"xAI"}}
 {"key":"Grok 3","model":"Grok 3","scores":{"score":"36.1%"},"extra":{"organization":"xAI"}}
