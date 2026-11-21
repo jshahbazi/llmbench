@@ -61,6 +61,7 @@
 {"key":"chess_puzzles|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:15:18.000Z","scores":{"chess_puzzles":"0.59"},"extra":{"mean_score":"0.59","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.04943110704237103","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FGJtYeC7ZV4fYgN3wu4rRvq.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/GJtYeC7ZV4fYgN3wu4rRvq.eval","id":"GJtYeC7ZV4fYgN3wu4rRvq"}}
 {"key":"chess_puzzles|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"chess_puzzles":"0.78"},"extra":{"mean_score":"0.78","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.04163331998932266","id":"KWJt42juMXXwB4UXoHnbZr"}}
 {"key":"chess_puzzles|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"chess_puzzles":"0.6"},"extra":{"mean_score":"0.6","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.0492365963917331","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FSnB9m45ECMFY69gqyZDvWh.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/SnB9m45ECMFY69gqyZDvWh.eval","id":"SnB9m45ECMFY69gqyZDvWh"}}
+{"key":"chess_puzzles|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"chess_puzzles":"0.83"},"extra":{"mean_score":"0.83","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.03775251680686369","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FfFyrzqsFMrDAqvwRpBvJga.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/fFyrzqsFMrDAqvwRpBvJga.eval","id":"fFyrzqsFMrDAqvwRpBvJga"}}
 {"key":"chess_puzzles|glm-4.7","model":"glm-4.7","model_label":"GLM-4.7","date":"2026-10-14T09:36:09.000Z","scores":{"chess_puzzles":"0.21"},"extra":{"mean_score":"0.21","Release date":"2025-12-22","Organization":"Z.ai (Zhipu AI)","Country":"China","Training compute (FLOP)":"4.42e+24","Training compute notes":"Training tokens not disclosed.\n\nPresuming this is a post-training update from GLM-4.5 (23T tokens) with minor additional compute, training compute is at least:\n\n6 FLOP/parameter/token * 32B active parameters * 23T tokens = 4.42e24 FLOP","stderr":"0.040936018074033236","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2F9rDLegdh3zmBfFzTj3fkCc.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/9rDLegdh3zmBfFzTj3fkCc.eval","id":"9rDLegdh3zmBfFzTj3fkCc"}}
 {"key":"chess_puzzles|glm-5.1","model":"glm-5.1","model_label":"GLM-5.1","date":"2026-10-14T06:28:37.000Z","scores":{"chess_puzzles":"0.2"},"extra":{"mean_score":"0.2","Release date":"2026-04-07","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.04020151261036849","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FR7XgJMi2R9sv7tZdx5SZTv.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/R7XgJMi2R9sv7tZdx5SZTv.eval","id":"R7XgJMi2R9sv7tZdx5SZTv"}}
 {"key":"chess_puzzles|glm-5.2_low","model":"glm-5.2_low","model_label":"GLM-5.2","date":"2026-10-14T04:18:44.000Z","scores":{"chess_puzzles":"0.18"},"extra":{"mean_score":"0.18","Release date":"2026-06-16","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.03861229196653691","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2F6gYpimjqJm3CL6mvKEN9qs.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/6gYpimjqJm3CL6mvKEN9qs.eval","id":"6gYpimjqJm3CL6mvKEN9qs"}}
@@ -198,263 +199,264 @@
 {"key":"ebr_bench|mistral-large-4-0-oss_high","model":"mistral-large-4-0-oss_high","model_label":"Mistral Large 4 (high)","date":"2026-11-02T14:05:31.000Z","scores":{"ebr_bench":"0.18095238095238095"},"extra":{"mean_score":"0.18095238095238095","Release date":"2026-10-29","Organization":"Mistral AI","Country":"France","Training compute (FLOP)":"1.24e+25","Training compute notes":"From tech report: \"Mistral Large 4 was pretrained on 3,840 NVIDIA GB200 GPUs in a Mistral data center near Paris.\nOur internal training stack is built on PyTorch and CUDA. Pretraining took 45 days, or about 4.15 million GPU-hours, with a model FLOPs utilization (MFU) of 36% and a goodput of 94.1%. Webmeasure MFU against peak hardware BF16 FLOP/s, include matrix-multiplication and attention\nFLOPs.\"\n\nGB200 is 2500 TFLOP/s BF16 peak, so 36% MFU and 94.1% goodput is 32.9% overall utilization. \n3840 * 45 * 24*3600 * 0.329 * 2500 trillion = 1.23e25 FLOP pretraining.\n\nThis suggests roughly 40T training tokens, using 6ND: 1.23e25 = 6* 52 billion * D.\n\nFor post-training, RL involved 162.5 billion output tokens during rollouts for RL, so RL FLOP was <1% of pre-training. SFT and mid-training tokens were not disclosed.\n\nMFU is reported against bf16 spec, but report mentions FP8 in the pretraining without clarifying the primary format.","stderr":"0.03158690276528952","id":"Xhk47x2m6incQifzec3pqC"}}
 {"key":"ebr_bench|muse-wonder-1.0_max","model":"muse-wonder-1.0_max","model_label":"Muse Wonder (max)","date":"2026-10-12T21:51:35.000Z","scores":{"ebr_bench":"0.3142857142857143"},"extra":{"mean_score":"0.3142857142857143","Release date":"2026-10-12","Organization":"Meta AI","Country":"United States of America","stderr":"0.041513323271815936","id":"fMDaGtyboCNfTpP9aStwaU"}}
 {"key":"ebr_bench|qwen3.7-max","model":"qwen3.7-max","model_label":"Qwen3.7 Max","date":"2026-06-25T01:53:10.000Z","scores":{"ebr_bench":"0.09523809523809523"},"extra":{"mean_score":"0.09523809523809523","Release date":"2026-05-19","Organization":"Alibaba","Country":"China","id":"YJY5Dm2gEioHP2ExmTadqG"}}
-{"key":"eci|Baichuan 2-7B","model":"Baichuan 2-7B","date":"2023-09-20","scores":{"eci":"83.25"},"ci":{"eci":["70.59","94.26"]}}
-{"key":"eci|Baichuan2-13B","model":"Baichuan2-13B","date":"2023-09-06","scores":{"eci":"91.59"},"ci":{"eci":["80.91","100.91"]}}
-{"key":"eci|Beam 1.0","model":"Beam 1.0","date":"2026-10-05","scores":{"eci":"150.87"},"ci":{"eci":["148.66","153.12"]}}
-{"key":"eci|Cerebras-GPT-13B","model":"Cerebras-GPT-13B","date":"2023-03-20","scores":{"eci":"48.59"},"ci":{"eci":["25.79","67.73"]}}
-{"key":"eci|Claude 2","model":"Claude 2","date":"2023-07-11","scores":{"eci":"117.12"},"ci":{"eci":["112.61","121.05"]}}
-{"key":"eci|Claude 3 Haiku","model":"Claude 3 Haiku","date":"2024-03-07","scores":{"eci":"117.79"},"ci":{"eci":["113.6","121.58"]}}
-{"key":"eci|Claude 3 Opus","model":"Claude 3 Opus","date":"2024-02-29","scores":{"eci":"125.58"},"ci":{"eci":["122.65","128.17"]}}
-{"key":"eci|Claude 3 Sonnet","model":"Claude 3 Sonnet","date":"2024-02-29","scores":{"eci":"119.65"},"ci":{"eci":["115.71","123.23"]}}
-{"key":"eci|Claude 3.5 Haiku","model":"Claude 3.5 Haiku","date":"2024-10-22","scores":{"eci":"124.75"},"ci":{"eci":["121.49","127.65"]}}
+{"key":"eci|Baichuan 2-7B","model":"Baichuan 2-7B","date":"2023-09-20","scores":{"eci":"83.6"},"ci":{"eci":["70.51","94.45"]}}
+{"key":"eci|Baichuan2-13B","model":"Baichuan2-13B","date":"2023-09-06","scores":{"eci":"91.75"},"ci":{"eci":["80.78","100.92"]}}
+{"key":"eci|Beam 1.0","model":"Beam 1.0","date":"2026-10-05","scores":{"eci":"150.84"},"ci":{"eci":["148.56","153.14"]}}
+{"key":"eci|Cerebras-GPT-13B","model":"Cerebras-GPT-13B","date":"2023-03-20","scores":{"eci":"48.88"},"ci":{"eci":["26.25","67.1"]}}
+{"key":"eci|Claude 2","model":"Claude 2","date":"2023-07-11","scores":{"eci":"117.17"},"ci":{"eci":["112.8","121.19"]}}
+{"key":"eci|Claude 3 Haiku","model":"Claude 3 Haiku","date":"2024-03-07","scores":{"eci":"117.8"},"ci":{"eci":["113.5","121.55"]}}
+{"key":"eci|Claude 3 Opus","model":"Claude 3 Opus","date":"2024-02-29","scores":{"eci":"125.59"},"ci":{"eci":["122.49","128.31"]}}
+{"key":"eci|Claude 3 Sonnet","model":"Claude 3 Sonnet","date":"2024-02-29","scores":{"eci":"119.66"},"ci":{"eci":["115.49","123.24"]}}
+{"key":"eci|Claude 3.5 Haiku","model":"Claude 3.5 Haiku","date":"2024-10-22","scores":{"eci":"124.77"},"ci":{"eci":["121.46","127.73"]}}
 {"key":"eci|Claude 3.5 Sonnet","model":"Claude 3.5 Sonnet","date":"2024-06-20","scores":{"eci":"130.0"}}
-{"key":"eci|Claude 3.5 Sonnet (October 2024)","model":"Claude 3.5 Sonnet (October 2024)","date":"2024-10-22","scores":{"eci":"133.34"},"ci":{"eci":["131.04","135.54"]}}
-{"key":"eci|Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","date":"2025-02-24","scores":{"eci":"141.05"},"ci":{"eci":["139.41","142.58"]}}
-{"key":"eci|Claude Fable 5","model":"Claude Fable 5","date":"2026-06-09","scores":{"eci":"164.21"},"ci":{"eci":["161.78","166.86"]}}
-{"key":"eci|Claude Fable 5.1","model":"Claude Fable 5.1","date":"2026-09-01","scores":{"eci":"167.09"},"ci":{"eci":["164.43","170.11"]}}
-{"key":"eci|Claude Fable 5.2","model":"Claude Fable 5.2","date":"2026-11-09","scores":{"eci":"173.5"},"ci":{"eci":["170.09","177.36"]}}
-{"key":"eci|Claude Haiku 4.5","model":"Claude Haiku 4.5","date":"2025-10-15","scores":{"eci":"142.76"},"ci":{"eci":["141.15","144.34"]}}
-{"key":"eci|Claude Haiku 5.5","model":"Claude Haiku 5.5","date":"2026-10-07","scores":{"eci":"160.29"},"ci":{"eci":["158.12","162.69"]}}
-{"key":"eci|Claude Instant","model":"Claude Instant","date":"2023-08-09","scores":{"eci":"114.0"},"ci":{"eci":["107.19","120.14"]}}
-{"key":"eci|Claude Opus 4","model":"Claude Opus 4","date":"2025-05-22","scores":{"eci":"142.88"},"ci":{"eci":["141.27","144.47"]}}
-{"key":"eci|Claude Opus 4.1","model":"Claude Opus 4.1","date":"2025-08-05","scores":{"eci":"144.77"},"ci":{"eci":["143.0","146.5"]}}
-{"key":"eci|Claude Opus 4.5","model":"Claude Opus 4.5","date":"2025-11-24","scores":{"eci":"151.88"},"ci":{"eci":["150.32","153.53"]}}
-{"key":"eci|Claude Opus 4.6","model":"Claude Opus 4.6","date":"2026-02-05","scores":{"eci":"156.35"},"ci":{"eci":["154.59","158.29"]}}
-{"key":"eci|Claude Opus 4.7","model":"Claude Opus 4.7","date":"2026-04-16","scores":{"eci":"157.5"},"ci":{"eci":["155.63","159.46"]}}
-{"key":"eci|Claude Opus 4.8","model":"Claude Opus 4.8","date":"2026-05-28","scores":{"eci":"159.91"},"ci":{"eci":["157.82","162.21"]}}
-{"key":"eci|Claude Opus 5","model":"Claude Opus 5","date":"2026-07-24","scores":{"eci":"164.74"},"ci":{"eci":["162.3","167.66"]}}
-{"key":"eci|Claude Opus 5.5","model":"Claude Opus 5.5","date":"2026-09-22","scores":{"eci":"168.7"},"ci":{"eci":["165.87","171.89"]}}
-{"key":"eci|Claude Sonnet 4","model":"Claude Sonnet 4","date":"2025-05-22","scores":{"eci":"141.88"},"ci":{"eci":["140.3","143.41"]}}
-{"key":"eci|Claude Sonnet 4.5","model":"Claude Sonnet 4.5","date":"2025-09-29","scores":{"eci":"147.59"},"ci":{"eci":["146.14","149.04"]}}
-{"key":"eci|Claude Sonnet 4.6","model":"Claude Sonnet 4.6","date":"2026-02-17","scores":{"eci":"152.86"},"ci":{"eci":["151.17","154.66"]}}
-{"key":"eci|Claude Sonnet 5","model":"Claude Sonnet 5","date":"2026-06-30","scores":{"eci":"156.9"},"ci":{"eci":["154.91","159.08"]}}
-{"key":"eci|Claude Sonnet 5.5","model":"Claude Sonnet 5.5","date":"2026-09-28","scores":{"eci":"166.59"},"ci":{"eci":["163.83","169.65"]}}
-{"key":"eci|CodeQwen1.5-7B","model":"CodeQwen1.5-7B","date":"2024-04-15","scores":{"eci":"74.53"},"ci":{"eci":["58.12","88.3"]}}
-{"key":"eci|DeepSeek Coder 33B","model":"DeepSeek Coder 33B","date":"2023-11-02","scores":{"eci":"75.93"},"ci":{"eci":["59.8","89.43"]}}
-{"key":"eci|DeepSeek Coder 6.7B","model":"DeepSeek Coder 6.7B","date":"2023-11-02","scores":{"eci":"67.02"},"ci":{"eci":["48.31","82.73"]}}
-{"key":"eci|DeepSeek V4 Flash 0731","model":"DeepSeek V4 Flash 0731","date":"2026-07-31","scores":{"eci":"154.43"},"ci":{"eci":["152.55","156.42"]}}
-{"key":"eci|DeepSeek V4 Pro 0813","model":"DeepSeek V4 Pro 0813","date":"2026-08-13","scores":{"eci":"155.96"},"ci":{"eci":["154.1","157.99"]}}
-{"key":"eci|DeepSeek V4.1 Flash","model":"DeepSeek V4.1 Flash","date":"2026-09-09","scores":{"eci":"157.0"},"ci":{"eci":["155.08","159.03"]}}
-{"key":"eci|DeepSeek V4.1 Flash 1017","model":"DeepSeek V4.1 Flash 1017","date":"2026-10-17","scores":{"eci":"159.4"},"ci":{"eci":["157.16","161.93"]}}
-{"key":"eci|DeepSeek-Coder-V2-Lite-Base","model":"DeepSeek-Coder-V2-Lite-Base","date":"2024-06-13","scores":{"eci":"99.31"},"ci":{"eci":["88.78","108.58"]}}
-{"key":"eci|DeepSeek-R1","model":"DeepSeek-R1","date":"2025-01-20","scores":{"eci":"138.63"},"ci":{"eci":["136.7","140.4"]}}
-{"key":"eci|DeepSeek-R1 (May 2025)","model":"DeepSeek-R1 (May 2025)","date":"2025-05-28","scores":{"eci":"140.75"},"ci":{"eci":["138.93","142.45"]}}
-{"key":"eci|DeepSeek-V2 (MoE-236B, May 2024)","model":"DeepSeek-V2 (MoE-236B, May 2024)","date":"2024-05-07","scores":{"eci":"120.76"},"ci":{"eci":["113.88","127.62"]}}
-{"key":"eci|DeepSeek-V3","model":"DeepSeek-V3","date":"2024-12-26","scores":{"eci":"131.71"},"ci":{"eci":["129.14","134.01"]}}
-{"key":"eci|DeepSeek-V3 (Mar 2025)","model":"DeepSeek-V3 (Mar 2025)","date":"2025-03-24","scores":{"eci":"135.28"},"ci":{"eci":["133.12","137.34"]}}
-{"key":"eci|DeepSeek-V3.1","model":"DeepSeek-V3.1","date":"2025-08-21","scores":{"eci":"140.8"},"ci":{"eci":["137.55","143.94"]}}
-{"key":"eci|DeepSeek-V3.2","model":"DeepSeek-V3.2","date":"2025-12-01","scores":{"eci":"146.26"},"ci":{"eci":["144.75","147.75"]}}
-{"key":"eci|DeepSeek-V3.2-Exp","model":"DeepSeek-V3.2-Exp","date":"2025-09-29","scores":{"eci":"144.39"},"ci":{"eci":["142.07","146.73"]}}
-{"key":"eci|DeepSeek-V4-Flash","model":"DeepSeek-V4-Flash","date":"2026-04-24","scores":{"eci":"146.84"},"ci":{"eci":["143.6","150.16"]}}
-{"key":"eci|DeepSeek-V4-Pro","model":"DeepSeek-V4-Pro","date":"2026-04-24","scores":{"eci":"150.21"},"ci":{"eci":["148.47","152.04"]}}
-{"key":"eci|Dolly 2.0-12b","model":"Dolly 2.0-12b","date":"2023-04-11","scores":{"eci":"55.1"},"ci":{"eci":["34.71","72.43"]}}
-{"key":"eci|Falcon 2 11B","model":"Falcon 2 11B","date":"2024-05-09","scores":{"eci":"99.01"},"ci":{"eci":["87.9","109.09"]}}
-{"key":"eci|Falcon-180B","model":"Falcon-180B","date":"2023-09-06","scores":{"eci":"106.92"},"ci":{"eci":["98.04","115.21"]}}
-{"key":"eci|Falcon-40B","model":"Falcon-40B","date":"2023-05-25","scores":{"eci":"90.42"},"ci":{"eci":["79.63","99.75"]}}
-{"key":"eci|Falcon-7B","model":"Falcon-7B","date":"2023-04-24","scores":{"eci":"72.84"},"ci":{"eci":["57.82","85.82"]}}
-{"key":"eci|GLM-4.7","model":"GLM-4.7","date":"2025-12-22","scores":{"eci":"143.36"},"ci":{"eci":["141.4","145.27"]}}
-{"key":"eci|GLM-5","model":"GLM-5","date":"2026-02-11","scores":{"eci":"146.54"},"ci":{"eci":["144.97","148.11"]}}
-{"key":"eci|GLM-5.1","model":"GLM-5.1","date":"2026-04-07","scores":{"eci":"150.73"},"ci":{"eci":["148.77","152.77"]}}
-{"key":"eci|GLM-5.2","model":"GLM-5.2","date":"2026-06-16","scores":{"eci":"153.04"},"ci":{"eci":["151.35","154.86"]}}
-{"key":"eci|GLM-5.3","model":"GLM-5.3","date":"2026-08-14","scores":{"eci":"157.1"},"ci":{"eci":["155.04","159.33"]}}
-{"key":"eci|GLM-5.3-Flash","model":"GLM-5.3-Flash","date":"2026-08-20","scores":{"eci":"153.78"},"ci":{"eci":["152.04","155.62"]}}
-{"key":"eci|GPT-3.5 Turbo (Jan 2024)","model":"GPT-3.5 Turbo (Jan 2024)","date":"2024-01-25","scores":{"eci":"112.77"},"ci":{"eci":["107.84","117.15"]}}
-{"key":"eci|GPT-3.5 Turbo (Jun 2023)","model":"GPT-3.5 Turbo (Jun 2023)","date":"2023-06-13","scores":{"eci":"105.84"},"ci":{"eci":["97.72","113.26"]}}
-{"key":"eci|GPT-3.5 Turbo (Nov 2023)","model":"GPT-3.5 Turbo (Nov 2023)","date":"2023-11-06","scores":{"eci":"112.57"},"ci":{"eci":["107.25","117.26"]}}
-{"key":"eci|GPT-4 (Jun 2023)","model":"GPT-4 (Jun 2023)","date":"2023-06-13","scores":{"eci":"119.82"},"ci":{"eci":["115.94","123.33"]}}
-{"key":"eci|GPT-4 (Mar 2023)","model":"GPT-4 (Mar 2023)","date":"2023-03-14","scores":{"eci":"121.58"},"ci":{"eci":["117.72","125.02"]}}
-{"key":"eci|GPT-4 Turbo (Apr 2024)","model":"GPT-4 Turbo (Apr 2024)","date":"2024-04-09","scores":{"eci":"125.82"},"ci":{"eci":["122.84","128.62"]}}
-{"key":"eci|GPT-4 Turbo (Nov 2023)","model":"GPT-4 Turbo (Nov 2023)","date":"2024-01-25","scores":{"eci":"124.75"},"ci":{"eci":["121.47","127.68"]}}
-{"key":"eci|GPT-4.1","model":"GPT-4.1","date":"2025-04-14","scores":{"eci":"136.18"},"ci":{"eci":["134.14","138.06"]}}
-{"key":"eci|GPT-4.1 mini","model":"GPT-4.1 mini","date":"2025-04-14","scores":{"eci":"134.27"},"ci":{"eci":["132.13","136.21"]}}
-{"key":"eci|GPT-4.1 nano","model":"GPT-4.1 nano","date":"2025-04-14","scores":{"eci":"126.81"},"ci":{"eci":["123.79","129.59"]}}
-{"key":"eci|GPT-4.5","model":"GPT-4.5","date":"2025-02-27","scores":{"eci":"136.5"},"ci":{"eci":["134.41","138.45"]}}
-{"key":"eci|GPT-4o (Aug 2024)","model":"GPT-4o (Aug 2024)","date":"2024-08-06","scores":{"eci":"127.12"},"ci":{"eci":["124.07","129.86"]}}
-{"key":"eci|GPT-4o (May 2024)","model":"GPT-4o (May 2024)","date":"2024-05-13","scores":{"eci":"128.13"},"ci":{"eci":["125.37","130.68"]}}
-{"key":"eci|GPT-4o (Nov 2024)","model":"GPT-4o (Nov 2024)","date":"2024-11-20","scores":{"eci":"128.78"},"ci":{"eci":["126.12","131.24"]}}
-{"key":"eci|GPT-4o mini","model":"GPT-4o mini","date":"2024-07-18","scores":{"eci":"123.75"},"ci":{"eci":["120.5","126.65"]}}
+{"key":"eci|Claude 3.5 Sonnet (October 2024)","model":"Claude 3.5 Sonnet (October 2024)","date":"2024-10-22","scores":{"eci":"133.36"},"ci":{"eci":["131.15","135.46"]}}
+{"key":"eci|Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","date":"2025-02-24","scores":{"eci":"141.03"},"ci":{"eci":["139.38","142.59"]}}
+{"key":"eci|Claude Fable 5","model":"Claude Fable 5","date":"2026-06-09","scores":{"eci":"164.18"},"ci":{"eci":["161.82","166.91"]}}
+{"key":"eci|Claude Fable 5.1","model":"Claude Fable 5.1","date":"2026-09-01","scores":{"eci":"167.06"},"ci":{"eci":["164.41","170.13"]}}
+{"key":"eci|Claude Fable 5.2","model":"Claude Fable 5.2","date":"2026-11-09","scores":{"eci":"173.4"},"ci":{"eci":["170.04","177.22"]}}
+{"key":"eci|Claude Haiku 4.5","model":"Claude Haiku 4.5","date":"2025-10-15","scores":{"eci":"142.74"},"ci":{"eci":["141.04","144.41"]}}
+{"key":"eci|Claude Haiku 5.5","model":"Claude Haiku 5.5","date":"2026-10-07","scores":{"eci":"160.33"},"ci":{"eci":["158.18","162.69"]}}
+{"key":"eci|Claude Instant","model":"Claude Instant","date":"2023-08-09","scores":{"eci":"114.03"},"ci":{"eci":["107.0","120.33"]}}
+{"key":"eci|Claude Opus 4","model":"Claude Opus 4","date":"2025-05-22","scores":{"eci":"142.85"},"ci":{"eci":["141.26","144.43"]}}
+{"key":"eci|Claude Opus 4.1","model":"Claude Opus 4.1","date":"2025-08-05","scores":{"eci":"144.76"},"ci":{"eci":["143.01","146.51"]}}
+{"key":"eci|Claude Opus 4.5","model":"Claude Opus 4.5","date":"2025-11-24","scores":{"eci":"151.87"},"ci":{"eci":["150.35","153.45"]}}
+{"key":"eci|Claude Opus 4.6","model":"Claude Opus 4.6","date":"2026-02-05","scores":{"eci":"156.33"},"ci":{"eci":["154.61","158.27"]}}
+{"key":"eci|Claude Opus 4.7","model":"Claude Opus 4.7","date":"2026-04-16","scores":{"eci":"157.49"},"ci":{"eci":["155.63","159.56"]}}
+{"key":"eci|Claude Opus 4.8","model":"Claude Opus 4.8","date":"2026-05-28","scores":{"eci":"159.9"},"ci":{"eci":["157.83","162.21"]}}
+{"key":"eci|Claude Opus 5","model":"Claude Opus 5","date":"2026-07-24","scores":{"eci":"164.72"},"ci":{"eci":["162.27","167.48"]}}
+{"key":"eci|Claude Opus 5.5","model":"Claude Opus 5.5","date":"2026-09-22","scores":{"eci":"168.67"},"ci":{"eci":["165.92","171.96"]}}
+{"key":"eci|Claude Sonnet 4","model":"Claude Sonnet 4","date":"2025-05-22","scores":{"eci":"141.84"},"ci":{"eci":["140.33","143.29"]}}
+{"key":"eci|Claude Sonnet 4.5","model":"Claude Sonnet 4.5","date":"2025-09-29","scores":{"eci":"147.56"},"ci":{"eci":["146.13","149.07"]}}
+{"key":"eci|Claude Sonnet 4.6","model":"Claude Sonnet 4.6","date":"2026-02-17","scores":{"eci":"152.85"},"ci":{"eci":["151.24","154.53"]}}
+{"key":"eci|Claude Sonnet 5","model":"Claude Sonnet 5","date":"2026-06-30","scores":{"eci":"156.9"},"ci":{"eci":["154.92","159.06"]}}
+{"key":"eci|Claude Sonnet 5.5","model":"Claude Sonnet 5.5","date":"2026-09-28","scores":{"eci":"166.6"},"ci":{"eci":["163.92","169.61"]}}
+{"key":"eci|CodeQwen1.5-7B","model":"CodeQwen1.5-7B","date":"2024-04-15","scores":{"eci":"74.81"},"ci":{"eci":["57.5","88.58"]}}
+{"key":"eci|DeepSeek Coder 33B","model":"DeepSeek Coder 33B","date":"2023-11-02","scores":{"eci":"76.3"},"ci":{"eci":["60.39","89.54"]}}
+{"key":"eci|DeepSeek Coder 6.7B","model":"DeepSeek Coder 6.7B","date":"2023-11-02","scores":{"eci":"67.45"},"ci":{"eci":["49.15","82.16"]}}
+{"key":"eci|DeepSeek V4 Flash 0731","model":"DeepSeek V4 Flash 0731","date":"2026-07-31","scores":{"eci":"154.43"},"ci":{"eci":["152.61","156.4"]}}
+{"key":"eci|DeepSeek V4 Pro 0813","model":"DeepSeek V4 Pro 0813","date":"2026-08-13","scores":{"eci":"155.96"},"ci":{"eci":["154.05","158.06"]}}
+{"key":"eci|DeepSeek V4.1 Flash","model":"DeepSeek V4.1 Flash","date":"2026-09-09","scores":{"eci":"157.01"},"ci":{"eci":["155.05","159.2"]}}
+{"key":"eci|DeepSeek V4.1 Flash 1017","model":"DeepSeek V4.1 Flash 1017","date":"2026-10-17","scores":{"eci":"159.41"},"ci":{"eci":["157.13","161.91"]}}
+{"key":"eci|DeepSeek-Coder-V2-Lite-Base","model":"DeepSeek-Coder-V2-Lite-Base","date":"2024-06-13","scores":{"eci":"99.41"},"ci":{"eci":["88.84","108.43"]}}
+{"key":"eci|DeepSeek-R1","model":"DeepSeek-R1","date":"2025-01-20","scores":{"eci":"138.62"},"ci":{"eci":["136.64","140.47"]}}
+{"key":"eci|DeepSeek-R1 (May 2025)","model":"DeepSeek-R1 (May 2025)","date":"2025-05-28","scores":{"eci":"140.73"},"ci":{"eci":["138.93","142.44"]}}
+{"key":"eci|DeepSeek-V2 (MoE-236B, May 2024)","model":"DeepSeek-V2 (MoE-236B, May 2024)","date":"2024-05-07","scores":{"eci":"120.82"},"ci":{"eci":["114.04","127.59"]}}
+{"key":"eci|DeepSeek-V3","model":"DeepSeek-V3","date":"2024-12-26","scores":{"eci":"131.69"},"ci":{"eci":["129.19","134.04"]}}
+{"key":"eci|DeepSeek-V3 (Mar 2025)","model":"DeepSeek-V3 (Mar 2025)","date":"2025-03-24","scores":{"eci":"135.25"},"ci":{"eci":["133.03","137.38"]}}
+{"key":"eci|DeepSeek-V3.1","model":"DeepSeek-V3.1","date":"2025-08-21","scores":{"eci":"140.88"},"ci":{"eci":["137.68","144.01"]}}
+{"key":"eci|DeepSeek-V3.2","model":"DeepSeek-V3.2","date":"2025-12-01","scores":{"eci":"146.26"},"ci":{"eci":["144.73","147.77"]}}
+{"key":"eci|DeepSeek-V3.2-Exp","model":"DeepSeek-V3.2-Exp","date":"2025-09-29","scores":{"eci":"144.39"},"ci":{"eci":["142.15","146.7"]}}
+{"key":"eci|DeepSeek-V4-Flash","model":"DeepSeek-V4-Flash","date":"2026-04-24","scores":{"eci":"146.91"},"ci":{"eci":["143.68","150.18"]}}
+{"key":"eci|DeepSeek-V4-Pro","model":"DeepSeek-V4-Pro","date":"2026-04-24","scores":{"eci":"150.19"},"ci":{"eci":["148.42","151.99"]}}
+{"key":"eci|Dolly 2.0-12b","model":"Dolly 2.0-12b","date":"2023-04-11","scores":{"eci":"55.52"},"ci":{"eci":["34.51","72.61"]}}
+{"key":"eci|Falcon 2 11B","model":"Falcon 2 11B","date":"2024-05-09","scores":{"eci":"99.24"},"ci":{"eci":["88.36","108.96"]}}
+{"key":"eci|Falcon-180B","model":"Falcon-180B","date":"2023-09-06","scores":{"eci":"107.04"},"ci":{"eci":["98.16","115.46"]}}
+{"key":"eci|Falcon-40B","model":"Falcon-40B","date":"2023-05-25","scores":{"eci":"90.67"},"ci":{"eci":["79.95","99.95"]}}
+{"key":"eci|Falcon-7B","model":"Falcon-7B","date":"2023-04-24","scores":{"eci":"73.09"},"ci":{"eci":["58.18","85.44"]}}
+{"key":"eci|GLM-4.7","model":"GLM-4.7","date":"2025-12-22","scores":{"eci":"143.34"},"ci":{"eci":["141.39","145.28"]}}
+{"key":"eci|GLM-5","model":"GLM-5","date":"2026-02-11","scores":{"eci":"146.53"},"ci":{"eci":["144.88","148.14"]}}
+{"key":"eci|GLM-5.1","model":"GLM-5.1","date":"2026-04-07","scores":{"eci":"150.71"},"ci":{"eci":["148.66","152.82"]}}
+{"key":"eci|GLM-5.2","model":"GLM-5.2","date":"2026-06-16","scores":{"eci":"153.07"},"ci":{"eci":["151.34","154.91"]}}
+{"key":"eci|GLM-5.3","model":"GLM-5.3","date":"2026-08-14","scores":{"eci":"157.1"},"ci":{"eci":["155.01","159.42"]}}
+{"key":"eci|GLM-5.3-Flash","model":"GLM-5.3-Flash","date":"2026-08-20","scores":{"eci":"153.77"},"ci":{"eci":["151.95","155.78"]}}
+{"key":"eci|GPT-3.5 Turbo (Jan 2024)","model":"GPT-3.5 Turbo (Jan 2024)","date":"2024-01-25","scores":{"eci":"112.88"},"ci":{"eci":["107.85","117.31"]}}
+{"key":"eci|GPT-3.5 Turbo (Jun 2023)","model":"GPT-3.5 Turbo (Jun 2023)","date":"2023-06-13","scores":{"eci":"105.98"},"ci":{"eci":["97.58","113.37"]}}
+{"key":"eci|GPT-3.5 Turbo (Nov 2023)","model":"GPT-3.5 Turbo (Nov 2023)","date":"2023-11-06","scores":{"eci":"112.67"},"ci":{"eci":["107.35","117.2"]}}
+{"key":"eci|GPT-4 (Jun 2023)","model":"GPT-4 (Jun 2023)","date":"2023-06-13","scores":{"eci":"119.91"},"ci":{"eci":["116.2","123.25"]}}
+{"key":"eci|GPT-4 (Mar 2023)","model":"GPT-4 (Mar 2023)","date":"2023-03-14","scores":{"eci":"121.61"},"ci":{"eci":["117.61","125.17"]}}
+{"key":"eci|GPT-4 Turbo (Apr 2024)","model":"GPT-4 Turbo (Apr 2024)","date":"2024-04-09","scores":{"eci":"125.82"},"ci":{"eci":["122.49","128.76"]}}
+{"key":"eci|GPT-4 Turbo (Nov 2023)","model":"GPT-4 Turbo (Nov 2023)","date":"2024-01-25","scores":{"eci":"124.77"},"ci":{"eci":["121.54","127.71"]}}
+{"key":"eci|GPT-4.1","model":"GPT-4.1","date":"2025-04-14","scores":{"eci":"136.14"},"ci":{"eci":["134.19","138.04"]}}
+{"key":"eci|GPT-4.1 mini","model":"GPT-4.1 mini","date":"2025-04-14","scores":{"eci":"134.24"},"ci":{"eci":["132.08","136.21"]}}
+{"key":"eci|GPT-4.1 nano","model":"GPT-4.1 nano","date":"2025-04-14","scores":{"eci":"126.79"},"ci":{"eci":["123.78","129.48"]}}
+{"key":"eci|GPT-4.5","model":"GPT-4.5","date":"2025-02-27","scores":{"eci":"136.47"},"ci":{"eci":["134.39","138.43"]}}
+{"key":"eci|GPT-4o (Aug 2024)","model":"GPT-4o (Aug 2024)","date":"2024-08-06","scores":{"eci":"127.15"},"ci":{"eci":["124.1","129.89"]}}
+{"key":"eci|GPT-4o (May 2024)","model":"GPT-4o (May 2024)","date":"2024-05-13","scores":{"eci":"128.13"},"ci":{"eci":["125.37","130.73"]}}
+{"key":"eci|GPT-4o (Nov 2024)","model":"GPT-4o (Nov 2024)","date":"2024-11-20","scores":{"eci":"128.78"},"ci":{"eci":["126.06","131.17"]}}
+{"key":"eci|GPT-4o mini","model":"GPT-4o mini","date":"2024-07-18","scores":{"eci":"123.81"},"ci":{"eci":["120.46","126.8"]}}
 {"key":"eci|GPT-5","model":"GPT-5","date":"2025-08-07","scores":{"eci":"150.0"}}
-{"key":"eci|GPT-5 Pro","model":"GPT-5 Pro","date":"2025-10-07","scores":{"eci":"151.27"},"ci":{"eci":["149.32","153.32"]}}
-{"key":"eci|GPT-5 mini","model":"GPT-5 mini","date":"2025-08-07","scores":{"eci":"146.01"},"ci":{"eci":["144.4","147.59"]}}
-{"key":"eci|GPT-5 nano","model":"GPT-5 nano","date":"2025-08-07","scores":{"eci":"139.09"},"ci":{"eci":["137.15","140.93"]}}
-{"key":"eci|GPT-5.1","model":"GPT-5.1","date":"2025-11-13","scores":{"eci":"150.97"},"ci":{"eci":["149.42","152.61"]}}
-{"key":"eci|GPT-5.2","model":"GPT-5.2","date":"2025-12-11","scores":{"eci":"154.52"},"ci":{"eci":["152.94","156.31"]}}
-{"key":"eci|GPT-5.2 Pro","model":"GPT-5.2 Pro","date":"2025-12-11","scores":{"eci":"157.31"},"ci":{"eci":["155.11","159.77"]}}
-{"key":"eci|GPT-5.4","model":"GPT-5.4","date":"2026-03-05","scores":{"eci":"157.87"},"ci":{"eci":["155.96","159.97"]}}
-{"key":"eci|GPT-5.4 Mini","model":"GPT-5.4 Mini","date":"2026-03-17","scores":{"eci":"149.35"},"ci":{"eci":["147.71","151.06"]}}
-{"key":"eci|GPT-5.4 Nano","model":"GPT-5.4 Nano","date":"2026-03-17","scores":{"eci":"146.33"},"ci":{"eci":["144.67","148.02"]}}
-{"key":"eci|GPT-5.4 Pro","model":"GPT-5.4 Pro","date":"2026-03-05","scores":{"eci":"160.32"},"ci":{"eci":["157.87","163.03"]}}
-{"key":"eci|GPT-5.5","model":"GPT-5.5","date":"2026-04-23","scores":{"eci":"160.19"},"ci":{"eci":["158.2","162.43"]}}
-{"key":"eci|GPT-5.5 Pro","model":"GPT-5.5 Pro","date":"2026-04-23","scores":{"eci":"162.77"},"ci":{"eci":["160.14","165.77"]}}
-{"key":"eci|GPT-5.6 Luna","model":"GPT-5.6 Luna","date":"2026-07-09","scores":{"eci":"156.7"},"ci":{"eci":["154.87","158.77"]}}
-{"key":"eci|GPT-5.6 Sol","model":"GPT-5.6 Sol","date":"2026-07-09","scores":{"eci":"163.05"},"ci":{"eci":["160.76","165.59"]}}
-{"key":"eci|GPT-5.6 Terra","model":"GPT-5.6 Terra","date":"2026-07-09","scores":{"eci":"160.78"},"ci":{"eci":["158.58","163.23"]}}
-{"key":"eci|GPT-6 Astra","model":"GPT-6 Astra","date":"2026-09-03","scores":{"eci":"169.2"},"ci":{"eci":["166.33","172.48"]}}
-{"key":"eci|GPT-6 Luna","model":"GPT-6 Luna","date":"2026-09-22","scores":{"eci":"156.39"},"ci":{"eci":["154.5","158.47"]}}
-{"key":"eci|GPT-6 Sol","model":"GPT-6 Sol","date":"2026-09-22","scores":{"eci":"163.82"},"ci":{"eci":["161.4","166.57"]}}
-{"key":"eci|GPT-6.1 Sol","model":"GPT-6.1 Sol","date":"2026-09-29","scores":{"eci":"168.63"},"ci":{"eci":["165.7","171.91"]}}
-{"key":"eci|GPT-6.1 Terra","model":"GPT-6.1 Terra","date":"2026-10-26","scores":{"eci":"167.72"},"ci":{"eci":["164.78","170.92"]}}
-{"key":"eci|GPT-6.2 Astra","model":"GPT-6.2 Astra","date":"2026-11-17","scores":{"eci":"174.17"},"ci":{"eci":["170.29","178.58"]}}
-{"key":"eci|Gemini 1.5 Flash (May 2024)","model":"Gemini 1.5 Flash (May 2024)","date":"2024-05-23","scores":{"eci":"120.55"},"ci":{"eci":["116.51","124.09"]}}
-{"key":"eci|Gemini 1.5 Flash (Sep 2024)","model":"Gemini 1.5 Flash (Sep 2024)","date":"2024-09-24","scores":{"eci":"126.96"},"ci":{"eci":["123.87","129.8"]}}
-{"key":"eci|Gemini 1.5 Pro (May 2024)","model":"Gemini 1.5 Pro (May 2024)","date":"2024-05-14","scores":{"eci":"125.37"},"ci":{"eci":["122.09","128.37"]}}
-{"key":"eci|Gemini 1.5 Pro (Sept 2024)","model":"Gemini 1.5 Pro (Sept 2024)","date":"2024-09-24","scores":{"eci":"130.45"},"ci":{"eci":["127.81","132.84"]}}
-{"key":"eci|Gemini 2.0 Flash (Feb 2025)","model":"Gemini 2.0 Flash (Feb 2025)","date":"2025-02-05","scores":{"eci":"134.02"},"ci":{"eci":["131.74","136.18"]}}
-{"key":"eci|Gemini 2.0 Flash Thinking (Jan 2025)","model":"Gemini 2.0 Flash Thinking (Jan 2025)","date":"2025-01-21","scores":{"eci":"133.61"},"ci":{"eci":["130.54","136.4"]}}
-{"key":"eci|Gemini 2.0 Pro","model":"Gemini 2.0 Pro","date":"2025-02-05","scores":{"eci":"135.41"},"ci":{"eci":["132.66","138.06"]}}
-{"key":"eci|Gemini 2.5 Flash (Apr 2025)","model":"Gemini 2.5 Flash (Apr 2025)","date":"2025-04-17","scores":{"eci":"140.73"},"ci":{"eci":["138.35","142.96"]}}
-{"key":"eci|Gemini 2.5 Flash (Jun 2025)","model":"Gemini 2.5 Flash (Jun 2025)","date":"2025-06-17","scores":{"eci":"140.84"},"ci":{"eci":["138.4","143.12"]}}
-{"key":"eci|Gemini 2.5 Flash (May 2025)","model":"Gemini 2.5 Flash (May 2025)","date":"2025-05-20","scores":{"eci":"141.58"},"ci":{"eci":["139.44","143.64"]}}
-{"key":"eci|Gemini 2.5 Flash (Sep 2025)","model":"Gemini 2.5 Flash (Sep 2025)","date":"2025-09-25","scores":{"eci":"141.94"},"ci":{"eci":["139.1","144.59"]}}
-{"key":"eci|Gemini 2.5 Flash-Lite (Jun 2025)","model":"Gemini 2.5 Flash-Lite (Jun 2025)","date":"2025-06-17","scores":{"eci":"133.05"},"ci":{"eci":["129.37","136.47"]}}
-{"key":"eci|Gemini 2.5 Pro (Jun 2025)","model":"Gemini 2.5 Pro (Jun 2025)","date":"2025-06-05","scores":{"eci":"144.91"},"ci":{"eci":["143.5","146.3"]}}
-{"key":"eci|Gemini 2.5 Pro (Mar 2025)","model":"Gemini 2.5 Pro (Mar 2025)","date":"2025-03-31","scores":{"eci":"144.05"},"ci":{"eci":["142.08","146.0"]}}
-{"key":"eci|Gemini 2.5 Pro (May 2025)","model":"Gemini 2.5 Pro (May 2025)","date":"2025-05-06","scores":{"eci":"140.64"},"ci":{"eci":["138.31","142.95"]}}
-{"key":"eci|Gemini 3 Flash","model":"Gemini 3 Flash","date":"2025-12-17","scores":{"eci":"152.34"},"ci":{"eci":["150.79","153.98"]}}
-{"key":"eci|Gemini 3 Pro","model":"Gemini 3 Pro","date":"2025-11-18","scores":{"eci":"153.04"},"ci":{"eci":["151.45","154.78"]}}
-{"key":"eci|Gemini 3.1 Flash-Lite","model":"Gemini 3.1 Flash-Lite","date":"2026-03-03","scores":{"eci":"145.03"},"ci":{"eci":["142.88","147.25"]}}
-{"key":"eci|Gemini 3.1 Pro","model":"Gemini 3.1 Pro","date":"2026-02-19","scores":{"eci":"156.25"},"ci":{"eci":["154.49","158.15"]}}
-{"key":"eci|Gemini 3.5 Flash","model":"Gemini 3.5 Flash","date":"2026-05-19","scores":{"eci":"155.35"},"ci":{"eci":["153.52","157.38"]}}
-{"key":"eci|Gemini 3.5 Flash-Lite","model":"Gemini 3.5 Flash-Lite","date":"2026-07-21","scores":{"eci":"145.65"},"ci":{"eci":["143.98","147.32"]}}
-{"key":"eci|Gemini 3.6 Flash","model":"Gemini 3.6 Flash","date":"2026-07-21","scores":{"eci":"155.24"},"ci":{"eci":["153.42","157.18"]}}
-{"key":"eci|Gemini 3.7 Flash","model":"Gemini 3.7 Flash","date":"2026-08-13","scores":{"eci":"158.38"},"ci":{"eci":["156.41","160.53"]}}
-{"key":"eci|Gemini 3.8 Flash","model":"Gemini 3.8 Flash","date":"2026-09-02","scores":{"eci":"158.83"},"ci":{"eci":["156.86","160.97"]}}
-{"key":"eci|Gemini 4 Argon","model":"Gemini 4 Argon","date":"2026-10-13","scores":{"eci":"166.57"},"ci":{"eci":["163.94","169.51"]}}
-{"key":"eci|Gemini 4 Carbon","model":"Gemini 4 Carbon","date":"2026-11-10","scores":{"eci":"169.78"},"ci":{"eci":["166.59","173.31"]}}
-{"key":"eci|Gemma 2 27B","model":"Gemma 2 27B","date":"2024-06-24","scores":{"eci":"118.61"},"ci":{"eci":["114.48","122.35"]}}
-{"key":"eci|Gemma 2 9B","model":"Gemma 2 9B","date":"2024-06-24","scores":{"eci":"112.28"},"ci":{"eci":["106.66","117.21"]}}
-{"key":"eci|Gemma 2B","model":"Gemma 2B","date":"2024-02-21","scores":{"eci":"75.36"},"ci":{"eci":["60.81","87.85"]}}
-{"key":"eci|Gemma 3 27B","model":"Gemma 3 27B","date":"2025-03-12","scores":{"eci":"127.5"},"ci":{"eci":["124.41","130.28"]}}
-{"key":"eci|Gemma 4 26B A4B","model":"Gemma 4 26B A4B","date":"2026-04-02","scores":{"eci":"141.58"},"ci":{"eci":["139.14","144.02"]}}
-{"key":"eci|Gemma 4 31B IT","model":"Gemma 4 31B IT","date":"2026-04-02","scores":{"eci":"144.12"},"ci":{"eci":["141.72","146.59"]}}
-{"key":"eci|Gemma 7B","model":"Gemma 7B","date":"2024-02-21","scores":{"eci":"102.87"},"ci":{"eci":["94.96","109.59"]}}
-{"key":"eci|Grok 3","model":"Grok 3","date":"2025-04-09","scores":{"eci":"137.59"},"ci":{"eci":["135.63","139.42"]}}
-{"key":"eci|Grok 4","model":"Grok 4","date":"2025-07-09","scores":{"eci":"146.96"},"ci":{"eci":["145.48","148.46"]}}
-{"key":"eci|Grok 4 Fast","model":"Grok 4 Fast","date":"2025-09-19","scores":{"eci":"144.35"},"ci":{"eci":["142.19","146.46"]}}
-{"key":"eci|Grok 4.20","model":"Grok 4.20","date":"2026-02-17","scores":{"eci":"152.3"},"ci":{"eci":["150.58","154.09"]}}
-{"key":"eci|Grok 4.3 Beta","model":"Grok 4.3 Beta","date":"2026-04-17","scores":{"eci":"149.91"},"ci":{"eci":["147.94","151.92"]}}
-{"key":"eci|Grok 4.5","model":"Grok 4.5","date":"2026-07-08","scores":{"eci":"154.97"},"ci":{"eci":["153.23","156.91"]}}
-{"key":"eci|Grok 4.6","model":"Grok 4.6","date":"2026-08-12","scores":{"eci":"157.82"},"ci":{"eci":["155.86","160.0"]}}
-{"key":"eci|Grok 4.7","model":"Grok 4.7","date":"2026-09-21","scores":{"eci":"156.43"},"ci":{"eci":["154.47","158.52"]}}
-{"key":"eci|Grok-2 (Dec 2024)","model":"Grok-2 (Dec 2024)","date":"2024-12-12","scores":{"eci":"129.75"},"ci":{"eci":["127.01","132.25"]}}
-{"key":"eci|Grok-3 mini","model":"Grok-3 mini","date":"2025-06-24","scores":{"eci":"139.95"},"ci":{"eci":["138.15","141.69"]}}
-{"key":"eci|INTELLECT-1","model":"INTELLECT-1","date":"2024-11-29","scores":{"eci":"83.09"},"ci":{"eci":["70.64","93.9"]}}
-{"key":"eci|Inkling","model":"Inkling","date":"2026-07-15","scores":{"eci":"148.43"},"ci":{"eci":["146.88","150.03"]}}
-{"key":"eci|Inkling-Small","model":"Inkling-Small","date":"2026-07-15","scores":{"eci":"150.78"},"ci":{"eci":["149.02","152.58"]}}
-{"key":"eci|Kimi K2 (Jul 2025)","model":"Kimi K2 (Jul 2025)","date":"2025-07-12","scores":{"eci":"141.25"},"ci":{"eci":["138.25","143.95"]}}
-{"key":"eci|Kimi K2 Thinking","model":"Kimi K2 Thinking","date":"2025-11-06","scores":{"eci":"145.48"},"ci":{"eci":["143.69","147.27"]}}
-{"key":"eci|Kimi K2.5","model":"Kimi K2.5","date":"2026-01-27","scores":{"eci":"148.8"},"ci":{"eci":["147.3","150.35"]}}
-{"key":"eci|Kimi K2.6","model":"Kimi K2.6","date":"2026-04-20","scores":{"eci":"151.62"},"ci":{"eci":["149.86","153.44"]}}
-{"key":"eci|Kimi K2.7 Code","model":"Kimi K2.7 Code","date":"2026-06-12","scores":{"eci":"151.15"},"ci":{"eci":["149.18","153.25"]}}
-{"key":"eci|Kimi K3","model":"Kimi K3","date":"2026-07-16","scores":{"eci":"158.6"},"ci":{"eci":["156.63","160.8"]}}
-{"key":"eci|Kimi K3.1 Pro","model":"Kimi K3.1 Pro","date":"2026-10-23","scores":{"eci":"161.36"},"ci":{"eci":["158.97","163.9"]}}
-{"key":"eci|LLaMA-13B","model":"LLaMA-13B","date":"2023-02-24","scores":{"eci":"84.95"},"ci":{"eci":["72.99","95.23"]}}
-{"key":"eci|LLaMA-33B","model":"LLaMA-33B","date":"2023-02-24","scores":{"eci":"96.37"},"ci":{"eci":["87.05","104.65"]}}
-{"key":"eci|LLaMA-65B","model":"LLaMA-65B","date":"2023-02-24","scores":{"eci":"101.38"},"ci":{"eci":["92.98","108.66"]}}
-{"key":"eci|LLaMA-7B","model":"LLaMA-7B","date":"2023-02-24","scores":{"eci":"76.96"},"ci":{"eci":["62.98","88.78"]}}
-{"key":"eci|Llama 2-13B","model":"Llama 2-13B","date":"2023-07-18","scores":{"eci":"96.28"},"ci":{"eci":["87.19","104.31"]}}
-{"key":"eci|Llama 2-34B","model":"Llama 2-34B","date":"2023-07-18","scores":{"eci":"93.69"},"ci":{"eci":["83.73","102.35"]}}
-{"key":"eci|Llama 2-70B","model":"Llama 2-70B","date":"2023-07-18","scores":{"eci":"105.64"},"ci":{"eci":["99.62","110.86"]}}
-{"key":"eci|Llama 2-7B","model":"Llama 2-7B","date":"2023-07-18","scores":{"eci":"82.8"},"ci":{"eci":["70.34","93.04"]}}
-{"key":"eci|Llama 3-70B","model":"Llama 3-70B","date":"2024-04-18","scores":{"eci":"121.34"},"ci":{"eci":["117.67","124.75"]}}
-{"key":"eci|Llama 3-8B","model":"Llama 3-8B","date":"2024-04-18","scores":{"eci":"109.0"},"ci":{"eci":["103.32","113.95"]}}
-{"key":"eci|Llama 3.1-405B","model":"Llama 3.1-405B","date":"2024-07-23","scores":{"eci":"127.87"},"ci":{"eci":["124.95","130.51"]}}
-{"key":"eci|Llama 3.1-70B","model":"Llama 3.1-70B","date":"2024-07-23","scores":{"eci":"124.72"},"ci":{"eci":["121.58","127.63"]}}
-{"key":"eci|Llama 3.1-8B","model":"Llama 3.1-8B","date":"2024-07-23","scores":{"eci":"110.78"},"ci":{"eci":["105.32","115.82"]}}
-{"key":"eci|Llama 3.2 90B","model":"Llama 3.2 90B","date":"2024-09-24","scores":{"eci":"122.89"},"ci":{"eci":["119.04","126.23"]}}
-{"key":"eci|Llama 3.3 70B","model":"Llama 3.3 70B","date":"2024-12-06","scores":{"eci":"126.16"},"ci":{"eci":["123.1","128.98"]}}
-{"key":"eci|Llama 4 Maverick","model":"Llama 4 Maverick","date":"2025-04-06","scores":{"eci":"132.24"},"ci":{"eci":["130.0","134.26"]}}
-{"key":"eci|Llama 4 Scout","model":"Llama 4 Scout","date":"2025-04-05","scores":{"eci":"127.77"},"ci":{"eci":["124.88","130.4"]}}
-{"key":"eci|MPT-30B","model":"MPT-30B","date":"2023-06-22","scores":{"eci":"84.95"},"ci":{"eci":["72.95","95.48"]}}
-{"key":"eci|MPT-7B","model":"MPT-7B","date":"2023-05-05","scores":{"eci":"73.18"},"ci":{"eci":["58.58","86.14"]}}
-{"key":"eci|MiniMax-M3","model":"MiniMax-M3","date":"2026-06-01","scores":{"eci":"147.9"},"ci":{"eci":["145.76","150.04"]}}
-{"key":"eci|Mistral 7B v0.1","model":"Mistral 7B v0.1","date":"2023-09-27","scores":{"eci":"102.56"},"ci":{"eci":["94.84","109.26"]}}
-{"key":"eci|Mistral Large","model":"Mistral Large","date":"2024-02-26","scores":{"eci":"119.96"},"ci":{"eci":["115.99","123.45"]}}
-{"key":"eci|Mistral Large 2 (Jul 2024)","model":"Mistral Large 2 (Jul 2024)","date":"2024-07-24","scores":{"eci":"126.42"},"ci":{"eci":["123.24","129.4"]}}
-{"key":"eci|Mistral Large 4","model":"Mistral Large 4","date":"2026-10-29","scores":{"eci":"154.56"},"ci":{"eci":["151.79","157.42"]}}
-{"key":"eci|Mistral Large 4 Preview","model":"Mistral Large 4 Preview","date":"2026-10-06","scores":{"eci":"152.71"},"ci":{"eci":["150.81","154.6"]}}
-{"key":"eci|Mistral Medium 3","model":"Mistral Medium 3","date":"2025-05-07","scores":{"eci":"132.81"},"ci":{"eci":["130.17","135.2"]}}
-{"key":"eci|Mistral Medium 3.5","model":"Mistral Medium 3.5","date":"2026-04-28","scores":{"eci":"141.57"},"ci":{"eci":["138.4","144.68"]}}
-{"key":"eci|Mistral NeMo","model":"Mistral NeMo","date":"2024-07-18","scores":{"eci":"113.81"},"ci":{"eci":["108.8","118.19"]}}
-{"key":"eci|Mixtral 8x22B","model":"Mixtral 8x22B","date":"2024-04-17","scores":{"eci":"118.66"},"ci":{"eci":["114.34","122.54"]}}
-{"key":"eci|Mixtral 8x7B","model":"Mixtral 8x7B","date":"2023-12-11","scores":{"eci":"113.1"},"ci":{"eci":["108.13","117.48"]}}
-{"key":"eci|Muse Spark","model":"Muse Spark","date":"2026-04-08","scores":{"eci":"153.16"},"ci":{"eci":["150.94","155.46"]}}
-{"key":"eci|Muse Spark 1.1","model":"Muse Spark 1.1","date":"2026-07-09","scores":{"eci":"154.92"},"ci":{"eci":["152.33","157.65"]}}
-{"key":"eci|Muse Spark 1.2","model":"Muse Spark 1.2","date":"2026-08-05","scores":{"eci":"155.06"},"ci":{"eci":["152.79","157.48"]}}
-{"key":"eci|Muse Spark 1.3","model":"Muse Spark 1.3","date":"2026-09-02","scores":{"eci":"158.25"},"ci":{"eci":["156.26","160.41"]}}
-{"key":"eci|Muse Spark Open","model":"Muse Spark Open","date":"2026-10-15","scores":{"eci":"155.45"},"ci":{"eci":["153.37","157.73"]}}
-{"key":"eci|Muse Wonder","model":"Muse Wonder","date":"2026-10-12","scores":{"eci":"161.74"},"ci":{"eci":["159.36","164.32"]}}
-{"key":"eci|Nemotron 3 Ultra","model":"Nemotron 3 Ultra","date":"2026-06-04","scores":{"eci":"147.0"},"ci":{"eci":["145.02","149.09"]}}
-{"key":"eci|Nemotron-4 15B","model":"Nemotron-4 15B","date":"2024-02-26","scores":{"eci":"98.97"},"ci":{"eci":["89.56","106.97"]}}
-{"key":"eci|PaLM 2-L","model":"PaLM 2-L","date":"2023-05-17","scores":{"eci":"113.71"},"ci":{"eci":["98.69","129.5"]}}
-{"key":"eci|PaLM 2-M","model":"PaLM 2-M","date":"2023-05-17","scores":{"eci":"97.77"},"ci":{"eci":["84.79","109.73"]}}
-{"key":"eci|PaLM 2-S","model":"PaLM 2-S","date":"2023-05-17","scores":{"eci":"93.62"},"ci":{"eci":["80.24","105.75"]}}
-{"key":"eci|Phi-1.5","model":"Phi-1.5","date":"2023-09-11","scores":{"eci":"68.17"},"ci":{"eci":["49.93","83.48"]}}
-{"key":"eci|Phi-2","model":"Phi-2","date":"2023-12-12","scores":{"eci":"95.94"},"ci":{"eci":["86.5","104.28"]}}
-{"key":"eci|Phi-4","model":"Phi-4","date":"2024-12-12","scores":{"eci":"129.24"},"ci":{"eci":["126.27","131.95"]}}
-{"key":"eci|QwQ-32B","model":"QwQ-32B","date":"2025-03-05","scores":{"eci":"136.48"},"ci":{"eci":["133.72","139.15"]}}
-{"key":"eci|Qwen 3.5 Flash (hosted 35B-A3B)","model":"Qwen 3.5 Flash (hosted 35B-A3B)","date":"2026-02-25","scores":{"eci":"143.87"},"ci":{"eci":["142.01","145.75"]}}
-{"key":"eci|Qwen 3.5 Plus (hosted 397B-A17B)","model":"Qwen 3.5 Plus (hosted 397B-A17B)","date":"2026-02-16","scores":{"eci":"147.3"},"ci":{"eci":["145.38","149.2"]}}
-{"key":"eci|Qwen 3.6 35B-A3B","model":"Qwen 3.6 35B-A3B","date":"2026-04-14","scores":{"eci":"144.11"},"ci":{"eci":["142.23","146.0"]}}
-{"key":"eci|Qwen 3.6 Flash","model":"Qwen 3.6 Flash","date":"2026-04-27","scores":{"eci":"143.76"},"ci":{"eci":["141.76","145.7"]}}
-{"key":"eci|Qwen 3.6 Max (Preview)","model":"Qwen 3.6 Max (Preview)","date":"2026-04-20","scores":{"eci":"149.88"},"ci":{"eci":["147.87","152.07"]}}
-{"key":"eci|Qwen 3.6 Plus","model":"Qwen 3.6 Plus","date":"2026-03-31","scores":{"eci":"148.91"},"ci":{"eci":["146.96","150.92"]}}
-{"key":"eci|Qwen 3.8 27B","model":"Qwen 3.8 27B","date":"2026-08-14","scores":{"eci":"152.65"},"ci":{"eci":["150.7","154.76"]}}
-{"key":"eci|Qwen 3.8 Max","model":"Qwen 3.8 Max","date":"2026-08-02","scores":{"eci":"157.59"},"ci":{"eci":["155.47","159.94"]}}
-{"key":"eci|Qwen-14B","model":"Qwen-14B","date":"2023-09-24","scores":{"eci":"101.61"},"ci":{"eci":["92.75","109.54"]}}
-{"key":"eci|Qwen-1_8B","model":"Qwen-1_8B","date":"2023-11-30","scores":{"eci":"59.23"},"ci":{"eci":["40.43","75.43"]}}
-{"key":"eci|Qwen-7B","model":"Qwen-7B","date":"2023-09-28","scores":{"eci":"88.87"},"ci":{"eci":["77.54","98.62"]}}
-{"key":"eci|Qwen2-72B","model":"Qwen2-72B","date":"2024-06-07","scores":{"eci":"122.33"},"ci":{"eci":["118.73","125.52"]}}
-{"key":"eci|Qwen2.5-72B","model":"Qwen2.5-72B","date":"2024-09-19","scores":{"eci":"127.21"},"ci":{"eci":["124.47","129.8"]}}
-{"key":"eci|Qwen2.5-Coder (1.5B)","model":"Qwen2.5-Coder (1.5B)","date":"2024-09-18","scores":{"eci":"89.01"},"ci":{"eci":["76.06","99.99"]}}
-{"key":"eci|Qwen2.5-Coder (7B)","model":"Qwen2.5-Coder (7B)","date":"2024-09-18","scores":{"eci":"107.45"},"ci":{"eci":["98.13","115.86"]}}
-{"key":"eci|Qwen2.5-Coder-0.5B","model":"Qwen2.5-Coder-0.5B","date":"2024-09-18","scores":{"eci":"67.95"},"ci":{"eci":["49.04","83.62"]}}
-{"key":"eci|Qwen2.5-Coder-14B","model":"Qwen2.5-Coder-14B","date":"2024-09-18","scores":{"eci":"113.72"},"ci":{"eci":["104.82","122.09"]}}
-{"key":"eci|Qwen2.5-Coder-32B","model":"Qwen2.5-Coder-32B","date":"2024-09-18","scores":{"eci":"118.74"},"ci":{"eci":["110.04","127.38"]}}
-{"key":"eci|Qwen2.5-Coder-3B","model":"Qwen2.5-Coder-3B","date":"2024-09-18","scores":{"eci":"96.63"},"ci":{"eci":["82.05","108.97"]}}
-{"key":"eci|Qwen2.5-Max","model":"Qwen2.5-Max","date":"2025-01-25","scores":{"eci":"131.17"},"ci":{"eci":["128.42","133.62"]}}
-{"key":"eci|Qwen3-14B","model":"Qwen3-14B","date":"2025-04-29","scores":{"eci":"136.08"},"ci":{"eci":["133.42","138.55"]}}
-{"key":"eci|Qwen3-235B-A22B","model":"Qwen3-235B-A22B","date":"2025-04-28","scores":{"eci":"138.43"},"ci":{"eci":["136.11","140.67"]}}
-{"key":"eci|Qwen3-235B-A22B-Instruct (Jul 2025)","model":"Qwen3-235B-A22B-Instruct (Jul 2025)","date":"2025-07-25","scores":{"eci":"138.07"},"ci":{"eci":["135.66","140.24"]}}
-{"key":"eci|Qwen3-235B-A22B-Thinking (Jul 2025)","model":"Qwen3-235B-A22B-Thinking (Jul 2025)","date":"2025-07-25","scores":{"eci":"143.27"},"ci":{"eci":["141.4","145.12"]}}
-{"key":"eci|Qwen3-30B-A3B","model":"Qwen3-30B-A3B","date":"2025-04-29","scores":{"eci":"134.18"},"ci":{"eci":["131.45","136.76"]}}
-{"key":"eci|Qwen3-30B-A3B-Instruct (Jul 2025)","model":"Qwen3-30B-A3B-Instruct (Jul 2025)","date":"2025-07-29","scores":{"eci":"134.83"},"ci":{"eci":["131.99","137.52"]}}
-{"key":"eci|Qwen3-30B-A3B-Thinking (Jul 2025)","model":"Qwen3-30B-A3B-Thinking (Jul 2025)","date":"2025-07-30","scores":{"eci":"138.35"},"ci":{"eci":["135.77","140.82"]}}
-{"key":"eci|Qwen3-32B","model":"Qwen3-32B","date":"2025-04-29","scores":{"eci":"136.84"},"ci":{"eci":["134.41","139.22"]}}
-{"key":"eci|Qwen3-8B","model":"Qwen3-8B","date":"2025-04-28","scores":{"eci":"132.08"},"ci":{"eci":["129.06","134.78"]}}
-{"key":"eci|Qwen3-Max","model":"Qwen3-Max","date":"2025-09-24","scores":{"eci":"142.44"},"ci":{"eci":["140.29","144.54"]}}
-{"key":"eci|Qwen3.5 397B-A17B","model":"Qwen3.5 397B-A17B","date":"2026-02-13","scores":{"eci":"147.95"},"ci":{"eci":["145.8","150.07"]}}
-{"key":"eci|Qwen3.5-35B-A3B","model":"Qwen3.5-35B-A3B","date":"2026-02-24","scores":{"eci":"144.08"},"ci":{"eci":["141.59","146.7"]}}
-{"key":"eci|Qwen3.5-9B","model":"Qwen3.5-9B","date":"2026-02-24","scores":{"eci":"139.48"},"ci":{"eci":["137.26","141.69"]}}
-{"key":"eci|Qwen3.6 27B","model":"Qwen3.6 27B","date":"2026-04-22","scores":{"eci":"146.78"},"ci":{"eci":["144.68","148.89"]}}
-{"key":"eci|Qwen3.7-Max","model":"Qwen3.7-Max","date":"2026-05-19","scores":{"eci":"154.58"},"ci":{"eci":["152.57","156.67"]}}
-{"key":"eci|Qwen3.7-Plus","model":"Qwen3.7-Plus","date":"2026-06-02","scores":{"eci":"147.95"},"ci":{"eci":["145.91","150.04"]}}
-{"key":"eci|Qwen3.8 Max (0902)","model":"Qwen3.8 Max (0902)","date":"2026-09-01","scores":{"eci":"155.98"},"ci":{"eci":["153.89","158.27"]}}
-{"key":"eci|RedPajama-INCITE-7B-Base","model":"RedPajama-INCITE-7B-Base","date":"2023-05-04","scores":{"eci":"57.17"},"ci":{"eci":["37.38","74.28"]}}
-{"key":"eci|Stable Beluga 2","model":"Stable Beluga 2","date":"2023-07-20","scores":{"eci":"109.29"},"ci":{"eci":["101.63","115.99"]}}
-{"key":"eci|StarCoder 2 15B","model":"StarCoder 2 15B","date":"2024-02-20","scores":{"eci":"96.04"},"ci":{"eci":["84.83","105.99"]}}
-{"key":"eci|StarCoder 2 3B","model":"StarCoder 2 3B","date":"2024-02-22","scores":{"eci":"66.21"},"ci":{"eci":["47.86","81.82"]}}
-{"key":"eci|StarCoder 2 7B","model":"StarCoder 2 7B","date":"2024-02-20","scores":{"eci":"72.14"},"ci":{"eci":["54.51","86.47"]}}
-{"key":"eci|XGen-7B","model":"XGen-7B","date":"2023-06-27","scores":{"eci":"69.95"},"ci":{"eci":["53.38","83.98"]}}
-{"key":"eci|Yi 6B","model":"Yi 6B","date":"2023-11-22","scores":{"eci":"94.06"},"ci":{"eci":["83.69","102.91"]}}
-{"key":"eci|Yi-9B","model":"Yi-9B","date":"2024-03-01","scores":{"eci":"102.06"},"ci":{"eci":["90.22","112.03"]}}
-{"key":"eci|chatglm2-6b","model":"chatglm2-6b","date":"2023-06-24","scores":{"eci":"73.4"},"ci":{"eci":["56.39","86.83"]}}
-{"key":"eci|gpt-oss-120b","model":"gpt-oss-120b","date":"2025-08-05","scores":{"eci":"140.23"},"ci":{"eci":["138.26","142.08"]}}
-{"key":"eci|gpt-oss-20b","model":"gpt-oss-20b","date":"2025-08-05","scores":{"eci":"134.88"},"ci":{"eci":["132.27","137.31"]}}
-{"key":"eci|internlm-20b","model":"internlm-20b","date":"2023-09-18","scores":{"eci":"98.79"},"ci":{"eci":["88.76","107.58"]}}
-{"key":"eci|internlm-7b","model":"internlm-7b","date":"2023-07-05","scores":{"eci":"84.31"},"ci":{"eci":["72.08","94.94"]}}
-{"key":"eci|o1","model":"o1","date":"2024-12-17","scores":{"eci":"141.18"},"ci":{"eci":["139.48","142.79"]}}
-{"key":"eci|o1-mini","model":"o1-mini","date":"2024-09-12","scores":{"eci":"135.28"},"ci":{"eci":["133.1","137.29"]}}
-{"key":"eci|o1-preview","model":"o1-preview","date":"2024-09-12","scores":{"eci":"133.54"},"ci":{"eci":["130.97","135.94"]}}
-{"key":"eci|o3","model":"o3","date":"2025-04-16","scores":{"eci":"147.05"},"ci":{"eci":["145.6","148.55"]}}
-{"key":"eci|o3-mini","model":"o3-mini","date":"2025-01-31","scores":{"eci":"140.65"},"ci":{"eci":["138.96","142.25"]}}
-{"key":"eci|o3-pro","model":"o3-pro","date":"2025-06-10","scores":{"eci":"147.46"},"ci":{"eci":["145.58","149.37"]}}
-{"key":"eci|o4-mini","model":"o4-mini","date":"2025-04-16","scores":{"eci":"145.22"},"ci":{"eci":["143.68","146.7"]}}
-{"key":"eci|open_llama_7b","model":"open_llama_7b","date":"2023-06-07","scores":{"eci":"63.91"},"ci":{"eci":["45.99","78.99"]}}
-{"key":"eci|phi-3-medium 14B","model":"phi-3-medium 14B","date":"2024-04-23","scores":{"eci":"114.01"},"ci":{"eci":["109.14","118.32"]}}
-{"key":"eci|phi-3-mini 3.8B","model":"phi-3-mini 3.8B","date":"2024-04-23","scores":{"eci":"110.4"},"ci":{"eci":["104.13","116.07"]}}
-{"key":"eci|phi-3-small 7.4B","model":"phi-3-small 7.4B","date":"2024-04-23","scores":{"eci":"116.26"},"ci":{"eci":["110.26","121.84"]}}
-{"key":"eci|vicuna-13b-v1.1","model":"vicuna-13b-v1.1","date":"2023-04-12","scores":{"eci":"75.78"},"ci":{"eci":["60.52","88.45"]}}
+{"key":"eci|GPT-5 Pro","model":"GPT-5 Pro","date":"2025-10-07","scores":{"eci":"151.3"},"ci":{"eci":["149.36","153.35"]}}
+{"key":"eci|GPT-5 mini","model":"GPT-5 mini","date":"2025-08-07","scores":{"eci":"146.04"},"ci":{"eci":["144.48","147.61"]}}
+{"key":"eci|GPT-5 nano","model":"GPT-5 nano","date":"2025-08-07","scores":{"eci":"139.07"},"ci":{"eci":["137.1","140.93"]}}
+{"key":"eci|GPT-5.1","model":"GPT-5.1","date":"2025-11-13","scores":{"eci":"150.93"},"ci":{"eci":["149.35","152.57"]}}
+{"key":"eci|GPT-5.2","model":"GPT-5.2","date":"2025-12-11","scores":{"eci":"154.53"},"ci":{"eci":["152.9","156.3"]}}
+{"key":"eci|GPT-5.2 Pro","model":"GPT-5.2 Pro","date":"2025-12-11","scores":{"eci":"157.35"},"ci":{"eci":["155.06","159.95"]}}
+{"key":"eci|GPT-5.4","model":"GPT-5.4","date":"2026-03-05","scores":{"eci":"157.89"},"ci":{"eci":["156.04","159.97"]}}
+{"key":"eci|GPT-5.4 Mini","model":"GPT-5.4 Mini","date":"2026-03-17","scores":{"eci":"149.37"},"ci":{"eci":["147.71","151.13"]}}
+{"key":"eci|GPT-5.4 Nano","model":"GPT-5.4 Nano","date":"2026-03-17","scores":{"eci":"146.36"},"ci":{"eci":["144.7","148.03"]}}
+{"key":"eci|GPT-5.4 Pro","model":"GPT-5.4 Pro","date":"2026-03-05","scores":{"eci":"160.31"},"ci":{"eci":["157.93","163.02"]}}
+{"key":"eci|GPT-5.5","model":"GPT-5.5","date":"2026-04-23","scores":{"eci":"160.19"},"ci":{"eci":["158.19","162.43"]}}
+{"key":"eci|GPT-5.5 Pro","model":"GPT-5.5 Pro","date":"2026-04-23","scores":{"eci":"162.78"},"ci":{"eci":["160.07","165.88"]}}
+{"key":"eci|GPT-5.6 Luna","model":"GPT-5.6 Luna","date":"2026-07-09","scores":{"eci":"156.72"},"ci":{"eci":["154.87","158.77"]}}
+{"key":"eci|GPT-5.6 Sol","model":"GPT-5.6 Sol","date":"2026-07-09","scores":{"eci":"163.02"},"ci":{"eci":["160.72","165.58"]}}
+{"key":"eci|GPT-5.6 Terra","model":"GPT-5.6 Terra","date":"2026-07-09","scores":{"eci":"160.8"},"ci":{"eci":["158.49","163.29"]}}
+{"key":"eci|GPT-6 Astra","model":"GPT-6 Astra","date":"2026-09-03","scores":{"eci":"169.21"},"ci":{"eci":["166.41","172.49"]}}
+{"key":"eci|GPT-6 Luna","model":"GPT-6 Luna","date":"2026-09-22","scores":{"eci":"156.45"},"ci":{"eci":["154.58","158.48"]}}
+{"key":"eci|GPT-6 Sol","model":"GPT-6 Sol","date":"2026-09-22","scores":{"eci":"163.83"},"ci":{"eci":["161.39","166.55"]}}
+{"key":"eci|GPT-6.1 Sol","model":"GPT-6.1 Sol","date":"2026-09-29","scores":{"eci":"168.61"},"ci":{"eci":["165.69","171.91"]}}
+{"key":"eci|GPT-6.1 Terra","model":"GPT-6.1 Terra","date":"2026-10-26","scores":{"eci":"167.71"},"ci":{"eci":["164.86","171.04"]}}
+{"key":"eci|GPT-6.2 Astra","model":"GPT-6.2 Astra","date":"2026-11-17","scores":{"eci":"172.82"},"ci":{"eci":["169.37","176.94"]}}
+{"key":"eci|Gemini 1.5 Flash (May 2024)","model":"Gemini 1.5 Flash (May 2024)","date":"2024-05-23","scores":{"eci":"120.58"},"ci":{"eci":["116.65","124.14"]}}
+{"key":"eci|Gemini 1.5 Flash (Sep 2024)","model":"Gemini 1.5 Flash (Sep 2024)","date":"2024-09-24","scores":{"eci":"126.98"},"ci":{"eci":["123.85","129.89"]}}
+{"key":"eci|Gemini 1.5 Pro (May 2024)","model":"Gemini 1.5 Pro (May 2024)","date":"2024-05-14","scores":{"eci":"125.39"},"ci":{"eci":["122.07","128.34"]}}
+{"key":"eci|Gemini 1.5 Pro (Sept 2024)","model":"Gemini 1.5 Pro (Sept 2024)","date":"2024-09-24","scores":{"eci":"130.45"},"ci":{"eci":["127.82","132.83"]}}
+{"key":"eci|Gemini 2.0 Flash (Feb 2025)","model":"Gemini 2.0 Flash (Feb 2025)","date":"2025-02-05","scores":{"eci":"134.02"},"ci":{"eci":["131.7","136.21"]}}
+{"key":"eci|Gemini 2.0 Flash Thinking (Jan 2025)","model":"Gemini 2.0 Flash Thinking (Jan 2025)","date":"2025-01-21","scores":{"eci":"133.63"},"ci":{"eci":["130.65","136.4"]}}
+{"key":"eci|Gemini 2.0 Pro","model":"Gemini 2.0 Pro","date":"2025-02-05","scores":{"eci":"135.4"},"ci":{"eci":["132.64","138.0"]}}
+{"key":"eci|Gemini 2.5 Flash (Apr 2025)","model":"Gemini 2.5 Flash (Apr 2025)","date":"2025-04-17","scores":{"eci":"140.69"},"ci":{"eci":["138.35","142.87"]}}
+{"key":"eci|Gemini 2.5 Flash (Jun 2025)","model":"Gemini 2.5 Flash (Jun 2025)","date":"2025-06-17","scores":{"eci":"140.79"},"ci":{"eci":["138.32","143.13"]}}
+{"key":"eci|Gemini 2.5 Flash (May 2025)","model":"Gemini 2.5 Flash (May 2025)","date":"2025-05-20","scores":{"eci":"141.57"},"ci":{"eci":["139.36","143.64"]}}
+{"key":"eci|Gemini 2.5 Flash (Sep 2025)","model":"Gemini 2.5 Flash (Sep 2025)","date":"2025-09-25","scores":{"eci":"141.88"},"ci":{"eci":["139.21","144.45"]}}
+{"key":"eci|Gemini 2.5 Flash-Lite (Jun 2025)","model":"Gemini 2.5 Flash-Lite (Jun 2025)","date":"2025-06-17","scores":{"eci":"133.04"},"ci":{"eci":["129.25","136.65"]}}
+{"key":"eci|Gemini 2.5 Pro (Jun 2025)","model":"Gemini 2.5 Pro (Jun 2025)","date":"2025-06-05","scores":{"eci":"144.88"},"ci":{"eci":["143.47","146.27"]}}
+{"key":"eci|Gemini 2.5 Pro (Mar 2025)","model":"Gemini 2.5 Pro (Mar 2025)","date":"2025-03-31","scores":{"eci":"143.98"},"ci":{"eci":["142.03","145.95"]}}
+{"key":"eci|Gemini 2.5 Pro (May 2025)","model":"Gemini 2.5 Pro (May 2025)","date":"2025-05-06","scores":{"eci":"140.63"},"ci":{"eci":["138.31","142.96"]}}
+{"key":"eci|Gemini 3 Flash","model":"Gemini 3 Flash","date":"2025-12-17","scores":{"eci":"152.35"},"ci":{"eci":["150.75","154.06"]}}
+{"key":"eci|Gemini 3 Pro","model":"Gemini 3 Pro","date":"2025-11-18","scores":{"eci":"153.04"},"ci":{"eci":["151.47","154.75"]}}
+{"key":"eci|Gemini 3.1 Flash-Lite","model":"Gemini 3.1 Flash-Lite","date":"2026-03-03","scores":{"eci":"144.97"},"ci":{"eci":["142.78","147.09"]}}
+{"key":"eci|Gemini 3.1 Pro","model":"Gemini 3.1 Pro","date":"2026-02-19","scores":{"eci":"156.25"},"ci":{"eci":["154.53","158.16"]}}
+{"key":"eci|Gemini 3.5 Flash","model":"Gemini 3.5 Flash","date":"2026-05-19","scores":{"eci":"155.34"},"ci":{"eci":["153.52","157.31"]}}
+{"key":"eci|Gemini 3.5 Flash-Lite","model":"Gemini 3.5 Flash-Lite","date":"2026-07-21","scores":{"eci":"145.63"},"ci":{"eci":["144.02","147.23"]}}
+{"key":"eci|Gemini 3.6 Flash","model":"Gemini 3.6 Flash","date":"2026-07-21","scores":{"eci":"155.24"},"ci":{"eci":["153.42","157.26"]}}
+{"key":"eci|Gemini 3.7 Flash","model":"Gemini 3.7 Flash","date":"2026-08-13","scores":{"eci":"158.4"},"ci":{"eci":["156.47","160.58"]}}
+{"key":"eci|Gemini 3.8 Flash","model":"Gemini 3.8 Flash","date":"2026-09-02","scores":{"eci":"158.81"},"ci":{"eci":["156.82","161.01"]}}
+{"key":"eci|Gemini 4 Argon","model":"Gemini 4 Argon","date":"2026-10-13","scores":{"eci":"166.53"},"ci":{"eci":["163.94","169.47"]}}
+{"key":"eci|Gemini 4 Carbon","model":"Gemini 4 Carbon","date":"2026-11-10","scores":{"eci":"169.68"},"ci":{"eci":["166.58","173.14"]}}
+{"key":"eci|Gemini 4 Hydrogen","model":"Gemini 4 Hydrogen","date":"2026-11-12","scores":{"eci":"166.81"},"ci":{"eci":["163.99","170.1"]}}
+{"key":"eci|Gemma 2 27B","model":"Gemma 2 27B","date":"2024-06-24","scores":{"eci":"118.64"},"ci":{"eci":["114.2","122.36"]}}
+{"key":"eci|Gemma 2 9B","model":"Gemma 2 9B","date":"2024-06-24","scores":{"eci":"112.42"},"ci":{"eci":["106.76","117.34"]}}
+{"key":"eci|Gemma 2B","model":"Gemma 2B","date":"2024-02-21","scores":{"eci":"75.71"},"ci":{"eci":["61.05","87.59"]}}
+{"key":"eci|Gemma 3 27B","model":"Gemma 3 27B","date":"2025-03-12","scores":{"eci":"127.56"},"ci":{"eci":["124.43","130.41"]}}
+{"key":"eci|Gemma 4 26B A4B","model":"Gemma 4 26B A4B","date":"2026-04-02","scores":{"eci":"141.56"},"ci":{"eci":["139.11","143.94"]}}
+{"key":"eci|Gemma 4 31B IT","model":"Gemma 4 31B IT","date":"2026-04-02","scores":{"eci":"144.12"},"ci":{"eci":["141.72","146.6"]}}
+{"key":"eci|Gemma 7B","model":"Gemma 7B","date":"2024-02-21","scores":{"eci":"103.15"},"ci":{"eci":["95.41","109.71"]}}
+{"key":"eci|Grok 3","model":"Grok 3","date":"2025-04-09","scores":{"eci":"137.55"},"ci":{"eci":["135.63","139.38"]}}
+{"key":"eci|Grok 4","model":"Grok 4","date":"2025-07-09","scores":{"eci":"146.91"},"ci":{"eci":["145.45","148.37"]}}
+{"key":"eci|Grok 4 Fast","model":"Grok 4 Fast","date":"2025-09-19","scores":{"eci":"144.32"},"ci":{"eci":["142.24","146.4"]}}
+{"key":"eci|Grok 4.20","model":"Grok 4.20","date":"2026-02-17","scores":{"eci":"152.26"},"ci":{"eci":["150.53","154.12"]}}
+{"key":"eci|Grok 4.3 Beta","model":"Grok 4.3 Beta","date":"2026-04-17","scores":{"eci":"149.92"},"ci":{"eci":["147.98","151.86"]}}
+{"key":"eci|Grok 4.5","model":"Grok 4.5","date":"2026-07-08","scores":{"eci":"154.98"},"ci":{"eci":["153.13","156.87"]}}
+{"key":"eci|Grok 4.6","model":"Grok 4.6","date":"2026-08-12","scores":{"eci":"157.82"},"ci":{"eci":["155.9","159.99"]}}
+{"key":"eci|Grok 4.7","model":"Grok 4.7","date":"2026-09-21","scores":{"eci":"156.43"},"ci":{"eci":["154.51","158.52"]}}
+{"key":"eci|Grok-2 (Dec 2024)","model":"Grok-2 (Dec 2024)","date":"2024-12-12","scores":{"eci":"129.79"},"ci":{"eci":["127.02","132.35"]}}
+{"key":"eci|Grok-3 mini","model":"Grok-3 mini","date":"2025-06-24","scores":{"eci":"139.88"},"ci":{"eci":["138.01","141.65"]}}
+{"key":"eci|INTELLECT-1","model":"INTELLECT-1","date":"2024-11-29","scores":{"eci":"83.35"},"ci":{"eci":["70.76","94.04"]}}
+{"key":"eci|Inkling","model":"Inkling","date":"2026-07-15","scores":{"eci":"148.39"},"ci":{"eci":["146.76","150.08"]}}
+{"key":"eci|Inkling-Small","model":"Inkling-Small","date":"2026-07-15","scores":{"eci":"150.77"},"ci":{"eci":["149.02","152.54"]}}
+{"key":"eci|Kimi K2 (Jul 2025)","model":"Kimi K2 (Jul 2025)","date":"2025-07-12","scores":{"eci":"141.27"},"ci":{"eci":["138.45","143.86"]}}
+{"key":"eci|Kimi K2 Thinking","model":"Kimi K2 Thinking","date":"2025-11-06","scores":{"eci":"145.46"},"ci":{"eci":["143.65","147.29"]}}
+{"key":"eci|Kimi K2.5","model":"Kimi K2.5","date":"2026-01-27","scores":{"eci":"148.79"},"ci":{"eci":["147.29","150.33"]}}
+{"key":"eci|Kimi K2.6","model":"Kimi K2.6","date":"2026-04-20","scores":{"eci":"151.6"},"ci":{"eci":["149.87","153.43"]}}
+{"key":"eci|Kimi K2.7 Code","model":"Kimi K2.7 Code","date":"2026-06-12","scores":{"eci":"151.17"},"ci":{"eci":["149.18","153.25"]}}
+{"key":"eci|Kimi K3","model":"Kimi K3","date":"2026-07-16","scores":{"eci":"158.61"},"ci":{"eci":["156.66","160.8"]}}
+{"key":"eci|Kimi K3.1 Pro","model":"Kimi K3.1 Pro","date":"2026-10-23","scores":{"eci":"161.2"},"ci":{"eci":["158.95","163.74"]}}
+{"key":"eci|LLaMA-13B","model":"LLaMA-13B","date":"2023-02-24","scores":{"eci":"85.23"},"ci":{"eci":["73.38","95.44"]}}
+{"key":"eci|LLaMA-33B","model":"LLaMA-33B","date":"2023-02-24","scores":{"eci":"96.51"},"ci":{"eci":["87.42","104.47"]}}
+{"key":"eci|LLaMA-65B","model":"LLaMA-65B","date":"2023-02-24","scores":{"eci":"101.51"},"ci":{"eci":["93.23","108.89"]}}
+{"key":"eci|LLaMA-7B","model":"LLaMA-7B","date":"2023-02-24","scores":{"eci":"77.28"},"ci":{"eci":["63.43","88.9"]}}
+{"key":"eci|Llama 2-13B","model":"Llama 2-13B","date":"2023-07-18","scores":{"eci":"96.48"},"ci":{"eci":["87.39","104.24"]}}
+{"key":"eci|Llama 2-34B","model":"Llama 2-34B","date":"2023-07-18","scores":{"eci":"93.89"},"ci":{"eci":["83.8","102.57"]}}
+{"key":"eci|Llama 2-70B","model":"Llama 2-70B","date":"2023-07-18","scores":{"eci":"105.73"},"ci":{"eci":["99.7","111.04"]}}
+{"key":"eci|Llama 2-7B","model":"Llama 2-7B","date":"2023-07-18","scores":{"eci":"83.23"},"ci":{"eci":["70.64","93.8"]}}
+{"key":"eci|Llama 3-70B","model":"Llama 3-70B","date":"2024-04-18","scores":{"eci":"121.33"},"ci":{"eci":["117.54","124.7"]}}
+{"key":"eci|Llama 3-8B","model":"Llama 3-8B","date":"2024-04-18","scores":{"eci":"109.12"},"ci":{"eci":["103.42","113.98"]}}
+{"key":"eci|Llama 3.1-405B","model":"Llama 3.1-405B","date":"2024-07-23","scores":{"eci":"127.92"},"ci":{"eci":["124.98","130.53"]}}
+{"key":"eci|Llama 3.1-70B","model":"Llama 3.1-70B","date":"2024-07-23","scores":{"eci":"124.7"},"ci":{"eci":["121.42","127.66"]}}
+{"key":"eci|Llama 3.1-8B","model":"Llama 3.1-8B","date":"2024-07-23","scores":{"eci":"110.9"},"ci":{"eci":["105.08","115.88"]}}
+{"key":"eci|Llama 3.2 90B","model":"Llama 3.2 90B","date":"2024-09-24","scores":{"eci":"122.92"},"ci":{"eci":["119.15","126.26"]}}
+{"key":"eci|Llama 3.3 70B","model":"Llama 3.3 70B","date":"2024-12-06","scores":{"eci":"126.18"},"ci":{"eci":["122.99","129.02"]}}
+{"key":"eci|Llama 4 Maverick","model":"Llama 4 Maverick","date":"2025-04-06","scores":{"eci":"132.19"},"ci":{"eci":["129.85","134.31"]}}
+{"key":"eci|Llama 4 Scout","model":"Llama 4 Scout","date":"2025-04-05","scores":{"eci":"127.75"},"ci":{"eci":["124.86","130.35"]}}
+{"key":"eci|MPT-30B","model":"MPT-30B","date":"2023-06-22","scores":{"eci":"85.19"},"ci":{"eci":["73.29","95.33"]}}
+{"key":"eci|MPT-7B","model":"MPT-7B","date":"2023-05-05","scores":{"eci":"73.39"},"ci":{"eci":["58.17","86.19"]}}
+{"key":"eci|MiniMax-M3","model":"MiniMax-M3","date":"2026-06-01","scores":{"eci":"147.84"},"ci":{"eci":["145.68","149.96"]}}
+{"key":"eci|Mistral 7B v0.1","model":"Mistral 7B v0.1","date":"2023-09-27","scores":{"eci":"102.72"},"ci":{"eci":["94.94","109.11"]}}
+{"key":"eci|Mistral Large","model":"Mistral Large","date":"2024-02-26","scores":{"eci":"119.97"},"ci":{"eci":["115.91","123.59"]}}
+{"key":"eci|Mistral Large 2 (Jul 2024)","model":"Mistral Large 2 (Jul 2024)","date":"2024-07-24","scores":{"eci":"126.4"},"ci":{"eci":["123.14","129.37"]}}
+{"key":"eci|Mistral Large 4","model":"Mistral Large 4","date":"2026-10-29","scores":{"eci":"154.57"},"ci":{"eci":["151.81","157.43"]}}
+{"key":"eci|Mistral Large 4 Preview","model":"Mistral Large 4 Preview","date":"2026-10-06","scores":{"eci":"152.74"},"ci":{"eci":["150.84","154.68"]}}
+{"key":"eci|Mistral Medium 3","model":"Mistral Medium 3","date":"2025-05-07","scores":{"eci":"132.8"},"ci":{"eci":["130.12","135.29"]}}
+{"key":"eci|Mistral Medium 3.5","model":"Mistral Medium 3.5","date":"2026-04-28","scores":{"eci":"141.58"},"ci":{"eci":["138.33","144.71"]}}
+{"key":"eci|Mistral NeMo","model":"Mistral NeMo","date":"2024-07-18","scores":{"eci":"113.87"},"ci":{"eci":["108.58","118.38"]}}
+{"key":"eci|Mixtral 8x22B","model":"Mixtral 8x22B","date":"2024-04-17","scores":{"eci":"118.71"},"ci":{"eci":["114.5","122.52"]}}
+{"key":"eci|Mixtral 8x7B","model":"Mixtral 8x7B","date":"2023-12-11","scores":{"eci":"113.19"},"ci":{"eci":["108.12","117.55"]}}
+{"key":"eci|Muse Spark","model":"Muse Spark","date":"2026-04-08","scores":{"eci":"153.15"},"ci":{"eci":["150.95","155.46"]}}
+{"key":"eci|Muse Spark 1.1","model":"Muse Spark 1.1","date":"2026-07-09","scores":{"eci":"154.94"},"ci":{"eci":["152.38","157.72"]}}
+{"key":"eci|Muse Spark 1.2","model":"Muse Spark 1.2","date":"2026-08-05","scores":{"eci":"155.02"},"ci":{"eci":["152.68","157.54"]}}
+{"key":"eci|Muse Spark 1.3","model":"Muse Spark 1.3","date":"2026-09-02","scores":{"eci":"158.24"},"ci":{"eci":["156.16","160.48"]}}
+{"key":"eci|Muse Spark Open","model":"Muse Spark Open","date":"2026-10-15","scores":{"eci":"155.47"},"ci":{"eci":["153.34","157.75"]}}
+{"key":"eci|Muse Wonder","model":"Muse Wonder","date":"2026-10-12","scores":{"eci":"161.74"},"ci":{"eci":["159.37","164.29"]}}
+{"key":"eci|Nemotron 3 Ultra","model":"Nemotron 3 Ultra","date":"2026-06-04","scores":{"eci":"147.02"},"ci":{"eci":["144.86","149.16"]}}
+{"key":"eci|Nemotron-4 15B","model":"Nemotron-4 15B","date":"2024-02-26","scores":{"eci":"99.14"},"ci":{"eci":["89.97","107.02"]}}
+{"key":"eci|PaLM 2-L","model":"PaLM 2-L","date":"2023-05-17","scores":{"eci":"113.98"},"ci":{"eci":["98.42","130.45"]}}
+{"key":"eci|PaLM 2-M","model":"PaLM 2-M","date":"2023-05-17","scores":{"eci":"97.86"},"ci":{"eci":["84.63","109.73"]}}
+{"key":"eci|PaLM 2-S","model":"PaLM 2-S","date":"2023-05-17","scores":{"eci":"93.84"},"ci":{"eci":["80.67","105.69"]}}
+{"key":"eci|Phi-1.5","model":"Phi-1.5","date":"2023-09-11","scores":{"eci":"68.37"},"ci":{"eci":["50.54","82.89"]}}
+{"key":"eci|Phi-2","model":"Phi-2","date":"2023-12-12","scores":{"eci":"96.21"},"ci":{"eci":["86.86","104.25"]}}
+{"key":"eci|Phi-4","model":"Phi-4","date":"2024-12-12","scores":{"eci":"129.24"},"ci":{"eci":["126.07","132.03"]}}
+{"key":"eci|QwQ-32B","model":"QwQ-32B","date":"2025-03-05","scores":{"eci":"136.44"},"ci":{"eci":["133.66","139.1"]}}
+{"key":"eci|Qwen 3.5 Flash (hosted 35B-A3B)","model":"Qwen 3.5 Flash (hosted 35B-A3B)","date":"2026-02-25","scores":{"eci":"143.83"},"ci":{"eci":["141.9","145.71"]}}
+{"key":"eci|Qwen 3.5 Plus (hosted 397B-A17B)","model":"Qwen 3.5 Plus (hosted 397B-A17B)","date":"2026-02-16","scores":{"eci":"147.29"},"ci":{"eci":["145.41","149.16"]}}
+{"key":"eci|Qwen 3.6 35B-A3B","model":"Qwen 3.6 35B-A3B","date":"2026-04-14","scores":{"eci":"144.07"},"ci":{"eci":["142.18","145.89"]}}
+{"key":"eci|Qwen 3.6 Flash","model":"Qwen 3.6 Flash","date":"2026-04-27","scores":{"eci":"143.73"},"ci":{"eci":["141.83","145.64"]}}
+{"key":"eci|Qwen 3.6 Max (Preview)","model":"Qwen 3.6 Max (Preview)","date":"2026-04-20","scores":{"eci":"149.86"},"ci":{"eci":["147.92","151.88"]}}
+{"key":"eci|Qwen 3.6 Plus","model":"Qwen 3.6 Plus","date":"2026-03-31","scores":{"eci":"148.87"},"ci":{"eci":["146.85","150.91"]}}
+{"key":"eci|Qwen 3.8 27B","model":"Qwen 3.8 27B","date":"2026-08-14","scores":{"eci":"152.63"},"ci":{"eci":["150.65","154.67"]}}
+{"key":"eci|Qwen 3.8 Max","model":"Qwen 3.8 Max","date":"2026-08-02","scores":{"eci":"157.55"},"ci":{"eci":["155.52","159.85"]}}
+{"key":"eci|Qwen-14B","model":"Qwen-14B","date":"2023-09-24","scores":{"eci":"101.76"},"ci":{"eci":["93.15","109.32"]}}
+{"key":"eci|Qwen-1_8B","model":"Qwen-1_8B","date":"2023-11-30","scores":{"eci":"59.62"},"ci":{"eci":["40.23","75.72"]}}
+{"key":"eci|Qwen-7B","model":"Qwen-7B","date":"2023-09-28","scores":{"eci":"89.14"},"ci":{"eci":["77.89","98.74"]}}
+{"key":"eci|Qwen2-72B","model":"Qwen2-72B","date":"2024-06-07","scores":{"eci":"122.35"},"ci":{"eci":["118.62","125.64"]}}
+{"key":"eci|Qwen2.5-72B","model":"Qwen2.5-72B","date":"2024-09-19","scores":{"eci":"127.23"},"ci":{"eci":["124.36","129.84"]}}
+{"key":"eci|Qwen2.5-Coder (1.5B)","model":"Qwen2.5-Coder (1.5B)","date":"2024-09-18","scores":{"eci":"89.12"},"ci":{"eci":["76.04","100.07"]}}
+{"key":"eci|Qwen2.5-Coder (7B)","model":"Qwen2.5-Coder (7B)","date":"2024-09-18","scores":{"eci":"107.42"},"ci":{"eci":["97.72","116.06"]}}
+{"key":"eci|Qwen2.5-Coder-0.5B","model":"Qwen2.5-Coder-0.5B","date":"2024-09-18","scores":{"eci":"68.08"},"ci":{"eci":["48.35","83.88"]}}
+{"key":"eci|Qwen2.5-Coder-14B","model":"Qwen2.5-Coder-14B","date":"2024-09-18","scores":{"eci":"113.74"},"ci":{"eci":["105.15","122.27"]}}
+{"key":"eci|Qwen2.5-Coder-32B","model":"Qwen2.5-Coder-32B","date":"2024-09-18","scores":{"eci":"118.73"},"ci":{"eci":["109.52","127.83"]}}
+{"key":"eci|Qwen2.5-Coder-3B","model":"Qwen2.5-Coder-3B","date":"2024-09-18","scores":{"eci":"96.75"},"ci":{"eci":["82.92","109.11"]}}
+{"key":"eci|Qwen2.5-Max","model":"Qwen2.5-Max","date":"2025-01-25","scores":{"eci":"131.17"},"ci":{"eci":["128.38","133.67"]}}
+{"key":"eci|Qwen3-14B","model":"Qwen3-14B","date":"2025-04-29","scores":{"eci":"136.06"},"ci":{"eci":["133.32","138.65"]}}
+{"key":"eci|Qwen3-235B-A22B","model":"Qwen3-235B-A22B","date":"2025-04-28","scores":{"eci":"138.4"},"ci":{"eci":["136.04","140.72"]}}
+{"key":"eci|Qwen3-235B-A22B-Instruct (Jul 2025)","model":"Qwen3-235B-A22B-Instruct (Jul 2025)","date":"2025-07-25","scores":{"eci":"138.03"},"ci":{"eci":["135.7","140.23"]}}
+{"key":"eci|Qwen3-235B-A22B-Thinking (Jul 2025)","model":"Qwen3-235B-A22B-Thinking (Jul 2025)","date":"2025-07-25","scores":{"eci":"143.23"},"ci":{"eci":["141.32","145.11"]}}
+{"key":"eci|Qwen3-30B-A3B","model":"Qwen3-30B-A3B","date":"2025-04-29","scores":{"eci":"134.16"},"ci":{"eci":["131.29","136.71"]}}
+{"key":"eci|Qwen3-30B-A3B-Instruct (Jul 2025)","model":"Qwen3-30B-A3B-Instruct (Jul 2025)","date":"2025-07-29","scores":{"eci":"134.87"},"ci":{"eci":["131.91","137.66"]}}
+{"key":"eci|Qwen3-30B-A3B-Thinking (Jul 2025)","model":"Qwen3-30B-A3B-Thinking (Jul 2025)","date":"2025-07-30","scores":{"eci":"138.32"},"ci":{"eci":["135.75","140.81"]}}
+{"key":"eci|Qwen3-32B","model":"Qwen3-32B","date":"2025-04-29","scores":{"eci":"136.85"},"ci":{"eci":["134.39","139.13"]}}
+{"key":"eci|Qwen3-8B","model":"Qwen3-8B","date":"2025-04-28","scores":{"eci":"132.07"},"ci":{"eci":["128.93","134.94"]}}
+{"key":"eci|Qwen3-Max","model":"Qwen3-Max","date":"2025-09-24","scores":{"eci":"142.43"},"ci":{"eci":["140.38","144.46"]}}
+{"key":"eci|Qwen3.5 397B-A17B","model":"Qwen3.5 397B-A17B","date":"2026-02-13","scores":{"eci":"147.96"},"ci":{"eci":["145.86","150.13"]}}
+{"key":"eci|Qwen3.5-35B-A3B","model":"Qwen3.5-35B-A3B","date":"2026-02-24","scores":{"eci":"144.05"},"ci":{"eci":["141.51","146.63"]}}
+{"key":"eci|Qwen3.5-9B","model":"Qwen3.5-9B","date":"2026-02-24","scores":{"eci":"139.5"},"ci":{"eci":["137.31","141.66"]}}
+{"key":"eci|Qwen3.6 27B","model":"Qwen3.6 27B","date":"2026-04-22","scores":{"eci":"146.72"},"ci":{"eci":["144.63","148.91"]}}
+{"key":"eci|Qwen3.7-Max","model":"Qwen3.7-Max","date":"2026-05-19","scores":{"eci":"154.57"},"ci":{"eci":["152.61","156.75"]}}
+{"key":"eci|Qwen3.7-Plus","model":"Qwen3.7-Plus","date":"2026-06-02","scores":{"eci":"147.92"},"ci":{"eci":["145.96","150.02"]}}
+{"key":"eci|Qwen3.8 Max (0902)","model":"Qwen3.8 Max (0902)","date":"2026-09-01","scores":{"eci":"155.99"},"ci":{"eci":["153.89","158.32"]}}
+{"key":"eci|RedPajama-INCITE-7B-Base","model":"RedPajama-INCITE-7B-Base","date":"2023-05-04","scores":{"eci":"57.7"},"ci":{"eci":["37.89","74.36"]}}
+{"key":"eci|Stable Beluga 2","model":"Stable Beluga 2","date":"2023-07-20","scores":{"eci":"109.4"},"ci":{"eci":["101.98","116.11"]}}
+{"key":"eci|StarCoder 2 15B","model":"StarCoder 2 15B","date":"2024-02-20","scores":{"eci":"96.09"},"ci":{"eci":["84.04","105.97"]}}
+{"key":"eci|StarCoder 2 3B","model":"StarCoder 2 3B","date":"2024-02-22","scores":{"eci":"66.64"},"ci":{"eci":["47.86","81.65"]}}
+{"key":"eci|StarCoder 2 7B","model":"StarCoder 2 7B","date":"2024-02-20","scores":{"eci":"72.4"},"ci":{"eci":["54.87","86.59"]}}
+{"key":"eci|XGen-7B","model":"XGen-7B","date":"2023-06-27","scores":{"eci":"70.29"},"ci":{"eci":["54.26","84.19"]}}
+{"key":"eci|Yi 6B","model":"Yi 6B","date":"2023-11-22","scores":{"eci":"94.27"},"ci":{"eci":["84.08","103.19"]}}
+{"key":"eci|Yi-9B","model":"Yi-9B","date":"2024-03-01","scores":{"eci":"102.18"},"ci":{"eci":["91.31","111.83"]}}
+{"key":"eci|chatglm2-6b","model":"chatglm2-6b","date":"2023-06-24","scores":{"eci":"73.74"},"ci":{"eci":["58.37","86.79"]}}
+{"key":"eci|gpt-oss-120b","model":"gpt-oss-120b","date":"2025-08-05","scores":{"eci":"140.21"},"ci":{"eci":["138.34","142.03"]}}
+{"key":"eci|gpt-oss-20b","model":"gpt-oss-20b","date":"2025-08-05","scores":{"eci":"134.89"},"ci":{"eci":["132.32","137.28"]}}
+{"key":"eci|internlm-20b","model":"internlm-20b","date":"2023-09-18","scores":{"eci":"98.9"},"ci":{"eci":["89.1","107.47"]}}
+{"key":"eci|internlm-7b","model":"internlm-7b","date":"2023-07-05","scores":{"eci":"84.56"},"ci":{"eci":["72.54","94.82"]}}
+{"key":"eci|o1","model":"o1","date":"2024-12-17","scores":{"eci":"141.16"},"ci":{"eci":["139.54","142.76"]}}
+{"key":"eci|o1-mini","model":"o1-mini","date":"2024-09-12","scores":{"eci":"135.27"},"ci":{"eci":["133.0","137.31"]}}
+{"key":"eci|o1-preview","model":"o1-preview","date":"2024-09-12","scores":{"eci":"133.58"},"ci":{"eci":["131.11","135.92"]}}
+{"key":"eci|o3","model":"o3","date":"2025-04-16","scores":{"eci":"147.02"},"ci":{"eci":["145.54","148.55"]}}
+{"key":"eci|o3-mini","model":"o3-mini","date":"2025-01-31","scores":{"eci":"140.63"},"ci":{"eci":["138.9","142.25"]}}
+{"key":"eci|o3-pro","model":"o3-pro","date":"2025-06-10","scores":{"eci":"147.47"},"ci":{"eci":["145.65","149.36"]}}
+{"key":"eci|o4-mini","model":"o4-mini","date":"2025-04-16","scores":{"eci":"145.21"},"ci":{"eci":["143.68","146.69"]}}
+{"key":"eci|open_llama_7b","model":"open_llama_7b","date":"2023-06-07","scores":{"eci":"64.37"},"ci":{"eci":["46.03","79.52"]}}
+{"key":"eci|phi-3-medium 14B","model":"phi-3-medium 14B","date":"2024-04-23","scores":{"eci":"114.07"},"ci":{"eci":["109.18","118.52"]}}
+{"key":"eci|phi-3-mini 3.8B","model":"phi-3-mini 3.8B","date":"2024-04-23","scores":{"eci":"110.45"},"ci":{"eci":["104.04","116.07"]}}
+{"key":"eci|phi-3-small 7.4B","model":"phi-3-small 7.4B","date":"2024-04-23","scores":{"eci":"116.3"},"ci":{"eci":["110.5","121.86"]}}
+{"key":"eci|vicuna-13b-v1.1","model":"vicuna-13b-v1.1","date":"2023-04-12","scores":{"eci":"76.11"},"ci":{"eci":["60.8","88.61"]}}
 {"key":"frontiermath_tier_4_v2|Inkling_xhigh","model":"Inkling_xhigh","model_label":"Inkling (xhigh)","date":"2026-08-06T20:14:32.000Z","scores":{"frontiermath_tier_4_v2":"0.04878048780487805"},"extra":{"mean_score":"0.04878048780487805","Release date":"2026-07-15","Organization":"Thinking Machines","Country":"United States of America","Training compute (FLOP)":"1.1e+25","Training compute notes":"6ND = 6 * 41e9 active parameters * 45e12 tokens = 1.1e25 FLOP","stderr":"0.03405912205797303","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FjvJPoRYkPH9Sb5MX252oHp.eval","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/jvJPoRYkPH9Sb5MX252oHp.eval","id":"jvJPoRYkPH9Sb5MX252oHp"}}
 {"key":"frontiermath_tier_4_v2|Muse-Spark-Open-816B-A42B_xhigh","model":"Muse-Spark-Open-816B-A42B_xhigh","model_label":"Muse Spark Open (xhigh)","date":"2026-10-15T18:52:04.000Z","scores":{"frontiermath_tier_4_v2":"0.3170731707317073"},"extra":{"mean_score":"0.3170731707317073","Release date":"2026-10-15","Organization":"Meta AI","Country":"United States of America","stderr":"0.07357611282438223","id":"YifYkfNddMSuE8uBNdbvLi"}}
 {"key":"frontiermath_tier_4_v2|claude-fable-5-1_max","model":"claude-fable-5-1_max","model_label":"Claude Fable 5.1 (max)","date":"2026-09-01T18:38:24.000Z","scores":{"frontiermath_tier_4_v2":"0.8780487804878049"},"extra":{"mean_score":"0.8780487804878049","Release date":"2026-09-01","Organization":"Anthropic","Country":"United States of America","stderr":"0.051739520574625435","id":"T56N3X4KLA3xz7tf5aCMGb"}}
@@ -488,6 +490,7 @@
 {"key":"frontiermath_tier_4_v2|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:14:57.000Z","scores":{"frontiermath_tier_4_v2":"0.7804878048780488"},"extra":{"mean_score":"0.7804878048780488","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.06544589202438408","id":"6FQCa8tMipf2ncdgGgMaPc"}}
 {"key":"frontiermath_tier_4_v2|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"frontiermath_tier_4_v2":"0.9512195121951219"},"extra":{"mean_score":"0.9512195121951219","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.03405912205797303","id":"EoJh9GX3nDzjzUihyCcgum"}}
 {"key":"frontiermath_tier_4_v2|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"frontiermath_tier_4_v2":"0.8780487804878049"},"extra":{"mean_score":"0.8780487804878049","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.051739520574625435","id":"97JLAf5nxpCG4VtCjAw2dd"}}
+{"key":"frontiermath_tier_4_v2|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"frontiermath_tier_4_v2":"0.975609756097561"},"extra":{"mean_score":"0.975609756097561","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.024390243902439025","id":"ggBaj5NDWieo5AzqCGA8DL"}}
 {"key":"frontiermath_tier_4_v2|glm-5.2_max","model":"glm-5.2_max","model_label":"GLM-5.2","date":"2026-06-19T16:13:05.000Z","scores":{"frontiermath_tier_4_v2":"0.2926829268292683"},"extra":{"mean_score":"0.2926829268292683","Release date":"2026-06-16","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.07194088392074452","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FJebA8dYLVov6H49ZQSLXh5.eval","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/JebA8dYLVov6H49ZQSLXh5.eval","id":"JebA8dYLVov6H49ZQSLXh5"}}
 {"key":"frontiermath_tier_4_v2|glm-5.3-flash_max","model":"glm-5.3-flash_max","model_label":"GLM-5.3-Flash (max)","date":"2026-08-27T13:29:52.000Z","scores":{"frontiermath_tier_4_v2":"0.17073170731707318"},"extra":{"mean_score":"0.17073170731707318","Release date":"2026-08-20","Organization":"Z.ai (Zhipu AI)","Country":"China","Training compute (FLOP)":"3.24e+24","Training compute notes":"6 * 18e9 active parameters * 30e12 tokens = 3.24e24 FLOP. \n\nhttps://docs.z.ai/guides/vlm/glm-5.3-flash says \"Combined with our latest 30T-token multimodal pre-training corpus, these changes let GLM-5.3-Flash produce more intelligence with less compute.\", which is not definitive in saying that all 30T tokens were used exactly once; likely confidence.","stderr":"0.05949419959829495","id":"iCysWvFJevNyw2dbYosU6J"}}
 {"key":"frontiermath_tier_4_v2|glm-5.3_max","model":"glm-5.3_max","model_label":"GLM-5.3 (max)","date":"2026-08-25T14:20:20.000Z","scores":{"frontiermath_tier_4_v2":"0.2926829268292683"},"extra":{"mean_score":"0.2926829268292683","Release date":"2026-08-14","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.07194088392074452","id":"4S3ZrJDkwh4gmGrmJQdvzR"}}
@@ -645,6 +648,7 @@
 {"key":"frontiermath_tiers_1_3_v2|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:14:57.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.8596491228070176"},"extra":{"mean_score":"0.8596491228070176","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.020611471958164294","id":"N8daAyKM6Sah39YBcPRi4W"}}
 {"key":"frontiermath_tiers_1_3_v2|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.9052631578947369"},"extra":{"mean_score":"0.9052631578947369","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.017377516319276178","id":"JnnzVGRaDN2iA7hD7Riuex"}}
 {"key":"frontiermath_tiers_1_3_v2|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.8807017543859649"},"extra":{"mean_score":"0.8807017543859649","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.019234118582140972","id":"PUv4VMj5JrczVYaVqeumJb"}}
+{"key":"frontiermath_tiers_1_3_v2|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.9122807017543859"},"extra":{"mean_score":"0.9122807017543859","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.016786209858442095","id":"QyysSvXXsJYV5iW59pXS6M"}}
 {"key":"frontiermath_tiers_1_3_v2|glm-5.1","model":"glm-5.1","model_label":"GLM-5.1","date":"2026-08-29T11:06:22.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.3684210526315789"},"extra":{"mean_score":"0.3684210526315789","Release date":"2026-04-07","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.028623772537150215","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FMhwme9odWJMzMjoYkW8r6B.eval","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/Mhwme9odWJMzMjoYkW8r6B.eval","id":"Mhwme9odWJMzMjoYkW8r6B"}}
 {"key":"frontiermath_tiers_1_3_v2|glm-5.1_none","model":"glm-5.1_none","date":"2026-08-28T12:30:03.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.24912280701754386"},"extra":{"mean_score":"0.24912280701754386","Release date":"2026-04-07","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.02566445410232946","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2F4hmmfwG9tgZJvKhL78nKzL.eval","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/4hmmfwG9tgZJvKhL78nKzL.eval","id":"4hmmfwG9tgZJvKhL78nKzL"}}
 {"key":"frontiermath_tiers_1_3_v2|glm-5.2_low","model":"glm-5.2_low","model_label":"GLM-5.2","date":"2026-08-29T11:07:19.000Z","scores":{"frontiermath_tiers_1_3_v2":"0.5473684210526316"},"extra":{"mean_score":"0.5473684210526316","Release date":"2026-06-16","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.0295360982699221","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FUnKHyc2idtTmoTUGxGeNJV.eval","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/UnKHyc2idtTmoTUGxGeNJV.eval","id":"UnKHyc2idtTmoTUGxGeNJV"}}
@@ -857,6 +861,7 @@
 {"key":"furniture_assembly|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:15:28.000Z","scores":{"furniture_assembly":"0.725"},"extra":{"mean_score":"0.725","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.056279417919483966","id":"bRw53PXBsZXrvWau95hb23"}}
 {"key":"furniture_assembly|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-03T02:30:44.000Z","scores":{"furniture_assembly":"0.775"},"extra":{"mean_score":"0.775","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.053711144147650755","id":"QtRN54kxbyiDYtfUxsU2DS"}}
 {"key":"furniture_assembly|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:11.000Z","scores":{"furniture_assembly":"0.575"},"extra":{"mean_score":"0.575","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.06269038798542174","id":"gJMGUs7E6wPwrgqQ9i4KaU"}}
+{"key":"furniture_assembly|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:52.000Z","scores":{"furniture_assembly":"0.8916666666666667"},"extra":{"mean_score":"0.8916666666666667","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.03958054554560084","id":"YPjCpLePrMUYrSLAUtKcVb"}}
 {"key":"furniture_assembly|gpt-5.2-2025-12-11_xhigh","model":"gpt-5.2-2025-12-11_xhigh","model_label":"GPT-5.2 (xhigh)","date":"2026-09-10T20:22:18.000Z","scores":{"furniture_assembly":"0.38333333333333336"},"extra":{"mean_score":"0.38333333333333336","Release date":"2025-12-11","Organization":"OpenAI","Country":"United States of America","stderr":"0.06329764084940143","id":"9te7vbqxpjSaQgHagpaTFg"}}
 {"key":"furniture_assembly|gpt-5.4-2026-03-05_xhigh","model":"gpt-5.4-2026-03-05_xhigh","model_label":"GPT-5.4 (xhigh)","date":"2026-09-10T20:22:11.000Z","scores":{"furniture_assembly":"0.375"},"extra":{"mean_score":"0.375","Release date":"2026-03-05","Organization":"OpenAI","Country":"United States of America","stderr":"0.06246467928511352","id":"bJ5Pg8JiLzP3Wfoo9M9TxF"}}
 {"key":"furniture_assembly|gpt-5.5_xhigh","model":"gpt-5.5_xhigh","model_label":"GPT-5.5 (xhigh)","date":"2026-09-10T20:22:27.000Z","scores":{"furniture_assembly":"0.44166666666666665"},"extra":{"mean_score":"0.44166666666666665","Release date":"2026-04-23","Organization":"OpenAI","Country":"United States of America","stderr":"0.06410142328406845","id":"o7rYVQWSXeZPkF2Smwo9h8"}}
@@ -1027,6 +1032,7 @@
 {"key":"gpqa_diamond|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:15:08.000Z","scores":{"gpqa_diamond":"0.9640151515151515"},"extra":{"mean_score":"0.9640151515151515","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.011918129589602694","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FQEouTvczNsxgkR4i7i8wBF.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/QEouTvczNsxgkR4i7i8wBF.eval","id":"QEouTvczNsxgkR4i7i8wBF"}}
 {"key":"gpqa_diamond|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"gpqa_diamond":"0.9652777777777778"},"extra":{"mean_score":"0.9652777777777778","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.01207061012675132","id":"WENgYzpWRPdrFHwWWiYAhZ"}}
 {"key":"gpqa_diamond|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"gpqa_diamond":"0.9678030303030303"},"extra":{"mean_score":"0.9678030303030303","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.011702287369004602","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FXRQWGQeJDNvVcvSYCn247P.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/XRQWGQeJDNvVcvSYCn247P.eval","id":"XRQWGQeJDNvVcvSYCn247P"}}
+{"key":"gpqa_diamond|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"gpqa_diamond":"0.9627525252525253"},"extra":{"mean_score":"0.9627525252525253","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.012868846530972452","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FoRxFiWKdd7DmcfFkg999ph.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/oRxFiWKdd7DmcfFkg999ph.eval","id":"oRxFiWKdd7DmcfFkg999ph"}}
 {"key":"gpqa_diamond|gemma-2-27b-it","model":"gemma-2-27b-it","date":"2025-01-27T00:00:00.000Z","scores":{"gpqa_diamond":"0.3648989898989899"},"extra":{"mean_score":"0.3648989898989899","Release date":"2024-06-24","Organization":"Google DeepMind","Country":"United States of America","Training compute (FLOP)":"2.106e+24","Training compute notes":"\"For the 27B model, we train on an 8x24x32 configuration of\nTPUv5p, totaling 6144 chips\"\n\ntrained on 13T tokens\n\n6ND = 6*27000000000*13000000000000=2.106e+24","stderr":"0.023897884428691632","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FZUJxsJDpHnLXxNiDcvj22W.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/ZUJxsJDpHnLXxNiDcvj22W.eval","id":"ZUJxsJDpHnLXxNiDcvj22W"}}
 {"key":"gpqa_diamond|gemma-2-9b-it","model":"gemma-2-9b-it","date":"2025-01-27T00:00:00.000Z","scores":{"gpqa_diamond":"0.2746212121212121"},"extra":{"mean_score":"0.2746212121212121","Release date":"2024-06-24","Organization":"Google DeepMind","Country":"United States of America","Training compute (FLOP)":"4.32e+23","Training compute notes":"\"For the 9B model, we train on an 8x16x32 configuration of TPUv4, totaling 4096 chips\"\n\n6ND = 6 FLOP / token / parameter * 9000000000 parameters * 8000000000000 tokens = 4.32e+23 FLOP","stderr":"0.023032467954778795","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FfQjoHKyUEPAuwdrBGfL8SG.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/fQjoHKyUEPAuwdrBGfL8SG.eval","id":"fQjoHKyUEPAuwdrBGfL8SG"}}
 {"key":"gpqa_diamond|gemma-3-12b-it","model":"gemma-3-12b-it","date":"2026-08-28T08:22:17.000Z","scores":{"gpqa_diamond":"0.39457070707070707"},"extra":{"mean_score":"0.39457070707070707","Release date":"2025-03-12","Organization":"Google DeepMind","Country":"United States of America","Training compute (FLOP)":"8.64e+23","Training compute notes":"6ND = 6 * 12B parameters * 12T training tokens = 8.64 × 10^23 FLOP","stderr":"0.025254327795483048","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FKfQKr2ibCFMx5xBELoiM3Y.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/KfQKr2ibCFMx5xBELoiM3Y.eval","id":"KfQKr2ibCFMx5xBELoiM3Y"}}
@@ -1424,6 +1430,7 @@
 {"key":"mystery_game_puzzles|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:14:57.000Z","scores":{"mystery_game_puzzles":"0.64"},"extra":{"mean_score":"0.64","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.048241815132442176","id":"9ipFgNR5MDw7ustUsuSviu"}}
 {"key":"mystery_game_puzzles|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"mystery_game_puzzles":"0.73"},"extra":{"mean_score":"0.73","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.04461960433384737","id":"9eupjG2agETHoQAQtiZGX4"}}
 {"key":"mystery_game_puzzles|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"mystery_game_puzzles":"0.65"},"extra":{"mean_score":"0.65","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.047937248544110224","id":"CqK8FKrkxDUUkLG5tjwrLo"}}
+{"key":"mystery_game_puzzles|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"mystery_game_puzzles":"0.85"},"extra":{"mean_score":"0.85","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.03588702812826367","id":"mJRYugfe4i489xxrkjRLtK"}}
 {"key":"mystery_game_puzzles|glm-5.2_low","model":"glm-5.2_low","model_label":"GLM-5.2","date":"2026-08-27T18:13:46.000Z","scores":{"mystery_game_puzzles":"0.19"},"extra":{"mean_score":"0.19","Release date":"2026-06-16","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.039427724440366255","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/7DQNxGG5q6i7VtnzF7vNxA.eval","id":"7DQNxGG5q6i7VtnzF7vNxA"}}
 {"key":"mystery_game_puzzles|glm-5.2_medium","model":"glm-5.2_medium","model_label":"GLM-5.2","date":"2026-08-27T18:36:04.000Z","scores":{"mystery_game_puzzles":"0.15"},"extra":{"mean_score":"0.15","Release date":"2026-06-16","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.03588702812826367","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/NfN7VwMPjSVqViqrBQPWk2.eval","id":"NfN7VwMPjSVqViqrBQPWk2"}}
 {"key":"mystery_game_puzzles|glm-5.2_minimal","model":"glm-5.2_minimal","date":"2026-08-27T18:01:49.000Z","scores":{"mystery_game_puzzles":"0.18"},"extra":{"mean_score":"0.18","Release date":"2026-06-16","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.03861229196653691","Logs":"https://epoch-benchmarks-staging-private.s3.us-east-2.amazonaws.com/inspect_ai_logs/aekViWbdqVVeXpEG5hrSbQ.eval","id":"aekViWbdqVVeXpEG5hrSbQ"}}
@@ -1663,6 +1670,7 @@
 {"key":"otis_mock_aime_2024_2025|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:14:57.000Z","scores":{"otis_mock_aime_2024_2025":"1.0"},"extra":{"mean_score":"1.0","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.0","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2F43f36RTDoJGxXWQDVvTLJj.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/43f36RTDoJGxXWQDVvTLJj.eval","id":"43f36RTDoJGxXWQDVvTLJj"}}
 {"key":"otis_mock_aime_2024_2025|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"otis_mock_aime_2024_2025":"1.0"},"extra":{"mean_score":"1.0","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.0","id":"GF3Y2ANv3WPhb8Rq28HAit"}}
 {"key":"otis_mock_aime_2024_2025|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"otis_mock_aime_2024_2025":"1.0"},"extra":{"mean_score":"1.0","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.0","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2F4UjF9rJBYSXuztFtjTmPWS.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/4UjF9rJBYSXuztFtjTmPWS.eval","id":"4UjF9rJBYSXuztFtjTmPWS"}}
+{"key":"otis_mock_aime_2024_2025|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"otis_mock_aime_2024_2025":"1.0"},"extra":{"mean_score":"1.0","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.0","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FYsAqrfCM6uNnSuhZn6VWg5.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/YsAqrfCM6uNnSuhZn6VWg5.eval","id":"YsAqrfCM6uNnSuhZn6VWg5"}}
 {"key":"otis_mock_aime_2024_2025|gemma-2-27b-it","model":"gemma-2-27b-it","date":"2025-03-07T23:11:28.104Z","scores":{"otis_mock_aime_2024_2025":"0.013888888888888888"},"extra":{"mean_score":"0.013888888888888888","Release date":"2024-06-24","Organization":"Google DeepMind","Country":"United States of America","Training compute (FLOP)":"2.106e+24","Training compute notes":"\"For the 27B model, we train on an 8x24x32 configuration of\nTPUv5p, totaling 6144 chips\"\n\ntrained on 13T tokens\n\n6ND = 6*27000000000*13000000000000=2.106e+24","stderr":"0.00907862525871088","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FjD6rJdvfNPErKEz9qkpssj.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/jD6rJdvfNPErKEz9qkpssj.eval","id":"jD6rJdvfNPErKEz9qkpssj"}}
 {"key":"otis_mock_aime_2024_2025|gemma-2-9b-it","model":"gemma-2-9b-it","date":"2025-03-07T23:11:27.610Z","scores":{"otis_mock_aime_2024_2025":"0.005555555555555556"},"extra":{"mean_score":"0.005555555555555556","Release date":"2024-06-24","Organization":"Google DeepMind","Country":"United States of America","Training compute (FLOP)":"4.32e+23","Training compute notes":"\"For the 9B model, we train on an 8x16x32 configuration of TPUv4, totaling 4096 chips\"\n\n6ND = 6 FLOP / token / parameter * 9000000000 parameters * 8000000000000 tokens = 4.32e+23 FLOP","stderr":"0.003883473863441843","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FWNE7cveVN8rsi7DmsFsFVy.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/WNE7cveVN8rsi7DmsFsFVy.eval","id":"WNE7cveVN8rsi7DmsFsFVy"}}
 {"key":"otis_mock_aime_2024_2025|gemma-3-12b-it","model":"gemma-3-12b-it","date":"2026-08-28T08:22:55.000Z","scores":{"otis_mock_aime_2024_2025":"0.16666666666666666"},"extra":{"mean_score":"0.16666666666666666","Release date":"2025-03-12","Organization":"Google DeepMind","Country":"United States of America","Training compute (FLOP)":"8.64e+23","Training compute notes":"6ND = 6 * 12B parameters * 12T training tokens = 8.64 × 10^23 FLOP","stderr":"0.0424174778156649","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FCAyLyhDHZiMQBZDB3qd8tG.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/CAyLyhDHZiMQBZDB3qd8tG.eval","id":"CAyLyhDHZiMQBZDB3qd8tG"}}
@@ -1884,6 +1892,7 @@
 {"key":"simpleqa_verified|gemini-4-argon_high","model":"gemini-4-argon_high","model_label":"Gemini 4 Argon (high)","date":"2026-10-13T17:15:14.000Z","scores":{"simpleqa_verified":"0.76"},"extra":{"mean_score":"0.76","Release date":"2026-10-13","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.013512312258920845","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2Fiq4Y9tXpiyLP25yotySxJW.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/iq4Y9tXpiyLP25yotySxJW.eval","id":"iq4Y9tXpiyLP25yotySxJW"}}
 {"key":"simpleqa_verified|gemini-4-carbon_high","model":"gemini-4-carbon_high","model_label":"Gemini 4 Carbon (high)","date":"2026-11-02T23:17:42.000Z","scores":{"simpleqa_verified":"0.777"},"extra":{"mean_score":"0.777","Release date":"2026-11-10","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.013169830843425608","id":"CUUbVTzr7whCGEzPgrTozQ"}}
 {"key":"simpleqa_verified|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","model_label":"Gemini 4 Hydrogen (xhigh)","date":"2026-11-13T22:31:13.000Z","scores":{"simpleqa_verified":"0.709"},"extra":{"mean_score":"0.709","Release date":"2026-11-12","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.014370995982378034","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FBTWvEjbekh8TC7kWurJnrR.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/BTWvEjbekh8TC7kWurJnrR.eval","id":"BTWvEjbekh8TC7kWurJnrR"}}
+{"key":"simpleqa_verified|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","model_label":"Gemini 4 Neon (xhigh)","date":"2026-11-19T21:24:50.000Z","scores":{"simpleqa_verified":"0.752"},"extra":{"mean_score":"0.752","Release date":"2026-11-18","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.01366318713487752","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FoNv3qiZwkezTmFHngNKsne.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/oNv3qiZwkezTmFHngNKsne.eval","id":"oNv3qiZwkezTmFHngNKsne"}}
 {"key":"simpleqa_verified|gemma-4-31b-it","model":"gemma-4-31b-it","model_label":"Gemma 4 31B IT","date":"2026-08-27T19:30:07.000Z","scores":{"simpleqa_verified":"0.104"},"extra":{"mean_score":"0.104","Release date":"2026-04-02","Organization":"Google DeepMind","Country":"United States of America","stderr":"0.009658016218524242","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FD5cbXacPnJ8akq2jAtifEQ.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/D5cbXacPnJ8akq2jAtifEQ.eval","id":"D5cbXacPnJ8akq2jAtifEQ"}}
 {"key":"simpleqa_verified|glm-4.7","model":"glm-4.7","model_label":"GLM-4.7","date":"2026-08-27T19:36:02.000Z","scores":{"simpleqa_verified":"0.322"},"extra":{"mean_score":"0.322","Release date":"2025-12-22","Organization":"Z.ai (Zhipu AI)","Country":"China","Training compute (FLOP)":"4.42e+24","Training compute notes":"Training tokens not disclosed.\n\nPresuming this is a post-training update from GLM-4.5 (23T tokens) with minor additional compute, training compute is at least:\n\n6 FLOP/parameter/token * 32B active parameters * 23T tokens = 4.42e24 FLOP","stderr":"0.014782913600996744","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FaYau6EG7CCaWVSyVq3vvQc.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/aYau6EG7CCaWVSyVq3vvQc.eval","id":"aYau6EG7CCaWVSyVq3vvQc"}}
 {"key":"simpleqa_verified|glm-5.1","model":"glm-5.1","model_label":"GLM-5.1","date":"2026-08-27T19:36:21.000Z","scores":{"simpleqa_verified":"0.34"},"extra":{"mean_score":"0.34","Release date":"2026-04-07","Organization":"Z.ai (Zhipu AI)","Country":"China","stderr":"0.014987482264363972","Log viewer":"https://logs.epoch.ai/inspect-viewer/36231d6d/viewer.html?log_file=https%3A%2F%2Flogs.epoch.ai%2Finspect_ai_logs%2FR2fMFAtRXah864hMifdQGV.eval","Logs":"https://epoch-benchmarks-production-public.s3.us-east-2.amazonaws.com/inspect_ai_logs/R2fMFAtRXah864hMifdQGV.eval","id":"R2fMFAtRXah864hMifdQGV"}}

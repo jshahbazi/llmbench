@@ -270,3 +270,246 @@
 {"t":"2026-11-19T20:45:44Z","key":"mirrorcode|kimi-k3.1-pro-together_max","model":"kimi-k3.1-pro-together_max","metric":"mirrorcode","op":"add","to":"0.43333333333333335"}
 {"t":"2026-11-19T20:45:44Z","key":"spireclimb|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","metric":"spireclimb","op":"add","to":"0.07666666666666667"}
 {"t":"2026-11-19T20:45:44Z","key":"spireclimb|kimi-k3.1-pro-together_max","model":"kimi-k3.1-pro-together_max","metric":"spireclimb","op":"add","to":"0.0"}
+{"t":"2026-11-21T07:21:20Z","key":"gpqa_diamond|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"gpqa_diamond","op":"add","to":"0.9627525252525253"}
+{"t":"2026-11-21T07:21:20Z","key":"frontiermath_tiers_1_3_v2|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"frontiermath_tiers_1_3_v2","op":"add","to":"0.9122807017543859"}
+{"t":"2026-11-21T07:21:20Z","key":"frontiermath_tier_4_v2|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"frontiermath_tier_4_v2","op":"add","to":"0.975609756097561"}
+{"t":"2026-11-21T07:21:20Z","key":"otis_mock_aime_2024_2025|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"otis_mock_aime_2024_2025","op":"add","to":"1.0"}
+{"t":"2026-11-21T07:21:20Z","key":"simpleqa_verified|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"simpleqa_verified","op":"add","to":"0.752"}
+{"t":"2026-11-21T07:21:20Z","key":"chess_puzzles|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"chess_puzzles","op":"add","to":"0.83"}
+{"t":"2026-11-21T07:21:20Z","key":"mystery_game_puzzles|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"mystery_game_puzzles","op":"add","to":"0.85"}
+{"t":"2026-11-21T07:21:20Z","key":"furniture_assembly|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"furniture_assembly","op":"add","to":"0.8916666666666667"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Fable 5.2","model":"Claude Fable 5.2","metric":"eci","op":"change","from":"173.5","to":"173.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-6.2 Astra","model":"GPT-6.2 Astra","metric":"eci","op":"change","from":"174.17","to":"172.82"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 4 Carbon","model":"Gemini 4 Carbon","metric":"eci","op":"change","from":"169.78","to":"169.68"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-6 Astra","model":"GPT-6 Astra","metric":"eci","op":"change","from":"169.2","to":"169.21"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 5.5","model":"Claude Opus 5.5","metric":"eci","op":"change","from":"168.7","to":"168.67"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-6.1 Sol","model":"GPT-6.1 Sol","metric":"eci","op":"change","from":"168.63","to":"168.61"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-6.1 Terra","model":"GPT-6.1 Terra","metric":"eci","op":"change","from":"167.72","to":"167.71"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Fable 5.1","model":"Claude Fable 5.1","metric":"eci","op":"change","from":"167.09","to":"167.06"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 4 Hydrogen","model":"Gemini 4 Hydrogen","metric":"eci","op":"add","to":"166.81"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Sonnet 5.5","model":"Claude Sonnet 5.5","metric":"eci","op":"change","from":"166.59","to":"166.6"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 4 Argon","model":"Gemini 4 Argon","metric":"eci","op":"change","from":"166.57","to":"166.53"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 5","model":"Claude Opus 5","metric":"eci","op":"change","from":"164.74","to":"164.72"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Fable 5","model":"Claude Fable 5","metric":"eci","op":"change","from":"164.21","to":"164.18"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-6 Sol","model":"GPT-6 Sol","metric":"eci","op":"change","from":"163.82","to":"163.83"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.6 Sol","model":"GPT-5.6 Sol","metric":"eci","op":"change","from":"163.05","to":"163.02"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.5 Pro","model":"GPT-5.5 Pro","metric":"eci","op":"change","from":"162.77","to":"162.78"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K3.1 Pro","model":"Kimi K3.1 Pro","metric":"eci","op":"change","from":"161.36","to":"161.2"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.6 Terra","model":"GPT-5.6 Terra","metric":"eci","op":"change","from":"160.78","to":"160.8"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Haiku 5.5","model":"Claude Haiku 5.5","metric":"eci","op":"change","from":"160.29","to":"160.33"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.4 Pro","model":"GPT-5.4 Pro","metric":"eci","op":"change","from":"160.32","to":"160.31"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 4.8","model":"Claude Opus 4.8","metric":"eci","op":"change","from":"159.91","to":"159.9"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek V4.1 Flash 1017","model":"DeepSeek V4.1 Flash 1017","metric":"eci","op":"change","from":"159.4","to":"159.41"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 3.8 Flash","model":"Gemini 3.8 Flash","metric":"eci","op":"change","from":"158.83","to":"158.81"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K3","model":"Kimi K3","metric":"eci","op":"change","from":"158.6","to":"158.61"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 3.7 Flash","model":"Gemini 3.7 Flash","metric":"eci","op":"change","from":"158.38","to":"158.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Muse Spark 1.3","model":"Muse Spark 1.3","metric":"eci","op":"change","from":"158.25","to":"158.24"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.4","model":"GPT-5.4","metric":"eci","op":"change","from":"157.87","to":"157.89"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.8 Max","model":"Qwen 3.8 Max","metric":"eci","op":"change","from":"157.59","to":"157.55"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 4.7","model":"Claude Opus 4.7","metric":"eci","op":"change","from":"157.5","to":"157.49"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.2 Pro","model":"GPT-5.2 Pro","metric":"eci","op":"change","from":"157.31","to":"157.35"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek V4.1 Flash","model":"DeepSeek V4.1 Flash","metric":"eci","op":"change","from":"157.0","to":"157.01"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.6 Luna","model":"GPT-5.6 Luna","metric":"eci","op":"change","from":"156.7","to":"156.72"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-6 Luna","model":"GPT-6 Luna","metric":"eci","op":"change","from":"156.39","to":"156.45"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 4.6","model":"Claude Opus 4.6","metric":"eci","op":"change","from":"156.35","to":"156.33"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.8 Max (0902)","model":"Qwen3.8 Max (0902)","metric":"eci","op":"change","from":"155.98","to":"155.99"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Muse Spark Open","model":"Muse Spark Open","metric":"eci","op":"change","from":"155.45","to":"155.47"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 3.5 Flash","model":"Gemini 3.5 Flash","metric":"eci","op":"change","from":"155.35","to":"155.34"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Muse Spark 1.2","model":"Muse Spark 1.2","metric":"eci","op":"change","from":"155.06","to":"155.02"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok 4.5","model":"Grok 4.5","metric":"eci","op":"change","from":"154.97","to":"154.98"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Muse Spark 1.1","model":"Muse Spark 1.1","metric":"eci","op":"change","from":"154.92","to":"154.94"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral Large 4","model":"Mistral Large 4","metric":"eci","op":"change","from":"154.56","to":"154.57"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.7-Max","model":"Qwen3.7-Max","metric":"eci","op":"change","from":"154.58","to":"154.57"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.2","model":"GPT-5.2","metric":"eci","op":"change","from":"154.52","to":"154.53"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GLM-5.3-Flash","model":"GLM-5.3-Flash","metric":"eci","op":"change","from":"153.78","to":"153.77"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Muse Spark","model":"Muse Spark","metric":"eci","op":"change","from":"153.16","to":"153.15"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GLM-5.2","model":"GLM-5.2","metric":"eci","op":"change","from":"153.04","to":"153.07"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Sonnet 4.6","model":"Claude Sonnet 4.6","metric":"eci","op":"change","from":"152.86","to":"152.85"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral Large 4 Preview","model":"Mistral Large 4 Preview","metric":"eci","op":"change","from":"152.71","to":"152.74"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.8 27B","model":"Qwen 3.8 27B","metric":"eci","op":"change","from":"152.65","to":"152.63"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 3 Flash","model":"Gemini 3 Flash","metric":"eci","op":"change","from":"152.34","to":"152.35"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok 4.20","model":"Grok 4.20","metric":"eci","op":"change","from":"152.3","to":"152.26"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 4.5","model":"Claude Opus 4.5","metric":"eci","op":"change","from":"151.88","to":"151.87"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K2.6","model":"Kimi K2.6","metric":"eci","op":"change","from":"151.62","to":"151.6"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5 Pro","model":"GPT-5 Pro","metric":"eci","op":"change","from":"151.27","to":"151.3"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K2.7 Code","model":"Kimi K2.7 Code","metric":"eci","op":"change","from":"151.15","to":"151.17"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.1","model":"GPT-5.1","metric":"eci","op":"change","from":"150.97","to":"150.93"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Beam 1.0","model":"Beam 1.0","metric":"eci","op":"change","from":"150.87","to":"150.84"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Inkling-Small","model":"Inkling-Small","metric":"eci","op":"change","from":"150.78","to":"150.77"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GLM-5.1","model":"GLM-5.1","metric":"eci","op":"change","from":"150.73","to":"150.71"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-V4-Pro","model":"DeepSeek-V4-Pro","metric":"eci","op":"change","from":"150.21","to":"150.19"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok 4.3 Beta","model":"Grok 4.3 Beta","metric":"eci","op":"change","from":"149.91","to":"149.92"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.6 Max (Preview)","model":"Qwen 3.6 Max (Preview)","metric":"eci","op":"change","from":"149.88","to":"149.86"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.4 Mini","model":"GPT-5.4 Mini","metric":"eci","op":"change","from":"149.35","to":"149.37"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.6 Plus","model":"Qwen 3.6 Plus","metric":"eci","op":"change","from":"148.91","to":"148.87"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K2.5","model":"Kimi K2.5","metric":"eci","op":"change","from":"148.8","to":"148.79"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Inkling","model":"Inkling","metric":"eci","op":"change","from":"148.43","to":"148.39"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.5 397B-A17B","model":"Qwen3.5 397B-A17B","metric":"eci","op":"change","from":"147.95","to":"147.96"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.7-Plus","model":"Qwen3.7-Plus","metric":"eci","op":"change","from":"147.95","to":"147.92"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|MiniMax-M3","model":"MiniMax-M3","metric":"eci","op":"change","from":"147.9","to":"147.84"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Sonnet 4.5","model":"Claude Sonnet 4.5","metric":"eci","op":"change","from":"147.59","to":"147.56"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o3-pro","model":"o3-pro","metric":"eci","op":"change","from":"147.46","to":"147.47"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.5 Plus (hosted 397B-A17B)","model":"Qwen 3.5 Plus (hosted 397B-A17B)","metric":"eci","op":"change","from":"147.3","to":"147.29"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o3","model":"o3","metric":"eci","op":"change","from":"147.05","to":"147.02"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Nemotron 3 Ultra","model":"Nemotron 3 Ultra","metric":"eci","op":"change","from":"147.0","to":"147.02"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok 4","model":"Grok 4","metric":"eci","op":"change","from":"146.96","to":"146.91"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-V4-Flash","model":"DeepSeek-V4-Flash","metric":"eci","op":"change","from":"146.84","to":"146.91"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.6 27B","model":"Qwen3.6 27B","metric":"eci","op":"change","from":"146.78","to":"146.72"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GLM-5","model":"GLM-5","metric":"eci","op":"change","from":"146.54","to":"146.53"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5.4 Nano","model":"GPT-5.4 Nano","metric":"eci","op":"change","from":"146.33","to":"146.36"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5 mini","model":"GPT-5 mini","metric":"eci","op":"change","from":"146.01","to":"146.04"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 3.5 Flash-Lite","model":"Gemini 3.5 Flash-Lite","metric":"eci","op":"change","from":"145.65","to":"145.63"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K2 Thinking","model":"Kimi K2 Thinking","metric":"eci","op":"change","from":"145.48","to":"145.46"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o4-mini","model":"o4-mini","metric":"eci","op":"change","from":"145.22","to":"145.21"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 3.1 Flash-Lite","model":"Gemini 3.1 Flash-Lite","metric":"eci","op":"change","from":"145.03","to":"144.97"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Pro (Jun 2025)","model":"Gemini 2.5 Pro (Jun 2025)","metric":"eci","op":"change","from":"144.91","to":"144.88"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 4.1","model":"Claude Opus 4.1","metric":"eci","op":"change","from":"144.77","to":"144.76"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok 4 Fast","model":"Grok 4 Fast","metric":"eci","op":"change","from":"144.35","to":"144.32"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.6 35B-A3B","model":"Qwen 3.6 35B-A3B","metric":"eci","op":"change","from":"144.11","to":"144.07"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.5-35B-A3B","model":"Qwen3.5-35B-A3B","metric":"eci","op":"change","from":"144.08","to":"144.05"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Pro (Mar 2025)","model":"Gemini 2.5 Pro (Mar 2025)","metric":"eci","op":"change","from":"144.05","to":"143.98"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.5 Flash (hosted 35B-A3B)","model":"Qwen 3.5 Flash (hosted 35B-A3B)","metric":"eci","op":"change","from":"143.87","to":"143.83"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen 3.6 Flash","model":"Qwen 3.6 Flash","metric":"eci","op":"change","from":"143.76","to":"143.73"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GLM-4.7","model":"GLM-4.7","metric":"eci","op":"change","from":"143.36","to":"143.34"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-235B-A22B-Thinking (Jul 2025)","model":"Qwen3-235B-A22B-Thinking (Jul 2025)","metric":"eci","op":"change","from":"143.27","to":"143.23"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Opus 4","model":"Claude Opus 4","metric":"eci","op":"change","from":"142.88","to":"142.85"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Haiku 4.5","model":"Claude Haiku 4.5","metric":"eci","op":"change","from":"142.76","to":"142.74"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-Max","model":"Qwen3-Max","metric":"eci","op":"change","from":"142.44","to":"142.43"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Flash (Sep 2025)","model":"Gemini 2.5 Flash (Sep 2025)","metric":"eci","op":"change","from":"141.94","to":"141.88"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Sonnet 4","model":"Claude Sonnet 4","metric":"eci","op":"change","from":"141.88","to":"141.84"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral Medium 3.5","model":"Mistral Medium 3.5","metric":"eci","op":"change","from":"141.57","to":"141.58"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Flash (May 2025)","model":"Gemini 2.5 Flash (May 2025)","metric":"eci","op":"change","from":"141.58","to":"141.57"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemma 4 26B A4B","model":"Gemma 4 26B A4B","metric":"eci","op":"change","from":"141.58","to":"141.56"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Kimi K2 (Jul 2025)","model":"Kimi K2 (Jul 2025)","metric":"eci","op":"change","from":"141.25","to":"141.27"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o1","model":"o1","metric":"eci","op":"change","from":"141.18","to":"141.16"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 3.7 Sonnet","model":"Claude 3.7 Sonnet","metric":"eci","op":"change","from":"141.05","to":"141.03"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-V3.1","model":"DeepSeek-V3.1","metric":"eci","op":"change","from":"140.8","to":"140.88"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Flash (Jun 2025)","model":"Gemini 2.5 Flash (Jun 2025)","metric":"eci","op":"change","from":"140.84","to":"140.79"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-R1 (May 2025)","model":"DeepSeek-R1 (May 2025)","metric":"eci","op":"change","from":"140.75","to":"140.73"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Flash (Apr 2025)","model":"Gemini 2.5 Flash (Apr 2025)","metric":"eci","op":"change","from":"140.73","to":"140.69"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Pro (May 2025)","model":"Gemini 2.5 Pro (May 2025)","metric":"eci","op":"change","from":"140.64","to":"140.63"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o3-mini","model":"o3-mini","metric":"eci","op":"change","from":"140.65","to":"140.63"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|gpt-oss-120b","model":"gpt-oss-120b","metric":"eci","op":"change","from":"140.23","to":"140.21"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok-3 mini","model":"Grok-3 mini","metric":"eci","op":"change","from":"139.95","to":"139.88"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3.5-9B","model":"Qwen3.5-9B","metric":"eci","op":"change","from":"139.48","to":"139.5"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-5 nano","model":"GPT-5 nano","metric":"eci","op":"change","from":"139.09","to":"139.07"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-R1","model":"DeepSeek-R1","metric":"eci","op":"change","from":"138.63","to":"138.62"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-235B-A22B","model":"Qwen3-235B-A22B","metric":"eci","op":"change","from":"138.43","to":"138.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-30B-A3B-Thinking (Jul 2025)","model":"Qwen3-30B-A3B-Thinking (Jul 2025)","metric":"eci","op":"change","from":"138.35","to":"138.32"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-235B-A22B-Instruct (Jul 2025)","model":"Qwen3-235B-A22B-Instruct (Jul 2025)","metric":"eci","op":"change","from":"138.07","to":"138.03"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok 3","model":"Grok 3","metric":"eci","op":"change","from":"137.59","to":"137.55"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-32B","model":"Qwen3-32B","metric":"eci","op":"change","from":"136.84","to":"136.85"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4.5","model":"GPT-4.5","metric":"eci","op":"change","from":"136.5","to":"136.47"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|QwQ-32B","model":"QwQ-32B","metric":"eci","op":"change","from":"136.48","to":"136.44"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4.1","model":"GPT-4.1","metric":"eci","op":"change","from":"136.18","to":"136.14"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-14B","model":"Qwen3-14B","metric":"eci","op":"change","from":"136.08","to":"136.06"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.0 Pro","model":"Gemini 2.0 Pro","metric":"eci","op":"change","from":"135.41","to":"135.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o1-mini","model":"o1-mini","metric":"eci","op":"change","from":"135.28","to":"135.27"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-V3 (Mar 2025)","model":"DeepSeek-V3 (Mar 2025)","metric":"eci","op":"change","from":"135.28","to":"135.25"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|gpt-oss-20b","model":"gpt-oss-20b","metric":"eci","op":"change","from":"134.88","to":"134.89"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-30B-A3B-Instruct (Jul 2025)","model":"Qwen3-30B-A3B-Instruct (Jul 2025)","metric":"eci","op":"change","from":"134.83","to":"134.87"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4.1 mini","model":"GPT-4.1 mini","metric":"eci","op":"change","from":"134.27","to":"134.24"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-30B-A3B","model":"Qwen3-30B-A3B","metric":"eci","op":"change","from":"134.18","to":"134.16"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.0 Flash Thinking (Jan 2025)","model":"Gemini 2.0 Flash Thinking (Jan 2025)","metric":"eci","op":"change","from":"133.61","to":"133.63"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|o1-preview","model":"o1-preview","metric":"eci","op":"change","from":"133.54","to":"133.58"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 3.5 Sonnet (October 2024)","model":"Claude 3.5 Sonnet (October 2024)","metric":"eci","op":"change","from":"133.34","to":"133.36"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 2.5 Flash-Lite (Jun 2025)","model":"Gemini 2.5 Flash-Lite (Jun 2025)","metric":"eci","op":"change","from":"133.05","to":"133.04"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral Medium 3","model":"Mistral Medium 3","metric":"eci","op":"change","from":"132.81","to":"132.8"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 4 Maverick","model":"Llama 4 Maverick","metric":"eci","op":"change","from":"132.24","to":"132.19"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen3-8B","model":"Qwen3-8B","metric":"eci","op":"change","from":"132.08","to":"132.07"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-V3","model":"DeepSeek-V3","metric":"eci","op":"change","from":"131.71","to":"131.69"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Grok-2 (Dec 2024)","model":"Grok-2 (Dec 2024)","metric":"eci","op":"change","from":"129.75","to":"129.79"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3.1-405B","model":"Llama 3.1-405B","metric":"eci","op":"change","from":"127.87","to":"127.92"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 4 Scout","model":"Llama 4 Scout","metric":"eci","op":"change","from":"127.77","to":"127.75"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemma 3 27B","model":"Gemma 3 27B","metric":"eci","op":"change","from":"127.5","to":"127.56"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-72B","model":"Qwen2.5-72B","metric":"eci","op":"change","from":"127.21","to":"127.23"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4o (Aug 2024)","model":"GPT-4o (Aug 2024)","metric":"eci","op":"change","from":"127.12","to":"127.15"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 1.5 Flash (Sep 2024)","model":"Gemini 1.5 Flash (Sep 2024)","metric":"eci","op":"change","from":"126.96","to":"126.98"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4.1 nano","model":"GPT-4.1 nano","metric":"eci","op":"change","from":"126.81","to":"126.79"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral Large 2 (Jul 2024)","model":"Mistral Large 2 (Jul 2024)","metric":"eci","op":"change","from":"126.42","to":"126.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3.3 70B","model":"Llama 3.3 70B","metric":"eci","op":"change","from":"126.16","to":"126.18"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 3 Opus","model":"Claude 3 Opus","metric":"eci","op":"change","from":"125.58","to":"125.59"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 1.5 Pro (May 2024)","model":"Gemini 1.5 Pro (May 2024)","metric":"eci","op":"change","from":"125.37","to":"125.39"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4 Turbo (Nov 2023)","model":"GPT-4 Turbo (Nov 2023)","metric":"eci","op":"change","from":"124.75","to":"124.77"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 3.5 Haiku","model":"Claude 3.5 Haiku","metric":"eci","op":"change","from":"124.75","to":"124.77"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3.1-70B","model":"Llama 3.1-70B","metric":"eci","op":"change","from":"124.72","to":"124.7"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4o mini","model":"GPT-4o mini","metric":"eci","op":"change","from":"123.75","to":"123.81"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3.2 90B","model":"Llama 3.2 90B","metric":"eci","op":"change","from":"122.89","to":"122.92"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2-72B","model":"Qwen2-72B","metric":"eci","op":"change","from":"122.33","to":"122.35"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4 (Mar 2023)","model":"GPT-4 (Mar 2023)","metric":"eci","op":"change","from":"121.58","to":"121.61"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3-70B","model":"Llama 3-70B","metric":"eci","op":"change","from":"121.34","to":"121.33"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-V2 (MoE-236B, May 2024)","model":"DeepSeek-V2 (MoE-236B, May 2024)","metric":"eci","op":"change","from":"120.76","to":"120.82"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemini 1.5 Flash (May 2024)","model":"Gemini 1.5 Flash (May 2024)","metric":"eci","op":"change","from":"120.55","to":"120.58"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral Large","model":"Mistral Large","metric":"eci","op":"change","from":"119.96","to":"119.97"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-4 (Jun 2023)","model":"GPT-4 (Jun 2023)","metric":"eci","op":"change","from":"119.82","to":"119.91"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 3 Sonnet","model":"Claude 3 Sonnet","metric":"eci","op":"change","from":"119.65","to":"119.66"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-Coder-32B","model":"Qwen2.5-Coder-32B","metric":"eci","op":"change","from":"118.74","to":"118.73"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mixtral 8x22B","model":"Mixtral 8x22B","metric":"eci","op":"change","from":"118.66","to":"118.71"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemma 2 27B","model":"Gemma 2 27B","metric":"eci","op":"change","from":"118.61","to":"118.64"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 3 Haiku","model":"Claude 3 Haiku","metric":"eci","op":"change","from":"117.79","to":"117.8"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude 2","model":"Claude 2","metric":"eci","op":"change","from":"117.12","to":"117.17"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|phi-3-small 7.4B","model":"phi-3-small 7.4B","metric":"eci","op":"change","from":"116.26","to":"116.3"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|phi-3-medium 14B","model":"phi-3-medium 14B","metric":"eci","op":"change","from":"114.01","to":"114.07"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Claude Instant","model":"Claude Instant","metric":"eci","op":"change","from":"114.0","to":"114.03"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|PaLM 2-L","model":"PaLM 2-L","metric":"eci","op":"change","from":"113.71","to":"113.98"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral NeMo","model":"Mistral NeMo","metric":"eci","op":"change","from":"113.81","to":"113.87"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-Coder-14B","model":"Qwen2.5-Coder-14B","metric":"eci","op":"change","from":"113.72","to":"113.74"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mixtral 8x7B","model":"Mixtral 8x7B","metric":"eci","op":"change","from":"113.1","to":"113.19"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-3.5 Turbo (Jan 2024)","model":"GPT-3.5 Turbo (Jan 2024)","metric":"eci","op":"change","from":"112.77","to":"112.88"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-3.5 Turbo (Nov 2023)","model":"GPT-3.5 Turbo (Nov 2023)","metric":"eci","op":"change","from":"112.57","to":"112.67"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemma 2 9B","model":"Gemma 2 9B","metric":"eci","op":"change","from":"112.28","to":"112.42"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3.1-8B","model":"Llama 3.1-8B","metric":"eci","op":"change","from":"110.78","to":"110.9"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|phi-3-mini 3.8B","model":"phi-3-mini 3.8B","metric":"eci","op":"change","from":"110.4","to":"110.45"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Stable Beluga 2","model":"Stable Beluga 2","metric":"eci","op":"change","from":"109.29","to":"109.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 3-8B","model":"Llama 3-8B","metric":"eci","op":"change","from":"109.0","to":"109.12"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-Coder (7B)","model":"Qwen2.5-Coder (7B)","metric":"eci","op":"change","from":"107.45","to":"107.42"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Falcon-180B","model":"Falcon-180B","metric":"eci","op":"change","from":"106.92","to":"107.04"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|GPT-3.5 Turbo (Jun 2023)","model":"GPT-3.5 Turbo (Jun 2023)","metric":"eci","op":"change","from":"105.84","to":"105.98"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 2-70B","model":"Llama 2-70B","metric":"eci","op":"change","from":"105.64","to":"105.73"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemma 7B","model":"Gemma 7B","metric":"eci","op":"change","from":"102.87","to":"103.15"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Mistral 7B v0.1","model":"Mistral 7B v0.1","metric":"eci","op":"change","from":"102.56","to":"102.72"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Yi-9B","model":"Yi-9B","metric":"eci","op":"change","from":"102.06","to":"102.18"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen-14B","model":"Qwen-14B","metric":"eci","op":"change","from":"101.61","to":"101.76"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|LLaMA-65B","model":"LLaMA-65B","metric":"eci","op":"change","from":"101.38","to":"101.51"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek-Coder-V2-Lite-Base","model":"DeepSeek-Coder-V2-Lite-Base","metric":"eci","op":"change","from":"99.31","to":"99.41"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Falcon 2 11B","model":"Falcon 2 11B","metric":"eci","op":"change","from":"99.01","to":"99.24"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Nemotron-4 15B","model":"Nemotron-4 15B","metric":"eci","op":"change","from":"98.97","to":"99.14"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|internlm-20b","model":"internlm-20b","metric":"eci","op":"change","from":"98.79","to":"98.9"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|PaLM 2-M","model":"PaLM 2-M","metric":"eci","op":"change","from":"97.77","to":"97.86"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-Coder-3B","model":"Qwen2.5-Coder-3B","metric":"eci","op":"change","from":"96.63","to":"96.75"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|LLaMA-33B","model":"LLaMA-33B","metric":"eci","op":"change","from":"96.37","to":"96.51"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 2-13B","model":"Llama 2-13B","metric":"eci","op":"change","from":"96.28","to":"96.48"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Phi-2","model":"Phi-2","metric":"eci","op":"change","from":"95.94","to":"96.21"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|StarCoder 2 15B","model":"StarCoder 2 15B","metric":"eci","op":"change","from":"96.04","to":"96.09"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Yi 6B","model":"Yi 6B","metric":"eci","op":"change","from":"94.06","to":"94.27"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 2-34B","model":"Llama 2-34B","metric":"eci","op":"change","from":"93.69","to":"93.89"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|PaLM 2-S","model":"PaLM 2-S","metric":"eci","op":"change","from":"93.62","to":"93.84"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Baichuan2-13B","model":"Baichuan2-13B","metric":"eci","op":"change","from":"91.59","to":"91.75"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Falcon-40B","model":"Falcon-40B","metric":"eci","op":"change","from":"90.42","to":"90.67"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen-7B","model":"Qwen-7B","metric":"eci","op":"change","from":"88.87","to":"89.14"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-Coder (1.5B)","model":"Qwen2.5-Coder (1.5B)","metric":"eci","op":"change","from":"89.01","to":"89.12"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|LLaMA-13B","model":"LLaMA-13B","metric":"eci","op":"change","from":"84.95","to":"85.23"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|MPT-30B","model":"MPT-30B","metric":"eci","op":"change","from":"84.95","to":"85.19"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|internlm-7b","model":"internlm-7b","metric":"eci","op":"change","from":"84.31","to":"84.56"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Baichuan 2-7B","model":"Baichuan 2-7B","metric":"eci","op":"change","from":"83.25","to":"83.6"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|INTELLECT-1","model":"INTELLECT-1","metric":"eci","op":"change","from":"83.09","to":"83.35"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Llama 2-7B","model":"Llama 2-7B","metric":"eci","op":"change","from":"82.8","to":"83.23"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|LLaMA-7B","model":"LLaMA-7B","metric":"eci","op":"change","from":"76.96","to":"77.28"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek Coder 33B","model":"DeepSeek Coder 33B","metric":"eci","op":"change","from":"75.93","to":"76.3"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|vicuna-13b-v1.1","model":"vicuna-13b-v1.1","metric":"eci","op":"change","from":"75.78","to":"76.11"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Gemma 2B","model":"Gemma 2B","metric":"eci","op":"change","from":"75.36","to":"75.71"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|CodeQwen1.5-7B","model":"CodeQwen1.5-7B","metric":"eci","op":"change","from":"74.53","to":"74.81"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|chatglm2-6b","model":"chatglm2-6b","metric":"eci","op":"change","from":"73.4","to":"73.74"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|MPT-7B","model":"MPT-7B","metric":"eci","op":"change","from":"73.18","to":"73.39"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Falcon-7B","model":"Falcon-7B","metric":"eci","op":"change","from":"72.84","to":"73.09"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|StarCoder 2 7B","model":"StarCoder 2 7B","metric":"eci","op":"change","from":"72.14","to":"72.4"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|XGen-7B","model":"XGen-7B","metric":"eci","op":"change","from":"69.95","to":"70.29"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Phi-1.5","model":"Phi-1.5","metric":"eci","op":"change","from":"68.17","to":"68.37"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen2.5-Coder-0.5B","model":"Qwen2.5-Coder-0.5B","metric":"eci","op":"change","from":"67.95","to":"68.08"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|DeepSeek Coder 6.7B","model":"DeepSeek Coder 6.7B","metric":"eci","op":"change","from":"67.02","to":"67.45"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|StarCoder 2 3B","model":"StarCoder 2 3B","metric":"eci","op":"change","from":"66.21","to":"66.64"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|open_llama_7b","model":"open_llama_7b","metric":"eci","op":"change","from":"63.91","to":"64.37"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Qwen-1_8B","model":"Qwen-1_8B","metric":"eci","op":"change","from":"59.23","to":"59.62"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|RedPajama-INCITE-7B-Base","model":"RedPajama-INCITE-7B-Base","metric":"eci","op":"change","from":"57.17","to":"57.7"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Dolly 2.0-12b","model":"Dolly 2.0-12b","metric":"eci","op":"change","from":"55.1","to":"55.52"}
+{"t":"2026-11-21T07:21:20Z","key":"eci|Cerebras-GPT-13B","model":"Cerebras-GPT-13B","metric":"eci","op":"change","from":"48.59","to":"48.88"}

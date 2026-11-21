@@ -1367,6 +1367,7 @@ epoch,Gemini 3.7 Flash,gemini-3-7-flash,exact,
 epoch,Gemini 3.8 Flash,gemini-3-8-flash,exact,
 epoch,Gemini 4 Argon,gemini-4-argon,exact,
 epoch,Gemini 4 Carbon,gemini-4-carbon,exact,
+epoch,Gemini 4 Hydrogen,gemini-4-hydrogen,exact,
 epoch,Gemma 2 27B,gemma-2-27b,exact,
 epoch,Gemma 2 9B,gemma-2-9b,exact,
 epoch,Gemma 2B,gemma-2b-unlisted,unlisted,
@@ -1658,6 +1659,7 @@ epoch,gemini-3.8-flash_high,gemini-3-8-flash,variant,effort:high
 epoch,gemini-4-argon_high,gemini-4-argon,variant,effort:high
 epoch,gemini-4-carbon_high,gemini-4-carbon,variant,effort:high
 epoch,gemini-4-hydrogen_xhigh,gemini-4-hydrogen,variant,effort:xhigh
+epoch,gemini-4-neon_xhigh,gemini-4-neon,variant,effort:xhigh
 epoch,gemma-2-27b-it,gemma-2-27b,exact,
 epoch,gemma-2-9b-it,gemma-2-9b,exact,
 epoch,gemma-3-12b-it,gemma-3-12b,exact,

@@ -147,6 +147,7 @@ epoch-models,qwen3-235b-a22b-thinking-jul-2025,Qwen3-235B-A22B-Thinking (Jul 202
 epoch-models,qwen3-30b-a3b-jul-2025,Qwen3-30B-A3B (Jul 2025),Alibaba,2025-07,qwen3-30b-a3b qwen3-30b-a3b-instruct-2507 qwen3-30b-a3b-thinking-2507
 epoch-models,qwen3-max,Qwen3-Max,Alibaba,2025-09,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
 epoch-models,qwen3-max-thinking,Qwen3-Max-Thinking,Alibaba,2026-01,qwen3-max-2025-09-23 qwen3-max-2026-01-23 qwen3-max-preview
+epoch-models,qwen4-max,Qwen4-Max,Alibaba,2026-11,qwen4-max-preview qwen-max-2024-09-19 qwen-max-2025-01-25
 epoch-models,reka-core,Reka Core,Reka AI,2024-04,reka-core-20240501 reka-core-20240904
 epoch-models,reka-flash,Reka Flash,Reka AI,2024-04,reka-flash-20240904 reka-flash-3 reka-flash-21b-20240226
 epoch-models,rl-mapping-instructions-troubleshooting,RL mapping instructions (troubleshooting),Massachusetts Institute of Technology (MIT),2009-08,rl-mapping-instructions-games
