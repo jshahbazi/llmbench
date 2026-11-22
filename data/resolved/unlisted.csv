@@ -20,6 +20,7 @@ augment-agent-v1,Augment Agent v1,swe-bench,1
 aurora-alpha,aurora-alpha,creative-writing-longform,3
 azerogpt,azerogpt,livebench mmlu-pro,65
 bert-nebulon-alpha,bert-nebulon-alpha,creative-writing-longform,3
+bison-1,bison-1,vals,8
 blackbox-ai-agent,Blackbox AI Agent,swe-bench,2
 bracket-sh,Bracket.sh,swe-bench,1
 bytedance-marscode-agent,Bytedance MarsCode Agent,swe-bench,2
@@ -243,6 +244,7 @@ grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,vectara-hhem vals llm-chess,
 grok-4-heavy-web-app,grok-4-heavy-web-app,epoch,1
 grok-voice-transcribe-1-0,grok-voice-transcribe-1.0,vals,5
 grok-voice-transcribe-2-0,grok-voice-transcribe-2.0,vals,5
+groundhog-1,groundhog-1,vals,8
 gru-2024-08-11,Gru (2024-08-11),swe-bench,1
 gru-2024-08-24,Gru (2024-08-24),swe-bench,1
 gru-2024-12-08,Gru (2024-12-08),swe-bench,2
