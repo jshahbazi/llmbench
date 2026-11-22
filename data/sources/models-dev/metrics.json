@@ -631,7 +631,7 @@
  },
  {
   "id": "gdp-pdf",
-  "label": "GDP.PDF",
+  "label": "GDP.pdf",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -750,7 +750,7 @@
  },
  {
   "id": "humanitys-last-exam",
-  "label": "Humanity's Last Exam",
+  "label": "Humanity’s Last Exam",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1009,7 +1009,7 @@
  },
  {
   "id": "mls-bench-lite",
-  "label": "MLS-Bench-Lite",
+  "label": "MLS Bench Lite",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1464,14 +1464,14 @@
  },
  {
   "id": "swe-marathon",
-  "label": "SWE-Marathon",
+  "label": "SWE Marathon",
   "direction": "higher",
   "unit": "percent",
   "headline": true
  },
  {
   "id": "swe-marathon/v1.1",
-  "label": "SWE Marathon 1.1",
+  "label": "SWE-Marathon 1.1",
   "direction": "higher",
   "unit": "percent",
   "headline": false
@@ -1513,7 +1513,7 @@
  },
  {
   "id": "terminal-bench-science/v0.1",
-  "label": "Terminal-Bench-Science 0.1",
+  "label": "Terminal-Bench Science 0.1",
   "direction": "higher",
   "unit": "percent",
   "headline": true

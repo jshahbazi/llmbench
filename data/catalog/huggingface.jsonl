@@ -1,5 +1,6 @@
 {"id":"acegpt-13b-chat","name":"AceGPT-13B-chat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/AceGPT-13B-chat","license":"apache-2.0"}
 {"id":"acegpt-7b-chat","name":"AceGPT-7B-chat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/AceGPT-7B-chat","license":"apache-2.0"}
+{"id":"aion-rp-llama-3-1-8b","name":"Aion-RP 1.0 (8B)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/aion-labs/Aion-RP-Llama-3.1-8B","params_b":8.03,"license":"llama3.1"}
 {"id":"ajibawa-code-13b","name":"Code-13B (ajibawa-2023)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ajibawa-2023/Code-13B","license":"cc-by-nc-nd-4.0"}
 {"id":"ajibawa-code-33b","name":"Code-33B (ajibawa-2023)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ajibawa-2023/Code-33B","license":"cc-by-nc-nd-4.0"}
 {"id":"allam-2-7b","name":"ALLaM-2-7b","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ALLaM-AI/ALLaM-2.0-7B-Instruct"}
@@ -15,10 +16,14 @@
 {"id":"chatglm3-6b-128k","name":"ChatGLM3 6B 128K","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/zai-org/chatglm3-6b-128k"}
 {"id":"command-a-reasoning-08-2025","name":"Command A Reasoning (08-2025)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/command-a-reasoning-08-2025","params_b":111.06,"license":"cc-by-nc-4.0"}
 {"id":"command-a-vision-07-2025","name":"Command A Vision (07-2025)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/command-a-vision-07-2025","params_b":111.87,"license":"cc-by-nc-4.0"}
+{"id":"cydonia-24b-v4-1","name":"Cydonia 24B V4.1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/TheDrummer/Cydonia-24B-v4.1","params_b":23.57}
+{"id":"deepseek-ocr-2","name":"DeepSeek OCR 2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepseek-ai/DeepSeek-OCR-2","params_b":3.39,"license":"apache-2.0"}
 {"id":"deepseek-v4-1-flash-1017","name":"DeepSeek V4.1 Flash 1017","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017","license":"mit"}
 {"id":"devstral-small-2507","name":"Devstral Small","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mistralai/Devstral-Small-2507","params_b":23.57,"license":"apache-2.0"}
 {"id":"dolphin-2-6-mixtral-8x7b","name":"Dolphin 2.6 Mixtral 8x7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/dphn/dolphin-2.6-mixtral-8x7b","license":"apache-2.0"}
+{"id":"dolphin-mistral-24b-venice-edition","name":"Uncensored","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/dphn/Dolphin-Mistral-24B-Venice-Edition","params_b":24.01,"license":"apache-2.0"}
 {"id":"dracarys-llama-3-1-70b-instruct","name":"Dracarys Llama 3.1 70B Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/abacusai/Dracarys-Llama-3.1-70B-Instruct","params_b":70.55,"license":"llama3"}
+{"id":"ernie-4-5-vl-424b-a47b","name":"ERNIE 4.5 VL 424B A47B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/baidu/ERNIE-4.5-VL-424B-A47B-PT","params_b":423.53,"license":"apache-2.0"}
 {"id":"fusechat-gemma-2-9b-instruct","name":"FuseChat-Gemma-2-9B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Gemma-2-9B-Instruct","params_b":9.24}
 {"id":"fusechat-llama-3-2-1b-instruct","name":"FuseChat-Llama-3.2-1B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Llama-3.2-1B-Instruct","params_b":1.24}
 {"id":"fusechat-llama-3-2-3b-instruct","name":"FuseChat-Llama-3.2-3B-Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FuseAI/FuseChat-Llama-3.2-3B-Instruct","params_b":3.21}
@@ -29,15 +34,23 @@
 {"id":"glm-4-6v-flash","name":"GLM-4.6V-Flash","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/zai-org/GLM-4.6V-Flash","params_b":10.29,"license":"mit"}
 {"id":"gpt-oss-safeguard-120b","name":"GPT OSS Safeguard 120B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openai/gpt-oss-safeguard-120b","license":"apache-2.0"}
 {"id":"gpt-oss-safeguard-20b","name":"GPT OSS Safeguard 20B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openai/gpt-oss-safeguard-20b","license":"apache-2.0"}
+{"id":"hermes-4-405b","name":"Hermes 4 405B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/NousResearch/Hermes-4-405B","params_b":405.85,"license":"llama3"}
+{"id":"hy-mt2-1-8b","name":"Hy-MT2-1.8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-1.8B","params_b":2.04,"license":"apache-2.0"}
+{"id":"hy-mt2-30b-a3b","name":"Hy-MT2-30B-A3B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-30B-A3B","params_b":30.06,"license":"apache-2.0"}
+{"id":"hy-mt2-7b","name":"Hy-MT2-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-7B","params_b":8.03,"license":"apache-2.0"}
 {"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Small","license":"apache-2.0"}
 {"id":"kimi-k3-1-pro","name":"Kimi K3.1 Pro","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/moonshotai/Kimi-K3.1-Pro","license":"kimi-k3.1-pro"}
 {"id":"kolibri-1","name":"Kolibri 1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Aleph-Alpha/Kolibri-1","params_b":78.1,"license":"apache-2.0"}
 {"id":"krutrim-2-instruct","name":"Krutrim-2 Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct","license":"krutrim-community-license-agreement-version-1.0"}
+{"id":"l3-1-euryale-70b","name":"Llama 3.1 Euryale 70B v2.2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Sao10K/L3.1-70B-Euryale-v2.2","license":"cc-by-nc-4.0"}
+{"id":"l3-3-euryale-70b","name":"Llama 3.3 Euryale 70B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Sao10K/L3.3-70B-Euryale-v2.3","params_b":70.55,"license":"llama3"}
+{"id":"l3-lunaris-8b","name":"Llama 3 8B Lunaris","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Sao10K/L3-8B-Lunaris-v1","params_b":8.03,"license":"llama3"}
 {"id":"lightonocr-2-1b","name":"LightOnOCR 2 1B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lightonai/LightOnOCR-2-1B","params_b":1.01,"license":"apache-2.0"}
 {"id":"lightonocr-3-0-8b","name":"LightOnOCR-3 0.8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lightonai/LightOnOCR-3-0.8B","params_b":0.85,"license":"apache-2.0"}
 {"id":"ling-3-0-flash-fin","name":"Ling 3.0 Flash Fin","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin","params_b":127.49,"license":"mit"}
 {"id":"ling-3-0-flash-vl","name":"Ling 3.0 Flash VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-VL","params_b":124.85,"license":"mit"}
 {"id":"ling-3-0-tiny","name":"Ling 3.0 Tiny","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-tiny","params_b":7.89,"license":"mit"}
+{"id":"llama-3-1-nemotron-safety-guard-8b-v3","name":"Llama 3.1 Nemotron Safety Guard 8B v3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3","params_b":8.03,"license":"nvidia-open-model-license"}
 {"id":"llama-3-8b-instruct-skillmix","name":"Llama-3-8B-Instruct-SkillMix","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/PrincetonPLI/Llama-3-8B-Instruct-SkillMix","license":"llama3"}
 {"id":"llama-3-instruct-8b-simpo","name":"Llama-3-Instruct-8B-SimPO","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/princeton-nlp/Llama-3-Instruct-8B-SimPO","params_b":8.03}
 {"id":"llama-3-instruct-8b-simpo-v0-2","name":"Llama-3-Instruct-8B-SimPO-v0.2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/princeton-nlp/Llama-3-Instruct-8B-SimPO-v0.2","params_b":8.03}
@@ -52,6 +65,7 @@
 {"id":"lwm-text-chat-1m","name":"LWM-Text-Chat-1M","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/LargeWorldModel/LWM-Text-Chat-1M"}
 {"id":"macaron-v1-tall","name":"Macaron V1 Tall","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Tall","params_b":35.95,"license":"mit"}
 {"id":"macaron-v1-venti","name":"Macaron V1 Venti","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Venti","params_b":753.33,"license":"mit"}
+{"id":"magnum-v4-72b","name":"Magnum v4 72B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/anthracite-org/magnum-v4-72b","params_b":72.71,"license":"apache-2.0"}
 {"id":"mimo-v2-5-pro-ultraspeed","name":"MiMo-V2.5-Pro-UltraSpeed","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash","license":"mit"}
 {"id":"mineru2-5-2509-1-2b","name":"MinerU2.5 2509 1.2B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B","params_b":1.16,"license":"agpl-3.0"}
 {"id":"minicpm-v-4-7-1b","name":"MiniCPM-V 4.7 1B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-1B","params_b":1.55,"license":"apache-2.0"}
@@ -60,7 +74,15 @@
 {"id":"minimax-m3-1-flash","name":"MiniMax M3.1 Flash","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash","license":"minimax-community"}
 {"id":"minotaur-13b-fixed","name":"Minotaur 13B (fixed)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openaccess-ai-collective/minotaur-13b-fixed","license":"apache-2.0"}
 {"id":"mythomax-l2-13b","name":"MythoMax L2 13B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Gryphe/MythoMax-L2-13b","license":"other"}
+{"id":"nemotron-3-5-content-safety","name":"Nemotron 3.5 Content Safety","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Nemotron-3.5-Content-Safety","params_b":4.3,"license":"openmdw-license-agreement"}
+{"id":"nemotron-3-content-safety","name":"Nemotron 3 Content Safety","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Nemotron-3-Content-Safety","params_b":4.3,"license":"nvidia-nemotron-open-model-license"}
+{"id":"nemotron-3-nano-omni-30b-a3b-reasoning","name":"Nemotron 3 Nano Omni 30B A3B Reasoning","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16","params_b":33.02,"license":"nvidia-open-model-agreement"}
+{"id":"nemotron-content-safety-reasoning-4b","name":"Nemotron Content Safety Reasoning 4B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Nemotron-Content-Safety-Reasoning-4B","params_b":4.3,"license":"nvidia-open-model-license"}
+{"id":"nemotron-mini-4b-instruct","name":"Nemotron Mini 4B Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Nemotron-Mini-4B-Instruct","license":"nvidia-open-model-license"}
+{"id":"nemotron-nano-12b-v2-vl","name":"Nemotron Nano 12B v2 VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16","params_b":13.18,"license":"nvidia-open-model-license"}
+{"id":"nemotron-voicechat","name":"Nemotron VoiceChat","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B","params_b":11.1,"license":"openmdw-1.1"}
 {"id":"nex-n2-pro","name":"Nex-N2-Pro","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nex-agi/Nex-N2-Pro","params_b":396.8,"license":"apache-2.0"}
+{"id":"north-mini-code-1-0","name":"North Mini Code","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/North-Mini-Code-1.0","params_b":30.48,"license":"apache-2.0"}
 {"id":"nous-hermes-13b","name":"Nous-Hermes-13b","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/NousResearch/Nous-Hermes-13b","license":"gpl"}
 {"id":"oasst-pythia-12b-sft-v8-7k-steps","name":"OpenAssistant Pythia 12B SFT v8 (7k steps)","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/OpenAssistant/pythia-12b-sft-v8-7k-steps","license":"apache-2.0"}
 {"id":"olmocr-2-7b","name":"olmOCR 2 7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/allenai/olmOCR-2-7B-1025","params_b":8.29,"license":"apache-2.0"}
@@ -71,6 +93,7 @@
 {"id":"openpangu-2-0-pro","name":"openPangu 2.0 Pro","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openpangu/openPangu-2.0-Pro","params_b":541.49}
 {"id":"ornith-1-0-397b","name":"Ornith 1.0 397B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B","params_b":396.8,"license":"mit"}
 {"id":"ornith-1-0-9b","name":"Ornith 1.0 9B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B","license":"mit"}
+{"id":"ornith-1-5-122b","name":"Ornith 1.5 122B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ornith-ai/Ornith-1.5-122B","params_b":125.09,"license":"mit"}
 {"id":"paddleocr-vl","name":"PaddleOCR VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/PaddlePaddle/PaddleOCR-VL","params_b":0.96,"license":"apache-2.0"}
 {"id":"phi-4-multimodal-instruct","name":"Phi-4-multimodal-instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/microsoft/Phi-4-multimodal-instruct","params_b":5.57,"license":"mit"}
 {"id":"platolm-7b","name":"PlatoLM-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/PlatoLM-7B","license":"apache-2.0"}
@@ -78,7 +101,12 @@
 {"id":"qwen3-5-9b-base","name":"Qwen3.5 9B Base","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3.5-9B-Base","params_b":9.65,"license":"apache-2.0"}
 {"id":"qwen3-omni-30b-a3b-thinking","name":"Qwen3 Omni 30B A3B Thinking","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Thinking","params_b":31.72,"license":"apache-2.0"}
 {"id":"rebel-llama-3","name":"REBEL-Llama-3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Cornell-AGI/REBEL-Llama-3","license":"apache-2.0"}
+{"id":"reka-edge","name":"Reka Edge","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/RekaAI/reka-edge-2603","params_b":7.13,"license":"reka-edge-2603-license"}
+{"id":"remm-slerp-l2-13b","name":"ReMM SLERP 13B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Undi95/ReMM-SLERP-L2-13B","license":"cc-by-nc-4.0"}
 {"id":"rnj-1-instruct","name":"Rnj-1 Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/EssentialAI/rnj-1-instruct","params_b":8.31,"license":"apache-2.0"}
+{"id":"sarvam-105b","name":"Sarvam 105B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/sarvamai/sarvam-105b","params_b":106.03,"license":"apache-2.0"}
+{"id":"sarvam-30b","name":"Sarvam 30B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/sarvamai/sarvam-30b","params_b":32.15,"license":"apache-2.0"}
+{"id":"skyfall-36b-v2","name":"Skyfall 36B V2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/TheDrummer/Skyfall-36B-v2","params_b":36.91,"license":"other"}
 {"id":"snorkel-mistral-pairrm-dpo","name":"Snorkel-Mistral-PairRM-DPO","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/snorkelai/Snorkel-Mistral-PairRM-DPO","license":"apache-2.0"}
 {"id":"speechless-code-mistral-7b-v1-0","name":"speechless-code-mistral-7b-v1.0","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-code-mistral-7b-v1.0","license":"apache-2.0"}
 {"id":"speechless-codellama-34b-v2-0","name":"speechless-codellama-34b-v2.0","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-codellama-34b-v2.0","license":"llama2"}
@@ -91,6 +119,7 @@
 {"id":"tiny-aya-water","name":"Tiny Aya Water","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-water","params_b":3.35,"license":"cc-by-nc-4.0"}
 {"id":"trinity-nano-preview","name":"Trinity Nano Preview","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/arcee-ai/Trinity-Nano-Preview","params_b":6.12,"license":"openmdw-1.1"}
 {"id":"trurl-2-13b-academic","name":"Trurl 2 13B Academic","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Voicelab/trurl-2-13b-academic"}
+{"id":"unslopnemo-12b","name":"UnslopNemo 12B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/TheDrummer/UnslopNemo-12B-v4.1","params_b":12.25}
 {"id":"vicuna-13b-v1-3","name":"Vicuna 13B v1.3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lmsys/vicuna-13b-v1.3"}
 {"id":"vicuna-7b-v1-3","name":"Vicuna 7B v1.3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lmsys/vicuna-7b-v1.3"}
 {"id":"vicuna-7b-v1-5-16k","name":"Vicuna 7B v1.5 16K","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/lmsys/vicuna-7b-v1.5-16k","license":"llama2"}
