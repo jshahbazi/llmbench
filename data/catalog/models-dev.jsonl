@@ -160,6 +160,7 @@
 {"id":"glm-5-2","name":"GLM-5.2","category":"llm","origin":"models-dev","provider":"Zhipu AI","released":"2026-06-13","open_weights":true,"context_k":1000,"model_repo":"https://huggingface.co/zai-org/GLM-5.2"}
 {"id":"glm-5-3","name":"GLM-5.3","category":"llm","origin":"models-dev","provider":"Zhipu AI","released":"2026-08-14","open_weights":true,"context_k":1000,"model_repo":"https://huggingface.co/zai-org/GLM-5.3"}
 {"id":"glm-5-3-flash","name":"GLM-5.3-Flash","category":"llm","origin":"models-dev","provider":"Zhipu AI","released":"2026-08-26","open_weights":true,"context_k":1000,"model_repo":"https://huggingface.co/zai-org/GLM-5.3-Flash"}
+{"id":"glm-5-4","name":"GLM-5.4","category":"llm","origin":"models-dev","provider":"Zhipu AI","released":"2026-11-23","open_weights":false,"context_k":1000}
 {"id":"glm-5-turbo","name":"GLM-5-Turbo","category":"llm","origin":"models-dev","provider":"Zhipu AI","released":"2026-03-16","open_weights":false,"context_k":200}
 {"id":"glm-5v-turbo","name":"GLM-5V-Turbo","category":"llm","origin":"models-dev","provider":"Zhipu AI","released":"2026-04-01","open_weights":false,"context_k":200}
 {"id":"gpt-3-5-turbo","name":"GPT-3.5-turbo","category":"llm","origin":"models-dev","provider":"OpenAI","released":"2023-03-01","open_weights":false,"context_k":16.385}
@@ -222,6 +223,7 @@
 {"id":"grok-4-1-fast-reasoning","name":"Grok 4.1 Fast (Reasoning)","category":"llm","origin":"models-dev","provider":"xAI","released":"2025-11-19","open_weights":false,"context_k":2000}
 {"id":"grok-4-20-0309-non-reasoning","name":"Grok 4.20 (Non-Reasoning)","category":"llm","origin":"models-dev","provider":"xAI","released":"2026-03-09","open_weights":false,"context_k":1000}
 {"id":"grok-4-20-0309-reasoning","name":"Grok 4.20 (Reasoning)","category":"llm","origin":"models-dev","provider":"xAI","released":"2026-03-09","open_weights":false,"context_k":1000}
+{"id":"grok-4-20-multi-agent-0309","name":"Grok 4.20 Multi-Agent","category":"llm","origin":"models-dev","provider":"xAI","released":"2026-03-09","open_weights":false,"context_k":1000}
 {"id":"grok-4-3","name":"Grok 4.3","category":"llm","origin":"models-dev","provider":"xAI","released":"2026-04-17","open_weights":false,"context_k":1000}
 {"id":"grok-4-5","name":"Grok 4.5","category":"llm","origin":"models-dev","provider":"xAI","released":"2026-07-08","open_weights":false,"context_k":500}
 {"id":"grok-4-6","name":"Grok 4.6","category":"llm","origin":"models-dev","provider":"xAI","released":"2026-08-12","open_weights":false,"context_k":500}
@@ -243,6 +245,7 @@
 {"id":"hy4-flash","name":"Hy4 flash","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-11-16","open_weights":false,"context_k":1048.576}
 {"id":"hy4-preview","name":"Hy4 preview","category":"llm","origin":"models-dev","provider":"tencent","released":"2026-08-28","open_weights":true,"context_k":1024,"model_repo":"https://huggingface.co/tencent/Hy4-preview"}
 {"id":"inkling","name":"Inkling","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-07-15","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling"}
+{"id":"inkling-2-mini","name":"Inkling 2 Mini","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-11-20","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Mini"}
 {"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-11-05","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Small"}
 {"id":"inkling-small","name":"Inkling Small","category":"llm","origin":"models-dev","provider":"Thinking Machines","released":"2026-07-30","open_weights":true,"license":"apache-2.0","context_k":1048.576,"model_repo":"https://huggingface.co/thinkingmachines/Inkling-Small"}
 {"id":"jamba-large","name":"Jamba Large","category":"llm","origin":"models-dev","provider":"AI21 Labs","released":"2025-07-03","open_weights":true,"context_k":256,"model_repo":"https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7"}
@@ -433,6 +436,7 @@
 {"id":"ornith-1-5-122b","name":"Ornith 1.5 122B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-10-20","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/ornith-ai/Ornith-1.5-122B"}
 {"id":"ornith-1-5-35b-a3b","name":"Ornith 1.5 35B A3B","category":"llm","origin":"models-dev","provider":"deepreinforce","released":"2026-08-18","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B"}
 {"id":"paddleocr-vl","name":"PaddleOCR VL","category":"llm","origin":"models-dev","provider":"paddlepaddle","released":"2025-10-16","open_weights":true,"license":"apache-2.0","context_k":131.072,"model_repo":"https://huggingface.co/PaddlePaddle/PaddleOCR-VL"}
+{"id":"palmyra-vision-7b","name":"Palmyra Vision 7B","category":"llm","origin":"models-dev","provider":"writer","released":"2026-03-26","open_weights":false,"context_k":4.096}
 {"id":"palmyra-x4","name":"Palmyra X4","category":"llm","origin":"models-dev","provider":"writer","released":"2024-10-09","open_weights":false,"context_k":128}
 {"id":"palmyra-x5","name":"Palmyra X5","category":"llm","origin":"models-dev","provider":"writer","released":"2025-04-28","open_weights":false,"context_k":1000}
 {"id":"pareto","name":"Pareto","category":"llm","origin":"models-dev","provider":"Pareto by Unbiased","released":"2026-09-17","open_weights":false,"context_k":262.144}
@@ -520,8 +524,6 @@
 {"id":"rnj-1-instruct","name":"Rnj-1 Instruct","category":"llm","origin":"models-dev","provider":"essentialai","released":"2025-12-04","open_weights":true,"license":"apache-2.0","context_k":32.768,"model_repo":"https://huggingface.co/EssentialAI/rnj-1-instruct"}
 {"id":"sakana-namazu","name":"Sakana Namazu","category":"llm","origin":"models-dev","provider":"Sakana AI","released":"2026-08-03","open_weights":false,"context_k":262.144}
 {"id":"sarvam-105b","name":"Sarvam 105B","category":"llm","origin":"models-dev","provider":"Sarvam AI","released":"2026-02-18","open_weights":true,"context_k":131.072,"model_repo":"https://huggingface.co/sarvamai/sarvam-105b"}
-{"id":"sarvam-30b","name":"Sarvam 30B","category":"llm","origin":"models-dev","provider":"Sarvam AI","released":"2026-02-18","open_weights":true,"context_k":128,"model_repo":"https://huggingface.co/sarvamai/sarvam-30b"}
-{"id":"sarvam-m","name":"Sarvam-M","category":"llm","origin":"models-dev","provider":"Sarvam AI","released":"2025-05-20","open_weights":true,"license":"apache-2.0","context_k":32.768,"model_repo":"https://huggingface.co/sarvamai/sarvam-m"}
 {"id":"schematron-v2-small","name":"Schematron V2 Small","category":"llm","origin":"models-dev","provider":"inference-net","released":"2026-04-16","open_weights":false,"context_k":128}
 {"id":"schematron-v2-turbo","name":"Schematron V2 Turbo","category":"llm","origin":"models-dev","provider":"inference-net","released":"2026-04-16","open_weights":false,"context_k":128}
 {"id":"seed-1-6","name":"Seed 1.6","category":"llm","origin":"models-dev","provider":"bytedance-seed","released":"2025-10-15","open_weights":false,"context_k":256}
@@ -561,6 +563,7 @@
 {"id":"trinity-large-thinking","name":"Trinity Large Thinking","category":"llm","origin":"models-dev","provider":"arcee-ai","released":"2026-04-01","open_weights":true,"license":"OpenMDW-1.1","context_k":524.288,"model_repo":"https://huggingface.co/arcee-ai/Trinity-Large-Thinking"}
 {"id":"trinity-mini","name":"Trinity Mini","category":"llm","origin":"models-dev","provider":"arcee-ai","released":"2025-12-01","open_weights":true,"license":"OpenMDW-1.1","context_k":131.072,"model_repo":"https://huggingface.co/arcee-ai/Trinity-Mini"}
 {"id":"trinity-nano-preview","name":"Trinity Nano Preview","category":"llm","origin":"models-dev","provider":"arcee-ai","released":"2025-12-01","open_weights":true,"license":"OpenMDW-1.1","context_k":131.072,"model_repo":"https://huggingface.co/arcee-ai/Trinity-Nano-Preview"}
+{"id":"ultramarine-1-flash","name":"Ultramarine 1 Flash","category":"llm","origin":"models-dev","provider":"paperinstruments","released":"2026-11-12","open_weights":false,"context_k":1048.576}
 {"id":"unslopnemo-12b","name":"UnslopNemo 12B","category":"llm","origin":"models-dev","provider":"thedrummer","released":"2024-11-08","open_weights":true,"context_k":1024,"model_repo":"https://huggingface.co/TheDrummer/UnslopNemo-12B-v4.1"}
 {"id":"vision-large","name":"Vision Large","category":"llm","origin":"models-dev","provider":"Vispark","released":"2024-05-15","open_weights":false,"context_k":1000}
 {"id":"vision-medium","name":"Vision Medium","category":"llm","origin":"models-dev","provider":"Vispark","released":"2024-05-15","open_weights":false,"context_k":1000}

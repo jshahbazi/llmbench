@@ -38,6 +38,7 @@
 {"id":"hy-mt2-1-8b","name":"Hy-MT2-1.8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-1.8B","params_b":2.04,"license":"apache-2.0"}
 {"id":"hy-mt2-30b-a3b","name":"Hy-MT2-30B-A3B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-30B-A3B","params_b":30.06,"license":"apache-2.0"}
 {"id":"hy-mt2-7b","name":"Hy-MT2-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-7B","params_b":8.03,"license":"apache-2.0"}
+{"id":"inkling-2-mini","name":"Inkling 2 Mini","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Mini","license":"apache-2.0"}
 {"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Small","license":"apache-2.0"}
 {"id":"kimi-k3-1-pro","name":"Kimi K3.1 Pro","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/moonshotai/Kimi-K3.1-Pro","license":"kimi-k3.1-pro"}
 {"id":"kolibri-1","name":"Kolibri 1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Aleph-Alpha/Kolibri-1","params_b":78.1,"license":"apache-2.0"}
@@ -105,7 +106,6 @@
 {"id":"remm-slerp-l2-13b","name":"ReMM SLERP 13B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Undi95/ReMM-SLERP-L2-13B","license":"cc-by-nc-4.0"}
 {"id":"rnj-1-instruct","name":"Rnj-1 Instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/EssentialAI/rnj-1-instruct","params_b":8.31,"license":"apache-2.0"}
 {"id":"sarvam-105b","name":"Sarvam 105B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/sarvamai/sarvam-105b","params_b":106.03,"license":"apache-2.0"}
-{"id":"sarvam-30b","name":"Sarvam 30B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/sarvamai/sarvam-30b","params_b":32.15,"license":"apache-2.0"}
 {"id":"skyfall-36b-v2","name":"Skyfall 36B V2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/TheDrummer/Skyfall-36B-v2","params_b":36.91,"license":"other"}
 {"id":"snorkel-mistral-pairrm-dpo","name":"Snorkel-Mistral-PairRM-DPO","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/snorkelai/Snorkel-Mistral-PairRM-DPO","license":"apache-2.0"}
 {"id":"speechless-code-mistral-7b-v1-0","name":"speechless-code-mistral-7b-v1.0","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-code-mistral-7b-v1.0","license":"apache-2.0"}

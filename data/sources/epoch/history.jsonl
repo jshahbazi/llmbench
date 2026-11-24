@@ -514,3 +514,19 @@
 {"t":"2026-11-21T07:21:20Z","key":"eci|Dolly 2.0-12b","model":"Dolly 2.0-12b","metric":"eci","op":"change","from":"55.1","to":"55.52"}
 {"t":"2026-11-21T07:21:20Z","key":"eci|Cerebras-GPT-13B","model":"Cerebras-GPT-13B","metric":"eci","op":"change","from":"48.59","to":"48.88"}
 {"t":"2026-11-22T19:48:46Z","key":"ebr_bench|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"ebr_bench","op":"add","to":"0.980952380952381"}
+{"t":"2026-11-24T00:00:05Z","key":"gpqa_diamond|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"gpqa_diamond","op":"add","to":"0.9400252525252525"}
+{"t":"2026-11-24T00:00:05Z","key":"otis_mock_aime_2024_2025|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"otis_mock_aime_2024_2025","op":"add","to":"1.0"}
+{"t":"2026-11-24T00:00:05Z","key":"otis_mock_aime_2024_2025|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"otis_mock_aime_2024_2025","op":"add","to":"0.9888888888888889"}
+{"t":"2026-11-24T00:00:05Z","key":"simpleqa_verified|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"simpleqa_verified","op":"add","to":"0.541"}
+{"t":"2026-11-24T00:00:05Z","key":"chess_puzzles|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"chess_puzzles","op":"add","to":"0.36"}
+{"t":"2026-11-24T00:00:05Z","key":"chess_puzzles|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"chess_puzzles","op":"add","to":"0.43"}
+{"t":"2026-11-24T00:00:05Z","key":"ebr_bench|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"ebr_bench","op":"add","to":"0.39999999999999997"}
+{"t":"2026-11-24T00:00:05Z","key":"ebr_bench|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"ebr_bench","op":"add","to":"0.17142857142857143"}
+{"t":"2026-11-24T00:00:05Z","key":"mystery_game_puzzles|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"mystery_game_puzzles","op":"add","to":"0.36"}
+{"t":"2026-11-24T00:00:05Z","key":"mystery_game_puzzles|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"mystery_game_puzzles","op":"add","to":"0.28"}
+{"t":"2026-11-24T00:00:05Z","key":"furniture_assembly|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"furniture_assembly","op":"add","to":"0.3416666666666667"}
+{"t":"2026-11-24T00:00:05Z","key":"furniture_assembly|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"furniture_assembly","op":"add","to":"0.48333333333333334"}
+{"t":"2026-11-24T00:00:05Z","key":"spireclimb|gemini-4-hydrogen_xhigh","model":"gemini-4-hydrogen_xhigh","metric":"spireclimb","op":"change","from":"0.07666666666666667","to":"0.135"}
+{"t":"2026-11-24T00:00:05Z","key":"spireclimb|gemini-4-argon_high","model":"gemini-4-argon_high","metric":"spireclimb","op":"add","to":"0.16666666666666669"}
+{"t":"2026-11-24T00:00:05Z","key":"spireclimb|gemini-4-carbon_high","model":"gemini-4-carbon_high","metric":"spireclimb","op":"add","to":"0.31166666666666665"}
+{"t":"2026-11-24T00:00:05Z","key":"spireclimb|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"spireclimb","op":"add","to":"0.0"}

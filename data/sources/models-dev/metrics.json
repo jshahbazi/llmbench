@@ -750,7 +750,7 @@
  },
  {
   "id": "humanitys-last-exam",
-  "label": "Humanity’s Last Exam",
+  "label": "Humanity's Last Exam",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1030,7 +1030,7 @@
  },
  {
   "id": "mmmu-pro",
-  "label": "MMMU Pro",
+  "label": "MMMU-Pro",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1513,7 +1513,7 @@
  },
  {
   "id": "terminal-bench-science/v0.1",
-  "label": "Terminal-Bench Science 0.1",
+  "label": "Terminal-Bench-Science 0.1",
   "direction": "higher",
   "unit": "percent",
   "headline": true

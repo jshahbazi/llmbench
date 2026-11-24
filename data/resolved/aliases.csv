@@ -1825,6 +1825,7 @@ epoch,mistral-small-3-2501,mistral-small-3,alias,
 epoch,mistral-small-3.1-2503,mistral-small-3-1,alias,
 epoch,mistral-small-3.2-2506,mistral-small-3-2,alias,
 epoch,moonshotai/Kimi-K2-Thinking,kimi-k2-thinking,exact,
+epoch,muse-ember-1.0_max,muse-ember,variant,effort:max
 epoch,muse-spark,muse-spark,exact,
 epoch,muse-spark-1.1,muse-spark-1-1,exact,
 epoch,muse-spark-1.1_xhigh,muse-spark-1-1,variant,effort:xhigh
@@ -1918,6 +1919,7 @@ epoch,qwen3.7-plus,qwen3-7-plus,exact,
 epoch,qwen3.7-plus_none,qwen3-7-plus,exact,
 epoch,qwen3.8-max-0902_xhigh,qwen3-8-max-0902,variant,effort:xhigh
 epoch,qwen3.8-max_xhigh,qwen3-8-2-4t-a95b,variant,effort:xhigh
+epoch,qwen4-max_xhigh,qwen4-max-preview,variant,effort:xhigh
 epoch,qwq-plus,qwq-plus,exact,
 epoch,seed-1.6,seed-1-6,exact,
 epoch,seed-oss-36b-instruct,seed-oss-36b,exact,
