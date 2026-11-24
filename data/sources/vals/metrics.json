@@ -4033,7 +4033,7 @@
   ],
   "family": "vals-rctbench",
   "url": "https://www.vals.ai/benchmarks/rctbench",
-  "description": "Can a decision model run a theme park? Nine models manage a RollerCoaster Tycoon 2 park for three in-game years. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+  "description": "Can a decision model run a theme park? Each model manages a RollerCoaster Tycoon 2 park for three in-game years. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
  },
  {
   "id": "robo_bench/arm",
@@ -5397,7 +5397,7 @@
  },
  {
   "id": "vals_index/vibe-code-bench",
-  "label": "Vals Index: Vibe Code Bench v1.1",
+  "label": "Vals Index: Vibe Code Bench v1.1.1",
   "direction": "higher",
   "unit": "percent",
   "headline": false,
@@ -5609,6 +5609,46 @@
   "family": "vals-vcb-1-100",
   "url": "https://www.vals.ai/benchmarks/vcb-1-100",
   "description": "Can models extend a working web application across a long sequence of dependent requests?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
+ },
+ {
+  "id": "vibe-code-v1-1-1/cost_per_test",
+  "label": "Vibe Code Bench v1.1.1 cost per test ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vibe-code-v1-1-1",
+  "description": "Average cost of one test, in US dollars, as Vals measured it."
+ },
+ {
+  "id": "vibe-code-v1-1-1/latency",
+  "label": "Vibe Code Bench v1.1.1 time per test (s)",
+  "direction": "lower",
+  "unit": "seconds",
+  "headline": false,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "url": "https://www.vals.ai/benchmarks/vibe-code-v1-1-1",
+  "description": "Average time to complete one test, in seconds, as Vals measured it."
+ },
+ {
+  "id": "vibe-code-v1-1-1/overall",
+  "label": "Vibe Code Bench v1.1.1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "coding",
+   "agents"
+  ],
+  "family": "vals-vibe-code-bench",
+  "url": "https://www.vals.ai/benchmarks/vibe-code-v1-1-1",
+  "description": "Can models build web applications from scratch?. Run by Vals AI. The interval is ±1.96 standard errors as Vals reports them."
  },
  {
   "id": "vibe-code/cost_per_test",

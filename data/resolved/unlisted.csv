@@ -20,7 +20,7 @@ augment-agent-v1,Augment Agent v1,swe-bench,1
 aurora-alpha,aurora-alpha,creative-writing-longform,3
 azerogpt,azerogpt,livebench mmlu-pro,65
 bert-nebulon-alpha,bert-nebulon-alpha,creative-writing-longform,3
-bison-1,bison-1,vals,8
+bison-1,bison-1,vals,11
 blackbox-ai-agent,Blackbox AI Agent,swe-bench,2
 bracket-sh,Bracket.sh,swe-bench,1
 bytedance-marscode-agent,Bytedance MarsCode Agent,swe-bench,2
@@ -66,10 +66,10 @@ claude-sonnet-4-6-thinking-32k,Claude Sonnet 4.6 Thinking 32K,nyt-connections,1
 claude-sonnet-4-thinking-16000,claude-sonnet-4_thinking_16000,llm-chess,4
 claude-sonnet-4-thinking-16k,Claude Sonnet 4 Thinking 16K,elimination-game step-game confabulations,6
 claude-sonnet-5-range,claude-sonnet-5-range,vals,5
-clef,clef,vals,8
+clef,clef,vals,11
 clef-flash,clef-flash,vals,8
 clef-omni,clef-omni,vals,8
-cobalt-c-high-1p00,cobalt-c-high-1p00,vals,182
+cobalt-c-high-1p00,cobalt-c-high-1p00,vals,185
 codart-ai,Codart AI,swe-bench,1
 codefuse-aais,CodeFuse-AAIS,swe-bench,1
 codefuse-cgm,CodeFuse-CGM,swe-bench,1
@@ -92,8 +92,8 @@ cursor-cli-composer-1-5,cursor_cli_composer_1.5,llm-chess,4
 cursor-cli-composer-2,cursor_cli_composer_2,llm-chess,4
 cypher-alpha,cypher-alpha,creative-writing-v3,4
 d1,d1,vals,8
-d1-2,d1.2,vals,8
-d1-2-ultra,d1.2-ultra,vals,8
+d1-2,d1.2,vals,11
+d1-2-ultra,d1.2-ultra,vals,11
 d1-ultra,d1-ultra,vals,8
 darkest-muse-v1,Darkest-muse-v1,creative-writing-v3,4
 dars-agent,DARS Agent,swe-bench,1
@@ -123,8 +123,8 @@ distyl-buttonagent,Distyl ButtonAgent,tau2-bench,4
 dracarys-72b-instruct,dracarys-72b-instruct,livebench,49
 dracarys2-llama-3-1-70b-instruct,dracarys2-llama-3.1-70b-instruct,livebench,99
 drex-max,drex-max,vals,11
-drex-v1-5,drex-v1.5,vals,8
-drex-v2-0,drex-v2.0,vals,8
+drex-v1-5,drex-v1.5,vals,11
+drex-v2-0,drex-v2.0,vals,11
 echo-ego-v2-14b,ECHO_Ego_v2_14B,mmlu-pro,15
 elephant-1,elephant-1,vals,8
 elephant-alpha,elephant-alpha,livebench,31
@@ -244,7 +244,7 @@ grok-4-fast-non-reasoning,grok-4-fast-non-reasoning,vectara-hhem vals llm-chess,
 grok-4-heavy-web-app,grok-4-heavy-web-app,epoch,1
 grok-voice-transcribe-1-0,grok-voice-transcribe-1.0,vals,5
 grok-voice-transcribe-2-0,grok-voice-transcribe-2.0,vals,5
-groundhog-1,groundhog-1,vals,8
+groundhog-1,groundhog-1,vals,11
 gru-2024-08-11,Gru (2024-08-11),swe-bench,1
 gru-2024-08-24,Gru (2024-08-24),swe-bench,1
 gru-2024-12-08,Gru (2024-12-08),swe-bench,2
@@ -261,7 +261,7 @@ hunyuanturbos,HunyuanTurboS,mmlu-pro,1
 ibm-ai-agent-swe-1-0,IBM AI Agent SWE-1.0,swe-bench,1
 ibm-research-agent-101,IBM Research Agent-101,swe-bench,1
 ink-2,ink-2,vals,4
-inkling-mini-1117,inkling-mini (1117),vals,239
+inkling-mini-1117,inkling-mini (1117),vals,242
 inkling-small-2,Inkling Small 2,terminal-bench,2
 intern-s1,Intern-S1,mmlu-pro,1
 internlm-20b,internlm-20b,epoch,1
@@ -327,7 +327,7 @@ mistral-7b-instruct,Mistral 7B Instruct,arena,50
 mistral-7b-v0-2,Mistral-7B-v0.2,mmlu-pro,15
 mistral-large,Mistral Large,epoch,1
 mistral-large-2512,mistral-large (2512),vals,87
-mistral-large-4-oss,mistral-large-4-oss,vals,157
+mistral-large-4-oss,mistral-large-4-oss,vals,160
 mistral-medium,mistral-medium,kagi,4
 mistral-medium-latest,mistral-medium-latest,models-dev,1
 mistral-nemo-12b-instruct,mistral-nemo-12b-instruct,llm-chess,3
@@ -414,7 +414,7 @@ qwen3-30b-a3b-base,Qwen3-30B-A3B-Base,mmlu-pro,1
 qwen3-32b-fast-thinking,Qwen3-32B-fast Thinking,kagi,4
 qwen3-8-27b-antislop,Qwen3.8-27B-antislop,creative-writing-v3 creative-writing-longform,7
 qwen3-8-27b-q2-k-xl,qwen3.8-27b@q2_k_xl,llm-chess,4
-qwen3-8-max-internal,qwen3.8-max-internal,vals,191
+qwen3-8-max-internal,qwen3.8-max-internal,vals,194
 qwen3-max,Qwen3-Max,epoch vals kagi,83
 qwq-32b-plus-qwen-2-5-coder-instruct,QwQ-32B + Qwen 2.5 Coder Instruct,aider-polyglot,3
 raft-30b-a3b,RAFT-30B-A3B,tau2-bench,5

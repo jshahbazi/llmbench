@@ -2638,6 +2638,8 @@ livebench,grok-code-fast-1-0825,grok-code-fast-1,alias,
 livebench,hermes-3-llama-3.1-70b,hermes-3-llama-3-1-70b,exact,
 livebench,hunyuan-turbos-20250313,hunyuan-turbos-20250313,unlisted,snapshot:20250313
 livebench,inkling,inkling,exact,
+livebench,inkling-2-mini,inkling-2-mini,link,
+livebench,inkling-2-small,inkling-2-small,link,
 livebench,inkling-xhigh,inkling,variant,effort:xhigh
 livebench,kimi-k2-instruct,kimi-k2,link,
 livebench,kimi-k2-thinking,kimi-k2-thinking,link,reasoning:thinking
@@ -2645,7 +2647,7 @@ livebench,kimi-k2.5-thinking,kimi-k2-5,link,reasoning:thinking
 livebench,kimi-k2.6-thinking,kimi-k2-6,link,reasoning:thinking
 livebench,kimi-k2.7-code,kimi-k2-7-code,link,
 livebench,kimi-k3,kimi-k3,link,
-livebench,kimi-k3.1-pro,kimi-k3-1-pro,exact,
+livebench,kimi-k3.1-pro,kimi-k3-1-pro,link,
 livebench,learnlm-1.5-pro-experimental,learnlm-1-5-pro,unlisted,stage:exp
 livebench,learnlm-2.0-flash-experimental,learnlm-2-0-flash,unlisted,stage:exp
 livebench,llama-2-7b-chat-hf,llama-2-7b-chat,exact,
