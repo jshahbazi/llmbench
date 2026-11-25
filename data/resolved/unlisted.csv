@@ -320,6 +320,7 @@ mcts-refine-7b,MCTS-Refine-7B,swe-bench,2
 mercury-coder,mercury-coder,kagi,4
 meta-llama4-scout-17b-instruct,meta.llama4-scout-17b-instruct,llm-chess,4
 microsoft-decision-1,microsoft-decision-1,vals,8
+microsoft-decision-1-1,microsoft-decision-1.1,vals,8
 mimo-7b-rl,Mimo-7B-RL,mmlu-pro,1
 minimax-m2-7-highspeed,MiniMax-M2.7-highspeed,terminal-bench,1
 mistral-3-1-small,Mistral-3.1-Small,mmlu-pro,1

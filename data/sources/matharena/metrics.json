@@ -1100,6 +1100,31 @@
   "description": "Cost of one model run on one problem, in US dollars."
  },
  {
+  "id": "overall--smallmath/accuracy",
+  "label": "MathArena Overall overall",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#overall--smallmath",
+  "description": "Accuracy on Overall overall, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "overall--smallmath/cost",
+  "label": "MathArena Overall overall cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#overall--smallmath",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
   "id": "overall--visual_math/accuracy",
   "label": "MathArena Visual maths (Kangaroo) overall",
   "direction": "higher",
@@ -1147,6 +1172,156 @@
    "math"
   ],
   "url": "https://matharena.ai/#putnam--putnam_2025",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smallmath--level_1/accuracy",
+  "label": "MathArena Level 1",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#smallmath--level_1",
+  "description": "Accuracy on Level 1, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smallmath--level_1/cost",
+  "label": "MathArena Level 1 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smallmath--level_1",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smallmath--level_2/accuracy",
+  "label": "MathArena Level 2",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#smallmath--level_2",
+  "description": "Accuracy on Level 2, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smallmath--level_2/cost",
+  "label": "MathArena Level 2 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smallmath--level_2",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smallmath--level_3/accuracy",
+  "label": "MathArena Level 3",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#smallmath--level_3",
+  "description": "Accuracy on Level 3, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smallmath--level_3/cost",
+  "label": "MathArena Level 3 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smallmath--level_3",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smallmath--level_4/accuracy",
+  "label": "MathArena Level 4",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#smallmath--level_4",
+  "description": "Accuracy on Level 4, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smallmath--level_4/cost",
+  "label": "MathArena Level 4 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smallmath--level_4",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smallmath--level_5/accuracy",
+  "label": "MathArena Level 5",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#smallmath--level_5",
+  "description": "Accuracy on Level 5, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smallmath--level_5/cost",
+  "label": "MathArena Level 5 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smallmath--level_5",
+  "description": "Cost of one model run on one problem, in US dollars."
+ },
+ {
+  "id": "smallmath--level_6/accuracy",
+  "label": "MathArena Level 6",
+  "direction": "higher",
+  "unit": "percent",
+  "headline": true,
+  "tags": [
+   "math"
+  ],
+  "family": "matharena-smallmath",
+  "url": "https://matharena.ai/#smallmath--level_6",
+  "description": "Accuracy on Level 6, run by MathArena, with its 95% interval. Models released after the competition are flagged in the row's details."
+ },
+ {
+  "id": "smallmath--level_6/cost",
+  "label": "MathArena Level 6 cost per problem ($)",
+  "direction": "lower",
+  "unit": "USD",
+  "headline": false,
+  "tags": [
+   "math"
+  ],
+  "url": "https://matharena.ai/#smallmath--level_6",
   "description": "Cost of one model run on one problem, in US dollars."
  },
  {

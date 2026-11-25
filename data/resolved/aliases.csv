@@ -3024,6 +3024,7 @@ matharena,Claude-Fable-5.1 (high),claude-fable-5-1,variant,effort:high
 matharena,Claude-Fable-5.1 (low),claude-fable-5-1,variant,effort:low
 matharena,Claude-Fable-5.1 (max),claude-fable-5-1,variant,effort:max
 matharena,Claude-Fable-5.2 (max),claude-fable-5-2,variant,effort:max
+matharena,Claude-Haiku-5.5 (low),claude-haiku-5-5,variant,effort:low
 matharena,Claude-Opus-4.0 (Think),claude-opus-4-20250514,alias,reasoning:thinking
 matharena,Claude-Opus-4.6 (high),claude-opus-4-6,variant,effort:high
 matharena,Claude-Opus-4.7 (high),claude-opus-4-7,variant,effort:high
@@ -3031,7 +3032,9 @@ matharena,Claude-Opus-4.7 (xhigh),claude-opus-4-7,variant,effort:xhigh
 matharena,Claude-Opus-4.8 (max),claude-opus-4-8,variant,effort:max
 matharena,Claude-Opus-5 (max),claude-opus-5,variant,effort:max
 matharena,Claude-Opus-5.5 (high),claude-opus-5-5,variant,effort:high
+matharena,Claude-Opus-5.5 (low),claude-opus-5-5,variant,effort:low
 matharena,Claude-Sonnet-4.5 (Think),claude-sonnet-4-5,variant,reasoning:thinking
+matharena,Claude-Sonnet-5.5 (low),claude-sonnet-5-5,variant,effort:low
 matharena,DeepSeek-R1,deepseek-r1,exact,
 matharena,DeepSeek-R1-0528,deepseek-r1-0528,exact,
 matharena,DeepSeek-R1-Distill-1.5B,deepseek-r1-distill-qwen-1-5b,alias,
@@ -3041,6 +3044,7 @@ matharena,DeepSeek-R1-Distill-70B,deepseek-r1-distill-llama-70b,alias,
 matharena,DeepSeek-V3,deepseek-v3,exact,
 matharena,DeepSeek-V3-03-24,deepseek-v3-0324,alias,
 matharena,DeepSeek-V4.1-Flash (max),deepseek-v4-1-flash,variant,effort:max
+matharena,DeepSeek-V4.1-Flash-1017 (low),deepseek-v4-1-flash-1017,variant,effort:low
 matharena,DeepSeek-V4.1-Flash-1017 (max),deepseek-v4-1-flash-1017,variant,effort:max
 matharena,"DeepSeek-V4.1-Flash-1017 (max, DSH)",deepseek-v4-1-flash-1017,variant,effort:max; other:DSH
 matharena,DeepSeek-v3.1 (Think),deepseek-v3-1,variant,reasoning:thinking
@@ -3077,9 +3081,17 @@ matharena,GPT-5.6-Sol (max),gpt-5-6-sol,variant,effort:max
 matharena,"GPT-5.6-Sol (max, via Codex)",gpt-5-6-sol,variant,effort:max; other:via Codex
 matharena,GPT-6 Astra (low),gpt-6-astra,variant,effort:low
 matharena,GPT-6 Astra (max),gpt-6-astra,variant,effort:max
+matharena,GPT-6 Luna (low),gpt-6-luna,variant,effort:low
+matharena,GPT-6 Luna (medium),gpt-6-luna,variant,effort:medium
 matharena,GPT-6 Sol (max),gpt-6-sol,variant,effort:max
+matharena,GPT-6.1 Sol (high),gpt-6-1-sol,variant,effort:high
+matharena,GPT-6.1 Sol (low),gpt-6-1-sol,variant,effort:low
 matharena,GPT-6.1 Sol (max),gpt-6-1-sol,variant,effort:max
+matharena,GPT-6.1 Terra (low),gpt-6-1-terra,variant,effort:low
+matharena,GPT-6.1 Terra (medium),gpt-6-1-terra,variant,effort:medium
+matharena,GPT-6.2 Astra (low),gpt-6-2-astra,variant,effort:low
 matharena,GPT-6.2 Astra (max),gpt-6-2-astra,variant,effort:max
+matharena,GPT-6.2 Sol (low),gpt-6-2-sol,variant,effort:low
 matharena,GPT-6.2 Sol (max),gpt-6-2-sol,variant,effort:max
 matharena,Gemini 2.5 Flash (Thinking),gemini-2-5-flash,variant,reasoning:thinking
 matharena,Gemini 2.5 Pro,gemini-2-5-pro,exact,
@@ -3097,8 +3109,12 @@ matharena,Gemini 3.7 Flash (high),gemini-3-7-flash,variant,effort:high
 matharena,Gemini 3.8 Flash (high),gemini-3-8-flash,variant,effort:high
 matharena,Gemini 4 Argon (high),gemini-4-argon,variant,effort:high
 matharena,Gemini 4 Carbon (high),gemini-4-carbon,variant,effort:high
+matharena,Gemini 4 Carbon (low),gemini-4-carbon,variant,effort:low
+matharena,Gemini 4 Hydrogen (low),gemini-4-hydrogen,variant,effort:low
 matharena,Gemini Deep Think 3 (12/25),gemini-deep-think-3,unlisted,other:12/25
 matharena,Gemini IMO Deep Think,gemini-imo-deep-think,unlisted,
+matharena,Gemma 4 26B A4B (off),gemma-4-26b-a4b,variant,other:off
+matharena,Gemma 4 31B (off),gemma-4-31b,variant,other:off
 matharena,Grok 3 (Think),grok-3-beta,variant,reasoning:thinking
 matharena,Grok 3 Mini (high),grok-3-mini-beta,variant,effort:high
 matharena,Grok 3 Mini (low),grok-3-mini-beta,variant,effort:low
@@ -3108,20 +3124,30 @@ matharena,Grok 4 Fast R,grok-4-fast,alias,
 matharena,Grok 4.1 Fast (Reasoning),grok-4-1-fast-reasoning,exact,
 matharena,Grok 4.5 (high),grok-4-5,variant,effort:high
 matharena,Grok 4.7 (xhigh),grok-4-7,variant,effort:xhigh
+matharena,Inkling 2 Mini (minimal),inkling-2-mini,variant,effort:minimal
 matharena,Inkling 2 Small (0.99),inkling-2-small,variant,other:0.99
+matharena,Inkling 2 Small (minimal),inkling-2-small,variant,effort:minimal
 matharena,K2-Think,k2-think,exact,
 matharena,Kimi K2 Thinking,kimi-k2-thinking,exact,
 matharena,Kimi K2.5 (high),kimi-k2-5,variant,effort:high
 matharena,Kimi K2.6 (high),kimi-k2-6,variant,effort:high
 matharena,Kimi K3 (max),kimi-k3,variant,effort:max
+matharena,Kimi K3.1 Pro (low),kimi-k3-1-pro,variant,effort:low
 matharena,Kimi K3.1 Pro (max),kimi-k3-1-pro,variant,effort:max
 matharena,Leanstral 1.5,leanstral-1-5,unlisted,
+matharena,Llama-3.2-1B (off),llama-3-2-1b,variant,other:off
+matharena,Llama-3.2-3B (off),llama-3-2-3b,variant,other:off
+matharena,Ministral 3 3B 2512 (off),ministral-3-3b,variant,other:off
 matharena,Mistral Large 4 (high),mistral-large-4-2610,variant,effort:high
+matharena,Mistral Small 3 24B 2501 (off),mistral-small-3,variant,other:off
+matharena,Muse Glimmer 30B (low),muse-glimmer-30b,variant,effort:low
 matharena,Muse Spark 1.1,muse-spark-1-1,exact,
 matharena,Muse Spark 1.3 (max),muse-spark-1-3,variant,effort:max
+matharena,Muse Spark Open (low),muse-spark-open,variant,effort:low
 matharena,Muse Spark Open (xhigh),muse-spark-open,variant,effort:xhigh
 matharena,Muse Wonder (max),muse-wonder,variant,effort:max
 matharena,NVIDIA-Nemotron-3-Super,nemotron-3-super-120b-a12b,alias,
+matharena,NVIDIA-Nemotron-3.5-Lightning (on),nemotron-3-5-lightning,maker,other:on
 matharena,QED-Nano,qed-nano,exact,
 matharena,QwQ-32B,qwq-32b,exact,
 matharena,QwQ-32B-Preview,qwq-32b-preview,exact,
@@ -3136,9 +3162,12 @@ matharena,Qwen3.5-2B,qwen3-5-2b,exact,
 matharena,Qwen3.5-35B-A3B,qwen3-5-35b-a3b,exact,
 matharena,Qwen3.5-397b-a17b,qwen3-5-397b-a17b,exact,
 matharena,Qwen3.5-9B,qwen3-5-9b,exact,
+matharena,Qwen3.5-9B (off),qwen3-5-9b,variant,other:off
 matharena,Qwen3.6-35B,qwen3-6-35b-a3b,alias,
 matharena,Qwen3.8-2.4T-A95B (max),qwen3-8-2-4t-a95b,variant,effort:max
+matharena,Qwen3.8-27B (low),qwen3-8-27b,variant,effort:low
 matharena,Qwen3.8-Max (max),qwen3-8-2-4t-a95b,variant,effort:max
+matharena,Qwen4 Max,qwen4-max-preview,variant,
 matharena,Step 3.5 Flash,step-3-5-flash,exact,
 matharena,Step 3.7 Flash (high),step-3-7-flash,variant,effort:high
 matharena,gemini-2.0-flash,gemini-2-0-flash-001,variant,
@@ -4265,6 +4294,7 @@ vals,decision/joey-1,joey-1,unlisted,
 vals,decision/mammoth-1,mammoth-1,unlisted,
 vals,decision/mercury-decide,mercury-decide,exact,
 vals,decision/microsoft-decision-1,microsoft-decision-1,unlisted,
+vals,decision/microsoft-decision-1.1,microsoft-decision-1-1,unlisted,
 vals,decision/solar-decide,solar-decide,unlisted,
 vals,decision/solar-decide-flash,solar-decide-flash,unlisted,
 vals,decision/tev1-4b-experimental,tev1-4b,unlisted,stage:exp
