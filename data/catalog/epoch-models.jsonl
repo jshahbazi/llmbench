@@ -685,6 +685,7 @@
 {"id":"inflection-2","name":"Inflection-2","category":"llm","origin":"epoch-models","provider":"Inflection AI","released":"2023-11","open_weights":false}
 {"id":"inflection-2-5","name":"Inflection-2.5","category":"llm","origin":"epoch-models","provider":"Inflection AI","released":"2024-03","open_weights":false}
 {"id":"inkling","name":"Inkling","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-07","open_weights":true,"params_b":975}
+{"id":"inkling-2-mini","name":"Inkling 2 Mini","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-11","open_weights":true}
 {"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-11","open_weights":true,"params_b":594}
 {"id":"inkling-small","name":"Inkling-Small","category":"llm","origin":"epoch-models","provider":"Thinking Machines","released":"2026-07","open_weights":true,"params_b":276}
 {"id":"instructblip","name":"InstructBLIP","category":"llm","origin":"epoch-models","provider":"Salesforce Research","released":"2023-05","open_weights":true,"params_b":13}

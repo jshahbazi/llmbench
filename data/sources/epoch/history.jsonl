@@ -530,3 +530,7 @@
 {"t":"2026-11-24T00:00:05Z","key":"spireclimb|gemini-4-argon_high","model":"gemini-4-argon_high","metric":"spireclimb","op":"add","to":"0.16666666666666669"}
 {"t":"2026-11-24T00:00:05Z","key":"spireclimb|gemini-4-carbon_high","model":"gemini-4-carbon_high","metric":"spireclimb","op":"add","to":"0.31166666666666665"}
 {"t":"2026-11-24T00:00:05Z","key":"spireclimb|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"spireclimb","op":"add","to":"0.0"}
+{"t":"2026-11-25T08:46:26Z","key":"frontiermath_tiers_1_3_v2|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"frontiermath_tiers_1_3_v2","op":"add","to":"0.7859649122807018"}
+{"t":"2026-11-25T08:46:26Z","key":"frontiermath_tier_4_v2|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"frontiermath_tier_4_v2","op":"add","to":"0.5365853658536586"}
+{"t":"2026-11-25T08:46:26Z","key":"spireclimb|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"spireclimb","op":"add","to":"0.5116666666666667"}
+{"t":"2026-11-25T08:46:26Z","key":"spireclimb|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"spireclimb","op":"add","to":"0.0"}

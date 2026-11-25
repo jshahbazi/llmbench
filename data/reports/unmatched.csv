@@ -44,6 +44,7 @@ livebench,smaug-agentic,smaug-agentic,1,31,
 livebench,smaug-flash,smaug-flash,1,31,
 livebench,smaug-mini,smaug-mini,1,31,
 bfcl,Nanbeige3.5-Pro-Thinking (FC),nanbeige3-5-pro-thinking,1,29,
+livebench,mistral-large-4-0,mistral-large-4-0,3,27,mistral-large-4 mistral-large-4-2610 mistral-large-2402
 livebench,smaug-nemotron-3.5-nvfp4,smaug-nemotron-3-5,3,27,
 livebench,grok-2,grok-2,1,25,grok-2-0813 grok-2-1212 grok-2-mini-0813
 livebench,grok-beta,grok,1,25,grok-0 grok-1 grok-2-0813

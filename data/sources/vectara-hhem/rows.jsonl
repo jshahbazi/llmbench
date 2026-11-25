@@ -5,6 +5,8 @@
 {"key":"MiniMaxAI/minimax-m2p1","model":"MiniMaxAI/minimax-m2p1","scores":{"Hallucination Rate":"11.8 %","Factual Consistency Rate":"88.2 %","Answer Rate":"98.5 %"},"extra":{"Average Summary Length (Words)":"106.9"}}
 {"key":"MiniMaxAI/minimax-m2p5","model":"MiniMaxAI/minimax-m2p5","scores":{"Hallucination Rate":"9.1 %","Factual Consistency Rate":"90.9 %","Answer Rate":"98.2 %"},"extra":{"Average Summary Length (Words)":"137.2"}}
 {"key":"MiniMaxAI/minimax-m2p7","model":"MiniMaxAI/minimax-m2p7","scores":{"Hallucination Rate":"12.9 %","Factual Consistency Rate":"87.1 %","Answer Rate":"99.4 %"},"extra":{"Average Summary Length (Words)":"131.9"}}
+{"key":"MiniMaxAI/minimax-m3","model":"MiniMaxAI/minimax-m3","scores":{"Hallucination Rate":"11.2 %","Factual Consistency Rate":"88.8 %","Answer Rate":"100.0 %"},"extra":{"Average Summary Length (Words)":"171.0"}}
+{"key":"MiniMaxAI/minimax-m3.1-flash","model":"MiniMaxAI/minimax-m3.1-flash","scores":{"Hallucination Rate":"11.0 %","Factual Consistency Rate":"89.0 %","Answer Rate":"100.0 %"},"extra":{"Average Summary Length (Words)":"167.6"}}
 {"key":"ai21labs/jamba-large-1.7-2025-07","model":"ai21labs/jamba-large-1.7-2025-07","scores":{"Hallucination Rate":"9.7 %","Factual Consistency Rate":"90.3 %","Answer Rate":"98.9 %"},"extra":{"Average Summary Length (Words)":"124.8"}}
 {"key":"ai21labs/jamba-mini-1.7-2025-07","model":"ai21labs/jamba-mini-1.7-2025-07","scores":{"Hallucination Rate":"14.7 %","Factual Consistency Rate":"85.3 %","Answer Rate":"99.1 %"},"extra":{"Average Summary Length (Words)":"136.4"}}
 {"key":"ai21labs/jamba-mini-2","model":"ai21labs/jamba-mini-2","scores":{"Hallucination Rate":"5.3 %","Factual Consistency Rate":"94.7 %","Answer Rate":"99.6 %"},"extra":{"Average Summary Length (Words)":"109.4"}}
@@ -29,6 +31,7 @@
 {"key":"deepseek-ai/DeepSeek-V3.1","model":"deepseek-ai/DeepSeek-V3.1","scores":{"Hallucination Rate":"5.5 %","Factual Consistency Rate":"94.5 %","Answer Rate":"94.5 %"},"extra":{"Average Summary Length (Words)":"63.7"}}
 {"key":"deepseek-ai/DeepSeek-V3.2","model":"deepseek-ai/DeepSeek-V3.2","scores":{"Hallucination Rate":"6.3 %","Factual Consistency Rate":"93.7 %","Answer Rate":"92.6 %"},"extra":{"Average Summary Length (Words)":"62.0"}}
 {"key":"deepseek-ai/DeepSeek-V3.2-Exp","model":"deepseek-ai/DeepSeek-V3.2-Exp","scores":{"Hallucination Rate":"5.3 %","Factual Consistency Rate":"94.7 %","Answer Rate":"96.6 %"},"extra":{"Average Summary Length (Words)":"64.6"}}
+{"key":"deepseek-ai/DeepSeek-V4-Flash","model":"deepseek-ai/DeepSeek-V4-Flash","scores":{"Hallucination Rate":"6.4 %","Factual Consistency Rate":"93.6 %","Answer Rate":"97.7 %"},"extra":{"Average Summary Length (Words)":"64.8"}}
 {"key":"deepseek-ai/DeepSeek-V4-Pro","model":"deepseek-ai/DeepSeek-V4-Pro","scores":{"Hallucination Rate":"8.6 %","Factual Consistency Rate":"91.4 %","Answer Rate":"97.2 %"},"extra":{"Average Summary Length (Words)":"153.8"}}
 {"key":"deepseek-ai/DeepSeek-V4.1-Flash","model":"deepseek-ai/DeepSeek-V4.1-Flash","scores":{"Hallucination Rate":"4.2 %","Factual Consistency Rate":"95.8 %","Answer Rate":"99.9 %"},"extra":{"Average Summary Length (Words)":"108.2"}}
 {"key":"google/gemini-2.5-flash","model":"google/gemini-2.5-flash","scores":{"Hallucination Rate":"7.8 %","Factual Consistency Rate":"92.2 %","Answer Rate":"99.0 %"},"extra":{"Average Summary Length (Words)":"101.5"}}
@@ -61,6 +64,7 @@
 {"key":"mistralai/mistral-large-2411","model":"mistralai/mistral-large-2411","scores":{"Hallucination Rate":"4.5 %","Factual Consistency Rate":"95.5 %","Answer Rate":"99.9 %"},"extra":{"Average Summary Length (Words)":"85.0"}}
 {"key":"mistralai/mistral-medium-2508","model":"mistralai/mistral-medium-2508","scores":{"Hallucination Rate":"22.7 %","Factual Consistency Rate":"77.3 %","Answer Rate":"99.7 %"},"extra":{"Average Summary Length (Words)":"142.9"}}
 {"key":"mistralai/mistral-small-2501","model":"mistralai/mistral-small-2501","scores":{"Hallucination Rate":"5.1 %","Factual Consistency Rate":"94.9 %","Answer Rate":"97.9 %"},"extra":{"Average Summary Length (Words)":"98.8"}}
+{"key":"moonshotai/Kimi-K2-Instruct","model":"moonshotai/Kimi-K2-Instruct","scores":{"Hallucination Rate":"13.9 %","Factual Consistency Rate":"86.1 %","Answer Rate":"97.0 %"},"extra":{"Average Summary Length (Words)":"114.3"}}
 {"key":"moonshotai/Kimi-K2-Instruct-0905","model":"moonshotai/Kimi-K2-Instruct-0905","scores":{"Hallucination Rate":"17.9 %","Factual Consistency Rate":"82.1 %","Answer Rate":"98.6 %"},"extra":{"Average Summary Length (Words)":"59.2"}}
 {"key":"moonshotai/Kimi-K2.5","model":"moonshotai/Kimi-K2.5","scores":{"Hallucination Rate":"14.2 %","Factual Consistency Rate":"85.8 %","Answer Rate":"92.2 %"},"extra":{"Average Summary Length (Words)":"112.0"}}
 {"key":"moonshotai/kimi-k2.6","model":"moonshotai/kimi-k2.6","scores":{"Hallucination Rate":"10.8 %","Factual Consistency Rate":"89.2 %","Answer Rate":"99.7 %"},"extra":{"Average Summary Length (Words)":"116.7"}}
@@ -107,5 +111,7 @@
 {"key":"zai-org/GLM-4.5-AIR-FP8","model":"zai-org/GLM-4.5-AIR-FP8","scores":{"Hallucination Rate":"9.3 %","Factual Consistency Rate":"90.7 %","Answer Rate":"98.1 %"},"extra":{"Average Summary Length (Words)":"70.6"}}
 {"key":"zai-org/GLM-4.6","model":"zai-org/GLM-4.6","scores":{"Hallucination Rate":"9.5 %","Factual Consistency Rate":"90.5 %","Answer Rate":"94.5 %"},"extra":{"Average Summary Length (Words)":"77.2"}}
 {"key":"zai-org/GLM-4.7-flash","model":"zai-org/GLM-4.7-flash","scores":{"Hallucination Rate":"9.3 %","Factual Consistency Rate":"90.7 %","Answer Rate":"91.6 %"},"extra":{"Average Summary Length (Words)":"71.8"}}
+{"key":"zai-org/GLM-5.2","model":"zai-org/GLM-5.2","scores":{"Hallucination Rate":"9.7 %","Factual Consistency Rate":"90.3 %","Answer Rate":"99.7 %"},"extra":{"Average Summary Length (Words)":"92.6"}}
+{"key":"zai-org/GLM-5.3-Flash","model":"zai-org/GLM-5.3-Flash","scores":{"Hallucination Rate":"8.5 %","Factual Consistency Rate":"91.5 %","Answer Rate":"99.8 %"},"extra":{"Average Summary Length (Words)":"140.6"}}
 {"key":"zai-org/glm-4p7","model":"zai-org/glm-4p7","scores":{"Hallucination Rate":"11.7 %","Factual Consistency Rate":"88.3 %","Answer Rate":"99.8 %"},"extra":{"Average Summary Length (Words)":"70.6"}}
 {"key":"zai-org/glm-5","model":"zai-org/glm-5","scores":{"Hallucination Rate":"10.1 %","Factual Consistency Rate":"89.9 %","Answer Rate":"99.7 %"},"extra":{"Average Summary Length (Words)":"74.4"}}

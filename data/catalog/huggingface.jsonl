@@ -38,6 +38,8 @@
 {"id":"hy-mt2-1-8b","name":"Hy-MT2-1.8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-1.8B","params_b":2.04,"license":"apache-2.0"}
 {"id":"hy-mt2-30b-a3b","name":"Hy-MT2-30B-A3B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-30B-A3B","params_b":30.06,"license":"apache-2.0"}
 {"id":"hy-mt2-7b","name":"Hy-MT2-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy-MT2-7B","params_b":8.03,"license":"apache-2.0"}
+{"id":"hy4","name":"Hy4","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy4","params_b":774.43,"license":"tencent-hy-license"}
+{"id":"hy4-flash","name":"Hy4 flash","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/tencent/Hy4-flash","license":"tencent-hy-license"}
 {"id":"inkling-2-mini","name":"Inkling 2 Mini","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Mini","license":"apache-2.0"}
 {"id":"inkling-2-small","name":"Inkling 2 Small","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/thinkingmachines/Inkling-2-Small","license":"apache-2.0"}
 {"id":"kimi-k3-1-pro","name":"Kimi K3.1 Pro","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/moonshotai/Kimi-K3.1-Pro","license":"kimi-k3.1-pro"}
@@ -113,6 +115,7 @@
 {"id":"speechless-coder-ds-6-7b","name":"speechless-coder-ds-6.7b","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-coder-ds-6.7b","license":"apache-2.0"}
 {"id":"speechless-coding-7b-16k-tora","name":"speechless-coding-7b-16k-tora","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/uukuguy/speechless-coding-7b-16k-tora","license":"llama2"}
 {"id":"starchat2-15b-v0-1","name":"StarChat2 15B v0.1","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/HuggingFaceH4/starchat2-15b-v0.1","params_b":15.96}
+{"id":"ternary-bonsai-27b","name":"Ternary Bonsai 27B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf","license":"apache-2.0"}
 {"id":"tiny-aya-earth","name":"Tiny Aya Earth","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-earth","params_b":3.35,"license":"cc-by-nc-4.0"}
 {"id":"tiny-aya-fire","name":"Tiny Aya Fire","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-fire","params_b":3.35,"license":"cc-by-nc-4.0"}
 {"id":"tiny-aya-global","name":"Tiny Aya Global","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/CohereLabs/tiny-aya-global","params_b":3.35,"license":"cc-by-nc-4.0"}

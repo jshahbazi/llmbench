@@ -281,7 +281,7 @@
  },
  {
   "id": "claw-eval",
-  "label": "Claw-eval",
+  "label": "Claw-Eval",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1009,7 +1009,7 @@
  },
  {
   "id": "mls-bench-lite",
-  "label": "MLS Bench Lite",
+  "label": "MLS-Bench-Lite",
   "direction": "higher",
   "unit": "percent",
   "headline": true

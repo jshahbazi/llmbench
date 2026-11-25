@@ -1,0 +1,18 @@
+{"t":"2026-11-25T08:46:26Z","key":"deepseek-ai/DeepSeek-V4-Flash","model":"deepseek-ai/DeepSeek-V4-Flash","metric":"Hallucination Rate","op":"add","to":"6.4 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"deepseek-ai/DeepSeek-V4-Flash","model":"deepseek-ai/DeepSeek-V4-Flash","metric":"Factual Consistency Rate","op":"add","to":"93.6 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"deepseek-ai/DeepSeek-V4-Flash","model":"deepseek-ai/DeepSeek-V4-Flash","metric":"Answer Rate","op":"add","to":"97.7 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"zai-org/GLM-5.3-Flash","model":"zai-org/GLM-5.3-Flash","metric":"Hallucination Rate","op":"add","to":"8.5 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"zai-org/GLM-5.3-Flash","model":"zai-org/GLM-5.3-Flash","metric":"Factual Consistency Rate","op":"add","to":"91.5 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"zai-org/GLM-5.3-Flash","model":"zai-org/GLM-5.3-Flash","metric":"Answer Rate","op":"add","to":"99.8 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"zai-org/GLM-5.2","model":"zai-org/GLM-5.2","metric":"Hallucination Rate","op":"add","to":"9.7 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"zai-org/GLM-5.2","model":"zai-org/GLM-5.2","metric":"Factual Consistency Rate","op":"add","to":"90.3 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"zai-org/GLM-5.2","model":"zai-org/GLM-5.2","metric":"Answer Rate","op":"add","to":"99.7 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"MiniMaxAI/minimax-m3.1-flash","model":"MiniMaxAI/minimax-m3.1-flash","metric":"Hallucination Rate","op":"add","to":"11.0 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"MiniMaxAI/minimax-m3.1-flash","model":"MiniMaxAI/minimax-m3.1-flash","metric":"Factual Consistency Rate","op":"add","to":"89.0 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"MiniMaxAI/minimax-m3.1-flash","model":"MiniMaxAI/minimax-m3.1-flash","metric":"Answer Rate","op":"add","to":"100.0 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"MiniMaxAI/minimax-m3","model":"MiniMaxAI/minimax-m3","metric":"Hallucination Rate","op":"add","to":"11.2 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"MiniMaxAI/minimax-m3","model":"MiniMaxAI/minimax-m3","metric":"Factual Consistency Rate","op":"add","to":"88.8 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"MiniMaxAI/minimax-m3","model":"MiniMaxAI/minimax-m3","metric":"Answer Rate","op":"add","to":"100.0 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"moonshotai/Kimi-K2-Instruct","model":"moonshotai/Kimi-K2-Instruct","metric":"Hallucination Rate","op":"add","to":"13.9 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"moonshotai/Kimi-K2-Instruct","model":"moonshotai/Kimi-K2-Instruct","metric":"Factual Consistency Rate","op":"add","to":"86.1 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
+{"t":"2026-11-25T08:46:26Z","key":"moonshotai/Kimi-K2-Instruct","model":"moonshotai/Kimi-K2-Instruct","metric":"Answer Rate","op":"add","to":"97.0 %","rev":"fc55a656b3824ed37a18cda44e4b4e6cc98bb9da"}
