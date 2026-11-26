@@ -534,3 +534,10 @@
 {"t":"2026-11-25T08:46:26Z","key":"frontiermath_tier_4_v2|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"frontiermath_tier_4_v2","op":"add","to":"0.5365853658536586"}
 {"t":"2026-11-25T08:46:26Z","key":"spireclimb|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"spireclimb","op":"add","to":"0.5116666666666667"}
 {"t":"2026-11-25T08:46:26Z","key":"spireclimb|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"spireclimb","op":"add","to":"0.0"}
+{"t":"2026-11-26T21:41:14Z","key":"gpqa_diamond|inkling-2-mini_xhigh","model":"inkling-2-mini_xhigh","metric":"gpqa_diamond","op":"add","to":"0.8680555555555556"}
+{"t":"2026-11-26T21:41:14Z","key":"otis_mock_aime_2024_2025|inkling-2-mini_xhigh","model":"inkling-2-mini_xhigh","metric":"otis_mock_aime_2024_2025","op":"add","to":"0.925"}
+{"t":"2026-11-26T21:41:14Z","key":"simpleqa_verified|inkling-2-mini_xhigh","model":"inkling-2-mini_xhigh","metric":"simpleqa_verified","op":"add","to":"0.09"}
+{"t":"2026-11-26T21:41:14Z","key":"chess_puzzles|inkling-2-mini_xhigh","model":"inkling-2-mini_xhigh","metric":"chess_puzzles","op":"add","to":"0.39"}
+{"t":"2026-11-26T21:41:14Z","key":"mirrorcode|qwen4-max_xhigh","model":"qwen4-max_xhigh","metric":"mirrorcode","op":"add","to":"0.4777777777777778"}
+{"t":"2026-11-26T21:41:14Z","key":"mirrorcode|gemini-4-neon_xhigh","model":"gemini-4-neon_xhigh","metric":"mirrorcode","op":"add","to":"0.6111111111111112"}
+{"t":"2026-11-26T21:41:14Z","key":"mirrorcode|muse-ember-1.0_max","model":"muse-ember-1.0_max","metric":"mirrorcode","op":"add","to":"0.4"}

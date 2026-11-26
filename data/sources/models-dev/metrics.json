@@ -750,7 +750,7 @@
  },
  {
   "id": "humanitys-last-exam",
-  "label": "Humanity's Last Exam",
+  "label": "Humanity’s Last Exam",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1030,7 +1030,7 @@
  },
  {
   "id": "mmmu-pro",
-  "label": "MMMU-Pro",
+  "label": "MMMU Pro",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1464,14 +1464,14 @@
  },
  {
   "id": "swe-marathon",
-  "label": "SWE Marathon",
+  "label": "SWE-Marathon",
   "direction": "higher",
   "unit": "percent",
   "headline": true
  },
  {
   "id": "swe-marathon/v1.1",
-  "label": "SWE-Marathon 1.1",
+  "label": "SWE Marathon 1.1",
   "direction": "higher",
   "unit": "percent",
   "headline": false

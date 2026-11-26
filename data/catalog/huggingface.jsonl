@@ -53,6 +53,7 @@
 {"id":"ling-3-0-flash-fin","name":"Ling 3.0 Flash Fin","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin","params_b":127.49,"license":"mit"}
 {"id":"ling-3-0-flash-vl","name":"Ling 3.0 Flash VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-flash-VL","params_b":124.85,"license":"mit"}
 {"id":"ling-3-0-tiny","name":"Ling 3.0 Tiny","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/Ling-3.0-tiny","params_b":7.89,"license":"mit"}
+{"id":"lingsante-3-1-air-vl","name":"LingSante 3.1 Air VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/inclusionAI/LingSante-3.1-air-VL","params_b":124.85,"license":"mit"}
 {"id":"llama-3-1-nemotron-safety-guard-8b-v3","name":"Llama 3.1 Nemotron Safety Guard 8B v3","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3","params_b":8.03,"license":"nvidia-open-model-license"}
 {"id":"llama-3-8b-instruct-skillmix","name":"Llama-3-8B-Instruct-SkillMix","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/PrincetonPLI/Llama-3-8B-Instruct-SkillMix","license":"llama3"}
 {"id":"llama-3-instruct-8b-simpo","name":"Llama-3-Instruct-8B-SimPO","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/princeton-nlp/Llama-3-Instruct-8B-SimPO","params_b":8.03}
@@ -70,6 +71,7 @@
 {"id":"macaron-v1-venti","name":"Macaron V1 Venti","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Venti","params_b":753.33,"license":"mit"}
 {"id":"magnum-v4-72b","name":"Magnum v4 72B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/anthracite-org/magnum-v4-72b","params_b":72.71,"license":"apache-2.0"}
 {"id":"mimo-v2-5-pro-ultraspeed","name":"MiMo-V2.5-Pro-UltraSpeed","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash","license":"mit"}
+{"id":"mimo-v2-6-flash-mopd","name":"MiMo-V2.6-Flash-MOPD","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-MOPD","license":"mit"}
 {"id":"mineru2-5-2509-1-2b","name":"MinerU2.5 2509 1.2B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B","params_b":1.16,"license":"agpl-3.0"}
 {"id":"minicpm-v-4-7-1b","name":"MiniCPM-V 4.7 1B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-1B","params_b":1.55,"license":"apache-2.0"}
 {"id":"minicpm-v-4-7-35b-a3b","name":"MiniCPM-V 4.7 35B-A3B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B","params_b":35.21,"license":"apache-2.0"}
@@ -99,6 +101,7 @@
 {"id":"ornith-1-5-122b","name":"Ornith 1.5 122B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/ornith-ai/Ornith-1.5-122B","params_b":125.09,"license":"mit"}
 {"id":"paddleocr-vl","name":"PaddleOCR VL","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/PaddlePaddle/PaddleOCR-VL","params_b":0.96,"license":"apache-2.0"}
 {"id":"phi-4-multimodal-instruct","name":"Phi-4-multimodal-instruct","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/microsoft/Phi-4-multimodal-instruct","params_b":5.57,"license":"mit"}
+{"id":"phonellm-mini-alpha-2","name":"PhoneLLM Mini Alpha 2","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/pipecat-ai/phonellm-mini-alpha-2","params_b":31.58,"license":"bsd-2-clause"}
 {"id":"platolm-7b","name":"PlatoLM-7B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/FreedomIntelligence/PlatoLM-7B","license":"apache-2.0"}
 {"id":"qwen3-5-35b-a3b-base","name":"Qwen3.5 35B-A3B Base","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3.5-35B-A3B-Base","params_b":35.95,"license":"apache-2.0"}
 {"id":"qwen3-5-9b-base","name":"Qwen3.5 9B Base","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/Qwen/Qwen3.5-9B-Base","params_b":9.65,"license":"apache-2.0"}

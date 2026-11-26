@@ -1,8 +1,8 @@
 source,model_id,name,provider,released,catalogue_models_like_it
 models-dev,claude-opus-4-0,Claude Opus 4 (latest),Anthropic,2025-05-22,claude-opus-4-20250514 claude-opus-4-1-20250805 claude-opus-4-5
 models-dev,claude-sonnet-4-0,Claude Sonnet 4 (latest),Anthropic,2025-05-22,claude-sonnet-4-20250514 claude-sonnet-4-5 claude-sonnet-4-6
-models-dev,gemini-2-0-flash,Gemini 2.0 Flash,Google,2024-12-11,gemini-2-0-flash-001 gemini-2-0-flash-exp gemini-2-0-flash-lite-001
-models-dev,gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Google,2024-12-11,gemini-2-0-flash-lite-001 gemini-2-0-flash-lite-preview-02-05 gemini-2-0-flash-001
+models-dev,gemini-2-0-flash,Gemini 2.0 Flash,Google,2025-02-05,gemini-2-0-flash-001 gemini-2-0-flash-exp gemini-2-0-flash-lite-001
+models-dev,gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Google,2025-02-25,gemini-2-0-flash-lite-001 gemini-2-0-flash-lite-preview-02-05 gemini-2-0-flash-001
 models-dev,gemini-3-1-flash-lite-preview,Gemini 3.1 Flash Lite Preview,Google,2026-03-03,gemini-3-1-flash-lite gemini-exp-1114 gemini-exp-1121
 models-dev,gpt-3-5-turbo,GPT-3.5-turbo,OpenAI,2023-03-01,gpt-3-5-turbo-0125 gpt-3-5-turbo-0301 gpt-3-5-turbo-0613
 models-dev,gpt-4,GPT-4,OpenAI,2023-11-06,gpt-4-0314 gpt-4-0613 gpt-4o-2024-05-13
@@ -12,10 +12,9 @@ models-dev,gpt-4o-mini,GPT-4o mini,OpenAI,2024-07-18,gpt-4o-mini-2024-07-18 gpt-
 models-dev,gpt-5-2-chat-latest,GPT-5.2 Chat,OpenAI,2025-12-11,gpt-5-2-chat-latest-20260210 gpt-5-2 gpt-5
 models-dev,gpt-5-3-chat-latest,GPT-5.3 Chat (latest),OpenAI,2026-03-03,gpt-5-3-chat-latest-20261002 gpt-5 gpt-5-1-chat-latest
 models-dev,gpt-5-chat-latest,GPT-5 Chat (latest),OpenAI,2025-08-07,gpt-5-chat-20261002 gpt-5 gpt-5-1-chat-latest
-models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra gpt-6-2-astra
+models-dev,gpt-6-astra-fast,GPT-6 Astra (Fast),OpenAI,2026-09-04,gpt-6-astra gpt-6-astra-healthcare gpt-6-2-astra
 models-dev,grok-4-20-0309-non-reasoning,Grok 4.20 (Non-Reasoning),xAI,2026-03-09,grok-4-20 grok-4-0709 grok-4-20-multi-agent-0309
-models-dev,grok-4-fast-non-reasoning,Grok-4-Fast-Non-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-non-reasoning
-models-dev,grok-4-fast-reasoning,Grok-4-Fast-Reasoning,xAI,2025-12-18,grok-4-fast grok-4-0709 grok-4-1-fast-reasoning
+models-dev,grok-4-fast-non-reasoning,Grok 4 Fast (Non-Reasoning),xAI,2025-09-19,grok-4-fast grok-4-0709 grok-4-1-fast
 models-dev,ling-3-1-flash,Ling 3.1 Flash,inclusionai,2026-09-29,ling-3-1-flash-1019 ling-3-0-flash ling-3-2-flash
 models-dev,longcat-2-5-preview,LongCat-2.5-Preview,meituan,2026-09-25,longcat-2-5 longcat-2-0
 models-dev,magistral-medium-latest,Magistral Medium (latest),Mistral,2025-03-17,magistral-medium-2506 magistral-medium-2507 magistral-medium-2509

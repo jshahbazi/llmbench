@@ -1045,7 +1045,7 @@ creative-writing-v3,Qwen/Qwen3.5-397B-A17B,qwen3-5-397b-a17b,exact,
 creative-writing-v3,Qwen/Qwen3.8-2.4T-A95B,qwen3-8-2-4t-a95b,exact,
 creative-writing-v3,Qwen/Qwen3.8-27B,qwen3-8-27b,exact,
 creative-writing-v3,RekaAI/reka-flash-3,reka-flash-3,exact,
-creative-writing-v3,THUDM/GLM-4-32B-0414,glm-4-32b-0414,exact,
+creative-writing-v3,THUDM/GLM-4-32B-0414,glm-4-32b-0414-128k,exact,
 creative-writing-v3,ToastyPigeon/Gemma-3-Starshine-12B,gemma-3-starshine-12b,unlisted,
 creative-writing-v3,XiaomiMiMo/MiMo-V2.5-Pro,mimo-v2-5-pro,exact,
 creative-writing-v3,aion-3.5,aion-3-5,unlisted,
@@ -1797,6 +1797,7 @@ epoch,grok-4.5_high,grok-4-5,variant,effort:high
 epoch,grok-4.6_high,grok-4-6,variant,effort:high
 epoch,grok-4.6_xhigh,grok-4-6,variant,effort:xhigh
 epoch,grok-4.7_xhigh,grok-4-7,variant,effort:xhigh
+epoch,inkling-2-mini_xhigh,inkling-2-mini,variant,effort:xhigh
 epoch,inkling-small_xhigh,inkling-small,variant,effort:xhigh
 epoch,internlm-20b,internlm-20b,unlisted,
 epoch,internlm-7b,internlm-7b,unlisted,
@@ -2179,7 +2180,7 @@ kagi,qwen3-next-80b-a3b-thinking,qwen3-next-80b-a3b-thinking,exact,
 kagi,stepfun-ai/step3,step-3,exact,
 kagi,thedrummer/anubis-70b-v1.1,anubis-70b-v1-1,unlisted,
 kagi,thedrummer/valkyrie-49b-v1,valkyrie-49b-v1,unlisted,
-kagi,thudm/glm-4-32b,glm-4-32b-0414,variant,
+kagi,thudm/glm-4-32b,glm-4-32b-0414-128k,variant,
 kagi,z-ai/glm-4.5-air,glm-4-5-air,exact,
 kagi,z-ai/glm-4.5v,glm-4-5v,exact,
 kagi,z-ai/glm-4.6,glm-4-6,exact,
