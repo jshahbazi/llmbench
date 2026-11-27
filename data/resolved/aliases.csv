@@ -285,7 +285,9 @@ arena,Gemini 3.8 Flash (High),gemini-3-8-flash,variant,effort:high
 arena,Gemini 4 Argon (High),gemini-4-argon,variant,effort:high
 arena,Gemini 4 Carbon (High),gemini-4-carbon,variant,effort:high
 arena,Gemini 4 Hydrogen (High),gemini-4-hydrogen,variant,effort:high
+arena,Gemini 4 Hydrogen (xHigh),gemini-4-hydrogen,variant,effort:xhigh
 arena,Gemini 4 Neon (High),gemini-4-neon,variant,effort:high
+arena,Gemini 4 Neon (xHigh),gemini-4-neon,variant,effort:xhigh
 arena,Gemini Advanced (0514),gemini-advanced-0514,unlisted,snapshot:0514
 arena,Gemini Pro,gemini-pro,unlisted,
 arena,Gemini Pro (Dev API),gemini-pro,unlisted,other:Dev API
@@ -351,6 +353,7 @@ arena,Hy4,hy4,exact,
 arena,Hy4 preview,hy4-preview,exact,
 arena,INTELLECT-3,intellect-3,exact,
 arena,Inkling,inkling,exact,
+arena,Inkling 2 Mini,inkling-2-mini,exact,
 arena,Inkling 2 Small,inkling-2-small,exact,
 arena,Inkling-Small,inkling-small,exact,
 arena,InternLM2.5 20B Chat,internlm2-5-20b-chat,exact,
@@ -2851,6 +2854,7 @@ llm-chess,gemini-3.7-flash-high,gemini-3-7-flash,variant,effort:high
 llm-chess,gemini-3.8-flash-high,gemini-3-8-flash,variant,effort:high
 llm-chess,gemini-3.8-flash-medium,gemini-3-8-flash-medium,unlisted,
 llm-chess,gemini-4-argon-high,gemini-4-argon,variant,effort:high
+llm-chess,gemini-4-hydrogen-high,gemini-4-hydrogen,variant,effort:high
 llm-chess,gemma-2-27b-it@q6_k_l,gemma-2-27b,variant,quant:Q6_K_L
 llm-chess,gemma-2-9b-it-8bit,gemma-2-9b,variant,quant:8BIT
 llm-chess,gemma-3-4b-it@iq4_qs,gemma-3-4b-it-iq4-qs,unlisted,
@@ -2925,6 +2929,8 @@ llm-chess,gpt-6.1-sol-high,gpt-6-1-sol,variant,effort:high
 llm-chess,gpt-6.1-sol-xhigh,gpt-6-1-sol,variant,effort:xhigh
 llm-chess,gpt-6.1-terra-high,gpt-6-1-terra,variant,effort:high
 llm-chess,gpt-6.1-terra-xhigh,gpt-6-1-terra,variant,effort:xhigh
+llm-chess,gpt-6.2-astra-high,gpt-6-2-astra,variant,effort:high
+llm-chess,gpt-6.2-sol-high,gpt-6-2-sol,variant,effort:high
 llm-chess,gpt-oss-120b-high,gpt-oss-120b,variant,effort:high
 llm-chess,gpt-oss-120b-low,gpt-oss-120b,variant,effort:low
 llm-chess,gpt-oss-120b-medium,gpt-oss-120b-medium,unlisted,
@@ -2947,6 +2953,7 @@ llm-chess,grok-4.3-high,grok-4-3,variant,effort:high
 llm-chess,grok-4.6-high,grok-4-6,variant,effort:high
 llm-chess,grok-4.7-high,grok-4-7,variant,effort:high
 llm-chess,inception-mercury-3-high,mercury-3,maker,effort:high
+llm-chess,inkling-2-mini-high,inkling-2-mini,variant,effort:high
 llm-chess,internlm3-8b-instruct,internlm3-8b-instruct,exact,
 llm-chess,k2-think@iq4_xs,k2-think-iq4-xs,unlisted,
 llm-chess,kimi-k2-instruct,kimi-k2,exact,
