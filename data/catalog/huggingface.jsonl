@@ -67,6 +67,7 @@
 {"id":"llama3-openbiollm-70b","name":"Llama3-OpenBioLLM-70B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/aaditya/Llama3-OpenBioLLM-70B","license":"llama3"}
 {"id":"llama3-openbiollm-8b","name":"Llama3-OpenBioLLM-8B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/aaditya/Llama3-OpenBioLLM-8B","license":"llama3"}
 {"id":"lwm-text-chat-1m","name":"LWM-Text-Chat-1M","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/LargeWorldModel/LWM-Text-Chat-1M"}
+{"id":"macaron-v1-1-venti","name":"Macaron V1.1 Venti","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1.1","params_b":753.33,"license":"mit"}
 {"id":"macaron-v1-tall","name":"Macaron V1 Tall","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Tall","params_b":35.95,"license":"mit"}
 {"id":"macaron-v1-venti","name":"Macaron V1 Venti","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Venti","params_b":753.33,"license":"mit"}
 {"id":"magnum-v4-72b","name":"Magnum v4 72B","category":"llm","origin":"huggingface","model_repo":"https://huggingface.co/anthracite-org/magnum-v4-72b","params_b":72.71,"license":"apache-2.0"}

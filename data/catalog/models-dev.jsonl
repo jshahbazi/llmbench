@@ -314,6 +314,7 @@
 {"id":"longcat-2-5-preview","name":"LongCat-2.5-Preview","category":"llm","origin":"models-dev","provider":"meituan","released":"2026-09-25","open_weights":false,"context_k":1000}
 {"id":"lyria-3-clip-preview","name":"Lyria 3 Clip Preview","category":"llm","origin":"models-dev","provider":"Google","released":"2026-03-25","open_weights":false,"context_k":131.072}
 {"id":"lyria-3-pro-preview","name":"Lyria 3 Pro Preview","category":"llm","origin":"models-dev","provider":"Google","released":"2026-03-25","open_weights":false,"context_k":131.072}
+{"id":"macaron-v1-1-venti","name":"Macaron V1.1 Venti","category":"llm","origin":"models-dev","provider":"mindlab","released":"2026-09-22","open_weights":true,"license":"mit","context_k":1048.576,"model_repo":"https://huggingface.co/mindlab-research/Macaron-V1.1"}
 {"id":"macaron-v1-tall","name":"Macaron V1 Tall","category":"llm","origin":"models-dev","provider":"mindlab","released":"2026-07-21","open_weights":true,"license":"mit","context_k":262.144,"model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Tall"}
 {"id":"macaron-v1-venti","name":"Macaron V1 Venti","category":"llm","origin":"models-dev","provider":"mindlab","released":"2026-07-21","open_weights":true,"license":"mit","context_k":1048.576,"model_repo":"https://huggingface.co/mindlab-research/Macaron-V1-Venti"}
 {"id":"magistral-medium-latest","name":"Magistral Medium (latest)","category":"llm","origin":"models-dev","provider":"Mistral","released":"2025-03-17","open_weights":false,"context_k":128}

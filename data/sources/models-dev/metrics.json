@@ -281,7 +281,7 @@
  },
  {
   "id": "claw-eval",
-  "label": "Claw-Eval",
+  "label": "Claw-eval",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -631,7 +631,7 @@
  },
  {
   "id": "gdp-pdf",
-  "label": "GDP.pdf",
+  "label": "GDP.PDF",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -750,7 +750,7 @@
  },
  {
   "id": "humanitys-last-exam",
-  "label": "Humanity’s Last Exam",
+  "label": "Humanity's Last Exam",
   "direction": "higher",
   "unit": "percent",
   "headline": true
@@ -1464,14 +1464,14 @@
  },
  {
   "id": "swe-marathon",
-  "label": "SWE-Marathon",
+  "label": "SWE Marathon",
   "direction": "higher",
   "unit": "percent",
   "headline": true
  },
  {
   "id": "swe-marathon/v1.1",
-  "label": "SWE Marathon 1.1",
+  "label": "SWE-Marathon 1.1",
   "direction": "higher",
   "unit": "percent",
   "headline": false
@@ -1520,7 +1520,7 @@
  },
  {
   "id": "terminal-bench/v2",
-  "label": "Terminal-Bench 2.0",
+  "label": "Terminal Bench 2.0",
   "direction": "higher",
   "unit": "percent",
   "headline": true
